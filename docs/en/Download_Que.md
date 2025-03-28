@@ -1,0 +1,6 @@
+## Download Old versions (Que)
+### Stable release (build 20040311)
+
+|OS|File type|Link|Notes|h
+|Windows|Executable, DLL, and data files (zip compressed)|[HTTP](http://cuemol.sourceforge.jp/misc/que-download/Que-20040311.zip)|Exectable files above includes several DLL files needed to run the program (msvcr71.dll, msvcp71.dll, mfc71.dll). Please place these DLL files in the same directory where Que.exe file is installed. The data files, which were distributed in a separate file in previous releases, are included in the same file. Other installation procedure is the same as the previous version.|
+|MacOSX (10.3)|Executables and data files (tar.gz compressed)|[HTTP](http://cuemol.sourceforge.jp/misc/que-download/Que-osx10.3-20040325.tar.gz)|The OSX binary release is dynamically linked against following libraries, installed from the fink:**db4**, **gdbm**, **readline**&br; Please install the fink, and then install the libraries above by "apt-get" of the fink. These executables are compiled with configure flag of "--prefix=/usr/local", so I recommend to extract them from "/usr/local" (i.e. cd /usr/local; tar xzvf XXXX.tar.gz ) .&br; The "quex" in bin directory is X11R6 version and "quetty" is TTY version. (Of course, you should install X11 from Apple's site before running them.)|
