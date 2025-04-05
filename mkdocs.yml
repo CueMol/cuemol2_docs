@@ -28,9 +28,9 @@ plugins:
           nav:
             - Home: index.md
             - Documents: Documents.md
-            - Gallery: /en/Gallery
+            - Gallery: Gallery.md
             - Updates: Updates.md
-            - Environment: /en/Environment
+            - Environment: Environment.md
             - Download: Download.md
             - Install: Install.md
             - Licence: Licence.md
@@ -57,7 +57,7 @@ extra:
 nav:
   - トップページ: index.md
   - ドキュメント: Documents.md
-  - ギャラリー: /en/Gallery
+  - ギャラリー: en/Gallery
   - アップデート: Updates.md
   - 動作環境: 動作環境.md
   - ダウンロード: Download.md
