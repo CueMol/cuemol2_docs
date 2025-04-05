@@ -1,0 +1,3 @@
+[FrontPage](../FrontPage)
+
+#accessview(FrontPage)
