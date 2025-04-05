@@ -1,10 +1,10 @@
 
-CueMol1については，[Install-1.1](/Install-1.1)を参照してください．
+CueMol1については，[Install-1.1](./Install-1.1)を参照してください．
 
 ## Windows版
 
 ### バイナリー配布からのinstall
-まず，[Download](/Download)のページからinstallerをdownloadしてください．
+まず，[Download](./Download)のページからinstallerをdownloadしてください．
 
 #### Installerを実行する前に
 一般的な他のソフトウェアと同じように，インストーラーを実行するとインストールされます．
@@ -34,11 +34,11 @@ WindowsXP
 
 ### Sourceからのinstall
 
--  [cuemol2/Build](/cuemol2/Build)を参照してください．
+-  [cuemol2/Build](./cuemol2/Build)を参照してください．
 
 ## MacOS X版
 ### バイナリー配布からのinstall
-まず，[Download](/Download)のページからdmg fileをdownloadしてください．
+まず，[Download](./Download)のページからdmg fileをdownloadしてください．
 
 特にインストーラーはありません．ダウンロードしたdmgファイルをダブルクリックすると，CueMol2のアプリケーションが入ったフォルダが開きますので，システムのアプリフォルダなど適当な場所にドラッグしてコピーしてください．
 
@@ -54,11 +54,11 @@ Applicationの設定の多く（windowやpanelの位置など）は，applicatio
 
 ### Sourceからのinstall
 
--  [cuemol2/Build](/cuemol2/Build)を参照してください．
+-  [cuemol2/Build](./cuemol2/Build)を参照してください．
 
 
 ## UNIX版
 準備中
 ### Sourceからのinstall
 
--  [cuemol2/Build](/cuemol2/Build)を参照してください．
+-  [cuemol2/Build](./cuemol2/Build)を参照してください．

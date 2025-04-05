@@ -1,20 +1,20 @@
-## [InterWikiテクニカル](/InterWikiテクニカル) [#v2a7f90e]
+## [InterWikiテクニカル](./InterWikiテクニカル) [#v2a7f90e]
 
 
 ----
 ### InterWikiへのアクセス(InterWikiNameの生成) [#nb5bafb9]
-サーバリストにあるサーバ名:WikiNameを[BracketName](/BracketName)で作ればInterWikiNameの完成。<br />
+サーバリストにあるサーバ名:WikiNameを[BracketName](./BracketName)で作ればInterWikiNameの完成。<br />
 これをページに記述すれば、そのサーバのWikiNameへのハイパーリンクが生成されます。
 
 ```
-[サーバ名](/WikiName)
+[サーバ名](./WikiName)
 ```
 ```
-[pukiwiki](/FrontPage)
+[pukiwiki](./FrontPage)
 ```
 
 ### サーバーリストへの追加 [#a71a4d66]
-[InterWikiName](/InterWikiName) のページに以下のようにサーバの定義をすることで
+[InterWikiName](./InterWikiName) のページに以下のようにサーバの定義をすることで
 サーバーリストに追加することができます。
 
 ```
@@ -72,4 +72,4 @@ moin
 
 - WikiNameのものへはそのままURLエンコード。
 
-- [BracketName](/BracketName)のものは[ ](/ )を付加してURLエンコード。
+- [BracketName](./BracketName)のものは[ ](./ )を付加してURLエンコード。

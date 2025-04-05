@@ -1,30 +1,30 @@
 #### メニュー
 
-- [FrontPage](/FrontPage)
+- [FrontPage](./FrontPage)
 
-- [Gallery](/en/Gallery)
+- [Gallery](./en/Gallery)
 
-- [Updates](/Updates)
+- [Updates](./Updates)
 
-- [不具合情報とか](/Bugs)
+- [不具合情報とか](./Bugs)
 
-- [動作環境](/動作環境)
+- [動作環境](./動作環境)
 
-- [Download](/Download)
+- [Download](./Download)
 
-- [Install](/Install)
+- [Install](./Install)
 
-- [Documents](/Documents)
+- [Documents](./Documents)
 
-- [Development](/Development)
+- [Development](./Development)
 
-- [Licence](/Licence)
+- [Licence](./Licence)
 
-- [寄付](/Licence)
+- [寄付](./Licence)
 
-- [メーリングリスト](/MailingList)
+- [メーリングリスト](./MailingList)
 
-- [リンク](/リンク)
+- [リンク](./リンク)
 
 - [SourceForge](http://sourceforge.net/projects/cuemol/)
 

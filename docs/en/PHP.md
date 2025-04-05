@@ -1,1 +1,1 @@
-[PHP](/en/ Hypertext Preprocessor:http://jp2.php.net/)
+[PHP](../en/ Hypertext Preprocessor:http://jp2.php.net/)

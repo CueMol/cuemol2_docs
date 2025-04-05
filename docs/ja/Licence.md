@@ -2,7 +2,7 @@
 CueMolは，CueMol自体の独自コードと，他に以下のライブラリーなどを使用しています．
 
 
--  [Mozilla XULRunner](/https://developer.mozilla.org/ja/docs/XULRunner)
+-  [Mozilla XULRunner](./https://developer.mozilla.org/ja/docs/XULRunner)
 
 -  [FFTW](http://www.fftw.org)
 
@@ -34,7 +34,7 @@ CueMolは，CueMol自体の独自コードと，他に以下のライブラリ�
 
 CueMol is developed by the following contributors:
 
--  Ryuichiro Ishitani, ![mm1](/assets/images/Licence/mm1.png)![mm2](/assets/images/Licence/mm2.png)
+-  Ryuichiro Ishitani, ![mm1](./assets/images/Licence/mm1.png)![mm2](./assets/images/Licence/mm2.png)
 
 -  Takanori Nakane (PyMOL session file importer)
 
@@ -47,12 +47,12 @@ CueMol本体に関してはソースコードを含め，[GPLv3](http://opensour
 ### 商用利用
 商用利用の場合も，無保証で良いようなら無料でご使用いただけます． すなわちこのソフトを使用して生じた損害などに関しては何ら責任をおえません．
 また，どのような用途に使用されるか
-![mm1](/assets/images/Licence/mm1.png)![mm2](/assets/images/Licence/mm2.png)
+![mm1](./assets/images/Licence/mm1.png)![mm2](./assets/images/Licence/mm2.png)
 までご連絡いただければありがたいです．
 
 ## 寄付
 CueMolプロジェクトへの寄付を受け付けています．
-詳しくは，[sourceforgeのdonationのページ](/donate/group_id=103302)をご覧ください．
+詳しくは，[sourceforgeのdonationのページ](./donate/group_id=103302)をご覧ください．
 (寄付には，PayPalのアカウントが必要です)
 
 ## 外部ソフトウェアについて

@@ -3,9 +3,9 @@
 今のところ判明しているバグや不具合などは，<br />
 https://github.com/CueMol/cuemol2/issues
 
-で管理されています．以上にないようなバグを発見された方は，[メーリングリスト](/MailingList)や [Twitter@cuemolnohito](http://twitter.com/cuemolnohito) にお寄せください．
+で管理されています．以上にないようなバグを発見された方は，[メーリングリスト](./MailingList)や [Twitter@cuemolnohito](http://twitter.com/cuemolnohito) にお寄せください．
 
-特に，crash dump fileを送付いただくと解決が早い場合があります．[cuemol2/CrashReporter](/cuemol2/CrashReporter)を参照ください．
+特に，crash dump fileを送付いただくと解決が早い場合があります．[cuemol2/CrashReporter](./cuemol2/CrashReporter)を参照ください．
 
 あと，現段階でわかってはいるものの解決が難しい不具合と，その応急的な対処法については以下をご覧ください．
 
@@ -26,7 +26,7 @@ POV-Ray renderingで，半透明のRendererを2種類以上作成し，それら
 :   起動直後には，javascriptのgarbage collectionが作動する傾向があります．1分くらい放置すると直ります．
 
 :グラフィクスがIntel GMAの環境で正常に動作しない|
-ノート型PCでよく使われている，チップセット統合型のIntel GMAグラフィクス環境ではVersion 2.1.0.243が正常に動作しない場合があります．[cuemol2/UseGLShader](/cuemol2/UseGLShader)を参照してshaderをoffにしてみてください．
+ノート型PCでよく使われている，チップセット統合型のIntel GMAグラフィクス環境ではVersion 2.1.0.243が正常に動作しない場合があります．[cuemol2/UseGLShader](./cuemol2/UseGLShader)を参照してshaderをoffにしてみてください．
 :Mol surface generation toolでおかしな分子表面が生成される場合がある|
 分子内側に球状の物体が出来てしまう場合があります．
 分子表面の生成コードにバグがあるため．

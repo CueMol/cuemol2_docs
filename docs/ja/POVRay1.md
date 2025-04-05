@@ -1,11 +1,11 @@
-[Documents](/Documents)
+[Documents](./Documents)
 
 
 
 ## CueMolの出力したPOV-Rayファイルを編集して手の込んだ図を作る
 
 チュートリアルの
-[Step6 POV-Rayを使う](/Documents/QScriptのチュートリアル/Step6)
+[Step6 POV-Rayを使う](./Documents/QScriptのチュートリアル/Step6)
 で最低限図を作るのに必要な機能は説明しましたが，
 ここではさらに
 
@@ -49,7 +49,7 @@ povファイルの段階では別の色を指定することは出来ません�
 
 ### includeでtexture等の定義を取り込む
 チュートリアルの
-[CueMolの出力したpovファイルを編集する](/Documents/QScriptのチュートリアル/Step6#content_1_2)
+[CueMolの出力したpovファイルを編集する](./Documents/QScriptのチュートリアル/Step6#content_1_2)
 で，CueMolの出力したpovファイルの構成を説明しました．
 
 この例では独自にmaterialを定義してプラスチック風と金属風の例を
@@ -117,10 +117,10 @@ tex_of_map
 
 ### povファイルの編集
 ここでは，
-[Step4 相互作用の表示](/Documents/QScriptのチュートリアル/Step3)
+[Step4 相互作用の表示](./Documents/QScriptのチュートリアル/Step3)
 にあるサンプルファイル中の，**blm_ribbon5.qs**
 から作成したpovファイルを例として使用します(CueMolが出力した
-編集前のpovファイル:![blm_ribbon](/assets/images/POVRay1/blm_ribbon.pov){ .on-glb })．
+編集前のpovファイル:![blm_ribbon](./assets/images/POVRay1/blm_ribbon.pov){ .on-glb })．
 この例では，蛋白をリボンモデルで，リガンドをスティックモデルで
 表示しています．
 
@@ -179,7 +179,7 @@ POV-Rayを起動してメニューの"Render"→"Edit Settings/Render"を実行�
 ダイアログが表示されます．
 
 
-![povray-inisettings](/assets/images/POVRay1/povray-inisettings.png){ .on-glb }
+![povray-inisettings](./assets/images/POVRay1/povray-inisettings.png){ .on-glb }
 
 
 ダイアログの真ん中あたりの"Browse"ボタンで
@@ -202,9 +202,9 @@ Section:から，先ほど作成したエントリー(500x500なんちゃら)を
 Renderボタンを押すとレンダリングが始まります．
 
 
-![blm_ribbon_c](/assets/images/POVRay1/blm_ribbon_c.png){ .on-glb }
+![blm_ribbon_c](./assets/images/POVRay1/blm_ribbon_c.png){ .on-glb }
 
-この画像をレンダリングした編集後povファイル：![blm_ribbon_c](/assets/images/POVRay1/blm_ribbon_c.pov){ .on-glb }
+この画像をレンダリングした編集後povファイル：![blm_ribbon_c](./assets/images/POVRay1/blm_ribbon_c.pov){ .on-glb }
 
 ちょっと暗い感じがします．こういう場合
 Photoshopなどで明るさ・コントラストなどをいじってやってもよいのですが，
@@ -224,7 +224,7 @@ CueMolが吐いたデフォルトでは，上記のshadowless光源の明るさ�
 </pre>
 リボンモデルの色の定義の部分で，透明度を0から0.85にします．
 
-![blm_ribbon_tp](/assets/images/POVRay1/blm_ribbon_tp.png){ .on-glb }
+![blm_ribbon_tp](./assets/images/POVRay1/blm_ribbon_tp.png){ .on-glb }
 
 片側のサブユニットのコイル部分が全部半透明になったのがわかると思います．
 
@@ -238,7 +238,7 @@ CueMolが吐いたデフォルトでは，上記のshadowless光源の明るさ�
 一方で，前節と同じ方法でスティックモデルを半透明にしようとすると，
 あまりうまくいきません．
 
-![blm_ribbon_tp2](/assets/images/POVRay1/blm_ribbon_tp2.png){ .on-glb }
+![blm_ribbon_tp2](./assets/images/POVRay1/blm_ribbon_tp2.png){ .on-glb }
 
 スティックモデルは円柱と球の組み合わせで出来ているので，
 半透明にすると，折れ曲がりや先端で中にある球が透けて見えたりし，
@@ -275,7 +275,7 @@ object{
 </pre>
 これでレンダリングすれば以下のように全部きちんと半透明になります．
 
-![blm_ribbon_tp3](/assets/images/POVRay1/blm_ribbon_tp3.png){ .on-glb }
+![blm_ribbon_tp3](./assets/images/POVRay1/blm_ribbon_tp3.png){ .on-glb }
 
 ただし，merge文を使用すると交差の計算のためレンダリングが遅くなるので
 注意が必要です．
@@ -327,7 +327,7 @@ gfx.writeScene("<出力したいファイル名>", "pov", {texblend=>true});
 tex3，4，5がそれぞれコイル，へリックス，シート部分に対応しており，
 それぞれクロム金属，石，木のテキスチャになります((textureの定義については，metals.inc等を見てください．他にもいろいろなテキスチャが定義されています．Windowsの場合はインストール先の"include"というディレクトリの下に在ります．))．
 
-![blm_ribbon_txb](/assets/images/POVRay1/blm_ribbon_txb.png){ .on-glb }
+![blm_ribbon_txb](./assets/images/POVRay1/blm_ribbon_txb.png){ .on-glb }
 
 う〜ん，なんかすごい悪趣味ですね．
 こんなん載せて論文投稿したら一発でrejectくらいそうです(笑)．

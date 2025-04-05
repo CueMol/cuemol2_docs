@@ -1,24 +1,24 @@
 **InterWiki用の練習ページです。**
 ### 他のWikiのページに飛んでみよう。
 
-- [WikiWikiWeb](/FrontPage)
+- [WikiWikiWeb](./FrontPage)
 
-- [Tiki](/WelcomeVisitors) 
+- [Tiki](./WelcomeVisitors) 
 
-- [YukiWiki](/FrontPage) 
+- [YukiWiki](./FrontPage) 
 
-- [RWiki](/top) 
+- [RWiki](./top) 
 
 
 ### PukiWikiのページで飛んでみよう。
 
-- [pukiwiki](/FrontPage)
+- [pukiwiki](./FrontPage)
 
-- [pukiwiki.org](/FrontPage)
+- [pukiwiki.org](./FrontPage)
 
-- [pukiwiki.dev](/FrontPage)
+- [pukiwiki.dev](./FrontPage)
 ### 検索だって出来る。
 :Googleでpukiwikiを検索|
-[Google](/pukiwiki)
+[Google](./pukiwiki)
 :YahooでPHPを検索|
-[Yahoo](/PHP)
+[Yahoo](./PHP)

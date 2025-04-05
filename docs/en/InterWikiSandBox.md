@@ -1,14 +1,14 @@
 
-- [WikiWikiWeb](/en/FrontPage)
+- [WikiWikiWeb](../en/FrontPage)
 
-- [Tiki](/en/WelcomeVisitors) 
+- [Tiki](../en/WelcomeVisitors) 
 
-- [YukiWiki](/en/FrontPage) 
+- [YukiWiki](../en/FrontPage) 
 
-- [RWiki](/en/top) 
+- [RWiki](../en/top) 
 
-- [PukiWiki](/en/FrontPage) 
+- [PukiWiki](../en/FrontPage) 
 
-- [Google](/en/pukiwiki)
+- [Google](../en/pukiwiki)
 
-- [Yahoo](/en/PHP)
+- [Yahoo](../en/PHP)

@@ -1,4 +1,4 @@
-[Documents](/Documents)
+[Documents](./Documents)
 
 
 
@@ -6,8 +6,8 @@
 
 分子表面（Solvent accessible surface; 溶媒接触表面？）を表示するレンダラーであるmolsurfレンダラーについては，
 チュートリアルの
-[StepA4 分子表面(surface model)の表示](/Documents/QScriptのチュートリアル/StepA4)と
-[StepA5 表面電荷(electrostatic potential)の表示](/Documents/QScriptのチュートリアル/StepA5)
+[StepA4 分子表面(surface model)の表示](./Documents/QScriptのチュートリアル/StepA4)と
+[StepA5 表面電荷(electrostatic potential)の表示](./Documents/QScriptのチュートリアル/StepA5)
 で，
 
 -  表面の表示方法
@@ -21,7 +21,7 @@
 ここでは**分子のプロパティーに応じて着色する**方法について説明します．
 
 例としては，
-[Documents/QScriptのチュートリアル/StepA4](/Documents/QScriptのチュートリアル/StepA4)のサンプルを変更したものを使用して説明します．
+[Documents/QScriptのチュートリアル/StepA4](./Documents/QScriptのチュートリアル/StepA4)のサンプルを変更したものを使用して説明します．
 実行には，このページにあるQScriptファイル以外に，**PDBやMSMSのファイルが必要**です．<br />
 **PDBやMSMSのファイルは上記ページからリンクされているサンプルファイル中の物を使用してください．**
 
@@ -56,7 +56,7 @@ $r_sf.setProp("scalarobj", "blm_ab");
 1.  温度因子の値
 1.  占有率の値
 
-に応じて色を設定できます（[CPKやballstickレンダラー](/Documents/QScriptのチュートリアル/Step1)と同様）．
+に応じて色を設定できます（[CPKやballstickレンダラー](./Documents/QScriptのチュートリアル/Step1)と同様）．
 
 まず，表面オブジェクト自体の着色モードを変更します．
 <pre>
@@ -95,18 +95,18 @@ gfx.setCenter($r_blm.getCenter());
 gfx.updateView();
 </pre>
 
-![surf_cpk1](/assets/images/SASPaint/surf_cpk1.png){ .on-glb }
+![surf_cpk1](./assets/images/SASPaint/surf_cpk1.png){ .on-glb }
 
 
-> この例のファイル：![blmsurf_2](/assets/images/SASPaint/blmsurf_2.qs){ .on-glb }
+> この例のファイル：![blmsurf_2](./assets/images/SASPaint/blmsurf_2.qs){ .on-glb }
 
-これは，[Documents/QScriptのチュートリアル/StepA4](/Documents/QScriptのチュートリアル/StepA4)の例を変更したもので，
+これは，[Documents/QScriptのチュートリアル/StepA4](./Documents/QScriptのチュートリアル/StepA4)の例を変更したもので，
 PDBやMSMSのファイルはこのページからリンクされているサンプルファイルを使用しています．
 
 デフォルトでは，CPKタイプの色分けになっています．
 元素ごとに変更するには，"simple.col_C"等のプロパティーを変更しますが，
 CPKレンダラー等と同じですので
-詳細は[Documents/QScriptのチュートリアル/Step1](/Documents/QScriptのチュートリアル/Step1)を参照してください．
+詳細は[Documents/QScriptのチュートリアル/Step1](./Documents/QScriptのチュートリアル/Step1)を参照してください．
 
 #### 温度因子・占有率の場合
 
@@ -125,13 +125,13 @@ $r_sf.setProp("simple.highcol", color(1,1,0));
 $r_sf.setProp("simple.highpar", 80.0);
 </pre>
 
-![surf_bfac](/assets/images/SASPaint/surf_bfac.png){ .on-glb }
+![surf_bfac](./assets/images/SASPaint/surf_bfac.png){ .on-glb }
 
 
->この例のファイル：![blmsurf_2.1](/assets/images/SASPaint/blmsurf_2.1.qs){ .on-glb }
+>この例のファイル：![blmsurf_2.1](./assets/images/SASPaint/blmsurf_2.1.qs){ .on-glb }
 
 ballstickレンダラーの"coloring.*"と，"simple.*"が対応しています．
-詳しくは[Documents/QScriptのチュートリアル/Step1](/Documents/QScriptのチュートリアル/Step1)"の
+詳しくは[Documents/QScriptのチュートリアル/Step1](./Documents/QScriptのチュートリアル/Step1)"の
 温度因子による色の設定"の節を参照してください．
 
 ### 分子の選択範囲に応じて着色(fancy coloring mode)
@@ -146,7 +146,7 @@ $r_sf.setProp("colormode", 3);
 このモードでは，select()で分子((当然attachしている分子でないと意味がない))の
 特定部分を選択し，molvis.paint()で該当部分を塗る，というのを繰り返して
 最終的な**塗り**を完成させます．
-まあ，やり方としては[Documents/QScriptのチュートリアル/Step3](/Documents/QScriptのチュートリアル/Step3)の
+まあ，やり方としては[Documents/QScriptのチュートリアル/Step3](./Documents/QScriptのチュートリアル/Step3)の
 "2次構造ごとに色を設定"のと同様です．
 
 例えば，アルギニン・リジンを青に，
@@ -161,18 +161,18 @@ molvis.paint($r_sf, color(1,0,0));
 $r_sf.setProp("fancy.default", color(1,1,1));
 </pre>
 
-![surf_resn](/assets/images/SASPaint/surf_resn.png){ .on-glb }
+![surf_resn](./assets/images/SASPaint/surf_resn.png){ .on-glb }
 
 
-> この例のソース：![blmsurf_3](/assets/images/SASPaint/blmsurf_3.qs){ .on-glb }
+> この例のソース：![blmsurf_3](./assets/images/SASPaint/blmsurf_3.qs){ .on-glb }
 
 なんかフランスっぽいですね．
 これだと，結構いろいろな塗り方を出来るわけですが，例えば二次構造に応じて塗ることなんかも出来ます．
 
-![surf_2ndry](/assets/images/SASPaint/surf_2ndry.png){ .on-glb }
+![surf_2ndry](./assets/images/SASPaint/surf_2ndry.png){ .on-glb }
 
 
-> この例のソース：![blmsurf_4](/assets/images/SASPaint/blmsurf_4.qs){ .on-glb }
+> この例のソース：![blmsurf_4](./assets/images/SASPaint/blmsurf_4.qs){ .on-glb }
 
 ただ，こんなんを使うシチュエーションがあまりないという話もありますが．．．
 
@@ -269,7 +269,7 @@ molvis.setScriptColoring($r_sf) ($atom, $res, $mol) {
 };
 </pre>
 
-> 上記スクリプトファイル：![blmsurf_5](/assets/images/SASPaint/blmsurf_5.qs){ .on-glb }
+> 上記スクリプトファイル：![blmsurf_5](./assets/images/SASPaint/blmsurf_5.qs){ .on-glb }
 
 説明しますと，まずモードを設定しています．
 次に各段階の色を$col1〜$col5に代入しています．
@@ -317,14 +317,14 @@ $paramは0から1までの実数値を指定します．$arg1, $arg2はグラジ
 結果として，以下のような感じになるはずです．
 
 
-![surf_qscr2](/assets/images/SASPaint/surf_qscr2.png){ .on-glb }
+![surf_qscr2](./assets/images/SASPaint/surf_qscr2.png){ .on-glb }
 ;
 
 この機能を使えば，他に原子のx座標で色分けしたりも出来ます
 
-![surf_qscr3](/assets/images/SASPaint/surf_qscr3.png){ .on-glb }
+![surf_qscr3](./assets/images/SASPaint/surf_qscr3.png){ .on-glb }
 ;
 が，あんまり意味がないですね．この例のスクリプトのソースは，以下になります．
 
-![blmsurf_6](/assets/images/SASPaint/blmsurf_6.qs){ .on-glb }
+![blmsurf_6](./assets/images/SASPaint/blmsurf_6.qs){ .on-glb }
 ;

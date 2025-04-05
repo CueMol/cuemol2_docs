@@ -1,1 +1,1 @@
-[cuemol2memo/devdialy](/cuemol2memo/devdialy)
+[cuemol2memo/devdialy](./cuemol2memo/devdialy)
