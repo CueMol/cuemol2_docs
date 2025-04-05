@@ -1,11 +1,13 @@
-site_name: CueMol2
-# site_url: https://mydomain.org/mysite
+site_name: CueMol - Molecular Visualization Framework
+site_url: https://cuemol.github.io/cuemol2_docs/
+repo_url: https://github.com/CueMol/cuemol2
 theme:
   name: material
   # language: ja
   features:
     - toc.integrate
     - navigation.tabs
+  logo: assets/images/cuemol2-small-80px.png
   favicon: assets/favicon.ico
 
 plugins:
