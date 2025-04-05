@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 分子ビューにおけるマウス入力の設定
 
@@ -11,7 +11,7 @@ CueMol2.0.1.X以降では，分子ビューにおけるマウス操作をカス�
 以下のような設定ダイアログが表示されます．<br />
 （MacOSの場合は，アプリケーションメニューの環境設定で表示されます）
 
-![mouse_config_dlg1](../assets/images/cuemol2/MouseInputConfig/mouse_config_dlg1.png){ style="zoom: 0.5" .on-glb }
+![mouse_config_dlg1](../../assets/images/cuemol2/MouseInputConfig/mouse_config_dlg1.png){ style="zoom: 0.5" .on-glb }
 
 上部のアイコンのうち（全部同じですが...），Mouseというのを選択すると，
 マウスに関する設定が表示されます．

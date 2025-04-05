@@ -1,4 +1,4 @@
-[一覧へ戻る](../../Documents/CueMol2Tutorial2013)
+[一覧へ戻る](../../../Documents/CueMol2Tutorial2013)
 
 ## Step4: 類似蛋白質との重ね合わせの図を作成
 
@@ -9,7 +9,7 @@
 ### 新規シーンの作成など
 まず，前ステップとは別の図を作るので，新しいシーンを作成します．
 
-メニュー「File」→「New Tab」を実行すると，New Tab/Window dialogが表示されますが，「New Scene」を選択してOKを押すと新規シーンが作成されます．（GUIのチュートリアル[Step6](../../Documents/GUIのチュートリアル(CueMol2)/Step6)参照）
+メニュー「File」→「New Tab」を実行すると，New Tab/Window dialogが表示されますが，「New Scene」を選択してOKを押すと新規シーンが作成されます．（GUIのチュートリアル[Step6](../../../Documents/GUIのチュートリアル(CueMol2)/Step6)参照）
 
 
 
@@ -21,7 +21,7 @@
 
 ### PDB IDを指定してネットサイトから分子を読み込む
 次に，bacteriorhodopsin (BR)のファイルをPDBから取得します．
-PDB IDは1IW6です．（GUIのチュートリアル[Step1](../../Documents/GUIのチュートリアル(CueMol2)/Step1)も参照）
+PDB IDは1IW6です．（GUIのチュートリアル[Step1](../../../Documents/GUIのチュートリアル(CueMol2)/Step1)も参照）
 
 メニューから，「File」→「Get PDB using accession code ...」を実行すると，
 Enter PDB IDとかかれたdialogが現れるので，1IW6と入力します．
@@ -33,10 +33,10 @@ Enter PDB IDとかかれたdialogが現れるので，1IW6と入力します．
 
 以上の操作を行うと，以下の図のようにBRの主鎖構造が表示されます．
 
-![step4-1loadbr-trace1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-1loadbr-trace1.png){ style="zoom: 0.25" .on-glb }
+![step4-1loadbr-trace1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-1loadbr-trace1.png){ style="zoom: 0.25" .on-glb }
 
 
-さらに，ChRのPDBファイル(3UG9_AB.pdb)を開きます．([Step1](../../Documents/CueMol2Tutorial2013/Step1)参照)
+さらに，ChRのPDBファイル(3UG9_AB.pdb)を開きます．([Step1](../../../Documents/CueMol2Tutorial2013/Step1)参照)
 
 Renderer option dialogでは，BRと同様に，重ね合わせがちゃんとできているか確認しやすいように，
 trace rendererを指定してください．
@@ -44,7 +44,7 @@ trace rendererを指定してください．
 
 以上の操作を行うと，以下の図のようにChRの主鎖構造が表示されます．
 
-![step4-2loadchr-trace1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-2loadchr-trace1.png){ style="zoom: 0.25" .on-glb }
+![step4-2loadchr-trace1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-2loadchr-trace1.png){ style="zoom: 0.25" .on-glb }
 
 
 
@@ -61,7 +61,7 @@ trace rendererを指定してください．
 Molecular superposition dialogが現れます．
 
 
-![step4-3ssmsuper1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-3ssmsuper1.png){ style="zoom: 0.5" .on-glb }
+![step4-3ssmsuper1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-3ssmsuper1.png){ style="zoom: 0.5" .on-glb }
 
 
 次に，dialogの設定を以下の通り変更（あるいはそうなっているか確認）します．
@@ -114,32 +114,32 @@ log windowに結果(rmsd, alignment等)が表示されます：
 
 Molecular superpositionが行われると，分子ビューの方は以下の図のように変化し，ChRのA鎖にBRが重ね合わさったことが分かります．
 
-![step4-4ssmsuper_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-4ssmsuper_fin1.png){ style="zoom: 0.25" .on-glb }
+![step4-4ssmsuper_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-4ssmsuper_fin1.png){ style="zoom: 0.25" .on-glb }
 
 
 ### 図の作成への準備
 重ね合わせができたことが確認できたので，以降は表示を作図用に作っていきます．
 
-まず，背景を白にします（[Step1](../../Documents/CueMol2Tutorial2013/Step1)背景を白色にする参照）．
+まず，背景を白にします（[Step1](../../../Documents/CueMol2Tutorial2013/Step1)背景を白色にする参照）．
 
 次に，styleをimportします．Sceneパネルで，Stylesを選択し，右クリックでcontext menuを表示させ，
 「Style file」→「Load ...」を実行します．
 
-![step5-6importstyle1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-6importstyle1.png){ style="zoom: 0.75" .on-glb }
+![step5-6importstyle1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-6importstyle1.png){ style="zoom: 0.75" .on-glb }
 
-すると，Open style file dialogが表示されるので，そこから前節([Step2](../../Documents/CueMol2Tutorial2013/Step2))で書き出したcommon_style.xmlを選択します．
+すると，Open style file dialogが表示されるので，そこから前節([Step2](../../../Documents/CueMol2Tutorial2013/Step2))で書き出したcommon_style.xmlを選択します．
 OKを押してdialogを閉じるとcommon_style.xmlがimportされます．
 
-![step5-7importstyle2](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-7importstyle2.png)
+![step5-7importstyle2](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-7importstyle2.png)
 
 
 あと，BR, ChRそれぞれにsimple rendererを作成しておきます．
 前節のシーンファイル（もし開いていないなら別タブに開く）から，
-simple rendererをコピー・ペーストすれば簡単です（[cuemol2/ObjRendCopyPaste](../../cuemol2/ObjRendCopyPaste)を参照）．
+simple rendererをコピー・ペーストすれば簡単です（[cuemol2/ObjRendCopyPaste](../../../cuemol2/ObjRendCopyPaste)を参照）．
 
 Simple rendererをコピーしてきたのち，表示をONにすると以下のような表示になります．
 
-![step4-5simplerend1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-5simplerend1.png){ style="zoom: 0.25" .on-glb }
+![step4-5simplerend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-5simplerend1.png){ style="zoom: 0.25" .on-glb }
 
 
 ### Cartoon表示
@@ -166,17 +166,17 @@ Setup renderer dialogでは，
 
 -  Selectionのtext boxにc; Aと入力し，A鎖に対するcartoon rendererのみ作成されるようにします．
 
-（[Step1](../../Documents/CueMol2Tutorial2013/Step3)・RetinalのCPK renderer作成の項目を参照）
+（[Step1](../../../Documents/CueMol2Tutorial2013/Step3)・RetinalのCPK renderer作成の項目を参照）
 
 以上の操作を行うと，分子ビューは下図のようになります．
 
-![step5-5cartoonrend1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-5cartoonrend1.png){ style="zoom: 0.25" .on-glb }
+![step5-5cartoonrend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-5cartoonrend1.png){ style="zoom: 0.25" .on-glb }
 
 
 ### Cartoonの着色
 #### ChRの設定
-ChRのCartoon表示の着色については，全体構造図のribbonと同じにします（[Step3](../../Documents/CueMol2Tutorial2013/Step3)参照）．
-まず，Colorパネルで3UG9-ABを選ぶと，defaultの着色が入っているので，それらをすべて削除します（![step5-8clearpaint1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-8clearpaint1.png)ボタンで一括削除できます）．
+ChRのCartoon表示の着色については，全体構造図のribbonと同じにします（[Step3](../../../Documents/CueMol2Tutorial2013/Step3)参照）．
+まず，Colorパネルで3UG9-ABを選ぶと，defaultの着色が入っているので，それらをすべて削除します（![step5-8clearpaint1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-8clearpaint1.png)ボタンで一括削除できます）．
 その後，Step3のribbonと同じ着色を一つ一つ追加してやると同じ着色になります．
 
 あるいは，Step3 (fig1_overall_3.qsc)からコピー・ペーストしてやると非常に簡単に同じ着色に設定することができます．
@@ -194,7 +194,7 @@ listboxの中で右ボタンをクリックするとcontext menuが表示され�
 
 最終的には，Colorパネルは以下のようになります．
 
-![step5-9chrpaint1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-9chrpaint1.png){ style="zoom: 0.5" .on-glb }
+![step5-9chrpaint1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-9chrpaint1.png){ style="zoom: 0.5" .on-glb }
 
 
 #### BRの設定
@@ -211,19 +211,19 @@ BRはほぼTMしかないので，色分けせずに単色で塗ることにし�
 SceneパネルでStylesを展開しcommon_styleの項目をdouble clickすると，Style editor dialogが表示されます．<br />
 Colorタブで新規項目を追加し，上記のBRの色定義を追加します．<br />
 さらに，Selectionタブで新規項目を追加し，上記のBRの選択定義を追加します．<br />
-（詳しい方法は，[Step2 色と選択の定義](../../Documents/CueMol2Tutorial2013/Step2)を参照してください）
+（詳しい方法は，[Step2 色と選択の定義](../../../Documents/CueMol2Tutorial2013/Step2)を参照してください）
 
 次に，定義された色と選択を使用して，paint coloringを設定します．
-（詳しい方法は，[Step2 色と分子選択定義を使用するように変更する](../../Documents/CueMol2Tutorial2013/Step2)を参照してください）
+（詳しい方法は，[Step2 色と分子選択定義を使用するように変更する](../../../Documents/CueMol2Tutorial2013/Step2)を参照してください）
 Color panelで1IW6を選び，
-まず，![step5-8clearpaint1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-8clearpaint1.png)ボタンでdefaultの塗り設定をすべて削除します．
+まず，![step5-8clearpaint1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-8clearpaint1.png)ボタンでdefaultの塗り設定をすべて削除します．
 次に，「＋」ボタンで塗り項目を追加して，
 分子選択をBR（リストボックスの中にあるはず）に
 色もbr（Named color中にあるはず）に変更し，
 OKを押すと着色項目が追加されます．
 
 
-> ![step5-10brpaint1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-10brpaint1.png) → ![step5-11brpaint_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-11brpaint_fin1.png){ style="zoom: 0.25" .on-glb }
+> ![step5-10brpaint1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-10brpaint1.png) → ![step5-11brpaint_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-11brpaint_fin1.png){ style="zoom: 0.25" .on-glb }
 
 **注意**
 
@@ -247,7 +247,7 @@ OKを押すと着色項目が追加されます．
 
 ### RetinalのCPK modelを作成する
 #### ChR
-[Step3](../../Documents/CueMol2Tutorial2013/Step3)と同様にしてretinalのCPK modelを作成します．
+[Step3](../../../Documents/CueMol2Tutorial2013/Step3)と同様にしてretinalのCPK modelを作成します．
 ChRの方は操作はStep3とほぼ同じなので，Step3を参照してください．
 
 あるいは，fig1_overall_3.qscのシーンの方からコピー・ペーストしてくると簡単にできます．
@@ -261,7 +261,7 @@ fig2_superpose_1.qscのタブをクリックし，fig2のシーンを表示さ�
 Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを選ぶと，A RetinalのCPK rendererがペーストされる．
 分子ビューにもretinalがピンク色で表示される．
 
-（詳しくは[cuemol2/ObjRendCopyPaste](../../cuemol2/ObjRendCopyPaste)を参照．）
+（詳しくは[cuemol2/ObjRendCopyPaste](../../../cuemol2/ObjRendCopyPaste)を参照．）
 
 
 
@@ -272,10 +272,10 @@ Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを
 まず，BRのretinalを選択します．MolStructパネルで1IW6を選択し，A鎖を展開してスクロールさせていくと「250 RET」という項目があることが分かります．
 
 
-![step5-12brretinalsel1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-12brretinalsel1.png){ .on-glb }
+![step5-12brretinalsel1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-12brretinalsel1.png){ .on-glb }
 
 
-この項目をクリックし，下のツールボタンの矢印ボタン![step3-25arrowbtn1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step3-25arrowbtn1.png)をクリックすると，BRのretinalが選択されます．
+この項目をクリックし，下のツールボタンの矢印ボタン![step3-25arrowbtn1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step3-25arrowbtn1.png)をクリックすると，BRのretinalが選択されます．
 この状態でrendererを作成し，Setup renderer dialogでは，
 
 -  Renderer typeはcpkに，
@@ -292,7 +292,7 @@ Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを
 
 最終的に作業用に作成したsimpleとtraceを非表示にすると，以下のような表示になります．
 
-![step5-13cpkretinal_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-13cpkretinal_fin1.png){ style="zoom: 0.25" .on-glb }
+![step5-13cpkretinal_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-13cpkretinal_fin1.png){ style="zoom: 0.25" .on-glb }
 
 
 ### Rendering
@@ -306,7 +306,7 @@ SceneパネルのCameraを選択し，「＋」ボタンを押すと新規camera
 このように適宜重要なviewの状態をcameraとして保存しておくと，誤ってviewを動かしてしまったりしたときに，
 camera_0をダブルクリックすることでその状態に戻る事ができるので便利です．
 
-（詳しくは[Documents/GUIのチュートリアル(CueMol2)/Step9](../../Documents/GUIのチュートリアル(CueMol2)/Step9)や[cuemol2/Camera](../../cuemol2/Camera)を参照）
+（詳しくは[Documents/GUIのチュートリアル(CueMol2)/Step9](../../../Documents/GUIのチュートリアル(CueMol2)/Step9)や[cuemol2/Camera](../../../cuemol2/Camera)を参照）
 
 #### POV-Rayによるrendering
 以上でシーンが完成しました．
@@ -314,10 +314,10 @@ camera_0をダブルクリックすることでその状態に戻る事ができ
 画像にrenderingするには，
 Viewを調整し図のような向きにして，
 メニュー「Render」→「POV-Ray Rendering」を実行してください．
-[Step3 保存とRendering](../../Documents/CueMol2Tutorial2013/Step3)と同様に設定を行い，
+[Step3 保存とRendering](../../../Documents/CueMol2Tutorial2013/Step3)と同様に設定を行い，
 Renderボタンを押すと画像が生成されます．
 Save image...ボタンを押せば，完成した画像をpng形式で保存できます．
 
 
-![step5-14povrender_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-14povrender_fin1.png){ style="zoom: 0.5" .on-glb }
+![step5-14povrender_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-14povrender_fin1.png){ style="zoom: 0.5" .on-glb }
 

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## ユーザインターフェイスの言語
 
@@ -10,7 +10,7 @@ CueMol2はXULベースのアプリケーションなので，
 Optionsダイアログの，Languageという項目で設定できます．（設定後はCueMol2の再起動が必要です）
 
 
-![l10n_ja_snap](../assets/images/cuemol2/UILocalization/l10n_ja_snap.png){ style="zoom: 0.5" .on-glb }
+![l10n_ja_snap](../../assets/images/cuemol2/UILocalization/l10n_ja_snap.png){ style="zoom: 0.5" .on-glb }
 
 
 空間群や電子密度とかが不必要に日本語になっているのがお分かりいただけると思います．

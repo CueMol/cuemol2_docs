@@ -1,5 +1,5 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)|
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル/Step4)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)|
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル/Step4)
 
 
 
@@ -9,18 +9,18 @@
 現在，オブジェクト"lysozyme"に接続されているレンダラーは
 "0"（タイプはsimple）だけです．
 現在，lysozymeの残基63から73までが選択されていますが（されて無い場合は
-[Step3](../../Documents/GUIのチュートリアル/Step3)を見て選択してください），
+[Step3](../../../Documents/GUIのチュートリアル/Step3)を見て選択してください），
 ここで新たなレンダラーを追加してこの部分をballstickモデルで表示してみましょう．
 
 
-![gui_step5_wspal1](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_wspal1.png){ .on-glb }
+![gui_step5_wspal1](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_wspal1.png){ .on-glb }
 
 
-ターゲットの分子オブジェクトを選択し（といってもこの場合lysozymeしかないが），下の![gui_step5_newrnd](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_newrnd.png){ .on-glb }**Renederer作成**ボタンを押すと，
+ターゲットの分子オブジェクトを選択し（といってもこの場合lysozymeしかないが），下の![gui_step5_newrnd](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_newrnd.png){ .on-glb }**Renederer作成**ボタンを押すと，
 下図のようなダイアログが表示されます((別にオブジェクトでなくレンダラーが選択されていても，その選択されているレンダラーがアタッチしているオブジェクトにレンダラーが追加されるようになっています))．
 
 
-![gui_step5_newrdlg](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_newrdlg.png){ .on-glb }
+![gui_step5_newrdlg](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_newrdlg.png){ .on-glb }
 
 
 ファイルを読込んだ時に出てくるダイアログと似ていますが，Nameのところが
@@ -37,7 +37,7 @@ Renderer name:を入力してください．
 dropdown listboxからballstickを選び，OKを押すと新たなレンダラーが作られ，lysozymeのレンダラーとして追加されます．
 
 
-![gui_step5_ballstk](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_ballstk.png){ .on-glb }
+![gui_step5_ballstk](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_ballstk.png){ .on-glb }
 
 
 Workspaceパレットのほうも，追加が反映されています．
@@ -45,7 +45,7 @@ Workspaceパレットのほうも，追加が反映されています．
 0(simple)以外に新しく"1"(ballstick)が追加されています．
 
 
-![gui_step5_wspal2](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_wspal2.png){ .on-glb }
+![gui_step5_wspal2](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_wspal2.png){ .on-glb }
 
 
 "1"を選択して下方の**削除ボタン**(×)を押せば，
@@ -56,10 +56,10 @@ Workspaceパレットのほうも，追加が反映されています．
 レンダラーには様々な**プロパティー**（設定値みたいなもの）があり，
 それを変更することで外見を変えることが出来ます．
 
-Workspaceパレットで，レンダラー名（今回の場合はballstickレンダラーである"1"）を選択して，下方の![gui_step5_propchgbtn](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_propchgbtn.png){ .on-glb }**プロパティー変更ボタン**を押してください．以下のようなダイアログが出てきます．（上方Tree view中の該当rendererのエントリーをダブルクリックでもOK）
+Workspaceパレットで，レンダラー名（今回の場合はballstickレンダラーである"1"）を選択して，下方の![gui_step5_propchgbtn](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_propchgbtn.png){ .on-glb }**プロパティー変更ボタン**を押してください．以下のようなダイアログが出てきます．（上方Tree view中の該当rendererのエントリーをダブルクリックでもOK）
 
 
-![gui_step5_bschgprop](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_bschgprop.png){ .on-glb }
+![gui_step5_bschgprop](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_bschgprop.png){ .on-glb }
 
 
 上図がデフォルトの設定ですが，
@@ -78,7 +78,7 @@ Workspaceパレットで，レンダラー名（今回の場合はballstickレ�
 に変更してみてください．
 
 
-![gui_step5_bsbfac1](../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_bsbfac1.png){ .on-glb }
+![gui_step5_bsbfac1](../../../assets/images/Documents/GUIのチュートリアル/Step5/gui_step5_bsbfac1.png){ .on-glb }
 
 
 なんかずんぐりしたスティックモデルになってしまいましたが，
@@ -89,4 +89,4 @@ Workspaceパレットで，レンダラー名（今回の場合はballstickレ�
 他のレンダラーにも各々のプロパティーがあります．
 ただ，一部GUIからの変更機能が実装されていないrendererもあります．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル/Step4)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル/Step4)

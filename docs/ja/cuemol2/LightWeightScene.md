@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## Light-weight sceneファイル
 CueMol 2.0.1.188以降では，新たにLight-weight sceneファイル形式というscene fileの一種が実装されました．
 ActiveX controlによるプレゼンテーションや，mobile deviceによる可視化に使用するのが主な目的です．
@@ -45,7 +45,7 @@ Light-weight sceneに変換後は，以下の操作を行うことが可能で�
 
 次に，以下のような保存オプションを指定するダイアログが表示されます．
 
-![qsl-option-1](../assets/images/cuemol2/LightWeightScene/qsl-option-1.png){ .on-glb }
+![qsl-option-1](../../assets/images/cuemol2/LightWeightScene/qsl-option-1.png){ .on-glb }
 
 ここで，
 
@@ -64,7 +64,7 @@ qslファイルは形式的には普通のシーンファイル(qscファイル)
 
 開いた後，Sceneパネルを見ると，例えば以下のようになっています．(冒頭のサンプルファイルを開けば同じシーンを見ることができます)
 
-![qsl-scene-1](../assets/images/cuemol2/LightWeightScene/qsl-scene-1.png){ .on-glb }
+![qsl-scene-1](../../assets/images/cuemol2/LightWeightScene/qsl-scene-1.png){ .on-glb }
 
 このように，名前は全て元のシーンと同じものになっていますが，
 
@@ -87,7 +87,7 @@ Version 2.0.1.188に付属しているActiveX controlにはバグがあるため
 
 作成したqslファイルを，iPad/iPhoneで表示させることができます．
 
-[cuemol2/iOSCueMolViewer](../cuemol2/iOSCueMolViewer)を参照してください．
+[cuemol2/iOSCueMolViewer](../../cuemol2/iOSCueMolViewer)を参照してください．
 
 ## 変換時の注意点
 ### メッシュの細かさ（ポリゴン数など）

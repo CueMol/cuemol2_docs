@@ -3,7 +3,7 @@
 
 
 **CueMol** is a computer program for the macromolecular structure visualization (CueMol was formerly called "Que").
-CueMol's aims are to visualize and create the publication-quality images of the macromolecular structures with user-friendly interfaces. You can find sample images created by CueMol in [Gallery](../en/Gallery) page. 
+CueMol's aims are to visualize and create the publication-quality images of the macromolecular structures with user-friendly interfaces. You can find sample images created by CueMol in [Gallery](../../en/Gallery) page. 
 Currently supported files are molecular coordinates (PDB format),
 electron density (CCP4, CNS , and MTZ formats),
 MSMS surface data,
@@ -12,21 +12,21 @@ and APBS electrostatic potential map (OpenDX format).
 Powered by [Mozilla XULRunner](http://www.mozilla.org/projects/mozilla-based.html), the application framework of Firefox and Thunderbird (and other mozilla-based application as well), CueMol2 now runs under both Windows, MacOS X, and Linux in a similar GUI appearance.
 
 
->> ![snapshot2_1](../assets/images/index/snapshot2_1.jpg){ style="zoom: 0.25" .on-glb } ![snapshot2_2](../assets/images/index/snapshot2_2.jpg){ style="zoom: 0.25" .on-glb }
+>> ![snapshot2_1](../../assets/images/index/snapshot2_1.jpg){ style="zoom: 0.25" .on-glb } ![snapshot2_2](../../assets/images/index/snapshot2_2.jpg){ style="zoom: 0.25" .on-glb }
 
 
->> ![snapshot2_2m](../assets/images/index/snapshot2_2m.jpg){ style="zoom: 0.28" .on-glb } ![snapshot2_1m](../assets/images/index/snapshot2_1m.jpg){ style="zoom: 0.28" .on-glb } 
+>> ![snapshot2_2m](../../assets/images/index/snapshot2_2m.jpg){ style="zoom: 0.28" .on-glb } ![snapshot2_1m](../../assets/images/index/snapshot2_1m.jpg){ style="zoom: 0.28" .on-glb } 
 
 Please send any comments, questions, or requests about CueMol to<br />
-![mm1](../assets/images/index/mm1.png)![mm2](../assets/images/index/mm2.png) or <br />
+![mm1](../../assets/images/index/mm1.png)![mm2](../../assets/images/index/mm2.png) or <br />
 [Follow @cuemolnohito on Twitter](http://twitter.com/cuemolnohito)
 
 ### What's new?
 2015/10/2
-:   Released version 2.2.2.366 for Windows and MacOS X. Version 2.2.2.365 contains bug in the installation process, so please update to the new version! Changes are listed in [Updates](../en/Updates) page.
+:   Released version 2.2.2.366 for Windows and MacOS X. Version 2.2.2.365 contains bug in the installation process, so please update to the new version! Changes are listed in [Updates](../../en/Updates) page.
 
 2015/9/26
-:   Released version 2.2.2.356 for Windows and MacOS X. Changes are listed in [Updates](../en/Updates) page.
+:   Released version 2.2.2.356 for Windows and MacOS X. Changes are listed in [Updates](../../en/Updates) page.
 
 2015/6/26
 :   Released version 2.2.1.354 for Windows and MacOS X.
@@ -181,24 +181,24 @@ Please send any comments, questions, or requests about CueMol to<br />
 
 ### Menu
 
-- [FrontPage](../en/FrontPage)
+- [FrontPage](../../en/FrontPage)
 
-- [Gallery](../en/Gallery)
+- [Gallery](../../en/Gallery)
 
-- [Updates](../en/Updates)
+- [Updates](../../en/Updates)
 
-- [Environment](../en/Environment)
+- [Environment](../../en/Environment)
 
-- [Download](../en/Download)
+- [Download](../../en/Download)
 
-- [Install](../en/Install)
+- [Install](../../en/Install)
 
-- [Documents](../en/Documents)
+- [Documents](../../en/Documents)
 
-- [Licence](../en/Licence)
+- [Licence](../../en/Licence)
 
-- [Donation](../en/Licence)
+- [Donation](../../en/Licence)
 
-- [Link](../en/Link)
+- [Link](../../en/Link)
 
 - [SourceForge](http://sourceforge.net/projects/cuemol/)

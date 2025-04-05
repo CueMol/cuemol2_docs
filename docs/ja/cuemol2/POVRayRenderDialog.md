@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## POV-Ray rendering dialogについて
 このセクションでは，
@@ -8,14 +8,14 @@ POV-Ray rendering dialogについて説明しています．
 メニューの「Render」→「POV-Ray rendering ...」を実行すると，
 POV-Ray rendering dialogが表示されます．
 
-![povrender-dlg1](../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg1.png){ style="zoom: 0.33" .on-glb }
+![povrender-dlg1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg1.png){ style="zoom: 0.33" .on-glb }
 
 
 ### 各設定の説明
 以下では，各設定の意味を説明しています．
 #### Main options
 
-![povrender-dlg2](../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg2.png){ style="zoom: 0.5" .on-glb }
+![povrender-dlg2](../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg2.png){ style="zoom: 0.5" .on-glb }
 
 W(idth), H(eight)
 :   出来上がる画像のサイズをピクセル単位で指定する．Defaultでは，現在の画面サイズと同じになっている．
@@ -45,13 +45,13 @@ Clipping plane
 :   現在分子ビューに表示されているslabによるclippingをpovray renderingにおいても再現するかどうかを指定する．<br />
 
 **Left**：Clipping plane off，**Right**：Clipping plane on<br />
-![povrender-clip0](../assets/images/cuemol2/POVRayRenderDialog/povrender-clip0.png){ style="zoom: 0.5" .on-glb }
-![povrender-clip1](../assets/images/cuemol2/POVRayRenderDialog/povrender-clip1.png){ style="zoom: 0.5" .on-glb }
+![povrender-clip0](../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip0.png){ style="zoom: 0.5" .on-glb }
+![povrender-clip1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip1.png){ style="zoom: 0.5" .on-glb }
 Post-render alpha blending
-:   POV-Ray rendering後にalpha blendingを行うかどうかを指定する．詳しくは，[cuemol2/PostAlphaBlend](../cuemol2/PostAlphaBlend)を参照．
+:   POV-Ray rendering後にalpha blendingを行うかどうかを指定する．詳しくは，[cuemol2/PostAlphaBlend](../../cuemol2/PostAlphaBlend)を参照．
 
 Edge lines
-:   Edge renderingを有効にする．詳しくは，[cuemol2/EdgeLines](../cuemol2/EdgeLines)を参照．
+:   Edge renderingを有効にする．詳しくは，[cuemol2/EdgeLines](../../cuemol2/EdgeLines)を参照．
 
 Pix labels
 :   文字ラベルなどのrenderingを有効にする．
@@ -59,7 +59,7 @@ Pix labels
 
 #### POV-Ray options
 
-![povrender-dlg3](../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg3.png){ style="zoom: 0.5" .on-glb }
+![povrender-dlg3](../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg3.png){ style="zoom: 0.5" .on-glb }
 
 Povray-exe-path
 :   Renderingに使用するPOV-Rayの実行ファイルを指定する．Windows版の場合は，consoleで動くpovrayでなければならない．（下記POV-Rayのpath等の設定を参照）
@@ -68,17 +68,17 @@ Povray-inc-path
 :   POV-Rayが参照するincファイルが入ったdirectoryを指定する．（下記POV-Rayのpath等の設定を参照）
 
 Radiosity
-:   Radiosity renderingを行うかどうか，あるいはそのモードを指定する．詳しくは，[cuemol2/Radiosity](../cuemol2/Radiosity)を参照．
+:   Radiosity renderingを行うかどうか，あるいはそのモードを指定する．詳しくは，[cuemol2/Radiosity](../../cuemol2/Radiosity)を参照．
 
 Lighting
-:   光源の設定を行う．詳しくは，[cuemol2/POVRayRenderLighting](../cuemol2/POVRayRenderLighting)を参照．
+:   光源の設定を行う．詳しくは，[cuemol2/POVRayRenderLighting](../../cuemol2/POVRayRenderLighting)を参照．
 
 Shadow
 :   影が出るようにrenderingするかどうかを指定する．Defaultではoffになっている．<br />
 
 **Left**：Shadow off，**Right**：Shadow on<br />
-![povrender-shadow0](../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow0.png){ style="zoom: 0.5" .on-glb }
-![povrender-shadow1](../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow1.png){ style="zoom: 0.5" .on-glb }
+![povrender-shadow0](../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow0.png){ style="zoom: 0.5" .on-glb }
+![povrender-shadow1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow1.png){ style="zoom: 0.5" .on-glb }
 
 ### POV-Rayのpath等の設定
 上記の設定のうち，Povray-exe-pathとPovray-inc-pathについて説明します．
@@ -135,5 +135,5 @@ POV-Ray rendering dialogが表示中も，メインのウィンドウを操作�
 前のシーンがレンダリングされてしまいますので注意してください．）
 
 ### RenderingのLog
-CueMol2.1以降では，レンダリング時にPOV-Rayがstdout(or stderr)に書き出す情報が，log window ([チュートリアル](../Documents/GUIのチュートリアル(CueMol2)/Step1-2)参照)に表示されるようになっています．
+CueMol2.1以降では，レンダリング時にPOV-Rayがstdout(or stderr)に書き出す情報が，log window ([チュートリアル](../../Documents/GUIのチュートリアル(CueMol2)/Step1-2)参照)に表示されるようになっています．
 もし，うまくレンダリングが行われない場合は，log windowを参照して，エラーレポートをお願いいたします．

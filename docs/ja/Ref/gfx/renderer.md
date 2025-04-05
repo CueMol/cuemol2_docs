@@ -1,10 +1,10 @@
-[Ref/gfx](../../Ref/gfx)
+[Ref/gfx](../../../Ref/gfx)
 
 
 
 ## renderer (QScript オブジェクト)
-[QScriptオブジェクト](../../Ref/QScriptObject)のひとつであるrendererは，CueMolのレンダラーをQScriptから扱いやすくするために設けられたラッパーである．
-基本的に，[gfxモジュールのスタティックメソッド](../../Ref/gfx/static_methods)から直接レンダラー識別名を指定して同等の操作を行なうことができる．
+[QScriptオブジェクト](../../../Ref/QScriptObject)のひとつであるrendererは，CueMolのレンダラーをQScriptから扱いやすくするために設けられたラッパーである．
+基本的に，[gfxモジュールのスタティックメソッド](../../../Ref/gfx/static_methods)から直接レンダラー識別名を指定して同等の操作を行なうことができる．
 ### Methods
 #### destroy
 ; destroy renderer

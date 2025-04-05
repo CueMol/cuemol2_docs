@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## スタイルについて
 CueMol2では各レンダラーにさまざまなプロパティーがあって他の分子Viewerに比べて多彩な表現が可能なわけですが，
 逆にたくさんありすぎて「いちいち設定するのが面倒」という問題がありました．
@@ -17,18 +17,18 @@ CueMol2では各レンダラーにさまざまなプロパティーがあって�
 コンテキストメニューを表示させると，以下のようなのが出てきますが，
 
 
-![style_ribbon_ctxtmenu1](../assets/images/cuemol2/Style/style_ribbon_ctxtmenu1.png)
+![style_ribbon_ctxtmenu1](../../assets/images/cuemol2/Style/style_ribbon_ctxtmenu1.png)
 
 
 ここでRoundを選ぶと，ribbon rendererの形状が以下のように変化します．
 
 -  Helix: <br />
-![style_helix_default1](../assets/images/cuemol2/Style/style_helix_default1.png) → ![style_helix_round1](../assets/images/cuemol2/Style/style_helix_round1.png)
+![style_helix_default1](../../assets/images/cuemol2/Style/style_helix_default1.png) → ![style_helix_round1](../../assets/images/cuemol2/Style/style_helix_round1.png)
 
 -  Sheet: <br />
-![style_sheet_default1](../assets/images/cuemol2/Style/style_sheet_default1.png) → ![style_sheet_round1](../assets/images/cuemol2/Style/style_sheet_round1.png)
+![style_sheet_default1](../../assets/images/cuemol2/Style/style_sheet_default1.png) → ![style_sheet_round1](../../assets/images/cuemol2/Style/style_sheet_round1.png)
 
-Ribbon以外にも，ballstick，[atomintr](../Documents/GUIのチュートリアル(CueMol2)/Step13)など他のrendererにも
+Ribbon以外にも，ballstick，[atomintr](../../Documents/GUIのチュートリアル(CueMol2)/Step13)など他のrendererにも
 いくつかのシステムで定義されたスタイルが適用できるようになっています．
 
 #### Paintに関するスタイル
@@ -40,14 +40,14 @@ Colorパネルから指定できるようになっています．
 そこから「Paint coloring」を選ぶと図のようにプリセットのスタイルが選択項目として出てきます．
 
 
-![style_paint_ctxtmenu1](../assets/images/cuemol2/Style/style_paint_ctxtmenu1.png)
+![style_paint_ctxtmenu1](../../assets/images/cuemol2/Style/style_paint_ctxtmenu1.png)
 
 
 現時点ではDefaultとWoodyしかありませんが，Woodyに変えるとCueMol1のデフォルトの
 着色であった植物風（？）の着色に変化します．
 
 
-> ![style_ribbon_default2](../assets/images/cuemol2/Style/style_ribbon_default2.png) → ![style_ribbon_woody2](../assets/images/cuemol2/Style/style_ribbon_woody2.png){ .on-glb }
+> ![style_ribbon_default2](../../assets/images/cuemol2/Style/style_ribbon_default2.png) → ![style_ribbon_woody2](../../assets/images/cuemol2/Style/style_ribbon_woody2.png){ .on-glb }
 
 ### スタイルが効かない！？
 
@@ -65,7 +65,7 @@ Colorパネルから指定できるようになっています．
 ただしもちろん，ダイアログから個別に指定した値は消えてしまいます．
 
 
-![style_resetall](../assets/images/cuemol2/Style/style_resetall.png)
+![style_resetall](../../assets/images/cuemol2/Style/style_resetall.png)
 
 
 あるいは上の図のように，プロパティ設定ダイアログのGenericタブには，
@@ -90,7 +90,7 @@ CueMol2のレンダラーなどにはプロパティ（名前と値の組）が�
 これを模式的に表した図が，以下になります．
 
 
-![style_concept1](../assets/images/cuemol2/Style/style_concept1.png)
+![style_concept1](../../assets/images/cuemol2/Style/style_concept1.png)
 
 
 例えば図の**width**の場合，

@@ -3,7 +3,7 @@
 ## Windows版
 
 ### バイナリー配布からのinstall
-まず，[Download](./Download)のページからinstallerをdownloadしてください．
+まず，[Download](../Download)のページからinstallerをdownloadしてください．
 
 
 #### Installerを実行する前に
@@ -28,7 +28,7 @@ Version 1.1.0.**108**以降では，途中の画面でActiveXコントロール�
 インストールに関するオプションが増えています．
 
 
-![installer1](./assets/images/Install-1.1/installer1.png)
+![installer1](../assets/images/Install-1.1/installer1.png)
 
 
 Register the CueMol ActiveX Controlをチェックすると，
@@ -49,7 +49,7 @@ CueMolディレクトリにある，「CueMolCtl.ocx」を削除してくださ�
 起動時に以下のようなエラーが出ます．
 
 
-![errormsg](./assets/images/Install-1.1/errormsg.png){ .on-glb }
+![errormsg](../assets/images/Install-1.1/errormsg.png){ .on-glb }
 
 
 この状態でOKして起動すると，
@@ -63,7 +63,7 @@ CueMolディレクトリにある，「CueMolCtl.ocx」を削除してくださ�
 入れてやって，CueMolを再起動すればOKのはずです．
 
 
-![sysconfig1](./assets/images/Install-1.1/sysconfig1.png){ .on-glb }
+![sysconfig1](../assets/images/Install-1.1/sysconfig1.png){ .on-glb }
 
 
 **Version 1.1.0以降**では，adminより低い権限のユーザーでも，
@@ -72,7 +72,7 @@ CueMolディレクトリにある，「CueMolCtl.ocx」を削除してくださ�
 
 ### Sourceからのinstall
 
--  [Documents/BuildFromSrc](./Documents/BuildFromSrc) (準備中)
+-  [Documents/BuildFromSrc](../Documents/BuildFromSrc) (準備中)
 
 
 ## UNIX版

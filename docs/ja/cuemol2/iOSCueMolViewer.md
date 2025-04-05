@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## iOS版CueMol viewerについて
 
@@ -18,8 +18,8 @@ iOSで動作するCueMolのモバイルデバイス版です．
 
 基本的に，以下の流れで使用するものと考えていただければと思います．
 1.  Desktop版CueMolでシーンを作成
-1.  Mobile device用にpolygon数などを調節する([Light weight scene](../cuemol2/LightWeightScene)を参照)
-1.  QSLファイルに書き出す([Light weight scene](../cuemol2/LightWeightScene)を参照)
+1.  Mobile device用にpolygon数などを調節する([Light weight scene](../../cuemol2/LightWeightScene)を参照)
+1.  QSLファイルに書き出す([Light weight scene](../../cuemol2/LightWeightScene)を参照)
 1.  Deviceに転送
 1.  iOS版CueMol viewerで表示
 
@@ -43,10 +43,10 @@ CueMol viewerで利用可能なファイル一覧が表示されます．
 ファイル名の部分をタップすると，そのファイルが開かれ，Molecular viewerに移行します．
 （その際エラーが出ると，メッセージボックスが表示されFile browserに戻ってしまいます）
 
-インストール時には，サンプルの[qslファイル](../cuemol2/LightWeightScene)とPDBファイルが表示されていると思います．
+インストール時には，サンプルの[qslファイル](../../cuemol2/LightWeightScene)とPDBファイルが表示されていると思います．
 
 
-![file-browser-2](../assets/images/cuemol2/iOSCueMolViewer/file-browser-2.png){ style="zoom: 0.5" .on-glb }
+![file-browser-2](../../assets/images/cuemol2/iOSCueMolViewer/file-browser-2.png){ style="zoom: 0.5" .on-glb }
 
 
 #### Edit mode
@@ -65,7 +65,7 @@ editが終了したら，再度右上のボタンを押してedit modeを終了�
 文字通り，分子が表示される画面です．
 
 
-![mol-viewer-1](../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-1.png){ style="zoom: 0.5" .on-glb }
+![mol-viewer-1](../../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-1.png){ style="zoom: 0.5" .on-glb }
 
 
 以下の操作が可能になっています．
@@ -101,7 +101,7 @@ Center here
 
 
 
-![mol-viewer-menu-1](../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-menu-1.png){ style="zoom: 0.5" .on-glb }
+![mol-viewer-menu-1](../../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-menu-1.png){ style="zoom: 0.5" .on-glb }
 
 #### Long pressメニュー
 Molecular viewerの中のどの部分でもよいので，Long press（長押し）すると，画面上方にメニューバーが表示されます．
@@ -109,21 +109,21 @@ Back (iPhone)あるいはCueMol files (iPad)と書かれたボタンを押すと
 Displayと書かれたボタンを押すと，下記のDisplay panelが表示されます．
 
 
-![mol-viewer-menu-2](../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-menu-2.png){ style="zoom: 0.5" .on-glb }
+![mol-viewer-menu-2](../../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-menu-2.png){ style="zoom: 0.5" .on-glb }
 
 
 ### Display panel
 CueMol PC版のSceneパネルに相当するものです．
 
 
-![display-panel-2](../assets/images/cuemol2/iOSCueMolViewer/display-panel-2.png){ style="zoom: 0.5" .on-glb }
+![display-panel-2](../../assets/images/cuemol2/iOSCueMolViewer/display-panel-2.png){ style="zoom: 0.5" .on-glb }
 
 
 Objects中の該当項目をクリックすると，
 シーン中のObject/Rendererの表示・非表示がトグルされます．
 
 Camera中の該当項目をクリックすると，そのカメラに保存された視点に，Molecular viewerの視点が移動します．
-デフォルトでは__currentというカメラしかありませんが，これはqslシーンファイルがロードされたときに表示される設定になります（[qslファイル](../cuemol2/LightWeightScene)参照）．
+デフォルトでは__currentというカメラしかありませんが，これはqslシーンファイルがロードされたときに表示される設定になります（[qslファイル](../../cuemol2/LightWeightScene)参照）．
 これを利用して複数の視点を切り替えて使用するには，前もってCueMol PC版でカメラに視点を保存しておく必要があります．
 
 ## PCなどからのファイル転送

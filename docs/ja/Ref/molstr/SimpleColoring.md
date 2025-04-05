@@ -1,4 +1,4 @@
-[Ref/molstr](../../Ref/molstr)
+[Ref/molstr](../../../Ref/molstr)
 
 ## SimpleColoring
 単純な着色をサポートするColoring(着色) classのひとつ．
@@ -28,4 +28,4 @@
 
 
 ** 例
-[Documents/QScriptのチュートリアル/Step1](../../Documents/QScriptのチュートリアル/Step1)に使用例があります．
+[Documents/QScriptのチュートリアル/Step1](../../../Documents/QScriptのチュートリアル/Step1)に使用例があります．

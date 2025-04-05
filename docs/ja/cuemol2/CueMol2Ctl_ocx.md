@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 **注意点**
 :   CueMol2 ActiveX controlはversion 2.2.2以降では同梱されなくなりました．
@@ -13,7 +13,7 @@ Word, PowerPointの文書中に埋め込んで使用でき，
 インタラクティブに分子を回転させたりできる，
 静止画像やmovieとはまた違ったプレゼンテーションを行えます．
 
-大まかな機能はCueMol1のcontrolと同じなので[CueMol1のページ](../Documents/ActiveX)も参考になりますが，
+大まかな機能はCueMol1のcontrolと同じなので[CueMol1のページ](../../Documents/ActiveX)も参考になりますが，
 IEでの使用ができない（http経由でのファイル表示ができない）等，
 不必要と思われる機能を省いた形になっています．
 
@@ -27,7 +27,7 @@ PowerPoint (Micorosoft Office 2010)
 
 ### インストール
 まずはActiveXコントロールのインストールについてです．
-[Install](../Install)にも書かれているとおり，
+[Install](../../Install)にも書かれているとおり，
 CueMol2本体のインストーラーのウィザードの，
 「Select Additional Task」のところで，
 ActiveXコントロールのインストールを選択するとインストールされます．
@@ -38,7 +38,7 @@ ActiveXコントロールのインストールを選択するとインストー�
 危険なものではありませんが）．
 
 
-![activex-install-1](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-install-1.png)
+![activex-install-1](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-install-1.png)
 
 
 ここで，「Register the CueMol2 ActiveX control」をチェックして
@@ -66,20 +66,20 @@ b3c22d9d-cb97-4692-8097-2a36ecd9970bというGUIDでレジストリに登録さ�
 1.  右側に「開発」という項目があるので，そのチェックボックスをonにする．
 
 
-> ![activex-pptsetting-1](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-pptsetting-1.png){ style="zoom: 0.7" .on-glb } → ![activex-pptsetting-2](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-pptsetting-2.png){ .on-glb }  → ![activex-pptsetting-3](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-pptsetting-3.png){ style="zoom: 0.8" .on-glb } 
+> ![activex-pptsetting-1](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-pptsetting-1.png){ style="zoom: 0.7" .on-glb } → ![activex-pptsetting-2](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-pptsetting-2.png){ .on-glb }  → ![activex-pptsetting-3](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-pptsetting-3.png){ style="zoom: 0.8" .on-glb } 
 
 つぎに，以上の設定により新たに出てきた「開発」リボンをクリックし，
 コントロールのグループにある「コントロールの選択」ボタンをクリックします．
 
 
-![activex-insctrl-1](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-insctrl-1.png){ .on-glb }
+![activex-insctrl-1](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-insctrl-1.png){ .on-glb }
 
 
 すると，以下のようにインストールされているActiveXコントロールの一覧が
 出てきますので，その中から「CueMol2 ActiveX Control」を選択します．
 
 
-![activex-insctrl-2](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-insctrl-2.png){ .on-glb }
+![activex-insctrl-2](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-insctrl-2.png){ .on-glb }
 
 
 マウスカーソルが「＋」の形になるので，
@@ -89,7 +89,7 @@ b3c22d9d-cb97-4692-8097-2a36ecd9970bというGUIDでレジストリに登録さ�
 CueMol2のアイコンやバージョン情報などが出てきます．
 
 
-![activex-insctrl-3](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-insctrl-3.png){ .on-glb }
+![activex-insctrl-3](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-insctrl-3.png){ .on-glb }
 
 
 ### 表示するqscファイルを指定する
@@ -98,14 +98,14 @@ CueMol2のアイコンやバージョン情報などが出てきます．
 表示されるので，その中から「プロパティー」を選びます．
 
 
-![activex-setprop-1](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-setprop-1.png)
+![activex-setprop-1](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-setprop-1.png)
 
 
 つぎに，プロパティーページの「Source」項目（の右側）に文字が入ると思いますが，
 そこにqscファイルのパス名(C:\foo\bar\baz.qscなど)を入力します．
 
 
-![activex-setprop-2](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-setprop-2.png)
+![activex-setprop-2](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-setprop-2.png)
 
 
 ここに入力するqscファイルのパス名は，ドライブ文字やUNCを含む絶対パスでも，
@@ -118,7 +118,7 @@ CueMol2のアイコンやバージョン情報などが出てきます．
 CueMol2でqscファイルを読み込んだときと同じ表示になっていると思います．
 
 
-![activex-sample-1](../assets/images/cuemol2/CueMol2Ctl_ocx/activex-sample-1.png)
+![activex-sample-1](../../assets/images/cuemol2/CueMol2Ctl_ocx/activex-sample-1.png)
 
 
 ### CueMolコントロールの操作
@@ -126,7 +126,7 @@ CueMol2でqscファイルを読み込んだときと同じ表示になってい�
 コントロール領域（上の図の黒い矩形部分）でマウスを左ドラッグすると，
 分子の表示を回転させることができます．
 また，右ドラッグで平行移動になります．
-マウス操作は，アプリ版CueMolの分子ビューでの操作と同じです([Documents/GUIのチュートリアル/Step2](../Documents/GUIのチュートリアル/Step2)参照)．
+マウス操作は，アプリ版CueMolの分子ビューでの操作と同じです([Documents/GUIのチュートリアル/Step2](../../Documents/GUIのチュートリアル/Step2)参照)．
 ただし，クリックで原子情報を表示させたり，
 コンテキストメニューを出したりは，できません．
 
@@ -150,7 +150,7 @@ CueMol 2.1以降(2.1.0.241)では，アニメーションを使用すること�
 ### シーンにアニメーション設定がある場合
 画面を右クリックすると非常に簡単なメニューが表示されます．
 
-![ocx_anim_menu1](../assets/images/cuemol2/CueMol2Ctl_ocx/ocx_anim_menu1.png){ .on-glb }
+![ocx_anim_menu1](../../assets/images/cuemol2/CueMol2Ctl_ocx/ocx_anim_menu1.png){ .on-glb }
 
 
 文字通り，
@@ -184,7 +184,7 @@ simple表示以外で表示することはできません．
 ### QSLファイルの表示
 2.0.1.188以降のバージョンでは，Light-weight sceneの表示にも対応しています．
 
-Light-weight scene については，[Light-weight scene について](../cuemol2/LightWeightScene)をご覧ください．
+Light-weight scene については，[Light-weight scene について](../../cuemol2/LightWeightScene)をご覧ください．
 
 プレゼンで使うときはrendererの編集などは基本やらないでしょうから，Light-weight sceneで十分間に合うことが多いと思います．（~~ただし，リンク先にも説明があるとおり現バージョン2.0.1.188では拡張子をqscに書き換えないと読み込んでくれないというバグがあるので注意してください~~）
 

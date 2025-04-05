@@ -1,4 +1,4 @@
-[cuemol2/Scripting](../../cuemol2/Scripting)
+[cuemol2/Scripting](../../../cuemol2/Scripting)
 
 ## Objectのファイルからの読み込み
 reader_nameで指定されるreaderを使用して，pathからファイルを読み込んでObjectを作成する．

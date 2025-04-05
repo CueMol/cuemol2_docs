@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## GUIのチュートリアル
 
@@ -11,28 +11,28 @@
 
 - 基本編
 
-    - [Step1 分子モデルファイルを読み込む](../Documents/GUIのチュートリアル/Step1)
+    - [Step1 分子モデルファイルを読み込む](../../Documents/GUIのチュートリアル/Step1)
 
-    - [Step2 Viewの操作](../Documents/GUIのチュートリアル/Step2)
+    - [Step2 Viewの操作](../../Documents/GUIのチュートリアル/Step2)
 
-    - [Step3 分子の選択](../Documents/GUIのチュートリアル/Step3)
+    - [Step3 分子の選択](../../Documents/GUIのチュートリアル/Step3)
 
-    - [Step4 Workspaceパレット1(複数の分子の読込)](../Documents/GUIのチュートリアル/Step4)
+    - [Step4 Workspaceパレット1(複数の分子の読込)](../../Documents/GUIのチュートリアル/Step4)
 
-    - [Step5 Workspaceパレット2(分子表示の操作)](../Documents/GUIのチュートリアル/Step5)
+    - [Step5 Workspaceパレット2(分子表示の操作)](../../Documents/GUIのチュートリアル/Step5)
 
 - 応用編
 
 
-    - [StepA2 パレット・ウィンドウ](../Documents/GUIのチュートリアル/StepA2)
+    - [StepA2 パレット・ウィンドウ](../../Documents/GUIのチュートリアル/StepA2)
 
 
-    - [StepA4 セッション・ファイル](../Documents/GUIのチュートリアル/StepA4)
+    - [StepA4 セッション・ファイル](../../Documents/GUIのチュートリアル/StepA4)
 
-    - [StepA5 分子の重ね合わせ](../Documents/GUIのチュートリアル/StepA5)
+    - [StepA5 分子の重ね合わせ](../../Documents/GUIのチュートリアル/StepA5)
 
 - 結晶構造関連
 
-    - [StepC1 結晶学的な情報](../Documents/GUIのチュートリアル/StepC1)
+    - [StepC1 結晶学的な情報](../../Documents/GUIのチュートリアル/StepC1)
 
-    - [StepC2 電子密度](../Documents/GUIのチュートリアル/StepC2)
+    - [StepC2 電子密度](../../Documents/GUIのチュートリアル/StepC2)

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## Hardware stereoについて
 CueMol2でもOpenGL quadbufferを用いたhardware stereoに対応しています．

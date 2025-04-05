@@ -1,7 +1,7 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 色の指定方法について
-一般的に色の指定は，色指定widgetのGUIで行えますが([Documents/GUIのチュートリアル(CueMol2)/Step7](../Documents/GUIのチュートリアル(CueMol2)/Step7))，
+一般的に色の指定は，色指定widgetのGUIで行えますが([Documents/GUIのチュートリアル(CueMol2)/Step7](../../Documents/GUIのチュートリアル(CueMol2)/Step7))，
 以下のように，色指定widgetのテキストボックスに直接文字を入力して行うことも可能です．
 
 
@@ -105,7 +105,7 @@ $molcol
 
 分子Rendererに関する色の指定の場合のみに使用可能．
 対応する分子における色指定を参照するようになる．
-詳しくは[cuemol2/MolColor](../cuemol2/MolColor)参照．
+詳しくは[cuemol2/MolColor](../../cuemol2/MolColor)参照．
 ## 修飾子
 以上の色指定の後ろにかっこ（{}）で指定する．
 複数の修飾子を指定する場合はセミコロンで区切る．

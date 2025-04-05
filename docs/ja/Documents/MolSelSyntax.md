@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## 分子選択文のリファレンス
 
 

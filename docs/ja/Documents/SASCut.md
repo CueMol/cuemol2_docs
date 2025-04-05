@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 
 
@@ -10,27 +10,27 @@ Version 1.1.0.127から分子表面(MolSurf)オブジェクトを平面で切断
 ### GUIによる断面生成
 #### データの読み込み
 GUIあるいはスクリプトを使用して，MSMSで生成した分子表面を読み込みます．
-ここでは，[チュートリアル](../Documents/QScriptのチュートリアル/StepA4)
+ここでは，[チュートリアル](../../Documents/QScriptのチュートリアル/StepA4)
 と同じデータ（blm.face/blm.vert）を使用しています．
 
 
-![cbp_surf1](../assets/images/Documents/SASCut/cbp_surf1.png){ .on-glb }
+![cbp_surf1](../../assets/images/Documents/SASCut/cbp_surf1.png){ .on-glb }
 
 
 #### 切断面の指定
 まず，
-視線の方向，視点の位置のZ方向並進，スラブを調節して（GUIチュートリアル[参照](../Documents/GUIのチュートリアル/Step2)），
+視線の方向，視点の位置のZ方向並進，スラブを調節して（GUIチュートリアル[参照](../../Documents/GUIのチュートリアル/Step2)），
 下図の様にスラブで分子表面が切断されて中が見えるような状態にします．
 
 
-![cbp_surf2](../assets/images/Documents/SASCut/cbp_surf2.png){ .on-glb }
+![cbp_surf2](../../assets/images/Documents/SASCut/cbp_surf2.png){ .on-glb }
 
 
 #### 切断の実行
 次に，メニュー「Tools」→「Cut surface object」を実行します．
 
 
-![cbp_surf_dlg1](../assets/images/Documents/SASCut/cbp_surf_dlg1.png){ .on-glb }
+![cbp_surf_dlg1](../../assets/images/Documents/SASCut/cbp_surf_dlg1.png){ .on-glb }
 
 
 Combo boxからblmを選び（この場合は一つしかないので始めから選ばれている），
@@ -44,7 +44,7 @@ MSMSのデフォルトで-density値は3くらいになっていますが，
 それより少々細かめということで，ここでは5を指定しています．
 
 
-![cbp_surf3](../assets/images/Documents/SASCut/cbp_surf3.png){ .on-glb }
+![cbp_surf3](../../assets/images/Documents/SASCut/cbp_surf3.png){ .on-glb }
 
 
 OKを押すと，現在のスラブによる断面で，実際にMolSurfオブジェクトが切断されます．
@@ -61,13 +61,13 @@ OKを押すと，現在のスラブによる断面で，実際にMolSurfオブ�
 あと，下図のように切断面の形状が「めがね状」あるいはくびれた部分（赤で囲んだ部分）があると，うまくポリゴン生成がいかなくなります．
 
 
-![cbp_surf4](../assets/images/Documents/SASCut/cbp_surf4.png){ .on-glb }
+![cbp_surf4](../../assets/images/Documents/SASCut/cbp_surf4.png){ .on-glb }
 
 
 この場合，断面生成を行うと，下図のような誤ったポリゴンが生成されてしまいます．
 
 
-![cbp_surf5](../assets/images/Documents/SASCut/cbp_surf5.png){ .on-glb }
+![cbp_surf5](../../assets/images/Documents/SASCut/cbp_surf5.png){ .on-glb }
 
 
 こういうおかしな断面が生成されてしまった場合はUndoをすると切断前に戻りますので，
@@ -89,7 +89,7 @@ molvis.cutSurfByPlane(MolSurf obj，density, plane_dir, plane_pos)
 ```
 methodを使用します．
 
-チュートリアルの[静電ポテンシャル表示](../Documents/QScriptのチュートリアル/StepA5)と組み合わせて使用すると，以下のようになります．
+チュートリアルの[静電ポテンシャル表示](../../Documents/QScriptのチュートリアル/StepA5)と組み合わせて使用すると，以下のようになります．
 
 <pre>
 $pwd = sys.getScriptPath();
@@ -143,7 +143,7 @@ molvis.cutSurfByPlane($surf, 5, vector(0,1,0), vector(35.31, 0.07, 31.33));
 上記のスクリプトを実行すると，以下のような図が生成されます．
 
 
-![cbp_surf_qs1](../assets/images/Documents/SASCut/cbp_surf_qs1.png){ .on-glb }
+![cbp_surf_qs1](../../assets/images/Documents/SASCut/cbp_surf_qs1.png){ .on-glb }
 
 
 #### カット面の指定方法の工夫
@@ -191,7 +191,7 @@ gfx.updateView();
 </pre>
 
 
-![cbp_qs2](../assets/images/Documents/SASCut/cbp_qs2.png){ .on-glb }
+![cbp_qs2](../../assets/images/Documents/SASCut/cbp_qs2.png){ .on-glb }
 
 
 このスクリプトでは，
@@ -217,7 +217,7 @@ $atom3_pos
 向きは，S46→C47を右手の親指，S46→C46を右手の人差し指とすると，
 中指の方向になります．（高校の物理とかで習ったと思いますが，フレミング右手の法則とかを思い出してください）
 
-![righthand](../assets/images/Documents/SASCut/righthand.png){ .on-glb }
+![righthand](../../assets/images/Documents/SASCut/righthand.png){ .on-glb }
 
 図の手の絵は向きがちょっと違いますが，青矢印がS46→C47ベクトル，赤矢印がS46→C46ベクトルとすると，法線は黒矢印の向きになります．
 それで，molvis.cutByPlane()の引数の説明にもあるとおり，この法線の方向の

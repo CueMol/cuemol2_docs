@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## QScriptを使用して論文用の図を作ろう
 
@@ -10,7 +10,7 @@ QScript関連の仕様はWindows版とUNIX版でほぼ同じですが，GUIが�
 Windows版
 :   メニュー"File"->"Execute QScript..."を選択する．→実行するスクリプトファイル（拡張子はqsが標準）を選ぶ．→実行される<br />
 
-あるいは，ツールバーの![execscr](../assets/images/Documents/QScriptのチュートリアル/execscr.png)ボタンをクリックする．
+あるいは，ツールバーの![execscr](../../assets/images/Documents/QScriptのチュートリアル/execscr.png)ボタンをクリックする．
 
 
 
@@ -22,29 +22,29 @@ Windows版
 
 - 基本
 
-    - [Step1 Ball&StickモデルとCPKモデル](../Documents/QScriptのチュートリアル/Step1)
+    - [Step1 Ball&StickモデルとCPKモデル](../../Documents/QScriptのチュートリアル/Step1)
 
-    - [Step2 Tubeモデル](../Documents/QScriptのチュートリアル/Step2)
+    - [Step2 Tubeモデル](../../Documents/QScriptのチュートリアル/Step2)
 
-    - [Step3 Ribbonモデル](../Documents/QScriptのチュートリアル/Step3)
+    - [Step3 Ribbonモデル](../../Documents/QScriptのチュートリアル/Step3)
 
-    - [Step4 相互作用の表示](../Documents/QScriptのチュートリアル/Step4)
+    - [Step4 相互作用の表示](../../Documents/QScriptのチュートリアル/Step4)
 
-    - [Step5 画像ファイルへの書出し](../Documents/QScriptのチュートリアル/Step5)
+    - [Step5 画像ファイルへの書出し](../../Documents/QScriptのチュートリアル/Step5)
 
-    - [Step6 POV-Rayを使う](../Documents/QScriptのチュートリアル/Step6)
+    - [Step6 POV-Rayを使う](../../Documents/QScriptのチュートリアル/Step6)
 
-    - [Step7 エラーが出たときは](../Documents/QScriptのチュートリアル/Step7)
+    - [Step7 エラーが出たときは](../../Documents/QScriptのチュートリアル/Step7)
 
 
 - さらに進んだトピック 
 
-    - [StepA1 リボンモデルによる核酸(DNA, RNA)の表示](../Documents/QScriptのチュートリアル/StepA1)
+    - [StepA1 リボンモデルによる核酸(DNA, RNA)の表示](../../Documents/QScriptのチュートリアル/StepA1)
 
-    - [StepA2 電子密度(electron density)の表示](../Documents/QScriptのチュートリアル/StepA2)
+    - [StepA2 電子密度(electron density)の表示](../../Documents/QScriptのチュートリアル/StepA2)
 
-    - [StepA3 ジスルフィド結合，N-, O-結合型糖鎖など（disulphide bonds, sugar, etc）の表示](../Documents/QScriptのチュートリアル/StepA3)
+    - [StepA3 ジスルフィド結合，N-, O-結合型糖鎖など（disulphide bonds, sugar, etc）の表示](../../Documents/QScriptのチュートリアル/StepA3)
 
-    - [StepA4 分子表面(surface model)の表示](../Documents/QScriptのチュートリアル/StepA4)
+    - [StepA4 分子表面(surface model)の表示](../../Documents/QScriptのチュートリアル/StepA4)
 
-    - [StepA5 表面電荷(electrostatic potential)の表示](../Documents/QScriptのチュートリアル/StepA5)
+    - [StepA5 表面電荷(electrostatic potential)の表示](../../Documents/QScriptのチュートリアル/StepA5)

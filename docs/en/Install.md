@@ -1,6 +1,6 @@
 ## Windows version
 ### Installation from a binary distribution
-If you haven't downloaded it yet, go to [Download](../en/Download) page.
+If you haven't downloaded it yet, go to [Download](../../en/Download) page.
 
 Execute the downloaded installer file(cuemol2-X.X.X.X-win32-setup.exe; where X.X.X.X is a version number).
 Installer wizard will launch, so please follow the instructions.
@@ -21,7 +21,7 @@ by uninstalling an existing previous version before the installation.
 ## MacOS X version
 
 ### Installation from a binary distribution
-Please download the dmg file (CueMol2-X.X.X.X-MacOSX-Intel.dmg; where X.X.X.X is a version number) from [Download](../en/Download) page.<br />
+Please download the dmg file (CueMol2-X.X.X.X-MacOSX-Intel.dmg; where X.X.X.X is a version number) from [Download](../../en/Download) page.<br />
 After downloading the file, the application file with CueMol2 icon will appear by double-clicking the downloaded file.
 Please copy the application file to the appropriate folder (i.e. Application folder, etc) by drag and drop.
 Then, you can launch CueMol2 by double-clicking the application icon.

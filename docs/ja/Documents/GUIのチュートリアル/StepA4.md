@@ -1,4 +1,4 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)
 
 
 

@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -14,7 +14,7 @@
 ここでジスルフィド結合をCueMolに認識させる方法を説明しておきます(ssbonds.qs)
 
 
-![ssbonds1](../../assets/images/Documents/QScriptのチュートリアル/StepA3/ssbonds1.png){ .on-glb }
+![ssbonds1](../../../assets/images/Documents/QScriptのチュートリアル/StepA3/ssbonds1.png){ .on-glb }
 
 
 <pre>

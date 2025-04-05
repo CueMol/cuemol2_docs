@@ -1,4 +1,4 @@
-[一覧へ戻る](../../Documents/CueMol2Tutorial2013)
+[一覧へ戻る](../../../Documents/CueMol2Tutorial2013)
 
 ## Step2: スタイルの作成
 
@@ -34,20 +34,20 @@ CueMol2の特徴の一つでもありますが，
 #### 新規スタイルの作成
 
 まず，新規スタイルを作成します．
-Sceneパネルで，Styles項目が選択された状態にし，下方の![step1-9color-add1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-9color-add1.png)ボタンをクリックします．
+Sceneパネルで，Styles項目が選択された状態にし，下方の![step1-9color-add1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-9color-add1.png)ボタンをクリックします．
 
-![step2-1create-style1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-1create-style1.png)
+![step2-1create-style1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-1create-style1.png)
 
 
 すると以下のようなダイアログが出てくるので，
 スタイルの名前をcommon_styleに変更し，OKを押します．
 
-![step2-1create-style2](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-1create-style2.png){ style="zoom: 0.75" .on-glb }
+![step2-1create-style2](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-1create-style2.png){ style="zoom: 0.75" .on-glb }
 
 
 すると，以下のようにStylesの中にcommon_styleというスタイルが作成されました．
 
-![step2-1create-style3](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-1create-style3.png)
+![step2-1create-style3](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-1create-style3.png)
 
 
 
@@ -56,15 +56,15 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 上記で作成したScene panel中のcommon_style項目（上図参照）をdouble clickします．
 すると，以下のようなスタイル編集ダイアログが表示されます．
 
-![step2-4edit-style1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-4edit-style1.png){ style="zoom: 0.75" .on-glb }
+![step2-4edit-style1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-4edit-style1.png){ style="zoom: 0.75" .on-glb }
 
 
 スタイルは何も定義されていないので，すべて空の状態になっています．
 
-まず，右の![step1-9color-add1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-9color-add1.png)ボタンを押して，新しい色定義を追加します．
+まず，右の![step1-9color-add1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-9color-add1.png)ボタンを押して，新しい色定義を追加します．
 すると，color_0という新しい色定義の項目ができます．
 
-![step2-5edit-style2](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-5edit-style2.png){ style="zoom: 0.75" .on-glb }
+![step2-5edit-style2](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-5edit-style2.png){ style="zoom: 0.75" .on-glb }
 
 
 次に，追加された項目をクリックし，下のNameと書かれたtextboxに，「Ndom」と入力します．
@@ -73,14 +73,14 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 色の変更方法は，テキストボックスにhsb(0,0.5,1)と入力する，
 あるいは，左の▼ボタンを押してHSBパレットを表示させ，スライダーで各値を0,0.5,1に変更します．
 
-![step2-6edit-colstyle3](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-6edit-colstyle3.png){ style="zoom: 0.75" .on-glb }
+![step2-6edit-colstyle3](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-6edit-colstyle3.png){ style="zoom: 0.75" .on-glb }
 
 
 これでNdomという名前で，ピンク色が定義されました．
 
 以上を繰り返して，上記の表にある色をすべて定義すると，以下のようになります．（項目の順番は違うかもしれませんが．．．）
 
-![step2-7edit-colstyle4](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-7edit-colstyle4.png){ style="zoom: 0.75" .on-glb }
+![step2-7edit-colstyle4](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-7edit-colstyle4.png){ style="zoom: 0.75" .on-glb }
 
 
 **補足**
@@ -91,11 +91,11 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 
 ダイアログの上の方にあるタブから，「Selection」というのをクリックすると，以下のように分子選択定義を編集するページが表示されます．
 
-![step2-8edit-selstyle1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-8edit-selstyle1.png){ style="zoom: 0.75" .on-glb }
+![step2-8edit-selstyle1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-8edit-selstyle1.png){ style="zoom: 0.75" .on-glb }
 
 
 この状態では何も定義されていないので，すべて空の状態になっています．
-まず，右の![step1-9color-add1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-9color-add1.png)ボタンを押して，新しい定義を追加します．
+まず，右の![step1-9color-add1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-9color-add1.png)ボタンを押して，新しい定義を追加します．
 すると，sel_0という新しい定義の項目ができます．
 
 次に，追加された項目をクリックし，「Name」の横にあるtextboxに，「Ndom」と入力します．
@@ -103,14 +103,14 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 次に，Selectionの左にあるテキストボックスに，N末端ドメインの原子を選択する選択文「A.49:83.*」を入力します．
 (その後タブキーを押すが，他のtextboxたとえばNameのtextbox等をクリックすると選択文が上のリストに反映される)
 
-![step2-9edit-selstyle2](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-9edit-selstyle2.png){ style="zoom: 0.75" .on-glb }
+![step2-9edit-selstyle2](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-9edit-selstyle2.png){ style="zoom: 0.75" .on-glb }
 
 
 これでNdomという名前の分子選択が新たに定義されました．
 
 以上を繰り返して，上記の表にある選択をすべて定義すると，以下のようになります．
 
-![step2-10edit-selstyle1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-10edit-selstyle1.png){ style="zoom: 0.75" .on-glb }
+![step2-10edit-selstyle1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-10edit-selstyle1.png){ style="zoom: 0.75" .on-glb }
 
 
 最後に，「OK」ボタンを押してダイアログを閉じると，以上で入力した定義が登録されます．
@@ -123,7 +123,7 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 
 まず，coloring panelで3UG9_ABを選び，Paint coloringの設定を表示させます．
 
-![step1-14paint-final1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-14paint-final1.png){ style="zoom: 0.8" .on-glb }
+![step1-14paint-final1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step1-14paint-final1.png){ style="zoom: 0.8" .on-glb }
 
 
 そして，一番下の項目(A.49:83.*, hsb(0,0.5,1))をダブルクリックすると，塗の変更ダイアログが表示されます．
@@ -131,14 +131,14 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 ここで，分子選択をNdom (リストボックスの中にあるはず)にし，
 色をndom (Named colorの中にあるはず)にします．下の図は色をNamed colorの中から選んでいるところを示しています．
 
-![step2-12colorchg1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-12colorchg1.png)
+![step2-12colorchg1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-12colorchg1.png)
 
 
 これでOKを押すと，styleで定義されている色と選択の定義が使用されるようになりました．ただし，元の選択と色から変更はないため，図の方はまったく同じように表示され変化はないはずです．
 
 上記を各ドメイン全てについて行うと，coloring panelは下図のようになります．
 
-![step2-13colorpanel2](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-13colorpanel2.png){ style="zoom: 0.8" .on-glb }
+![step2-13colorpanel2](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-13colorpanel2.png){ style="zoom: 0.8" .on-glb }
 
 
 このような変更を行った後も，同様に元の選択と色から変更はないため，図の方はまったく同じように表示され変化はないはずです．
@@ -150,7 +150,7 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 まず，シーンパネルで，書き出すスタイル項目を左クリックすると図のようなcontext menuが表示されます．
 
 
-![step2-14stylesaveas1](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-14stylesaveas1.png){ style="zoom: 0.8" .on-glb }
+![step2-14stylesaveas1](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-14stylesaveas1.png){ style="zoom: 0.8" .on-glb }
 
 
 そして，このメニューで，「File」→「Save as ...」をクリックします．
@@ -160,7 +160,7 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 すると，スタイルは外部ファイルへ書き出され，かつ，シーンからはリンクとして参照されるようになります．
 そして，シーンパネルでは外部ファイルであるという事を示すアイコン(下図・マウスカーソルの上)が表示されます．
 
-![step2-15stylesaveas2](../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-15stylesaveas2.png){ .on-glb }
+![step2-15stylesaveas2](../../../assets/images/Documents/CueMol2Tutorial2013/Step2/step2-15stylesaveas2.png){ .on-glb }
 
 
 以上の操作を行った後，シーンをfig1_overall_2.qscという名前で保存します．
@@ -168,4 +168,4 @@ Sceneパネルで，Styles項目が選択された状態にし，下方の![step
 Optionダイアログが表示されますが，保存設定はdefaultで保存します．
 
 
-[Documents/CueMol2Tutorial2013](../../Documents/CueMol2Tutorial2013)
+[Documents/CueMol2Tutorial2013](../../../Documents/CueMol2Tutorial2013)

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## Materialについて
 CueMol2では，レンダラーで描画される3D物体について，
 色以外にmaterial(質感)を指定することができます．
@@ -46,15 +46,15 @@ Version 2.0.0.183でシステムで定義されているmaterialは以下の通�
 Rendererのproperty dialog (Commonタブ中)に，以下のようにMaterialという項目があります．
 この値を変更することでmaterialを指定できます．
 デフォルトでは空（指定なし）になっており，defaultというmaterial
-([default_style.xml](../cuemol2/Style)で定義されている)が適用されるようになっています．
+([default_style.xml](../../cuemol2/Style)で定義されている)が適用されるようになっています．
 
-![material_propdlg3](../assets/images/cuemol2/Material/material_propdlg3.png){ style="zoom: 0.75" .on-glb }
+![material_propdlg3](../../assets/images/cuemol2/Material/material_propdlg3.png){ style="zoom: 0.75" .on-glb }
 
 この値をshadowに変更します．
 MaterialはOpenGLによるレンダリングには影響しないため画面上の表示は特に変わりませんが，
 POV-Rayでレンダリングすると，以下のように変化します．
 
-> ![default-ribbon2](../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![shadow-ribbon2](../assets/images/cuemol2/Material/shadow-ribbon2.png){ .on-glb }
+> ![default-ribbon2](../../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![shadow-ribbon2](../../assets/images/cuemol2/Material/shadow-ribbon2.png){ .on-glb }
 
 shadowはすべての陰影付けをoffにして，色だけ塗るような設定になっているため
 このような表示になるわけです．
@@ -62,10 +62,10 @@ shadowはすべての陰影付けをoffにして，色だけ塗るような設�
 
 一方で，色を無視するmaterial，例えばmetallic-chromeを適用すると，以下のようになります．
 
-> ![default-ribbon2](../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![metallic-ribbon2](../assets/images/cuemol2/Material/metallic-ribbon2.png){ .on-glb }
+> ![default-ribbon2](../../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![metallic-ribbon2](../../assets/images/cuemol2/Material/metallic-ribbon2.png){ .on-glb }
 
 色が指定できない系，特に金属光沢materialは周囲の環境光に影響されるため
-上の例では暗くなっています．[povファイルを書き出し](../cuemol2/ImageExport)たうえで光源指定をいじって明るくするなどの工夫が必要でしょう．
+上の例では暗くなっています．[povファイルを書き出し](../../cuemol2/ImageExport)たうえで光源指定をいじって明るくするなどの工夫が必要でしょう．
 
 
 #### 色ごとの指定
@@ -89,7 +89,7 @@ rgb(1,1,0){material:shadow}
 
 実際にリボンの着色に適用した例が以下になります．
 
-> ![default-ribbon2](../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![mixed-ribbon2](../assets/images/cuemol2/Material/mixed-ribbon2.png)
+> ![default-ribbon2](../../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![mixed-ribbon2](../../assets/images/cuemol2/Material/mixed-ribbon2.png)
 
 デフォルトの二次構造による着色をColorパネルから以下のように変更した後レンダリングしたものです．
 シート(sheet)
@@ -109,10 +109,10 @@ rgb(1,1,0){material:shadow}
 適当な色を指定してください．
 
 
-![mixed-ribbon3](../assets/images/cuemol2/Material/mixed-ribbon3.png){ style="zoom: 0.75" .on-glb }
+![mixed-ribbon3](../../assets/images/cuemol2/Material/mixed-ribbon3.png){ style="zoom: 0.75" .on-glb }
 
 
 上図のように木目や石の模様が細かいため，結構拡大しないとあまり見えません．
-textureのサイズなどは[default_style.xml](../cuemol2/Style)にあるmaterialの定義を編集すれば可能です
+textureのサイズなどは[default_style.xml](../../cuemol2/Style)にあるmaterialの定義を編集すれば可能です
 （POV-Rayの知識が必要になってきますが）．
 今後ユーザー定義のmaterialを指定できるような仕組みを作っていく予定です．

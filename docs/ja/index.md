@@ -10,36 +10,36 @@
 というわけで，OSのGUIとシームレスでかつ，
 わかりやすいユーザーインタフェイスを目指して開発を進めています．
 
-さらに，論文やプレゼンのための高品位の分子グラフィクスを作成できるという特徴もあります．[Gallery](./en/Gallery)をご覧ください．
+さらに，論文やプレゼンのための高品位の分子グラフィクスを作成できるという特徴もあります．[Gallery](../en/Gallery)をご覧ください．
 
 
 
->> ![snapshot2_1](./assets/images/index/snapshot2_1.jpg){ style="zoom: 0.25" .on-glb } ![snapshot2_2](./assets/images/index/snapshot2_2.jpg){ style="zoom: 0.25" .on-glb }
+>> ![snapshot2_1](../assets/images/index/snapshot2_1.jpg){ style="zoom: 0.25" .on-glb } ![snapshot2_2](../assets/images/index/snapshot2_2.jpg){ style="zoom: 0.25" .on-glb }
 
 
->> ![snapshot2_2m](./assets/images/index/snapshot2_2m.jpg){ style="zoom: 0.28" .on-glb } ![snapshot2_1m](./assets/images/index/snapshot2_1m.jpg){ style="zoom: 0.28" .on-glb } 
+>> ![snapshot2_2m](../assets/images/index/snapshot2_2m.jpg){ style="zoom: 0.28" .on-glb } ![snapshot2_1m](../assets/images/index/snapshot2_1m.jpg){ style="zoom: 0.28" .on-glb } 
 
 CueMolについてのコメント，質問，要望は
 
--  ![mm1](./assets/images/index/mm1.png)![mm2](./assets/images/index/mm2.png)
+-  ![mm1](../assets/images/index/mm1.png)![mm2](../assets/images/index/mm2.png)
 
--  ![icn-twitter](./assets/images/index/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br />
+-  ![icn-twitter](../assets/images/index/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br />
 （CueMol関連情報は#cuemolハッシュタグつきで）
 
--  あるいは[メーリングリスト](./MailingList)にお願いします．
+-  あるいは[メーリングリスト](../MailingList)にお願いします．
 
 ### What's new?
 2019/1/14
-:   バージョン2.2.3.443 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](./en/Updates)に掲載しました．
+:   バージョン2.2.3.443 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](../en/Updates)に掲載しました．
 
 2018/6/8
-:   Bugfix版バージョン2.2.3.437 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](./en/Updates)に掲載しました．
+:   Bugfix版バージョン2.2.3.437 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](../en/Updates)に掲載しました．
 
 2018/5/8
-:   バージョン2.2.3.434 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](./en/Updates)に掲載しました．
+:   バージョン2.2.3.434 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](../en/Updates)に掲載しました．
 
 2018/2/6
-:   バージョン2.2.3.430 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](./en/Updates)に掲載しました．
+:   バージョン2.2.3.430 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](../en/Updates)に掲載しました．
 
 
 
@@ -85,9 +85,9 @@ Version 2における主な機能は以下のとおりです．
 
     - Tube model
 
-    - [Ribbon model](./cuemol2/RibbonRenderer)
+    - [Ribbon model](../cuemol2/RibbonRenderer)
 
-    - [Cartoon model](./cuemol2/CartoonRenderer)
+    - [Cartoon model](../cuemol2/CartoonRenderer)
 
     - Molecular surface (solvent-excluded surface)の生成
 
@@ -117,13 +117,13 @@ Version 2における主な機能は以下のとおりです．
 
 - アニメーション作成機能
 
-    - [単純スピン回転](./cuemol2/Anim_Basic)
+    - [単純スピン回転](../cuemol2/Anim_Basic)
 
     - カメラのスムースな移動
 
     - 表示(renderer)のfade in/out, slide in/out
 
-    - 分子の[morphing](./cuemol2/Anim_MolMorph)
+    - 分子の[morphing](../cuemol2/Anim_MolMorph)
 
     - などなど
 

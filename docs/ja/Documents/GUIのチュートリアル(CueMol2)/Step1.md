@@ -1,13 +1,13 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)|[次へ](../../Documents/GUIのチュートリアル(CueMol2)/Step1-2) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)|[次へ](../../../Documents/GUIのチュートリアル(CueMol2)/Step1-2) ]
 
 
 
 ## CueMolの起動
 
-CueMol2のアイコン![gui_step1_ico](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_ico.png){ .on-glb }をダブルクリックすると下図のような画面が表示されます.
+CueMol2のアイコン![gui_step1_ico](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_ico.png){ .on-glb }をダブルクリックすると下図のような画面が表示されます.
 
 
-![gui_step1_start](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_start.png){ style="zoom: 0.5" .on-glb }
+![gui_step1_start](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_start.png){ style="zoom: 0.5" .on-glb }
 
 
 **注意：**初めて起動したときは，上図のように小さめのウィンドウサイズで表示されるため，一部のGUI（下方のステータスバーやログ表示など）が押しつぶされて見えなくなってしまっています．
@@ -17,7 +17,7 @@ CueMol2のアイコン![gui_step1_ico](../../assets/images/Documents/GUIのチ�
 ## PDBファイルの読み込みと分子モデルの表示
 
 ### ディスクなどに保存されているPDBファイルを読み込む
-ツールバーの![gui_step1_open_ico](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_open_ico.png){ .on-glb }アイコンをクリックします．
+ツールバーの![gui_step1_open_ico](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_open_ico.png){ .on-glb }アイコンをクリックします．
 
 あるいは，MenuからFile→Openを選択します．
 
@@ -30,7 +30,7 @@ CueMol2のアイコン![gui_step1_ico](../../assets/images/Documents/GUIのチ�
 「ファイルを開く」ダイアログでPDBファイルを選択し，OKボタンを押すと，次に分子座標ファイル読み込みのオプションダイアログが表示されます．
 
 
-![gui_step1_creat_rend](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_creat_rend.png){ .on-glb }
+![gui_step1_creat_rend](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_creat_rend.png){ .on-glb }
 
 
 分子モデルを開くと，メモリー上に分子オブジェクトとして読込まれます．
@@ -79,7 +79,7 @@ nucl
 OKボタンを押すと分子モデルが画面中央に表示されます．
 
 ### ネットからPDB IDを指定してダウンロード
-ツールバーの![gui_step1_pdb_ico](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_pdb_ico.png){ .on-glb }アイコンをクリックします．
+ツールバーの![gui_step1_pdb_ico](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_pdb_ico.png){ .on-glb }アイコンをクリックします．
 
 あるいは，MenuからFile→Get PDB using accession codeを選択します．
 
@@ -94,7 +94,7 @@ OKボタンを押すと分子モデルが画面中央に表示されます．
 分子モデルが画面中央に表示されます．
 
 
-![gui_step1_loaded](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_loaded.png){ style="zoom: 0.5" .on-glb }
+![gui_step1_loaded](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1/gui_step1_loaded.png){ style="zoom: 0.5" .on-glb }
 
 
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)|[次へ](../../Documents/GUIのチュートリアル(CueMol2)/Step1-2) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)|[次へ](../../../Documents/GUIのチュートリアル(CueMol2)/Step1-2) ]

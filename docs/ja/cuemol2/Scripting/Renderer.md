@@ -1,4 +1,4 @@
-[cuemol2/Scripting](../../cuemol2/Scripting)
+[cuemol2/Scripting](../../../cuemol2/Scripting)
 
 ## 新規Rendererの作成
 objに格納されたObjectに対するRendererを作成する．

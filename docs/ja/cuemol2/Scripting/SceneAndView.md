@@ -1,4 +1,4 @@
-Return to [Scripting interface](../../cuemol2/Scripting/)
+Return to [Scripting interface](../../../cuemol2/Scripting/)
 
 SceneとViewに関連する操作
 

@@ -1,4 +1,4 @@
-[Ref/gfx](../../Ref/gfx)
+[Ref/gfx](../../../Ref/gfx)
 
 
 ## color (QScript object)

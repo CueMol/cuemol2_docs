@@ -1,14 +1,14 @@
-[Documents](../../en/Documents)
+[Documents](../../../en/Documents)
 ## Ball and stick renderer
 Ballstick renderer (representation) displays "ball-and-stick" (or "stick") representation of the molecules.
 
 Ballstick renderer has the following display options (properties) including common and specific options.
 
-As for the common settings, see [cuemol2/CommonRendererProps](../../en/cuemol2/CommonRendererProps).
+As for the common settings, see [cuemol2/CommonRendererProps](../../../en/cuemol2/CommonRendererProps).
 
 ### Ballstick renderer settings
 
-![ballstick-renderopt1](../../assets/images/cuemol2/BallStickRenderer/ballstick-renderopt1.png){ style="zoom: 0.5" .on-glb }
+![ballstick-renderopt1](../../../assets/images/cuemol2/BallStickRenderer/ballstick-renderopt1.png){ style="zoom: 0.5" .on-glb }
 
 
 #### Detail
@@ -18,7 +18,7 @@ In the following cases, the detail value will be ignored (because they directly 
 
 -  POV-Ray rendering (without edge and silhouette lines)
 
--  GL shader rendering mode (see below and [cuemol2/UseGLShader](../../en/cuemol2/UseGLShader))
+-  GL shader rendering mode (see below and [cuemol2/UseGLShader](../../../en/cuemol2/UseGLShader))
 
 #### Bond width
 Specify the size of the bond (more precisely, the radii of the cylinders connecting the atoms) in angstrom unit.
@@ -26,19 +26,19 @@ Specify the size of the bond (more precisely, the radii of the cylinders connect
 #### Atom radius
 Specify the radii of the atom spheres in angstrom unit. The same size of bond width and atom radius result in "stick-like" representation.
 
-![ballstick-stick1](../../assets/images/cuemol2/BallStickRenderer/ballstick-stick1.png){ style="zoom: 0.5" .on-glb }
+![ballstick-stick1](../../../assets/images/cuemol2/BallStickRenderer/ballstick-stick1.png){ style="zoom: 0.5" .on-glb }
 
 
 #### Show ring
 If this option is turned on, plates are displayed in the rings (i.e., benzene group of phenylalanine or ribose group of adenosine).
 
-![ballstick-ring1-1](../../assets/images/cuemol2/BallStickRenderer/ballstick-ring1-1.png){ style="zoom: 0.5" .on-glb }
+![ballstick-ring1-1](../../../assets/images/cuemol2/BallStickRenderer/ballstick-ring1-1.png){ style="zoom: 0.5" .on-glb }
 
 
 #### Thickness (of the rings)
 Specify the thickness of the ring plates. The same size of thickness, bond width, and atom radius result in the representation as follows:
 
-![ballstick-ring2-1](../../assets/images/cuemol2/BallStickRenderer/ballstick-ring2-1.png){ style="zoom: 0.5" .on-glb }
+![ballstick-ring2-1](../../../assets/images/cuemol2/BallStickRenderer/ballstick-ring2-1.png){ style="zoom: 0.5" .on-glb }
 
 
 #### Color (of the rings)
@@ -56,7 +56,7 @@ smooth spheres and cylinders of the ballstick renderers can be displayed without
 
 The left figure is displayed using shaders, while the right figure is displayed by conventional triangulation (with detail=10).
 
-> ![ballstick-glsl1](../../assets/images/cuemol2/BallStickRenderer/ballstick-glsl1.png){ style="zoom: 0.33" .on-glb } ![ballstick-vbo1](../../assets/images/cuemol2/BallStickRenderer/ballstick-vbo1.png){ style="zoom: 0.33" .on-glb }
+> ![ballstick-glsl1](../../../assets/images/cuemol2/BallStickRenderer/ballstick-glsl1.png){ style="zoom: 0.33" .on-glb } ![ballstick-vbo1](../../../assets/images/cuemol2/BallStickRenderer/ballstick-vbo1.png){ style="zoom: 0.33" .on-glb }
 
-To use this function, please turn on the GL shader in the option dialog (see [cuemol2/UseGLShader](../../en/cuemol2/UseGLShader)).
+To use this function, please turn on the GL shader in the option dialog (see [cuemol2/UseGLShader](../../../en/cuemol2/UseGLShader)).
 If GL shader rendering is turned on, the "detail" value of the ballstick renderer settings is ignored as described above.

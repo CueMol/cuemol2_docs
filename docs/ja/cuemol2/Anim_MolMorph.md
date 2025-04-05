@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## 分子の構造変化(morphing)
 異なる構造をもつ２つの同一分子間の変化（変形=morphing）をアニメーションとして表示する場合に使用します．
 
@@ -18,20 +18,20 @@ CueMol2.2では，線形補間によるmorphingが使用できます．
 この例では，1TAGを1TNDに重ね合わせることとします．
 
 ### ファイルの読み込みと重ね合わせ
-まず，1TAG, 1TND両者のファイルを読み込みます．PDBのサイトからダウンロード後「Open File...」から読み込んでも良いですし，「Get PDB using accession code...」を使用して直接PDBのサイトから読み込んでも構いません．（[Documents/GUIのチュートリアル(CueMol2)/Step1](../Documents/GUIのチュートリアル(CueMol2)/Step1)参照）
+まず，1TAG, 1TND両者のファイルを読み込みます．PDBのサイトからダウンロード後「Open File...」から読み込んでも良いですし，「Get PDB using accession code...」を使用して直接PDBのサイトから読み込んでも構いません．（[Documents/GUIのチュートリアル(CueMol2)/Step1](../../Documents/GUIのチュートリアル(CueMol2)/Step1)参照）
 
 1TAGは１つのchain(A)のみですが，1TNDは３つのchain (A,B,C)を含んでいます．1TAGは分子全体を，1TNDはchain Aに対してのみtrace rendererで表示させます．
 
 
-![morphmol-1](../assets/images/cuemol2/Anim_MolMorph/morphmol-1.png){ style="zoom: 0.5" .on-glb }
+![morphmol-1](../../assets/images/cuemol2/Anim_MolMorph/morphmol-1.png){ style="zoom: 0.5" .on-glb }
 
 
-次に，[cuemol2/MolSuperpose](../cuemol2/MolSuperpose)の「Secondary Structure Matching」に従って，2つの分子を重ね合わせます．
+次に，[cuemol2/MolSuperpose](../../cuemol2/MolSuperpose)の「Secondary Structure Matching」に従って，2つの分子を重ね合わせます．
 1TAGをmovingに，1TNDをreferenceに設定し，1TNDのselectionに「c;A」を指定して，
 重ね合わせを実行すると以下の図のようになります．
 
 
-![morphmol-2](../assets/images/cuemol2/Anim_MolMorph/morphmol-2.png){ style="zoom: 0.5" .on-glb }
+![morphmol-2](../../assets/images/cuemol2/Anim_MolMorph/morphmol-2.png){ style="zoom: 0.5" .on-glb }
 
 
 以上が完了したら，動かした方の1TAGをPDBファイルとして保存しておきます．メニュー「File」→「Save File As...」を実行し，1TAGを選択してOKを押し，その後表示されるファイル選択dialogでfile nameを1TAG-fit.pdbとして保存します．
@@ -49,13 +49,13 @@ Morphingを行うには，まず，PDBファイルを読み込んで作成され
 
 メニュー「Tools」→「Mol morhping animation...」を実行すると，以下のようなdialogが表示されますので，MolMorphに変換したいMolCoord objectを選択します．
 
-![morphmol-3](../assets/images/cuemol2/Anim_MolMorph/morphmol-3.png){ .on-glb }
+![morphmol-3](../../assets/images/cuemol2/Anim_MolMorph/morphmol-3.png){ .on-glb }
 
 この例では，1TAGと1TNDがリストに表示されていますが，始点の構造の1TNDを選択し，OKボタンを押します．
 
 以上の通り実行すると，以下のようなdialogが表示されます．
 
-![morphmol-4](../assets/images/cuemol2/Anim_MolMorph/morphmol-4.png){ style="zoom: 0.75" .on-glb }
+![morphmol-4](../../assets/images/cuemol2/Anim_MolMorph/morphmol-4.png){ style="zoom: 0.75" .on-glb }
 
 
 ### MolMorph objectへの構造座標の追加
@@ -68,7 +68,7 @@ Morphingを行うには，まず，PDBファイルを読み込んで作成され
 上記で重ね合わせ後保存しておいた，1TAG-fit.pdbを指定し読み込ませます．
 すると，以下のように終点に対応する座標の項目が追加されます．
 
-![morphmol-5](../assets/images/cuemol2/Anim_MolMorph/morphmol-5.png){ style="zoom: 0.75" .on-glb }
+![morphmol-5](../../assets/images/cuemol2/Anim_MolMorph/morphmol-5.png){ style="zoom: 0.75" .on-glb }
 
 
 終点の追加が完了したら，OKボタンを押してdialogを閉じます．
@@ -85,14 +85,14 @@ MorphMol objectに保持されている座標データの編集をさらに行�
 次は実際にどのタイミングでどの程度の時間をかけてmorphingを行うかを，Animation panelから指定します．
 
 
-![morphmol-6](../assets/images/cuemol2/Anim_MolMorph/morphmol-6.png){ .on-glb }
+![morphmol-6](../../assets/images/cuemol2/Anim_MolMorph/morphmol-6.png){ .on-glb }
 
 
 上図のAnimation panelの「＋」ボタンを押し，「Mol Morphing」を選択すると，
 以下のような設定dialogが表示されます．
 
 
-![morphmol-7](../assets/images/cuemol2/Anim_MolMorph/morphmol-7.png){ style="zoom: 0.5" .on-glb }
+![morphmol-7](../../assets/images/cuemol2/Anim_MolMorph/morphmol-7.png){ style="zoom: 0.5" .on-glb }
 
 
 この例では，0秒から1秒かけて始点から終点へと変形させるアニメーションを作成します．
@@ -113,12 +113,12 @@ End value
 OKボタンを押すとanimation itemが追加され，Animation panelは下図のようになります．
 
 
-![morphmol-8](../assets/images/cuemol2/Anim_MolMorph/morphmol-8.png){ .on-glb }
+![morphmol-8](../../assets/images/cuemol2/Anim_MolMorph/morphmol-8.png){ .on-glb }
 
 
 ### アニメーションの実行
 以上でmorphing animationの作成は完了しました．
-[cuemol2/Anim_Basic](../cuemol2/Anim_Basic)の「アニメーションの実行」にある方法に従ってアニメーションを再生すると，構造の変形がアニメーションとして表示されます．
+[cuemol2/Anim_Basic](../../cuemol2/Anim_Basic)の「アニメーションの実行」にある方法に従ってアニメーションを再生すると，構造の変形がアニメーションとして表示されます．
 
 Chain Aについてリボン表示にし，さらに戻る構造変化（startValue=1→endValue=0）も追加すると，
 以下のようなアニメーションになります．

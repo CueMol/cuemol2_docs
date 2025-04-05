@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 
 ## QScriptでファイル入出力を行なう
@@ -13,7 +13,7 @@ QScriptを使用するとPerlライクな
 リボンモデルを表示する場合，
 [DSSP](http://swift.cmbi.ru.nl/gv/dssp/)等で計算した二次構造情報を読込んでやる必要があります．
 
-[Documents/QScriptのチュートリアル/Step3](../Documents/QScriptのチュートリアル/Step3)ではprocheckの出力から
+[Documents/QScriptのチュートリアル/Step3](../../Documents/QScriptのチュートリアル/Step3)ではprocheckの出力から
 手動で設定する例を紹介しましたが，
 ここではDSSPの出力ファイルを自動的に解析して割り当てる例を紹介します．
 
@@ -22,14 +22,14 @@ QScriptを使用するとPerlライクな
 そして，CueMolを起動してメニュー「File」→「Execute QScript...」から
 fileio1.qsを開いてください．
 
--  PDBファイル: ![ECR_MODEL](../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
+-  PDBファイル: ![ECR_MODEL](../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
 
--  DSSP出力ファイル: ![dssp](../assets/images/Documents/QScriptFileIO/dssp.txt){ .on-glb }
+-  DSSP出力ファイル: ![dssp](../../assets/images/Documents/QScriptFileIO/dssp.txt){ .on-glb }
 
--  QScriptファイル: ![fileio1](../assets/images/Documents/QScriptFileIO/fileio1.qs){ .on-glb }
+-  QScriptファイル: ![fileio1](../../assets/images/Documents/QScriptFileIO/fileio1.qs){ .on-glb }
 
 
-![fileio1](../assets/images/Documents/QScriptFileIO/fileio1.png)
+![fileio1](../../assets/images/Documents/QScriptFileIO/fileio1.png)
 
 #### DSSPファイル
 DSSPの出力ファイルは，はじめの24行はヘッダーで，25行目から残基ごとの情報になります．
@@ -221,15 +221,15 @@ molvis.paint($r_p, color(0,0,1));
 以下のファイルをダウンロードし，同じディレクトリに置いてください．
 そして，CueMolを起動してメニュー「File」→「Execute QScript...」から
 
--  PDBファイル: ![ECR_MODEL](../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
+-  PDBファイル: ![ECR_MODEL](../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
 
--  Verify3Dのスコア：![verify3d](../assets/images/Documents/QScriptFileIO/verify3d.txt){ .on-glb }<br />
+-  Verify3Dのスコア：![verify3d](../../assets/images/Documents/QScriptFileIO/verify3d.txt){ .on-glb }<br />
 これは，Verify3DのウェブサイトにECR_MODEL.pdbをサブミットすると出てくる結果ページの，「Display the raw average data」ボタンをクリックすると出てくるページからコピペしたものです．
 
--  QScriptファイル: ![fileio2](../assets/images/Documents/QScriptFileIO/fileio2.qs){ .on-glb }
+-  QScriptファイル: ![fileio2](../../assets/images/Documents/QScriptFileIO/fileio2.qs){ .on-glb }
 
 
-![fileio2](../assets/images/Documents/QScriptFileIO/fileio2.png)
+![fileio2](../../assets/images/Documents/QScriptFileIO/fileio2.png)
 
 
 #### スクリプトの解説
@@ -397,8 +397,8 @@ list型はリンクトリストで実装されているためで，
 以下がスクリプトファイルになります．PDBやverify3d.txtは上記と同じものを使用してください．
 
 
--  ![fileio3](../assets/images/Documents/QScriptFileIO/fileio3.qs){ .on-glb }
+-  ![fileio3](../../assets/images/Documents/QScriptFileIO/fileio3.qs){ .on-glb }
 
 
-![fileio3](../assets/images/Documents/QScriptFileIO/fileio3.png)
+![fileio3](../../assets/images/Documents/QScriptFileIO/fileio3.png)
 

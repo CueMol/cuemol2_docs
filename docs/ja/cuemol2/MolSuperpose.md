@@ -1,10 +1,10 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 分子の重ね合わせ
 分子の重ね合わせは，メニュー「Edit」→「Mol superposition...」から行うことができます．
 メニューを実行すると，以下のようなダイアログが表示されます．
 
-![superpose_dlg1](../assets/images/cuemol2/MolSuperpose/superpose_dlg1.png){ style="zoom: 0.75" .on-glb }
+![superpose_dlg1](../../assets/images/cuemol2/MolSuperpose/superpose_dlg1.png){ style="zoom: 0.75" .on-glb }
 
 Algorithmの部分に表示されている通り，
 場合により二種類のアルゴリズムを選択して使用することができます．
@@ -20,7 +20,7 @@ LSQ重ね合わせは，
 -  重ね合わせるべき原子を正しく指定しないと機能しない
 
 という特徴があります．
-CueMol1で実装されていた重ね合わせ機能とほぼ同じなので[Documents/GUIのチュートリアル/StepA5](../Documents/GUIのチュートリアル/StepA5)も参考にしてください．
+CueMol1で実装されていた重ね合わせ機能とほぼ同じなので[Documents/GUIのチュートリアル/StepA5](../../Documents/GUIのチュートリアル/StepA5)も参考にしてください．
 
 ダイアログの各項目の意味は，
 
@@ -55,7 +55,7 @@ CueMol1.1の場合と同様に，
 
 -  各分子の適切な部分が対応して指定されているか
 
-に注意して指定する必要があります．詳しくは同じく[Documents/GUIのチュートリアル/StepA5](../Documents/GUIのチュートリアル/StepA5)を見てください．
+に注意して指定する必要があります．詳しくは同じく[Documents/GUIのチュートリアル/StepA5](../../Documents/GUIのチュートリアル/StepA5)を見てください．
 
 重ね合わせに成功すると，Moving分子が移動し，Log windowに以下のようなメッセージが表示されます．
 ```
@@ -73,7 +73,7 @@ CueMol1.1の場合と同様に，
 
 
 #### 先にSelectionパネルなどで選択しておいて重ね合わせる
-[Documents/GUIのチュートリアル/StepA5](../Documents/GUIのチュートリアル/StepA5)と同様に，先に選択しておいて，その部分について重ね合わせる，というやり方も可能です．
+[Documents/GUIのチュートリアル/StepA5](../../Documents/GUIのチュートリアル/StepA5)と同様に，先に選択しておいて，その部分について重ね合わせる，というやり方も可能です．
 ただし，GUIが少々違ってきています．
 
 具体的には以下の手順で行います．
@@ -82,7 +82,7 @@ CueMol1.1の場合と同様に，
 1.  Mol superpose dialogを実行
 1.  Selectionの部分が，デフォルトで現在選択されている部分になっているはず．以下は，両分子ともCα原子を選択(選択文はname CA)した状態で実行した場合．
 
-![superpose_cursel_dlg2](../assets/images/cuemol2/MolSuperpose/superpose_cursel_dlg2.png){ style="zoom: 0.75" .on-glb }
+![superpose_cursel_dlg2](../../assets/images/cuemol2/MolSuperpose/superpose_cursel_dlg2.png){ style="zoom: 0.75" .on-glb }
 
 もしそうなっていなかったら，(右端の三角印をクリックして)ドロップダウンリストを開いて，中からCurrentという項目を選ぶ．それでもならないようなら，選択がちゃんとできていない可能性が大なので，1に戻って選択をやり直す．
 1.  Movingの方に関しても同様に確認．
@@ -135,7 +135,7 @@ SSMの場合のSelectionは，基本的に*(全てを選択)でOKです．
 例えば，Selectionにname CAと入力して，主鎖のCαのみ選択してしまうと，
 以下のようなエラーが出て重ね合わせできません．
 
-![ssm_error3](../assets/images/cuemol2/MolSuperpose/ssm_error3.png){ .on-glb }
+![ssm_error3](../../assets/images/cuemol2/MolSuperpose/ssm_error3.png){ .on-glb }
 
 うえでCαのみ重ね合わせてますよと言っておきながら，
 一見矛盾しているようにみえますが，これは以下のような理由によります．

@@ -1,4 +1,4 @@
-[cuemol2/Scripting](../../cuemol2/Scripting)
+[cuemol2/Scripting](../../../cuemol2/Scripting)
 ## プロパティーの取得
 例えばScene, Object, Rendererはすべてnameというプロパティーがあり
 名前が文字列で格納されているが，以下のように読み出すことができる．

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## ballstick, CPK等で複雑な着色を行いたい場合
 
@@ -53,8 +53,8 @@ paint_系rendererは色以外の形状に関するプロパティー(sphr等)は
 originalのものと同じものが使用できます．
 FancyColoring色設定は，tubeやribbonのものと同じですので，
 
-- [Step2 Tubeモデル](../Documents/QScriptのチュートリアル/Step2)
+- [Step2 Tubeモデル](../../Documents/QScriptのチュートリアル/Step2)
 
-- [Step3 Ribbonモデル](../Documents/QScriptのチュートリアル/Step3)
+- [Step3 Ribbonモデル](../../Documents/QScriptのチュートリアル/Step3)
 
 も参照してください．

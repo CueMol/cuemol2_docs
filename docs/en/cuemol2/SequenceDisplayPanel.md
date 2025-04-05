@@ -1,9 +1,9 @@
-[Documents](../../en/Documents)
+[Documents](../../../en/Documents)
 ## Sequence display panel
 In the sequence display panel, which is located at the bottom of the CueMol2 window, you can browse the amino- and nucleic acid-sequences of the molecules loaded in the active scene.
 
 
-![seq-disp-panel1](../../assets/images/cuemol2/SequenceDisplayPanel/seq-disp-panel1.png){ style="zoom: 0.5" .on-glb }
+![seq-disp-panel1](../../../assets/images/cuemol2/SequenceDisplayPanel/seq-disp-panel1.png){ style="zoom: 0.5" .on-glb }
 
 
 In the sequence view:
@@ -39,7 +39,7 @@ Drag (with left button)
 #### Context menu
 The context menu shown in the below is displayed by the right-click of the sequence.
 
-![seq-disp-panel-ctxtmenu1](../../assets/images/cuemol2/SequenceDisplayPanel/seq-disp-panel-ctxtmenu1.png){ .on-glb }
+![seq-disp-panel-ctxtmenu1](../../../assets/images/cuemol2/SequenceDisplayPanel/seq-disp-panel-ctxtmenu1.png){ .on-glb }
 
 Molecule name and residue info
 :   Molecule name and residue information are shown at the top of the menu.

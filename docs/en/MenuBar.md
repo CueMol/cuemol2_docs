@@ -1,24 +1,24 @@
 #### Menu
 
-- [FrontPage](../en/FrontPage)
+- [FrontPage](../../en/FrontPage)
 
-- [Gallery](../en/Gallery)
+- [Gallery](../../en/Gallery)
 
-- [Updates](../en/Updates)
+- [Updates](../../en/Updates)
 
-- [Environment](../en/Environment)
+- [Environment](../../en/Environment)
 
-- [Download](../en/Download)
+- [Download](../../en/Download)
 
-- [Install](../en/Install)
+- [Install](../../en/Install)
 
-- [Documents](../en/Documents)
+- [Documents](../../en/Documents)
 
-- [Licence](../en/Licence)
+- [Licence](../../en/Licence)
 
-- [Donation](../en/Licence)
+- [Donation](../../en/Licence)
 
-- [Link](../en/Link)
+- [Link](../../en/Link)
 
 - [SourceForge](http://sourceforge.net/projects/cuemol/)
 

@@ -1,6 +1,6 @@
-[ [Documents/GUIのチュートリアル(CueMol2)](../../Documents/GUIのチュートリアル(CueMol2)) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step10) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step13) ]
+[ [Documents/GUIのチュートリアル(CueMol2)](../../../Documents/GUIのチュートリアル(CueMol2)) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step10) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step13) ]
 
 ## 原子間の距離などを測る
 CueMol2では，GUIから原子を選択して
@@ -11,7 +11,7 @@ CueMol2では，GUIから原子を選択して
 次に，ウィンドウ上部のリボン（デフォルトではHomeになっている）を，
 Measureにすると距離測定モードになります．
 
-![distsel_mesuretab1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_mesuretab1.png)
+![distsel_mesuretab1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_mesuretab1.png)
 
 Measureリボンが選択された状態では，リボン中に「Distance」，「Angle」，「Torsion」３つのボタンが表示されています．
 デフォルトでは，２原子間の距離を測定するDistanceが選択されています．
@@ -20,20 +20,20 @@ Measureリボンが選択された状態では，リボン中に「Distance」�
 まず１つめの原子をクリックすると，白色のマークが表示されます．
 
 
-![distsel_1atom1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_1atom1.png)
+![distsel_1atom1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_1atom1.png)
 
 
 次に，２原子のうち２原子目をクリックすると，
 図のように原子間に点線が引かれ，その間の距離が線付近に表示されます．
 
 
-![distsel_defined1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_defined1.png)
+![distsel_defined1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_defined1.png)
 
 
 さらに，Log windowの方に，選択した各２原子の原子名と距離が出力されます．
 
 
-![distsel_logwnd1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_logwnd1.png)
+![distsel_logwnd1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_logwnd1.png)
 
 
 #### Atom pickのキャンセル
@@ -48,7 +48,7 @@ Measureリボンが選択された状態では，リボン中に「Distance」�
 
 Measureリボン中の「Angle」ボタンを選択してください．
 
-![distsel_mesuretab2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_mesuretab2.png)
+![distsel_mesuretab2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/distsel_mesuretab2.png)
 
 そして次に，まず１つめの原子をクリックすると，白色のマークが表示されます．
 
@@ -58,7 +58,7 @@ Measureリボン中の「Angle」ボタンを選択してください．
 図のように原子間に点線が引かれ，その間の角度が線付近に表示されます．
 
 
-![anglsel_defined1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/anglsel_defined1.png)
+![anglsel_defined1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/anglsel_defined1.png)
 
 
 上図では，Ser72 OG(側鎖OHの酸素)と，Na130と，Ser60 O(主鎖カルボニルの酸素)の３原子を順に選択しNa+イオンの配位子間の角度を測定した例です．
@@ -77,12 +77,12 @@ Measureリボン中の「Torsion」ボタンを選択してください．
 Sceneパネルの方を見ると，measureという名称のatomintrレンダラーが勝手に作られているのがわかると思います．
 
 
-![atomintr_rend1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/atomintr_rend1.png)
+![atomintr_rend1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step12/atomintr_rend1.png)
 
 
 そのため，左方にある目玉アイコンをクリックすると，この相互作用表示を一時的に消すことができます．また，measure (atomintr)を選択した状態で，下方の「−」ボタンを押せば相互作用表示を削除することができます．
 
 次節では，このatomintrレンダラーについてさらに詳しく見ていくことにします．
 
-[ [&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step10) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step13) ]
+[ [&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step10) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step13) ]

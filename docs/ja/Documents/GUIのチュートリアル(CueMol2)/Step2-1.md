@@ -1,16 +1,16 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step2) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step3) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step2) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step3) ]
 
 ## 複数の分子の読み込み
 
-さらに，他の分子を読み込んでみます([PDBファイルの読み込み](../../Documents/GUIのチュートリアル(CueMol2)/Step1)参照)．
+さらに，他の分子を読み込んでみます([PDBファイルの読み込み](../../../Documents/GUIのチュートリアル(CueMol2)/Step1)参照)．
 ここでは例としてグルタミルtRNA合成酵素とtRNA(Glu)複合体の結晶構造を用いています
 ([PDBID: 1G59](http://www.rcsb.org/pdb/explore.do?structureId=1g59))．
 オブジェクト名は1G59に，Rendererはtraceにします．
 
 
-![gui_step4_1g59](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/gui_step4_1g59.png){ style="zoom: 0.3" .on-glb }
+![gui_step4_1g59](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/gui_step4_1g59.png){ style="zoom: 0.3" .on-glb }
 
 
 "trace"レンダラーでは，デフォルトでは上図のように蛋白質だとCA(α位炭素)原子，
@@ -34,7 +34,7 @@ View
 
 
 
-![scene_concept_small2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_concept_small2.png)
+![scene_concept_small2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_concept_small2.png)
 
 
 以上の図のように，シーンは，複数の分子などのオブジェクトと，それらに接続されているレンダラーを含む全体をあらわすものと捉えてもらえばよいと思います．
@@ -45,7 +45,7 @@ View
 **シーン(Scene) パネル**に表示されています．
 
 
-![scene_panel1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_panel1.png)
+![scene_panel1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_panel1.png)
 
 
 Sceneパネル，中央部分には図のようにツリー状の一覧表示があります．
@@ -82,7 +82,7 @@ Sceneパネル，中央部分には図のようにツリー状の一覧表示が
 オブジェクトのばあいは，そのオブジェクトに接続している全レンダラーが表示・非表示されます．
 
 
-![scene_panel_locked1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_panel_locked1.png)
+![scene_panel_locked1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_panel_locked1.png)
 
 さらにその隣には，最上部にLと書かれたカラムがありますが，
 これをクリックするとその項目のロック・非ロック状態が交互に変化します．
@@ -96,21 +96,21 @@ Sceneパネル，中央部分には図のようにツリー状の一覧表示が
 ### オブジェクトの削除
 
 次に，Sceneパネルで"1G59"を選択した状態にして，
-下の![scene_delbtn2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_delbtn2.png)ボタンをクリックすると
+下の![scene_delbtn2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_delbtn2.png)ボタンをクリックすると
 そのオブジェクトが**削除**されます．
 
 CueMol2では，削除したものは完全に消えてしまうわけではありません．
 削除に関してそれほど神経質になる必要は無いでしょう．
 間違って消してしまった場合は，メニューEdit→Undo
-(あるいはツールバーの![toolbar_undobtn1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/toolbar_undobtn1.png)ボタン)
+(あるいはツールバーの![toolbar_undobtn1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/toolbar_undobtn1.png)ボタン)
 で取り戻すことが出来ます．
 
 ### シーン背景色の変更
 
-![scene_panel_bgcolor1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_panel_bgcolor1.png)
+![scene_panel_bgcolor1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2-1/scene_panel_bgcolor1.png)
 
 SceneパネルのScene名の部分を右クリックしてコンテキストメニューを表示させ，
 図のようにBackground colorから色を選択することで，背景色を変更できます((この方法では白と黒しか選べませんが，Sceneのプロパティーダイアログからは任意の色に変更できます．ただ白黒以外に変更するケースはあまりないと思いますが．．．))．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step2)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step3)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step2)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step3)

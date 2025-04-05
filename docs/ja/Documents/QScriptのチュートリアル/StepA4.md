@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -92,7 +92,7 @@ densityは小さい分子だと３以上にしても問題ないですが，
 以下のスクリプトでMSMSのファイルを読み込んで表示します．(blmsurf_1.qs)
 
 
-![blmsurf_1](../../assets/images/Documents/QScriptのチュートリアル/StepA4/blmsurf_1.png){ .on-glb }
+![blmsurf_1](../../../assets/images/Documents/QScriptのチュートリアル/StepA4/blmsurf_1.png){ .on-glb }
 
 
 <pre>
@@ -132,8 +132,8 @@ $r_sf.setProp("defcol", color(1,0,0));
 molsurfレンダラーには，複雑な着色を行うために
 様々なプロパティーがありますが，それらについては，
 
-- [QScriptのチュートリアル/StepA5](../../Documents/QScriptのチュートリアル/StepA5)
+- [QScriptのチュートリアル/StepA5](../../../Documents/QScriptのチュートリアル/StepA5)
 
-- [molsurfの複雑な着色](../../SASPaint)
+- [molsurfの複雑な着色](../../../SASPaint)
 
 で説明しています．

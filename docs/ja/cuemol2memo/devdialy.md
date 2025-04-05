@@ -1,4 +1,4 @@
-[cuemol2memo](../cuemol2memo)
+[cuemol2memo](../../cuemol2memo)
 
 ## CueMol2開発メモ
 

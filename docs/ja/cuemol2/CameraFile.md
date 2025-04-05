@@ -1,11 +1,11 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 複数のシーンで同じカメラを使用する
-カメラの概念については，[Documents/GUIのチュートリアル(CueMol2)/Step9](../Documents/GUIのチュートリアル(CueMol2)/Step9)で基本が紹介されていますが，
+カメラの概念については，[Documents/GUIのチュートリアル(CueMol2)/Step9](../../Documents/GUIのチュートリアル(CueMol2)/Step9)で基本が紹介されていますが，
 複数のシーンで同じカメラ（視点・視方向）を使用したいケースがあると思います．
 例えば，構造比較の図などでよくあるケースだと思います．
 
-カメラ自体を[cuemol2/ObjRendCopyPaste](../cuemol2/ObjRendCopyPaste)の方法でシーン間でコピペすることで，
+カメラ自体を[cuemol2/ObjRendCopyPaste](../../cuemol2/ObjRendCopyPaste)の方法でシーン間でコピペすることで，
 同じカメラで分子を表示することは一応可能ですが，
 カメラを変更した場合に，再度すべてコピペしなおす必要がありかなり不便です．
 
@@ -17,7 +17,7 @@
 カメラを作成すると，シーンパネルに図のような項目ができますが，
 これを右クリックするとコンテキストメニューが表示されます．
 
-![camera_ctxtmenu1](../assets/images/cuemol2/CameraFile/camera_ctxtmenu1.png){ .on-glb }
+![camera_ctxtmenu1](../../assets/images/cuemol2/CameraFile/camera_ctxtmenu1.png){ .on-glb }
 
 メニューの機能のうち，カメラ設定ファイルに関する項目を列挙します．
 Load file...
@@ -44,7 +44,7 @@ Save file
 
 保存後，項目の左側にファイルアイコンが表示されます．
 
-![camera_icon1](../assets/images/cuemol2/CameraFile/camera_icon1.png){ .on-glb }
+![camera_icon1](../../assets/images/cuemol2/CameraFile/camera_icon1.png){ .on-glb }
 
 このファイルアイコンは，このカメラ項目がqscファイル内ではなく，外部ファイルにリンクされていることを示しています．
 
@@ -54,12 +54,12 @@ Save file
 「Load file...」をクリックします．
 （もし既に子camera項目があるなら，それらのうちどれかを右クリックするのでもOKです）
 
-![camera_ctxtmenu2](../assets/images/cuemol2/CameraFile/camera_ctxtmenu2.png){ .on-glb }
+![camera_ctxtmenu2](../../assets/images/cuemol2/CameraFile/camera_ctxtmenu2.png){ .on-glb }
 
 するとファイルを開くダイアログが出てくるので，先ほど書き出したcamファイルを指定します．
 すると，図のように，ファイルアイコン付のcamera項目が新しくできます．
 
-![camera_icon1](../assets/images/cuemol2/CameraFile/camera_icon1.png){ .on-glb }
+![camera_icon1](../../assets/images/cuemol2/CameraFile/camera_icon1.png){ .on-glb }
 
 これをダブルクリックすると，camファイルに保存された視点等が現在ビューに適用され画面が変わります．
 

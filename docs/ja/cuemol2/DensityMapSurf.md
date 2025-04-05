@@ -1,10 +1,10 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## ボリュームデータの表面表示
 この項では，電子密度マップなどのボリュームデータの面表示について解説します． 
 以下ではX線結晶構造解析で扱う電子密度マップを例として挙げていますが，電子顕微鏡解析の結果得られる密度マップや静電ポテンシャルマップなどでも同様の表示が可能です．
 
-メッシュ表示については，[Documents/GUIのチュートリアル(CueMol2)/StepC2](../Documents/GUIのチュートリアル(CueMol2)/StepC2)と[cuemol2/DensityMap](../cuemol2/DensityMap)を参照してください．
+メッシュ表示については，[Documents/GUIのチュートリアル(CueMol2)/StepC2](../../Documents/GUIのチュートリアル(CueMol2)/StepC2)と[cuemol2/DensityMap](../../cuemol2/DensityMap)を参照してください．
 
 ### 面表示(isosurf) rendererの作成
 
@@ -25,4 +25,4 @@
 isosurface rendererで表示される表面表示を、MolSurf objectに変換することが可能です。変換すると、断面の生成などが可能になります。
 
 ### Multi-gradient coloring
-[Multi-gradient coloring](../cuemol2/MultiGradColoring)による着色が可能です。よくある電顕マップの分解能に応じた着色などが可能になります。
+[Multi-gradient coloring](../../cuemol2/MultiGradColoring)による着色が可能です。よくある電顕マップの分解能に応じた着色などが可能になります。

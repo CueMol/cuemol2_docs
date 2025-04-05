@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## Cameraにrenderer等の表示・非表示状態を保存する
 Cameraには，現在の視点等の情報以外に，objects/renderersの表示・非表示状態を保存することが可能です．
@@ -14,7 +14,7 @@ Cameraには，現在の視点等の情報以外に，objects/renderersの表示
 Cameraに表示・非表示状態(vis flags)を保存したい場合は，対象cameraを右クリックし，表示されるcontext menuで「Save from scene (with vis flags)」を実行します．
 
 
-![camvis-ctxtmenu1](../assets/images/cuemol2/CameraVisFlags/camvis-ctxtmenu1.png){ style="zoom: 0.5" .on-glb }
+![camvis-ctxtmenu1](../../assets/images/cuemol2/CameraVisFlags/camvis-ctxtmenu1.png){ style="zoom: 0.5" .on-glb }
 
 
 「Save from scene (with vis flags)」を実行すると，現在のsceneの全てのobjects/renderersの表示・非表示状態が対象とするcameraに保存されます．
@@ -22,7 +22,7 @@ Cameraに表示・非表示状態(vis flags)を保存したい場合は，対象
 Cameraに表示・非表示状態(vis flags)が保存されている場合は，そのcameraの項目の横に目のアイコンが表示されます（ただし現バージョンではバグで表示されないことがあります）
 
 
-![camvis-visset1](../assets/images/cuemol2/CameraVisFlags/camvis-visset1.png){ .on-glb }
+![camvis-visset1](../../assets/images/cuemol2/CameraVisFlags/camvis-visset1.png){ .on-glb }
 
 
 ### 保存した表示・非表示状態の復元
@@ -38,7 +38,7 @@ Cameraに保存されている表示・非表示状態(vis flags)を復元した
 ### 表示・非表示状態を編集する
 上記のcontext menuから「Edit vis flags...」を実行すると，該当cameraに保存されている表示・非表示状態(vis flags)を編集することができます．以下のようなdialogが表示されます．
 
-![camvis-editdlg1](../assets/images/cuemol2/CameraVisFlags/camvis-editdlg1.png){ .on-glb }
+![camvis-editdlg1](../../assets/images/cuemol2/CameraVisFlags/camvis-editdlg1.png){ .on-glb }
 
 
 中央のObj/Rendカラム
@@ -76,4 +76,4 @@ Cameraに保存されている表示・非表示状態(vis flags)を復元した
 1.  camera (copy1_A)を選択し，「Save from view」を実行
 1.  camera (B)を削除し，camera (copy1_A)をcamera (B)にrenameする．（ただしBを残して問題ないならこの段階は不要）
 
-**注意点**:camera context menuの他の項目については，[Documents/GUIのチュートリアル(CueMol2)/Step9](../Documents/GUIのチュートリアル(CueMol2)/Step9)と[cuemol2/CameraFile](../cuemol2/CameraFile)を参照してください．
+**注意点**:camera context menuの他の項目については，[Documents/GUIのチュートリアル(CueMol2)/Step9](../../Documents/GUIのチュートリアル(CueMol2)/Step9)と[cuemol2/CameraFile](../../cuemol2/CameraFile)を参照してください．

@@ -1,4 +1,4 @@
-[Ref/molstr](../../Ref/molstr)
+[Ref/molstr](../../../Ref/molstr)
 
 #### merge 
 ; merge mol2 into this (mol2)

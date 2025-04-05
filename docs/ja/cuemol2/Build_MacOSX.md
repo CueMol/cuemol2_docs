@@ -1,4 +1,4 @@
-[../](../cuemol2/)
+[../](../../cuemol2/)
 
 ## CueMol2のバージョンとxulrunner/geckoのバージョン
 CueMol2のバージョンに合ったバージョンを用いる必要がある。
@@ -34,7 +34,7 @@ Mac OSX 10.6 (Snow Leopard)あるいは10.7(Lion)での場合．(Leopardでは�
 CueMol2自体のbuildには直接必要ではないが，xulrunner SDKについているxpidlなどのコマンドが，
 MacPortsのライブラリーに対してlinkされているので，インストールしないと動かない．
 基本的には，
-[Mac OS X Build Prerequisites](../https://developer.mozilla.org/en/Mac_OS_X_Build_Prerequisites)
+[Mac OS X Build Prerequisites](../../https://developer.mozilla.org/en/Mac_OS_X_Build_Prerequisites)
 の通りにMacPortsをインストールすればよいが，
 そのままでやると64bit版のbinaryしかinstallされないので（SDK付属のbinaryは32bitらしい）
 Universal binaryになるようにMacPortsを設定する必要がある．
@@ -72,7 +72,7 @@ MacOS版のsdkにはbuildに必要なFrameworkがなぜかはいっていない�
 
 
 #### BOOSTのインストール
-[http](..///www.boost.org/)から取得できる．
+[http](../..///www.boost.org/)から取得できる．
 
 まずソースを展開後、bjamをbuildする。
 ```

@@ -1,4 +1,4 @@
-[../](../cuemol2/)
+[../](../../cuemol2/)
 
 ## Linuxでのbuild
 CentOS 5.Xでの場合．(それ以外のdistrでも，xulrunnerがちゃんと動くようなら一応動くのでは．未確認．)
@@ -22,9 +22,9 @@ Ubuntu amd64では動くようです（Biochem_fanさんに感謝！）． http:
 （もちろん全部shared libraryとして作って実行時リンクするようにしても構わない。）
 
 #### xulrunner SDK
-[MacOSXの場合](../cuemol2/Build_MacOSX)と同様．
+[MacOSXの場合](../../cuemol2/Build_MacOSX)と同様．
 
-[ftp](..///ftp.mozilla.org/pub/xulrunner/releases/)からdownloadできる．
+[ftp](../..///ftp.mozilla.org/pub/xulrunner/releases/)からdownloadできる．
 CueMol2のバージョンに合ったバージョンのSDKを用いる必要がある。
 
 2.2.0では23.0.1を使用している。
@@ -194,7 +194,7 @@ env GLEW_DEST=$HOME/proj/glew make install
 CFLAGS.EXTRAでPICオプションを指定しないと、後々shared libraryとしてリンクできなくなる。
 
 ### Repositoryからチェックアウト
-[MacOSXの場合](../cuemol2/Build_MacOSX)と同様．すなわち，
+[MacOSXの場合](../../cuemol2/Build_MacOSX)と同様．すなわち，
 
 -  Anonymous (http)
 ```

@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -13,7 +13,7 @@
 tRNA(Phe)をリボンモデルで表示します．(trf-ribbon.qs) 
 
 
-![trf_ribbon1](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon1.png){ .on-glb }
+![trf_ribbon1](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon1.png){ .on-glb }
 
 
 <pre>
@@ -41,13 +41,13 @@ tRNA(Phe)をリボンモデルで表示します．(trf-ribbon.qs)
 :   tRNAのCCA末端を除いた部分を選択している．PDBファイル中でtRNAの鎖はAである．"c;"は"chain"の略表記．
 
 08
-:   核酸のレンダリングに特化した"nucl"レンダラーを作成している．デフォルトでは図のようにバックボーンをチューブで接続した上に，各核酸残基に対応するスティックが表示される．チューブの部分に関しては，tubeレンダラーと同じプロパティ−を設定できる．[step2](../../Documents/QScriptのチュートリアル/Step2)参照．すなわち，tuberプロパティーなどを変更して，チューブ部分をもっと「きし麺」っぽくすることも可能． 
+:   核酸のレンダリングに特化した"nucl"レンダラーを作成している．デフォルトでは図のようにバックボーンをチューブで接続した上に，各核酸残基に対応するスティックが表示される．チューブの部分に関しては，tubeレンダラーと同じプロパティ−を設定できる．[step2](../../../Documents/QScriptのチュートリアル/Step2)参照．すなわち，tuberプロパティーなどを変更して，チューブ部分をもっと「きし麺」っぽくすることも可能． 
 
 09
 :   "pivotatom"プロパティは，tubeレンダラーの場合と同じく，チューブが補間する原子を指定する．ここではリン酸のPにしているが，C3'等にすることもできる．C3'等の方がメジャーグルーブとマイナーグルーブの差が際立つ． 
 
 
-![trf_ribbon2](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon2.png){ .on-glb }
+![trf_ribbon2](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon2.png){ .on-glb }
 
 10
 :   "bondw"プロパティは，核酸残基に対応するスティック部分の太さ半径Å単位で指定する． 
@@ -62,7 +62,7 @@ $r_bp.setProp("natype", 1);
 以下のようになります．
 (このモードでは"pivotatom"を"p" (リン酸)以外にすると，表示がおかしくなります．)
 
-![trf_ribbon3](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon3.png){ .on-glb }
+![trf_ribbon3](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon3.png){ .on-glb }
 
 
 **Queからの変更点**
@@ -75,7 +75,7 @@ $r_bp.setProp("natype", 1);
 どの残基とどの残基が塩基対を作っているかを指定することで，塩基対を一本のスティックとして表示させることができます．(trf-ribbon2.qs) 
 
 
-![trf_ribbon4](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon4.png){ .on-glb }
+![trf_ribbon4](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon4.png){ .on-glb }
 
 
 <pre>
@@ -117,7 +117,7 @@ makebp()関数は起動時にロードされるstartup.qsで定義されてい�
 上のリボンモデルのtRNAに，2次構造上のアーム毎に色を変えてみます．(trf-ribbon3.qs) 
 
 
-![trf_ribbon5](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon5.png){ .on-glb }
+![trf_ribbon5](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon5.png){ .on-glb }
 
 
 <pre>
@@ -171,7 +171,7 @@ makebp()関数は起動時にロードされるstartup.qsで定義されてい�
 
 nuclレンダラーのもうひとつのモードを紹介します．(trf-ribbon4.qs)
 
-![trf_ribbon6](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon6.png){ .on-glb } ![trf_ribbon7](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon7.png){ .on-glb }
+![trf_ribbon6](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon6.png){ .on-glb } ![trf_ribbon7](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon7.png){ .on-glb }
 
 <pre>
 01: $pwd = sys.getScriptPath();
@@ -224,10 +224,10 @@ nuclレンダラーのもうひとつのモードを紹介します．(trf-ribbo
 :   残基の表示をballstickレンダラーで作成．まず，核酸のリング骨格（リボースと塩基）の部分だけを選択し，レンダラーを作成している．次にballstickレンダラーの"ring"プロパティーにtrueを設定することで，リング部分を板状に表示させている．この板の厚さは，"tickness"プロパティーで指定する．この例のように，"tickness"を"bondw"や"sphr"プロパティーと同じ大きさにすと，縁の丸い板のようになる．
 
 一方，"bondw"や"sphr"を"tickness"より若干大きめにすると，縁のある板状にすることもできる.<br />
-![trf_ribbon8](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon8.png){ .on-glb }
+![trf_ribbon8](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon8.png){ .on-glb }
 
 この例は単色で表示しましたが，step1やstep2の例を参考にすれば，更に複雑な着色もできます．
 
 
-![trf_ribbon](../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon.jpg){ .on-glb }
+![trf_ribbon](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon.jpg){ .on-glb }
 

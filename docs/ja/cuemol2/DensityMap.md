@@ -1,11 +1,11 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 電子密度マップ・ボリュームデータ
 この項では，電子密度マップなどのボリュームデータの表示方法について詳しく解説します．
 以下ではX線結晶構造解析で扱う電子密度マップを例として挙げていますが，電子顕微鏡解析の結果得られる密度マップや静電ポテンシャルマップなどでも同様の表示が可能です．
 
 ## 表示範囲の制限
-電子密度の表示範囲の制限方法としては，チュートリアル[電子密度](../Documents/GUIのチュートリアル(CueMol2)/StepC2)にあるようにextentを指定して希望する部分のみ出すことができますが，
+電子密度の表示範囲の制限方法としては，チュートリアル[電子密度](../../Documents/GUIのチュートリアル(CueMol2)/StepC2)にあるようにextentを指定して希望する部分のみ出すことができますが，
 この方法だと範囲指定は立方体にしかできないため，微調整が困難です（例えば視界手前にあるノイズを出したくない等々）．
 
 ### 準備
@@ -15,12 +15,12 @@
 ただし圧縮されているので適当なソフトウェアで解凍して使用して下さい)
 
 PDBから1QIOを取得しsimple表示させたうえで，上記のmtzファイルを読み込んで電子密度を表示させてください．
-詳しくはチュートリアル[電子密度](../Documents/GUIのチュートリアル(CueMol2)/StepC2)を参照してください．
+詳しくはチュートリアル[電子密度](../../Documents/GUIのチュートリアル(CueMol2)/StepC2)を参照してください．
 
 そして，A63 Trp残基(A.63.*)の周囲の電子密度を表示させます．
 extentやslabを調節すると以下の図のようになりますが，Trp残基の電子密度全てが出るように，かつ周囲の残基の電子密度を表示しないようにするのはほぼ不可能です．
 
-![denmap_restr1](../assets/images/cuemol2/DensityMap/denmap_restr1.png){ .on-glb }
+![denmap_restr1](../../assets/images/cuemol2/DensityMap/denmap_restr1.png){ .on-glb }
 
 
 ### 指定部分の周囲のみ表示
@@ -35,7 +35,7 @@ Limit display byという項目がdefaultではoffになっていますが，こ
 1.  **Distance**に選択範囲からの距離（Å）を指定する(この場合は2.4を指定している）
 
 
-> ![denmap_restr3](../assets/images/cuemol2/DensityMap/denmap_restr3.png){ style="zoom: 0.8" .on-glb } ⇒ ![denmap_restr_ex3](../assets/images/cuemol2/DensityMap/denmap_restr_ex3.png){ style="zoom: 0.7" .on-glb }
+> ![denmap_restr3](../../assets/images/cuemol2/DensityMap/denmap_restr3.png){ style="zoom: 0.8" .on-glb } ⇒ ![denmap_restr_ex3](../../assets/images/cuemol2/DensityMap/denmap_restr_ex3.png){ style="zoom: 0.7" .on-glb }
 
 ### 注意点
 以上の方法を用いることで，作為的に電子密度のうち特定の領域付近のみ表示させることが可能になります．

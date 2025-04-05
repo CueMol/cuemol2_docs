@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## Cartoon表示について
 この項ではversion 2.0.1.171以降で導入されたcartoon rendererについて説明します．
@@ -22,7 +22,7 @@
 以下にcartoon (左)とribbon (右)を同じ分子についてデフォルトのパラメータ値で表示させた例を示します．
 
 
-> ![cartoon_cartoon1](../assets/images/cuemol2/CartoonRenderer/cartoon_cartoon1.png){ .on-glb } ![cartoon_ribbon1](../assets/images/cuemol2/CartoonRenderer/cartoon_ribbon1.png){ .on-glb }
+> ![cartoon_cartoon1](../../assets/images/cuemol2/CartoonRenderer/cartoon_cartoon1.png){ .on-glb } ![cartoon_ribbon1](../../assets/images/cuemol2/CartoonRenderer/cartoon_ribbon1.png){ .on-glb }
 
 #### なぜ今さら？
 pymolやmolscriptでおなじみの表示で，なぜ今さらという感じもしますが，
@@ -43,7 +43,7 @@ Helixのcylinder表示にてシリンダーの滑らかさを実数値で指定�
 下図は，左からhelix_smooth値が1.0,2.0,4.0の場合です．
 
 
-> ![cartoon_helix_smooth_1](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_1.png){ .on-glb } ![cartoon_helix_smooth_2](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_2.png){ .on-glb } ![cartoon_helix_smooth_4](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_4.png){ .on-glb }
+> ![cartoon_helix_smooth_1](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_1.png){ .on-glb } ![cartoon_helix_smooth_2](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_2.png){ .on-glb } ![cartoon_helix_smooth_4](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_4.png){ .on-glb }
 
 4以上になるとほぼ直線であまり違いは出ないです．
 1以下にすると，おひねりのようになってしまいます．
@@ -60,7 +60,7 @@ helix_wsmoothは，helix_waver=falseの場合のみ有効な値で，シリン�
 下図は，helix_wsmooth=0.0, 1.0, 2.0に変化させた場合の形状です．(ほかのパラメータはhelix_waver=false, helix_smooth=3.0で固定)
 
 
-> ![cartoon_helix_wsmooth_0](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_0.png){ .on-glb } ![cartoon_helix_wsmooth_1](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_1.png){ .on-glb } ![cartoon_helix_wsmooth_2](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_2.png){ .on-glb }
+> ![cartoon_helix_wsmooth_0](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_0.png){ .on-glb } ![cartoon_helix_wsmooth_1](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_1.png){ .on-glb } ![cartoon_helix_wsmooth_2](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_2.png){ .on-glb }
 
 上記はhelix_smooth値は3.0で固定ですが，この値によっても見え方が大きく変わってきます．
 
@@ -70,7 +70,7 @@ helix_wsmoothは，helix_waver=falseの場合のみ有効な値で，シリン�
 
 下図は，helix_wplus=0.0, 0.5の場合です．
 
-> ![cartoon_helix_wplus_0](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_0.png){ .on-glb } ![cartoon_helix_wplus_1](../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_1.png){ .on-glb }
+> ![cartoon_helix_wplus_0](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_0.png){ .on-glb } ![cartoon_helix_wplus_1](../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_1.png){ .on-glb }
 
 デフォルト値はcoilの太さ0.2と同じになっており，大体の場合で隠れるようになっているので特にいじらなくても良いでしょう．あと，意図的に負の値を指定して細いシリンダー表示にすることも可能です．
 
@@ -82,7 +82,7 @@ helixの場合同様に，シート表示の滑らかさを実数値で指定し
 
 下図は，sheet_smooth=-5.0, 0.0, 3.0の場合です．-2以下にすると大体Cαを通るようになります．3以上にするとほぼ直線状になります．
 
-> ![cartoon_sheet_smooth_-5](../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_-5.png){ .on-glb } ![cartoon_sheet_smooth_0](../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_0.png){ style="zoom: 0.97" .on-glb } ![cartoon_sheet_smooth_3](../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_3.png){ style="zoom: 0.9" .on-glb }
+> ![cartoon_sheet_smooth_-5](../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_-5.png){ .on-glb } ![cartoon_sheet_smooth_0](../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_0.png){ style="zoom: 0.97" .on-glb } ![cartoon_sheet_smooth_3](../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_3.png){ style="zoom: 0.9" .on-glb }
 
 
 ## Coilの表示オプション
@@ -92,7 +92,7 @@ helixの場合同様に，coil表示の滑らかさを実数値で指定しま�
 
 下図は，coil_smooth=-5.0, -2.0, -1.0, 0.0の場合です．-2以下にすると大体Cαを通るようになります．0以上にすると実際のCα位置から乖離しすぎかもしれません．
 
-> ![cartoon_coil_smooth_-5](../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-5.png){ .on-glb } ![cartoon_coil_smooth_-2](../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-2.png){ .on-glb } ![cartoon_coil_smooth_-1](../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-1.png){ .on-glb } ![cartoon_coil_smooth_0](../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_0.png){ .on-glb }
+> ![cartoon_coil_smooth_-5](../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-5.png){ .on-glb } ![cartoon_coil_smooth_-2](../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-2.png){ .on-glb } ![cartoon_coil_smooth_-1](../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-1.png){ .on-glb } ![cartoon_coil_smooth_0](../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_0.png){ .on-glb }
 
 
 
@@ -108,7 +108,7 @@ CueMol2のcartoon表示では，anchor_selプロパティーに残基を指定�
 以下に，coil_smooth=-1の場合（デフォルト）に，anchor_selにA.76.*（図のループの先端部分の残基）
 を指定した場合の図を示します．
 
-> ![cartoon_anchor_sel0](../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel0.png){ .on-glb } ⇒ ![cartoon_anchor_sel1](../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel1.png){ .on-glb }
+> ![cartoon_anchor_sel0](../../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel0.png){ .on-glb } ⇒ ![cartoon_anchor_sel1](../../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel1.png){ .on-glb }
 
 このように，ループやシート中に1残基程度なら効果的にanchorが設定されますが，
 多くなってくると結局smooth値を小さくした場合と同じようになってしまうので，

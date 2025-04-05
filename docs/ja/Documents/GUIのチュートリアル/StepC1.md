@@ -1,4 +1,4 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/) | [次へ](../../Documents/GUIのチュートリアル/StepC2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/) | [次へ](../../../Documents/GUIのチュートリアル/StepC2)
 
 
 
@@ -7,7 +7,7 @@
 読み込んだ分子が結晶構造解析により構造決定されている場合，
 Symmパレットに結晶に関する情報が表示されます．
 
-![gui_stepC1_symmpal1](../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_symmpal1.png){ .on-glb }
+![gui_stepC1_symmpal1](../../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_symmpal1.png){ .on-glb }
 
 読込んだPDBファイルによっては，
 ここの値が意図したものと違っていることがあります
@@ -26,12 +26,12 @@ trace rendererを選択してtrace表示にしています．
 まず，unit cellを表示させてみましょう．
 Symmパレットから"Display cell"ボタンを押します．
 
-![symm-cell](../../assets/images/Documents/GUIのチュートリアル/StepC1/symm-cell.jpg){ .on-glb }
+![symm-cell](../../../assets/images/Documents/GUIのチュートリアル/StepC1/symm-cell.jpg){ .on-glb }
 
 次に，視点を表示されたunit cellの中心のあたりに移動して，
 "Disp symm mol"ボタンを押すと対称分子表示ダイアログが表示されます．
 
-![gui_stepC1_csymm](../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_csymm.png){ .on-glb }
+![gui_stepC1_csymm](../../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_csymm.png){ .on-glb }
 
 ラジオボタンが"By distance"になっていることを確認し，
 Distance rangeに，対称分子を表示する範囲をÅ単位で入力します．
@@ -42,7 +42,7 @@ Distance rangeに，対称分子を表示する範囲をÅ単位で入力しま
 非常に多くの対称分子が表示されすぎて，
 システムがフリーズしてしまうので注意してください．
 
-![symm-obj](../../assets/images/Documents/GUIのチュートリアル/StepC1/symm-obj.jpg){ .on-glb }
+![symm-obj](../../../assets/images/Documents/GUIのチュートリアル/StepC1/symm-obj.jpg){ .on-glb }
 
 ## 結晶学的対称分子の表示(2)
 先程のダイアログでBy Cellを選ぶと，unit cell中に入っている
@@ -50,7 +50,7 @@ Distance rangeに，対称分子を表示する範囲をÅ単位で入力しま
 リゾチームでは，P4(3)2(1)2なので，対称操作は８つあり，
 すなわち８つの対称分子が表示されるわけです．
 
-![gui_stepC1_bycell](../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_bycell.png){ .on-glb }
+![gui_stepC1_bycell](../../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_bycell.png){ .on-glb }
 
 この対称分子表示を上述の**結晶情報の変更**とあわせて使うと，
 分子置換などで結晶構造を決めているとき等に便利です．
@@ -73,7 +73,7 @@ Workspaceパレットを見るとsymmという名前のsymmレンダラーが出
 対称分子表示は実体は無いものの，
 マウスでクリックして情報を表示することは可能です．
 
-![gui_stepC1_ctxtmenu](../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_ctxtmenu.png){ .on-glb }
+![gui_stepC1_ctxtmenu](../../../assets/images/Documents/GUIのチュートリアル/StepC1/gui_stepC1_ctxtmenu.png){ .on-glb }
 
 通常の場合と違うのは，メニューのうち下の3つです．
 それぞれの機能は以下のようになっています．
@@ -91,4 +91,4 @@ Create this SYMM object...
 新しい分子オブジェクトを作成する．
 作られた分子は，ファイルへの保存等，通常の分子オブジェクトと同様に操作できます．
 
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/) | [次へ](../../Documents/GUIのチュートリアル/StepC2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/) | [次へ](../../../Documents/GUIのチュートリアル/StepC2)

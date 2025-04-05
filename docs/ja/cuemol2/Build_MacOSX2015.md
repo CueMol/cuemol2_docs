@@ -1,10 +1,10 @@
-[cuemol2](../cuemol2)
+[cuemol2](../../cuemol2)
 ## MacOS X Yosemite 10.10でのbuild環境構築
 
 CueMol2のバージョンに合った環境を用いる必要がある。
 ここでは、
 
--  CueMol 2.2.2.X (git branch [vs2013test](../https://github.com/CueMol/cuemol2/tree/vs2013test))
+-  CueMol 2.2.2.X (git branch [vs2013test](../../https://github.com/CueMol/cuemol2/tree/vs2013test))
 
 -  MacOS X 10.10 (Xcode 6.4)
 
@@ -183,7 +183,7 @@ GUIを終了させ、make&make installすると、~/proj64/CGAL-4.6.1以下にin
 以上でbuild環境は整ったはず。
 
 ### Source codeのcheckout
-詳しくは[cuemol2/SrcRepository](../cuemol2/SrcRepository)参照。
+詳しくは[cuemol2/SrcRepository](../../cuemol2/SrcRepository)参照。
 
 -  Anonymous (http)
 ```
@@ -211,7 +211,7 @@ GUIを終了させ、make&make installすると、~/proj64/CGAL-4.6.1以下にin
 ### configureスクリプトの実行とbuild
 以下buildは，~/proj/cuemol2/uxbuildにて行うのでcdで移動．
 
-configureを走らせるためのスクリプト[run_config_osx.sh](../https://github.com/CueMol/cuemol2/blob/vs2013test/uxbuild/run_config_osx.sh)が，~/proj/cuemol2/uxbuildにあるので，必要に応じて編集．
+configureを走らせるためのスクリプト[run_config_osx.sh](../../https://github.com/CueMol/cuemol2/blob/vs2013test/uxbuild/run_config_osx.sh)が，~/proj/cuemol2/uxbuildにあるので，必要に応じて編集．
 （これを使わなくても出来なくもないが，いちいちキーボードから入力するのは面倒なので）
 
 library等のインストール位置を上述から変更していない場合は，

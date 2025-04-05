@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## シーンの画像ファイルへの書出し(Export)
 シーンの画像ファイル(PNG)への直接書き出(export)しは，
 メニュー「Rendering」→「Export Scene...」で行うことができます．
@@ -10,7 +10,7 @@ PNG形式の画像ファイルに（POV-Ray等でレンダリングせずに）�
 
 その後，以下のような設定ダイアログが現れます．
 
-![png_export_opt](../assets/images/cuemol2/ImageExport/png_export_opt.png)
+![png_export_opt](../../assets/images/cuemol2/ImageExport/png_export_opt.png)
 
 各設定の説明は以下の通りになります．
 Resolution
@@ -34,5 +34,5 @@ Transparent PNG
 例えば，背景を白にしたうえでTransparent PNGをONにして書き出し，PowerPointに張り付けると，以下のように，背後にある文字などが透けて見えるようになります．
 （ただしOpenGLでは半透明はちゃんと前後関係を考えて表示されないため，半透明のオブジェクトがあると表示がおかしくなるかもしれません）
 
-![transp_png_example2](../assets/images/cuemol2/ImageExport/transp_png_example2.png){ style="zoom: 0.3" .on-glb }
+![transp_png_example2](../../assets/images/cuemol2/ImageExport/transp_png_example2.png){ style="zoom: 0.3" .on-glb }
 

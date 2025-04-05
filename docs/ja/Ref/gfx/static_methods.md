@@ -1,4 +1,4 @@
-[Ref/gfx](../../Ref/gfx)
+[Ref/gfx](../../../Ref/gfx)
 
 
 ## gfxモジュールのスタティックメソッド
@@ -18,19 +18,19 @@ any createRend(string rendname, string rendtype, string attachto)
 -  attachtoに作成するレンダラーがアタッチされるオブジェクト名を
 
 指定する．
-[Ref/qsys/qobj](../../Ref/qsys/qobj)のcreateRendメソッドと同機能であるが，
+[Ref/qsys/qobj](../../../Ref/qsys/qobj)のcreateRendメソッドと同機能であるが，
 こちらは全引数を名前で指定するバージョン．
-[Ref/qsys/qobj](../../Ref/qsys/qobj)のcreateRendメソッドを使用した方が簡便であるため
+[Ref/qsys/qobj](../../../Ref/qsys/qobj)のcreateRendメソッドを使用した方が簡便であるため
 そちらの使用が推奨される．
 
-Return valueとして，作成した[renderer](../../Ref/gfx/renderer)オブジェクトが返される．
+Return valueとして，作成した[renderer](../../../Ref/gfx/renderer)オブジェクトが返される．
 
 **例**
 ```
 $rend = gfx.createRend("mainchain", "trace", "mol1");
 ```
 データオブジェクト"mol1"に，mainchainという識別名の
-[traceレンダラー](../../Ref/molstr/TraceRenderer)を作成する．
+[traceレンダラー](../../../Ref/molstr/TraceRenderer)を作成する．
 
 #### destroyRend 
 ```
@@ -64,7 +64,7 @@ any getRend(string,string)
 ```
 
 データオブジェクト名とレンダラー識別名を指定して，
-[rendererオブジェクト](../../Ref/gfx/renderer)を取得する．
+[rendererオブジェクト](../../../Ref/gfx/renderer)を取得する．
 
 #### updateView 
 ```

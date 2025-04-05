@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## APBSとPDB2PQRのインストール
 
 CueMol2からAPBS(http://www.poissonboltzmann.org/
@@ -11,17 +11,17 @@ CueMol2からAPBS(http://www.poissonboltzmann.org/
 
 CueMol 2.1.0以降のAPBS付属版(Windows版のみ)では，CueMolインストール時にAPBSもPDB2PQR簡易版もインストールされるので，特にユーザーが何かしらする必要はありません．
 
-[静電ポテンシャルマップの計算](../cuemol2/APBS_ElePot)に進んでください
+[静電ポテンシャルマップの計算](../../cuemol2/APBS_ElePot)に進んでください
 
 ## MacOS Xの場合
 CueMol 2.2.3.434以降ではAPBとPDB2PQRが付属しているので，特にユーザーが何かしらする必要はありません．
 
-[静電ポテンシャルマップの計算](../cuemol2/APBS_ElePot)に進んでください
+[静電ポテンシャルマップの計算](../../cuemol2/APBS_ElePot)に進んでください
 
 
 ### APBSのinstall
 MacOS Xの場合は，
-Sourceforgeの[APBSのサイト](../https://sourceforge.net/projects/apbs/files/apbs/)からダウンロードします．
+Sourceforgeの[APBSのサイト](../../https://sourceforge.net/projects/apbs/files/apbs/)からダウンロードします．
 
 現在(2014/8)の最新版は1.4.1ですが，
 
@@ -47,7 +47,7 @@ pdb2pqr (http://www.poissonboltzmann.org/
 
 
 MacOS Xの場合は，
-Sourceforgeの[PDB2PQRのサイト](../https://sourceforge.net/projects/pdb2pqr/files/pdb2pqr/)
+Sourceforgeの[PDB2PQRのサイト](../../https://sourceforge.net/projects/pdb2pqr/files/pdb2pqr/)
 からダウンロードします．
 
 現在(2014/8)の最新版は1.9.0ですが，
@@ -67,4 +67,4 @@ Sourceforgeの[PDB2PQRのサイト](../https://sourceforge.net/projects/pdb2pqr/
 
 ## 使用方法
 以上が完了したら，
-[静電ポテンシャルマップの計算](../cuemol2/APBS_ElePot)に進んでください．
+[静電ポテンシャルマップの計算](../../cuemol2/APBS_ElePot)に進んでください．

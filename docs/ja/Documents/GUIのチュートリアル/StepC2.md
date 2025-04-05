@@ -1,4 +1,4 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)
 
 
 
@@ -14,7 +14,7 @@
 ファイルを開くダイアログでBRIX Density Mapを選択し，lysozyme_2fo-fc.brixを選択して「開く」ボタンを押します．するとオプションダイアログが表示されます．
 
 
-![density_option1](../../assets/images/Documents/GUIのチュートリアル/StepC2/density_option1.png){ .on-glb }
+![density_option1](../../../assets/images/Documents/GUIのチュートリアル/StepC2/density_option1.png){ .on-glb }
 
 
 「Name」で読み込む電子密度のオブジェクトを指定します．ここではデフォルト(lysozyme_2fo-fc)のままにしておきます．
@@ -22,18 +22,18 @@ CueMolでは，電子密度も分子モデルなどと同様にオブジェク�
 OKボタンを押すと電子密度が表示されます．
 
 
-![density_mesh1](../../assets/images/Documents/GUIのチュートリアル/StepC2/density_mesh1.png){ .on-glb }
+![density_mesh1](../../../assets/images/Documents/GUIのチュートリアル/StepC2/density_mesh1.png){ .on-glb }
 
 
 これではいったい何が何だかよくわかりませんね．
 わかりやすいように，モデルの分子構造も読み込んで重ねて表示してみます．
-分解能が高い結晶構造の場合は分子のほうを**simple** rendererで表示すればわかりやすいでしょう([Step1参照](../../Documents/GUIのチュートリアル/Step1))．
+分解能が高い結晶構造の場合は分子のほうを**simple** rendererで表示すればわかりやすいでしょう([Step1参照](../../../Documents/GUIのチュートリアル/Step1))．
 
 
-![density_mesh2](../../assets/images/Documents/GUIのチュートリアル/StepC2/density_mesh2.png){ .on-glb }
+![density_mesh2](../../../assets/images/Documents/GUIのチュートリアル/StepC2/density_mesh2.png){ .on-glb }
 
 
-この図のようにzoomしてslab ([Step2参照](../../Documents/GUIのチュートリアル/Step2))を薄くしてやれば見やすくなります．
+この図のようにzoomしてslab ([Step2参照](../../../Documents/GUIのチュートリアル/Step2))を薄くしてやれば見やすくなります．
 ところで，なぜcontourというのかというと，普通出てくる電子密度の表示は，
 山の地図などでおなじみの２次元の等高線(contour)表示を
 ３次元に拡張したものだから，というわけです．
@@ -45,7 +45,7 @@ GUIメニューの「Window」→「Density map palette」がチェックされ�
 このパレットからは，density map objectにアタッチされたcontourレンダラー（ここでは緑色の網目表示と思ってください）のプロパティーを変更できます．
 
 
-![density_map_palette](../../assets/images/Documents/GUIのチュートリアル/StepC2/density_map_palette.png){ .on-glb }
+![density_map_palette](../../../assets/images/Documents/GUIのチュートリアル/StepC2/density_map_palette.png){ .on-glb }
 
 
 ボタンなどには以下のような機能があります．
@@ -58,10 +58,10 @@ GUIメニューの「Window」→「Density map palette」がチェックされ�
 |Redraw button|電子密度が再描画されます．プロパティー変更などの場合は勝手に再描画されるので押す必要はありません．Viewの視点を変更した時など，電子密度が描画される中心が移動してほしい場合があります．その場合はこのボタンを押しましょう．|
 
 さらに，電子密度表示の設定は，Workspace paletteに表示されている
-当該レンダラーをダブルクリックすることでも可能です．([Step5](../../Documents/GUIのチュートリアル/Step5)も参照)
+当該レンダラーをダブルクリックすることでも可能です．([Step5](../../../Documents/GUIのチュートリアル/Step5)も参照)
 
 
-![density_option2](../../assets/images/Documents/GUIのチュートリアル/StepC2/density_option2.png){ .on-glb }
+![density_option2](../../../assets/images/Documents/GUIのチュートリアル/StepC2/density_option2.png){ .on-glb }
 
 
 このダイアログで設定できる値は，**Thickness**(線の太さ)以外は
@@ -74,7 +74,7 @@ GUIメニューの「Window」→「Density map palette」がチェックされ�
 見にくくなってしまうので，こういう表示は論文とかではあまり使われていないようです．
 
 
-![density_surf](../../assets/images/Documents/GUIのチュートリアル/StepC2/density_surf.png){ .on-glb }
+![density_surf](../../../assets/images/Documents/GUIのチュートリアル/StepC2/density_surf.png){ .on-glb }
 
 
 isosurfのプロパティーは**パレットからは変更できません**．

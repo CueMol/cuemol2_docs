@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)|
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step6)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step8) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)|
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step6)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step8) ]
 
 ## 着色(Coloring)について
 
@@ -10,7 +10,7 @@ CueMol2では，レンダラーの設定（プロパティー）のうち，
 Coloringに対する操作は，基本的にColorパネルから行います．
 
 
-![coloring_panel1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/coloring_panel1.png){ style="zoom: 0.5" .on-glb }
+![coloring_panel1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/coloring_panel1.png){ style="zoom: 0.5" .on-glb }
 
 
 Colorパネルには，上方に操作対象のレンダラーを選択するドロップダウンリストボックスがあります．上図では，オブジェクトlysozymeの，レンダラーsimple1が操作対象になっています．
@@ -19,7 +19,7 @@ Colorパネルには，上方に操作対象のレンダラーを選択するド
 coloring変更メニューが表示されます．
 
 
-![coloring_panel_change1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/coloring_panel_change1.png)
+![coloring_panel_change1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/coloring_panel_change1.png)
 
 
 上図に示すように，現在のところcoloringには４種類ありますが，このページではうち３種類について説明しています．のこりのPaintについては，次のページで別に説明します．
@@ -38,7 +38,7 @@ simple, ballstick, cpk等のレンダラーは，このcoloringがデフォル�
 まず，Coloringパネル上方のドロップダウンリストボックスから，**lysozyme/ballstick1**を選択してください．
 #### 色の指定方法
 
-![gui_step7_coloredit1_1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit1_1.png){ .on-glb }
+![gui_step7_coloredit1_1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit1_1.png){ .on-glb }
 
 
 色とHTML色コードが表示されている右隣りの三角アイコンをクリックすると，
@@ -58,7 +58,7 @@ simple, ballstick, cpk等のレンダラーは，このcoloringがデフォル�
 #### RGB, HSB
 上図メニューからRGBあるいはHSBを選択すると，下図のようなスライダーが表示されますが，スライダーを動かすことで色を変更することができます．図では，HSBの場合を示しています．
 
-![gui_step7_coloredit2_1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit2_1.png){ .on-glb }
+![gui_step7_coloredit2_1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit2_1.png){ .on-glb }
 
 HSBの場合は，H (Hue)で色の種類を選んで，S (Saturation)で白っぽさ，B (Brightness)で黒っぽさを与える，という感じで色を指定します．
 
@@ -67,7 +67,7 @@ RGBの場合も同じ感じでred, green, blueの強度で色の指定を行え�
 
 #### Named color
 
-![gui_step7_coloredit3_1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit3_1.png){ style="zoom: 0.5" .on-glb }
+![gui_step7_coloredit3_1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit3_1.png){ style="zoom: 0.5" .on-glb }
 
 図のような，名前付き色のリストから選択して色を指定します．
 デフォルトでは，HTMLやSVGで定義されているのと同じ色名のリスト(http://www.w3.org/TR/SVG/types.html#ColorKeywords)が定義されています．
@@ -77,21 +77,21 @@ RGBの場合も同じ感じでred, green, blueの強度で色の指定を行え�
 
 #### Palette
 
-![gui_step7_coloredit4_1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit4_1.png){ style="zoom: 0.5" .on-glb }
+![gui_step7_coloredit4_1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit4_1.png){ style="zoom: 0.5" .on-glb }
 
 図のような，HSBモデルに基づいた色表から選んで指定します．
 
 ここでは，炭素ということで，Paletteの50% Grayから色を選んでください．
 simpleレンダラーの炭素部分が，灰色表示に変わったと思います．
 
-![gui_step7_coloredit5_1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit5_1.png)
+![gui_step7_coloredit5_1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_coloredit5_1.png)
 
 
 ### Bfac coloring
 原子のプロパティ（位置，温度因子，占有率）に応じて色を付けるcoloringです．
 名前はBfac(B-factor)ですが，実際はOccupancyなどに応じて着色することも可能です．
 
-![gui_step7_bfac1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_bfac1.png){ .on-glb }
+![gui_step7_bfac1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_bfac1.png){ .on-glb }
 
 
 -  Mode: 何に基づいて着色するかを選ぶ．B-factor, occupancy, center from atomがある．
@@ -114,13 +114,13 @@ simpleレンダラーの炭素部分が，灰色表示に変わったと思い�
 
 青っぽい色になるので，黒背景では見難いですが，simpleレンダラー表示の色が，温度因子に応じたグラデーション色で表示されます．
 
-![gui_step7_bfac_simple1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_bfac_simple1.png){ style="zoom: 0.5" .on-glb }
+![gui_step7_bfac_simple1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_bfac_simple1.png){ style="zoom: 0.5" .on-glb }
 
 
 ### Rainbow coloring
 残基番号に基づいて着色するcoloringです．
 
-![gui_step7_rainbow1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_rainbow1.png)
+![gui_step7_rainbow1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_rainbow1.png)
 
 
 -  Start H: 先頭の残基の色相を度で指定する
@@ -138,9 +138,9 @@ Chainにすると，chain毎に，先頭の残基から最後の残基まで，�
 まず，Coloringパネル上方のドロップダウンリストボックスから，
 **1G59/trace1**を選択してください．そして，その右横のColoringメニューからRainbowを選択します．次に，ModeをChainにしてください．
 
-![gui_step7_rainbow_mol1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_rainbow_mol1.png){ style="zoom: 0.5" .on-glb }
+![gui_step7_rainbow_mol1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_rainbow_mol1.png){ style="zoom: 0.5" .on-glb }
 
 tRNAとタンパクは別のchainになっていますが，Modeをchainにしたため，それぞれが別々に（タンパクの場合はN末端からC末端に，RNAの場合は5'末端から3'末端にかけて）虹色に表示されるようになりました．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step6)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step8)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step6)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step8)

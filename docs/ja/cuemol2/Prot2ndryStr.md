@@ -1,7 +1,7 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## タンパク質の二次構造の割り当て
-CueMolのribbon renderer, [cartoon renderer](../cuemol2/CartoonRenderer)では，
+CueMolのribbon renderer, [cartoon renderer](../../cuemol2/CartoonRenderer)では，
 タンパク質の二次構造に基づいて表示を行っていますが，
 このセクションではタンパク質の二次構造をどのようにして割り当てるかを説明しています．
 
@@ -17,7 +17,7 @@ PDB読み込み時のオプションを指定できますが，
 計算は，DSSPアルゴリズムで行われます．
 
 
-![pdb_option_dlg1](../assets/images/cuemol2/Prot2ndryStr/pdb_option_dlg1.png)
+![pdb_option_dlg1](../../assets/images/cuemol2/Prot2ndryStr/pdb_option_dlg1.png)
 
 
 #### PDBファイル中の記述を読み込む
@@ -32,14 +32,14 @@ PDBファイル読み込み後に，手動で二次構造を割り当てるこ�
 メニューの，「Tools」→「Reassign secondary str...」を実行すると，
 以下のようなProtein secondary str toolダイアログが表示されます．
 
-![prot2ndry-dlg1](../assets/images/cuemol2/Prot2ndryStr/prot2ndry-dlg1.png)
+![prot2ndry-dlg1](../../assets/images/cuemol2/Prot2ndryStr/prot2ndry-dlg1.png)
 
 
 ラジオボタンで**Assign by selection**を選ぶと，手動割り当てモードになります．
 その状態で
 
 -  Selectionに割り当てを変更する部分の選択を入力．
-（ダイアログを開く前に[他のGUIで選択](../Documents/GUIのチュートリアル(CueMol2)/Step3)しておけば，
+（ダイアログを開く前に[他のGUIで選択](../../Documents/GUIのチュートリアル(CueMol2)/Step3)しておけば，
 defaultでその値が入り便利でしょう）
 
 -  Typeに割り当てる二次構造のタイプを選択する．
@@ -79,7 +79,7 @@ Coil
 二次構造割り当てを変更する場合は，前もってqscファイルなどに状態を保存することをお勧めします．
 
 
-![prot2ndry-beta1](../assets/images/cuemol2/Prot2ndryStr/prot2ndry-beta1.png){ style="zoom: 0.5" .on-glb }
+![prot2ndry-beta1](../../assets/images/cuemol2/Prot2ndryStr/prot2ndry-beta1.png){ style="zoom: 0.5" .on-glb }
 
 
 > 上図：crambin(1CRN)をすべてβstrandにしてcartoon表示を行った例．元の分子とは似ても似つかぬ形状になるためこのような表示を行うこと自体無意味である．

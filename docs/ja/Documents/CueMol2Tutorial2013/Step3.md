@@ -1,4 +1,4 @@
-[一覧へ戻る](../../Documents/CueMol2Tutorial2013)
+[一覧へ戻る](../../../Documents/CueMol2Tutorial2013)
 
 ## Step3: リガンドの表示と全体構造図の完成
 ChRには，リガンドとしてAll-trans retinalが結合していますが，本節ではこれを表示させ，図の完成とします．
@@ -21,7 +21,7 @@ ChRには，リガンドとしてAll-trans retinalが結合していますが，
 まず，Sceneパネルで3UG9_AB.pdbをクリックして選択し，パネル下方の＋ボタンを押すと，3UG9_AB.pdbへのrendererを追加するdialogが表示されます．
 
 
-> ![step3-1createrend1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png){ style="zoom: 0.75" .on-glb } → ![step3-1createrend2](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend2.png){ style="zoom: 0.5" .on-glb }
+> ![step3-1createrend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png){ style="zoom: 0.75" .on-glb } → ![step3-1createrend2](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend2.png){ style="zoom: 0.5" .on-glb }
 
 そして，Rendererからsimpleを選び，Selectionはチェックを外しておき，OKを押します．
 すると，分子全体に対してsimple rendererの表示が追加されます．
@@ -30,12 +30,12 @@ ChRには，リガンドとしてAll-trans retinalが結合していますが，
 このままではsimple1 rendererの炭素原子の色が白っぽいため，背景の白色に溶け込んで非常に見づらくなってしまいます．
 そこで，Coloring panelでsimple1の炭素原子の色を黒っぽい灰色（#404040）に変更します（見易ければ何でもよいのでblackとかでもOK）．
 
-![step3-2simplerend1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-2simplerend1.png){ style="zoom: 0.75" .on-glb }
+![step3-2simplerend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-2simplerend1.png){ style="zoom: 0.75" .on-glb }
 
 
 色の変更後は以下のような表示になります．
 
-![step3-3createrend3](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-3createrend3.png){ style="zoom: 0.25" .on-glb }
+![step3-3createrend3](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-3createrend3.png){ style="zoom: 0.25" .on-glb }
 
 
 **補足**
@@ -51,7 +51,7 @@ ChRには，リガンドとしてAll-trans retinalが結合していますが，
 A分子のretinalの原子のいずれかをdouble clickすると，retinal残基が選択されます．
 
 
-![step3-4retinal1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-4retinal1.png){ style="zoom: 0.5" .on-glb }
+![step3-4retinal1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-4retinal1.png){ style="zoom: 0.5" .on-glb }
 
 
 **補足**
@@ -72,11 +72,11 @@ MolStructパネルを使用した選択は，
 残基番号はタンパク質残基より後になっています．
 
 MolStructパネル
-（詳しい使用方法等は [GUI tutorial](../../Documents/GUIのチュートリアル(CueMol2)/Step3)を参照）
+（詳しい使用方法等は [GUI tutorial](../../../Documents/GUIのチュートリアル(CueMol2)/Step3)を参照）
 には，以下のようにchain A, Bがあります．
 
 
-![step3-5molstrpanel1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-5molstrpanel1.png){ .on-glb }
+![step3-5molstrpanel1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-5molstrpanel1.png){ .on-glb }
 
 
 ここでは，chain Aのretinal分子を選択したいので，
@@ -84,13 +84,13 @@ Aを開いて，スクロールしてその中からRETという残基名の項�
 はじめの方はタンパク質残基なので，下の方までスクロールして探すとすぐに見つかります．
 
 
-![step3-6molstrpanel2](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-6molstrpanel2.png){ .on-glb }
+![step3-6molstrpanel2](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-6molstrpanel2.png){ .on-glb }
 
 
 見つかったら，「401 RET」という項目をクリックして，
-パネル下方の矢印ボタン![step3-25arrowbtn1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-25arrowbtn1.png)を押すと，retinalが選択されます．
-さらに，![step3-7centerat1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-7centerat1.png){ .on-glb }ボタンを押すと，retinalが分子view中心に移動します．
-また，![step3-8zoomat1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-8zoomat1.png){ .on-glb }ボタンを押すと中心が移動するだけでなく，zoom(拡大率)やslabも選択対象にフィットするように自動調節されます．
+パネル下方の矢印ボタン![step3-25arrowbtn1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-25arrowbtn1.png)を押すと，retinalが選択されます．
+さらに，![step3-7centerat1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-7centerat1.png){ .on-glb }ボタンを押すと，retinalが分子view中心に移動します．
+また，![step3-8zoomat1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-8zoomat1.png){ .on-glb }ボタンを押すと中心が移動するだけでなく，zoom(拡大率)やslabも選択対象にフィットするように自動調節されます．
 
 また，MolStructパネルでは，単一残基だけでなく，複数残基を選択することも可能です．
 
@@ -100,11 +100,11 @@ Aを開いて，スクロールしてその中からRETという残基名の項�
 Selectionパネルから選択文を入力して選択するのが便利です．
 （選択文自体は既にSTEP1,2で着色の指定などに使用しました）
 
-Selectionパネルを開き，タブ「![step3-10selpanelicon1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-10selpanelicon1.png){ .on-glb }」が選択されていると，
+Selectionパネルを開き，タブ「![step3-10selpanelicon1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-10selpanelicon1.png){ .on-glb }」が選択されていると，
 下図のような状態になっているはずです．
 
 
-![step3-9selpanel1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-9selpanel1.png){ .on-glb }
+![step3-9selpanel1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-9selpanel1.png){ .on-glb }
 
 
 この状態で，"Input selection command"の部分に選択文を入力し，
@@ -118,7 +118,7 @@ A.401.*
 と入力し，矢印ボタンを押すとA鎖のretinalが選択されます．
 
 選択文を使用すると，様々に複雑な方法で選択することが可能です．
-選択文の詳細は[cuemol2/SelSyntax](../../cuemol2/SelSyntax)を参照してください．
+選択文の詳細は[cuemol2/SelSyntax](../../../cuemol2/SelSyntax)を参照してください．
 
 ### Styleへの登録
 Retinalに関する操作は今後よく行う可能性があるので，retinalの色と選択をstyleへ登録しておきます．
@@ -129,21 +129,21 @@ Retinalに関する操作は今後よく行う可能性があるので，retinal
 
 
 #### Retinalの色を定義
-[Step2](../../Documents/CueMol2Tutorial2013/Step2)の操作と同様にして，上記の表の色(ARetinal, BRetinal)を定義します．
-操作方法の詳細は[Step2](../../Documents/CueMol2Tutorial2013/Step2)を参照してください．
+[Step2](../../../Documents/CueMol2Tutorial2013/Step2)の操作と同様にして，上記の表の色(ARetinal, BRetinal)を定義します．
+操作方法の詳細は[Step2](../../../Documents/CueMol2Tutorial2013/Step2)を参照してください．
 
 定義後は，dialogは以下のようになります．
 
-![step3-11colstyle1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-11colstyle1.png){ style="zoom: 0.75" .on-glb }
+![step3-11colstyle1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-11colstyle1.png){ style="zoom: 0.75" .on-glb }
 
 
 #### Retinalの選択を定義
-[Step2](../../Documents/CueMol2Tutorial2013/Step2)の操作と同様にして，上記の表の選択(ARetinal, BRetinal)を定義します．
-操作方法の詳細は[Step2](../../Documents/CueMol2Tutorial2013/Step2)を参照してください．
+[Step2](../../../Documents/CueMol2Tutorial2013/Step2)の操作と同様にして，上記の表の選択(ARetinal, BRetinal)を定義します．
+操作方法の詳細は[Step2](../../../Documents/CueMol2Tutorial2013/Step2)を参照してください．
 
 定義後は，dialogは以下のようになります．
 
-![step3-12selstyle1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-12selstyle1.png){ style="zoom: 0.75" .on-glb }
+![step3-12selstyle1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-12selstyle1.png){ style="zoom: 0.75" .on-glb }
 
 
 （本来なら，B分子のretinalの選択もクリックしたりして調べておいてから定義するものだが詳細は省略）
@@ -156,7 +156,7 @@ Retinalに関する操作は今後よく行う可能性があるので，retinal
 Sceneパネルで3UG9_ABをクリックして選択し，パネル下方の＋ボタンを押すと，3UG9_ABへのrendererを追加するdialogが表示されます．
 
 
->![step3-1createrend1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png){ style="zoom: 0.75" .on-glb } → ![step3-14createretinalrend1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-14createretinalrend1.png){ style="zoom: 0.5" .on-glb }
+>![step3-1createrend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png){ style="zoom: 0.75" .on-glb } → ![step3-14createretinalrend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-14createretinalrend1.png){ style="zoom: 0.5" .on-glb }
 
 そして，
 
@@ -172,7 +172,7 @@ styleで定義したARetinalがDropdown listbox中にあるので，それを指
 すると，下図のように，retinalがCPK modelで表示されます．
 
 
-![step3-15createretinalrend2](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-15createretinalrend2.png){ style="zoom: 0.25" .on-glb }
+![step3-15createretinalrend2](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-15createretinalrend2.png){ style="zoom: 0.25" .on-glb }
 
 
 
@@ -200,11 +200,11 @@ A401番残基（retinalに相当）の色がまだ指定されていないため
 Coloring panelで「3UG9-AB」を選択し，「＋」ボタンを押して塗りを追加します．
 するとDialogが出てきますので，色をARetinalに，選択もARetinalにし，OKを押します．
 
-> ![step3-16retinalpaint1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-16retinalpaint1.png){ style="zoom: 0.5" .on-glb } → ![step3-17retinalpaint2](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-17retinalpaint2.png){ style="zoom: 0.75" .on-glb }
+> ![step3-16retinalpaint1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-16retinalpaint1.png){ style="zoom: 0.5" .on-glb } → ![step3-17retinalpaint2](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-17retinalpaint2.png){ style="zoom: 0.75" .on-glb }
 
 以上の設定変更を行うと，下図のような表示になります．
 
-![step3-18retinalpaint_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-18retinalpaint_fin1.png){ style="zoom: 0.25" .on-glb }
+![step3-18retinalpaint_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-18retinalpaint_fin1.png){ style="zoom: 0.25" .on-glb }
 
 
 ### B鎖のretinalのCPKモデルを表示する
@@ -226,7 +226,7 @@ Renderer option dialogでは，
 
 以上の操作を行うと，B鎖のretinalが下図のような表示にまります．
 
-![step3-19retinalpaint_fin2](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-19retinalpaint_fin2.png){ style="zoom: 0.5" .on-glb }
+![step3-19retinalpaint_fin2](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-19retinalpaint_fin2.png){ style="zoom: 0.5" .on-glb }
 
 
 ### リガンドが見やすいように，helixを細くする
@@ -234,14 +234,14 @@ Renderer option dialogでは，
 まず，Sceneパネルのribbon1 (ribbon)という項目（蛋白質主鎖全体のリボン表示renderer）をダブルクリックします．
 すると設定ダイアログが表示されます．
 
-![step3-20ribbonprop1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-20ribbonprop1.png){ style="zoom: 0.25" .on-glb }
+![step3-20ribbonprop1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-20ribbonprop1.png){ style="zoom: 0.25" .on-glb }
 
 
 次に，ダイアログ中にあるHelixタブをクリックし，Helixに関する設定を表示させます（上図は既にhelixタブが選択された状態）．
 
 そして，Tuberの値を6→4に減少させます．
 
-![step3-21ribbonprop2](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-21ribbonprop2.png)
+![step3-21ribbonprop2](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-21ribbonprop2.png)
 
 
 OKボタンを押してdialogを閉じると，ヘリックスの表示が細くなります．
@@ -249,7 +249,7 @@ OKボタンを押してdialogを閉じると，ヘリックスの表示が細く
 さらにViewをタンパクの正面から見るように調整すると，
 以下のような表示になります．
 
-![step3-22ribbonprop_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-22ribbonprop_fin1.png){ style="zoom: 0.4" .on-glb }
+![step3-22ribbonprop_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-22ribbonprop_fin1.png){ style="zoom: 0.4" .on-glb }
 
 
 **※Tuber値の意味**
@@ -286,7 +286,7 @@ POV-Ray Renderingダイアログが表示されます．
 （現在のシーンでは半透明の部分がないので）
 
 
-![step3-23renderdlg1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-23renderdlg1.png){ style="zoom: 0.5" .on-glb }
+![step3-23renderdlg1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-23renderdlg1.png){ style="zoom: 0.5" .on-glb }
 
 
 Renderボタンを押すとrenderingが始まります．
@@ -295,9 +295,9 @@ Renderボタンを押すとrenderingが始まります．
 押して完成した画像を保存します．
 
 
-![step3-24render_fin1](../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-24render_fin1.png){ style="zoom: 0.5" .on-glb }
+![step3-24render_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-24render_fin1.png){ style="zoom: 0.5" .on-glb }
 
 
 ※完成した画像は，ほかのソフトウェア（イラレやパワポなど）に取り込んで使用する．
 
-[Documents/CueMol2Tutorial2013](../../Documents/CueMol2Tutorial2013)
+[Documents/CueMol2Tutorial2013](../../../Documents/CueMol2Tutorial2013)

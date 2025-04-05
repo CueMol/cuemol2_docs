@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step4) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step6) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step4) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step6) ]
 
 ## レンダラーのプロパティーを変更する
 
@@ -9,11 +9,11 @@
 
 ### Ballstickレンダラーのプロパティー
 Sceneパレットで，レンダラー名（今回の場合は先ほど作成した"ballstick1"）をダブルクリック，
-あるいは選択して，下方の![gui_step5_propchgbtn2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_propchgbtn2.png)**プロパティー変更ボタン**を押してください．
+あるいは選択して，下方の![gui_step5_propchgbtn2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_propchgbtn2.png)**プロパティー変更ボタン**を押してください．
 以下のようなダイアログが出てきます．
 
 
-![gui_step5_bschgprop](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_bschgprop.png){ style="zoom: 0.5" .on-glb }
+![gui_step5_bschgprop](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_bschgprop.png){ style="zoom: 0.5" .on-glb }
 
 
 上図のように，
@@ -31,7 +31,7 @@ Sceneパレットで，レンダラー名（今回の場合は先ほど作成し
 に変更してみてください．
 
 
-![gui_step5_bs2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_bs2.png){ style="zoom: 0.5" .on-glb }
+![gui_step5_bs2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_bs2.png){ style="zoom: 0.5" .on-glb }
 
 
 なんかずんぐりしたスティックモデルになってしまいましたが，
@@ -45,7 +45,7 @@ Ballstickの場合と同様に，
 Sceneパネルでribbon1という項目をダブルクリック，あるいは選択してからプロパティー変更ボタンを押すと，ballstickの場合とは異なる以下のようなダイアログが現れます．
 
 
-![gui_step5_ribbon_chgprop](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_ribbon_chgprop.png){ style="zoom: 0.5" .on-glb }
+![gui_step5_ribbon_chgprop](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_ribbon_chgprop.png){ style="zoom: 0.5" .on-glb }
 
 
 Ballstickの例のところでは触れませんでしたが，ダイアログ上方にタブがあり，
@@ -64,7 +64,7 @@ Ribbonレンダラーは設定が多いため，図のようにCommon, Helix, Sh
 に変更してみてください．
 
 
-![gui_step5_ribbon2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_ribbon2.png){ style="zoom: 0.5" .on-glb }
+![gui_step5_ribbon2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_ribbon2.png){ style="zoom: 0.5" .on-glb }
 
 
 ヘリックスが，矢印状の表示に変わったと思います．
@@ -78,7 +78,7 @@ Ribbonレンダラーは設定が多いため，図のようにCommon, Helix, Sh
 まだ開発途上のものなどは，
 Genericタブでしか変更できないものがあります．((逆に，Genericタブからは，一応すべてのプロパティーが変更可能です．))
 
-![gui_step5_generic2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_generic2.png){ style="zoom: 0.5" .on-glb }
+![gui_step5_generic2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_generic2.png){ style="zoom: 0.5" .on-glb }
 
 上図は，ribbonレンダラーのGenericタブを表示したものです．
 各項目は，以下のようになっています．
@@ -100,11 +100,11 @@ Genericタブでしか変更できないものがあります．((逆に，Gener
 逆に，デフォルトに戻したい場合は，defaultチェックをONに戻せばOKです．
 
 
-![gui_step5_ribbon_alpha1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_ribbon_alpha1.png){ style="zoom: 0.5" .on-glb }
+![gui_step5_ribbon_alpha1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step5/gui_step5_ribbon_alpha1.png){ style="zoom: 0.5" .on-glb }
 
 上図は，Ribbonレンダラーのalphaプロパティーをデフォルトから0.5に変更した後の状態を表しています．
 
 他のレンダラーにも各々のプロパティーがあります．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step4)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step6)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step4)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step6)

@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -64,7 +64,7 @@ catch {
 8以上などにすると，途方も無い時間がかかったりします．
 
 
-![imgoption](../../assets/images/Documents/QScriptのチュートリアル/Step5/imgoption.png){ .on-glb }
+![imgoption](../../../assets/images/Documents/QScriptのチュートリアル/Step5/imgoption.png){ .on-glb }
 
 
 同じことをQScriptからやるには，以下のようにします．
@@ -93,10 +93,10 @@ Que> gfx.updateView();
 これで，下のような平行視の図ができました． 
 
 
-![blm_intr_stereo](../../assets/images/Documents/QScriptのチュートリアル/Step5/blm_intr_stereo.png){ .on-glb }
+![blm_intr_stereo](../../../assets/images/Documents/QScriptのチュートリアル/Step5/blm_intr_stereo.png){ .on-glb }
 
 
 Windows版であれば,GUIのView palette(メニュー"Window"→"ViewRot Palette"で表示)の "RotY"のところのテキストボックスに回転したい角度を入力しEnterを押すことで，指定量だけビューを回転させることができます．この機能を利用して立体視の図を作成することもできます． 
 
-![viewrotwnd](../../assets/images/Documents/QScriptのチュートリアル/Step5/viewrotwnd.png){ .on-glb }
+![viewrotwnd](../../../assets/images/Documents/QScriptのチュートリアル/Step5/viewrotwnd.png){ .on-glb }
 

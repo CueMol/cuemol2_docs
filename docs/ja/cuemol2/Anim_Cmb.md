@@ -1,7 +1,7 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## 複数アニメーションの組み合わせ
 
-前セクション[cuemol2/Anim_Basic](../cuemol2/Anim_Basic)では１つのSimple spinアニメーションを作成する例を紹介しましたが，
+前セクション[cuemol2/Anim_Basic](../../cuemol2/Anim_Basic)では１つのSimple spinアニメーションを作成する例を紹介しましたが，
 複数の設定が異なるSimple spinを組み合わせる例を説明します．
 （もちろん以降のセクションで説明する他のタイプのアニメーションもSimple spin同様に組み合わせ可能です）
 
@@ -11,7 +11,7 @@ Sample scene fileが以下からダウンロードできます．
 
 ## ２つ目のSimple spinアニメーションの追加
 
-前セクション[cuemol2/Anim_Basic](../cuemol2/Anim_Basic)と同様にして，アニメーションパネルからSimple spinを追加します．
+前セクション[cuemol2/Anim_Basic](../../cuemol2/Anim_Basic)と同様にして，アニメーションパネルからSimple spinを追加します．
 
 ここでは，１つ目のスピン(SimpleSpin1)が終わった直後から次のスピン(SimpleSpin2)が始まるようにします．
 
@@ -36,7 +36,7 @@ Spin axis
 以上のように設定してOKを押すと，アニメーションパネルには
 以下のように２つのアニメーション項目が現れます．
 
-![anim-panel-cmb1](../assets/images/cuemol2/Anim_Cmb/anim-panel-cmb1.png){ .on-glb }
+![anim-panel-cmb1](../../assets/images/cuemol2/Anim_Cmb/anim-panel-cmb1.png){ .on-glb }
 
 
 上図の２項目の意味するところは，
@@ -64,7 +64,7 @@ SimpleSpin1をdouble clickし，編集dialogを表示させ，Durationを「0:0:
 SimpleSpin2の開始時間と終了時間も１秒分繰り下がっていることが分かります．
 
 
-![relanim1](../assets/images/cuemol2/Anim_Cmb/relanim1.png){ .on-glb }
+![relanim1](../../assets/images/cuemol2/Anim_Cmb/relanim1.png){ .on-glb }
 
 
 アニメーションを実行すると，確かにSimpleSpin1が終わってからSimpleSpin2が実行されていることが分かります．
@@ -84,17 +84,17 @@ SimpleSpin2の開始時間と終了時間も１秒分繰り下がっているこ
 Quadric値は，アニメーションの滑らかさを制御する値です．
 アニメーションの時間経過（時間の長さにかかわらず開始0, 終了1とする）と，アニメーション量（この例では0〜360度の回転）の間は，Quadric=0なら１対１対応です．(下図)
 
-![quad_graph_0](../assets/images/cuemol2/Anim_Cmb/quad_graph_0.png)
+![quad_graph_0](../../assets/images/cuemol2/Anim_Cmb/quad_graph_0.png)
 
 
 一方で，Quadric値を0.25にすると，以下の図のようになります．横軸が時間経過，縦軸がアニメーション量です．すなわち0.25が意味するところは，0〜0.25と，0.75〜1.0の間で二次関数的なふるまいを示すようになる，ということです．
 
-![quad_graph_025](../assets/images/cuemol2/Anim_Cmb/quad_graph_025.png)
+![quad_graph_025](../../assets/images/cuemol2/Anim_Cmb/quad_graph_025.png)
 
 
 さらにQuadric値を0.5にすると，0〜1に渡ってすべて二次関数的なふるまいを示すようになります．
 
-![quad_graph_05](../assets/images/cuemol2/Anim_Cmb/quad_graph_05.png)
+![quad_graph_05](../../assets/images/cuemol2/Anim_Cmb/quad_graph_05.png)
 
 
 以上のように，Quadric値を0以上に指定すると，その分だけ，アニメーションの開始・終了時に
@@ -104,7 +104,7 @@ Quadric値は，アニメーションの滑らかさを制御する値です．
 
 次に，上記２つのアニメーション項目のQuadric値を0から25% (0.25)に変更します．
 
-![anim-simplespin-2](../assets/images/cuemol2/Anim_Cmb/anim-simplespin-2.png){ .on-glb }
+![anim-simplespin-2](../../assets/images/cuemol2/Anim_Cmb/anim-simplespin-2.png){ .on-glb }
 
 (以上で作成したシーンは，
 [lyso_simplespin2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin2.qsc)からダウンロードできます)

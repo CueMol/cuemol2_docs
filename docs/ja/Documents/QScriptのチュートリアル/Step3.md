@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -11,7 +11,7 @@
 ブレオマイシン結合蛋白質をリボンモデルで表示します．(blm-ribbon1.qs) 
 
 
-![blm_ribbon1](../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon1.png){ .on-glb }
+![blm_ribbon1](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon1.png){ .on-glb }
 
 <pre>
 qsys.cleanUpAll();
@@ -144,14 +144,14 @@ $mol.setProp("secondary", "sheet");
 
 この例のように，2次構造の選択オブジェクトを格納するスクリプトを別ファイルにしておくと，他の作図スクリプトからも参照できて便利です． 
 
-選択文法と選択オブジェクトに関する詳細は， 選択文については[分子選択文法のリファレンス](../../Documents/MolSelSyntax)を参照してください．
+選択文法と選択オブジェクトに関する詳細は， 選択文については[分子選択文法のリファレンス](../../../Documents/MolSelSyntax)を参照してください．
 
 ## リボンのスタイルを変える
 
 デフォルトの設定では，ヘリックスの先端にまで矢印がついて格好が悪いので，普通のスタイルに変更します．(blm-ribbon3.qs) 
 
 
-![blm_ribbon3](../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon3.png){ .on-glb }
+![blm_ribbon3](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon3.png){ .on-glb }
 
 
 <pre>
@@ -227,7 +227,7 @@ $r_p.setProp("helix.width", 0.3);
 $r_p.setProp("helix.tuber", 5.0);
 $r_p.setProp("sheet.type", 1);
 </pre>
-↑ribbonレンダラーでは， "helix."，"sheet."，"coil." というプレフィクスを付けることで，それぞれの部分の断面形状 (section) に関するプロパティーを変更できる．プロパティーの種類はtubeレンダラーと同じ．[step2](../../Documents/QScriptのチュートリアル/Step2)参照．<br />
+↑ribbonレンダラーでは， "helix."，"sheet."，"coil." というプレフィクスを付けることで，それぞれの部分の断面形状 (section) に関するプロパティーを変更できる．プロパティーの種類はtubeレンダラーと同じ．[step2](../../../Documents/QScriptのチュートリアル/Step2)参照．<br />
 この例では，ヘリックスとシート部分のチューブ形状プロパティーを変更している． blm-ribbon1.qsよりヘリックスの幅が太めになり，シートの形状が角の取れた板状になっているが，拡大しないと分からないだろう．
 
 <pre>
@@ -240,7 +240,7 @@ $r_p.setProp("sheet_head.type", 1);
 $r_p.setProp("sheet_head.gamma", 1.5);
 </pre>
 2次構造の境目(junction)の形状プロパティーを設定している．プレフィクス"helix_head."はヘリックス→(ランダム)コイル(即ちへリックスの先頭)，"sheet_tail."は(ランダム)コイル→シート(即ちシートの末尾)の境界等々．さらに，"type"は境界の形状タイプ(0:滑らかな接続，1:矢印で接続)， "gamma"は滑らかさのパラメーターである．<br />
-この例では，ヘリックスの前後の形状を矢印ではなく，滑らか接続にしている．一方，シートの終わりの部分だけ形状を矢印型にしている．詳しくは[ribbonレンダラー](../../Ref/molvis/RibbonRenderer)を参照．
+この例では，ヘリックスの前後の形状を矢印ではなく，滑らか接続にしている．一方，シートの終わりの部分だけ形状を矢印型にしている．詳しくは[ribbonレンダラー](../../../Ref/molvis/RibbonRenderer)を参照．
 
 ↓以下同様．
 <pre>
@@ -266,7 +266,7 @@ gfx.updateView();
 次の例では，ブレオマイシンと相互作用してそうな蛋白側の側鎖を表示します．(blm-ribbon4.qs) 
 
 
-![blm_ribbon4](../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon4.png){ .on-glb }
+![blm_ribbon4](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon4.png){ .on-glb }
 
 
 <pre>
@@ -395,9 +395,9 @@ byres (...)
 :   上記で選択された残基のうち，ペプチド結合のC,N,O原子を除くように制限している．
 
 
-詳細は[こちら](../../Documents/MolSelSyntax)を参照．
+詳細は[こちら](../../../Documents/MolSelSyntax)を参照．
 
-↓上述で選択した部分に対してスティックモデルを作成している．プロパティーの意味は[step1](../../Documents/QScriptのチュートリアル/Step1)参照．
+↓上述で選択した部分に対してスティックモデルを作成している．プロパティーの意味は[step1](../../../Documents/QScriptのチュートリアル/Step1)参照．
 <pre>
 $r_inta = $mol.createRend("inta", "ballstick");
 $r_inta.setProp("sphr", 0.2);
@@ -429,7 +429,7 @@ gfx.updateView();
 ## 2次構造ごとに色を設定
 最後に，2次構造ごとに色を設定してみましょう．(blm-ribbon5.qs)
 
-![blm_ribbon5](../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon5.png){ .on-glb }
+![blm_ribbon5](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon5.png){ .on-glb }
 
 
 <pre>
@@ -495,9 +495,9 @@ molvis.paint()メソッドによる色の設定は，順々に上塗りしてい
 他のレンダラーのプロパティについては，
 
 
->[Ribbonレンダラーのプロパティ](../../Ref/molvis/RibbonRenderer)
+>[Ribbonレンダラーのプロパティ](../../../Ref/molvis/RibbonRenderer)
 
 を参照してください．
 
 Ribbonレンダラーの主鎖の連続・不連続は，Tubeレンダラーと同様の方法で
-決められています．[Tubeレンダラーのチュートリアル](../../Documents/QScriptのチュートリアル/Step2)（最後の補足）の項を参照してください．
+決められています．[Tubeレンダラーのチュートリアル](../../../Documents/QScriptのチュートリアル/Step2)（最後の補足）の項を参照してください．

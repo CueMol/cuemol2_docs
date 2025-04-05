@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)|
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step5)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step7) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)|
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step5)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step7) ]
 
 ## シーンの保存と読み込み
 
@@ -29,7 +29,7 @@ Untitled 1というデフォルトの名前がついた，シーンに含まれ�
 ファイルを開くダイアログが表示されるので，先ほど保存したtutorial1.qscを読み込んでください．図のように，保存時のシーンが再び読み込まれていると思います．
 
 
-![gui_step6_scene_saved1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_scene_saved1.png){ style="zoom: 0.5" .on-glb }
+![gui_step6_scene_saved1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_scene_saved1.png){ style="zoom: 0.5" .on-glb }
 
 
 このように，セッションをファイルに書出しておけば，
@@ -37,11 +37,11 @@ CueMolを次回起動した場合などに，
 書き出した時点の状態を再現することができます．
 
 ### 複数シーンを扱う
-次に，メニュー「File」→「New tab」を実行してください（あるいはツールバーの![toolbar_newtab1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/toolbar_newtab1.png)ボタンを押す)．
+次に，メニュー「File」→「New tab」を実行してください（あるいはツールバーの![toolbar_newtab1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/toolbar_newtab1.png)ボタンを押す)．
 
 以下のように，新規タブ作成ダイアログが表示されます．
 
-![gui_step6_newtab1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_newtab1.png)
+![gui_step6_newtab1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_newtab1.png)
 
 
 Name:のところを変更すると作成するシーン名を変更できますが，ここではデフォルトのままにしておきます．
@@ -49,7 +49,7 @@ Name:のところを変更すると作成するシーン名を変更できます
 OKボタンを押すと，新規シーンが作成され，そのシーンを表示する新たなタブが作成されます．
 
 
-![gui_step6_new_scene1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_new_scene1.png)
+![gui_step6_new_scene1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_new_scene1.png)
 
 
 当たり前ですが，新規作成されたシーンは空っぽで何もないため，
@@ -63,10 +63,10 @@ OKボタンを押すと，新規シーンが作成され，そのシーンを表
 -  さらに次に出てくるダイアログでは，Renderer type:の所を**nucl**に変更してOKを押す
 
 を実行すると，1EHZ（tRNA(Phe)の構造）が新たに作られたシーンに読み込まれ，
-その全体がnuclレンダラーで表示されます．（詳しくは[分子構造の読み込み](../../Documents/GUIのチュートリアル(CueMol2)/Step1)参照）
+その全体がnuclレンダラーで表示されます．（詳しくは[分子構造の読み込み](../../../Documents/GUIのチュートリアル(CueMol2)/Step1)参照）
 
 
-![gui_step6_1ehz](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_1ehz.png){ style="zoom: 0.5" .on-glb }
+![gui_step6_1ehz](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui_step6_1ehz.png){ style="zoom: 0.5" .on-glb }
 
 
 一方，tutorial1.qscシーンのタブをクリックすると，そちらのシーンが再度表示され，シーンパネルの内容も，tutorial1.qscの内容に変わっていると思います．
@@ -77,7 +77,7 @@ OKボタンを押すと，新規シーンが作成され，そのシーンを表
 ここで，Untitled 1には今1EHZ.pdbという分子を読み込んで変更してしまっている状態なので，保存するかどうか聞いてきます．
 
 
-![gui-step6-closetab1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui-step6-closetab1.png)
+![gui-step6-closetab1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step6/gui-step6-closetab1.png)
 
 
 Yesを押すと，シーンを名前を付けて保存するダイアログが表示され，保存後タブが閉じられます．
@@ -102,5 +102,5 @@ Cancelを押すと，タブのクローズ自体がキャンセルされます�
 書出し・読込みで維持されるように確認していますが，
 不具合などがありましたら，ご一報いただけるとありがたいです．
 
-[ [&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step5)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step7) ]
+[ [&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step5)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step7) ]

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 新たな共有結合の作成方法
 
@@ -27,13 +27,13 @@ Sample scene fileが以下からダウンロードできます．
 ### Mol bond editor
 対象とするPDBファイルを読み込み，メニュー「Tools」→「Mol bond editor」を選ぶと，図のようなダイアログが表示されます．
 
-![mol_bond_editor1](../assets/images/cuemol2/NonStdBond/mol_bond_editor1.png){ .on-glb }
+![mol_bond_editor1](../../assets/images/cuemol2/NonStdBond/mol_bond_editor1.png){ .on-glb }
 
 
 このダイアログは（他のと異なり）開いていてもメインウィンドウを操作できます．
 ダイアログを出した状態で，分子ビューで残基A1025 NAGのあたりに移動します（MolStructパネルで）
 
->![mol_bond_editor2](../assets/images/cuemol2/NonStdBond/mol_bond_editor2.png){ .on-glb } ⇒![mol_bond_editor3](../assets/images/cuemol2/NonStdBond/mol_bond_editor3.png){ .on-glb }
+>![mol_bond_editor2](../../assets/images/cuemol2/NonStdBond/mol_bond_editor2.png){ .on-glb } ⇒![mol_bond_editor3](../../assets/images/cuemol2/NonStdBond/mol_bond_editor3.png){ .on-glb }
 上図のように，Asn627のND2原子と，NAG1025のC1原子はNグリコシド結合を形成しているはずですが，
 ボンドが表示されていません．
 
@@ -44,7 +44,7 @@ Sample scene fileが以下からダウンロードできます．
 1.  するとテキストボックスにAsn627のND2原子のIDが入力される
 
 
->![mol_bond_input1](../assets/images/cuemol2/NonStdBond/mol_bond_input1.png){ .on-glb }　⇒　![mol_bond_input2](../assets/images/cuemol2/NonStdBond/mol_bond_input2.png){ .on-glb }　⇒　![mol_bond_input3](../assets/images/cuemol2/NonStdBond/mol_bond_input3.png){ .on-glb }
+>![mol_bond_input1](../../assets/images/cuemol2/NonStdBond/mol_bond_input1.png){ .on-glb }　⇒　![mol_bond_input2](../../assets/images/cuemol2/NonStdBond/mol_bond_input2.png){ .on-glb }　⇒　![mol_bond_input3](../../assets/images/cuemol2/NonStdBond/mol_bond_input3.png){ .on-glb }
 
 同様にして，Atom2の横のtext box内に相手側のNAGのC1原子を指定します．
 
@@ -53,7 +53,7 @@ Sample scene fileが以下からダウンロードできます．
 1.  するとテキストボックスにNAG1025のC1原子のIDが入力される
 
 
->![mol_bond_input4](../assets/images/cuemol2/NonStdBond/mol_bond_input4.png){ .on-glb }　⇒　![mol_bond_input5](../assets/images/cuemol2/NonStdBond/mol_bond_input5.png){ .on-glb }　⇒　![mol_bond_input6](../assets/images/cuemol2/NonStdBond/mol_bond_input6.png){ .on-glb }
+>![mol_bond_input4](../../assets/images/cuemol2/NonStdBond/mol_bond_input4.png){ .on-glb }　⇒　![mol_bond_input5](../../assets/images/cuemol2/NonStdBond/mol_bond_input5.png){ .on-glb }　⇒　![mol_bond_input6](../../assets/images/cuemol2/NonStdBond/mol_bond_input6.png){ .on-glb }
 
 #### 指定原子間にボンドを追加
 各原子IDが入力された後に右横の「＋」Addボタンをクリックすると，
@@ -61,7 +61,7 @@ Sample scene fileが以下からダウンロードできます．
 分子ビューのsimpleレンダラーの表示も更新されます．
 
 
->![mol_bond_add1](../assets/images/cuemol2/NonStdBond/mol_bond_add1.png){ .on-glb }　⇒　![mol_bond_add2](../assets/images/cuemol2/NonStdBond/mol_bond_add2.png){ .on-glb }
+>![mol_bond_add1](../../assets/images/cuemol2/NonStdBond/mol_bond_add1.png){ .on-glb }　⇒　![mol_bond_add2](../../assets/images/cuemol2/NonStdBond/mol_bond_add2.png){ .on-glb }
 
 #### 原子間ボンドの削除
 さらに，リスト中から追加されたボンドを選択し，下の「−」Deleteボタンをクリックすると，

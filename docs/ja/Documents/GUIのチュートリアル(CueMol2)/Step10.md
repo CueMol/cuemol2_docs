@@ -1,13 +1,13 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step9) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step12) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step9) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step12) ]
 
 ## POV-Rayによるシーンのレンダリング
 CueMol2からは，CueMol2から直接POV-Rayを呼び出してレイトレーシングによる画像を作成できるようになりました．
 
 最新版ではGUIが微妙に変更されているのと，
 機能が追加されているため，
-詳しくは[cuemol2/POVRayRenderDialog](../../cuemol2/POVRayRenderDialog)を参照してください．
+詳しくは[cuemol2/POVRayRenderDialog](../../../cuemol2/POVRayRenderDialog)を参照してください．
 
 
 ### 準備
@@ -48,20 +48,20 @@ CueMol2の方で，適当なレンダリングしたい画面にビューを調�
 そして，メニューの「Render」→「POV-Ray rendering」を実行すると，
 以下のようなウィンドウが表示されます．
 
-![gui-step10-povrender1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step10/gui-step10-povrender1.png){ style="zoom: 0.5" .on-glb }
+![gui-step10-povrender1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step10/gui-step10-povrender1.png){ style="zoom: 0.5" .on-glb }
 
 いろいろ設定項目がありますが，普通に変える必要があるのはHeightのみだと思います．デフォルトだと高さ1000pixelの画像がレンダリングされます．Widthの設定はありませんが，常にHeightと同じ値になります（すなわち正方形の画像しか作れない）．
 大きいと時間がかかるので，ここではHeightを300くらいにしてください（時間がかかってもよかったら1000のままでも良いですが）
 
 そして，下のRenderボタンを押すと，レンダリングが勝手に始まります．
 
-![gui-step10-rendered1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step10/gui-step10-rendered1.png){ style="zoom: 0.5" .on-glb }
+![gui-step10-rendered1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step10/gui-step10-rendered1.png){ style="zoom: 0.5" .on-glb }
 
 無事終わったら，上図のような状態になります．「Save image...」ボタンを押して，ファイルを適当なところに保存してください．（保存しないと消えてしまう）
 
 上記のPOV-Rayのインストールがちゃんとできていないと，以下のようなエラーが出てレンダリングが始まらないです．
 
-![gui-step10-render-error1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step10/gui-step10-render-error1.png)
+![gui-step10-render-error1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step10/gui-step10-render-error1.png)
 
 ちゃんと指定したところに意図したファイルがあるかどうか確認してください．
 
@@ -81,7 +81,7 @@ Projectionはデフォルトでperspectiveになっています．これは奥�
 
 -  POV-Rayを使用せずに，PNGファイルに直接書き出す
 
-ことが可能です．[cuemol2/ImageExport](../../cuemol2/ImageExport)を参照してください．
+ことが可能です．[cuemol2/ImageExport](../../../cuemol2/ImageExport)を参照してください．
 
-[ [&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step9) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step12) ]
+[ [&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step9) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step12) ]

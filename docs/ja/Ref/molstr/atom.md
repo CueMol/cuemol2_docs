@@ -1,4 +1,4 @@
-[Ref/molstr](../../Ref/molstr)
+[Ref/molstr](../../../Ref/molstr)
 
 #### name 
 ; get atom name

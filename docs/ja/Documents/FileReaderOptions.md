@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 
 
@@ -7,7 +7,7 @@
 ファイルを開くときに，選択しているファイル形式に応じたオプションを（もしあれば）設定できるようにしました．
 
 
-![open_option](../assets/images/Documents/FileReaderOptions/open_option.png){ .on-glb }
+![open_option](../../assets/images/Documents/FileReaderOptions/open_option.png){ .on-glb }
 
 
 上図のファイルを開くダイアログで，ファイルのタイプに対応したオプションがあれば
@@ -19,7 +19,7 @@
 例えばＰＤＢ形式が選択されている状態でOptionsを押すと，以下のようなダイアログが表示されます．
 
 
-![PDB_options](../assets/images/Documents/FileReaderOptions/PDB_options.png){ .on-glb }
+![PDB_options](../../assets/images/Documents/FileReaderOptions/PDB_options.png){ .on-glb }
 
 
 例えば，デフォルトではNMR等の複数モデル構造は，

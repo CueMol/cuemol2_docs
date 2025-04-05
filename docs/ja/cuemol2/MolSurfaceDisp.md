@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 分子表面の表示設定など
 
@@ -18,7 +18,7 @@ Sample scene fileが以下からダウンロードできます．
 
 ## 分子表面オブジェクト(MolSurfObj)とmolsurfレンダラー
 分子表面オブジェクト(MolSurfObj)は，文字通り，「分子の表面に関する情報」を持っているオブジェクトです．
-[分子表面の生成](../cuemol2/MsmsMolSurface)や，他にmsmsで作成したsurf/vertファイルを読み込むことで作成できます．
+[分子表面の生成](../../cuemol2/MsmsMolSurface)や，他にmsmsで作成したsurf/vertファイルを読み込むことで作成できます．
 
 一方で，molsurfレンダラーは，分子表面オブジェクト(MolSurfObj)専用のレンダラーであり，
 分子表面オブジェクトを画面に表示する役割を持ちます．
@@ -37,27 +37,27 @@ molsurfレンダラーに，表示しようとしているMolSurfObjはどの分
 以下では，molsurfレンダラーの**ターゲット・オブジェクト**と，それに関連した設定を説明します．
 
 #### Mol surface generation toolで作成した場合
-[分子表面の生成](../cuemol2/MsmsMolSurface)にて説明したように，
+[分子表面の生成](../../cuemol2/MsmsMolSurface)にて説明したように，
 Mol surface generation toolで分子表面を作成した場合は，
 作成元となった（i.e. Target moleculeで設定した）分子が，
 自動的にターゲット・オブジェクトとして設定されます．
 
 **例)**<br />
 ページ冒頭にあるsample scene fileをダウンロードして開きます．
-（[シーンの保存と読み込み](../Documents/GUIのチュートリアル(CueMol2)/Step6)参照）
+（[シーンの保存と読み込み](../../Documents/GUIのチュートリアル(CueMol2)/Step6)参照）
 
 （あるいは，1CTQ.pdbの分子(MolCoord)オブジェクトを読み込んだ後
-[分子表面の生成](../cuemol2/MsmsMolSurface)を行います．）
+[分子表面の生成](../../cuemol2/MsmsMolSurface)を行います．）
 
 sf_1CTQという名前の分子表面オブジェクト(MolSurfObj)ができますが，
 それアタッチされたmolsurfレンダラーのプロパティー・ダイアログを開きます．
 （Sceneパレットで，molsurfレンダラーをダブルクリックすると表示されます．
-GUIのチュートリアル[レンダラーのプロパティーを変更する](../Documents/GUIのチュートリアル(CueMol2)/Step5)参照）
+GUIのチュートリアル[レンダラーのプロパティーを変更する](../../Documents/GUIのチュートリアル(CueMol2)/Step5)参照）
 
 **MolSurfタブ**をクリックすると，下図のような画面が表示されます．
 
 
-![molsurf_rendprop_target2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_rendprop_target2.png)
+![molsurf_rendprop_target2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_rendprop_target2.png)
 
 
 ここで，**Paint Mode**は後で説明する着色モードで，**Target**がターゲット・オブジェクトになります．
@@ -92,7 +92,7 @@ Paint modeを設定するには，
 上述のようにMolSurfタブを選んで，
 Paint Mode項目のリストから相当するものを選択してください．
 （Sceneパレットで，molsurfレンダラーをダブルクリックすると表示されます．
-GUIのチュートリアル[レンダラーのプロパティーを変更する](../Documents/GUIのチュートリアル(CueMol2)/Step5)参照）
+GUIのチュートリアル[レンダラーのプロパティーを変更する](../../Documents/GUIのチュートリアル(CueMol2)/Step5)参照）
 
 以下では，個々のPaint modeについて説明します．
 
@@ -113,28 +113,28 @@ ballstickやribbon等の分子用レンダラーと同様の方法で着色設�
 例えば，以下のようにmolsurfレンダラー(sf_1CTQ.pdb/molsurf1)を選んで，
 右のドロップダウンリストからCPK coloringを選ぶと，下図のように分子表面が元素に応じた着色になります．(というか例ではすでに最初からそうなってますが．)
 
-> ![molsurf_coloring_cpk2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_cpk2.png) ⇒ ![molsurf_coloring_cpk_sample2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_cpk_sample2.jpg){ style="zoom: 0.33" .on-glb }
+> ![molsurf_coloring_cpk2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_cpk2.png) ⇒ ![molsurf_coloring_cpk_sample2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_cpk_sample2.jpg){ style="zoom: 0.33" .on-glb }
 
 #### Paint coloring
 次に，以下のようにPaint coloring→defaultを選ぶと，
 下図のように二次構造に応じた着色になります．
 Paint coloringはデフォルトでは二次構造に応じた着色になっていますが，
 分子選択と色の組を指定することで，ほぼ任意の着色が可能です．
-チュートリアルの[Paint Coloring](../Documents/GUIのチュートリアル(CueMol2)/Step8)を参照してください．
+チュートリアルの[Paint Coloring](../../Documents/GUIのチュートリアル(CueMol2)/Step8)を参照してください．
 
-> ![molsurf_coloring_paint2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_paint2.png){ style="zoom: 0.8" .on-glb } ⇒ ![molsurf_coloring_paint_sample2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_paint_sample2.jpg){ style="zoom: 0.33" .on-glb }
+> ![molsurf_coloring_paint2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_paint2.png){ style="zoom: 0.8" .on-glb } ⇒ ![molsurf_coloring_paint_sample2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_paint_sample2.jpg){ style="zoom: 0.33" .on-glb }
 
 #### Bfac/Occ coloring
 次に，以下のようにBfac/Occ coloringを選ぶと，
-下図のように温度因子に応じた着色になります．Bfac/Occ coloringについては，[着色(Coloring)について](../Documents/GUIのチュートリアル(CueMol2)/Step7)の後半を参照してください．
+下図のように温度因子に応じた着色になります．Bfac/Occ coloringについては，[着色(Coloring)について](../../Documents/GUIのチュートリアル(CueMol2)/Step7)の後半を参照してください．
 
-> ![molsurf_coloring_bfac2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_bfac2.png){ .on-glb } ⇒ ![molsurf_coloring_bfac_sample2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_bfac_sample2.jpg){ style="zoom: 0.33" .on-glb }
+> ![molsurf_coloring_bfac2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_bfac2.png){ .on-glb } ⇒ ![molsurf_coloring_bfac_sample2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_bfac_sample2.jpg){ style="zoom: 0.33" .on-glb }
 
 #### Rainbow coloring
 さらに，以下のようにRainbow coloringを選ぶと，
-下図のように残基番号に応じた虹色の着色になります．Rainbow coloringについては，[着色(Coloring)について](../Documents/GUIのチュートリアル(CueMol2)/Step7)の後半を参照してください．
+下図のように残基番号に応じた虹色の着色になります．Rainbow coloringについては，[着色(Coloring)について](../../Documents/GUIのチュートリアル(CueMol2)/Step7)の後半を参照してください．
 
-> ![molsurf_coloring_rainbow2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_rainbow2.png){ .on-glb } ⇒ ![molsurf_coloring_rainbow_sample2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_rainbow_sample2.jpg){ style="zoom: 0.33" .on-glb }
+> ![molsurf_coloring_rainbow2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_rainbow2.png){ .on-glb } ⇒ ![molsurf_coloring_rainbow_sample2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_coloring_rainbow_sample2.jpg){ style="zoom: 0.33" .on-glb }
 
 ### 静電ポテンシャルモード
 このモードでは，targetプロパティーに指定された静電ポテンシャルオブジェクトが参照され，
@@ -143,7 +143,7 @@ Paint coloringはデフォルトでは二次構造に応じた着色になって
 Paint modeを**By potential**にすると静電ポテンシャルモードになりますが，
 Colorパレットで「Electrostatic potential」という項目を選んでも自動的にこのモードに設定されます．
 
-詳しくは，[静電ポテンシャルマップの計算と表示](../cuemol2/APBS_ElePot)後半部分の説明を参照してください．
+詳しくは，[静電ポテンシャルマップの計算と表示](../../cuemol2/APBS_ElePot)後半部分の説明を参照してください．
 
 ### べた塗モード
 Paint modeを**solid**にするとべた塗モードになります．
@@ -154,7 +154,7 @@ defaultcolorプロパティーの初期値は#C0C0FF(うす紫色)に設定さ�
 下図のようにGenericタブからこの値を変更することで任意の色にべた塗可能です．
 
 
-> ![molsurf_rendprop_colormode](../assets/images/cuemol2/MolSurfaceDisp/molsurf_rendprop_colormode.png){ style="zoom: 0.5" .on-glb } ![molsurf_rendprop_solid1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_rendprop_solid1.png){ style="zoom: 0.75" .on-glb }
+> ![molsurf_rendprop_colormode](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_rendprop_colormode.png){ style="zoom: 0.5" .on-glb } ![molsurf_rendprop_solid1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_rendprop_solid1.png){ style="zoom: 0.75" .on-glb }
 
 ※べた塗モードだけは，molsurfレンダラーのプロパティーダイアログで手動でプロパティーを設定しないと，指定することができません．
 
@@ -169,14 +169,14 @@ GDPNP(A.167.*)をballstick表示にして，タンパク分子部分のみにつ
 以下の図のようになります．
 
 
-![molsurf_showsel_ex1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel_ex1.png){ style="zoom: 0.5" .on-glb }
+![molsurf_showsel_ex1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel_ex1.png){ style="zoom: 0.5" .on-glb }
 
 
 上図のシーンは冒頭の1CTQ_surf_2.qscでダウンロードできます．
 
 また，以下の手順でも作成できます：
-1.  1CTQをダウンロードする．（メニュー「File」→「Get PDB ...」，1CTQと入力しOK, simpleレンダラーを表示させる．チュートリアル[分子モデルファイルを読み込む](../Documents/GUIのチュートリアル(CueMol2)/Step1)後半参照）
-1.  Mol surface generation tool（メニュー「Tool」→「Mol surface generation ...」）でproteinに対して分子表面を生成．[分子表面の作成](../cuemol2/MsmsMolSurface)参照
+1.  1CTQをダウンロードする．（メニュー「File」→「Get PDB ...」，1CTQと入力しOK, simpleレンダラーを表示させる．チュートリアル[分子モデルファイルを読み込む](../../Documents/GUIのチュートリアル(CueMol2)/Step1)後半参照）
+1.  Mol surface generation tool（メニュー「Tool」→「Mol surface generation ...」）でproteinに対して分子表面を生成．[分子表面の作成](../../cuemol2/MsmsMolSurface)参照
 1.  sf_1CTQ, molsurf1が作られる
 1.  molsurf1レンダラーはデフォルトでCPK coloringになっているのでColorパネルから炭素の色を灰色に変える（GDPNPが見やすいように変えているだけなのでそのままでもOK）
 1.  GDPNPのballstick表示を作成．Sceneパネルにて1CTQ(MolCoord)を選択し，「＋」ボタンをクリックして新規rendererを作成する．その際，Setup rendererダイアログにてRenderer typeはballstickに，selectionにはA.167.*(GDPNP)を指定する．
@@ -187,7 +187,7 @@ GDPNP(A.167.*)をballstick表示にして，タンパク分子部分のみにつ
 MolSurfタブをクリックするとプロパティー一覧が表示されます．
 
 
-> ![molsurf_showsel1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel1.png){ style="zoom: 0.75" .on-glb } ⇒ ![molsurf_showsel_sample1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel_sample1.jpg){ style="zoom: 0.55" .on-glb }
+> ![molsurf_showsel1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel1.png){ style="zoom: 0.75" .on-glb } ⇒ ![molsurf_showsel_sample1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel_sample1.jpg){ style="zoom: 0.55" .on-glb }
 
 下のほうに**Show selection**という項目があるので，
 そこに上図のように表示する部分の分子の選択を入力します．
@@ -203,7 +203,7 @@ OKボタンを押します．
 同様に，例えばshowselにA.60:69.*という選択文を指定すると，残基番号A60-A69に対応する部分の分子表面のみが表示されるようになります(下図)．
 
 
-![molsurf_showsel_sample2](../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel_sample2.jpg){ style="zoom: 0.8" .on-glb }
+![molsurf_showsel_sample2](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_showsel_sample2.jpg){ style="zoom: 0.8" .on-glb }
 
 
 ## ドット表示・ワイヤフレーム表示
@@ -220,7 +220,7 @@ OKボタンを押します．
 下図のように，defaultではDrawing modeがfillになっていますが，これをline (wireframe表示)あるいはpoint (ドット表示)に変更するだけです．
 
 
-> ![molsurf_drawmode1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode1.png){ style="zoom: 0.75" .on-glb } ⇒ ![molsurf_drawmode_line1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode_line1.jpg){ style="zoom: 0.33" .on-glb }
+> ![molsurf_drawmode1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode1.png){ style="zoom: 0.75" .on-glb } ⇒ ![molsurf_drawmode_line1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode_line1.jpg){ style="zoom: 0.33" .on-glb }
 
 lineに変更すると右図のようになります．
 
@@ -242,8 +242,8 @@ POV-Rayでrenderingすると，点は全て小さな球として描画されま�
 
 下図のように，materialをshadowに設定することで画面表示と同じ感じにできます．
 
-Materialの設定に関しては，[cuemol2/Material](../cuemol2/Material)を参照してください．
+Materialの設定に関しては，[cuemol2/Material](../../cuemol2/Material)を参照してください．
 
 
-![molsurf_drawmode_dot1](../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode_dot1.jpg){ style="zoom: 0.75" .on-glb }
+![molsurf_drawmode_dot1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode_dot1.jpg){ style="zoom: 0.75" .on-glb }
 

@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -20,7 +20,7 @@ perl:PHP:java=7:2:1
 ## Ball&StickモデルとCPKモデル
 抗生物質ブレオマイシンをStickモデルで表示します．(blm.qs) 
 
-![blm_stick1](../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_stick1.png){ .on-glb }
+![blm_stick1](../../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_stick1.png){ .on-glb }
 
 <pre>
 01: qsys.cleanUpAll();
@@ -63,7 +63,7 @@ $mol.select(se/resi 1001/);
 $molからブレオマイシン1分子のみを選択している．<br />
 select()メソッドは引数として選択オブジェクトを取る．
 この例では，選択文(se/と/囲まれた部分)で，残基1001番を選択している．
-選択文については[分子選択文法のリファレンス](../../Documents/MolSelSyntax)を参照．
+選択文については[分子選択文法のリファレンス](../../../Documents/MolSelSyntax)を参照．
 ```
 $r_blm = $mol.createRend("blm", "ballstick");
 ```
@@ -71,7 +71,7 @@ $r_blm = $mol.createRend("blm", "ballstick");
 分子オブジェクトのメソッドであるcreateRend()は，対象とする分子オブジェクト(ここでは$mol)に接続されたレンダラーを生成する．1番目の引数(ここでは文字列blm)はレンダラー名で，GUIからレンダラーを作成する場合に指定するレンダラー名に相当している．2番目の引数(ここでは文字列ballstick)はレンダラーのタイプ名．さらに，作成したレンダラーへの参照を，$r_blmに格納している．<br />
 レンダラータイプをcpkにすると，CPKモデルが表示される．下図．
 
-![blm_CPK1](../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_CPK1.png){ .on-glb }
+![blm_CPK1](../../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_CPK1.png){ .on-glb }
 
 ~ただし，CPKモデルにした場合，CPKレンダラーには"sphr"や"bondw"といったプロパティが無いため，**↓以下の２行をコメントアウトしないとエラーになるので注意**．
 ```
@@ -83,7 +83,7 @@ $r_blm.setProp("bondw", 0.2);
 ↑上記で作成したballstickレンダラーのプロパティーを設定する．<br />
 ここでは，スティックモデルで表示したいので，原子部分の球の半径であるsphrプロパティーと，原子間を接続している円柱の半径であるbondwプロパティーを同じ値，0.2Åに指定している．逆に，ボール・アンド・スティックモデルにしたい場合は，sphrプロパティーをbondwプロパティーより大きい値に指定すればよい．（下図; bondw=0.3, sphr=0.5）
 
-![blm_ballstick1](../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_ballstick1.png){ .on-glb }
+![blm_ballstick1](../../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_ballstick1.png){ .on-glb }
 
 
 ```
@@ -118,7 +118,7 @@ gfx.updateView();
 元素の種類ごとに色を設定します．(blm_color.qs)
 
 
-![blm_stickcolor1](../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_stickcolor1.png){ .on-glb }
+![blm_stickcolor1](../../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_stickcolor1.png){ .on-glb }
 
 
 <pre>
@@ -193,7 +193,7 @@ HSBモデルの表現(Hue, Saturation, Brightness)では，Hueは0度(=360度; �
 温度因子に応じて色を設定します．(blm_color2.qs)
 
 
-![blm_stickcolor2](../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_stickcolor2.png){ .on-glb }
+![blm_stickcolor2](../../../assets/images/Documents/QScriptのチュートリアル/Step1/blm_stickcolor2.png){ .on-glb }
 
 <pre>
 qsys.cleanUpAll();

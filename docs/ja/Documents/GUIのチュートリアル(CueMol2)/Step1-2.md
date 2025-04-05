@@ -1,6 +1,6 @@
-[ [Indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step1) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step2) ]
+[ [Indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step1) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step2) ]
 
 ## ウィンドウの各部分の説明
 ### メニュー
@@ -16,7 +16,7 @@ MacOS Xでは，メニューはウィンドウではなく画面の一番上に�
 ツールバーはタブで切り替わるようになっています．<br />
 タブは今のところHomeとMeasureしかありません．
 
-![toolbar1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/toolbar1.png){ .on-glb }
+![toolbar1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/toolbar1.png){ .on-glb }
 
 
 -  Homeに基本的な機能が集約されています．
@@ -45,7 +45,7 @@ MacOS Xでは，メニューはウィンドウではなく画面の一番上に�
 -  View
 
 
-![sidepanel1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/sidepanel1.png){ .on-glb }
+![sidepanel1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/sidepanel1.png){ .on-glb }
 
 パネルは，図のようにタイトルバーと本体からなっており，
 
@@ -61,7 +61,7 @@ MacOS Xでは，メニューはウィンドウではなく画面の一番上に�
 
 ### 分子ビュー
 
-![main_molview1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/main_molview1.png){ .on-glb }
+![main_molview1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/main_molview1.png){ .on-glb }
 
 
 中央部分にある，分子構造などが表示される，メインの部分です．
@@ -70,7 +70,7 @@ MacOS Xでは，メニューはウィンドウではなく画面の一番上に�
 
 ### ログウィンドウ
 
-![logwindow1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/logwindow1.png){ .on-glb }
+![logwindow1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/logwindow1.png){ .on-glb }
 
 
 画面の下部に位置し，様々な情報が表示されます．<br />
@@ -84,8 +84,8 @@ MacOS Xでは，メニューはウィンドウではなく画面の一番上に�
 
 ### ステータスバー
 
-![gui_atom_info](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/gui_atom_info.png){ .on-glb }
+![gui_atom_info](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step1-2/gui_atom_info.png){ .on-glb }
 
 図のようにウィンドウ最下部に位置し，一部のメッセージなどが表示されます．
 
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)|[次へ](../../Documents/GUIのチュートリアル(CueMol2)/Step2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)|[次へ](../../../Documents/GUIのチュートリアル(CueMol2)/Step2)

@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)|
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step4) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)|
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step4) ]
 
 ## 「選択(selection)」
 CueMolでは，分子モデルの"一部分"のみに対して何か操作を行うとき(たとえばリボン表示を追加する等)，まずその"一部分"を選択してから操作を行います．そのため，選択操作は非常に重要です． 
@@ -9,7 +9,7 @@ CueMolでは，分子モデルの"一部分"のみに対して何か操作を行
 前ページで説明したように右クリックで以下のようなコンテキスト・メニューが表示されますが，
 
 
-![gui_ctxtmenu](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/gui_ctxtmenu.png){ .on-glb }
+![gui_ctxtmenu](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/gui_ctxtmenu.png){ .on-glb }
 
 
 "Select"何とか，というメニューを選ぶと，
@@ -29,7 +29,7 @@ CueMolでは，分子モデルの"一部分"のみに対して何か操作を行
 ### 選択された部分の表示
 選択した部分は，下図のように半透明で強調表示されます．
 
-![selected_hilite1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/selected_hilite1.png){ .on-glb }
+![selected_hilite1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/selected_hilite1.png){ .on-glb }
 
 
 ### ともかくも全部選択
@@ -44,7 +44,7 @@ CueMolでは，分子モデルの"一部分"のみに対して何か操作を行
 MolStructパネルから，鎖名(chain name)，残基番号(residue number)等で分子を選択できます．MolStructパネルは通常表示されていますが，表示されていない場合はMenuのWindow→Panels→MolStructで表示させます．
 
 
-![molstruct_panel1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/molstruct_panel1.png){ .on-glb }
+![molstruct_panel1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/molstruct_panel1.png){ .on-glb }
 
 
 パネル上方のドロップダウン・リストには現在読み込まれている分子モデルの一覧があります．このドロップダウン・リストで選択されている分子モデルが，以下の選択の対象になっています．この時点では１つしか読み込んでいないので"lysozyme"しか表示されていません．
@@ -58,7 +58,7 @@ MolStructパネルから，鎖名(chain name)，残基番号(residue number)等�
 さらに，各項目はクリックで選ぶことができます．Ctrl+Clickでクリックしたものを複数選択できます．Shift+Clickで，範囲を指定して選択できます．この辺は他のWindowsアプリと同じです（Macでは若干挙動が異なる）．
 
 
-![molstruct_panel2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/molstruct_panel2.png){ .on-glb }
+![molstruct_panel2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step3/molstruct_panel2.png){ .on-glb }
 
 
 上図では，Val2とPhe3が選ばれている状態です．
@@ -70,5 +70,5 @@ MolStructパネルから，鎖名(chain name)，残基番号(residue number)等�
 一方で，隣のCenter atボタンを押すと，ツリーで選ばれている部分が選択されたうえで，視点が移動して選択領域が画面中央に来ます．
 また，Zoom atボタンも同様に選択領域が画面中央に来ますが，選択領域の大きさに合わせて画面の拡大率も変化します．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step4)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step4)

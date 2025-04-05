@@ -1,4 +1,4 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)
 
 
 
@@ -6,7 +6,7 @@
 パレット・ウィンドウは，基本編でも既に出てきた分子選択パレットや，
 Workspaceパレットなど，CueMolのMain viewの前面に出ているウィンドウの総称です．
 
-![palette_wnd1](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd1.png)
+![palette_wnd1](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd1.png)
 
 
 ### ページ
@@ -15,7 +15,7 @@ Workspaceパレットなど，CueMolのMain viewの前面に出ているウィ�
 他のページをアクティブにするには，
 パレット・ウィンドウの上方にあるタブ(Sel1やNaviと書かれている部分)をクリックします．
 
-![palette_wnd2](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd2.png)
+![palette_wnd2](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd2.png)
 
 
 ### ページの分離・移動
@@ -24,17 +24,17 @@ Workspaceパレットなど，CueMolのMain viewの前面に出ているウィ�
 そのページのみを新しいパレットに分離することが出来ます．
 以下の図では，"Sel1"ページを新しいパレットに分離しています．
 
-![palette_drag1](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag1.png) **→** ![palette_drag2](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag2.png)
+![palette_drag1](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag1.png) **→** ![palette_drag2](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag2.png)
 
 また，他のパレット・ウィンドウ内にドラッグすることで，
 そのパレット・ウィンドウにページを移動することが出来ます．
 以下の図では，"Sel1"ページを"Symm"ページなどが入っているパレットに
 移動させています．
-![palette_drag3](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag3.png) **→** ![palette_drag4](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag4.png)
+![palette_drag3](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag3.png) **→** ![palette_drag4](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_drag4.png)
 
 ### パレットを閉じる・開く・隠す
 
-![palette_wnd3](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd3.png)
+![palette_wnd3](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd3.png)
 
 さらに，パレット・ウィンドウは左上にある「×」ボタンで閉じることができます．
 この場合，パレットに含まれている全ページが閉じます．
@@ -42,7 +42,7 @@ Workspaceパレットなど，CueMolのMain viewの前面に出ているウィ�
 一方，左上にある「−」ボタンを押すことで，
 パレット・ウィンドウを最小化することができます．
 
-![palette_wnd4](../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd4.png)
+![palette_wnd4](../../../assets/images/Documents/GUIのチュートリアル/StepA2/palette_wnd4.png)
 
 最小化状態では，「□」ボタンを押すことで元のサイズに戻せます．
 

@@ -1,12 +1,12 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## OpenGL shader機能について
 Version 2.1ではOpenGLのshader機能を使用した描画が行えるようになっています．
 
 現時点(Version2.1.0.243)では以下の機能で，shaderが使用されています．
 
--  [GPUを用いた電子密度表示](../cuemol2/GPUDensityMap)
+-  [GPUを用いた電子密度表示](../../cuemol2/GPUDensityMap)
 
--  [Fadeアニメーション](../cuemol2/Anim_ShowHide)
+-  [Fadeアニメーション](../../cuemol2/Anim_ShowHide)
 
 
 ### OpenGLのバージョンと使用できるshader機能

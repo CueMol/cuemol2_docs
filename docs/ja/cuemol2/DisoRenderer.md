@@ -1,11 +1,11 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## Disordered領域の表示
 タンパク，核酸のdisorder領域の主鎖を表示するためのrendererです．
 
 結晶構造でdisorderし見えていない部分を，Ribbon rendererなどの主鎖を滑らかに（Bezier曲線の）点線でつないだように表示できます．
 
 
-![disorend-1](../assets/images/cuemol2/DisoRenderer/disorend-1.png){ style="zoom: 0.5" .on-glb }
+![disorend-1](../../assets/images/cuemol2/DisoRenderer/disorend-1.png){ style="zoom: 0.5" .on-glb }
 
 
 ### 作成
@@ -23,7 +23,7 @@ Disorder rendererはRibbon renderer等の不連続部分を点線でつなぐも
 両端で色が異なる場合は，両方の色の間でgradientになります．
 
 
-![disorend-color-1](../assets/images/cuemol2/DisoRenderer/disorend-color-1.png){ style="zoom: 0.5" .on-glb }
+![disorend-color-1](../../assets/images/cuemol2/DisoRenderer/disorend-color-1.png){ style="zoom: 0.5" .on-glb }
 
 
 ## プロパティー設定
@@ -36,7 +36,7 @@ Defaultではselectionは*になっており，分子中disorderしている領�
 この機能を使用して，１つの分子に複数のdisorder rendererをattachして，点線の形状を変えたりすることが可能です．
 下図の例では右のdisorder領域と左のdisorder領域に対して別々のrendererを作成することで，ドットの大きさと間隔が異なるように表示しています．
 
-![disorend-sel-1](../assets/images/cuemol2/DisoRenderer/disorend-sel-1.png){ style="zoom: 0.5" .on-glb }
+![disorend-sel-1](../../assets/images/cuemol2/DisoRenderer/disorend-sel-1.png){ style="zoom: 0.5" .on-glb }
 
 
 
@@ -45,7 +45,7 @@ Defaultではselectionは*になっており，分子中disorderしている領�
 下図は，edge線を設定しmaterialをnolighting（べた塗）に設定した例です．
 
 
-![disorend-edge-1](../assets/images/cuemol2/DisoRenderer/disorend-edge-1.png){ style="zoom: 0.5" .on-glb }
+![disorend-edge-1](../../assets/images/cuemol2/DisoRenderer/disorend-edge-1.png){ style="zoom: 0.5" .on-glb }
 
 
 ### Disorder tab
@@ -63,13 +63,13 @@ Disorder領域の点線を表示するtargetのrendererを指定します．
 下図左は0.1，右は0.5にした場合の例．
 
 
-> ![disorend-dotsz-1](../assets/images/cuemol2/DisoRenderer/disorend-dotsz-1.png){ style="zoom: 0.25" .on-glb } ![disorend-dotsz-2](../assets/images/cuemol2/DisoRenderer/disorend-dotsz-2.png){ style="zoom: 0.25" .on-glb }
+> ![disorend-dotsz-1](../../assets/images/cuemol2/DisoRenderer/disorend-dotsz-1.png){ style="zoom: 0.25" .on-glb } ![disorend-dotsz-2](../../assets/images/cuemol2/DisoRenderer/disorend-dotsz-2.png){ style="zoom: 0.25" .on-glb }
 
 #### Dot separation
 点線の間の間隔．下図左は0.6，右は1.8にした場合の例．
 
 
->![disorend-dotsep-1](../assets/images/cuemol2/DisoRenderer/disorend-dotsep-1.png){ style="zoom: 0.25" .on-glb } ![disorend-dotsep-2](../assets/images/cuemol2/DisoRenderer/disorend-dotsep-2.png){ style="zoom: 0.25" .on-glb }
+>![disorend-dotsep-1](../../assets/images/cuemol2/DisoRenderer/disorend-dotsep-1.png){ style="zoom: 0.25" .on-glb } ![disorend-dotsep-2](../../assets/images/cuemol2/DisoRenderer/disorend-dotsep-2.png){ style="zoom: 0.25" .on-glb }
 
 #### Loop size
 Disorder部分と主鎖のつながり方を指定する．大きい値にするとよりなめらかに，飛び出した形になる．(具体的にはBezier曲線の制御点の位置に影響する) Default値は2.0．
@@ -77,7 +77,7 @@ Disorder部分と主鎖のつながり方を指定する．大きい値にする
 下図左は1.0，右は6.0にした場合の例．
 
 
-> ![disorend-loopsz-1](../assets/images/cuemol2/DisoRenderer/disorend-loopsz-1.png){ style="zoom: 0.25" .on-glb } ![disorend-loopsz-2](../assets/images/cuemol2/DisoRenderer/disorend-loopsz-2.png){ style="zoom: 0.3" .on-glb }
+> ![disorend-loopsz-1](../../assets/images/cuemol2/DisoRenderer/disorend-loopsz-1.png){ style="zoom: 0.25" .on-glb } ![disorend-loopsz-2](../../assets/images/cuemol2/DisoRenderer/disorend-loopsz-2.png){ style="zoom: 0.3" .on-glb }
 
 #### Loop size 2
 Disorder部分とC末端側主鎖（タンパクの場合）のつながり方を指定する．
@@ -89,5 +89,5 @@ Defaultでは値は-1になっているが，その場合N, C末端ともに（�
 下図は，loop size = 0.5, loop size 2 = 4にした場合．loopsize(N末端側,手前のβシート側)は非常に小さいので，折れ曲がったように不連続になっているが，loopsize2(C末端側，奥のβシート側)は大きいので，滑らかに接続されている．
 
 
-![disorend-loopsz-3](../assets/images/cuemol2/DisoRenderer/disorend-loopsz-3.png){ style="zoom: 0.5" .on-glb }
+![disorend-loopsz-3](../../assets/images/cuemol2/DisoRenderer/disorend-loopsz-3.png){ style="zoom: 0.5" .on-glb }
 

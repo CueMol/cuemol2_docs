@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step1-2) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step2-1) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step1-2) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1) ]
 
 ## 画面(分子ビュー)の操作
 分子ビューの操作は，画面上でマウスをドラッグすることで行います．
@@ -28,7 +28,7 @@
 
 さらに，分子ビューの操作はViewパネルで行うことも出来ます（**注意**: Version 2.0.1以降ではより使いやすいダイアル状ボタンのpanelに変更されています）．
 
-![gui_view_panel1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_view_panel1.png){ .on-glb }
+![gui_view_panel1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_view_panel1.png){ .on-glb }
 
 
 -  各パレットとも，window中の左右矢印ボタンを押すと，対応する成分にViewが変化します（例えばRotXならX軸周り回転など）．変化量は，中央のDrop-down boxから選択できます．
@@ -44,16 +44,16 @@
 原子の位置でマウスを左クリックすると，その名称がviewに表示されます．
 
 
-![gui_atom_click](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_atom_click.png){ .on-glb }
+![gui_atom_click](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_atom_click.png){ .on-glb }
 
 
 さらに，その原子の座標や温度因子など，詳しい情報(下図の赤線内)がステータスバーに表示されます．
 
-![gui_atom_info](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_atom_info.png){ .on-glb }
+![gui_atom_info](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_atom_info.png){ .on-glb }
 
 原子の位置で右クリックするとコンテキスト・メニューが表示されます
 
-![gui_ctxtmenu](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_ctxtmenu.png){ .on-glb }
+![gui_ctxtmenu](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step2/gui_ctxtmenu.png){ .on-glb }
 
 一番上は，（読込む時に指定した）分子オブジェクト名，チェイン名，残基名・番号，原子名の順で，情報が出ています．
 このメニューは選択（実行？）しても何も起こりません．
@@ -63,5 +63,5 @@
 
 それ以下の"Select"関連のメニューは次ページで説明します．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step1-2)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step1-2)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)

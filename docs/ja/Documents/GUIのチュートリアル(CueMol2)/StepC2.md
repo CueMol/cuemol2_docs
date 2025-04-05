@@ -1,4 +1,4 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/)
 
 
 
@@ -15,7 +15,7 @@
 するとオプションダイアログが表示されます．
 
 
-![c2_mtz_option1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_mtz_option1.png)
+![c2_mtz_option1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_mtz_option1.png)
 
 
 まず，Rendererタブで共通オプションを設定します．<br />
@@ -26,7 +26,7 @@ CueMolでは，電子密度も分子モデルなどと同様にオブジェク�
 
 ### MTZファイル特有のオプション
 
-![c2_mtz_option2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_mtz_option2.png)
+![c2_mtz_option2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_mtz_option2.png)
 
 
 次に，MTZ optionsタブで，MTZファイル読み込みに関したオプションを設定します．<br />
@@ -55,18 +55,18 @@ Column名は，mtzファイルを生成したソフトウェアによって異�
 OKボタンを押すと電子密度が表示されます．
 
 
-![c2_density_mesh1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_density_mesh1.png){ style="zoom: 0.5" .on-glb }
+![c2_density_mesh1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_density_mesh1.png){ style="zoom: 0.5" .on-glb }
 
 
 これではいったい何が何だかよくわかりませんね．
 わかりやすいように，モデルの分子構造も読み込んで重ねて表示してみます．
-分解能が高い結晶構造の場合は分子のほうを**simple** rendererで表示すればわかりやすいでしょう([Step1参照](../../Documents/GUIのチュートリアル(CueMol2)/Step1))．
+分解能が高い結晶構造の場合は分子のほうを**simple** rendererで表示すればわかりやすいでしょう([Step1参照](../../../Documents/GUIのチュートリアル(CueMol2)/Step1))．
 
 
-![c2_density_mesh2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_density_mesh2.png){ style="zoom: 0.5" .on-glb }
+![c2_density_mesh2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_density_mesh2.png){ style="zoom: 0.5" .on-glb }
 
 
-この図のようにzoomしてslab ([Step2参照](../../Documents/GUIのチュートリアル(CueMol2)/Step2))を薄くしてやれば見やすくなります．
+この図のようにzoomしてslab ([Step2参照](../../../Documents/GUIのチュートリアル(CueMol2)/Step2))を薄くしてやれば見やすくなります．
 ところで，なぜcontourというのかというと，普通出てくる電子密度の表示は，
 山の地図などでおなじみの２次元の等高線(contour)表示を
 ３次元に拡張したものだから，というわけです．
@@ -78,7 +78,7 @@ GUIメニューの「Window」→「Density map palette」がチェックされ�
 このパレットからは，density map objectにアタッチされたcontourレンダラー（ここでは青色の網目表示と思ってください）のプロパティーを変更できます．
 
 
-![c2_density_map_palette](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_density_map_palette.png)
+![c2_density_map_palette](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_density_map_palette.png)
 
 
 ボタンなどには以下のような機能があります．
@@ -93,7 +93,7 @@ GUIメニューの「Window」→「Density map palette」がチェックされ�
 ### Contourレンダラーの他のプロパティ
 
 さらに，電子密度表示の設定は，Workspace paletteに表示されている
-当該レンダラーをダブルクリックすることでも可能です．([Step5](../../Documents/GUIのチュートリアル(CueMol2)/Step5)も参照)
+当該レンダラーをダブルクリックすることでも可能です．([Step5](../../../Documents/GUIのチュートリアル(CueMol2)/Step5)も参照)
 これらのプロパティーのうち使用頻度が低いと思われるものは，
 Object propertyダイアログからしか設定できないものもあります．
 

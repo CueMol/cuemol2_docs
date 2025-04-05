@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 分子表面の作成
 
@@ -8,7 +8,7 @@
 メニュー「Tools」→「Mol surface generation ...」を実行すると，以下のようなダイアログが現れます．
 
 
-![molsurf_tool](../assets/images/cuemol2/MsmsMolSurface/molsurf_tool.png)
+![molsurf_tool](../../assets/images/cuemol2/MsmsMolSurface/molsurf_tool.png)
 
 
 ### Target moleculeの指定
@@ -47,7 +47,7 @@ Probe radiusは表面を計算するときに使用するprobeの半径を指定
 ### 分子表面生成の実行
 以上の設定を終え，OKボタンを押すとmsmsが実行され，surfaceオブジェクトが作成されます．
 
-![msms_tool_created1](../assets/images/cuemol2/MsmsMolSurface/msms_tool_created1.png)
+![msms_tool_created1](../../assets/images/cuemol2/MsmsMolSurface/msms_tool_created1.png)
 
 この例では，1CRN (crambin)に対してsf_1CRNという(MolSurfObj型の)objectが作成されています．
 
@@ -56,13 +56,13 @@ rendererのtargetプロパティー(着色のさい参照される分子オブ�
 surfaceを作成するのに使用した分子オブジェクト名が設定され，
 CPKColoringの着色になるように設定されています．
 
-![msms_tool_created2](../assets/images/cuemol2/MsmsMolSurface/msms_tool_created2.png){ style="zoom: 0.5" .on-glb }
-![msms_tool_created2_2](../assets/images/cuemol2/MsmsMolSurface/msms_tool_created2_2.jpg){ style="zoom: 0.5" .on-glb }
-![msms_tool_created2_3](../assets/images/cuemol2/MsmsMolSurface/msms_tool_created2_3.jpg){ style="zoom: 0.5" .on-glb }
+![msms_tool_created2](../../assets/images/cuemol2/MsmsMolSurface/msms_tool_created2.png){ style="zoom: 0.5" .on-glb }
+![msms_tool_created2_2](../../assets/images/cuemol2/MsmsMolSurface/msms_tool_created2_2.jpg){ style="zoom: 0.5" .on-glb }
+![msms_tool_created2_3](../../assets/images/cuemol2/MsmsMolSurface/msms_tool_created2_3.jpg){ style="zoom: 0.5" .on-glb }
 
 この状態から，Colorパネルから，他の分子に対するrendererと同様にPaint, CPK(左), Bfac(中央), Rainbow(右)などの着色(coloring)に変更できます．
 
-詳しくは，[分子表面の表示](../cuemol2/MolSurfaceDisp)を参照してください．
+詳しくは，[分子表面の表示](../../cuemol2/MolSurfaceDisp)を参照してください．
 
 ### 生成されたsurface object
 生成されたsurface objectは，シーンをqscファイルに保存した時に，qscファイル中にバイナリー形式で埋め込まれ，一緒に保存されます．
@@ -75,7 +75,7 @@ Scene panelで再生成したいMolSurfObjを右クリックし，表示され�
 Densityを変更してOK buttonを押すと指定したdensityでsurfaceが再生成されます．
 
 
-![molsurf_regen1](../assets/images/cuemol2/MsmsMolSurface/molsurf_regen1.png){ .on-glb }
+![molsurf_regen1](../../assets/images/cuemol2/MsmsMolSurface/molsurf_regen1.png){ .on-glb }
 
 
 ただし，古いCueMolで作成したscene fileを読み込んだ場合は，MolSurfObj objectの元となるMolCoord objectの情報が保存されていないため，この機能は利用できません．
@@ -105,7 +105,7 @@ msmsをinstall後，CueMol2を起動し，適当なPDBファイルを開きま�
 次に，メニュー「Tools」→「MSMS surface generation ...」を実行すると，以下のようなダイアログが現れます．
 
 
-![msms_tool_dlg1](../assets/images/cuemol2/MsmsMolSurface/msms_tool_dlg1.png)
+![msms_tool_dlg1](../../assets/images/cuemol2/MsmsMolSurface/msms_tool_dlg1.png)
 
 
 まず，ダイアログの一番上の部分でmsmsの実行ファイルを設定しておきます．"Change..."ボタンを押すと，ファイルを開くダイアログが出てくるので，そこで，先ほど展開コピーしたmsmsのファイル(Windowsならmsms.exe，MacOS XやLinuxならmsms)を指定します．（上図ではすでに指定した状態になっています）

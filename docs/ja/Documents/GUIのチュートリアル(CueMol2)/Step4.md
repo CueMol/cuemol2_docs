@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step3) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step5) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step3) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step5) ]
 
 ## レンダラーの追加と削除
 
@@ -10,20 +10,20 @@
 現在，オブジェクト"lysozyme"に接続されているレンダラーは
 "simple1"（タイプはsimple）だけです．
 現在，lysozymeの残基Val2からPhe3までが選択されていますが（されて無い場合は
-[Step3](../../Documents/GUIのチュートリアル(CueMol2)/Step3)を見て選択してください），
+[Step3](../../../Documents/GUIのチュートリアル(CueMol2)/Step3)を見て選択してください），
 ここで新たなレンダラーを追加してこの部分をballstickモデルで表示してみましょう．
 
 
-![gui_step4_wspal1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_wspal1.png)
+![gui_step4_wspal1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_wspal1.png)
 
 
 ターゲットの分子オブジェクトを選択し，
-下にある![gui_step4_newrnd](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrnd.png)
+下にある![gui_step4_newrnd](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrnd.png)
 **レンダラー作成**ボタンを押すと，
 下図のようなダイアログが表示されます((別にオブジェクトでなくレンダラーが選択されていても，その選択されているレンダラーがアタッチしているオブジェクトにレンダラーが追加されるようになっています))．
 
 
-![gui_step4_newrdlg](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrdlg.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_newrdlg](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrdlg.png){ style="zoom: 0.5" .on-glb }
 
 
 ファイルを読込んだ時に出てくるダイアログと似ていますが，Object:のところが
@@ -50,14 +50,14 @@ CueMolが現在使われていない名前を勝手に判断して，適当な�
 OKを押すと新たなレンダラーが作られ，lysozymeのレンダラーとして追加されます．
 
 
-![gui_step4_ballstk](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_ballstk.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_ballstk](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_ballstk.png){ style="zoom: 0.5" .on-glb }
 
 
 Sceneパネルのほうも，追加が反映されています．
 simple1以外に新しくballstick1が追加されています．
 
 
-![gui_step4_wspal2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_wspal2.png){ .on-glb }
+![gui_step4_wspal2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_wspal2.png){ .on-glb }
 
 
 ### 分子全体に対してレンダラーを作成
@@ -65,13 +65,13 @@ simple1以外に新しくballstick1が追加されています．
 そういう場合は上述のSetup rendererダイアログボックスのSelection項目左横のチェックを外してOKを押せば，選択が無視され，全体に対してレンダラーが作成されます．
 
 
-![gui_step4_newrenddlg2](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrenddlg2.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_newrenddlg2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrenddlg2.png){ style="zoom: 0.5" .on-glb }
 
 
 ここでは，上図のような状態にして選択を無視させ，ribbonレンダラーを全体に対して作成しましょう．
 
 
-![gui_step4_newrend_ribbon1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrend_ribbon1.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_newrend_ribbon1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_newrend_ribbon1.png){ style="zoom: 0.5" .on-glb }
 
 
 最終的には，上図のような状態になるはずです．
@@ -87,7 +87,7 @@ simple1以外に新しくballstick1が追加されています．
 
 ### レンダラーを削除
 
-"ballstick1"を選択して下方の**削除ボタン**(![scene_delbtn1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/scene_delbtn1.png){ .on-glb })を押せば，
+"ballstick1"を選択して下方の**削除ボタン**(![scene_delbtn1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/scene_delbtn1.png){ .on-glb })を押せば，
 このballstickモデルを削除することができます．<br />
 ただし，ここではまだ削除しないでください（あるいは削除してもundoで復活させてください）．
 
@@ -96,22 +96,22 @@ simple1以外に新しくballstick1が追加されています．
 表示部分を変更したい場合が出てくるかもしれません．
 現在，lysozyme/ballstick1レンダラーは，残基Val2, Phe3の２残基に対してのみ表示するように作られていますが，これを途中で残基Val2〜Glu7まで表示するように変更しなければならなくなったとしましょう．
 
-まず，MolStructパネルから，下図のように，A2Val〜A7Gluを選択して，矢印ボタンを押し，対象部分を選択します．(MolStructパネルについては，[前ページ](../../Documents/GUIのチュートリアル(CueMol2)/Step3)も参照)
+まず，MolStructパネルから，下図のように，A2Val〜A7Gluを選択して，矢印ボタンを押し，対象部分を選択します．(MolStructパネルについては，[前ページ](../../../Documents/GUIのチュートリアル(CueMol2)/Step3)も参照)
 
-![gui_step4_molstr1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_molstr1.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_molstr1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_molstr1.png){ style="zoom: 0.5" .on-glb }
 
 
 次に，Sceneパネルでlysozyme/ballstick1レンダラーに対応する項目を右クリックするとcontext menuが表示されますが，そこで「Selection」→「Current」を選択します．
 
 
-![gui_step4_ctxtmenu1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_ctxtmenu1.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_ctxtmenu1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_ctxtmenu1.png){ style="zoom: 0.5" .on-glb }
 
 
-すると，以下のようにballstick1の表示が，Glu7残基まで拡張されたことが分かります．(図では，見やすくするためにballstick1以外のレンダラーを非表示にしています．表示非表示の切り替え方法は[../Step2-1](../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)を参照してください)
+すると，以下のようにballstick1の表示が，Glu7残基まで拡張されたことが分かります．(図では，見やすくするためにballstick1以外のレンダラーを非表示にしています．表示非表示の切り替え方法は[../Step2-1](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)を参照してください)
 
-![gui_step4_before1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_before1.png){ style="zoom: 0.5" .on-glb } → ![gui_step4_changed1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_changed1.png){ style="zoom: 0.5" .on-glb }
+![gui_step4_before1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_before1.png){ style="zoom: 0.5" .on-glb } → ![gui_step4_changed1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/gui_step4_changed1.png){ style="zoom: 0.5" .on-glb }
 
 それでは，次に進む前に，ballstick1の表示部分をもとに戻しておいてください（単にUndoしてもよいが，Val2, Phe3をMolStructパネルで選択して，上記同様にSceneパネルのcontext menuから変更してもよい）．
 
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step3)|
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step5)
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step3)|
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step5)

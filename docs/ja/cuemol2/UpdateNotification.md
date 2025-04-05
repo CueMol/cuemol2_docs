@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## Software updateの通知機能
 CueMol2では，software updateの通知機能が有効になっていると，
 ユーザが一定時間（10秒）まったく操作しない状況が続くと，
@@ -6,7 +6,7 @@ CueMol2では，software updateの通知機能が有効になっていると，
 もし，より新しいバージョンがリリースされていると，以下のようなpopup windowが表示されます．
 
 
-![update_notify1](../assets/images/cuemol2/UpdateNotification/update_notify1.png)
+![update_notify1](../../assets/images/cuemol2/UpdateNotification/update_notify1.png)
 
 
 ここで，Check!!ボタンを押すと現在OS側で設定されている
@@ -29,7 +29,7 @@ Software updateの告知機能が有効になっています．
 Update通知機能のon/offは，メニュー「Edit」→「Options」で表示されるOptions dialogからも変更可能です．
 
 
-![update_config1](../assets/images/cuemol2/UpdateNotification/update_config1.png){ style="zoom: 0.5" .on-glb }
+![update_config1](../../assets/images/cuemol2/UpdateNotification/update_config1.png){ style="zoom: 0.5" .on-glb }
 
 
 上記Misc項目中の，Other settingsの中にある，"Disable software update checking"をONにすると，

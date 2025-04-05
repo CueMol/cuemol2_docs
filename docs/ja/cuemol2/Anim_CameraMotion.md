@@ -1,8 +1,8 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## カメラの移動アニメーション
 このセクションでは，カメラ（視点の位置・向き・拡大率等）を変化させるアニメーションについて，
 例を挙げながら説明します．
-（例で説明している作業は，[前セクション](../cuemol2/Anim_Cmb)の続きの操作として説明しています）
+（例で説明している作業は，[前セクション](../../cuemol2/Anim_Cmb)の続きの操作として説明しています）
 
 サンプルのqscシーンファイルが以下からダウンロードできます．
 
@@ -14,7 +14,7 @@
 アニメーションパネル中に，下図のように，**Start cam**という設定がありますが，
 これにより，アニメーション開始時の画面をどのカメラ視点から見たものにするかが決まります．
 
-> ![anim-panel-cmb1](../assets/images/cuemol2/Anim_CameraMotion/anim-panel-cmb1.png) ⇒ ![anim-startcam-1](../assets/images/cuemol2/Anim_CameraMotion/anim-startcam-1.png)
+> ![anim-panel-cmb1](../../assets/images/cuemol2/Anim_CameraMotion/anim-panel-cmb1.png) ⇒ ![anim-startcam-1](../../assets/images/cuemol2/Anim_CameraMotion/anim-startcam-1.png)
 
 図のように(none)になっている場合は，開始時にカメラの変更が行われません（すなわち再生ボタンを押した状態から開始する）
 
@@ -30,7 +30,7 @@
 
 そして，アニメーションパネルの「＋」ボタンを押して，Camera motionメニューを選択してください．
 
-![anim-cammot-1](../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-1.png)
+![anim-cammot-1](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-1.png)
 
 
 
@@ -38,7 +38,7 @@
 すると，以下のような設定ダイアログが現れます．
 
 
-![anim-cammot-2](../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-2.png){ style="zoom: 0.5" .on-glb }
+![anim-cammot-2](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-2.png){ style="zoom: 0.5" .on-glb }
 
 
 Common settingsの部分は，SimpleSpin等他のアニメーションと共通の設定項目です．
@@ -66,7 +66,7 @@ Ignore XXX
 ## 作成したアニメーションの確認
 以上のような作業を行うと，最終的にアニメーションパネルは以下のようになります．
 
-![anim-cammot-3](../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-3.png){ .on-glb }
+![anim-cammot-3](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-3.png){ .on-glb }
 
 このパネルの表示の意味するところは，
 

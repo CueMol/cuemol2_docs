@@ -1,4 +1,4 @@
-[Documents](./Documents)
+[Documents](../Documents)
 
 Update (2007/4/24)
 :   topファイルをQScript上で読み込めるようにしたので加筆．
@@ -283,7 +283,7 @@ link pept    head - ptr   tail + *     end
 上記の行を追加して，CueMolを再起動して1BF5のＮ末端をsimpleで表示すれば
 正しく認識されているのが分かります．
 
-![ptr](./assets/images/NonStdRes/ptr.png){ .on-glb }
+![ptr](../assets/images/NonStdRes/ptr.png){ .on-glb }
 
 ### 注意点
 topやlinファイルを変更した状態で新しいバージョンのCueMolを

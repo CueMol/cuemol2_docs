@@ -1,4 +1,4 @@
-[FrontPage](./FrontPage)
+[FrontPage](../FrontPage)
 
 ### 開発協力者募集中
 CueMolはopen sourceのmolecular visualization frameworkです．
@@ -27,23 +27,23 @@ Scripting/plugin interfaceの開発
 
 CueMolの開発について興味のお持ちの方は，
 
--  ![mm1](./assets/images/Development/mm1.png)![mm2](./assets/images/Development/mm2.png)
+-  ![mm1](../assets/images/Development/mm1.png)![mm2](../assets/images/Development/mm2.png)
 
--  ![icn-twitter](./assets/images/Development/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br />
+-  ![icn-twitter](../assets/images/Development/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br />
 （CueMol関連情報は#cuemolハッシュタグつきで）
 
--  あるいは[メーリングリスト](./MailingList)
+-  あるいは[メーリングリスト](../MailingList)
 
 にご連絡ください．
 
 ### 最新のソースコードからのbuild
 
--  Windows [cuemol2/Build_Win2015](./cuemol2/Build_Win2015) 
+-  Windows [cuemol2/Build_Win2015](../cuemol2/Build_Win2015) 
 
--  MacOS X  [cuemol2/Build_MacOSX2015](./cuemol2/Build_MacOSX2015)
+-  MacOS X  [cuemol2/Build_MacOSX2015](../cuemol2/Build_MacOSX2015)
 
--  Linuxなど  [cuemol2/Build_Linux](./cuemol2/Build_Linux)
+-  Linuxなど  [cuemol2/Build_Linux](../cuemol2/Build_Linux)
 
--  iOS  [cuemol2/Build_iOS](./cuemol2/Build_iOS)
+-  iOS  [cuemol2/Build_iOS](../cuemol2/Build_iOS)
 
 開発のためのdocumentationはまだ完備されていませんが，今後作成していく予定です．

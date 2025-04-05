@@ -1,4 +1,4 @@
-[cuemol2](../cuemol2)
+[cuemol2](../../cuemol2)
 
 ## iOSでのbuild方法
 CueMol2 iOS版はdesktop版と異なりすべての機能が実装されていないため，以下のライブラリのみ必要。

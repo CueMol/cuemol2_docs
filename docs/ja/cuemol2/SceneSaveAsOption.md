@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## Scene保存時のオプション
 
@@ -7,7 +7,7 @@ CueMol2 2.0.1.145以降では，
 以下のようなオプション設定ダイアログが表示されるようになりました．
 
 
-![save_qsc_option1](../assets/images/cuemol2/SceneSaveAsOption/save_qsc_option1.png)
+![save_qsc_option1](../../assets/images/cuemol2/SceneSaveAsOption/save_qsc_option1.png)
 
 
 ### Objectの埋め込み設定

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## Multi-touch trackpadの使用方法
 MacOS X (10.6以降)では，デバイス自体にもよりますがMulti-touch trackpadの機能が使用できるようになっています(古いMacBookなどでは使用できない)．
 
@@ -7,7 +7,7 @@ MacOS X (10.6以降)では，デバイス自体にもよりますがMulti-touch 
 環境設定ダイアログが表示されます．Mouse項目に以下のようなチェックボタンがありますが，これをONにしておくとMultitouch trackpadが使用できるようになります．
 
 
-![multitouch-osx](../assets/images/cuemol2/MultiTouchPad/multitouch-osx.png)
+![multitouch-osx](../../assets/images/cuemol2/MultiTouchPad/multitouch-osx.png)
 
 
 

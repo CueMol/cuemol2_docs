@@ -3,7 +3,7 @@
 からできます．
 ### 2.2.2系統
 
-[英語版](./en/Updates)
+[英語版](../en/Updates)
 
 ### 2.2.1系統
 #### 2.2.1.354
@@ -50,28 +50,28 @@
 
 - CPK, ballstick rendererのポリゴン数が大きくなりすぎた場合にdetailを自動で制限するようにした．
 
-- Camera設定に，各object/rendererのshow/hide状態を保存できるようにした([cuemol2/CameraVisFlags](./cuemol2/CameraVisFlags))
+- Camera設定に，各object/rendererのshow/hide状態を保存できるようにした([cuemol2/CameraVisFlags](../cuemol2/CameraVisFlags))
 
-- Mol surface cutterで，切断面と切断殻の両方を同時に生成できるようにした([cuemol2/MolSurfCut](./cuemol2/MolSurfCut))
+- Mol surface cutterで，切断面と切断殻の両方を同時に生成できるようにした([cuemol2/MolSurfCut](../cuemol2/MolSurfCut))
 
-- Tube rendererのputty(B factor等に応じて太さが変化する)を実装・GUI設定を追加([cuemol2/TubeRenderer](./cuemol2/TubeRenderer))
+- Tube rendererのputty(B factor等に応じて太さが変化する)を実装・GUI設定を追加([cuemol2/TubeRenderer](../cuemol2/TubeRenderer))
 
 - 文字ラベルなどをPOV-Ray renderingでも表示できるようにした
 
-- POV-Ray rendering dialogでlightingとradiosityの設定を出来るようにした([cuemol2/POVRayRenderLighting](./cuemol2/POVRayRenderLighting)，[cuemol2/Radiosity](./cuemol2/Radiosity))
+- POV-Ray rendering dialogでlightingとradiosityの設定を出来るようにした([cuemol2/POVRayRenderLighting](../cuemol2/POVRayRenderLighting)，[cuemol2/Radiosity](../cuemol2/Radiosity))
 
-- アニメーション設定のanimation objectの時間指定を他のanimation objectに対する相対時間設定で指定できるようにした([cuemol2/Anim_Cmb](./cuemol2/Anim_Cmb))．
+- アニメーション設定のanimation objectの時間指定を他のanimation objectに対する相対時間設定で指定できるようにした([cuemol2/Anim_Cmb](../cuemol2/Anim_Cmb))．
 
--  PyMOL session (PSE) fileの読み込み（ただし不完全）([cuemol2/PSEImporter](./cuemol2/PSEImporter))
+-  PyMOL session (PSE) fileの読み込み（ただし不完全）([cuemol2/PSEImporter](../cuemol2/PSEImporter))
 #### 2.2.1.330
 
 -  POV-Ray 3.7を同梱するように
 
--  POV-Ray renderingでmulti-cpu renderingを使用可能に([cuemol2/POVRayRenderDialog](./cuemol2/POVRayRenderDialog))
+-  POV-Ray renderingでmulti-cpu renderingを使用可能に([cuemol2/POVRayRenderDialog](../cuemol2/POVRayRenderDialog))
 
--  POV-Rayを使用したradiosityによるrenderingが使用可能に([cuemol2/Radiosity](./cuemol2/Radiosity))
+-  POV-Rayを使用したradiosityによるrenderingが使用可能に([cuemol2/Radiosity](../cuemol2/Radiosity))
 
--  POV-Ray renderingでBackground colorを透明にするオプションを追加([cuemol2/POVRayRenderDialog](./cuemol2/POVRayRenderDialog))
+-  POV-Ray renderingでBackground colorを透明にするオプションを追加([cuemol2/POVRayRenderDialog](../cuemol2/POVRayRenderDialog))
 
 -  MapSurfRenderer (isosurf; contourの表面表示バージョン) を実装
 
@@ -574,7 +574,7 @@ loopさせるmovieは最後のframeと最初のframeをだぶらせた方が良�
 
     -  MacOSX版では，ファイルを開くダイアログに，形式を選択するドロップダウン・リストボックスが表示されるようになった．ただし，ここでファイル形式を選んでもファイル一覧に表示される内容はフィルタリングされないという問題がある（原因調査中）．
 
--  ~~Win版、MacOSX版ともに，原子ラベルや距離表示を表示しようとすると，クラッシュする場合がある．[Install](./Install)の「ユーザ設定など」にあるとおりに**Application設定を削除してから起動すると正常動作する**ので，クラッシュした場合は試してみてください．~~ 149以降で修正済みです．
+-  ~~Win版、MacOSX版ともに，原子ラベルや距離表示を表示しようとすると，クラッシュする場合がある．[Install](../Install)の「ユーザ設定など」にあるとおりに**Application設定を削除してから起動すると正常動作する**ので，クラッシュした場合は試してみてください．~~ 149以降で修正済みです．
 
 #### 2.0.1.145
 

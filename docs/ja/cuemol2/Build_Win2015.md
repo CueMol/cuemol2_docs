@@ -1,11 +1,11 @@
-[../](../cuemol2/)
+[../](../../cuemol2/)
 
 ## Windows7でのbuild環境構築
 
 CueMol2のバージョンに合った環境を用いる必要がある。
 ここでは、
 
--  CueMol 2.2.2.X (git branch [vs2013test](../https://github.com/CueMol/cuemol2/tree/vs2013test))
+-  CueMol 2.2.2.X (git branch [vs2013test](../../https://github.com/CueMol/cuemol2/tree/vs2013test))
 
 -  Windows7 (VS2013)
 

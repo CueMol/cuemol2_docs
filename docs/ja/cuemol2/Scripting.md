@@ -29,13 +29,13 @@ nameで指定されるクラスのインスタンスを新規作成します．
 
 -  CueMol system levelの事項
 
-    -  [Scene and View](../cuemol2/Scripting/SceneAndView)
+    -  [Scene and View](../../cuemol2/Scripting/SceneAndView)
 
-    -  [Objectの操作など](../cuemol2/Scripting/Object)
+    -  [Objectの操作など](../../cuemol2/Scripting/Object)
 
-    -  [Rendererの操作など](../cuemol2/Scripting/Renderer)
+    -  [Rendererの操作など](../../cuemol2/Scripting/Renderer)
 
-    -  [Propertyの操作等](../cuemol2/Scripting/Property)
+    -  [Propertyの操作等](../../cuemol2/Scripting/Property)
 
 
-Return to [Documents](../Documents)
+Return to [Documents](../../Documents)

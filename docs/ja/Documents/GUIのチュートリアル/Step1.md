@@ -1,17 +1,17 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)|[次へ](../../Documents/GUIのチュートリアル/Step2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)|[次へ](../../../Documents/GUIのチュートリアル/Step2)
 
 
 
 ## CueMolの起動
 
-CueMolのアイコン![gui_step1_ico](../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_ico.png){ .on-glb }をダブルクリックすると下図のような画面が表示されます.
+CueMolのアイコン![gui_step1_ico](../../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_ico.png){ .on-glb }をダブルクリックすると下図のような画面が表示されます.
 
-![gui_step1_start](../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_start.png){ .on-glb }
+![gui_step1_start](../../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_start.png){ .on-glb }
 
 
 ## PDBファイルの読み込みと分子モデルの表示
 
-standard tool barの![gui_step1_open_ico](../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_open_ico.png){ .on-glb }アイコンをクリックします．
+standard tool barの![gui_step1_open_ico](../../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_open_ico.png){ .on-glb }アイコンをクリックします．
 
 あるいは，MenuからFile→Openを選択します．
 
@@ -23,7 +23,7 @@ standard tool barの![gui_step1_open_ico](../../assets/images/Documents/GUIの�
 取得できます)．
 「ファイルを開く」ダイアログでPDBファイルを選択し，OKボタンを押すと，次に分子座標ファイル読み込みのオプションダイアログが表示されます．
 
-![gui_step1_creat_rend](../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_creat_rend.png){ .on-glb }
+![gui_step1_creat_rend](../../../assets/images/Documents/GUIのチュートリアル/Step1/gui_step1_creat_rend.png){ .on-glb }
 
 分子モデルを開くと，メモリー上に分子オブジェクトとして読込まれます．
 オブジェクトには分子以外に，電子密度や静電ポテンシャルなどがあります．
@@ -64,4 +64,4 @@ standard tool barの![gui_step1_open_ico](../../assets/images/Documents/GUIの�
 
 OKボタンを押すと分子モデルがview表示されます．
 
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)|[次へ](../../Documents/GUIのチュートリアル/Step2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)|[次へ](../../../Documents/GUIのチュートリアル/Step2)

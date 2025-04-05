@@ -1,6 +1,6 @@
-[ [GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) |
-[&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step8) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step10) ]
+[ [GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) |
+[&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step8) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step10) ]
 
 ## Cameraの操作
 ### Cameraの追加
@@ -8,18 +8,18 @@
 ある視点を保存しておいて，後で再度その視点で見てみたいことがあったりするかもしれません．
 そういう場合は，Cameraとして視点の位置や向きなどを名前を付けてシーン中に保存しておくことができます．
 
-![gui-step9-camera1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera1.png)
+![gui-step9-camera1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera1.png)
 
-Sceneパネルの，Cameraと書かれた項目を選択し![gui_step4_newrnd](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui_step4_newrnd.png)ボタンを押すと，新規Cameraが作成され，現在の視点の位置や向き，ズーム，スラブなどすべての情報が保存されます．
+Sceneパネルの，Cameraと書かれた項目を選択し![gui_step4_newrnd](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui_step4_newrnd.png)ボタンを押すと，新規Cameraが作成され，現在の視点の位置や向き，ズーム，スラブなどすべての情報が保存されます．
 
-![gui-step9-camera-name1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera-name1.png)
+![gui-step9-camera-name1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera-name1.png)
 
 以上のように，名前を指定するダイアログが出てくるので，適当に名前を入力してOKボタンを押します（デフォルトの名前でもOK）．
 
 すると，以下のようにCameraの下層に今作成したcamera_0という新しいCameraが作成されているのがわかると思います．
 
 
-![gui-step9-camera-added1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera-added1.png)
+![gui-step9-camera-added1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera-added1.png)
 
 
 この状態で，ビューの方を適当にドラッグしたりして視点を変えたり，ズームを変えたりしてみてください．
@@ -27,12 +27,12 @@ Sceneパネルの，Cameraと書かれた項目を選択し![gui_step4_newrnd](.
 
 ### Cameraのcontext menu
 
-![gui-step9-camera-ctxtmenu1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera-ctxtmenu1.png)
+![gui-step9-camera-ctxtmenu1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-camera-ctxtmenu1.png)
 
 
 Cameraの項目を右クリックすると，上図のようなコンテキストメニューが表示されますが，それぞれの機能は以下のようになっています．
 New camera...
-:   新規Cameraの作成．![gui_step4_newrnd](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui_step4_newrnd.png)ボタンと同じ機能．
+:   新規Cameraの作成．![gui_step4_newrnd](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui_step4_newrnd.png)ボタンと同じ機能．
 
 Delete camera
 :   Cameraの削除．マイナスボタンと同じ機能．（バージョン2.0.0.94以前では削除がundoできないので注意）
@@ -62,13 +62,13 @@ Properties...
 CueMol2では，１つのシーンに複数のビューを接続することができます．
 ### 第２のViewを追加する
 まず，新規タブ作成を行ってください．
-ツールバーの![gui-step9-newtabbtn1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-newtabbtn1.png)あるいはメニューから「File」→「New Tab」を実行します．
+ツールバーの![gui-step9-newtabbtn1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-newtabbtn1.png)あるいはメニューから「File」→「New Tab」を実行します．
 
 
-![gui-step9-newtab1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-newtab1.png){ style="zoom: 0.5" .on-glb }
+![gui-step9-newtab1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-newtab1.png){ style="zoom: 0.5" .on-glb }
 
 
-[前頁](../../Documents/GUIのチュートリアル(CueMol2)/Step6)で新規シーンを作成した時と同じダイアログが表示されますが，
+[前頁](../../../Documents/GUIのチュートリアル(CueMol2)/Step6)で新規シーンを作成した時と同じダイアログが表示されますが，
 下図のように，New View forの方を選択し，OKを押します．
 Viewの名前はデフォルトで適当なもの（この場合は数字の１）がつけられますが，
 他のにしたかったら入力してください．
@@ -77,7 +77,7 @@ Viewの名前はデフォルトで適当なもの（この場合は数字の１�
 
 図のように，tutorial1.qscに対して，0（はじめからあるビュー）と1（今新しく作ったやつ）２つのタブができていることがわかると思います．
 
-![gui-step9-view-added1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-view-added1.png)
+![gui-step9-view-added1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui-step9-view-added1.png)
 
 どちらのビューも同じシーンtutorial1.qscに接続しているため，
 クリックや選択などをどちらから操作しても全てtutorial1.qscに影響します．
@@ -92,5 +92,5 @@ Viewの名前はデフォルトで適当なもの（この場合は数字の１�
 なので，作っておきながらこういう書き方をするのはなんですが，
 複数View機能はそもそも要らないのかもしれません．
 
-[ [&lt;--前に戻る](../../Documents/GUIのチュートリアル(CueMol2)/Step8) |
-[次へ--&gt;](../../Documents/GUIのチュートリアル(CueMol2)/Step10) ]
+[ [&lt;--前に戻る](../../../Documents/GUIのチュートリアル(CueMol2)/Step8) |
+[次へ--&gt;](../../../Documents/GUIのチュートリアル(CueMol2)/Step10) ]

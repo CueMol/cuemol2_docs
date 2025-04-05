@@ -1,6 +1,6 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) | [次へ](../../Documents/GUIのチュートリアル(CueMol2)/StepC2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) | [次へ](../../../Documents/GUIのチュートリアル(CueMol2)/StepC2)
 
-まず，[基本編](../../Documents/GUIのチュートリアル(CueMol2)/Step1)を参考に，PDBサイトからダウンロードしてきたLysozymeのPDBファイルを読み込んで，traceレンダラーで表示してください．
+まず，[基本編](../../../Documents/GUIのチュートリアル(CueMol2)/Step1)を参考に，PDBサイトからダウンロードしてきたLysozymeのPDBファイルを読み込んで，traceレンダラーで表示してください．
 あるいは直接(Get PDB by accession code...)で読み込んでも構いません．
 
 ## 結晶学的情報
@@ -9,7 +9,7 @@
 Symmetryパネルに結晶に関する情報が表示されます．（Symmetryパネルが表示されていない場合は，メニュー「Window」→「Panels」から表示させてください）
 
 
-![c1-symm-panel1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symm-panel1.png)
+![c1-symm-panel1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symm-panel1.png)
 
 
 読込んだPDBファイルによっては，
@@ -25,7 +25,7 @@ Symmetryパネルに結晶に関する情報が表示されます．（Symmetry�
 Symmetryパネルから"Unit cell"ボタンを押します．
 
 
-![c1-unitcell1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-unitcell1.png){ style="zoom: 0.5" .on-glb }
+![c1-unitcell1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-unitcell1.png){ style="zoom: 0.5" .on-glb }
 
 
 図のように，unit cellと座標軸が表示されます．
@@ -46,11 +46,11 @@ unitcellレンダラーが再び作られ，表示されるようになります
 #### 単位胞内に表示
 Symmetryパネルの，"Symm mol"ボタンを押すと，以下のようなメニューが表示されます．
 
-![c1-symmol-bycell1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-bycell1.png)
+![c1-symmol-bycell1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-bycell1.png)
 
 ここで，一番下のUnit cellを押すと，単位胞内の対称分子のみが表示されます．
 
-![c1-symmol-bycell-shown1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-bycell-shown1.png){ style="zoom: 0.5" .on-glb }
+![c1-symmol-bycell-shown1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-bycell-shown1.png){ style="zoom: 0.5" .on-glb }
 
 リゾチームでは，P4(3)2(1)2なので，対称操作は８つあり，
 すなわち８つの対称分子が表示されるわけです．
@@ -84,13 +84,13 @@ Sceneパネルを見るとsymmという名前のsymm rendererが出来ている�
 
 さらに，ステータスバーのところに，対称操作を含めた情報が表示されます．
 
-![c1-symmol-statusbar1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-statusbar1.png)
+![c1-symmol-statusbar1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-statusbar1.png)
 
 
 #### 結晶学的対称分子のコンテキスト・メニュー
 同様に，マウスで右クリックするとコンテキストメニューが表示されます．
 
-![c1-symmol-ctxtmenu1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-ctxtmenu1.png)
+![c1-symmol-ctxtmenu1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-ctxtmenu1.png)
 
 通常の場合と違うのは，メニューのうち以下にあげる３点になります．
 (symop: 1/2+Y,1/2-X,1/4+Z)
@@ -112,7 +112,7 @@ Symm rendererで表示されている対称分子を右クリックし（ぱっ�
 
 すると，以下のようなダイアログが出てきます．
 
-![c1-symmol-create1](../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-create1.png)
+![c1-symmol-create1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC1/c1-symmol-create1.png)
 
 Object名は変えることができますが，このままでもOKです．
 OKボタンを押すと新たに分子が作られます．
@@ -136,4 +136,4 @@ CueMol2.1からは，Create symm objectで作成したsymm分子に対しては
 意図した二次構造と違ったものになってしまいます）
 
 
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル(CueMol2)/) | [次へ](../../Documents/GUIのチュートリアル(CueMol2)/StepC2)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル(CueMol2)/) | [次へ](../../../Documents/GUIのチュートリアル(CueMol2)/StepC2)

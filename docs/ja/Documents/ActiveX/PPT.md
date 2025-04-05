@@ -1,4 +1,4 @@
-[Documents/ActiveX](../../Documents/ActiveX)
+[Documents/ActiveX](../../../Documents/ActiveX)
 
 
 
@@ -16,15 +16,15 @@ CueMol controlを使うことができます．
 
 手順としては，以下の2とおりが可能です．
 
--  QScriptを使って，普通に図などを作るのと同じ手順で作成．[Documents/QScriptのチュートリアル](../../Documents/QScriptのチュートリアル)参照．
+-  QScriptを使って，普通に図などを作るのと同じ手順で作成．[Documents/QScriptのチュートリアル](../../../Documents/QScriptのチュートリアル)参照．
 
--  GUIを使って作成，dump sessionを行なって.queファイルを作る．[Documents/GUIのチュートリアル/StepA4](../../Documents/GUIのチュートリアル/StepA4)参照．
+-  GUIを使って作成，dump sessionを行なって.queファイルを作る．[Documents/GUIのチュートリアル/StepA4](../../../Documents/GUIのチュートリアル/StepA4)参照．
 
 ともかくも，スクリプトあるいはダンプを読み込んだら，
 分子の図が見せたい方向と大きさで出るようにしておくわけです．
 
 ここでは例として，
-[Documents/QScriptのチュートリアル/Step3](../../Documents/QScriptのチュートリアル/Step3)
+[Documents/QScriptのチュートリアル/Step3](../../../Documents/QScriptのチュートリアル/Step3)
 のblm-ribbon5.qsを使うことにします．
 
 ### PowerPoint側での準備
@@ -32,7 +32,7 @@ CueMol controlを使うことができます．
 PowerPointのメニューの，「表示」→「ツールバー」→「コントロール ツールボックス」です．
 
 
-![ctrl_toolbar](../../assets/images/Documents/ActiveX/PPT/ctrl_toolbar.png)
+![ctrl_toolbar](../../../assets/images/Documents/ActiveX/PPT/ctrl_toolbar.png)
 
 
 つぎに，埋め込みたいスライドのページを表示させ，
@@ -42,7 +42,7 @@ PowerPointのメニューの，「表示」→「ツールバー」→「コン�
 出てきますので，その中から「CueMol SimpleMolView Object」を選択します．
 
 
-![ctrl_toolbar2](../../assets/images/Documents/ActiveX/PPT/ctrl_toolbar2.png)
+![ctrl_toolbar2](../../../assets/images/Documents/ActiveX/PPT/ctrl_toolbar2.png)
 
 
 マウスカーソルが「＋」の形になるので，
@@ -52,7 +52,7 @@ PowerPointのメニューの，「表示」→「ツールバー」→「コン�
 CueMolのアイコンやバージョン情報などが出てきます．
 
 
-![ppt_slide1](../../assets/images/Documents/ActiveX/PPT/ppt_slide1.png)
+![ppt_slide1](../../../assets/images/Documents/ActiveX/PPT/ppt_slide1.png)
 
 
 ### 表示するスクリプトを指定する
@@ -61,7 +61,7 @@ CueMolのアイコンやバージョン情報などが出てきます．
 表示されるので，その中から「プロパティー」を選びます．
 
 
-![ppt_slide2](../../assets/images/Documents/ActiveX/PPT/ppt_slide2.png)
+![ppt_slide2](../../../assets/images/Documents/ActiveX/PPT/ppt_slide2.png)
 
 
 プロパティーウィンドウが表示されるので，
@@ -69,7 +69,7 @@ CueMolのアイコンやバージョン情報などが出てきます．
 右側に出てくる「...」ボタンをクリックします．
 
 
-![ppt_slide3](../../assets/images/Documents/ActiveX/PPT/ppt_slide3.png)
+![ppt_slide3](../../../assets/images/Documents/ActiveX/PPT/ppt_slide3.png)
 
 
 つぎに，プロパティーページのダイアログが出てくるので，「Source」タブの
@@ -79,7 +79,7 @@ Data sourceという項目のところに，
 ファイル選択ダイアログが出るようになっています．
 
 
-![ppt_slide4](../../assets/images/Documents/ActiveX/PPT/ppt_slide4.png)
+![ppt_slide4](../../../assets/images/Documents/ActiveX/PPT/ppt_slide4.png)
 
 
 ファイル選択ダイアログで，スクリプトファイルを選んで「開く」ボタンを押すと，
@@ -87,7 +87,7 @@ Data sourceという項目のところに，
 スクリプトのパス名が入ります．
 
 
-![ppt_slide5](../../assets/images/Documents/ActiveX/PPT/ppt_slide5.png)
+![ppt_slide5](../../../assets/images/Documents/ActiveX/PPT/ppt_slide5.png)
 
 
 プロパティーページの「OK」ボタンを押せば完了です．
@@ -99,7 +99,7 @@ Data sourceという項目のところに，
 CueMolでスクリプトを実行したときと同じ表示になっていると思います．
 
 
-![ppt_slideshow2](../../assets/images/Documents/ActiveX/PPT/ppt_slideshow2.png)
+![ppt_slideshow2](../../../assets/images/Documents/ActiveX/PPT/ppt_slideshow2.png)
 
 
 ### CueMolコントロールの操作
@@ -107,7 +107,7 @@ CueMolでスクリプトを実行したときと同じ表示になっている�
 コントロール領域（上の図の黒い矩形部分）でマウスを左ドラッグすると，
 分子の表示を回転させることができます．
 また，右ドラッグで平行移動になります．
-マウス操作は，アプリ版CueMolの分子ビューでの操作と同じです([Documents/GUIのチュートリアル/Step2](../../Documents/GUIのチュートリアル/Step2)参照)．
+マウス操作は，アプリ版CueMolの分子ビューでの操作と同じです([Documents/GUIのチュートリアル/Step2](../../../Documents/GUIのチュートリアル/Step2)参照)．
 ただし，クリックで原子情報を表示させたり，
 コンテキストメニューを出したりは，できません．
 
@@ -183,7 +183,7 @@ maxlabelプロパティーを変更していないと，最後の５原子しか
 100にしているので，100個までなら一度に出るというわけです．
 
 
-![ppt_slideshow3](../../assets/images/Documents/ActiveX/PPT/ppt_slideshow3.png)
+![ppt_slideshow3](../../../assets/images/Documents/ActiveX/PPT/ppt_slideshow3.png)
 
 
 ラベルの色や透明度なども，プロパティー（color）で変えられます．
@@ -206,7 +206,7 @@ maxlabelプロパティーを変更していないと，最後の５原子しか
 そこでラベルに使用したいフォントを指定します．
 
 
-![ppt_fontdlg1](../../assets/images/Documents/ActiveX/PPT/ppt_fontdlg1.png)
+![ppt_fontdlg1](../../../assets/images/Documents/ActiveX/PPT/ppt_fontdlg1.png)
 
 
 現バージョン(build 108)では，fontを変更しようとしたときに，

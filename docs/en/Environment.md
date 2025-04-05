@@ -1,1 +1,1 @@
-[FrontPage](../en/FrontPage)
+[FrontPage](../../en/FrontPage)

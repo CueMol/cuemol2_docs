@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## 相互作用の自動抽出
 2.0.2.310以降では，分子の相互作用自動抽出機能が実装されました．
@@ -8,7 +8,7 @@
 何らかの分子が読み込まれている状態で
 メニュー「Tools」→「Interaction...」を実行すると，以下のようなダイアログが表示されます．
 
-![intrtool_dlg2](../assets/images/cuemol2/IntrTool/intrtool_dlg2.png){ style="zoom: 0.5" .on-glb }
+![intrtool_dlg2](../../assets/images/cuemol2/IntrTool/intrtool_dlg2.png){ style="zoom: 0.5" .on-glb }
 
 ダイアログの設定値の説明は，以下の通りです．
 Molecule
@@ -58,7 +58,7 @@ Renderer
 以上を実行すると，A鎖とB鎖の間の水素結合（の可能性がある相互作用）がAtomintrレンダラーmeasureに追加されます．
 
 
-![intrtool_result2](../assets/images/cuemol2/IntrTool/intrtool_result2.png){ style="zoom: 0.5" .on-glb }
+![intrtool_result2](../../assets/images/cuemol2/IntrTool/intrtool_result2.png){ style="zoom: 0.5" .on-glb }
 
 
 さらに，Log windowに相互作用している可能性のある原子と距離の一覧が出力されます．
@@ -104,7 +104,7 @@ B GLN 9 NE2 <==> A HIS 57 O : 3.05
 以上を実行すると，分子内，分子間に関わらず選択(*)に含まれる水素結合（の可能性がある相互作用）がAtomintrレンダラーmeasureに追加されます．
 以下の図のように，measure rendererが（なければ）作られ，相互作用が点線で表示されます．デフォルトの設定では，さらに各相互作用の距離も表示されています．
 
-![intrtool_result1](../assets/images/cuemol2/IntrTool/intrtool_result1.png){ style="zoom: 0.5" .on-glb }
+![intrtool_result1](../../assets/images/cuemol2/IntrTool/intrtool_result1.png){ style="zoom: 0.5" .on-glb }
 
 
 さらに，Log windowに相互作用している可能性のある原子と距離の一覧が出力されます．
@@ -114,5 +114,5 @@ B GLN 9 NE2 <==> A HIS 57 O : 3.05
 
 ## その他注意点など
 ### 相互作用表示の設定
-Interaction toolで抽出した相互作用は，Measureの距離測定機能（[Documents/GUIのチュートリアル(CueMol2)/Step12](../Documents/GUIのチュートリアル(CueMol2)/Step12)）を使って作成した相互作用と実体はまったく同じです．（要は一つ一つクリックして選ぶのを自動化しただけと考えればよい）．
-そのため，相互作用表示の設定などは，[Documents/GUIのチュートリアル(CueMol2)/Step13](../Documents/GUIのチュートリアル(CueMol2)/Step13)と同様の方法で変更可能です．
+Interaction toolで抽出した相互作用は，Measureの距離測定機能（[Documents/GUIのチュートリアル(CueMol2)/Step12](../../Documents/GUIのチュートリアル(CueMol2)/Step12)）を使って作成した相互作用と実体はまったく同じです．（要は一つ一つクリックして選ぶのを自動化しただけと考えればよい）．
+そのため，相互作用表示の設定などは，[Documents/GUIのチュートリアル(CueMol2)/Step13](../../Documents/GUIのチュートリアル(CueMol2)/Step13)と同様の方法で変更可能です．

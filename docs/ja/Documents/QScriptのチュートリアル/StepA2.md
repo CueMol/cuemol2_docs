@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -25,7 +25,7 @@ CueMolは，
 
 リゾチームの電子密度を表示します．(lyso.qs)
 
-![lyso_dens1](../../assets/images/Documents/QScriptのチュートリアル/StepA2/lyso_dens1.png){ .on-glb }
+![lyso_dens1](../../../assets/images/Documents/QScriptのチュートリアル/StepA2/lyso_dens1.png){ .on-glb }
 
 
 <pre>
@@ -149,7 +149,7 @@ centerでマップが描画される中心を指定している．この例で�
 半透明にしたほうが電子密度のメッシュがしつこくならずに見やすい．
 
 
-![lyso_dens2](../../assets/images/Documents/QScriptのチュートリアル/StepA2/lyso_dens2.png){ .on-glb }
+![lyso_dens2](../../../assets/images/Documents/QScriptのチュートリアル/StepA2/lyso_dens2.png){ .on-glb }
 
 
 上のデフォルトの出力から，materialのambientを0.75に，

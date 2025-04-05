@@ -1,9 +1,9 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## アニメーションのレンダリングと動画ファイル作成
 このセクションでは，POV-Rayを使用したアニメーションの画像ファイルへのレンダリングと，
 FFmpegを利用したquicktimeやAVI等の動画ファイル作成の方法を，
 例を挙げながら説明します．
-（例で説明している作業は，[前セクション](../cuemol2/Anim_ShowHide)の続きの操作として説明しています）
+（例で説明している作業は，[前セクション](../../cuemol2/Anim_ShowHide)の続きの操作として説明しています）
 
 ## POV-Rayによるレンダリング
 静止画の場合と同様に，POV-Rayを使用してアニメーションの各フレームを画像ファイルにレンダリングすることが可能です．
@@ -11,7 +11,7 @@ FFmpegを利用したquicktimeやAVI等の動画ファイル作成の方法を�
 メニュー「Render」→「Animation rendering」を実行すると，
 以下のようなAnimation renderingダイアログが表示されます．
 
-![anim-render-1](../assets/images/cuemol2/Anim_RenderMovie/anim-render-1.png){ style="zoom: 0.5" .on-glb }
+![anim-render-1](../../assets/images/cuemol2/Anim_RenderMovie/anim-render-1.png){ style="zoom: 0.5" .on-glb }
 
 
 上図のようにタブに対応して主に３種類の設定項目がありますが，順に説明します．
@@ -32,7 +32,7 @@ Projection
 :   画面の投影法法を指定．
 
 (静止画のPOV-Ray rendering dialogの設定と同じ.
-[POV-Rayによるシーンのレンダリング](../Documents/GUIのチュートリアル(CueMol2)/Step10)参照）
+[POV-Rayによるシーンのレンダリング](../../Documents/GUIのチュートリアル(CueMol2)/Step10)参照）
 Frame rate
 :   １秒間に何フレーム分の画像をレンダリングするか指定する．大きい方が滑らかな動画になるが，ファイルサイズもその分膨大になる．通常は30か24で十分．特にファイルサイズをケチりたい場合は5等にするとよいが，あまり小さくし過ぎるとカクカクになる．
 
@@ -62,7 +62,7 @@ Log
 ### Render options
 主にPOV-Rayに関する設定を行います．
 
-![anim-render-2](../assets/images/cuemol2/Anim_RenderMovie/anim-render-2.png){ style="zoom: 0.5" .on-glb }
+![anim-render-2](../../assets/images/cuemol2/Anim_RenderMovie/anim-render-2.png){ style="zoom: 0.5" .on-glb }
 
 Povray exe file
 :   POV-Rayの実行ファイルを指定する．既に静止画のPOV-Ray rendering dialogを使用してレンダリングを行っている場合は同じ設定が入るので，特にそのままでよい．POV-Ray付属版を使用している場合も，はじめから適切な値が入っているためそのままで問題ない．
@@ -77,7 +77,7 @@ Post-render alpha blending
 :   半透明があるシーンではONにする．
 
 半透明が無いことがわかっている場合はOFFにしたほうがrenderingが速くなる．
-（詳しくは[半透明オブジェクトのレンダリング](../cuemol2/PostAlphaBlend)参照）
+（詳しくは[半透明オブジェクトのレンダリング](../../cuemol2/PostAlphaBlend)参照）
 Shadow
 :   影がrenderingされるようになります．普通影はできな方が良いのでOFFにする．
 
@@ -93,7 +93,7 @@ Shadow
 ### Movie options
 主に動画をエンコードするFFmpegに関する設定を行います．
 
-![anim-render-3](../assets/images/cuemol2/Anim_RenderMovie/anim-render-3.png){ style="zoom: 0.5" .on-glb }
+![anim-render-3](../../assets/images/cuemol2/Anim_RenderMovie/anim-render-3.png){ style="zoom: 0.5" .on-glb }
 
 Make movie
 :   OFFになっているとPNGファイルへのレンダリングのみ行われ，動画は作成されない．他のソフトウェアで動画を作成する場合や，FFmpegのオプションを細かく変更して何度もエンコードを試みる予定の場合はOFFでよい．
@@ -120,7 +120,7 @@ Bitrate
 以上の設定をすべて行った後，Startボタンを押すとレンダリングが開始されます．
 アニメーションの長さとframe rateにもよりますが，非常に大量の画像がレンダリングされるため結構時間がかかります．
 
-![anim-render-4](../assets/images/cuemol2/Anim_RenderMovie/anim-render-4.png){ style="zoom: 0.5" .on-glb }
+![anim-render-4](../../assets/images/cuemol2/Anim_RenderMovie/anim-render-4.png){ style="zoom: 0.5" .on-glb }
 
 Stopボタンを押すことで，レンダリングを中断することが可能です．
 

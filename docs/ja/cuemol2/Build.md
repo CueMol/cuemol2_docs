@@ -1,4 +1,4 @@
-[../](../cuemol2/)
+[../](../../cuemol2/)
 
 ## CueMol2のバージョンとxulrunner/geckoのバージョン
 CueMol2のバージョンに合ったバージョンを用いる必要がある。

@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## NVIDIA 3D vision用ケーブルの自作
 
@@ -20,7 +20,7 @@ http://www.nvidia.co.jp/object/quadro_pro_graphics_boards_linux_jp.html
 あと，隣にUSB端子がありますが，Linuxではこれは給電にしか使われてないようです（Windowsでは同期信号受信にも使われているっぽい？）．
 
 
-> ![3dvision_forw](../assets/images/cuemol2/NV3DVisionCable/3dvision_forw.jpg){ style="zoom: 0.8" } ![3dvision_back](../assets/images/cuemol2/NV3DVisionCable/3dvision_back.jpg)
+> ![3dvision_forw](../../assets/images/cuemol2/NV3DVisionCable/3dvision_forw.jpg){ style="zoom: 0.8" } ![3dvision_back](../../assets/images/cuemol2/NV3DVisionCable/3dvision_back.jpg)
 
 ### ビデオカード側の接続部
 ビデオカード側も，あまり見かけない3-pin mini DINという形状のコネクターになっています．
@@ -42,12 +42,12 @@ http://www.sengoku.co.jp/
 250円
 
 
-> ![3pin_minidin](../assets/images/cuemol2/NV3DVisionCable/3pin_minidin.jpg){ .on-glb } ![stereo_micro](../assets/images/cuemol2/NV3DVisionCable/stereo_micro.jpg){ .on-glb }
+> ![3pin_minidin](../../assets/images/cuemol2/NV3DVisionCable/3pin_minidin.jpg){ .on-glb } ![stereo_micro](../../assets/images/cuemol2/NV3DVisionCable/stereo_micro.jpg){ .on-glb }
 
 ### コネクター間の接続
 コネクター間の接続は，以下のようにつなげばOKのようです．
 
-![455px-MiniDIN-3_Diagram.svg](../assets/images/cuemol2/NV3DVisionCable/455px-MiniDIN-3_Diagram.svg.png){ style="zoom: 0.25" }
+![455px-MiniDIN-3_Diagram.svg](../../assets/images/cuemol2/NV3DVisionCable/455px-MiniDIN-3_Diagram.svg.png){ style="zoom: 0.25" }
 
 ピン側から見て左から，A, B, Cとする．
 
@@ -64,7 +64,7 @@ http://www.sengoku.co.jp/
 ### 完成
 一応こんな感じになりました．
 
-![final_1](../assets/images/cuemol2/NV3DVisionCable/final_1.jpg){ .on-glb }
+![final_1](../../assets/images/cuemol2/NV3DVisionCable/final_1.jpg){ .on-glb }
 
 
 ### 接続
@@ -77,14 +77,14 @@ X serverの方の設定などを終えた後で接続し，
 （Windowsの場合は再起動は必要ない）
 
 
-![connect_1](../assets/images/cuemol2/NV3DVisionCable/connect_1.jpg)
+![connect_1](../../assets/images/cuemol2/NV3DVisionCable/connect_1.jpg)
 
 
 次に3Dを使うアプリ(cuemol2やcootとか)を起動し，stereoを有効にすると
 以下のように明るい緑に光ればOKです．
 
 
-![connect_2](../assets/images/cuemol2/NV3DVisionCable/connect_2.jpg)
+![connect_2](../../assets/images/cuemol2/NV3DVisionCable/connect_2.jpg)
 
 
 肉眼では見えないですが，デジカメなどから見ると，上のように赤外線LEDが光っているのが見えます．

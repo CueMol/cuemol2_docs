@@ -1,4 +1,4 @@
-[Documents/ActiveX](../../Documents/ActiveX)
+[Documents/ActiveX](../../../Documents/ActiveX)
 
 
 
@@ -6,7 +6,7 @@
 
 ### インストール
 まずはActiveXコントロールのインストールについてです．
-[Install](../../Install)にも書かれているとおり，
+[Install](../../../Install)にも書かれているとおり，
 CueMol本体のインストーラーのウィザードの，
 「Select Additional Task」のところで，
 ActiveXコントロールのインストールを選択するとインストールされます．
@@ -17,7 +17,7 @@ ActiveXコントロールのインストールを選択するとインストー�
 危険なものではありませんが）．
 
 
-![installer1](../../assets/images/Documents/ActiveX/IE/installer1.png)
+![installer1](../../../assets/images/Documents/ActiveX/IE/installer1.png)
 
 
 ここで，「Register the CueMol ActiveX control」をチェックして
@@ -47,14 +47,14 @@ Structure Explorerのページで，左のメニューの「View Structure」
 というのが出てきます.
 
 
-![rcsbsite](../../assets/images/Documents/ActiveX/IE/rcsbsite.png)
+![rcsbsite](../../../assets/images/Documents/ActiveX/IE/rcsbsite.png)
 
 
 ここで，RasmolあるいはSwiss-PdbViewerのリンクをクリックすると，
 以下のように，ブラウザ中に分子が表示されます．
 
 
-![rcsbsite3](../../assets/images/Documents/ActiveX/IE/rcsbsite3.png)
+![rcsbsite3](../../../assets/images/Documents/ActiveX/IE/rcsbsite3.png)
 
 
 HTML文書が表示される部分（背景の黒い部分）がCueMolのコントロールです．
@@ -121,13 +121,13 @@ trace rendererの中心にviewの中心を設定しています．
 表示が以下のように変わります．
 
 
-![rcsbsite-rbn](../../assets/images/Documents/ActiveX/IE/rcsbsite-rbn.png)
+![rcsbsite-rbn](../../../assets/images/Documents/ActiveX/IE/rcsbsite-rbn.png)
 
 
 startup.qsはコントロールの起動時にのみ読み込まれるので，
 変更した場合はブラウザのリロードボタンを押さなければ更新されません．
 
-[QScriptのチュートリアルページ](../../Documents/ActiveX/../QScriptのチュートリアル)を参考に，表示をカスタマイズしてみてください．
+[QScriptのチュートリアルページ](../../../Documents/ActiveX/../QScriptのチュートリアル)を参考に，表示をカスタマイズしてみてください．
 あと，リボン表示にするなら，コントロール中では軽い表示にしたほうが良いので，
 レンダラーのプロパティーを調節して，リボンの分割数などを減らした方が良いでしょう．
 

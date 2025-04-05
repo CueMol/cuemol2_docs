@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 ## ActiveX controlについて
 
 CueMolのActiveX controlは，
@@ -15,8 +15,8 @@ PowerPointでの使用法
 ### Menu
 
 
--  [IEにおける使用法](../Documents/ActiveX/IE)
+-  [IEにおける使用法](../../Documents/ActiveX/IE)
 
--  [PowerPointにおける使用法](../Documents/ActiveX/PPT)
+-  [PowerPointにおける使用法](../../Documents/ActiveX/PPT)
 
--  [CueMol中でのスライドショー](../Documents/ActiveX/SlideShow)
+-  [CueMol中でのスライドショー](../../Documents/ActiveX/SlideShow)

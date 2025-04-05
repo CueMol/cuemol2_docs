@@ -1,4 +1,4 @@
-[FrontPage](../en/FrontPage)
+[FrontPage](../../en/FrontPage)
 ### Series 2.2.3
 #### Version 2.2.3.443
 
@@ -214,21 +214,21 @@
 Build environment for Win32 is updated to VS2013<br />
 Build environment for MacOS X is updated to clang-6.1 (Xcode 6.4)
 
--  Implementation of density map loader by PDB ID from EDS server (see: [cuemol2/FetchPDB](../en/cuemol2/FetchPDB))
+-  Implementation of density map loader by PDB ID from EDS server (see: [cuemol2/FetchPDB](../../en/cuemol2/FetchPDB))
 
 -  Implementation of chain or secondary-structure based coloring in RainbowColoring class
 
--  Implementation of sequence display panel (see: [cuemol2/SequenceDisplayPanel](../en/cuemol2/SequenceDisplayPanel))
+-  Implementation of sequence display panel (see: [cuemol2/SequenceDisplayPanel](../../en/cuemol2/SequenceDisplayPanel))
 
--  Implementation of ribbon style helix rendering by CartoonRenderer (see: [cuemol2/CartoonRenderer](../en/cuemol2/CartoonRenderer))
+-  Implementation of ribbon style helix rendering by CartoonRenderer (see: [cuemol2/CartoonRenderer](../../en/cuemol2/CartoonRenderer))
 
 -  Support for MRC-type map file
 
--  Rendering of spheres and cylinders (cpk and ballstick renderers) using GL shader (see: [cuemol2/CPKRenderer](../en/cuemol2/CPKRenderer) and [cuemol2/BallStickRenderer](../en/cuemol2/BallStickRenderer))
+-  Rendering of spheres and cylinders (cpk and ballstick renderers) using GL shader (see: [cuemol2/CPKRenderer](../../en/cuemol2/CPKRenderer) and [cuemol2/BallStickRenderer](../../en/cuemol2/BallStickRenderer))
 
 -  Dropped the support for the CueMol2 ActiveX control in the Windows version.
 
 ### Other releases
-[Japanese page](../Updates)
+[Japanese page](../../Updates)
 
 #googletrnsl

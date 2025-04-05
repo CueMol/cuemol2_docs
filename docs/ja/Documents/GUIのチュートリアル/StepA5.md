@@ -1,4 +1,4 @@
-[GUIのチュートリアル indexへ戻る](../../Documents/GUIのチュートリアル/)
+[GUIのチュートリアル indexへ戻る](../../../Documents/GUIのチュートリアル/)
 
 
 
@@ -23,7 +23,7 @@ GDP結合型（[4Q21](http://pdb.protein.osaka-u.ac.jp/pdb/cgi/explore.cgi?job=s
 先ず，両者の構造をtrace rendererで表示させて，
 見やすいように色も変えておきます．
 
-![2ras](../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras.png){ .on-glb }
+![2ras](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras.png){ .on-glb }
 
 さらに，Naviパレットやファイルの中身を直接見ることで，
 
@@ -43,7 +43,7 @@ GDP結合型（[4Q21](http://pdb.protein.osaka-u.ac.jp/pdb/cgi/explore.cgi?job=s
 
 メニュー"Tool"→"Fit two molecules"で，LSQ fittingダイアログが表示されます．
 
-![2ras_fitdlg1](../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_fitdlg1.png){ .on-glb }
+![2ras_fitdlg1](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_fitdlg1.png){ .on-glb }
 
 まず，どちらを基準(reference)にして，どちらを動かすか(moving)にするかを決めます．
 この例では，1QRAは固定して，4Q21を動かして重ねあわせを行うことにしますので，
@@ -53,7 +53,7 @@ GDP結合型（[4Q21](http://pdb.protein.osaka-u.ac.jp/pdb/cgi/explore.cgi?job=s
 さらに，Reference, Movingとも，
 ラジオボタンが**Selection(...)**を選択した状態にして，
 エディットボックスに文字が入力できる状態にします．
-そして，各エディットボックスに重ね合わせる部分を指定する**選択文**を入力します（選択文の文法に関しては[分子選択文のリファレンス](../../Documents/MolSelSyntax)参照）．
+そして，各エディットボックスに重ね合わせる部分を指定する**選択文**を入力します（選択文の文法に関しては[分子選択文のリファレンス](../../../Documents/MolSelSyntax)参照）．
 
 ここでは，上記で示したように
 Reference
@@ -67,7 +67,7 @@ Moving
 そしてOKボタンを押すと最小二乗重ね合わせが実行されます．
 
 
-![2ras_fit1](../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_fit1.png){ .on-glb }
+![2ras_fit1](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_fit1.png){ .on-glb }
 
 
 さらに，Output windowには以下のようにr.m.s.d.(=root mean square deviation; 小さいほどよく重なっている)が表示されます．
@@ -100,7 +100,7 @@ LSQ Fittingダイアログで選択文を記述して重ね合わせるのは，
 全体を重ね合わせた結果を見ると，残基番号1〜29, 75〜166で重ね合わせればよさそうです．
 Sel2パレットに***.1:29,75:166.CA**と入力し，1QRA，4Q21両者ともにこの選択を適用してやります．
 
-![2ras_fit_selpal](../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_fit_selpal.png){ .on-glb }
+![2ras_fit_selpal](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_fit_selpal.png){ .on-glb }
 
 具体的には，上図のように入力し，**Mol**コンボボックスで1QRAを選んで**select**ボタンを押し，同様に4Q21を選んでselectを押します．
 
@@ -108,13 +108,13 @@ Sel2パレットに***.1:29,75:166.CA**と入力し，1QRA，4Q21両者ともに
 大概はCA原子を持つ他のchainがあって残基番号がかぶっていたりするので，
 reference/moving分子それぞれに選択文を指定してselectしてやる必要があるでしょう．
 
-![2ras_2sel2](../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_2sel2.png){ .on-glb }
+![2ras_2sel2](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_2sel2.png){ .on-glb }
 
 上図のように正しく選択されていることを確認したうえで，**Fit two molecules...**メニューを実行します．
 今回はラジオボタンの**Use current selection**の方が選択されている事を確認し，
 reference/movingの分子オブジェクトを指定してOKを押します．
 
-![2ras_2sel2_fit](../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_2sel2_fit.png){ .on-glb }
+![2ras_2sel2_fit](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras_2sel2_fit.png){ .on-glb }
 
 Switch region以外はほとんど構造は同じようです．
 r.m.s.d.値も非常に小さくなりました．

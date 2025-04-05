@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 このページのサンプルファイル:
 [tar.gz format](http://prdownloads.sourceforge.net/cuemol/qscript-tutorial-1.tar.gz?download) or
@@ -8,7 +8,7 @@
 論文の図とかで，水素結合などをよく点線で示したりしますが，ここでは抗生物質ブレオマイシンとブレオマイシン結合たんぱく質との相互作用を表示してみましょう．(blm_intr.qs)
 
 
-![blm_intr1](../../assets/images/Documents/QScriptのチュートリアル/Step4/blm_intr1.png){ .on-glb }
+![blm_intr1](../../../assets/images/Documents/QScriptのチュートリアル/Step4/blm_intr1.png){ .on-glb }
 
 
 <pre>

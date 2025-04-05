@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -11,7 +11,7 @@
 ブレオマイシン結合蛋白質をチューブモデルで表示します．(blm-tube.qs) 
 
 
-![blm_tube1](../../assets/images/Documents/QScriptのチュートリアル/Step2/blm_tube1.png){ .on-glb }
+![blm_tube1](../../../assets/images/Documents/QScriptのチュートリアル/Step2/blm_tube1.png){ .on-glb }
 
 <pre>
 qsys.cleanUpAll();
@@ -48,7 +48,7 @@ $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
 $mol.select(se/chain A,B/);
 ```
 ↑blm_ab分子中の，蛋白質部分のみを選択している．この場合，蛋白質は鎖A,Bに相当しているので，選択構文の(%{と%}で囲まれた部分)chain命令でAとBを選択している．
-選択文については[分子選択文法のリファレンス](../../Documents/MolSelSyntax)を参照．
+選択文については[分子選択文法のリファレンス](../../../Documents/MolSelSyntax)を参照．
 
 ```
 $r_p = $mol.createRend("protein", "tube");
@@ -65,7 +65,7 @@ molvis.paint($r_p, color.hsb(240, 0.3, 1.0));
 ```
 $mol.select(se/chain _/);
 ```
-↑ブレオマイシンを選択している．[step1](../../Documents/QScriptのチュートリアル/Step1)とは異なり蛋白質ダイマーに2分子結合したリガンド両方とも選択するため，ブレオマイシンが含まれている鎖"_"により選択している． PDBファイル中で鎖名がない(chain columnが空白)の場合は， CueMol内部では鎖名が"_"として扱われる点に注意．
+↑ブレオマイシンを選択している．[step1](../../../Documents/QScriptのチュートリアル/Step1)とは異なり蛋白質ダイマーに2分子結合したリガンド両方とも選択するため，ブレオマイシンが含まれている鎖"_"により選択している． PDBファイル中で鎖名がない(chain columnが空白)の場合は， CueMol内部では鎖名が"_"として扱われる点に注意．
 <pre>
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
@@ -83,7 +83,7 @@ gfx.updateView();
 上記の例では鎖ごとに色づけしていますが，残基単位で色を指定することも可能です．以下の例では，酸性残基を赤系統，塩基性残基を青系統にしています．(blm-tbcolor.qs)
 
 
-![blm_tbcolor1](../../assets/images/Documents/QScriptのチュートリアル/Step2/blm_tbcolor1.png){ .on-glb }
+![blm_tbcolor1](../../../assets/images/Documents/QScriptのチュートリアル/Step2/blm_tbcolor1.png){ .on-glb }
 
 <pre>
 qsys.cleanUpAll();
@@ -169,8 +169,8 @@ Tubeが途中で途切れるかどうかは，以下の要件により決まっ�
 
 他のレンダラーのプロパティについては，
 
->[Tubeレンダラーのプロパティ](../../Ref/molvis/TubeRenderer)<br />
-[Splineレンダラーのプロパティ](../../Ref/molvis/SplineRenderer)<br />
-[MainChainレンダラーのプロパティ](../../Ref/molstr/MainChainRenderer)
+>[Tubeレンダラーのプロパティ](../../../Ref/molvis/TubeRenderer)<br />
+[Splineレンダラーのプロパティ](../../../Ref/molvis/SplineRenderer)<br />
+[MainChainレンダラーのプロパティ](../../../Ref/molstr/MainChainRenderer)
 
 を参照してください．

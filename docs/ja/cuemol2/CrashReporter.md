@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 ## Crash時のcrash dump file送付のお願い
 CueMolがバグ等でクラッシュした場合は，所定の場所に直前のメモリーイメージのcrash dump fileが作成されます．
@@ -9,7 +9,7 @@ CueMolがバグ等でクラッシュした場合は，所定の場所に直前�
 前もって，どこにcrash時のcrash dump fileが作成されるか確認してください．
 CueMolのメニュー「Help」→「Test crash reporter」を実行すると，以下のようなdialogが表示されます．
 
-![crashreportertest](../assets/images/cuemol2/CrashReporter/crashreportertest.png){ .on-glb }
+![crashreportertest](../../assets/images/cuemol2/CrashReporter/crashreportertest.png){ .on-glb }
 
 
 この，crash dump path:以降に記されたフォルダーにイメージファイルが作成されます．
@@ -27,7 +27,7 @@ CueMolのメニュー「Help」→「Test crash reporter」を実行すると，
 #### メールでの送付
 Crash dump fileを，使用していたCueMolのversion (メニュー「Help」→「About CueMol2」(Windowsの場合)で確認できる)やcrash時の状況なども添えて，
 
-> ![mm1](../assets/images/cuemol2/CrashReporter/mm1.png)![mm2](../assets/images/cuemol2/CrashReporter/mm2.png)
+> ![mm1](../../assets/images/cuemol2/CrashReporter/mm1.png)![mm2](../../assets/images/cuemol2/CrashReporter/mm2.png)
 
 までご連絡ください．
 

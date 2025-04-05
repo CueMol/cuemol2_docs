@@ -1,4 +1,4 @@
-[Documents](../Documents)
+[Documents](../../Documents)
 
 
 
@@ -19,7 +19,7 @@ GUIメニューの「Edit」→「Preferences...」で表示される
 **Preferenceダイアログ**中に**File association**というタブがあります．
 ここからファイル関連付け変更が可能です．
 
-![fileassoc1](../assets/images/Documents/FileAssoc/fileassoc1.png){ .on-glb }
+![fileassoc1](../../assets/images/Documents/FileAssoc/fileassoc1.png){ .on-glb }
 
 左のリストボックスには現在CueMol内にある扱えるファイルの拡張子一覧が出ています．
 選択されているものは関連付けが行われています．

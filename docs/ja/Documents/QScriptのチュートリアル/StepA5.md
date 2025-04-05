@@ -1,4 +1,4 @@
-[QScriptのチュートリアルへ戻る](../../Documents/QScriptのチュートリアル/)
+[QScriptのチュートリアルへ戻る](../../../Documents/QScriptのチュートリアル/)
 
 
 
@@ -7,7 +7,7 @@
 [tar.gz format](http://prdownloads.sourceforge.net/cuemol/qscript-tutorial-elepot1.tar.gz?download) or
 [zip format](http://prdownloads.sourceforge.net/cuemol/qscript-tutorial-elepot1.zip?download)
 ]<br />
-＋[前のステップ](../../Documents/QScriptのチュートリアル/StepA4)のサンプルファイルも必要です！！
+＋[前のステップ](../../../Documents/QScriptのチュートリアル/StepA4)のサンプルファイルも必要です！！
 
 ## 表面電荷により分子表面を着色する
 
@@ -21,7 +21,7 @@ CueMol自身には表面電荷を計算する機能がありませんが，
 DelPhiならLinux等他のOSでも動くようですが．
 
 
-![elepot](../../assets/images/Documents/QScriptのチュートリアル/StepA5/elepot.png){ .on-glb }
+![elepot](../../../assets/images/Documents/QScriptのチュートリアル/StepA5/elepot.png){ .on-glb }
 
 
 <pre>
