@@ -6,6 +6,7 @@ theme:
   features:
     - toc.integrate
     - navigation.tabs
+  favicon: assets/favicon.ico
 
 plugins:
   - glightbox:
@@ -14,26 +15,26 @@ plugins:
       fallback_to_default: true
       docs_structure: folder
       languages:
-        - locale: en
-          name: English
-          build: true
         - locale: ja
           default: true
           name: 日本語
           build: true
-          nav:
-            - トップページ: index.md
-            - ドキュメント: Documents.md
-            - ギャラリー: /en/Gallery
-            - アップデート: Updates.md
-            - 動作環境: 動作環境.md
-            - ダウンロード: Download.md
-            - インストール: Install.md
-            - ライセンス: Licence.md
-#            - 寄付: Licence.md
-            - リンク: リンク.md
-            
 
+        - locale: en
+          name: English
+          build: true
+          nav:
+            - Home: index.md
+            - Documents: Documents.md
+            - Gallery: /en/Gallery
+            - Updates: Updates.md
+            - Environment: /en/Environment
+            - Download: Download.md
+            - Install: Install.md
+            - Licence: Licence.md
+            #  - Donation: Licence.md
+            - Link: Link.md
+            
 markdown_extensions:
   - attr_list
   - def_list
@@ -52,13 +53,14 @@ extra:
       lang: en
 
 nav:
-  - Home: index.md
-  - Documents: Documents.md
-  - Gallery: /en/Gallery
-  - Updates: Updates.md
-  - Environment: /en/Environment
-  - Download: Download.md
-  - Install: Install.md
-  - Licence: Licence.md
-#  - Donation: Licence.md
-  - Link: Link.md
+  - トップページ: index.md
+  - ドキュメント: Documents.md
+  - ギャラリー: /en/Gallery
+  - アップデート: Updates.md
+  - 動作環境: 動作環境.md
+  - ダウンロード: Download.md
+  - インストール: Install.md
+  - ライセンス: Licence.md
+#   - 寄付: Licence.md
+  - リンク: リンク.md
+
