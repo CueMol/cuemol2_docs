@@ -1,4 +1,4 @@
-site_name: CueMol - Molecular Visualization Framework
+site_name: CueMol &mdash; Molecular Visualization Framework
 site_url: https://cuemol.github.io/cuemol2_docs/
 repo_url: https://github.com/CueMol/cuemol2
 theme:
@@ -48,10 +48,10 @@ markdown_extensions:
 extra:
   alternate:
     - name: 日本語
-      link: /
+      link: ja/../
       lang: ja
     - name: English
-      link: /en/
+      link: en/
       lang: en
 
 nav:
