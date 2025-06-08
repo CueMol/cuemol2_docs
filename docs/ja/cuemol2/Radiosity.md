@@ -37,7 +37,6 @@ OutdoorHQ
 
 
 
-
 OutdoorHQ（やFinal, IndoorHQ）は計算に非常に時間がかかります．
 ためしに小さめの画像でOutdoorLQで試して，
 その後必要なサイズの画像でOutdoorHQでレンダリングするのがよいでしょう．

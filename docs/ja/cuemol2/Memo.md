@@ -3,25 +3,19 @@
 ## CueMol2に関するメモ書き
 
 ### 概要
-
--  アプリ形式
-
-    -  standalone型のCLIアプリ<br />
+*  アプリ形式
+    *  standalone型のCLIアプリ<br />
 デフォルトでビルドされる。<br />
 scriptingはinternal JS（と，可能なら互換性のためのQS等）
-
-    -  libXULを使用したGUIアプリ<br />
+    *  libXULを使用したGUIアプリ<br />
 GeckoSDKが在る場合にビルドされる<br />
 XPConnect経由でexternal JSから呼び出す<br />
 OpenGLのviewはダミーのプラグインを作成してHWNDを得る．
 
-
--  スクリプティング
-
-    -  Internal JS<br />
+*  スクリプティング
+    *  Internal JS<br />
 内部にSpiderMonkeyを持つ→JSAPIを使用してcuemol objectをjsから使用できる
-
-    -  External JS<br />
+    *  External JS<br />
 Mozillaの場合XPConnect経由でブラウザのスクリプト言語から呼び出す
 JSAPIは使用できないので、独自のwrapper objectによりcuemol objectをjsから使用
 →最終的には全てのobjectに対してjsで記述されたwrapper classを作成し、シームレスに使用できるようにする（internal/externalの一致を目指す）
@@ -38,23 +32,13 @@ npruntimeインタフェイス経由でブラウザのスクリプト言語か�
 JSAPIを使用してwrapper objectを記述
 
 
-
-
-
-
-
-
-
 #### xpcomサブシステム
 外部スクリプティング用(XPConnect側)インターフェイス
 
 主に、
-
--  setProp
-
--  getProp
-
--  invoke
+*  setProp
+*  getProp
+*  invoke
 
 のインタフェイスを持つqIObjWrapper interfaceからなり、
 全ての呼び出しを上記経由で行わなければならない。
@@ -66,8 +50,7 @@ JSAPIを使用してwrapper objectを記述
 
 configure引数
 
-
-    - with-gecko-sdk=<Gecko-SDKのあるディレクトリ>
+    * with-gecko-sdk=<Gecko-SDKのあるディレクトリ>
 ### Scene description
 XML+(内部)JSで記述。
 
@@ -89,12 +72,9 @@ XxxClass_wrap.cpp
 XxxClass自体のメタクラスや、(cloneableの場合は)clone()の実装なども含まれる。
 
 
-
-
 モジュール定義ファイルから、モジュールローダー・ファクトリを生成する。
 
 **XPCOM用のtypelib形式呼び出しの実装は複雑になるため中止**
-
 
 
 外部JS記述簡素化のため、QIFファイルからjavascriptのwrapper codeを自動生成するようにした方が良い。
@@ -105,18 +85,12 @@ XxxClass自体のメタクラスや、(cloneableの場合は)clone()の実装な
 ### qlibのvariant型
 qlib専用のvariant型がある(qlib::LVariant)。<br />
 variant型は，以下の6種類の値を持ちうる．
-
-- void
-
-- boolean
-
-- integer (32bit signed)
-
-- real (64bit)
-
-- string (LString with utf8 format)
-
-- object
+* void
+* boolean
+* integer (32bit signed)
+* real (64bit)
+* string (LString with utf8 format)
+* object
 
 Objectに関しては、コピー時の振る舞いにより3+1種類存在
 SimpleCopy (LSimpleCopyScrObject)
@@ -224,10 +198,8 @@ object (composite,aggrigateとも)
 
 
 そのほかに，
-
--  Wrapper interface (qI_XXX)
-
--  Wrapper impl class (qW_XXX)
+*  Wrapper interface (qI_XXX)
+*  Wrapper impl class (qW_XXX)
 
 が生成される．特に，qI_XXXの方は，xpidlが生成するものである．
 

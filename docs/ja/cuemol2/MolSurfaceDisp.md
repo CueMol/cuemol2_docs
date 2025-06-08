@@ -8,12 +8,9 @@
 を使用して説明しています．
 
 Sample scene fileが以下からダウンロードできます．
-
--  [1CTQ_surf_1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_1.qsc)：　分子表面作成後の状態
-
--  [1CTQ_surf_2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_2.qsc)：　GDPNPのballstick表示作成後の状態
-
--  [1CTQ_surf_3.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_3.qsc)：　表面ドット表示作成後の状態
+*  [1CTQ_surf_1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_1.qsc)：　分子表面作成後の状態
+*  [1CTQ_surf_2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_2.qsc)：　GDPNPのballstick表示作成後の状態
+*  [1CTQ_surf_3.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_3.qsc)：　表面ドット表示作成後の状態
 
 
 ## 分子表面オブジェクト(MolSurfObj)とmolsurfレンダラー
@@ -80,12 +77,9 @@ vert/faceファイルはポリゴンの情報しか持っていないため，
 
 ## molsurfレンダラーの着色モード(Paint mode)
 molsurfレンダラーには，主に以下の着色モード(Paint mode)があります．
-
--  分子による着色モード (By molecule)
-
--  静電ポテンシャルマップよる着色モード (By potential)
-
--  べた塗モード (Solid)
+*  分子による着色モード (By molecule)
+*  静電ポテンシャルマップよる着色モード (By potential)
+*  べた塗モード (Solid)
 
 Paint modeを設定するには，
 分子表面オブジェクト(MolSurfObj)にアタッチされたmolsurfレンダラーのプロパティー・ダイアログを開き，
@@ -246,4 +240,3 @@ Materialの設定に関しては，[cuemol2/Material](../../cuemol2/Material)を
 
 
 ![molsurf_drawmode_dot1](../../assets/images/cuemol2/MolSurfaceDisp/molsurf_drawmode_dot1.jpg){ style="zoom: 0.75" .on-glb }
-

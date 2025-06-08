@@ -22,10 +22,8 @@
 ## 具体例で解説
 以下では，crambin 1CRN.pdbを使用して具体的に説明します．
 サンプルファイルは，
-
--  [molcol_sample1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample1.qsc)
-
--  [molcol_sample2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample2.qsc)
+*  [molcol_sample1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample1.qsc)
+*  [molcol_sample2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample2.qsc)
 
 になります．
 ### Colorパレットで分子を選択
@@ -107,12 +105,9 @@ Colorパレットで，再び1CRN.pdbを選びます．そして，1〜10番の�
 
 ## 論文の図とか
 以上の例からわかると思いますが，例えばよくある論文の図等だと，
-
--  分子にドメインや機能部位ごとに，paint coloringを使用して色を設定しておく
-
--  主鎖をリボン表示にし，リボン表示の方はsolid coloringで$molcolを指定しておく（上述のribbon rendererの設定と同じ）
-
--  重要な部分についてballstick表示を作成する．CPK coloringで炭素原子の色を$molcolにする
+*  分子にドメインや機能部位ごとに，paint coloringを使用して色を設定しておく
+*  主鎖をリボン表示にし，リボン表示の方はsolid coloringで$molcolを指定しておく（上述のribbon rendererの設定と同じ）
+*  重要な部分についてballstick表示を作成する．CPK coloringで炭素原子の色を$molcolにする
 
 で全体的に統一した着色の図が作成できます．
 

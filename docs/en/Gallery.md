@@ -1,7 +1,6 @@
 ## Image Gallery
 
 ### Edge rendering
-
 #### With different edge thickness and colors, and toon-like shading
 
 >>![EdgeLine2-1-16](../../assets/images/Gallery/EdgeLine2-1-16.png){ style="zoom: 0.5" .on-glb }&#12288;&#12288;&#12288;&#12288;&#12288;![POT_alafos1_8bpc](../../assets/images/Gallery/POT_alafos1_8bpc.png){ style="zoom: 0.22" .on-glb }
@@ -16,7 +15,6 @@ Right: [POT_alafos1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-
 (Save the qsc and xml files in the same folder!)
 See also
 :   [Edge rendering](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FEdgeLines)
-
 
 
 
@@ -49,7 +47,6 @@ QSC file of this scene
 
 See also
 :   [Nucleic acid display](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FNARenderer)
-
 
 
 

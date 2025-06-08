@@ -27,10 +27,6 @@ Version 2.2.3.443
 
 
 
-
-
-
-
 以前のバージョンを含め，SourceForgeの「[Download page](http://sourceforge.net/project/showfiles.php?group_id=103302)」
 からもダウンロードできます．
 
@@ -67,9 +63,6 @@ Note:<br />
 古いバージョン(Que)のダウンロードは[Download_Que](../Download_Que)からできます．
 
 
-
-
-
 ### Source code (GitHub)
 Source codeは，[GitHub](../https://github.com/CueMol/cuemol2/)からdownloadできます．
 ```
@@ -83,4 +76,3 @@ Modified X11 driver for SGI dialbox
 (X11の4.0.1でしか試していません)
 CCD2IP (conversion tool for X-ray diffraction images)
 :   [download](http://cuemol.sourceforge.jp/misc/que-download/ccd2ip-0.1-20010521.tar.gz)
-

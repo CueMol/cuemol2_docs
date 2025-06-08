@@ -10,12 +10,9 @@ any createRend(string rendname, string rendtype, string attachto)
 ```
 
 新しくレンダラーを作成する．
-
--  rendnameに作成するレンダラーの識別名，
-
--  rendtypeに作成するレンダラーのタイプ名，
-
--  attachtoに作成するレンダラーがアタッチされるオブジェクト名を
+*  rendnameに作成するレンダラーの識別名，
+*  rendtypeに作成するレンダラーのタイプ名，
+*  attachtoに作成するレンダラーがアタッチされるオブジェクト名を
 
 指定する．
 [Ref/qsys/qobj](../../../Ref/qsys/qobj)のcreateRendメソッドと同機能であるが，

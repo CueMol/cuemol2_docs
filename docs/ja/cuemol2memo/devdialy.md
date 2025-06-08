@@ -3,14 +3,11 @@
 ## CueMol2開発メモ
 
 ### 2007/5/20
-
-- jsbr/ObjWrapper<br />
+* jsbr/ObjWrapper<br />
 エラー処理をするようにした．(throwErrorを呼び出す)
-
-- JS bridgeのthrowErrorの実装<br />
+* JS bridgeのthrowErrorの実装<br />
 単にJS_ReportError()を呼び出せばよいようだ．
-
-- qlib/TestClass.hpp JSから呼び出すテスト / qlib/testclass.js <br />
+* qlib/TestClass.hpp JSから呼び出すテスト / qlib/testclass.js <br />
 objectが関係ないmethod: OK<br />
 objectを渡すmethod: OK<br />
 objectを返すmethod: OK
@@ -36,10 +33,8 @@ Serialize時には、上記ではアップデートをサポートするよう�
 
 Nodeタイプには、２種類存在。
 
-
-- Tableタイプ：あるインタフェイスを持つオブジェクトを（多数）保持。保持されているオブジェクトに対応するタグが一定ではなく、ランタイムに決まる。オブジェクトはunique ID (数値)でindexされている、かつ、リストのように順序を持つ。
-
-- Propタイプ：プロパティのみを持つ場合。
+* Tableタイプ：あるインタフェイスを持つオブジェクトを（多数）保持。保持されているオブジェクトに対応するタグが一定ではなく、ランタイムに決まる。オブジェクトはunique ID (数値)でindexされている、かつ、リストのように順序を持つ。
+* Propタイプ：プロパティのみを持つ場合。
 プロパティの型はコンパイル時に決まっている。
 
 
@@ -48,14 +43,12 @@ XMLNodeObjとObjectの対応付け
 非アップデート型実装では、不要（毎回破棄／生成するだけだから）
 
 アップデート型実装では、
-
--  XML→Obj では、XMLから対応するobjectを知る必要がある。<br />
+*  XML→Obj では、XMLから対応するobjectを知る必要がある。<br />
 対応するObjectがある（可能性のある）XMLNodeObjはUIDを持っている。
 UIDから、objectを検索できる（getXMLPeer() method）。既に削除されているかどうかもUIDから判断可能。<br />
 今の実装では、ObjToXML更新をgetXMLPeer()を使っておこなている。すべてのXMLNodeに対して、UIDを得てから対応するObjがあるか検査し、ある場合はUpdate、ない場合はCreationを行っている。<br />
 上述の分析から、この実装は不要ではないのか？<br />
-
--  Obj→XML では、Objectから対応するNodeObjを知る必要がある。<br />
+*  Obj→XML では、Objectから対応するNodeObjを知る必要がある。<br />
 Serializableなobjectは、XMLObjNodeへのSmartPtrを保持している。
 対応するXMLNodeがない場合は、このポインタはヌルになっている。<br />
 上述のような理由により、現実装では使用されていない。
@@ -116,24 +109,15 @@ JS・XPCOMともに、SetterとArgument処理のコードがおかしかった�
 
 Setterの場合、
 
-
-- DEST=値/const referenceの場合、
-
-    - SRC=<PTR>→*でアクセス
-
-    - SRC=<SP>→*でアクセス
-
-- DEST=PTRの場合、
-
-    - SRC=<PTR>→p->copy()でアクセス、必要に応じてコピーが作られる
-
-    - SRC=<SP>→p->copy()でアクセス、（必要に応じて）SPではなく、本体のコピーが作られる
-
-- DEST=SPの場合、
-
-    - SRC=<PTR>→単純コピー
-
-    - SRC=<SP>→単純コピー
+* DEST=値/const referenceの場合、
+    * SRC=<PTR>→*でアクセス
+    * SRC=<SP>→*でアクセス
+* DEST=PTRの場合、
+    * SRC=<PTR>→p->copy()でアクセス、必要に応じてコピーが作られる
+    * SRC=<SP>→p->copy()でアクセス、（必要に応じて）SPではなく、本体のコピーが作られる
+* DEST=SPの場合、
+    * SRC=<PTR>→単純コピー
+    * SRC=<SP>→単純コピー
 
 上記のように実装。
 Argument処理も基本的に同様。

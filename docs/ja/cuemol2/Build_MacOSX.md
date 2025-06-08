@@ -2,33 +2,21 @@
 
 ## CueMol2のバージョンとxulrunner/geckoのバージョン
 CueMol2のバージョンに合ったバージョンを用いる必要がある。
-
-
-
--  2.1系列では9.0.1を使用。(2.1.0.270)
-
--  2.2系列では23.0.1を使用。(2.2.0.321)
+*  2.1系列では9.0.1を使用。(2.1.0.270)
+*  2.2系列では23.0.1を使用。(2.2.0.321)
 
 ## MacOS Xでのbuild
 Mac OSX 10.6 (Snow Leopard)あるいは10.7(Lion)での場合．(Leopardではなぜか動かない)
 
 ### 必要なソフトウェア・ライブラリ類のインストール
-
--  Xcode (OS付属，version 3)
-
--  MacPorts (下記参照)
-
--  xulrunner SDK 
-
--  BOOST C++ Libraries
-
--  FFTW
-
--  libpng (2.0.1では不要)
-
--  CGAL
-
--  glew
+*  Xcode (OS付属，version 3)
+*  MacPorts (下記参照)
+*  xulrunner SDK 
+*  BOOST C++ Libraries
+*  FFTW
+*  libpng (2.0.1では不要)
+*  CGAL
+*  glew
 
 #### MacPortsのインストール
 CueMol2自体のbuildには直接必要ではないが，xulrunner SDKについているxpidlなどのコマンドが，
@@ -61,16 +49,6 @@ MacOS版のsdkにはbuildに必要なFrameworkがなぜかはいっていない�
 これをdebug versionとして使用できる。
 
 
-
-
-
-
-
-
-
-
-
-
 #### BOOSTのインストール
 [http](../..///www.boost.org/)から取得できる．
 
@@ -92,48 +70,37 @@ instpath=$HOME/proj/boost
 ./bjam \
 ```
 ```
-
-    - prefix=$instpath \
+    * prefix=$instpath \
 ```
 ```
-
-    - exec-prefix=$instpath \
+    * exec-prefix=$instpath \
 ```
 ```
-
-    - libdir=$instpath \
+    * libdir=$instpath \
 ```
 ```
-
-    - includedir=$instpath \
+    * includedir=$instpath \
 ```
 ```
-
-    - with-date_time \
+    * with-date_time \
 ```
 ```
-
-    - with-filesystem \
+    * with-filesystem \
 ```
 ```
-
-    - with-iostreams \
+    * with-iostreams \
 ```
 ```
-
-    - with-program_options \
+    * with-program_options \
 ```
 ```
-
-    - with-regex \
+    * with-regex \
 ```
 ```
-
-    - with-system \
+    * with-system \
 ```
 ```
-
-    - with-thread \
+    * with-thread \
 ```
 ```
 architecture=x86 address-model=32 link=shared,static threading=multi install
@@ -142,10 +109,8 @@ architecture=x86 address-model=32 link=shared,static threading=multi install
 (最後の引数がstageだとlibraryのbuildのみを行い、installだとheader fileのcopyまで行う．64bitをbuildするには，address-model=64にすればよい)
 
 ただ，実際にはinstallしても，うまくいかない。autoconfのscriptが期待するdirectory構成と違うようにinstallされてしまうため。
-
--  1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。
-
--  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
+*  1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。
+*  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
 ```
 > cd $HOME/proj/boost
 ```
@@ -158,7 +123,6 @@ architecture=x86 address-model=32 link=shared,static threading=multi install
 ```
 > mv libboost_* lib
 ```
-
 
 
 #### FFTWのインストール
@@ -176,23 +140,16 @@ env CFLAGS="-m32 -fast" ./configure --enable-float --prefix=$HOME/proj --disable
 ```
 
 
-
-
-
-
 #### glewのインストール
-
--  version 1.7.0を使用
-
--  32bitでコンパイルする必要があるがコマンドラインからはそういう指定はどうやるか分からなかったのでconfig/Makefile.darwinのCC, LDを変更した．
+*  version 1.7.0を使用
+*  32bitでコンパイルする必要があるがコマンドラインからはそういう指定はどうやるか分からなかったのでconfig/Makefile.darwinのCC, LDを変更した．
 ```
 CC=cc -m32
 ```
 ```
 LD=cc -m32
 ```
-
--  Sourceを展開して単にmake．configureとかはない．GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
+*  Sourceを展開して単にmake．configureとかはない．GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
 ```
 env GLEW_DEST=$HOME/proj/glew make
 ```
@@ -201,30 +158,21 @@ env GLEW_DEST=$HOME/proj/glew make install
 ```
 
 #### CGALのインストール方法
-
--  CMakeを普通にインストールする(公式サイトにdmgファイルがある)
-
--  CGALのdocumentation通りにcmake-guiを実行
+*  CMakeを普通にインストールする(公式サイトにdmgファイルがある)
+*  CGALのdocumentation通りにcmake-guiを実行
 ```
 cmake-gui .
 ```
-
--  Macroとして、BOOST_ROOTを指定する(listboxに追加すればよい)<br />
+*  Macroとして、BOOST_ROOTを指定する(listboxに追加すればよい)<br />
 指定dir以下に、lib/*.dylib, include/boost があればよい。
 例えば$HOME/proj/boostなど。
-
--  一旦Configureボタンを押す。Dialogが出てくるので、Makefileを生成するoptionを選択する。
+*  一旦Configureボタンを押す。Dialogが出てくるので、Makefileを生成するoptionを選択する。
 （→他のMacroも現れてくる）
-
--  CMAKE_INSTALL_PREFIXをインストール先($HOME/proj/CGAL等)に変更する。
-
--  32bit: CGAL_CXX_FLAGSというのも出てくるので、そこに-m32というのを追加→32bitでcompileされる
-
--  再度Configureボタンを押す
-
--  Generateを押すと、Makefileができる
-
--  terminalからmake, make installを実行
+*  CMAKE_INSTALL_PREFIXをインストール先($HOME/proj/CGAL等)に変更する。
+*  32bit: CGAL_CXX_FLAGSというのも出てくるので、そこに-m32というのを追加→32bitでcompileされる
+*  再度Configureボタンを押す
+*  Generateを押すと、Makefileができる
+*  terminalからmake, make installを実行
 ```
 make
 ```
@@ -253,20 +201,16 @@ include/CGAL/compiler_config.h
 
 
 ### Source codeのcheckout
-
--  Anonymous (http)
+*  Anonymous (http)
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
-
--  特定ユーザー (ssh)<br />
+*  特定ユーザー (ssh)<br />
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2
 ```
 
 以下では~/proj/cuemol2以下にcheckoutしたとする．
-
-
 
 
 ### configureスクリプトの実行とbuild
@@ -342,15 +286,7 @@ warningがでるが，build完了<br />
 lib, include directoryを作り，lib*.aをlibに，*.hをincludeにコピーする
 
 
-
-
-//
-
-
-
 unixでprebuild.shを実行
-
-
 
 
 以下のscriptでconfigureを実行する．ただし，topdirとboost_dirは適宜変更する．
@@ -391,14 +327,4 @@ CXXFLAGS=-Wno-parentheses-equality \
 
 makeを実行．
 
-
-
-
 できるbinaryは，pwdからincを読み込まないようなので，Library_Pathに追加指定する必要がある．
-
-
-
-
-
-
-

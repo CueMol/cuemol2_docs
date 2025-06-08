@@ -6,12 +6,9 @@
 iOSで動作するCueMolのモバイルデバイス版です．
 以下のことが可能です．
 
-
--  右クリックによる原子名等の情報表示と，View 中心への移動
-
--  Cameraに保存された視点，視方向への移動
-
--  各object, renderer毎の表示・非表示の変更
+*  右クリックによる原子名等の情報表示と，View 中心への移動
+*  Cameraに保存された視点，視方向への移動
+*  各object, renderer毎の表示・非表示の変更
 
 プレゼン・ディスカッション等のために，
 構造を見る・見せることだけに特化しているため，上記以外の編集作業はできません．
@@ -30,12 +27,9 @@ http://itunes.apple.com/us/app/cuemol/id496236710?ls=1&mt=8
 
 ## 使用方法
 主にユーザインタフェイスは以下の３つからなります．
-
--  File browser
-
--  Molecular viewer
-
--  Display panel
+*  File browser
+*  Molecular viewer
+*  Display panel
 
 ### File browser
 CueMol viewerで利用可能なファイル一覧が表示されます．

@@ -14,9 +14,6 @@ PowerPointでの使用法
 
 ### Menu
 
-
--  [IEにおける使用法](../../Documents/ActiveX/IE)
-
--  [PowerPointにおける使用法](../../Documents/ActiveX/PPT)
-
--  [CueMol中でのスライドショー](../../Documents/ActiveX/SlideShow)
+*  [IEにおける使用法](../../Documents/ActiveX/IE)
+*  [PowerPointにおける使用法](../../Documents/ActiveX/PPT)
+*  [CueMol中でのスライドショー](../../Documents/ActiveX/SlideShow)

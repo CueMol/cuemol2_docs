@@ -57,15 +57,10 @@ High scale
 
 ### その他の設定
 そのほか，以下のような設定があります．
-
--  Axial detail
-
-- Smoothness
-
-- Smooth color
-
-- Pivot atom name
-
-- Start/End type
+*  Axial detail
+* Smoothness
+* Smooth color
+* Pivot atom name
+* Start/End type
 
 いずれもribbon rendererの類似の設定と同じ意味を持ちますので，詳しくは[cuemol2/RibbonRenderer#common_settings](../../cuemol2/RibbonRenderer#common_settings)を参照してください．

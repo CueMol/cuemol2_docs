@@ -6,16 +6,11 @@ CentOS 5.Xでの場合．(それ以外のdistrでも，xulrunnerがちゃんと�
 Ubuntu amd64では動くようです（Biochem_fanさんに感謝！）． http://pastebin.com/uHcmVrE8
 
 ### 必要なソフトウェア・ライブラリ類のインストール
-
--  xulrunner SDK 
-
--  BOOST C++ Libraries
-
--  FFTW
-
--  CGAL
-
--  glew
+*  xulrunner SDK 
+*  BOOST C++ Libraries
+*  FFTW
+*  CGAL
+*  glew
 
 ※ライブラリーのうちBOOST以外は特定のモジュールからしか使用されていないので、
 以下の例ではなるべくstatic libraryとして作ってリンクするようにしている。
@@ -26,7 +21,6 @@ Ubuntu amd64では動くようです（Biochem_fanさんに感謝！）． http:
 
 [ftp](../..///ftp.mozilla.org/pub/xulrunner/releases/)からdownloadできる．
 CueMol2のバージョンに合ったバージョンのSDKを用いる必要がある。
-
 2.2.0では23.0.1を使用している。
 
 SDKのほうを，　~/src/xulrunner/xulrunner-sdk/以下に展開する．
@@ -34,16 +28,6 @@ SDKのほうを，　~/src/xulrunner/xulrunner-sdk/以下に展開する．
 Runtimeのほうを，　~/src/xulrunner/xulrunner/以下に展開する．
 
 Xulrunner 23.0.1を使用した場合は，SDKとruntimeを使用すればOK. Sourceからbuildする必要はなかった．
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -117,10 +101,8 @@ instpath=~/app/boost
 （iostreamsは使用していないので省いても良いかも）
 
 実際にはinstallしてもうまくいかない。bjamのscriptが期待するdirectory構成と違うようにinstallされてしまうため。以下のようにファイルを移動してcuemolのautoconf scriptから参照しやすいようにした。
-
--  1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。
-
--  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
+*  1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。
+*  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
 
 #### FFTWのインストール
 http://www.fftw.org/download.htmlから取得可能。
@@ -148,12 +130,9 @@ env CFLAGS="-fPIC -DPIC" \
 ```
 
 #### CGAL
-
--  version 3.8を使用
-
--  CMakeはOSのパッケージのものでOK
-
--  cmakeの実行
+*  version 3.8を使用
+*  CMakeはOSのパッケージのものでOK
+*  cmakeの実行
 ```
 cd CGAL-3.8
 ```
@@ -169,39 +148,32 @@ cmake -DBOOST_ROOT=$HOME/proj/boost/ \
 ```
       -DCMAKE_CXX_FLAGS="-fPIC -DPIC" .
 ```
-
--  makeの実行
-
--  make installの実行
+*  makeの実行
+*  make installの実行
 
 ※-fPICは入れないとsoとlinkできない
 
 #### glewのインストール
-
--  version 1.7.0を使用
-
--  Sourceを展開して単にmake．configureとかはない．以下のように環境変数GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
+*  version 1.7.0を使用
+*  Sourceを展開して単にmake．configureとかはない．以下のように環境変数GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
 ```
 env GLEW_DEST=$HOME/proj/glew CFLAGS.EXTRA="-fPIC -DPIC" make
 ```
 ```
 env GLEW_DEST=$HOME/proj/glew make install
 ```
-
--  $GLEW_DEST/lib64以下にlibraryがinstallされるが、shared objectは使わないので消しておく。消さないとsoの方が優先的にリンクされてしまう。
+*  $GLEW_DEST/lib64以下にlibraryがinstallされるが、shared objectは使わないので消しておく。消さないとsoの方が優先的にリンクされてしまう。
 
 ※当たり前だがX11やOpenGLの開発パッケージがインストールされている必要がある。<br />
 CFLAGS.EXTRAでPICオプションを指定しないと、後々shared libraryとしてリンクできなくなる。
 
 ### Repositoryからチェックアウト
 [MacOSXの場合](../../cuemol2/Build_MacOSX)と同様．すなわち，
-
--  Anonymous (http)
+*  Anonymous (http)
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
-
--  特定ユーザー (ssh)<br />
+*  特定ユーザー (ssh)<br />
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2
 ```
@@ -224,8 +196,7 @@ boost_dir=$HOME/app/boost
 
 エラー無くconfigureスクリプトが生成され，さらにMakefileが生成されたら，makeコマンドを実行．buildが行われる．
 
-
--  基本的に出来上がりはすべてso (shared object)になるので環境によっては-PIC -fPIC引数が必要(ubuntu amd64の場合)．
+*  基本的に出来上がりはすべてso (shared object)になるので環境によっては-PIC -fPIC引数が必要(ubuntu amd64の場合)．
 ### 試し実行
 make installを行うと，~/proj/cuemol2/xul_gui以下に必要なファイル類が配置される．xulrunnerの引数に，~/proj/cuemol2/xul_gui/application.iniを与えて起動すれば動くはず．
 <pre>

@@ -23,14 +23,11 @@ CueMolを次回起動した場合などに，
 
 セッションの保存には，version 1.0.0.61の時点で
 以下のような制限事項があります．
-
--  Session fileは基本的にversion間での互換性がない．
-
--  Electron density mapのオブジェクトは，ファイルへのリンクがsession fileに
+*  Session fileは基本的にversion間での互換性がない．
+*  Electron density mapのオブジェクトは，ファイルへのリンクがsession fileに
 保持される．そのため元のファイルを削除・移動してしまうと
 sessionが正しく読込みできなくなる．
-
--  Surfaceオブジェクトは正しく保存されない．
+*  Surfaceオブジェクトは正しく保存されない．
 
 一応
 version 1.0.0.61

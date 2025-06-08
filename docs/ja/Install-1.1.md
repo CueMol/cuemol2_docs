@@ -71,8 +71,7 @@ CueMolディレクトリにある，「CueMolCtl.ocx」を削除してくださ�
 問題なく動くようになりました．
 
 ### Sourceからのinstall
-
--  [Documents/BuildFromSrc](../Documents/BuildFromSrc) (準備中)
+*  [Documents/BuildFromSrc](../Documents/BuildFromSrc) (準備中)
 
 
 ## UNIX版

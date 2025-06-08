@@ -5,16 +5,13 @@
 （例で説明している作業は，[前セクション](../../cuemol2/Anim_CameraMotion)の続きの操作として説明しています）
 
 表示・非表示切り替えには，
-
--  Show/Hide (fade in/out)
-
--  Slide in/out
+*  Show/Hide (fade in/out)
+*  Slide in/out
 
 の二種類があります．
 
 このセクションで最終的に出来上がるqscシーンファイルが，以下からダウンロードできます．
-
--  [lyso_showhide1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_showhide1.qsc)
+*  [lyso_showhide1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_showhide1.qsc)
 
 ## Show/Hideアニメーション
 Show/Hideアニメーションは，Rendererが半透明になりながら徐々に表示・非表示になるアニメーションです．
@@ -32,10 +29,8 @@ Rendere作成後，アニメーションパネルの追加「＋」ボタンを�
 ![anim-fadeio-1](../../assets/images/cuemol2/Anim_ShowHide/anim-fadeio-1.png)
 
 
-
-- Showがfade in
-
-- Hideがfade out
+* Showがfade in
+* Hideがfade out
 
 に対応しています．例では，Showを選んでください．
 
@@ -61,14 +56,10 @@ Fade
 
 
 この例では，以下のように設定を変更しています．
-
-- NameはShowAnim1のまま(defaultでそのようになっているはず．なっていない場合はそのように設定)
-
-- Start timeは0:0:4.0(defaultでそのようになっているはず．なっていない場合はそのように設定)
-
-- Durationは0:0:1.0のままで
-
-- Target renderersにballstick1を追加
+* NameはShowAnim1のまま(defaultでそのようになっているはず．なっていない場合はそのように設定)
+* Start timeは0:0:4.0(defaultでそのようになっているはず．なっていない場合はそのように設定)
+* Durationは0:0:1.0のままで
+* Target renderersにballstick1を追加
 
 ### 変更の確認と再生
 設定ダイアログでOKを押して，ダイアログを閉じると，アニメーションパネルは以下のようになります．
@@ -123,20 +114,13 @@ Show/Hide
 
 
 この例では，以下のように設定を変更しています．
-
-- NameはSlideOutAnim1のまま(defaultでそのようになっているはず．なっていない場合はそのように設定)
-
-- Start timeは0:0:6.0(defaultで0:0:5.0になっているが，上記で設定したfade inの終了から１秒間を開けている．）
-
-- Durationは0:0:1.0のままで
-
-- Quadricは50%にする．
-
-- Target renderersにballstick1を追加
-
--  Direction angleは90度（Up)にする
-
--  Distanceは1.0のまま
+* NameはSlideOutAnim1のまま(defaultでそのようになっているはず．なっていない場合はそのように設定)
+* Start timeは0:0:6.0(defaultで0:0:5.0になっているが，上記で設定したfade inの終了から１秒間を開けている．）
+* Durationは0:0:1.0のままで
+* Quadricは50%にする．
+* Target renderersにballstick1を追加
+*  Direction angleは90度（Up)にする
+*  Distanceは1.0のまま
 
 ### 変更の確認
 設定ダイアログでOKを押して，ダイアログを閉じると，アニメーションパネルは以下のようになります．
@@ -145,22 +129,14 @@ Show/Hide
 
 
 このパネルの表示の意味は以下のようになります．
-
--  アニメーションは全長で7秒間 (Durationが0:0:7.0)
-
--  アニメーションはcamera_0から開始
-
--  0〜1秒間，SimpleSpin1により360度回転
-
--  1〜2秒間，SimpleSpin2により-360度回転
-
--  2〜4秒間，CamMotion1により，視点がcamera_1に移動する
-
--  4〜5秒間，ShowAnim1により，ballstick1が表示
-
--  5〜6秒間，静止状態
-
--  6〜7秒間，SlideOutAnim1により，ballstick1が非表示になる
+*  アニメーションは全長で7秒間 (Durationが0:0:7.0)
+*  アニメーションはcamera_0から開始
+*  0〜1秒間，SimpleSpin1により360度回転
+*  1〜2秒間，SimpleSpin2により-360度回転
+*  2〜4秒間，CamMotion1により，視点がcamera_1に移動する
+*  4〜5秒間，ShowAnim1により，ballstick1が表示
+*  5〜6秒間，静止状態
+*  6〜7秒間，SlideOutAnim1により，ballstick1が非表示になる
 
 (以上で作成したシーンは，
 [lyso_showhide1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_showhide1.qsc)からダウンロードできます)

@@ -3,35 +3,23 @@
 
 CueMol2のバージョンに合った環境を用いる必要がある。
 ここでは、
-
--  CueMol 2.2.2.X (git branch [vs2013test](../../https://github.com/CueMol/cuemol2/tree/vs2013test))
-
--  MacOS X 10.10 (Xcode 6.4)
-
--  boost 1_57/CGAL 4.6.1
+*  CueMol 2.2.2.X (git branch [vs2013test](../../https://github.com/CueMol/cuemol2/tree/vs2013test))
+*  MacOS X 10.10 (Xcode 6.4)
+*  boost 1_57/CGAL 4.6.1
 
 を用いた64bit versionのbuild環境構築方法を説明する。
 
 ### Directory構成
 基本、以下のようなdirectory構成を使用する
-
--  Home
-
-    -  proj64
-
-        - cuemol2 (CueMolのsource treeを展開)
-
-        - boost_1_57 (以下にBoostをinstall)
-
-        - xulrunner/xulrunner-39.0-sdk (以下にxulrunner-sdkを展開)
-
-        - CGAL-4.6.1 (以下にCGALをinstall)
-
-        -  ...
-
-    -  src
-
-        -  ... (各々のsource)
+*  Home
+    *  proj64
+        * cuemol2 (CueMolのsource treeを展開)
+        * boost_1_57 (以下にBoostをinstall)
+        * xulrunner/xulrunner-39.0-sdk (以下にxulrunner-sdkを展開)
+        * CGAL-4.6.1 (以下にCGALをinstall)
+        *  ...
+    *  src
+        *  ... (各々のsource)
 
 ### Xcodeのinstall
 xcode-selectをやると芋づる式に？command line toolsがinstallされる。
@@ -70,48 +58,37 @@ instpath=$HOME/proj64/boost_1_57
 ./bjam \
 ```
 ```
-
-    - prefix=$instpath \
+    * prefix=$instpath \
 ```
 ```
-
-    - exec-prefix=$instpath \
+    * exec-prefix=$instpath \
 ```
 ```
-
-    - libdir=$instpath \
+    * libdir=$instpath \
 ```
 ```
-
-    - includedir=$instpath \
+    * includedir=$instpath \
 ```
 ```
-
-    - with-date_time \
+    * with-date_time \
 ```
 ```
-
-    - with-filesystem \
+    * with-filesystem \
 ```
 ```
-
-    - with-iostreams \
+    * with-iostreams \
 ```
 ```
-
-    - with-program_options \
+    * with-program_options \
 ```
 ```
-
-    - with-regex \
+    * with-regex \
 ```
 ```
-
-    - with-system \
+    * with-system \
 ```
 ```
-
-    - with-thread \
+    * with-thread \
 ```
 ```
 architecture=x86 address-model=64 link=shared,static threading=multi install
@@ -162,14 +139,11 @@ cmake-guiへのpathが通らないが。。。
 ```
 
 GUIのdialogが現れる。以下のmacroを定義する。
-
--  BOOST_ROOT $HOME/proj64/boost_1_57<br />
+*  BOOST_ROOT $HOME/proj64/boost_1_57<br />
 (ただし、$HOMEはつかえなかったので手動で展開し入力)
-
--  CMAKE_INSTALL_PREFIX $HOME/proj64/CGAL-4.6.1<br />
+*  CMAKE_INSTALL_PREFIX $HOME/proj64/CGAL-4.6.1<br />
 (ただし、$HOMEはつかえなかったので手動で展開し入力)
-
--  CGAL_DISABLE_GMP true<br />
+*  CGAL_DISABLE_GMP true<br />
 (GMP/MPRFを使用しないように指定)
 
 一旦Configureを実行→いろいろ出てくる
@@ -184,13 +158,11 @@ GUIを終了させ、make&make installすると、~/proj64/CGAL-4.6.1以下にin
 
 ### Source codeのcheckout
 詳しくは[cuemol2/SrcRepository](../../cuemol2/SrcRepository)参照。
-
--  Anonymous (http)
+*  Anonymous (http)
 ```
 > git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
-
--  特定ユーザー (ssh)
+*  特定ユーザー (ssh)
 ```
 > git clone git@github.com:CueMol/cuemol2.git cuemol2
 ```

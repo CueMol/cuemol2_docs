@@ -12,7 +12,6 @@
 メニュー「File」→「New Tab」を実行すると，New Tab/Window dialogが表示されますが，「New Scene」を選択してOKを押すと新規シーンが作成されます．（GUIのチュートリアル[Step6](../../../Documents/GUIのチュートリアル(CueMol2)/Step6)参照）
 
 
-
 そして，先に「名前を付けて保存」を実行し，fig2_superpose.qscという名前でシーンを保存します．
 （あと，特に指定はしていませんが，適宜シーンを保存するのを忘れないようにしてください．）
 
@@ -65,17 +64,12 @@ Molecular superposition dialogが現れます．
 
 
 次に，dialogの設定を以下の通り変更（あるいはそうなっているか確認）します．
-
--  AlgorithmをSecondary Structure Matchingに．
-
--  Referenceの方のMoleculeを3UG9-AB.pdb (ChR)に
-
--  Referenceの方のSelectionをc; A (A鎖のみ)にする．<br />
+*  AlgorithmをSecondary Structure Matchingに．
+*  Referenceの方のMoleculeを3UG9-AB.pdb (ChR)に
+*  Referenceの方のSelectionをc; A (A鎖のみ)にする．<br />
 ChRにはchain A, Bの２分子含まれていますが，こうすることでchain Aのみが重ね合わせの対象になります．
-
--  Movingの方のMoleculeを1IW6 (bR)に．
-
--  Movingの方のSelectionは"*"のまま
+*  Movingの方のMoleculeを1IW6 (bR)に．
+*  Movingの方のSelectionは"*"のまま
 
 以上を指定後，OKボタンを押すと重ね合わせが実行されます．
 
@@ -149,22 +143,16 @@ ribbonではなくcartoon表示（helixがcylinder状に表示される）が適
 まず，BRの方のcartoon表示を作成します．
 Sceneパネルで1IW6を選択し，「＋」ボタンを押してrendererを作成します．
 Setup renderer dialogでは，
-
--  Renderer typeはcartoonを選び，
-
--  Selectionをcheckし
-
--  Selectionのtext boxに*（あるいはproteinでもOK）を入力します．
+*  Renderer typeはcartoonを選び，
+*  Selectionをcheckし
+*  Selectionのtext boxに*（あるいはproteinでもOK）を入力します．
 
 次に，ChRの方のcartoon表示も作成します．
 Sceneパネルで3UG9-ABを選択し「＋」ボタンを押してrendererを作成します．
 Setup renderer dialogでは，
-
--  Renderer typeはcartoonを選び，
-
--  Selectionをcheckし
-
--  Selectionのtext boxにc; Aと入力し，A鎖に対するcartoon rendererのみ作成されるようにします．
+*  Renderer typeはcartoonを選び，
+*  Selectionをcheckし
+*  Selectionのtext boxにc; Aと入力し，A鎖に対するcartoon rendererのみ作成されるようにします．
 
 （[Step1](../../../Documents/CueMol2Tutorial2013/Step3)・RetinalのCPK renderer作成の項目を参照）
 
@@ -180,13 +168,11 @@ ChRのCartoon表示の着色については，全体構造図のribbonと同じ�
 その後，Step3のribbonと同じ着色を一つ一つ追加してやると同じ着色になります．
 
 あるいは，Step3 (fig1_overall_3.qsc)からコピー・ペーストしてやると非常に簡単に同じ着色に設定することができます．
-
--  **fig1の着色設定をコピーする**<br />
+*  **fig1の着色設定をコピーする**<br />
 まず，fig1_overall_3.qscのタブをクリックし（開いていないようならFile→Open sceneで開いておく），Colorパネルで3UG9-ABの着色設定を表示させます．<br />
 下のlistboxで全ての項目を選択し（一番上の項目をクリック→一番下の項目をshiftを押しながらclick），listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br />
 メニュー中からCopyを選ぶと設定がコピーされます．
-
--  **fig2へ設定をペーストする**<br />
+*  **fig2へ設定をペーストする**<br />
 fig2_superpose_1.qscのタブをクリックし，Colorパネルで3UG9-ABの着色設定を表示させます．<br />
 この状態ではlistboxは空になっているはずです．<br />
 listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br />
@@ -251,19 +237,15 @@ OKを押すと着色項目が追加されます．
 ChRの方は操作はStep3とほぼ同じなので，Step3を参照してください．
 
 あるいは，fig1_overall_3.qscのシーンの方からコピー・ペーストしてくると簡単にできます．
-
--  **fig1からコピー**<br />
+*  **fig1からコピー**<br />
 fig1_overall_3.qscのタブをクリックし，fig1のシーンを表示させます．Sceneパネルで分子3UG9-ABを展開して
 A鎖retinal（A Retinal(cpk)という項目）を右クリックし，context menuからcopyを選ぶ．
-
--  **fig2へペースト**<br />
+*  **fig2へペースト**<br />
 fig2_superpose_1.qscのタブをクリックし，fig2のシーンを表示させます．
 Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを選ぶと，A RetinalのCPK rendererがペーストされる．
 分子ビューにもretinalがピンク色で表示される．
 
 （詳しくは[cuemol2/ObjRendCopyPaste](../../../cuemol2/ObjRendCopyPaste)を参照．）
-
-
 
 
 #### BR
@@ -277,12 +259,9 @@ Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを
 
 この項目をクリックし，下のツールボタンの矢印ボタン![step3-25arrowbtn1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step3-25arrowbtn1.png)をクリックすると，BRのretinalが選択されます．
 この状態でrendererを作成し，Setup renderer dialogでは，
-
--  Renderer typeはcpkに，
-
--  Renderer nameをBR Retinalに，
-
--  SelectionはA.250.* (上記で選択したものが自動的に入っている筈)
+*  Renderer typeはcpkに，
+*  Renderer nameをBR Retinalに，
+*  SelectionはA.250.* (上記で選択したものが自動的に入っている筈)
 
 以上のように入力し，OKを押します．
 
@@ -320,4 +299,3 @@ Save image...ボタンを押せば，完成した画像をpng形式で保存で�
 
 
 ![step5-14povrender_fin1](../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-14povrender_fin1.png){ style="zoom: 0.5" .on-glb }
-

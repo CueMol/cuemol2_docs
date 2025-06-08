@@ -35,4 +35,3 @@ Transparent PNG
 （ただしOpenGLでは半透明はちゃんと前後関係を考えて表示されないため，半透明のオブジェクトがあると表示がおかしくなるかもしれません）
 
 ![transp_png_example2](../../assets/images/cuemol2/ImageExport/transp_png_example2.png){ style="zoom: 0.3" .on-glb }
-

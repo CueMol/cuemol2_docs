@@ -22,7 +22,6 @@ cuemol.resetProp(targetObj, propName);
 ```
 
 
-
 ## プロパティーの型
 プロパティーの型には以下のものがある．
 boolean

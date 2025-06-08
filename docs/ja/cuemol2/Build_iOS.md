@@ -2,8 +2,7 @@
 
 ## iOSでのbuild方法
 CueMol2 iOS版はdesktop版と異なりすべての機能が実装されていないため，以下のライブラリのみ必要。
-
--  boost
+*  boost
 
 ### boostのbuild
 iostreamはbuildしない。（自分でGZipStreamとか持っているので不要になった）
@@ -47,14 +46,10 @@ $ open Boost.xcodeproj
 1. 使用したいスタティックライブラリをビルドする
 メインウインドウの左上のボタンで「アクティブＳＤＫ」「アクティブな構成」を適当に設定<br />
 メインウインドウの左のペインの「ターゲット」リストから、使用している以下のライブラリを見つけてビルドする。
-
-    -  date_time
-
-    -  thread
-
-    -  system
-
-    -  filesystem
+    *  date_time
+    *  thread
+    *  system
+    *  filesystem
 
 sharedライブラリはビルドエラーになる。"*.static"のプロジェクトのみビルド可能<br />
 Debugビルドの場合、lib/Debug/libboost_XXXX-mt.aが生成される。<br />
@@ -71,13 +66,11 @@ date_time thread system filesystem
 
 あと、default visibilityがhiddenになっていると他とlinkしたときに警告が出まくるので、defaultにする。
 ```
-
-- fvisibility=hidden -fvisibility-inlines-hidden
+* fvisibility=hidden -fvisibility-inlines-hidden
 ```
 を
 ```
-
-- fvisibility=default
+* fvisibility=default
 ```
 に書き換えたり戻したりいろいろいじくっているうちに警告は出なくなった。（なんで１回で行かなかったかは謎）
 
@@ -98,6 +91,5 @@ $(top)/iosbuildというdirectoryにxcodeprojファイルがあるのでそれ�
 適当なqslやpdbファイルをコピーしてきてからbuildする．
 
 以上でエミュで動かせるようになる．
-
 
 こうするとすべてObjC++でcompile使用としてしまうため、ObjC++にするものだけ別libraryにしておいて、あとでlinkするようにしなければならない。

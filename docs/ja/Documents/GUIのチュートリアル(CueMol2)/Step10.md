@@ -76,10 +76,8 @@ Stereoの横のdropdown listはデフォルトでnoneになっていますが，
 Projectionはデフォルトでperspectiveになっています．これは奥に行くほど小さくなる投影法で遠近感が出ます．ただ，CueMol2のビューの方はデフォルトでは奥に行っても小さくならないorthographic投影のため，レンダリングした時と見え方が若干変わってくるかもしれません．そういう場合は，ProjectionをOrthographicにすれば，厳密に同じ投影法になります．（ただ，Orthographicにするとライトの影が映ってしまってビューの方とはそれはそれで違った見え方になってしまうのですが．）
 
 以上では，直接POV-Rayでレンダリングさせる方法を例として説明しましたが，
-
--  povファイルを生成して，POV-Rayから手動でレンダリング
-
--  POV-Rayを使用せずに，PNGファイルに直接書き出す
+*  povファイルを生成して，POV-Rayから手動でレンダリング
+*  POV-Rayを使用せずに，PNGファイルに直接書き出す
 
 ことが可能です．[cuemol2/ImageExport](../../../cuemol2/ImageExport)を参照してください．
 

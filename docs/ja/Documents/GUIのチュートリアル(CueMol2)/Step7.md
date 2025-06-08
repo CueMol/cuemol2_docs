@@ -44,14 +44,10 @@ simple, ballstick, cpk等のレンダラーは，このcoloringがデフォル�
 色とHTML色コードが表示されている右隣りの三角アイコンをクリックすると，
 上図のようなメニューが出てきます．
 このように，色は
-
--  RGB (red, green, blue)の強度をスライダーで設定する
-
--  HSB (hue, saturation, brightness)の強度をスライダーで設定する
-
--  名前付き色リストから選ぶ
-
--  HSB色パレットから選ぶ
+*  RGB (red, green, blue)の強度をスライダーで設定する
+*  HSB (hue, saturation, brightness)の強度をスライダーで設定する
+*  名前付き色リストから選ぶ
+*  HSB色パレットから選ぶ
 
 の，４通りの指定の仕方ができます．
 
@@ -93,20 +89,13 @@ simpleレンダラーの炭素部分が，灰色表示に変わったと思い�
 
 ![gui_step7_bfac1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_bfac1.png){ .on-glb }
 
-
--  Mode: 何に基づいて着色するかを選ぶ．B-factor, occupancy, center from atomがある．
-
--  Low: 値が低い（小さい）側の色を指定する
-
--  High: 値が高い（大きい）側の色を指定する
-
--  Parameter
-
-    -  Auto (by mol)にすると，分子中の最大値がHighで指定した色に，最小値がLowで指定した色になる．（ただし，実際の最大最小値が何になっているのかが分からないところが難点）
-
-    -  Auto (by rend)にすると，レンダラーで表示されている部分の中での最大値がHighで指定した色に，最小値がLowで指定した色になる．
-
-    -  Manualにすると，下にあるLow, Highの部分で高い側，低い方に相当する値を手動で設定できる．
+*  Mode: 何に基づいて着色するかを選ぶ．B-factor, occupancy, center from atomがある．
+*  Low: 値が低い（小さい）側の色を指定する
+*  High: 値が高い（大きい）側の色を指定する
+*  Parameter
+    *  Auto (by mol)にすると，分子中の最大値がHighで指定した色に，最小値がLowで指定した色になる．（ただし，実際の最大最小値が何になっているのかが分からないところが難点）
+    *  Auto (by rend)にすると，レンダラーで表示されている部分の中での最大値がHighで指定した色に，最小値がLowで指定した色になる．
+    *  Manualにすると，下にあるLow, Highの部分で高い側，低い方に相当する値を手動で設定できる．
 
 ここでは，lysozyme/simple1の色を変更してみましょう．
 まず，Coloringパネル上方のドロップダウンリストボックスから，
@@ -122,16 +111,11 @@ simpleレンダラーの炭素部分が，灰色表示に変わったと思い�
 
 ![gui_step7_rainbow1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step7/gui_step7_rainbow1.png)
 
-
--  Start H: 先頭の残基の色相を度で指定する
-
--  End H: 最後の残基の色相を度で指定する
-
--  Brightness: 輝度を指定．100より小さくすると，だんだん黒っぽくなる．
-
--  Saturation: 飽和度を指定．100より小さくすると，だんだん白っぽくなる．
-
--  ModeをMoleculeにすると，分子全体の先頭の残基から最後の残基まで，上記の色付けを適用．<br />
+*  Start H: 先頭の残基の色相を度で指定する
+*  End H: 最後の残基の色相を度で指定する
+*  Brightness: 輝度を指定．100より小さくすると，だんだん黒っぽくなる．
+*  Saturation: 飽和度を指定．100より小さくすると，だんだん白っぽくなる．
+*  ModeをMoleculeにすると，分子全体の先頭の残基から最後の残基まで，上記の色付けを適用．<br />
 Chainにすると，chain毎に，先頭の残基から最後の残基まで，上記の色付けを適用．
 
 ここでは，分子1G59のレンダラーtrace1をrainbow coloringにします．

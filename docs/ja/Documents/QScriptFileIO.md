@@ -21,12 +21,9 @@ QScriptを使用するとPerlライクな
 以下のファイルをダウンロードし，同じディレクトリに置いてください．
 そして，CueMolを起動してメニュー「File」→「Execute QScript...」から
 fileio1.qsを開いてください．
-
--  PDBファイル: ![ECR_MODEL](../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
-
--  DSSP出力ファイル: ![dssp](../../assets/images/Documents/QScriptFileIO/dssp.txt){ .on-glb }
-
--  QScriptファイル: ![fileio1](../../assets/images/Documents/QScriptFileIO/fileio1.qs){ .on-glb }
+*  PDBファイル: ![ECR_MODEL](../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
+*  DSSP出力ファイル: ![dssp](../../assets/images/Documents/QScriptFileIO/dssp.txt){ .on-glb }
+*  QScriptファイル: ![fileio1](../../assets/images/Documents/QScriptFileIO/fileio1.qs){ .on-glb }
 
 
 ![fileio1](../../assets/images/Documents/QScriptFileIO/fileio1.png)
@@ -220,13 +217,10 @@ molvis.paint($r_p, color(0,0,1));
 #### ファイル
 以下のファイルをダウンロードし，同じディレクトリに置いてください．
 そして，CueMolを起動してメニュー「File」→「Execute QScript...」から
-
--  PDBファイル: ![ECR_MODEL](../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
-
--  Verify3Dのスコア：![verify3d](../../assets/images/Documents/QScriptFileIO/verify3d.txt){ .on-glb }<br />
+*  PDBファイル: ![ECR_MODEL](../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb){ .on-glb }
+*  Verify3Dのスコア：![verify3d](../../assets/images/Documents/QScriptFileIO/verify3d.txt){ .on-glb }<br />
 これは，Verify3DのウェブサイトにECR_MODEL.pdbをサブミットすると出てくる結果ページの，「Display the raw average data」ボタンをクリックすると出てくるページからコピペしたものです．
-
--  QScriptファイル: ![fileio2](../../assets/images/Documents/QScriptFileIO/fileio2.qs){ .on-glb }
+*  QScriptファイル: ![fileio2](../../assets/images/Documents/QScriptFileIO/fileio2.qs){ .on-glb }
 
 
 ![fileio2](../../assets/images/Documents/QScriptFileIO/fileio2.png)
@@ -234,14 +228,10 @@ molvis.paint($r_p, color(0,0,1));
 
 #### スクリプトの解説
 **主なポイント**
-
--  複雑なフォーマットのテキストファイルを解析するには，正規表現を使えば簡単に実現できます．（このケースではsubstrでも出来ますが，例として正規表現を使っています．）QScriptではPerlとほぼ同じ正規表現が使用できます．
-
--  テキストから読み込んだ数値を原子に割り当てるには，温度因子あるいはoccupancyに代入しておく．
-
--  simple, traceレンダラーの場合はこの例のように簡単に温度因子(or occupancy)でグラジエント着色できる．
-
--  tubeやribbonレンダラーの場合は次のセクションで説明．
+*  複雑なフォーマットのテキストファイルを解析するには，正規表現を使えば簡単に実現できます．（このケースではsubstrでも出来ますが，例として正規表現を使っています．）QScriptではPerlとほぼ同じ正規表現が使用できます．
+*  テキストから読み込んだ数値を原子に割り当てるには，温度因子あるいはoccupancyに代入しておく．
+*  simple, traceレンダラーの場合はこの例のように簡単に温度因子(or occupancy)でグラジエント着色できる．
+*  tubeやribbonレンダラーの場合は次のセクションで説明．
 <pre>
 $pwd = sys.getScriptPath();
 $mol = readPDB("$pwd/ECR_MODEL.pdb","ecr");
@@ -396,9 +386,7 @@ list型はリンクトリストで実装されているためで，
 
 以下がスクリプトファイルになります．PDBやverify3d.txtは上記と同じものを使用してください．
 
-
--  ![fileio3](../../assets/images/Documents/QScriptFileIO/fileio3.qs){ .on-glb }
+*  ![fileio3](../../assets/images/Documents/QScriptFileIO/fileio3.qs){ .on-glb }
 
 
 ![fileio3](../../assets/images/Documents/QScriptFileIO/fileio3.png)
-

@@ -1,5 +1,3 @@
 [Documents](../../../en/Documents)
 
 #googletrnsl
-
-//

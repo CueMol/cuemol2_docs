@@ -43,13 +43,11 @@ ActiveXコントロールのインストールを選択するとインストー�
 
 ここで，「Register the CueMol2 ActiveX control」をチェックして
 インストールを行うと，install先ディレクトリ(defaultはC:\Program Files\CueMol 2.0\)に，
-
--  CueMol2Ctl.ocx (ActiveX control本体)
+*  CueMol2Ctl.ocx (ActiveX control本体)
 
 が追加でインストールされ，以下の処理が行なわれます．
 
-
--  CueMol2 ActiveX Controlというコントロールが，
+*  CueMol2 ActiveX Controlというコントロールが，
 b3c22d9d-cb97-4692-8097-2a36ecd9970bというGUIDでレジストリに登録される
 
 ### 表示したいシーンの作成
@@ -154,12 +152,9 @@ CueMol 2.1以降(2.1.0.241)では，アニメーションを使用すること�
 
 
 文字通り，
-
--  start animationでアニメーション開始
-
--  stop animationで終了
-
--  pause animationで一時停止（再開はstart animation）
+*  start animationでアニメーション開始
+*  stop animationで終了
+*  pause animationで一時停止（再開はstart animation）
 
 となっています．
 

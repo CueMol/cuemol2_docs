@@ -41,7 +41,5 @@ In default settings, the 2Fo-Fc map appears in blue color contoured at 1.1 sigma
 
 ### Download sources
 The Fetch PDB dialog/tool of the CueMol2 fetch these files from the following servers:
-
--  http://www.rcsb.org/pdb/
-
--  http://eds.bmc.uu.se/eds/
+*  http://www.rcsb.org/pdb/
+*  http://eds.bmc.uu.se/eds/

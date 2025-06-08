@@ -16,4 +16,3 @@ molvis.paint()メソッドを使用して，
 [Documents/QScriptのチュートリアル/Step3](../../../Documents/QScriptのチュートリアル/Step3)の，「2次構造ごとに色を設定」に使用例があります．
 
 ![blm_ribbon5](../../../assets/images/Ref/molvis/FancyColoring/blm_ribbon5.png)
-

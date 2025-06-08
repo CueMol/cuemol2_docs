@@ -6,7 +6,6 @@ CueMol2ではCueMol1と同様に分子表面の断面を生成することがで
 特に，以前のバージョンと比べて，より強化されたアルゴリズムによる断面ポリゴンメッシュの生成が可能になりました．
 
 
-
 ### 分子表面の作成
 まず，適当な分子ファイルを読み込みます．
 （ここでは，PDBサイトから取得した1CRNファイルを使用しています．
@@ -50,14 +49,10 @@ Cross section type
 :   切断面を生成するかどうか，あるいは切断面だけ生成するかどうか等のオプションを指定します．
 
 以下のオプションがあります．
-
-    - **Complete** 切断されたsurface objectと断面を同じMolSurfObjとして生成
-
-    - **Separately** 切断されたsurface objectと断面を別個のMolSurfObjとして生成（断面とそれ以外で着色を変えたい場合はこれを指定すればよい）
-
-    - **Section only** 断面のみを生成
-
-    - **No section** 切断されたsurface objectのみを生成（断面がない穴が開いた表面ができる）
+    * **Complete** 切断されたsurface objectと断面を同じMolSurfObjとして生成
+    * **Separately** 切断されたsurface objectと断面を別個のMolSurfObjとして生成（断面とそれ以外で着色を変えたい場合はこれを指定すればよい）
+    * **Section only** 断面のみを生成
+    * **No section** 切断されたsurface objectのみを生成（断面がない穴が開いた表面ができる）
 
 Section mesh density
 :   断面に生成する三角メッシュの密度を指定します．

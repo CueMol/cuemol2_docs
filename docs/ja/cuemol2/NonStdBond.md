@@ -18,10 +18,8 @@ disulfide結合や，Asn結合型糖鎖のAsnと糖間の共有結合などが�
 例として，[3OGR](http://www.rcsb.org/pdb/explore/explore.do?structureId=3OGR) (βガラクトシダーゼ)を加工したものを使用しています．(PDBサイトから落としてきたファイルを使用するとLINKやSSBONDレコードが入っているのでここで説明する作業をやらなくても残基間結合は正しく描画される．)
 
 Sample scene fileが以下からダウンロードできます．
-
--  [bondedit_3OGR_1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/bondedit_3OGR_1.qsc)：　ボンド作成前の状態（NAG1025付近を拡大表示）
-
--  [bondedit_3OGR_2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/bondedit_3OGR_2.qsc)：　ボンド作成後の状態（NAG1025だけでなく他の糖鎖やマンノース間の結合も追加・糖とAsnをballstick表示）
+*  [bondedit_3OGR_1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/bondedit_3OGR_1.qsc)：　ボンド作成前の状態（NAG1025付近を拡大表示）
+*  [bondedit_3OGR_2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/bondedit_3OGR_2.qsc)：　ボンド作成後の状態（NAG1025だけでなく他の糖鎖やマンノース間の結合も追加・糖とAsnをballstick表示）
 
 
 ### Mol bond editor
@@ -71,11 +69,7 @@ Sample scene fileが以下からダウンロードできます．
 なお，この**ボンドの追加・削除操作はUndo/Redoが可能**です．
 
 ### その他注意事項など
-
--  Mol bond editorで作成したボンドの情報は，PDBファイルとして保存した場合はLINK/SSBONDレコードとして書き出されます．そのため，再度読み込んだ場合も追加ボンドの情報は保持されます．
-
--  Mol bond editorで変更した分子を含むシーンを保存した場合，変更した分子はシーンファイルに埋め込まれます．（⇒再度シーンを読み込んだときも追加ボンドは正しく表示される）
-
--  異なる分子オブジェクト間にボンドを作成することはできません．
-
--  MacOS XではMol bond editorのwindowがmain window（のmol view）をクリックすると後ろに行ってしまいます．Mol bond editorのwindowを重ならないように横に並べて作業してください．
+*  Mol bond editorで作成したボンドの情報は，PDBファイルとして保存した場合はLINK/SSBONDレコードとして書き出されます．そのため，再度読み込んだ場合も追加ボンドの情報は保持されます．
+*  Mol bond editorで変更した分子を含むシーンを保存した場合，変更した分子はシーンファイルに埋め込まれます．（⇒再度シーンを読み込んだときも追加ボンドは正しく表示される）
+*  異なる分子オブジェクト間にボンドを作成することはできません．
+*  MacOS XではMol bond editorのwindowがmain window（のmol view）をクリックすると後ろに行ってしまいます．Mol bond editorのwindowを重ならないように横に並べて作業してください．

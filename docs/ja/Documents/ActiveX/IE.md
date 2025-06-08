@@ -22,20 +22,15 @@ ActiveXコントロールのインストールを選択するとインストー�
 
 ここで，「Register the CueMol ActiveX control」をチェックして
 インストールを行うと，install先ディレクトリ(defaultはC:\Program Files\CueMol 1.1\)に，
-
--  CueMolCtl.ocx (ActiveX control本体)
-
--  ctlconfig.xml (ActiveX controlの設定)
+*  CueMolCtl.ocx (ActiveX control本体)
+*  ctlconfig.xml (ActiveX controlの設定)
 
 の二つが追加でインストールされ，以下の処理が行なわれます．
 
-
--  CueMol SimpleMolView Objectというコントロールが，
+*  CueMol SimpleMolView Objectというコントロールが，
 32FF27E1-3414-42E4-A351-36C4499DAA65というGUIDでレジストリに登録される
-
--  chemical/x-rasというMIME typeに対して，上記のコントロールが関連付けられる
-
--  pdbという拡張子を持つメディアタイプに対して，上記のコントロールが関連付けられる
+*  chemical/x-rasというMIME typeに対して，上記のコントロールが関連付けられる
+*  pdbという拡張子を持つメディアタイプに対して，上記のコントロールが関連付けられる
 
 
 ### RCSBのページでは

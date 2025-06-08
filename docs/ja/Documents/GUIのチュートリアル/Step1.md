@@ -41,20 +41,13 @@ standard tool barの![gui_step1_open_ico](../../../assets/images/Documents/GUI�
 現在の実装では以下のタイプがあります．
 
 
-
--  simple … 線画のstick model
-
--  trace … 線画のC-alpha (蛋白質の場合), phosphate backbone (核酸の場合) トレース
-
--  cpk … CPKモデル表示
-
--  ballstick … ball and stickモデル表示
-
--  ribbon … いわゆるリボンモデル表示
-
--  tube … 主鎖のチューブ状モデル表示．traceの発展版のようなもの
-
--  その他
+*  simple … 線画のstick model
+*  trace … 線画のC-alpha (蛋白質の場合), phosphate backbone (核酸の場合) トレース
+*  cpk … CPKモデル表示
+*  ballstick … ball and stickモデル表示
+*  ribbon … いわゆるリボンモデル表示
+*  tube … 主鎖のチューブ状モデル表示．traceの発展版のようなもの
+*  その他
 
 ここでは，simple を選びます．
 

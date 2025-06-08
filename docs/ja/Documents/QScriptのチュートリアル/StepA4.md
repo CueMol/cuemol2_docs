@@ -45,20 +45,16 @@ resn blm
 MSMSの起動時に"-h"オプションを指定するとコマンドラインオプションの
 説明が表示されます．
 そのうち主に使用するのは，
-
-- probe_radius 数値
+* probe_radius 数値
 :   プローブの半径を指定する
 
-
-- density 数値
+* density 数値
 :   生成される分子表面データの細かさ
 
-
-- if ファイル名
+* if ファイル名
 :   入力ファイル名
 
-
-- of ファイル名
+* of ファイル名
 :   出力ファイル名
 
 
@@ -131,9 +127,7 @@ $r_sf.setProp("defcol", color(1,0,0));
 ```
 molsurfレンダラーには，複雑な着色を行うために
 様々なプロパティーがありますが，それらについては，
-
-- [QScriptのチュートリアル/StepA5](../../../Documents/QScriptのチュートリアル/StepA5)
-
-- [molsurfの複雑な着色](../../../SASPaint)
+* [QScriptのチュートリアル/StepA5](../../../Documents/QScriptのチュートリアル/StepA5)
+* [molsurfの複雑な着色](../../../SASPaint)
 
 で説明しています．

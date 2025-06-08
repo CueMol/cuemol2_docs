@@ -1,42 +1,26 @@
 ## ライセンスについて
 CueMolは，CueMol自体の独自コードと，他に以下のライブラリーなどを使用しています．
 
-
--  [Mozilla XULRunner](../https://developer.mozilla.org/ja/docs/XULRunner)
-
--  [FFTW](http://www.fftw.org)
-
--  [POV-Ray](http://www.povray.org)
-
--  SSM superpose
-
--  [BALL](http://www.ball-project.org/)
-
--  [pcre](http://www.pcre.org)
-
--  [expat](http://expat.sourceforge.net/)
-
--  CGAL
-
--  BOOST
-
--  Little CMS
-
--  FFTW
-
--  GLEW
-
--  zlib
-
--  libpng
+*  [Mozilla XULRunner](../https://developer.mozilla.org/ja/docs/XULRunner)
+*  [FFTW](http://www.fftw.org)
+*  [POV-Ray](http://www.povray.org)
+*  SSM superpose
+*  [BALL](http://www.ball-project.org/)
+*  [pcre](http://www.pcre.org)
+*  [expat](http://expat.sourceforge.net/)
+*  CGAL
+*  BOOST
+*  Little CMS
+*  FFTW
+*  GLEW
+*  zlib
+*  libpng
 
 各ライブラリーの部分に関しては，それらのライセンス事項に従います．
 
 CueMol is developed by the following contributors:
-
--  Ryuichiro Ishitani, ![mm1](../assets/images/Licence/mm1.png)![mm2](../assets/images/Licence/mm2.png)
-
--  Takanori Nakane (PyMOL session file importer)
+*  Ryuichiro Ishitani, ![mm1](../assets/images/Licence/mm1.png)![mm2](../assets/images/Licence/mm2.png)
+*  Takanori Nakane (PyMOL session file importer)
 
 ### 非商用利用
 非商用利用の場合は無料です．
@@ -57,9 +41,6 @@ CueMolプロジェクトへの寄付を受け付けています．
 
 ## 外部ソフトウェアについて
 CueMolの機能をフルに使うためには，以下に挙げるいくつかの外部ソフトウェアを使用する必要があります．このサイトでは，簡便のため，これらのコンパイル済みのバイナリ―を配布している場合がありますが，配布はすべてそれらのソフトウェアのオリジナルのライセンスに従います．
-
--  APBS: http://www.poissonboltzmann.org/apbs
-
--  PDB2PQR: http://www.poissonboltzmann.org/pdb2pqr
-
--  POV-Ray: http://www.povray.org/
+*  APBS: http://www.poissonboltzmann.org/apbs
+*  PDB2PQR: http://www.poissonboltzmann.org/pdb2pqr
+*  POV-Ray: http://www.povray.org/

@@ -6,12 +6,9 @@
 
 CueMolのインストール直後のデフォルト状態では，
 ファイルの関連付けはまったく行われませんが，CueMol自体には，
-
--  Windows（registry）内の関連付けを変更する
-
--  Windows（registry）内の関連付けを前の設定に戻す
-
--  FileのExplorer等からのDrag and drop処理
+*  Windows（registry）内の関連付けを変更する
+*  Windows（registry）内の関連付けを前の設定に戻す
+*  FileのExplorer等からのDrag and drop処理
 を行うことができます．
 
 ### 設定ダイアログ

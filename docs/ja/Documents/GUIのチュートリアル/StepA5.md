@@ -26,10 +26,8 @@ GDP結合型（[4Q21](http://pdb.protein.osaka-u.ac.jp/pdb/cgi/explore.cgi?job=s
 ![2ras](../../../assets/images/Documents/GUIのチュートリアル/StepA5/2ras.png){ .on-glb }
 
 さらに，Naviパレットやファイルの中身を直接見ることで，
-
--  重ね合わせる蛋白のchain名
-
--  重ね合わせる残基の番号
+*  重ね合わせる蛋白のchain名
+*  重ね合わせる残基の番号
 
 をチェックしておきます．今回の場合は
 1QRA
@@ -124,22 +122,16 @@ LSQ fit> RMSD 0.488393
 
 ### 注意点・問題点（バグ？）
 重ね合わせるべき原子の対応付けですが，選択文に書いた残基の順に，それぞれ重ね合わせられているわけではありません．なので，
-
-- reference: **resi 1:11,20:30**
-
-- moving: **resi 20:30,1:11**
+* reference: **resi 1:11,20:30**
+* moving: **resi 20:30,1:11**
 
 と書いても，
-
--  referenceの1〜11⇔movingの20〜30
-
--  referenceの20〜30⇔movingの1〜11
+*  referenceの1〜11⇔movingの20〜30
+*  referenceの20〜30⇔movingの1〜11
 
 が重ねあわされるわけではありません．
-
--  referenceの1〜11⇔movingの1〜11
-
--  referenceの20〜30⇔movingの20〜30
+*  referenceの1〜11⇔movingの1〜11
+*  referenceの20〜30⇔movingの20〜30
 
 が重ねあわされる結果となります．
 

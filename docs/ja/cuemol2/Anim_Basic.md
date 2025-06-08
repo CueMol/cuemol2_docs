@@ -4,8 +4,7 @@
 アニメーション作成機能について説明します．
 
 Sample scene fileが以下からダウンロードできます．
-
--  [lyso_simplespin1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin1.qsc)：　Lysozymeの単純スピンアニメーション（その１）
+*  [lyso_simplespin1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin1.qsc)：　Lysozymeの単純スピンアニメーション（その１）
 
 ### アニメーション・パレット
 CueMol2.1以降では，以下のようなアニメーション・パレットがサイドパネルに追加されています．

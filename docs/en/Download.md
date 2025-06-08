@@ -76,4 +76,3 @@ Modified X11 driver for SGI dialbox
 (I tested this driver with X11 version 4.0.1.)
 CCD2IP (conversion tool for X-ray diffraction images)
 :   [download](http://cuemol.sourceforge.jp/misc/que-download/ccd2ip-0.1-20010521.tar.gz)
-

@@ -1,20 +1,13 @@
-
-//
 ## リファレンスのページ
 このページでは，
 主にCueMolの機能をQScriptから使用するための情報を
 網羅的に解説していく予定です．
 ### 概念
-
--  [オブジェクトあるいはデータオブジェクト](../Ref/Object)
-
--  [レンダラー](../Ref/Renderer)
-
--  [プロパティー](../Ref/Property)
-
--  [例外](../Ref/Exception)
-
--  [QScriptオブジェクト](../Ref/QScriptObject)
+*  [オブジェクトあるいはデータオブジェクト](../Ref/Object)
+*  [レンダラー](../Ref/Renderer)
+*  [プロパティー](../Ref/Property)
+*  [例外](../Ref/Exception)
+*  [QScriptオブジェクト](../Ref/QScriptObject)
 ### モジュール
 
 [gfx](../Ref/gfx)
@@ -37,4 +30,3 @@
 
 [symm](../Ref/symm)
 :   結晶学的対称に関するモジュール
-

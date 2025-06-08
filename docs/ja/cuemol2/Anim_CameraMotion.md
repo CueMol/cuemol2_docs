@@ -5,8 +5,7 @@
 （例で説明している作業は，[前セクション](../../cuemol2/Anim_Cmb)の続きの操作として説明しています）
 
 サンプルのqscシーンファイルが以下からダウンロードできます．
-
--  [lyso_cammotion1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_cammotion1.qsc)：　Lysozymeのカメラ移動アニメーション
+*  [lyso_cammotion1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_cammotion1.qsc)：　Lysozymeのカメラ移動アニメーション
 
 ### 初期カメラ
 アニメーションの開始時は，視点は決まった位置から開始してほしいものです．（単純に回転するだけ等の場合はそうでもないかもしれませんが）
@@ -52,14 +51,10 @@ Ignore XXX
 
 
 この例では，
-
--  Start timeは0:0:2.0 (defaultでそのようになっているはず．なっていない場合はそのように設定)
-
--  Durationは0:0:2.0にする（defaultは1秒で少々速すぎるので2秒に変更)
-
--  Quadricは0.25にする
-
--  Target cameraはcamera_1にする
+*  Start timeは0:0:2.0 (defaultでそのようになっているはず．なっていない場合はそのように設定)
+*  Durationは0:0:2.0にする（defaultは1秒で少々速すぎるので2秒に変更)
+*  Quadricは0.25にする
+*  Target cameraはcamera_1にする
 
 以上の変更を行ったうえで，OKボタンを押してください．
 
@@ -69,16 +64,11 @@ Ignore XXX
 ![anim-cammot-3](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-3.png){ .on-glb }
 
 このパネルの表示の意味するところは，
-
--  アニメーションは全長で４秒間 (Durationが0:0:4.0)
-
--  アニメーションはcamera_0から開始
-
--  0〜1秒間，SimpleSpin1により360度回転
-
--  1〜2秒間，SimpleSpin2により-360度回転
-
--  2〜4秒間，CamMotion1により，視点がcamera_1に移動する
+*  アニメーションは全長で４秒間 (Durationが0:0:4.0)
+*  アニメーションはcamera_0から開始
+*  0〜1秒間，SimpleSpin1により360度回転
+*  1〜2秒間，SimpleSpin2により-360度回転
+*  2〜4秒間，CamMotion1により，視点がcamera_1に移動する
 
 ということです．
 (以上で作成したシーンは，

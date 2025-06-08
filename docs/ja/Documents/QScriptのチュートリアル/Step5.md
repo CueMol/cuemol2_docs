@@ -99,4 +99,3 @@ Que> gfx.updateView();
 Windows版であれば,GUIのView palette(メニュー"Window"→"ViewRot Palette"で表示)の "RotY"のところのテキストボックスに回転したい角度を入力しEnterを押すことで，指定量だけビューを回転させることができます．この機能を利用して立体視の図を作成することもできます． 
 
 ![viewrotwnd](../../../assets/images/Documents/QScriptのチュートリアル/Step5/viewrotwnd.png){ .on-glb }
-

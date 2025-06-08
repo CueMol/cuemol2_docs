@@ -6,8 +6,7 @@
 （もちろん以降のセクションで説明する他のタイプのアニメーションもSimple spin同様に組み合わせ可能です）
 
 Sample scene fileが以下からダウンロードできます．
-
--  [lyso_simplespin2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin2.qsc)：　Lysozymeの単純スピンアニメーション（その２）
+*  [lyso_simplespin2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin2.qsc)：　Lysozymeの単純スピンアニメーション（その２）
 
 ## ２つ目のSimple spinアニメーションの追加
 
@@ -48,10 +47,8 @@ Spin axis
 
 ### 再生
 以上の設定を行い，Animation ribbonの再生ボタンを押すと，
-
--  はじめの１秒で１回転
-
--  次の１秒で逆方向に１回転
+*  はじめの１秒で１回転
+*  次の１秒で逆方向に１回転
 
 して，元に戻るアニメーションになっていることが分かります．
 
@@ -71,14 +68,10 @@ SimpleSpin2の開始時間と終了時間も１秒分繰り下がっているこ
 
 ### 相対指定についての注意点
 
-
--  相対指定が出来るのは開始時間のみ．
-
--  開始時間をあるanimation objectに対して相対指定にした場合，そのanimation objectの終了時点からの時間を指定する．
-
--  相対指定は複数連鎖させることができる．そうすることで，途中の時間を変更しても後続のanimationを変更しなくてもすむ．
-
--  ただし，連鎖に循環があると時間が決定できなくなりanimationを実行できなくなるので注意．
+*  相対指定が出来るのは開始時間のみ．
+*  開始時間をあるanimation objectに対して相対指定にした場合，そのanimation objectの終了時点からの時間を指定する．
+*  相対指定は複数連鎖させることができる．そうすることで，途中の時間を変更しても後続のanimationを変更しなくてもすむ．
+*  ただし，連鎖に循環があると時間が決定できなくなりanimationを実行できなくなるので注意．
 
 ## Quadric値による滑らかなアニメーション&aname(quadric);
 Quadric値は，アニメーションの滑らかさを制御する値です．

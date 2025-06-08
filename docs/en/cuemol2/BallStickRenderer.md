@@ -15,10 +15,8 @@ As for the common settings, see [cuemol2/CommonRendererProps](../../../en/cuemol
 Triangulation level of the spheres and cylinders of the ball-and-stick models. Large value of detail results in smooth drawings, but slow down the rendering speed. The default setting (10) produces usually enough quality.
 
 In the following cases, the detail value will be ignored (because they directly render spheres and cylinders, and do not divide them into triangles):
-
--  POV-Ray rendering (without edge and silhouette lines)
-
--  GL shader rendering mode (see below and [cuemol2/UseGLShader](../../../en/cuemol2/UseGLShader))
+*  POV-Ray rendering (without edge and silhouette lines)
+*  GL shader rendering mode (see below and [cuemol2/UseGLShader](../../../en/cuemol2/UseGLShader))
 
 #### Bond width
 Specify the size of the bond (more precisely, the radii of the cylinders connecting the atoms) in angstrom unit.

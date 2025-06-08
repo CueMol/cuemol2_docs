@@ -2,18 +2,12 @@
 
 ## gitとgithub
 ### 開発サイクル
-
--  細かい修正やbugfixなどは，master branchで行う（fixとか専用branch要検討？）
-
--  ある程度手間がかかりそうな新機能を追加するときは，それに対応する開発branchを作り，それ上で作業する
-
--  ある程度動作チェックまで完了して来たら，masterをmerge
-
--  conflictがあれば修正しそのうえで動作チェックとbugfixをする
-
--  動作OKになったらmasterにmergeし，要らないようならbranchを削除する
-
--  Build番号などはmasterでbuildしたときにのみ増加させるようにする．<br />
+*  細かい修正やbugfixなどは，master branchで行う（fixとか専用branch要検討？）
+*  ある程度手間がかかりそうな新機能を追加するときは，それに対応する開発branchを作り，それ上で作業する
+*  ある程度動作チェックまで完了して来たら，masterをmerge
+*  conflictがあれば修正しそのうえで動作チェックとbugfixをする
+*  動作OKになったらmasterにmergeし，要らないようならbranchを削除する
+*  Build番号などはmasterでbuildしたときにのみ増加させるようにする．<br />
 (不要なconflictを防ぐため，開発branchではbuild numberはいじらない)
 
 ### Branchに対してmasterをmerge
@@ -92,16 +86,13 @@ Merge
 →local source treeに反映されるので，必要に応じてこの後pushを行う
 
 ### Releaseを作成する
-
--  Releaseするversionのsource code snapshotをarchiveする
+*  Releaseするversionのsource code snapshotをarchiveする
 ```
 > git archive --format=zip HEAD --prefix=cuemol2-2.X.Y.ZZZ/ -o cuemol2-2.X.Y.ZZZ-src.zip
 ```
 
-
--  archiveを展開するとcuemol2-2.X.Y.ZZZができるので，それ以下でbuild
-
--  debug symbol file (pdb fileなど)がそのbuildしたdirectoryに対して出来るので，crashdumpを解析する事を考えてbuildしたdirectoryは残しておく
+*  archiveを展開するとcuemol2-2.X.Y.ZZZができるので，それ以下でbuild
+*  debug symbol file (pdb fileなど)がそのbuildしたdirectoryに対して出来るので，crashdumpを解析する事を考えてbuildしたdirectoryは残しておく
 
 ## 古い情報
 ### svnの使い方 (obsolete)

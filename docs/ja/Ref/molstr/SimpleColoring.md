@@ -2,12 +2,9 @@
 
 ## SimpleColoring
 単純な着色をサポートするColoring(着色) classのひとつ．
-
--  mode 0: 元素の種類（H,C,N,O,P,S,それ以外）で着色
-
--  mode 1: 温度因子でグラジエント着色
-
--  mode 2: Occupancyでグラジエント着色
+*  mode 0: 元素の種類（H,C,N,O,P,S,それ以外）で着色
+*  mode 1: 温度因子でグラジエント着色
+*  mode 2: Occupancyでグラジエント着色
 
 の３つのモードがある．
 

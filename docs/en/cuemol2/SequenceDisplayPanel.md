@@ -7,18 +7,12 @@ In the sequence display panel, which is located at the bottom of the CueMol2 win
 
 
 In the sequence view:
-
--  Amino acids are shown with single-letter notation.
-
--  Nucleic acids (DNA and RNA) are shown with single-letter notation.
-
--  Other non-standard residues, ligands, and ions, etc. are shown with asterisk mark (*).
-
--  Selected residues are highlighted with cyan background.
-
--  Dragging region is indicated by dark-green rectangle.
-
--  Pivot residue is indicated by red rectangle.
+*  Amino acids are shown with single-letter notation.
+*  Nucleic acids (DNA and RNA) are shown with single-letter notation.
+*  Other non-standard residues, ligands, and ions, etc. are shown with asterisk mark (*).
+*  Selected residues are highlighted with cyan background.
+*  Dragging region is indicated by dark-green rectangle.
+*  Pivot residue is indicated by red rectangle.
 
 
 ### Mouse operations in the sequence panel
@@ -61,4 +55,3 @@ Unselect all
 
 Invert sel
 :   Invert selections in the corresponding molecule (without affecting other molecules).
-

@@ -52,12 +52,9 @@ Log
 
 
 例では以下のように指定します．
-
-- output dirをC:\tmp\render_tmpに指定し(フォルダは前もって作っておいてください)，
-
-- Width/heightをQVGA (320x240)に指定
-
--  Frame rateを24に指定
+* output dirをC:\tmp\render_tmpに指定し(フォルダは前もって作っておいてください)，
+* Width/heightをQVGA (320x240)に指定
+*  Frame rateを24に指定
 
 ### Render options
 主にPOV-Rayに関する設定を行います．
@@ -83,12 +80,9 @@ Shadow
 
 
 例では以下のように指定します．
-
-- Clipping planeはON
-
-- Post-render alpha blendingは，アニメーションで半透明が使用されるためONにする．
-
-- ShadowはOFF
+* Clipping planeはON
+* Post-render alpha blendingは，アニメーションで半透明が使用されるためONにする．
+* ShadowはOFF
 
 ### Movie options
 主に動画をエンコードするFFmpegに関する設定を行います．
@@ -109,12 +103,9 @@ Bitrate
 
 
 例では以下のように指定しています．
-
-- Make movieはON
-
-- Output formatをQuickTime/H.264に
-
-- Bitrateを10240にする．
+* Make movieはON
+* Output formatをQuickTime/H.264に
+* Bitrateを10240にする．
 
 ## レンダリングの実行
 以上の設定をすべて行った後，Startボタンを押すとレンダリングが開始されます．
@@ -168,16 +159,13 @@ CueMolインストールディレクトリは，たとえば，C:\Program Files 
 ### Handbrakeを用いる方法
 一方で，FFmpegを用いてパラメータをいろいろ変えてエンコードし直しても，
 上記の手順で作成した動画ファイルは，PowerPointに埋め込んで使用すると，
-
--  異常にカクカクする
-
--  WindowsではPowerPointがクラッシュする
+*  異常にカクカクする
+*  WindowsではPowerPointがクラッシュする
 
 などの問題が起こる可能性があります．
 また，iPad等のmobile deviceでは正常に見られない可能性があります．
 
 これらを回避するには，[Handbrake](http://handbrake.fr/)というソフトで動画を再エンコードするのがお勧めです．
-
 
 
 まず，CueMolで動画をエンコードする時点で劣化しないように，QuickTime/Raw encodeを使用します．（raw encodeでエンコードした場合はWindowsのmedia player等で見られないが問題はない）

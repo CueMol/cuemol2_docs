@@ -13,4 +13,3 @@ gfxモジュールの（スタティック）メソッドの一覧は，
 
 [renderer](../../Ref/gfx/renderer)
 :   QScriptにおいて[レンダラー](../../Ref/Renderer)を表現するオブジェクト．
-
