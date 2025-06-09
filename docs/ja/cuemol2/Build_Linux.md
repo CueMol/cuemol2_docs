@@ -6,6 +6,7 @@ CentOS 5.Xでの場合．(それ以外のdistrでも，xulrunnerがちゃんと�
 Ubuntu amd64では動くようです（Biochem_fanさんに感謝！）． http://pastebin.com/uHcmVrE8
 
 ### 必要なソフトウェア・ライブラリ類のインストール
+
 *  xulrunner SDK 
 *  BOOST C++ Libraries
 *  FFTW
@@ -101,6 +102,7 @@ instpath=~/app/boost
 （iostreamsは使用していないので省いても良いかも）
 
 実際にはinstallしてもうまくいかない。bjamのscriptが期待するdirectory構成と違うようにinstallされてしまうため。以下のようにファイルを移動してcuemolのautoconf scriptから参照しやすいようにした。
+
 *  1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。
 *  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
 
@@ -130,6 +132,7 @@ env CFLAGS="-fPIC -DPIC" \
 ```
 
 #### CGAL
+
 *  version 3.8を使用
 *  CMakeはOSのパッケージのものでOK
 *  cmakeの実行
@@ -148,12 +151,14 @@ cmake -DBOOST_ROOT=$HOME/proj/boost/ \
 ```
       -DCMAKE_CXX_FLAGS="-fPIC -DPIC" .
 ```
+
 *  makeの実行
 *  make installの実行
 
 ※-fPICは入れないとsoとlinkできない
 
 #### glewのインストール
+
 *  version 1.7.0を使用
 *  Sourceを展開して単にmake．configureとかはない．以下のように環境変数GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
 ```
@@ -162,6 +167,7 @@ env GLEW_DEST=$HOME/proj/glew CFLAGS.EXTRA="-fPIC -DPIC" make
 ```
 env GLEW_DEST=$HOME/proj/glew make install
 ```
+
 *  $GLEW_DEST/lib64以下にlibraryがinstallされるが、shared objectは使わないので消しておく。消さないとsoの方が優先的にリンクされてしまう。
 
 ※当たり前だがX11やOpenGLの開発パッケージがインストールされている必要がある。<br />
@@ -169,10 +175,12 @@ CFLAGS.EXTRAでPICオプションを指定しないと、後々shared libraryと
 
 ### Repositoryからチェックアウト
 [MacOSXの場合](../../cuemol2/Build_MacOSX)と同様．すなわち，
+
 *  Anonymous (http)
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
+
 *  特定ユーザー (ssh)<br />
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2

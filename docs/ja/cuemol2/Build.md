@@ -2,11 +2,13 @@
 
 ## CueMol2のバージョンとxulrunner/geckoのバージョン
 CueMol2のバージョンに合ったバージョンを用いる必要がある。
+
 *  CueMol2-2.1.0では9.0.1を使用。
 *  CueMol2-2.2.0では23.0.1を使用。
 
 ## Windowsでのbuild
 ### 必要なソフトウェアのインストール
+
 *  VisualStudio2008
 *  ActivePerl [ページ](http://www.activestate.com/Products/ActivePerl/)
 *  ActivePython （GeckoSDKのIDL compilerで必要．Python2.7が動けば他のdistributionでも良い．）
@@ -14,14 +16,18 @@ CueMol2のバージョンに合ったバージョンを用いる必要がある�
 Inno Setupだけではなく、preprocessorというのも入れる必要がある。全てがセットになったQuickStart Pack（ispack-5.X.XX.exe等）をinstallする。
 
 ### 必要なライブラリ類のインストール
+
 *  xulrunner SDK ftp://ftp.mozilla.org/pub/xulrunner/ <br />
 CueMol2のバージョンに合ったバージョンを用いる必要がある。<br />
 c:\proj\xulrunner\xulrunner2-sdk
 以下に展開する
+
 *  BOOST C++ Library (http://www.boost.org/)<br />
 以下では、コンパイル済みの配布(boostpro; http://www.boostpro.com/download/)を使用するが、ソースからコンパイルしてもよい。
+
 *  FFTW<br />
 cuemol1.1のbuildsetにlibfftwが付属しているのでそれを流用する。
+
 *  glew
     *  展開する→glew32.dllをc:\proj\binにコピー
 *  CGAL
@@ -38,6 +44,7 @@ mklink /d xulrunner2-sdk xulrunner-sdk-2.X.X
 リンクの削除はrdコマンドで行う（delをやると本当にファイルごと消えてしまうらしい）
 
 #### BoostProのinstall
+
 1.  Downloadしたinstallerを実行する。
 1.  Install先は、C:\proj\boost\boost_X_XX (X_XXはバージョン番号、1_40など)にする。
 1.  Installするcomponentを指定する。
@@ -49,6 +56,7 @@ mklink /d xulrunner2-sdk xulrunner-sdk-2.X.X
 C:\proj\boost\boost_X_XX\lib以下にあるDLLをすべてC:\proj\binにコピーする。
 
 #### CGAL
+
 *  CMakeをインストールする．
 *  CGALのソースをインストールする(2.2.0では3.8を使用中)
 *  cmake-guiでslnを生成<br />
@@ -59,8 +67,10 @@ C:\proj\boost\boost_X_XX\lib以下にあるDLLをすべてC:\proj\binにコピ�
 
 
 ### VisualStudio 2008の設定
+
 1. 環境変数PROJ_DIRを設定（以上の例に合わせるならc:\projに）<br />
 やり方は、windows 環境変数などでググればよい。
+
 1. 環境変数PATHにc:\proj\binを追加する．
 1. ツール→オプション、ダイアログ左で「プロジェクトおよびソリューション」をクリックすると出てくる「VC++ディレクトリ」を選ぶ
 1. 右上の「ディレクトリを表示するプロジェクト」で「実行可能ファイル」を選び、
@@ -84,10 +94,12 @@ C:\proj\boost\boost_X_XX\lib以下にあるDLLをすべてC:\proj\binにコピ�
 ### Source codeのcheckout
 以下、trunkをcheckoutすること前提に説明しているが、他のbranchをcheckoutするばあいは適宜置き換える。
 #### Cygwin等のコマンドライン版gitを使用する場合
+
 *  Anonymous (http)
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
+
 *  特定ユーザー (ssh)<br />
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2
@@ -100,18 +112,22 @@ git clone git@github.com:CueMol/cuemol2.git cuemol2
 
 
 ### プロジェクトの設定とビルド
+
 1. VS.NETでc:\proj\cuemol2\winbuild\cuemol.slnを開く
 
 ### VisualStudio2008のIDEからの実行
+
 *  Build完了後に、xuldeployプロジェクトのみ再ビルドしたほうが良い。
 *  stubプロジェクトを、スタートアッププロジェクトに設定する。
 *  stubプロジェクトのプロパティーの、デバッグ項目で、コマンド引数に以下を追加する。
 ```
+
 * greapp <xulrunnerのbinディレクトリ> $(XULDeployDir)
 ```
 
 以上で、xulrunnerのbinディレクトリは、xulrunner SDKのものを用いるなら、
 ```
+
 * greapp $(XULRunnerDir)\bin $(XULDeployDir)
 ```
 

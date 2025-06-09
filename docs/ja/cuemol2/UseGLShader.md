@@ -3,6 +3,7 @@
 Version 2.1ではOpenGLのshader機能を使用した描画が行えるようになっています．
 
 現時点(Version2.1.0.243)では以下の機能で，shaderが使用されています．
+
 *  [GPUを用いた電子密度表示](../../cuemol2/GPUDensityMap)
 *  [Fadeアニメーション](../../cuemol2/Anim_ShowHide)
 
@@ -14,6 +15,7 @@ GLSLのバージョン番号により以下の機能が使用できたり，で�
 
 例えば以下のようにOpenGLが4.2以上のバージョンであればすべての機能が使用できます．
 ```
+
         *  OpenGL Info ---
 ```
 ```
@@ -39,9 +41,11 @@ Version:
 ```
 
 OpenGLが3あるいは2等の場合は，
+
 *  Geometry shaderが使用できない
 
 あと，ATIやnVidia以外のドライバーの場合
+
 *  Compatibility profileが正常に動作しない
 
 などの問題があるようです．特に後者の場合は，中途半端にshaderが使用されてcuemolが正常に動作しない場合もあるため，以下の手順に従ってshaderを無効化してください．

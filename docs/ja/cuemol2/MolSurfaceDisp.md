@@ -8,6 +8,7 @@
 を使用して説明しています．
 
 Sample scene fileが以下からダウンロードできます．
+
 *  [1CTQ_surf_1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_1.qsc)：　分子表面作成後の状態
 *  [1CTQ_surf_2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_2.qsc)：　GDPNPのballstick表示作成後の状態
 *  [1CTQ_surf_3.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.183/1CTQ_surf_3.qsc)：　表面ドット表示作成後の状態
@@ -77,6 +78,7 @@ vert/faceファイルはポリゴンの情報しか持っていないため，
 
 ## molsurfレンダラーの着色モード(Paint mode)
 molsurfレンダラーには，主に以下の着色モード(Paint mode)があります．
+
 *  分子による着色モード (By molecule)
 *  静電ポテンシャルマップよる着色モード (By potential)
 *  べた塗モード (Solid)
@@ -169,6 +171,7 @@ GDPNP(A.167.*)をballstick表示にして，タンパク分子部分のみにつ
 上図のシーンは冒頭の1CTQ_surf_2.qscでダウンロードできます．
 
 また，以下の手順でも作成できます：
+
 1.  1CTQをダウンロードする．（メニュー「File」→「Get PDB ...」，1CTQと入力しOK, simpleレンダラーを表示させる．チュートリアル[分子モデルファイルを読み込む](../../Documents/GUIのチュートリアル(CueMol2)/Step1)後半参照）
 1.  Mol surface generation tool（メニュー「Tool」→「Mol surface generation ...」）でproteinに対して分子表面を生成．[分子表面の作成](../../cuemol2/MsmsMolSurface)参照
 1.  sf_1CTQ, molsurf1が作られる

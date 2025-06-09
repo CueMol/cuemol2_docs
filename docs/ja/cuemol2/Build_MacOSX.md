@@ -2,6 +2,7 @@
 
 ## CueMol2のバージョンとxulrunner/geckoのバージョン
 CueMol2のバージョンに合ったバージョンを用いる必要がある。
+
 *  2.1系列では9.0.1を使用。(2.1.0.270)
 *  2.2系列では23.0.1を使用。(2.2.0.321)
 
@@ -9,6 +10,7 @@ CueMol2のバージョンに合ったバージョンを用いる必要がある�
 Mac OSX 10.6 (Snow Leopard)あるいは10.7(Lion)での場合．(Leopardではなぜか動かない)
 
 ### 必要なソフトウェア・ライブラリ類のインストール
+
 *  Xcode (OS付属，version 3)
 *  MacPorts (下記参照)
 *  xulrunner SDK 
@@ -31,6 +33,7 @@ Universal binaryになるようにMacPortsを設定する必要がある．
 /opt/local/etc/macports/variants.conf
 ファイルに，
 ```
+
 1. universal
 ```
 という行を追加すれば，自動的に追加したようになるらしい．
@@ -70,36 +73,47 @@ instpath=$HOME/proj/boost
 ./bjam \
 ```
 ```
+
     * prefix=$instpath \
 ```
 ```
+
     * exec-prefix=$instpath \
 ```
 ```
+
     * libdir=$instpath \
 ```
 ```
+
     * includedir=$instpath \
 ```
 ```
+
     * with-date_time \
 ```
 ```
+
     * with-filesystem \
 ```
 ```
+
     * with-iostreams \
 ```
 ```
+
     * with-program_options \
 ```
 ```
+
     * with-regex \
 ```
 ```
+
     * with-system \
 ```
 ```
+
     * with-thread \
 ```
 ```
@@ -109,6 +123,7 @@ architecture=x86 address-model=32 link=shared,static threading=multi install
 (最後の引数がstageだとlibraryのbuildのみを行い、installだとheader fileのcopyまで行う．64bitをbuildするには，address-model=64にすればよい)
 
 ただ，実際にはinstallしても，うまくいかない。autoconfのscriptが期待するdirectory構成と違うようにinstallされてしまうため。
+
 *  1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。
 *  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
 ```
@@ -141,6 +156,7 @@ env CFLAGS="-m32 -fast" ./configure --enable-float --prefix=$HOME/proj --disable
 
 
 #### glewのインストール
+
 *  version 1.7.0を使用
 *  32bitでコンパイルする必要があるがコマンドラインからはそういう指定はどうやるか分からなかったのでconfig/Makefile.darwinのCC, LDを変更した．
 ```
@@ -149,6 +165,7 @@ CC=cc -m32
 ```
 LD=cc -m32
 ```
+
 *  Sourceを展開して単にmake．configureとかはない．GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
 ```
 env GLEW_DEST=$HOME/proj/glew make
@@ -158,16 +175,20 @@ env GLEW_DEST=$HOME/proj/glew make install
 ```
 
 #### CGALのインストール方法
+
 *  CMakeを普通にインストールする(公式サイトにdmgファイルがある)
 *  CGALのdocumentation通りにcmake-guiを実行
 ```
 cmake-gui .
 ```
+
 *  Macroとして、BOOST_ROOTを指定する(listboxに追加すればよい)<br />
 指定dir以下に、lib/*.dylib, include/boost があればよい。
 例えば$HOME/proj/boostなど。
+
 *  一旦Configureボタンを押す。Dialogが出てくるので、Makefileを生成するoptionを選択する。
 （→他のMacroも現れてくる）
+
 *  CMAKE_INSTALL_PREFIXをインストール先($HOME/proj/CGAL等)に変更する。
 *  32bit: CGAL_CXX_FLAGSというのも出てくるので、そこに-m32というのを追加→32bitでcompileされる
 *  再度Configureボタンを押す
@@ -201,10 +222,12 @@ include/CGAL/compiler_config.h
 
 
 ### Source codeのcheckout
+
 *  Anonymous (http)
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
+
 *  特定ユーザー (ssh)<br />
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2

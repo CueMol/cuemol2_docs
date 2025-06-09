@@ -2,6 +2,7 @@
 
 ## gitとgithub
 ### 開発サイクル
+
 *  細かい修正やbugfixなどは，master branchで行う（fixとか専用branch要検討？）
 *  ある程度手間がかかりそうな新機能を追加するときは，それに対応する開発branchを作り，それ上で作業する
 *  ある程度動作チェックまで完了して来たら，masterをmerge
@@ -86,6 +87,7 @@ Merge
 →local source treeに反映されるので，必要に応じてこの後pushを行う
 
 ### Releaseを作成する
+
 *  Releaseするversionのsource code snapshotをarchiveする
 ```
 > git archive --format=zip HEAD --prefix=cuemol2-2.X.Y.ZZZ/ -o cuemol2-2.X.Y.ZZZ-src.zip

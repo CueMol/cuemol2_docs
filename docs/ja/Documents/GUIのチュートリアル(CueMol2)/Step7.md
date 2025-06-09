@@ -44,6 +44,7 @@ simple, ballstick, cpk等のレンダラーは，このcoloringがデフォル�
 色とHTML色コードが表示されている右隣りの三角アイコンをクリックすると，
 上図のようなメニューが出てきます．
 このように，色は
+
 *  RGB (red, green, blue)の強度をスライダーで設定する
 *  HSB (hue, saturation, brightness)の強度をスライダーで設定する
 *  名前付き色リストから選ぶ

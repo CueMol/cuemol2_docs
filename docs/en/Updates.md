@@ -1,16 +1,19 @@
 [FrontPage](../../en/FrontPage)
 ### Series 2.2.3
 #### Version 2.2.3.443
+
 *  Implemented SDF format molecule file reader
 *  Implemented MOL2 format molecule file reader
 *  FIXED: Composite renderers are not shown in the renderer-selection dialog opened from PDB-fetch menu.
 *  FIXED: Atoms becomes unclickable after doing ssm-superpose
 
 #### Version 2.2.3.437
+
 *  Edge lines now become (semi)transparent according to the color of the belonging triangle edges. This enables "segment end fadeout" display of the ribbon and cartoons with edge lines.
 *  Error in the "Mol Superpose" dialog of auto-recenter checkbox is fixed.
 
 #### Version 2.2.3.434
+
 *  APBS and PDB2PQR are now also bundled in the MacOSX release.
 *  Multi-gradient coloring for isosurf and molsurf renderers was implemented.
 *  GUI for editing the multi-gradient coloring was implemented.(cuemol2/MultiGrad)
@@ -28,6 +31,7 @@
 *  FIXED: Child processes spawned from CueMol does not inherit env vars, such as LD_LIBRARY_PATH.
 
 #### Version 2.2.3.430
+
 *  Several molecule editor functions were implemented. (cuemol2/MolEdit)
 *  Changing the chain name operation was implemented.
 *  Changing the residue index operation was implemented.
@@ -48,9 +52,11 @@
     *  FIXED: Animation slider does not work correctly.
 
 #### Version 2.2.3.422
+
 *  BUGFIX: Crashes when creating symmetry-related molecule
 
 #### Version 2.2.3.421
+
 *  "show unit-cell" button was added in the density panel.
 *  Now coordinates files are fetched from RCSB web site in the mmCIF format that supports large molecules.
 *  Internal representation unit of the time value was changed from milli-second to nano-second to increase the animation precision.
@@ -70,6 +76,7 @@
 *  BUGFIX: Alpha (transparency) notation of color syntax does not function correctly (cuemol2/ColorSyntax)
 
 #### Version 2.2.3.412
+
 *  Improvements of dsurface renderer (To do: documentation)
 *  Back-face display option for dsurface renderer were implemented
 *  The electrostatic potential coloring mode for the dsurface renderer was implemented.
@@ -90,6 +97,7 @@
 *  BUGFIX: Double bonds are not correctly displayed when the coordinates contain hydrogen atoms
 
 #### Version 2.2.3.403
+
 *  Supported 64bit version (Windows 7 and later)
 *  Supported reading molecular coordinates in mmCIF file format
 *  Implemented new qsc file format (version 2), with LZMA (xz) compression and new molecular structure format (without limitation of atom number, residue number, chain name length, etc).
@@ -108,17 +116,20 @@
 
 ### Series 2.2.2
 #### Version 2.2.2.366
+
 *  BUGFIX: Support for Windows XP
 *  BUGFIX: Fixed bug in the Windows version installer
 *  BUGFIX: Support for MacOS X 10.6 and later
 
 #### Version 2.2.2.365
+
 *  BUGFIX: PDB file reader cannot read SSBOND record without trailing spaces
 *  BUGFIX: Pov file rendering fails with spheres with nearly-zero radius
 *  BUGFIX: Animation rendering dialogbox does not remember the output prefix
 *  XULRunner is updated to version 39.0<br />
 Build environment for Win32 is updated to VS2013<br />
 Build environment for MacOS X is updated to clang-6.1 (Xcode 6.4)
+
 *  Implementation of density map loader by PDB ID from EDS server (see: [cuemol2/FetchPDB](../../en/cuemol2/FetchPDB))
 *  Implementation of chain or secondary-structure based coloring in RainbowColoring class
 *  Implementation of sequence display panel (see: [cuemol2/SequenceDisplayPanel](../../en/cuemol2/SequenceDisplayPanel))

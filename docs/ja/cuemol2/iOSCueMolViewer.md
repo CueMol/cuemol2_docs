@@ -14,6 +14,7 @@ iOSで動作するCueMolのモバイルデバイス版です．
 構造を見る・見せることだけに特化しているため，上記以外の編集作業はできません．
 
 基本的に，以下の流れで使用するものと考えていただければと思います．
+
 1.  Desktop版CueMolでシーンを作成
 1.  Mobile device用にpolygon数などを調節する([Light weight scene](../../cuemol2/LightWeightScene)を参照)
 1.  QSLファイルに書き出す([Light weight scene](../../cuemol2/LightWeightScene)を参照)
@@ -27,6 +28,7 @@ http://itunes.apple.com/us/app/cuemol/id496236710?ls=1&mt=8
 
 ## 使用方法
 主にユーザインタフェイスは以下の３つからなります．
+
 *  File browser
 *  Molecular viewer
 *  Display panel

@@ -18,6 +18,7 @@ Ribbonやtubeレンダラーはデフォルトでpaint coloringになってい�
 
 左側のSelectionが選択を，右のColorがその選択部分に対する色を表しています．
 この場合，
+
 *  rprop secondary=sheet（一部隠れていて見えませんが，二次構造がシートの部分）に対してSteelBlue色，
 *  rprop secondary=helix（一部隠れていて見えませんが，二次構造がヘリックスの部分）に対してkhaki色
 *  * (全体）に対してFloralWhite色

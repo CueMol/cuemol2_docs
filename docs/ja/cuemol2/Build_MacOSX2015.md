@@ -3,6 +3,7 @@
 
 CueMol2のバージョンに合った環境を用いる必要がある。
 ここでは、
+
 *  CueMol 2.2.2.X (git branch [vs2013test](../../https://github.com/CueMol/cuemol2/tree/vs2013test))
 *  MacOS X 10.10 (Xcode 6.4)
 *  boost 1_57/CGAL 4.6.1
@@ -11,6 +12,7 @@ CueMol2のバージョンに合った環境を用いる必要がある。
 
 ### Directory構成
 基本、以下のようなdirectory構成を使用する
+
 *  Home
     *  proj64
         * cuemol2 (CueMolのsource treeを展開)
@@ -58,36 +60,47 @@ instpath=$HOME/proj64/boost_1_57
 ./bjam \
 ```
 ```
+
     * prefix=$instpath \
 ```
 ```
+
     * exec-prefix=$instpath \
 ```
 ```
+
     * libdir=$instpath \
 ```
 ```
+
     * includedir=$instpath \
 ```
 ```
+
     * with-date_time \
 ```
 ```
+
     * with-filesystem \
 ```
 ```
+
     * with-iostreams \
 ```
 ```
+
     * with-program_options \
 ```
 ```
+
     * with-regex \
 ```
 ```
+
     * with-system \
 ```
 ```
+
     * with-thread \
 ```
 ```
@@ -139,10 +152,13 @@ cmake-guiへのpathが通らないが。。。
 ```
 
 GUIのdialogが現れる。以下のmacroを定義する。
+
 *  BOOST_ROOT $HOME/proj64/boost_1_57<br />
 (ただし、$HOMEはつかえなかったので手動で展開し入力)
+
 *  CMAKE_INSTALL_PREFIX $HOME/proj64/CGAL-4.6.1<br />
 (ただし、$HOMEはつかえなかったので手動で展開し入力)
+
 *  CGAL_DISABLE_GMP true<br />
 (GMP/MPRFを使用しないように指定)
 
@@ -158,10 +174,12 @@ GUIを終了させ、make&make installすると、~/proj64/CGAL-4.6.1以下にin
 
 ### Source codeのcheckout
 詳しくは[cuemol2/SrcRepository](../../cuemol2/SrcRepository)参照。
+
 *  Anonymous (http)
 ```
 > git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
+
 *  特定ユーザー (ssh)
 ```
 > git clone git@github.com:CueMol/cuemol2.git cuemol2

@@ -42,6 +42,7 @@ Renderer
 ### 例：２つの分子等の間の相互作用を抽出したい場合
 例えば，PDB entry 1OX1 (Tripsin)には，A鎖にtripsin，B鎖に基質アナログが入っています．
 このA鎖とB鎖の間の相互作用を抽出したい場合は以下のようにします．
+
 *  Selection 1に **c; A** を指定する
 *  Selection 2のcheck boxをonにして，**c; B** を指定する
 *  Min, Max distanceはdefault (1.5, 3.5)のまま
@@ -82,6 +83,7 @@ B GLN 9 NE2 <==> A HIS 57 O : 3.05
 
 ### 例：分子内のすべての相互作用を抽出したい場合
 例えば，PDB entry 1CRN (Crambin)分子にあるすべての相互作用（分子内相互作用も含む）を抽出したい場合は以下のようにします．
+
 *  Selection 1に ***** を指定する
 *  Selection 2のcheck boxをoffにする
 *  Min, Max distanceはdefault (1.5, 3.5)のまま

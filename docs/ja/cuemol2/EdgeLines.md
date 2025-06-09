@@ -31,10 +31,13 @@ Edge line (thin)
 レンダリング時のイメージのサイズを大きくすると，それに応じて線も太くなるようになっています．
 
 各設定での太さは下図のような感じになります．
+
 *  Normal (0.06Å)<br />
 ![05-edgelines-normal](../../assets/images/cuemol2/EdgeLines/05-edgelines-normal.png){ .on-glb }
+
 *  Thick (0.15Å)<br />
 ![04-edgelines-thick](../../assets/images/cuemol2/EdgeLines/04-edgelines-thick.png){ .on-glb }
+
 *  Thin (0.03Å)<br />
 ![03-edgelines-thin](../../assets/images/cuemol2/EdgeLines/03-edgelines-thin.png){ .on-glb }
 
@@ -73,8 +76,10 @@ Silhouette
 
 
 各設定での線は下図のような感じになります．
+
 *  Edges (0.06Å)<br />
 ![05-edgelines-normal](../../assets/images/cuemol2/EdgeLines/05-edgelines-normal.png){ .on-glb }
+
 *  Silhouette (0.03Å)<br />
 ![08-edgelines-silhouette](../../assets/images/cuemol2/EdgeLines/08-edgelines-silhouette.png){ .on-glb }
 

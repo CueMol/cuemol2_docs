@@ -80,6 +80,7 @@ Defaultでは，"pot_"+計算対象分子名
 1.  **Charge calculation method**のところの，**Use PDB2PQR**をonにして，
 1.  **pdb2pqr.py path:**にインストールしたpdb2pqr.pyファイル（あるいはpdb2pqr_wrap.batファイル）を指定します．<br />
 "Change..."ボタンを押すとファイルを開くダイアログが現れるので，そこからファイルを選択し，指定してください．
+
 1.  あとさらに，"Force field:"では電荷の割り当て等に用いる力場セットを指定できますが，
 charmmのままで問題ないと思います．
 

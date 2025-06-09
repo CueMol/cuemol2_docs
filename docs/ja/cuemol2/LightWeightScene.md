@@ -14,12 +14,14 @@ Sample scene fileが以下からダウンロードできます．
 Light-weight sceneファイルは，文字通り，軽い（サイズが小さい・読み込みが速い）シーンを格納するためのファイル形式です．
 
 Light-weight sceneに変換後は，以下の操作を行うことが可能です
+
 *  右クリックによる原子名等の情報表示と，View 中心への移動
 *  Cameraに保存された視点，視方向への移動
 *  各object, renderer毎の表示・非表示の変更
 
 
 ただし，軽い分のトレードオフとして，通常のシーンファイル(qsc)と比べて以下のような操作は出来なくなっています．
+
 *  新たな表示(renderer)作成・rendererの編集(色の変更・表示範囲変更)
 *  分子の場合，分子としての完全な情報は持っていない（→分子重ね合せ，分子表面作成などができない）<br />
 *  電子密度の場合，Light-weight sceneに変換した時点で表示していた表示範囲変更
@@ -41,6 +43,7 @@ Light-weight sceneに変換後は，以下の操作を行うことが可能で�
 ![qsl-option-1](../../assets/images/cuemol2/LightWeightScene/qsl-option-1.png){ .on-glb }
 
 ここで，
+
 *  **Change detail**をチェックしてDetail値を指定すると，書き出されるメッシュの細かさが変更できる（後述；ポリゴン数など）
 *  **Use compression**のチェックを外すと，非圧縮フォーマットで書き出されます．ファイルサイズは大きくなる．（Mobile deviceで展開に時間がかかるようなら，offにすると読み込み速度は速くなる場合があるかもしれません．）
 *  **Open the resulting qsl file**をチェックすると，書き出したqslファイルが別の新しいタブに読み込まれる．
@@ -57,6 +60,7 @@ qslファイルは形式的には普通のシーンファイル(qscファイル)
 ![qsl-scene-1](../../assets/images/cuemol2/LightWeightScene/qsl-scene-1.png){ .on-glb }
 
 このように，名前は全て元のシーンと同じものになっていますが，
+
 *  MolCoord(分子)や電子密度(Denmap)などobjectは全てLWObjectというobjectに，
 *  simpleやballstick, contourなどrendererは全てlwrendというrendererに
 
@@ -91,16 +95,22 @@ Version 2.0.1.192以降では，頂点数が多く複雑なメッシュは自動
 
 *  ballstick, cpk<br />
 Detail値（ただしデフォルトは3で小さ目の設定のため変更しなくてもOKの場合が多い）
+
 *  ribbon<br />
 Renderer設定ダイアログCommonタブのところにある，Section detail, Axial detail値．デフォルト値が大きめのため２〜３に減らした方が良い．
+
 *  cartoon<br />
 Renderer設定ダイアログGenericタブのところにある，axialdetail, coil.detail, helix.detail, sheet.detail値．これもデフォルト値が大きめのため２〜３に減らした方が良い．
+
 *  tube<br />
 Renderer設定ダイアログTubeタブのところにある，Detail値と，Axial detail値．これもデフォルト値が大きめのため２〜３に減らした方が良い．
+
 *  atomintr<br />
 Renderer設定ダイアログInteractionタブのところにある，Detail値．ただしこれはModeが3D tubeになっているときのみ．（単なる線描の場合は問題なし）
+
 *  molsurf<br />
 分子表面のポリゴン数は，分子から分子表面を生成したときに決まってしまうため後から簡単に変更することは少々困難です．再度Mol surface generationをやり直し，その時のDensity(/Å)値を１など小さい値に設定して再生成してやる必要があります．
+
 *  density map (contour)<br />
 表示範囲を狭くするか，mtzファイルから開くときのFFTの設定でgrid spacingをcoarseにする
 

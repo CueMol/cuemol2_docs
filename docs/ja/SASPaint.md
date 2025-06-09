@@ -9,6 +9,7 @@
 [StepA4 分子表面(surface model)の表示](../Documents/QScriptのチュートリアル/StepA4)と
 [StepA5 表面電荷(electrostatic potential)の表示](../Documents/QScriptのチュートリアル/StepA5)
 で，
+
 *  表面の表示方法
 *  べた塗り
 *  表面電荷による塗り方
@@ -49,6 +50,7 @@ $r_sf.setProp("scalarobj", "blm_ab");
 ### 原子プロパティーによって着色(simple coloring mode)
 原子プロパティーによって着色するモードでは，
 原子の
+
 1.  元素のタイプ
 1.  温度因子の値
 1.  占有率の値
@@ -291,6 +293,7 @@ molvis.setScriptColoring($r_sf) ($atom, $res, $mol) {
 color.gradient($arg1, $arg2, $param)
 ```
 $paramは0から1までの実数値を指定します．$arg1, $arg2はグラジエントの端点での色を指定します．すなわち，
+
 *  $param≦0 → $arg2で指定した色
 *  0<$param<1 → $arg1*$param + $arg2*(1-$param)
 *  1≦$param →$arg1で指定した色

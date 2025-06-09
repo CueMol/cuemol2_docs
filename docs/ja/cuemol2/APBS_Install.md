@@ -24,6 +24,7 @@ MacOS Xの場合は，
 Sourceforgeの[APBSのサイト](../../https://sourceforge.net/projects/apbs/files/apbs/)からダウンロードします．
 
 現在(2014/8)の最新版は1.4.1ですが，
+
 *  https://sourceforge.net/projects/apbs/files/apbs/apbs-1.4.1/
 
 にある，APBS-1.4.1-binary.dmg
@@ -50,6 +51,7 @@ Sourceforgeの[PDB2PQRのサイト](../../https://sourceforge.net/projects/pdb2p
 からダウンロードします．
 
 現在(2014/8)の最新版は1.9.0ですが，
+
 *  https://sourceforge.net/projects/pdb2pqr/files/pdb2pqr/pdb2pqr-1.9.0/
 
 にある，pdb2pqr-osx-bin-1.9.0.tar.gz

@@ -21,6 +21,7 @@ The radii of spheres are determined by the element types: C, N, O, P, S, H and X
 Triangulation level of the spheres. Large value of detail results in smooth spheres, but slow down the rendering speed.
 
 In the following cases, the detail value will be ignored (because they directly render spheres and do not divide spheres into triangles):
+
 *  POV-Ray rendering (without edge and silhouette lines)
 *  GL shader rendering mode (see below and [cuemol2/UseGLShader](../../../en/cuemol2/UseGLShader))
 

@@ -5,6 +5,7 @@
 （例で説明している作業は，[前セクション](../../cuemol2/Anim_Cmb)の続きの操作として説明しています）
 
 サンプルのqscシーンファイルが以下からダウンロードできます．
+
 *  [lyso_cammotion1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_cammotion1.qsc)：　Lysozymeのカメラ移動アニメーション
 
 ### 初期カメラ
@@ -51,6 +52,7 @@ Ignore XXX
 
 
 この例では，
+
 *  Start timeは0:0:2.0 (defaultでそのようになっているはず．なっていない場合はそのように設定)
 *  Durationは0:0:2.0にする（defaultは1秒で少々速すぎるので2秒に変更)
 *  Quadricは0.25にする
@@ -64,6 +66,7 @@ Ignore XXX
 ![anim-cammot-3](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-3.png){ .on-glb }
 
 このパネルの表示の意味するところは，
+
 *  アニメーションは全長で４秒間 (Durationが0:0:4.0)
 *  アニメーションはcamera_0から開始
 *  0〜1秒間，SimpleSpin1により360度回転

@@ -75,6 +75,7 @@ Ambient fraction
 
 #### 効率的な設定法
 Radiosity法の場合は，Ribbon modelなど光が全体に行き渡り易いシーンではdefaultの設定で問題ない場合が多いです．このページのサンプルのようなsurface modelのcavity内の図の場合は，ややシーン全体が暗くなりすぎる傾向があるので，default値からFlash fractionやIntensityを増やしたほうが良いかもしれません．しかしながらrenderingには時間がかかるので，いきなり最終qualityで試行錯誤を行いだすと非常に時間がかかってしまいます．たとえば，以下の方針で行えば効率的に条件検討が行えます．
+
 1.  RadiosityをFastあるいはOutdoorLQモードにする．[cuemol2/Radiosity](../../cuemol2/Radiosity)参照．画像サイズを小さめにして試しにrendering．
 1.  暗すぎる場合は，Intensity全体を増やす．ただし増やしすぎると露光しすぎた写真のように白っぽい部分が白飛びしたような画像になってしまうので注意．
 1.  あるいは，Flash fractionを増やす．ただし増やしすぎるとフラッシュを焚きすぎた写真のように奥行き感のない画像になってしまうので注意．

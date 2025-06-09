@@ -52,6 +52,7 @@ Log
 
 
 例では以下のように指定します．
+
 * output dirをC:\tmp\render_tmpに指定し(フォルダは前もって作っておいてください)，
 * Width/heightをQVGA (320x240)に指定
 *  Frame rateを24に指定
@@ -80,6 +81,7 @@ Shadow
 
 
 例では以下のように指定します．
+
 * Clipping planeはON
 * Post-render alpha blendingは，アニメーションで半透明が使用されるためONにする．
 * ShadowはOFF
@@ -103,6 +105,7 @@ Bitrate
 
 
 例では以下のように指定しています．
+
 * Make movieはON
 * Output formatをQuickTime/H.264に
 * Bitrateを10240にする．
@@ -159,6 +162,7 @@ CueMolインストールディレクトリは，たとえば，C:\Program Files 
 ### Handbrakeを用いる方法
 一方で，FFmpegを用いてパラメータをいろいろ変えてエンコードし直しても，
 上記の手順で作成した動画ファイルは，PowerPointに埋め込んで使用すると，
+
 *  異常にカクカクする
 *  WindowsではPowerPointがクラッシュする
 

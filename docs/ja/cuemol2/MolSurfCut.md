@@ -49,6 +49,7 @@ Cross section type
 :   切断面を生成するかどうか，あるいは切断面だけ生成するかどうか等のオプションを指定します．
 
 以下のオプションがあります．
+
     * **Complete** 切断されたsurface objectと断面を同じMolSurfObjとして生成
     * **Separately** 切断されたsurface objectと断面を別個のMolSurfObjとして生成（断面とそれ以外で着色を変えたい場合はこれを指定すればよい）
     * **Section only** 断面のみを生成

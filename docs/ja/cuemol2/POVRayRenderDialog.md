@@ -120,6 +120,7 @@ Rendering中はStartはStopボタンに変化するので，中断する場合�
 Renderingの進捗に従って，preview部分にrendering中の画像が表示されます．
 
 Renderingが完了すると，
+
 *  Save image...ボタンを押すとPNG画像として保存することができます．
 *  Copy to clipboardボタンを押すと画像をclipboardにcopyされるので，他のsoftwareでpasteして使用できます．
 

@@ -33,6 +33,7 @@ WindowsXP
 **CueMol2がクラッシュする等，正常動作しない場合**は，CueMol2が起動していないことを確認した上でこのCueMol2_GUI directoryを削除した後，再度起動してみてください．
 
 ### Sourceからのinstall
+
 *  [cuemol2/Build](../cuemol2/Build)を参照してください．
 
 ## MacOS X版
@@ -52,10 +53,12 @@ Applicationの設定の多く（windowやpanelの位置など）は，applicatio
 **CueMol2がクラッシュする等，正常動作しない場合**は，CueMol2が起動していないことを確認した上でこのCueMol2_GUI folderを削除した後，再度起動してみてください．
 
 ### Sourceからのinstall
+
 *  [cuemol2/Build](../cuemol2/Build)を参照してください．
 
 
 ## UNIX版
 準備中
 ### Sourceからのinstall
+
 *  [cuemol2/Build](../cuemol2/Build)を参照してください．

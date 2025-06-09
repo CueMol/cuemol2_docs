@@ -14,6 +14,7 @@ Algorithmの部分に表示されている通り，
 Algorithmの部分で，Least Square Fitting(LSQ)を選択すると，最小に二乗法による2分子の重ね合わせを行うようになります．
 
 LSQ重ね合わせは，
+
 *  どのような分子の重ね合わせにも利用できる
 *  重ね合わせるべき原子を正しく指定しないと機能しない
 
@@ -21,18 +22,24 @@ LSQ重ね合わせは，
 CueMol1で実装されていた重ね合わせ機能とほぼ同じなので[Documents/GUIのチュートリアル/StepA5](../../Documents/GUIのチュートリアル/StepA5)も参考にしてください．
 
 ダイアログの各項目の意味は，
+
 * Reference
     *  Molecule<br />
 Reference (動かない方)の分子オブジェクトを指定する．
+
     *  Selection<br />
 Reference分子のどの部分を重ね合わせ対象にするかを指定する．
+
 * Moving
     *  Molecule<br />
 Moving (動く方)の分子オブジェクトを指定する．
+
     *  Selection<br />
 Moving分子のどの部分を重ね合わせ対象にするかを指定する．
+
 *  Auto recenter<br />
 ONにすると，重ね合わせ実行後，重ね合わせた分子に視点が移動．
+
 *  Write RMSD info file<br />
 (未実装)
 
@@ -40,6 +47,7 @@ ONにすると，重ね合わせ実行後，重ね合わせた分子に視点が
 
 特に，Reference/MovingのSelectionの指定ですが，
 CueMol1.1の場合と同様に，
+
 *  各分子で選択されている原子数が同じになっているか
 *  各分子の適切な部分が対応して指定されているか
 
@@ -73,6 +81,7 @@ CueMol1.1の場合と同様に，
 ![superpose_cursel_dlg2](../../assets/images/cuemol2/MolSuperpose/superpose_cursel_dlg2.png){ style="zoom: 0.75" .on-glb }
 
 もしそうなっていなかったら，(右端の三角印をクリックして)ドロップダウンリストを開いて，中からCurrentという項目を選ぶ．それでもならないようなら，選択がちゃんとできていない可能性が大なので，1に戻って選択をやり直す．
+
 1.  Movingの方に関しても同様に確認．
 1.  OKを押すと重ね合わせ完了．
 
@@ -82,6 +91,7 @@ CueMol1.1の場合と同様に，
 Secondary Structure Matching(SSM)アルゴリズムを利用して，自動的に二次構造から対応する部分を判断し，重ね合わせを行います．
 
 SSMの特徴は，
+
 *  自動的に構造が似ている部分を判断して重ね合わせるので，特に選択部分を気にせず簡単に重ね合わせができる．
 *  タンパク質の二次構造（ヘリックス・シートなど）をもとに類似部分を判断するため，タンパク質しか重ね合わせることができない．
 

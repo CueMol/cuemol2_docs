@@ -26,14 +26,17 @@ Scripting/plugin interfaceの開発
 
 
 CueMolの開発について興味のお持ちの方は，
+
 *  ![mm1](../assets/images/Development/mm1.png)![mm2](../assets/images/Development/mm2.png)
 *  ![icn-twitter](../assets/images/Development/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br />
 （CueMol関連情報は#cuemolハッシュタグつきで）
+
 *  あるいは[メーリングリスト](../MailingList)
 
 にご連絡ください．
 
 ### 最新のソースコードからのbuild
+
 *  Windows [cuemol2/Build_Win2015](../cuemol2/Build_Win2015) 
 *  MacOS X  [cuemol2/Build_MacOSX2015](../cuemol2/Build_MacOSX2015)
 *  Linuxなど  [cuemol2/Build_Linux](../cuemol2/Build_Linux)

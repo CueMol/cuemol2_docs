@@ -5,6 +5,7 @@
 ## Cartoon renderer
 Cartoon renderer is a representation for protein molecules,
 which shows the secondary structural elements of proteins as follows:
+
 *  Helices (alpha, 3-10, etc) as cylinders (or ribbons)
 *  Beta sheets as plates
 *  Coils as tubes
@@ -35,6 +36,7 @@ Some settings are the same as those in the [common settings in the ribbon render
 
 ### Type of helix representation (helix_ribbon)
 In the cartoon renderer, helices can be displayed as
+
 *  Cylinders
 *  Ribbons
 
@@ -44,6 +46,7 @@ At the top-level "Type:" option, you can choose cylinder or ribbon for the helix
 #### Spline smooth (helix_smooth)
 This setting specifies the smoothness (or straightness) of the cylinders.
 The value affects the shape of the cylinders as follows:
+
 *  Small value results in kinked helices, gradually approaching a tube-like shape passing through the C-alpha positions.
 *  Large value results in straight cylinders passing through the center of the helices.
 

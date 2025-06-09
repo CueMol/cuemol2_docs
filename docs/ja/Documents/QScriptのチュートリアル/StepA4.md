@@ -37,6 +37,7 @@ Windows版のCueMolでは，GUIを使用して以下のように読み込んだ�
 1.  下のテキストエリアに
 resn blm
 と入力し，Selectボタンを押すとブレオマイシンが選択される． 
+
 1.  メニュー"Edit"→"Delete selection"（あるいはツールバーの×ボタン）を選択すると選択部分が削除される 
 1.  "File"→"Save as..."でXYZR形式で保存． 
 
@@ -45,6 +46,7 @@ resn blm
 MSMSの起動時に"-h"オプションを指定するとコマンドラインオプションの
 説明が表示されます．
 そのうち主に使用するのは，
+
 * probe_radius 数値
 :   プローブの半径を指定する
 
@@ -127,6 +129,7 @@ $r_sf.setProp("defcol", color(1,0,0));
 ```
 molsurfレンダラーには，複雑な着色を行うために
 様々なプロパティーがありますが，それらについては，
+
 * [QScriptのチュートリアル/StepA5](../../../Documents/QScriptのチュートリアル/StepA5)
 * [molsurfの複雑な着色](../../../SASPaint)
 

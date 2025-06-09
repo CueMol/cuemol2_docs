@@ -43,6 +43,7 @@ ActiveXコントロールのインストールを選択するとインストー�
 
 ここで，「Register the CueMol2 ActiveX control」をチェックして
 インストールを行うと，install先ディレクトリ(defaultはC:\Program Files\CueMol 2.0\)に，
+
 *  CueMol2Ctl.ocx (ActiveX control本体)
 
 が追加でインストールされ，以下の処理が行なわれます．
@@ -58,6 +59,7 @@ b3c22d9d-cb97-4692-8097-2a36ecd9970bというGUIDでレジストリに登録さ�
 ### PowerPoint側での準備
 次に，PowerPointのほうで，リボンのところに「開発」というのを表示させるようにします．
 これはデフォルトでは出てないですが，
+
 1.  「ファイル」リボンをクリックする
 1.  「オプション」という項目をクリックするとオプションダイアログが表示される．
 1.  ダイアログの左のカラムの下の方にある「リボンのユーザー設定」という項目をクリックする
@@ -152,6 +154,7 @@ CueMol 2.1以降(2.1.0.241)では，アニメーションを使用すること�
 
 
 文字通り，
+
 *  start animationでアニメーション開始
 *  stop animationで終了
 *  pause animationで一時停止（再開はstart animation）

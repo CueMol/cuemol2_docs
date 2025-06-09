@@ -19,6 +19,7 @@ OpenGLのGeometry shaderを使用できる（上記のログでGLSLが4以上の
 mtzファイルなどを開き，rendererを選択するダイアログで，countourではなくgpu_mapmeshを指定すると使用できます．
 
 表示は基本contourと同じですが，
+
 *  広範囲の表示を行っても非常に高速
 *  Levelの変更が非常に高速
 *  povray renderingなどはできない（何も表示されない）

@@ -56,6 +56,7 @@ Please send any comments, questions, or requests about CueMol to<br />
 
 
 ### Main functions
+
 *  Advanced GUI:
     *  Tab-based molecular views
     *  Support for multi-molecular scenes
@@ -91,6 +92,7 @@ Please send any comments, questions, or requests about CueMol to<br />
 
 
 ### Menu
+
 * [FrontPage](./en/FrontPage)
 * [Gallery](./en/Gallery)
 * [Updates](./en/Updates)

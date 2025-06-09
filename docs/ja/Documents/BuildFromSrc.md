@@ -4,12 +4,15 @@
 
 ## Sourceからのbuild (Windows)
 ### 必要なソフトウェアのインストール
+
 *  VisualStudio.Net2003
 *  ActivePerl [ページ](http://www.activestate.com/Products/ActivePerl/)
 *  InnoSetup (ver5.1.6) [ページ](http://www.jrsoftware.org/isdl.php)
 ### ライブラリ類のインストール
+
 * c:\proj\bin<br />
 再配布可能DLL：
+
     * libpng13.dll, libpng13d.dll(PNGライブラリ)
     * MFC71.dll, MFC71u.dll (MFC)
     * msvcp71.dll, msvcr71.dll (VCランタイム)
@@ -17,12 +20,14 @@
     * libfftw3f-3.dll (FFTW ver3.1.3)
 * c:\proj\include<br />
 インクルードファイ類:
+
     * db.h (BerkeleyDB)
     * png.h, pngconf.h, zconf.h, zlib.h (PNGライブラリ)
     * fftw3.h
     * freetype (FreeType ver.2.2.1)
 * c:\proj\lib<br />
 インポートライブラリ+staticライブラリ:
+
     * libdb40s.lib, libdb40sd.lib (BerkeleyDB ver 4.0, static library)
     * libpng13.lib, libpng13d.lib (PNGライブラリ version 1.3)
     * zdll.lib (libz for PNG)
@@ -43,11 +48,13 @@ FFTWはhttp://www.fftw.org/からダウンロードできる。
 FreeTypeはhttp://www.freetype.org/からダウンロードできる。
 
 ### 環境変数の設定
+
 *  コントロールパネルのシステムから、PATH環境変数に<br />
 **c:\proj\bin**<br />
 を加える。（再起動かログオフが必要？）
 
 ### VS.NETの設定
+
 1. ツール→オプション、ダイアログ左で「VC++ディレクトリ」を選ぶ
 1. 右上の「ディレクトリを表示するプロジェクト」で「実行可能ファイル」を選び、
     * 「c:\proj\bin」と,
@@ -58,6 +65,7 @@ FreeTypeはhttp://www.freetype.org/からダウンロードできる。
 
 ### CVSからチェックアウト
 #### Cygwin等のコマンドライン版CVSを使用する場合
+
 * Anonymous (pserver)
 ```
 cvs -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol login 
@@ -84,12 +92,12 @@ setenvは.cshrcなどに書いておけばよい。
 WinCVSを使う場合は、「WinCVS preferences」の、**「Checkout text files with the Unix LF」を「ON」にする**
 
 * Anonymous (pserver)
-  1.  メニューRemote→Checkout module
-  1.  CVSROOTを設定。
+    1.  メニューRemote→Checkout module
+    1.  CVSROOTを設定。
 
 * 特定ユーザー (ssh)
-  1.  メニューRemote→Checkout module
-  1.  CVSROOTを設定。以下のようにすればよい。
+    1.  メニューRemote→Checkout module
+    1.  CVSROOTを設定。以下のようにすればよい。
 ```
 :ssh;username=XXXXX;hostname=cvs.sourceforge.jp;privatekey='秘密鍵へのパス';version=1:/cvsroot/cuemol
 ```
@@ -98,12 +106,14 @@ WinCVSを使う場合は、「WinCVS preferences」の、**「Checkout text file
 
 
 ### プロジェクトの設定とビルド
+
 1. c:\proj\cuemol\winbuild\cuemol.slnを開く
 1. ソリューションエクスプローラーのツリーから、cuemolプロジェクトを選択
 1. ToolBarのソリューション構成からDebugかReleaseを選ぶ
 1. 「ビルド」→「ソリューションのビルド」でビルド
 
 ### VS.NETのIDEからの実行
+
 1. コンテキストメニューで、cuemolプロジェクトのプロパティーを開く
 1. 左上の「構成」コンボボックスで「Debug」を選ぶ
 1. デバッグ項目を選び、「コマンド引数」の項目に**「/cf $(ProjectDir)\sysconfig_debug.xml」**を設定
@@ -112,6 +122,7 @@ WinCVSを使う場合は、「WinCVS preferences」の、**「Checkout text file
 1. Menu 「デバッグ」→「開始」などから実行する．
 
 ### Version番号を自動増加させつつインストーラーも生成する
+
 1.  マクロエクスプローラーを開く
 1.  MyMacrosを開き，デフォルトで在るModule1をダブルクリックするとVBのIDEが起動
 1.  VBのIDEのプロジェクトエクスプローラで，MyMacroのコンテキストメニューを出す
@@ -125,6 +136,7 @@ WinCVSを使う場合は、「WinCVS preferences」の、**「Checkout text file
 ### 必要なソフトウェアのインストール
 以下のライブラリーが必要ですが、なくてもビルドできます。
 FedoraCoreやDebianなどLinuxでは、既にインストールされている場合もあります。
+
 *  BerkeleyDB (version3以降)
 *  readline
 *  FreeType (http://www.freetype.org/)
@@ -137,6 +149,7 @@ BerkeleyDBに関しては，バージョンが色々あり，バージョンに�
 
 あと、CVSからチェックアウトしたソースでビルドする場合や、
 開発のためにautomake/autoconf関連ファイルを編集・ビルドする場合は
+
 *  autoconf (version 2.59 以降)
 *  automake (version 1.9.6 以降)
 *  libtool (version1.5.22 以降で動作確認済み)
@@ -174,6 +187,7 @@ cuemol/src以下で以下のコマンドを実行する。
 <pre>
 ./configure --with-icc[=options] --disable-debug --prefix=<install先指定> --with-modules=<moduleを列挙> [--with-db=no]
 </pre>
+
     * with-icc
 :   Intel C Compilerを使用する場合. optionsでicc/icpcへわたすoptionを指定できる。
 
@@ -197,8 +211,10 @@ cuemol/src以下で以下のコマンドを実行する。
 #### Intel compilerを使用する場合
 例えば**--with-icc**に以下のオプションを指定する
 ```
+
     * with-icc="-ip -O3 -Ob2 -xW -tpp7 -static -cxxlib-icc"
 ```
+
 * ip
 :   Procedure間最適化
 

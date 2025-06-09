@@ -14,6 +14,7 @@ Materialには色指定が可能なものと，material自体で色が決まっ�
 #### 色指定が効くmaterial
 色を指定したうえで，その質感を変化させることができるmaterialです．
 Version 2.0.0.183でシステムで定義されているmaterialは以下の通りです．
+
 *  **default** デフォルトの質感，プラスチック光沢
 *  **shadow** 「テカリ」のない影のような質感
 *  **matte** つや消しの質感
@@ -24,6 +25,7 @@ Version 2.0.0.183でシステムで定義されているmaterialは以下の通�
 
 #### 色指定ができないmaterial
 色の指定が無視されるタイプのmaterialには以下のものがシステムに定義されています．
+
 * metallic_chrome クロム金属光沢
 * metallic_copper 銅金属光沢
 * stone35 石のような模様・質感

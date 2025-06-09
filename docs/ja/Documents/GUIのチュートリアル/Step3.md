@@ -19,6 +19,7 @@ CueMolでは，分子モデルの"一部分"のみに対して何か操作を行
 ![gui_step2_ctxtmenu](../../../assets/images/Documents/GUIのチュートリアル/Step3/gui_step2_ctxtmenu.png){ .on-glb }
 
 "Select"何とか，というメニューを選ぶと，
+
 *  atomなら原子
 *  residueなら残基
 *  chainならチェイン

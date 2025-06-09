@@ -158,6 +158,7 @@ gfx.updateView();
 
 #### 補足
 Tubeが途中で途切れるかどうかは，以下の要件により決まっています（バージョン1.1.0.110以降）．
+
 *  Chain IDが変わる場合は必ずbreak
 *  隣り合うPivot atom (proteinの場合はCA, nucleic acidの場合はP)間の距離が，プロパティーautobreakの値より大きい場合にbreak
 *  残基番号の連続・不連続は関係ない．

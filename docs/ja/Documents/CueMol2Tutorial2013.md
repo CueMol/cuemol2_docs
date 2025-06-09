@@ -15,6 +15,7 @@ CueMol2のバージョンは最新版（CueMol 2.1.0.270）を使用していま
 基本的にWindows7の画面で説明しているため，WinXPやMacOS Xと見た目は異なりますが，基本的な操作は大体同じです．
 
 ### 目次
+
 * [Step1 全体構造の図を作成](../../Documents/CueMol2Tutorial2013/Step1)
 * [Step2 スタイルの作成](../../Documents/CueMol2Tutorial2013/Step2)
 * [Step3 リガンドの表示と全体構造図の完成](../../Documents/CueMol2Tutorial2013/Step3)

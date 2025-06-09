@@ -19,6 +19,7 @@ CueMolは，CueMol自体の独自コードと，他に以下のライブラリ�
 各ライブラリーの部分に関しては，それらのライセンス事項に従います．
 
 CueMol is developed by the following contributors:
+
 *  Ryuichiro Ishitani, ![mm1](../assets/images/Licence/mm1.png)![mm2](../assets/images/Licence/mm2.png)
 *  Takanori Nakane (PyMOL session file importer)
 
@@ -41,6 +42,7 @@ CueMolプロジェクトへの寄付を受け付けています．
 
 ## 外部ソフトウェアについて
 CueMolの機能をフルに使うためには，以下に挙げるいくつかの外部ソフトウェアを使用する必要があります．このサイトでは，簡便のため，これらのコンパイル済みのバイナリ―を配布している場合がありますが，配布はすべてそれらのソフトウェアのオリジナルのライセンスに従います．
+
 *  APBS: http://www.poissonboltzmann.org/apbs
 *  PDB2PQR: http://www.poissonboltzmann.org/pdb2pqr
 *  POV-Ray: http://www.povray.org/

@@ -159,6 +159,7 @@ Sceneパネルで3UG9_ABをクリックして選択し，パネル下方の＋�
 >![step3-1createrend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png){ style="zoom: 0.75" .on-glb } → ![step3-14createretinalrend1](../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-14createretinalrend1.png){ style="zoom: 0.5" .on-glb }
 
 そして，
+
 *  RendererからCPKを選び，
 *  NameをA Retinalに変更し，
 *  Selectionをチェック
@@ -195,6 +196,7 @@ Coloring panelで「3UG9-AB」を選択し，「＋」ボタンを押して塗�
 前項のA鎖retinalの場合と同様にして，B鎖のretinalのCPK rendererを作成します．
 Sceneパネルで3UG9-ABを選択した状態で下方の「＋」ボタンを押してrendererを追加します．
 Renderer option dialogでは，
+
 *  NameをB Retinalに
 *  SelectionをBRetinal (or B.401.*)
 
@@ -251,13 +253,16 @@ Widthはチューブやリボンの厚さ方向の寸法であり，Å単位で
 POV-Ray Renderingダイアログが表示されます．
 
 このダイアログでは，以下の設定を変更（あるいは正しく設定されているか確認）します．
+
 *  Width, Heightを1200に設定
 *  DPIを600に設定<br />
 →図の印刷後サイズは2x2 inch (約5cm x 5cm)になる
+
 *  Stereoをnoneに設定
 *  Projectionをperspectiveに設定
 *  Clipping planeのcheckを外す<br />
 （現在のシーンではslabでカットされている部分がないので）
+
 *  Post-render...のcheckを外す<br />
 （現在のシーンでは半透明の部分がないので）
 

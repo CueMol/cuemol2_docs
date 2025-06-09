@@ -3,10 +3,13 @@
 ## CueMol2開発メモ
 
 ### 2007/5/20
+
 * jsbr/ObjWrapper<br />
 エラー処理をするようにした．(throwErrorを呼び出す)
+
 * JS bridgeのthrowErrorの実装<br />
 単にJS_ReportError()を呼び出せばよいようだ．
+
 * qlib/TestClass.hpp JSから呼び出すテスト / qlib/testclass.js <br />
 objectが関係ないmethod: OK<br />
 objectを渡すmethod: OK<br />
@@ -43,11 +46,13 @@ XMLNodeObjとObjectの対応付け
 非アップデート型実装では、不要（毎回破棄／生成するだけだから）
 
 アップデート型実装では、
+
 *  XML→Obj では、XMLから対応するobjectを知る必要がある。<br />
 対応するObjectがある（可能性のある）XMLNodeObjはUIDを持っている。
 UIDから、objectを検索できる（getXMLPeer() method）。既に削除されているかどうかもUIDから判断可能。<br />
 今の実装では、ObjToXML更新をgetXMLPeer()を使っておこなている。すべてのXMLNodeに対して、UIDを得てから対応するObjがあるか検査し、ある場合はUpdate、ない場合はCreationを行っている。<br />
 上述の分析から、この実装は不要ではないのか？<br />
+
 *  Obj→XML では、Objectから対応するNodeObjを知る必要がある。<br />
 Serializableなobjectは、XMLObjNodeへのSmartPtrを保持している。
 対応するXMLNodeがない場合は、このポインタはヌルになっている。<br />

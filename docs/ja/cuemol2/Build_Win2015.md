@@ -4,6 +4,7 @@
 
 CueMol2のバージョンに合った環境を用いる必要がある。
 ここでは、
+
 *  CueMol 2.2.2.X (git branch [vs2013test](../../https://github.com/CueMol/cuemol2/tree/vs2013test))
 *  Windows7 (VS2013)
 *  boost 1_57/CGAL 4.6.1
@@ -12,6 +13,7 @@ CueMol2のバージョンに合った環境を用いる必要がある。
 
 ### Directory構成
 基本、以下のようなdirectory構成を使用する
+
 *  D:
     *  proj
         * cuemol2 (CueMolのsource treeを展開)
@@ -23,16 +25,19 @@ CueMol2のバージョンに合った環境を用いる必要がある。
 ### 環境変数の定義
 Control panelからシステムのプロパティを開き，詳細設定の環境変数から変更する．
 ユーザーの環境変数に以下を追加する．
+
 *  PROJ D:\proj (上記のdirectory構成に合わせて変更)
 
 ### VisualStudio2013などのインストール
 ここでは製品版を用いているが，フリー版でもできるかもしれない（ただし試していないが．．．）
 
 さらに，以下のソフトウェアをインストールする．
+
 *  ActivePerl [ページ](http://www.activestate.com/Products/ActivePerl/)
 *  ActivePython （GeckoSDKのIDL compilerで必要．Python2.7が動けば他のdistributionでも良い．）
 *  Inno Setup [ページ](http://www.jrsoftware.org/isdl.php)<br />
 Inno Setupだけではなく、preprocessorというのも入れる必要がある。全てがセットになったQuickStart Pack（ispack-5.X.XX.exe等）をinstallする。下記の環境変数変更の方法と同様にしてPATHをInnoSetupをインストールしたdirectoryに通しておく必要がある．
+
 *  Windows SDK v7.0というのもinstallしておく必要がある．
 *  cygwin (command lineでgit等を使うが，他でinstallするのなら，あるいはgui版を入れるのなら不要かも)
 
@@ -43,6 +48,7 @@ cuemol1.1のbuildsetを、以下からダウンロード
 http://prdownloads.sourceforge.net/cuemol/cuemol-buildsetwin-1.1.0.187.zip?download
 
 D:\proj以下に展開すると，
+
 *  D:\proj\bin
 *  D:\proj\lib
 *  D:\proj\include
@@ -84,10 +90,12 @@ where is source codと，where to build the binariesのところに
 sourceをinstallしたD:\PROJ\CGAL-4.6.1を指定する．
 
 GUIのdialogが現れる。以下のmacroを定義する。
+
 *  BOOST_ROOT D:\boost\boost_1_57_0
 *  BOOST_LIBRARYDIR D:\boost\boost_1_57_0\lib32-msvc-12.0
 *  CGAL_DISABLE_GMP true<br />
 (GMP/MPRFを使用しないように指定)
+
 *  (CMAKE_INSTALL_PREFIXは指定しなくてもOK)
 
 一旦Configureを実行→いろいろ出てくる
@@ -103,18 +111,22 @@ D:\PROJ\CGAL-4.6.1\binに，DLLファイルが出来るので，これをD:\PROJ
 以上でbuild環境は整ったはず。
 
 ### プロジェクトの設定とビルド
+
 1. VS.NETでc:\proj\cuemol2\winbuild\cuemol.slnを開く
 
 ### VisualStudio2013のIDEからの実行
+
 *  Build完了後に、xuldeployプロジェクトのみ再ビルドしたほうが良い。
 *  stubプロジェクトを、スタートアッププロジェクトに設定する。
 *  stubプロジェクトのプロパティーの、デバッグ項目で、コマンド引数に以下を追加する。
 ```
+
 * greapp <xulrunnerのbinディレクトリ> $(XULDeployDir)
 ```
 
 以上で、xulrunnerのbinディレクトリは、xulrunner SDKのものを用いるなら、
 ```
+
 * greapp $(XULRunnerDir)\bin $(XULDeployDir)
 ```
 

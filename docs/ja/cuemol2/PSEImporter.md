@@ -13,6 +13,7 @@ CueMolでは，PyMOLからの移行ユーザーのためにPyMOL session file (p
 
 *  分子座標と色<br />
 ただし，色に関しては読み込んだpseをいったんqscとして保存した場合情報が失われる
+
 *  Sticks representation
 *  Spheres representation
 *  Cartoon representation

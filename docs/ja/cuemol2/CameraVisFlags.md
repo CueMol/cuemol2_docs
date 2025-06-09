@@ -2,8 +2,10 @@
 
 ## Cameraにrenderer等の表示・非表示状態を保存する
 Cameraには，現在の視点等の情報以外に，objects/renderersの表示・非表示状態を保存することが可能です．
+
 *  多くのMolCoord(分子構造) objectを読み込む，あるいは多くのrendererを作成している状態で，
 各objects/renderersの表示・非表示状態の管理が面倒
+
 *  1つのsceneで複数のFigureに対応する画像を作成したい
 
 などの場合に使用すると便利です．
@@ -61,12 +63,14 @@ Cameraに保存されている表示・非表示状態(vis flags)を復元した
 
 ### その他
 従来からある
+
 *  Save from view
 *  Apply to view
 
 メニューについては，cameraの視点設定などのみが現在のviewに適用され，表示・非表示状態は無視され，scene中のobject, rendererの表示非表示状態には影響しません．
 
 これを利用して(ややトリッキーですが)，あるcamera (A)から別のcamera (B)に表示・非表示状態(vis flags)のみをコピーすることが出来ます．
+
 1.  camera (A)をコピーし，camera (copy1_A)を作成．
 1.  camera (B)を選択し，「Apply to view」を実行
 1.  camera (copy1_A)を選択し，「Save from view」を実行

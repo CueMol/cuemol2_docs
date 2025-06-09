@@ -207,6 +207,7 @@ $atom3_pos
 
 となっています．
 そして，二つのベクトル
+
 *  ($atom1_pos-$atom2_pos); S46→C47ベクトル
 *  ($atom3_pos-$atom2_pos); S46→C46ベクトル
 

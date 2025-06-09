@@ -3,10 +3,12 @@
 ## CueMol2に関するメモ書き
 
 ### 概要
+
 *  アプリ形式
     *  standalone型のCLIアプリ<br />
 デフォルトでビルドされる。<br />
 scriptingはinternal JS（と，可能なら互換性のためのQS等）
+
     *  libXULを使用したGUIアプリ<br />
 GeckoSDKが在る場合にビルドされる<br />
 XPConnect経由でexternal JSから呼び出す<br />
@@ -15,6 +17,7 @@ OpenGLのviewはダミーのプラグインを作成してHWNDを得る．
 *  スクリプティング
     *  Internal JS<br />
 内部にSpiderMonkeyを持つ→JSAPIを使用してcuemol objectをjsから使用できる
+
     *  External JS<br />
 Mozillaの場合XPConnect経由でブラウザのスクリプト言語から呼び出す
 JSAPIは使用できないので、独自のwrapper objectによりcuemol objectをjsから使用
@@ -36,6 +39,7 @@ JSAPIを使用してwrapper objectを記述
 外部スクリプティング用(XPConnect側)インターフェイス
 
 主に、
+
 *  setProp
 *  getProp
 *  invoke
@@ -85,6 +89,7 @@ XxxClass自体のメタクラスや、(cloneableの場合は)clone()の実装な
 ### qlibのvariant型
 qlib専用のvariant型がある(qlib::LVariant)。<br />
 variant型は，以下の6種類の値を持ちうる．
+
 * void
 * boolean
 * integer (32bit signed)
@@ -198,6 +203,7 @@ object (composite,aggrigateとも)
 
 
 そのほかに，
+
 *  Wrapper interface (qI_XXX)
 *  Wrapper impl class (qW_XXX)
 

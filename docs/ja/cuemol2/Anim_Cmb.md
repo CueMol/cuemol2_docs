@@ -6,6 +6,7 @@
 （もちろん以降のセクションで説明する他のタイプのアニメーションもSimple spin同様に組み合わせ可能です）
 
 Sample scene fileが以下からダウンロードできます．
+
 *  [lyso_simplespin2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin2.qsc)：　Lysozymeの単純スピンアニメーション（その２）
 
 ## ２つ目のSimple spinアニメーションの追加
@@ -39,6 +40,7 @@ Spin axis
 
 
 上図の２項目の意味するところは，
+
 1.  SimpleSpin1 (0,1,0)軸に360度回転をstart=0, end=1秒の１秒間をかけて実行
 1.  SimpleSpin2 (0,-1,0)軸に360度回転，すなわち(0,1,0)軸に-360度回転をstart=1, end=2秒の１秒間をかけて実行
 
@@ -47,6 +49,7 @@ Spin axis
 
 ### 再生
 以上の設定を行い，Animation ribbonの再生ボタンを押すと，
+
 *  はじめの１秒で１回転
 *  次の１秒で逆方向に１回転
 

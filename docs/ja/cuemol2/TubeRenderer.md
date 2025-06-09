@@ -57,6 +57,7 @@ High scale
 
 ### その他の設定
 そのほか，以下のような設定があります．
+
 *  Axial detail
 * Smoothness
 * Smooth color
