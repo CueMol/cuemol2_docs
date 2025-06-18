@@ -87,7 +87,7 @@ simple1以外に新しくballstick1が追加されています．
 ### レンダラーを削除
 
 "ballstick1"を選択して下方の**削除ボタン**(![scene_delbtn1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step4/scene_delbtn1.png){ .on-glb })を押せば，
-このballstickモデルを削除することができます．<br />
+このballstickモデルを削除することができます．<br/>
 ただし，ここではまだ削除しないでください（あるいは削除してもundoで復活させてください）．
 
 ## あとから表示部分を変更する

@@ -12,6 +12,6 @@
 * [Link](../../en/Link)
 * [SourceForge](http://sourceforge.net/projects/cuemol/)
 
-&#32;<br />
+&#32;<br/>
 
 #recent(5)

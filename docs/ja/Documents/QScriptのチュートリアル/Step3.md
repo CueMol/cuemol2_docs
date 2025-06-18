@@ -13,7 +13,7 @@
 
 ![blm_ribbon1](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon1.png){ .on-glb }
 
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 
@@ -34,15 +34,15 @@ $r_blm.setProp("bondw", 0.2);
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 
 ### 説明
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
 $mol.select(se/chain A,B/);
-</pre>
+```
 ↑前回と同じ．
 
 ```
@@ -50,7 +50,7 @@ $r_p = $mol.createRend("protein", "ribbon");
 ```
 ↑リボン表示を作成．（前回と違うのはこの部分だけ）
 
-<pre>
+```
 $mol.select(se/chain A/);
 molvis.paint($r_p, color.hsb(60, 0.3, 1.0));
 $mol.select(se/chain B/);
@@ -62,7 +62,7 @@ $r_blm.setProp("bondw", 0.2);
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 ↑前回と同じ．
 
 **Queからの変更点**
@@ -80,23 +80,11 @@ CueMolは，PDBファイルを読み込むと同時に，PDBファイル中にHE
 
 ```
              ↓
-```
-```
    1THR A   2   999.90 167.26 ...
-```
-```
    2ASP A   3   -66.67 147.35 ...
-```
-```
    3GLN A   4 E 176.46 139.22 ...
-```
-```
    4ALA A   5 E-101.49 129.06 ...
-```
-```
    5THR A   6 E-113.40 153.70 ...
-```
-```
 ...
 ```
 
@@ -104,8 +92,6 @@ CueMolは，PDBファイルを読み込むと同時に，PDBファイル中にHE
 
 ```
 $helix = se/resi 14:22,69:78/;
-```
-```
 $sheet = se/resi 4:11,27:31,35:40,43:49,61:66,90:96,102:107,113:118/;
 ```
 
@@ -117,23 +103,11 @@ $sheet = se/resi 4:11,27:31,35:40,43:49,61:66,90:96,102:107,113:118/;
 
 ```
 ...
-```
-```
 sys.exec($pwd+"2ndry.qs");
-```
-```
 $mol.select($helix & se/chain A,B/);
-```
-```
 $mol.setProp("secondary", "helix");
-```
-```
 $mol.select($sheet & se/chain A,B/);
-```
-```
 $mol.setProp("secondary", "sheet");
-```
-```
 ...
 ```
 
@@ -154,7 +128,7 @@ $mol.setProp("secondary", "sheet");
 ![blm_ribbon3](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon3.png){ .on-glb }
 
 
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 
@@ -193,44 +167,44 @@ $r_blm.setProp("bondw", 0.2);
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 
 ### 説明
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab_nosec.pdb","blm_ab");
-</pre>
+```
 ↑前回と同じ．
 
-<pre>
+```
 sys.exec($pwd+"2ndry.qs");
 $mol.select($helix & se/chain A,B/);
 $mol.setProp("secondary", "helix");
 $mol.select($sheet & se/chain A,B/);
 $mol.setProp("secondary", "sheet");
-</pre>
+```
 ↑二次構造の割り当て．前節参照．
 
-<pre>
+```
 $mol.select(se/chain A,B/);
 $r_p = $mol.createRend("p", "ribbon");
 $mol.select(se/chain A/);
 molvis.paint($r_p, color.hsb(0, 0.3, 1.0));
 $mol.select(se/chain B/);
 molvis.paint($r_p, color.hsb(180, 0.3, 1.0));
-</pre>
+```
 ↑今度はなんとなく色も変えてみる． 
 
-<pre>
+```
 $r_p.setProp("helix.width", 0.3);
 $r_p.setProp("helix.tuber", 5.0);
 $r_p.setProp("sheet.type", 1);
-</pre>
-↑ribbonレンダラーでは， "helix."，"sheet."，"coil." というプレフィクスを付けることで，それぞれの部分の断面形状 (section) に関するプロパティーを変更できる．プロパティーの種類はtubeレンダラーと同じ．[step2](../../../Documents/QScriptのチュートリアル/Step2)参照．<br />
+```
+↑ribbonレンダラーでは， "helix."，"sheet."，"coil." というプレフィクスを付けることで，それぞれの部分の断面形状 (section) に関するプロパティーを変更できる．プロパティーの種類はtubeレンダラーと同じ．[step2](../../../Documents/QScriptのチュートリアル/Step2)参照．<br/>
 この例では，ヘリックスとシート部分のチューブ形状プロパティーを変更している． blm-ribbon1.qsよりヘリックスの幅が太めになり，シートの形状が角の取れた板状になっているが，拡大しないと分からないだろう．
 
-<pre>
+```
 $r_p.setProp("helix_head.type", 0);
 $r_p.setProp("helix_tail.type", 0);
 $r_p.setProp("helix_tail.gamma", 2.2);
@@ -238,12 +212,12 @@ $r_p.setProp("sheet_tail.type", 0);
 $r_p.setProp("sheet_tail.gamma", 4.0);
 $r_p.setProp("sheet_head.type", 1);
 $r_p.setProp("sheet_head.gamma", 1.5);
-</pre>
-2次構造の境目(junction)の形状プロパティーを設定している．プレフィクス"helix_head."はヘリックス→(ランダム)コイル(即ちへリックスの先頭)，"sheet_tail."は(ランダム)コイル→シート(即ちシートの末尾)の境界等々．さらに，"type"は境界の形状タイプ(0:滑らかな接続，1:矢印で接続)， "gamma"は滑らかさのパラメーターである．<br />
+```
+2次構造の境目(junction)の形状プロパティーを設定している．プレフィクス"helix_head."はヘリックス→(ランダム)コイル(即ちへリックスの先頭)，"sheet_tail."は(ランダム)コイル→シート(即ちシートの末尾)の境界等々．さらに，"type"は境界の形状タイプ(0:滑らかな接続，1:矢印で接続)， "gamma"は滑らかさのパラメーターである．<br/>
 この例では，ヘリックスの前後の形状を矢印ではなく，滑らか接続にしている．一方，シートの終わりの部分だけ形状を矢印型にしている．詳しくは[ribbonレンダラー](../../../Ref/molvis/RibbonRenderer)を参照．
 
 ↓以下同様．
-<pre>
+```
 $mol.select(se/chain _/);
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
@@ -251,12 +225,12 @@ $r_blm.setProp("bondw", 0.2);
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 
 **Queからの変更点**
 
 
->レンダラーのプロパティ名が変更されています．<br />
+>レンダラーのプロパティ名が変更されています．<br/>
 "helix_", "sheet_", "coil_" → "helix.", "sheet.", "coil." ("_"から"."への変更)
 但し，helix_smooth, coil_smooth, sheet_smoothプロパティは名前が変更されていない． 
 "ch_", "hc_", "cs_", "sc_" → "helix_tail.", "helix_head.", "sheet_tail.", "sheet_head."
@@ -269,7 +243,7 @@ gfx.updateView();
 ![blm_ribbon4](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon4.png){ .on-glb }
 
 
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 
@@ -323,11 +297,11 @@ $r_intb.setProp("coloring.col_C", $b_col);
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 
 ### 説明
 
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab_nosec.pdb","blm_ab");
@@ -336,16 +310,16 @@ $mol.select($helix & se/chain A,B/);
 $mol.setProp("secondary", "helix");
 $mol.select($sheet & se/chain A,B/);
 $mol.setProp("secondary", "sheet");
-</pre>
+```
 ↑以上は同様．
 
-<pre>
+```
 $a_col = color.hsb(0, 0.3, 1.0);
 $b_col = color.hsb(180, 0.3, 1.0);
-</pre>
+```
 ↑鎖ごとの色は使いまわすので，変数に代入して使用．こうしておけば，色の変更も簡単にできる．
 
-<pre>
+```
 $mol.select(se/chain A,B/);
 $r_p = $mol.createRend("p", "ribbon");
 $mol.select(se/chain A/);
@@ -355,7 +329,7 @@ molvis.paint($r_p, $b_col);
 $r_p.setProp("helix.width", 0.3);
 $r_p.setProp("helix.tuber", 5.0);
 $r_p.setProp("sheet.type", 1);
-</pre>
+```
 ↑変更なし
 
 ```
@@ -363,7 +337,7 @@ $r_p.setProp("sheet_smooth", 0.0);
 ```
 ↑リボンモデル・シート部分のsmoothプロパティーを変更している．デフォルトではシート部分のsmooth値は0.5になっておりシートが平坦になっているが，この状態で側鎖をはやすと根元のCαが宙に浮いてしまい不恰好になる．それがいやなばあいは，smooth値を0に設定してリボンが必ずCαを通るようにする．
 
-<pre>
+```
 $r_p.setProp("helix_head.type", 0);
 $r_p.setProp("helix_tail.type", 0);
 $r_p.setProp("helix_tail.gamma", 2.2);
@@ -375,13 +349,14 @@ $mol.select(se/chain _/);
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.35);
 $r_blm.setProp("bondw", 0.3);
-</pre>
+```
 ↑変更なし
 
 ```
 $mol.select(se/(byres (chain _ around 3.5)) & chain A & !name C,N,O/);
 ```
 ↑ここで，ブレオマイシンから3.5Åに位置する鎖Aの残基を選択している．少々複雑だが，"se/.../"内を分解すると，以下のようになる． 
+
 chain _ around 3.5
 :   鎖"_"(ブレオマイシン2分子)から，3.5Åに位置する原子を全て選択する．
 
@@ -394,32 +369,31 @@ byres (...)
 ... & !name C,N,O
 :   上記で選択された残基のうち，ペプチド結合のC,N,O原子を除くように制限している．
 
-
 詳細は[こちら](../../../Documents/MolSelSyntax)を参照．
 
 ↓上述で選択した部分に対してスティックモデルを作成している．プロパティーの意味は[step1](../../../Documents/QScriptのチュートリアル/Step1)参照．
-<pre>
+```
 $r_inta = $mol.createRend("inta", "ballstick");
 $r_inta.setProp("sphr", 0.2);
 $r_inta.setProp("bondw", 0.2);
 $r_inta.setProp("coloring.col_C", $a_col);
-</pre>
+```
 
-<pre>
+```
 $mol.select(se/(byres (chain _ around 3.5)) & chain B & !name C,N,O/);
 $r_intb = $mol.createRend("intb", "ballstick");
 $r_intb.setProp("sphr", 0.2);
 $r_intb.setProp("bondw", 0.2);
 $r_intb.setProp("coloring.col_C", $b_col);
-</pre>
+```
 ↑同様に，B側の相互作用している側鎖も表示している．
 
 ↓以下同様
-<pre>
+```
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 ```
   
 ```
@@ -432,7 +406,7 @@ gfx.updateView();
 ![blm_ribbon5](../../../assets/images/Documents/QScriptのチュートリアル/Step3/blm_ribbon5.png){ .on-glb }
 
 
-<pre>
+```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 
@@ -484,7 +458,7 @@ $r_blm.setProp("bondw", 0.2);
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
-</pre>
+```
 
 molvis.paint()メソッドによる色の設定は，順々に上塗りしていくように行われます．この例では，ランダムコイル部分の色はchain A全体にまず塗っておき，後からhelixの部分，sheetの部分と，選択しつつ上塗りして色付けを完成させています．
 

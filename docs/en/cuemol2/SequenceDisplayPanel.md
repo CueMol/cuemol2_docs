@@ -18,6 +18,7 @@ In the sequence view:
 
 ### Mouse operations in the sequence panel
 Following mouse operations are possible in the sequence display panel:
+
 Left click
 :   Toggle the selection of the clicked residue in the corresponding molecule. The center of the Molecule view is also move to the corresponding residue. The pivot residue is also updated to the clicked position.
 
@@ -30,11 +31,11 @@ Right click
 Drag (with left button)
 :   Select (or unselect) the dragged region of the molecule. If the start point of the mouse drag is already selected, the dragged region will be unselected.
 
-
 #### Context menu
 The context menu shown in the below is displayed by the right-click of the sequence.
 
 ![seq-disp-panel-ctxtmenu1](../../../assets/images/cuemol2/SequenceDisplayPanel/seq-disp-panel-ctxtmenu1.png){ .on-glb }
+
 
 Molecule name and residue info
 :   Molecule name and residue information are shown at the top of the menu.

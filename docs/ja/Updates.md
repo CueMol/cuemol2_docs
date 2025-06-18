@@ -231,7 +231,7 @@ loopさせるmovieは最後のframeと最初のframeをだぶらせた方が良�
 * POR-Ray renderingで正方形以外の画像にもrenderingできるようにした
     * rendering dialogのdefault値が現在のviewのサイズと同じになるようにした．
 * POR-Ray renderingで出力PNGのDPIを指定できるようにした
-* POV-Ray rendering後のalpha blendingの改善<br />
+* POV-Ray rendering後のalpha blendingの改善<br/>
 複数半透明物体があり，それらが重なっている状況でのblend方法の改善
 
 *  Interaction toolのUNDO/REDOができるようになった

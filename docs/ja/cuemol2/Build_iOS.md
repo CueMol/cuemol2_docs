@@ -17,25 +17,15 @@ http://www.cmake.org/cmake/resources/software.html
 1. boost.orgよりCMake対応のソースをSVNのリポジトリから/usr/local/srcにチェックアウトする
 ```
 $ cd ~/proj/
-```
-```
 $ mkdir boost; cd boost
-```
-```
 $ svn co http://svn.boost.org/svn/boost/branches/CMake/release (←時間がかかる)
-```
-```
 $ mv release boost-1.41.0-cmake
 ```
 
 1. Xcode 用のプロジェクトファイルを生成するために、以下のコマンドを順番に実行する。
 ```
 $ cd boost-1.41.0-cmake
-```
-```
 $ cmake -GXcode .
-```
-```
 $ cmake -DCMAKE_IS_EXPERIMENTAL=YES_I_KNOW . (←これは不要では？)
 ```
 
@@ -45,12 +35,12 @@ $ open Boost.xcodeproj
 ```
 開くと非常に重い。
 
-1. ビルド設定をする<br />
-「プロジェクト」→「プロジェクト設定を編集」でウインドウが開く<br />
-「一般」タグ内の「すべての構成のベースSDK」を「iOS x.x」に設定する<br />
+1. ビルド設定をする<br/>
+「プロジェクト」→「プロジェクト設定を編集」でウインドウが開く<br/>
+「一般」タグ内の「すべての構成のベースSDK」を「iOS x.x」に設定する<br/>
 
 1. 使用したいスタティックライブラリをビルドする
-メインウインドウの左上のボタンで「アクティブＳＤＫ」「アクティブな構成」を適当に設定<br />
+メインウインドウの左上のボタンで「アクティブＳＤＫ」「アクティブな構成」を適当に設定<br/>
 メインウインドウの左のペインの「ターゲット」リストから、使用している以下のライブラリを見つけてビルドする。
 
     *  date_time
@@ -58,8 +48,8 @@ $ open Boost.xcodeproj
     *  system
     *  filesystem
 
-sharedライブラリはビルドエラーになる。"*.static"のプロジェクトのみビルド可能<br />
-Debugビルドの場合、lib/Debug/libboost_XXXX-mt.aが生成される。<br />
+sharedライブラリはビルドエラーになる。"*.static"のプロジェクトのみビルド可能<br/>
+Debugビルドの場合、lib/Debug/libboost_XXXX-mt.aが生成される。<br/>
 
 #### Bjam+scriptで行う方法
 http://gitorious.org/boostoniphone/boostoniphone

@@ -31,6 +31,7 @@ Sceneパネルの，Cameraと書かれた項目を選択し![gui_step4_newrnd](.
 
 
 Cameraの項目を右クリックすると，上図のようなコンテキストメニューが表示されますが，それぞれの機能は以下のようになっています．
+
 New camera...
 :   新規Cameraの作成．![gui_step4_newrnd](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/Step9/gui_step4_newrnd.png)ボタンと同じ機能．
 
@@ -45,7 +46,6 @@ Apply to view
 
 Properties...
 :   Cameraのプロパティー編集画面が出てくる．
-
 
 バージョン2.0.0.94以前ではCameraに関する操作はすべてundo/redoできないので注意してください．
 

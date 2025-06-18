@@ -57,12 +57,12 @@ POV-Rayには豊富なmaterialのライブラリが付属しているので
 それを利用しない手はありません．
 
 これらを利用するには，povファイルの冒頭(ただし，version文より後でなければならない)でinclude文を使用します．
-<pre>
+```
 #include "colors.inc"
 #include "metals.inc"
 #include "woods.inc"
 #include "stones.inc"
-</pre>
+```
 colors.incはよく使用される色が定義されており，
 metals.inc, woods.inc, stones.incは金属・木・石の
 material/textureが定義されています．
@@ -77,7 +77,7 @@ POV-Rayのドキュメントなどを参照してください．
 残基の側鎖をball&amp;stickで出す時のmaterial，等々を
 独自のincファイルで定義しておけば便利です．
 
-<pre>
+```
 #include "colors.inc"
 #include "metals.inc"
 #include "woods.inc"
@@ -92,27 +92,27 @@ finish { ambient 0.10 diffuse 0.70 specular 0.60 roughness 0.01}
 ```
  finish {ambient 0.10 diffuse 0.78 specular 0.02 roughness 0.05 brilliance 1.50}}
 ```
-</pre>
+```
 これを"materials.inc"という名前で
 保存しておき，個々のpovファイルから参照するようにします．
 一応以下にそれぞれの説明を書いておきます．
 
+
 tex_of_hsc
 :   リボンモデルのテキスチャと質感．
-
 木っぽくなってほしいところですが，CueMolが吐いたpov/incファイルと併用すると
 色が変更されてしまってあまりそれっぽくならないみたいです．
+
 tex_of_ligand
 :   リガンド用のテキスチャと質感．
-
 CueMolが吐くデフォルトの質感と似た，プラスチック光沢になります．
+
 tex_of_resid
 :   残基の側鎖をball&amp;stickで表示する場合などに
-
 使用するテキスチャと質感．つや消しの金属光沢．
+
 tex_of_map
 :   電子密度用のテキスチャと質感．
-
 
 ### povファイルの編集
 ここでは，
@@ -126,27 +126,15 @@ tex_of_map
 蛋白のリボンモデルには，a/b分子のsheet, helix, coilそれぞれ6通りの
 色が設定されています．また，テキスチャとしてデフォルトのプラスチック光沢が
 指定されています．
-<pre>
+```
 #declare _blm_ab_p_tex = texture {
 ```
  normal {granite 0.0 scale 1.0}
-```
-```
  finish {
-```
-```
   ambient 0.10
-```
-```
   diffuse 0.70  brilliance 1.00
-```
-```
   specular 0.30  roughness 0.0050
-```
-```
  }
-```
-```
 }
 ```
 #declare _blm_ab_p_col0 = <0.501961,1.000000,1.000000,0.000000>;
@@ -155,17 +143,17 @@ tex_of_map
 
 #declare _blm_ab_blm_tex = texture {
 ...
-</pre>
+```
 例えば，この_blm_ab_p_texの定義を変えることで，
 リボンの質感を変更します．ここでは，先ほど定義しておいたtex_of_hscに変えます．
-<pre>
+```
 #declare _blm_ab_p_tex = tex_of_hsc
-</pre>
+```
 また，色についても，_blm_ab_p_col0〜5を変更することで，この時点でも変更可能です．
 さらに，リガンドのテキスチャも変更しておきます．
-<pre>
+```
 #declare _blm_ab_blm_tex = tex_of_resid
-</pre>
+```
 
 ### POV-Rayでレンダリング
 次に，以上で変更したファイルをPOV-Ray windows版（ver3.6）
@@ -185,13 +173,13 @@ POV-Rayを起動してメニューの"Render"→"Edit Settings/Render"を実行�
 さらに"Edit"ボタンを押すとエディターにその内容が表示されます．
 デフォルトのエントリーでは正方形のアスペクト比の定義がないので，
 エディターを使って以下のエントリーを新たに追加してやります．
-<pre>
+```
 [500x500, AA 0.3]
 Width=500
 Height=500
 Antialias=On
 Antialias_Threshold=0.3
-</pre>
+```
 
 もう一度メニューの"Render"→"Edit Settings/Render"を実行して
 iniファイル設定ダイアログを表示し，
@@ -207,19 +195,19 @@ Renderボタンを押すとレンダリングが始まります．
 ちょっと暗い感じがします．こういう場合
 Photoshopなどで明るさ・コントラストなどをいじってやってもよいのですが，
 povファイルの光源設定を変えるのが良いでしょう．
-<pre>
+```
 light_source {<_stereo*_distance*0.05,0,_distance> color rgb <1,1,1>}
 light_source {<-1,1,1>*_distance color rgb 0.7 shadowless}
-</pre>
+```
 CueMolが吐いたデフォルトでは，上記のshadowless光源の明るさが0.5になっていますが
 これは結構暗いです．1やそれ以上にも出来るので，
 いろいろ変えてレンダリングしてみてください．
 
 ### 透明にしてみる
 次は一部分を半透明にしてみましょう．
-<pre>
+```
 #declare _blm_ab_p_col0 = <0.501961,1.000000,1.000000,0.85>;
-</pre>
+```
 リボンモデルの色の定義の部分で，透明度を0から0.85にします．
 
 ![blm_ribbon_tp](../assets/images/POVRay1/blm_ribbon_tp.png){ .on-glb }
@@ -247,13 +235,13 @@ CueMolが吐いたデフォルトでは，上記のshadowless光源の明るさ�
 Merge文で結合させてやれば，POV-Rayが物体の交差を厳密に判定して，内部にある面を描画しないようになります．
 incファイルを編集して，cylinder文やsphere文がある部分を新たにmerge{...}で
 囲います．
-<pre>
+```
 merge { // <-- 追加
 cylinder{<-7.880457, 0.385846, 0.826740>, <-8.656734,
 ...
 } // <-- 追加
 } // union
-</pre>
+```
 CueMolの出力したincファイルはどこからどこまでがどのレンダラーに対応するのか
 非常にわかりにくいので，
 
@@ -264,14 +252,14 @@ CueMolの出力したincファイルはどこからどこまでがどのレン�
 という方法のほうが簡単かもしれません．
 この場合は，povファイルでスティックモデルのincファイルを
 取り込むように記述しておく必要があります．
-<pre>
+```
 #declare _scene2 = #include "<スティックモデルのincファイル>"
 object{
 ```
  _scene2
 ```
 }
-</pre>
+```
 これでレンダリングすれば以下のように全部きちんと半透明になります．
 
 ![blm_ribbon_tp3](../assets/images/POVRay1/blm_ribbon_tp3.png){ .on-glb }
@@ -293,14 +281,14 @@ object{
 シーンのpov/incファイルへの書き出しの時点で，
 "texblend"というオプションを指定する必要があります．
 GUIからこのオプション設定は出来ないので，以下のスクリプト
-<pre>
+```
 gfx.writeScene("<出力したいファイル名>", "pov", {texblend=>true});
-</pre>
+```
 をQScriptのプロンプト（Outputウィンドウの下のほうにあるエディットボックス）
 から実行するか，別にqsファイルを作って実行してください．
 
 上記の方法で作成したpovファイルの一部です．
-<pre>
+```
 #declare _blm_ab_p_tex = texture {
 ...
 ```
@@ -309,7 +297,7 @@ gfx.writeScene("<出力したいファイル名>", "pov", {texblend=>true});
 #declare _blm_ab_p_tex0 = texture{ _blm_ab_p_tex pigment{color rgb <0.501961,1.000000,1.000000>}};
 ...
 #declare _blm_ab_p_tex5 = texture{ _blm_ab_p_tex pigment{color rgb <1.000000,0.749020,0.501961>}};
-</pre>
+```
 通常の出力では色の定義が0〜5まで分かれていましたが，
 ここではテキスチャの定義として分かれています．
 すなわち_blm_ab_p_tex0〜5を変更することで
@@ -318,11 +306,11 @@ gfx.writeScene("<出力したいファイル名>", "pov", {texblend=>true});
 木や大理石等のテキスチャが正しく反映されるという利点もあります．
 
 ここでは，_blm_ab_p_tex3〜5を以下のように書き換えてレンダリングします．
-<pre>
+```
 #declare _blm_ab_p_tex3 = texture{ T_Chrome_4D };
 #declare _blm_ab_p_tex4 = texture {T_Stone35};
 #declare _blm_ab_p_tex5 = texture {T_Wood31};
-</pre>
+```
 tex3，4，5がそれぞれコイル，へリックス，シート部分に対応しており，
 それぞれクロム金属，石，木のテキスチャになります((textureの定義については，metals.inc等を見てください．他にもいろいろなテキスチャが定義されています．Windowsの場合はインストール先の"include"というディレクトリの下に在ります．))．
 

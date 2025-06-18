@@ -44,12 +44,12 @@
 Common settingsの部分は，SimpleSpin等他のアニメーションと共通の設定項目です．
 
 CamMotion settingsの部分は，カメラアニメーションに特有の設定です．
+
 Target camera
 :   移動先のカメラ設定
 
 Ignore XXX
 :   チェックをonにすると，アニメーションの際，該当項目が無視される．たとえば視点中心のみtarget cameraに変更したい場合は，Ignore center以外すべてをチェックすればよい．
-
 
 この例では，
 
@@ -80,4 +80,11 @@ Ignore XXX
 ## アニメーションの再生
 Animation ribbonの再生ボタンを押すとアニメーションが再生されます．
 以下のyoutube動画のようになるはずです．
-#youtube(V-Vtkx0vnxw)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/V-Vtkx0vnxw?mute=1&controls=1&rel=0&playlist=V-Vtkx0vnxw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                

@@ -13,12 +13,12 @@ Windows版の場合，同等の操作は，メニュー"File"→"Save view setti
 
 書き出されたファイルの内容は，現在のビューを保存したときの状態に復元するQScriptのコマンドになっています． 
 
-<pre>
+```
 gfx.setCenter(vector(36.850,10.573,21.716));
 gfx.setZoom(13.817);
 gfx.setSlab(35.976);
 gfx.setRotQuat(vector(0.47033,0.05464,-0.87909,0.05477));
-</pre>
+```
 
 次に，ビューの状態を復元するには，このスクリプトファイルをsys.exec()メソッドで実行します．すなわち，スクリプトの最後のビューを設定する部分
 
@@ -34,7 +34,7 @@ viewファイル以外を他の場所に移してしまった場合にいちい�
 うっとおしいわけです．
 以下のようにすれば，エラーが出ればレンダラーの重心に画面が合うようになります．
 
-<pre>
+```
 try {
 ```
  sys.exec($pwd+"blm_intr.view");
@@ -45,7 +45,7 @@ catch {
  gfx.setCenter($r_g1.getCenter());
 ```
 }
-</pre>
+```
 
 
 ## 画像の保存
@@ -81,14 +81,14 @@ gfx.writeScene("test.png", "png", {width=>2000, height=>2000, aaopt=>8});
 
 ## 立体視の図を作る 
 平行視などで立体視できる図を作成するには，図を画面に表示させた状態で，コマンドラインから以下の命令を実行し，画面のスナップショットを取ります． 
-<pre>
+```
 Que> gfx.rotate(vector(0, 3, 0));
 Que> gfx.updateView();
 (左眼用の画像をキャプチャする)
 Que> gfx.rotate(vector(0, -6, 0));
 Que> gfx.updateView();
 (右眼用の画像をキャプチャする)
-</pre>
+```
 
 これで，下のような平行視の図ができました． 
 

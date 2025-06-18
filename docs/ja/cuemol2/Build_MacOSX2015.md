@@ -52,72 +52,28 @@ bootstrap.shを実行→bjamができる。
 以下のbuild scriptを作成＆実行
 ```
 #!/bin/sh
-```
-```
 instpath=$HOME/proj64/boost_1_57
-```
-```
 ./bjam \
-```
-```
 
     * prefix=$instpath \
-```
-```
-
     * exec-prefix=$instpath \
-```
-```
-
     * libdir=$instpath \
-```
-```
-
     * includedir=$instpath \
-```
-```
-
     * with-date_time \
-```
-```
-
     * with-filesystem \
-```
-```
-
     * with-iostreams \
-```
-```
-
     * with-program_options \
-```
-```
-
     * with-regex \
-```
-```
-
     * with-system \
-```
-```
-
     * with-thread \
-```
-```
 architecture=x86 address-model=64 link=shared,static threading=multi install
 ```
 
 ただし、期待通りのpathにinstallされないので、dylib類をlibに、header file類のフォルダをinclude以下に移動した。
 ```
 > cd $HOME/proj64/boost_1_57
-```
-```
 > mkdir include lib
-```
-```
 > mv boost include
-```
-```
 > mv libboost_* lib
 ```
 
@@ -136,8 +92,6 @@ make&make installで完了
 glew-1.12.0.tgzを取得、~/src/以下に展開後、以下を実行
 ```
 > env GLEW_DEST=$HOME/proj64/glew make
-```
-```
 > env GLEW_DEST=$HOME/proj64/glew make install
 ```
 
@@ -153,13 +107,13 @@ cmake-guiへのpathが通らないが。。。
 
 GUIのdialogが現れる。以下のmacroを定義する。
 
-*  BOOST_ROOT $HOME/proj64/boost_1_57<br />
+*  BOOST_ROOT $HOME/proj64/boost_1_57<br/>
 (ただし、$HOMEはつかえなかったので手動で展開し入力)
 
-*  CMAKE_INSTALL_PREFIX $HOME/proj64/CGAL-4.6.1<br />
+*  CMAKE_INSTALL_PREFIX $HOME/proj64/CGAL-4.6.1<br/>
 (ただし、$HOMEはつかえなかったので手動で展開し入力)
 
-*  CGAL_DISABLE_GMP true<br />
+*  CGAL_DISABLE_GMP true<br/>
 (GMP/MPRFを使用しないように指定)
 
 一旦Configureを実行→いろいろ出てくる
@@ -188,11 +142,7 @@ GUIを終了させ、make&make installすると、~/proj64/CGAL-4.6.1以下にin
 あとはvs2013testのbranchに切り替える。
 ```
 > cd cuemol2
-```
-```
 > git checkout vs2013test
-```
-```
 > git branch (--> vs2013testと表示される)
 ```
 

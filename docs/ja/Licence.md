@@ -26,7 +26,7 @@ CueMol is developed by the following contributors:
 ### 非商用利用
 非商用利用の場合は無料です．
 しかも，もちろん**無保証**です．
-(このソフトを使用して生じた損害などに関しては何ら責任をおえません．)<br />
+(このソフトを使用して生じた損害などに関しては何ら責任をおえません．)<br/>
 CueMol本体に関してはソースコードを含め，[GPLv3](http://opensource.org/licenses/GPL-3.0)に従います．
 
 ### 商用利用

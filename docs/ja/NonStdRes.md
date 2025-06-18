@@ -1,5 +1,6 @@
 [Documents](../Documents)
 
+
 Update (2007/4/24)
 :   topファイルをQScript上で読み込めるようにしたので加筆．
 
@@ -8,7 +9,6 @@ Update (2004/12/04)
 
 Update (2004/10/21)
 :   topファイルの記述に一部誤りがあったので訂正しました．
-
 
 
 
@@ -33,43 +33,23 @@ dataディレクトリにある，**queptl.top**に記述されています．
 これは，XPLOR/CNSのトポロジー定義と同じ書式になっています．
 
 例えばアラニンの場合は，
-<pre>
+```
 RESIdue ALA
 ```
 GROUp
-```
-```
  ATOM N    TYPE=NH1   CHARge=-0.35   END
-```
-```
  ATOM H    TYPE=H     CHARge= 0.25   END
-```
-```
  ATOM CA   TYPE=CH1E  CHARge= 0.10   END
-```
-```
  ATOM CB   TYPE=CH3E  CHARge= 0.00   END
-```
-```
  ATOM C    TYPE=C     CHARge= 0.55   END  
-```
-```
  ATOM O    TYPE=O     CHARge=-0.55   END  
 ```
 
 ```
 BOND N    CA
-```
-```
 BOND CA   C
-```
-```
 BOND C    O
-```
-```
 BOND N    H
-```
-```
 BOND CA   CB
 ```
 
@@ -79,14 +59,14 @@ IMPRoper  CA     N    C  CB  !tetrahedral CA
 
 
 END {ALA}
-</pre>
+```
 となっていますが，実際に重要なのは
 **RESIdue ALA** ... **END**というのと，
 **ATOM**, **BOND**のところだけです．((それ以外のデータはエネルギー最小化やMDで必要になってくるが，今のところCueMolでは未実装．))
 {}内と先頭に!のある行はコメントになります．
 
 さらに，残基のプロパティーが最後のほうで定義されています．（これはCueMolでの勝手な拡張ですが．）
-<pre>
+```
 !------------------------------------------------------------------
 ! Que's extension commands
 
@@ -96,7 +76,7 @@ PropResid ALA
 ```
 END
 ...
-</pre>
+```
 これで，traceやtubeレンダラーで
 原子CAが既定の主鎖原子として扱われるようになります．
 逆に，この記述がなければtraceなどでその部分が切れて表示されてしまいます．
@@ -113,16 +93,14 @@ END
 主鎖原子などはTYRと同じなので，
 queptl.top内の**PropResid TYR**の部分をコピーして，
 残基名を**PTR**に変えるだけでＯＫです．
-<pre>
+```
 PropResid PTR
 ```
  Pivot CA
-```
-```
  Ring CG CD1 CE1 CZ CE2 CD2 END
 ```
 END
-</pre>
+```
 Ringの部分は環状構造の原子を指定していますが，
 これも変わらないのでそのままでＯＫです．
 
@@ -148,112 +126,46 @@ queptl.top内の**RESIdue TYR**の部分をコピーして，ATOM, BOND定義の
 次に，BONDに関しては，先端の水酸基の水素**HH**を取って，
 燐酸基**P**, **O1P**, **O2P**, **O3P**に関する結合を追加します．
 
-<pre>
+```
 RESIdue PTR
 ```
  ATOM N    TYPE=NH1   CHARge=-0.35   END
-```
-```
  ATOM H    TYPE=H     CHARge= 0.25   END
-```
-```
  ATOM CA   TYPE=CH1E  CHARge= 0.10   END
-```
-```
  ATOM CB   TYPE=CH2E  CHARge= 0.00   END
-```
-```
  ATOM CG   TYPE=CY    CHARge= 0.00   END
-```
-```
  ATOM CD1  TYPE=CR1E  CHARge= 0.00   END
-```
-```
  ATOM CE1  TYPE=CR1E  CHARge= 0.00   END
-```
-```
  ATOM CD2  TYPE=CR1E  CHARge= 0.00   END
-```
-```
  ATOM CE2  TYPE=CR1E  CHARge= 0.00   END
-```
-```
  ATOM CZ   TYPE=CY2   CHARge= 0.25   END
-```
-```
  ATOM OH   TYPE=OH1   CHARge=-0.65   END
-```
-```
  ATOM P    TYPE=H     CHARge= 0.40   END
-```
-```
  ATOM O1P    TYPE=H     CHARge= 0.40   END
-```
-```
  ATOM O2P    TYPE=H     CHARge= 0.40   END
-```
-```
  ATOM O3P    TYPE=H     CHARge= 0.40   END
-```
-```
  ATOM C    TYPE=C     CHARge= 0.55   END
-```
-```
  ATOM O    TYPE=O     CHARge=-0.55   END
-```
-```
 BOND N    CA
-```
-```
 BOND CA   C
-```
-```
 BOND C    O
-```
-```
 BOND N    H
-```
-```
 BOND CA   CB
-```
-```
 BOND CB   CG
-```
-```
 BOND CG   CD1
-```
-```
 BOND CG   CD2
-```
-```
 BOND CD1  CE1
-```
-```
 BOND CD2  CE2
-```
-```
 BOND CE1  CZ 
-```
-```
 BOND CE2  CZ
-```
-```
 BOND CZ   OH
-```
-```
 BOND OH   P
-```
-```
 BOND P    O1P
-```
-```
 BOND P    O2P
-```
-```
 BOND P    O3P
 ```
 END
-</pre>
+```
 追加する位置はどこでも良いですが，アミノ酸の最後(バリン)のあとにしておきます．
 
 これでCueMolを再起動すると燐酸化チロシンPTRが認識されます．
@@ -264,11 +176,11 @@ END
 
 #### 残基間のリンケージ(queptl.lin)を編集
 残基間のリンケージ情報は**queptl.lin**ファイルで定義されています．
-<pre>
+```
 link pept    head - ala   tail + *     end
 ...
 link pept    head - val   tail + *     end
-</pre>
+```
 **link**のある行が残基間のリンクの定義です．
 
 次の**pept**というのはペプチド結合を示しています((peptやnucはtopファイルに記述されているPRESidue定義に対応している．))．

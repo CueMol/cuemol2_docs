@@ -17,7 +17,7 @@
 ![ssbonds1](../../../assets/images/Documents/QScriptのチュートリアル/StepA3/ssbonds1.png){ .on-glb }
 
 
-<pre>
+```
 01: $pwd = sys.getScriptPath();
 02: 
 03: $mol = readPDB($pwd+"lysozyme-1qio.pdb","lyso");
@@ -41,12 +41,12 @@
 21: 
 22: gfx.setCenter($r_ca.getCenter());
 23: gfx.updateView();
-</pre>
+```
 
 :行番号|
+
 06-09
 :   リゾチーム分子を読み込んだ後に，ジスルフィド結合を設定している．
-
 関数makeBond()は，分子オブジェクトと2つの選択オブジェクトを引数に取り，
 分子内の任意の2原子間に強制的に共有結合を形成させる．
 makeBond()に渡す選択オブジェクトは，

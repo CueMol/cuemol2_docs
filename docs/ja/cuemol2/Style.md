@@ -22,10 +22,10 @@ CueMol2では各レンダラーにさまざまなプロパティーがあって�
 
 ここでRoundを選ぶと，ribbon rendererの形状が以下のように変化します．
 
-*  Helix: <br />
+*  Helix: <br/>
 ![style_helix_default1](../../assets/images/cuemol2/Style/style_helix_default1.png) → ![style_helix_round1](../../assets/images/cuemol2/Style/style_helix_round1.png)
 
-*  Sheet: <br />
+*  Sheet: <br/>
 ![style_sheet_default1](../../assets/images/cuemol2/Style/style_sheet_default1.png) → ![style_sheet_round1](../../assets/images/cuemol2/Style/style_sheet_round1.png)
 
 Ribbon以外にも，ballstick，[atomintr](../../Documents/GUIのチュートリアル(CueMol2)/Step13)など他のrendererにも

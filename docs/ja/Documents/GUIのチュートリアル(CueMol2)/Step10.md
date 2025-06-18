@@ -14,7 +14,7 @@ CueMol2からは，CueMol2から直接POV-Rayを呼び出してレイトレー�
 #### Windows
 〜-povray-setup.exeというファイルからインストールすると，povrayも入っているので特に何も準備する必要はありません．
 
-**非同梱版の場合**<br />
+**非同梱版の場合**<br/>
 一方で，POV-Ray非同梱版(povrayという文字列が入っていない)にはPOV-Rayは含まれていません．
 CueMol2と連携させるにはコマンドライン版POV-Rayが必要なのですが，
 Windows版のPOV-Rayにはコマンドライン版が同梱されていません．

@@ -67,4 +67,3 @@ string resn()
 #### chain
 ```
 string chain()
-```

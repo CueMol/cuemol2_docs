@@ -16,7 +16,7 @@ tRNA(Phe)をリボンモデルで表示します．(trf-ribbon.qs)
 ![trf_ribbon1](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon1.png){ .on-glb }
 
 
-<pre>
+```
 01: $pwd = sys.getScriptPath();
 02: $se_det = 12;
 03: $ax_det = 8;
@@ -34,24 +34,24 @@ tRNA(Phe)をリボンモデルで表示します．(trf-ribbon.qs)
 15: 
 16: gfx.setCenter($r_bp.getCenter());
 17: gfx.updateView();
-</pre>
+```
 
 :行番号|
+
 07
 :   tRNAのCCA末端を除いた部分を選択している．PDBファイル中でtRNAの鎖はAである．"c;"は"chain"の略表記．
 
 08
-:   核酸のレンダリングに特化した"nucl"レンダラーを作成している．デフォルトでは図のようにバックボーンをチューブで接続した上に，各核酸残基に対応するスティックが表示される．チューブの部分に関しては，tubeレンダラーと同じプロパティ−を設定できる．[step2](../../../Documents/QScriptのチュートリアル/Step2)参照．すなわち，tuberプロパティーなどを変更して，チューブ部分をもっと「きし麺」っぽくすることも可能． 
+:   核酸のレンダリングに特化した"nucl"レンダラーを作成している．デフォルトでは図のようにバックボーンをチューブで接続した上に，各核酸残基に対応するスティックが表示される．チューブの部分に関しては，tubeレンダラーと同じプロパティ−を設定できる．[step2](../../../Documents/QScriptのチュートリアル/Step2)参照．すなわち，tuberプロパティーなどを変更して，チューブ部分をもっと「きし麺」っぽくすることも可能．
 
 09
-:   "pivotatom"プロパティは，tubeレンダラーの場合と同じく，チューブが補間する原子を指定する．ここではリン酸のPにしているが，C3'等にすることもできる．C3'等の方がメジャーグルーブとマイナーグルーブの差が際立つ． 
-
+:   "pivotatom"プロパティは，tubeレンダラーの場合と同じく，チューブが補間する原子を指定する．ここではリン酸のPにしているが，C3'等にすることもできる．C3'等の方がメジャーグルーブとマイナーグルーブの差が際立つ．
 
 ![trf_ribbon2](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon2.png){ .on-glb }
 
-10
-:   "bondw"プロパティは，核酸残基に対応するスティック部分の太さ半径Å単位で指定する． 
 
+10
+:   "bondw"プロパティは，核酸残基に対応するスティック部分の太さ半径Å単位で指定する．
 
 nuclレンダラーには，上記のデフォルトのモード以外に，リボースの部分と塩基の部分をさらに際立たせて表示するモードがあります．以下の行を11行目に追加してみてください． 
 
@@ -78,7 +78,7 @@ $r_bp.setProp("natype", 1);
 ![trf_ribbon4](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon4.png){ .on-glb }
 
 
-<pre>
+```
 01: $pwd = sys.getScriptPath();
 02: $se_det = 12;
 03: $ax_det = 8;
@@ -102,12 +102,12 @@ $r_bp.setProp("natype", 1);
 45: 
 46: gfx.setCenter($r_bp.getCenter());
 47: gfx.updateView();
-</pre>
+```
 
 :行番号|
+
 09-35
 :   関数（グローバルメソッド）makebp()で塩基対を定義している．
-
 makebp()は他の関数とは異なり，引数が文字列である点に注意．すなわち，第1引数としてオブジェクト名(readPDB()で指定)を，第2,3引数として塩基対を形成している2つの残基をそれぞれ "<chain名>.<残基番号>"の形式で指定する．
 makebp()関数は起動時にロードされるstartup.qsで定義されている．
 
@@ -120,7 +120,7 @@ makebp()関数は起動時にロードされるstartup.qsで定義されてい�
 ![trf_ribbon5](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon5.png){ .on-glb }
 
 
-<pre>
+```
 01: $pwd = sys.getScriptPath();
 02: $se_det = 12;
 03: $ax_det = 8;
@@ -154,12 +154,12 @@ makebp()関数は起動時にロードされるstartup.qsで定義されてい�
 58: 
 59: gfx.setCenter($r_bp.getCenter());
 60: gfx.updateView();
-</pre>
+```
 
 :行番号|
+
 43-52
 :   tRNAの構造上の5つの要素（アクセプター，T，D，アンチコドンアームとバリアブルループ）をそれぞれ選択し，異なる色を設定している．
-
 この例では，選択に「三つ組(triplet)式」を使用している．
 三つ組式は，<chain>.<residue>.<atom>の形式で，
 この例では，<chain>=A，<residue>=1:8,66:77等，<atom>=*である．
@@ -173,7 +173,7 @@ nuclレンダラーのもうひとつのモードを紹介します．(trf-ribbo
 
 ![trf_ribbon6](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon6.png){ .on-glb } ![trf_ribbon7](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon7.png){ .on-glb }
 
-<pre>
+```
 01: $pwd = sys.getScriptPath();
 02: $se_det = 12;
 03: $ax_det = 8;
@@ -208,22 +208,22 @@ nuclレンダラーのもうひとつのモードを紹介します．(trf-ribbo
 32: 
 33: gfx.setCenter($r_pho.getCenter());
 34: gfx.updateView();
-</pre>
+```
 
 :行番号|
+
 07
-:   核酸残基のうち，リングを構成してる骨格部分の選択オブジェクトを作成し，$na_ringに格納している． 
+:   核酸残基のうち，リングを構成してる骨格部分の選択オブジェクトを作成し，$na_ringに格納している．
 
 08
-:   共通の色を指定． 
+:   共通の色を指定．
 
 11-16
-:   チューブ部分を作成．C3'原子を通るようにしている． 
+:   チューブ部分を作成．C3'原子を通るようにしている．
 
 18-27
 :   残基の表示をballstickレンダラーで作成．まず，核酸のリング骨格（リボースと塩基）の部分だけを選択し，レンダラーを作成している．次にballstickレンダラーの"ring"プロパティーにtrueを設定することで，リング部分を板状に表示させている．この板の厚さは，"tickness"プロパティーで指定する．この例のように，"tickness"を"bondw"や"sphr"プロパティーと同じ大きさにすと，縁の丸い板のようになる．
-
-一方，"bondw"や"sphr"を"tickness"より若干大きめにすると，縁のある板状にすることもできる.<br />
+一方，"bondw"や"sphr"を"tickness"より若干大きめにすると，縁のある板状にすることもできる.<br/>
 ![trf_ribbon8](../../../assets/images/Documents/QScriptのチュートリアル/StepA1/trf_ribbon8.png){ .on-glb }
 
 この例は単色で表示しましたが，step1やstep2の例を参考にすれば，更に複雑な着色もできます．

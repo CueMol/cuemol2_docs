@@ -55,4 +55,3 @@ any createRend(string,string)
 #### getName 
 ```
 string getName()
-```

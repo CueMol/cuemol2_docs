@@ -20,6 +20,7 @@
 ![camera_ctxtmenu1](../../assets/images/cuemol2/CameraFile/camera_ctxtmenu1.png){ .on-glb }
 
 メニューの機能のうち，カメラ設定ファイルに関する項目を列挙します．
+
 Load file...
 :   外部camファイルを読み込む
 
@@ -31,7 +32,6 @@ Save file as...
 
 Save file
 :   外部camファイルに現在設定を上書き保存する
-
 
 以下では，順を追って各機能を説明していきます．
 
@@ -92,24 +92,15 @@ camファイルは，qscと同じくxml形式で，qsc中のcameraタグの部�
 例えば，テキストエディターで開くと，以下のような形式になっています．
 ```
 <?xml version="1.0" encoding="utf-8"?>
-```
-```
 <camera center="(-10.837787,13.999697,15.037303)"
-```
-```
  centerMark="crosshair" distance="200"
-```
-```
  name="camera_0" perspec="false"
-```
-```
  rotation="(0.774185,-0.124804,0.245019,0.570112)"
-```
-```
  slab="50" stereoDist="1" stereoMode="none" zoom="50"/>
 ```
 
 タグの属性値の意味は以下の通りです．
+
 center
 :   視点の中心の座標値．Å単位．
 
@@ -139,7 +130,6 @@ stereoMode
 
 zoom
 :   拡大値．画面のtopとbottom間の距離をÅ単位で指定．
-
 
 これらの値をテキストエディターで手動編集し，上述の再読み込みを行うことで，
 カメラ設定を変更することもできます．

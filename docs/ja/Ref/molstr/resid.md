@@ -58,4 +58,3 @@ string getProp (string)
 ; mutate residue
 ```
 void setName (string)
-```

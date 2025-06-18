@@ -28,16 +28,12 @@ QScriptからしか行えません．
 以下のようにレンダラーを作成します．
 ```
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-```
-```
 $r_p = $mol.createRend("protein", "paint_ballstick");
 ```
 
 さらに，色を設定する部分を選択し，molvis.paint()メソッドにより色を指定します．
 ```
 $mol.select(%{resn ARG, LYS, HIS%});
-```
-```
 molvis.paint($r_p, color.hsb(240, 0.4, 1.0));
 ```
 

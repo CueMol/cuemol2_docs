@@ -42,4 +42,3 @@ static void cleanUpAll()
 ; TO DO: This should be moved to the UIfw!!
 ```
 static integer messageBox(string, integer)
-```

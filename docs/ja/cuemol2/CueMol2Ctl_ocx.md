@@ -1,8 +1,8 @@
 [Documents](../../Documents)
 
+
 **注意点**
 :   CueMol2 ActiveX controlはversion 2.2.2以降では同梱されなくなりました．
-
 
 ## CueMol2 ActiveX control
 このページでは，qscファイル表示に特化した，CueMol2 ActiveX controlについて説明します．

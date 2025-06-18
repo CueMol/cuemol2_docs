@@ -8,17 +8,13 @@
 *  ある程度動作チェックまで完了して来たら，masterをmerge
 *  conflictがあれば修正しそのうえで動作チェックとbugfixをする
 *  動作OKになったらmasterにmergeし，要らないようならbranchを削除する
-*  Build番号などはmasterでbuildしたときにのみ増加させるようにする．<br />
+*  Build番号などはmasterでbuildしたときにのみ増加させるようにする．<br/>
 (不要なconflictを防ぐため，開発branchではbuild numberはいじらない)
 
 ### Branchに対してmasterをmerge
 ```
 > git checkout XXX #(branch XXXに移動．すでに移動している場合は不要)
-```
-```
 > git pull origin XXX #(remoteのXXXの更新分を取得)
-```
-```
 > git merge origin/master　#(remote repository origin/masterの更新をmerge)
 ```
 
@@ -26,11 +22,7 @@
 ### 新たにbranchを新規作成し作業を始める場合
 ```
 > git clone git@github.com:CueMol/cuemol2.git cuemol2_XXX
-```
-```
 > git branch XXX
-```
-```
 > git checkout XXX
 ```
 
@@ -38,8 +30,6 @@
 特定のbranchをXXXとすると，
 ```
 > git clone git@github.com:CueMol/cuemol2.git cuemol2_XXX
-```
-```
 > git checkout -b XXX origin/XXX
 ```
 
@@ -71,11 +61,7 @@ Winでは全て7xxになってしまうので無視させた方が良い．
 fork先を登録＆内容取得
 ```
 > git remote add XXXX git://github.com/XXXX/cuemol2.git
-```
-```
 > git fetch XXXX
-```
-```
 > git branch -a
 ```
 
@@ -131,8 +117,6 @@ Conflictを起こしたら，ともかくもp (postpone)にしておいて，
 ssh-agentを使った方が便利な場合がある．
 ```
 eval `ssh-agent`
-```
-```
 ssh-add [ssh secret key]
 ```
 

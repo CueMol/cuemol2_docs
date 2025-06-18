@@ -14,6 +14,7 @@ Sceneパネルにおいて，rendererのstyleを指定することで，簡単�
 
 Rendererのcontext menuの各項目の意味は以下の通りです．
 
+
 No edge line
 :   エッジ線なし．デフォルト．
 
@@ -26,19 +27,18 @@ Edge line (thick)
 Edge line (thin)
 :   エッジ線あり，線の太さは細め (0.03Å)
 
-
 太さの単位はピクセルではなくÅになっていますので，
 レンダリング時のイメージのサイズを大きくすると，それに応じて線も太くなるようになっています．
 
 各設定での太さは下図のような感じになります．
 
-*  Normal (0.06Å)<br />
+*  Normal (0.06Å)<br/>
 ![05-edgelines-normal](../../assets/images/cuemol2/EdgeLines/05-edgelines-normal.png){ .on-glb }
 
-*  Thick (0.15Å)<br />
+*  Thick (0.15Å)<br/>
 ![04-edgelines-thick](../../assets/images/cuemol2/EdgeLines/04-edgelines-thick.png){ .on-glb }
 
-*  Thin (0.03Å)<br />
+*  Thin (0.03Å)<br/>
 ![03-edgelines-thin](../../assets/images/cuemol2/EdgeLines/03-edgelines-thin.png){ .on-glb }
 
 設定を変更しても，Mol viewでの表示は変化しません．
@@ -54,7 +54,8 @@ Edge line (thin)
 
 
 
-### Rendererのpropertyによる指定&aname(rend_props);
+<a id="rend_props"></a>
+### Rendererのpropertyによる指定
 Styleによる設定よりもさらに細かい指定を行いたい場合は，Rendererのpropertyからエッジ線の設定を行います．
 
 全てのrendererのproperty dialogのcommonタブに，Edge lines:という項目があります．
@@ -65,6 +66,7 @@ Styleによる設定よりもさらに細かい指定を行いたい場合は，
 
 #### エッジ線のタイプ
 Edge lines:横のdrop-down menuの各項目の意味は以下の通りです．
+
 None
 :   エッジ線なし．デフォルト．
 
@@ -74,13 +76,12 @@ Edges
 Silhouette
 :   シルエット線を表示
 
-
 各設定での線は下図のような感じになります．
 
-*  Edges (0.06Å)<br />
+*  Edges (0.06Å)<br/>
 ![05-edgelines-normal](../../assets/images/cuemol2/EdgeLines/05-edgelines-normal.png){ .on-glb }
 
-*  Silhouette (0.03Å)<br />
+*  Silhouette (0.03Å)<br/>
 ![08-edgelines-silhouette](../../assets/images/cuemol2/EdgeLines/08-edgelines-silhouette.png){ .on-glb }
 
 シルエット線の場合は，輪郭の部分のみ線が表示されるようになります．

@@ -5,11 +5,7 @@ SceneとViewに関連する操作
 ## 新規Sceneの作成
 ```
 var SceMgr = cuemol.getService("SceneManager");
-```
-```
 var scene = SceMgr.createScene();
-```
-```
 scene.setName(scene_name);
 ```
 
@@ -20,8 +16,6 @@ scene.setName(scene_name);
 
 ```
 var view = scene.createView();
-```
-```
 view.name = view_name;
 ```
 
@@ -31,20 +25,10 @@ view.name = view_name;
 
 ```
 var StrMgr = cuemol.getService("StreamManager");
-```
-```
 var reader = StrMgr.createHandler("qsc_xml", 3);
-```
-```
 reader.attach(scene);
-```
-```
 reader.setPath(path);
-```
-```
 reader.read();
-```
-```
 reader.detach();
 ```
 
@@ -58,8 +42,6 @@ Default cameraには，qsc fileを保存したときのviewの状態が格納さ
 Qsc fileを読み込んだときにこれを行うことで，保存時のviewの状態を復元できる．
 ```
 var view_id = view.uid;
-```
-```
 scene.loadViewFromCam(view_id, "__current");
 ```
 
@@ -70,11 +52,7 @@ scene.loadViewFromCam(view_id, "__current");
 
 ```
 if (!scene.saveViewToCam(view_id, "__current")) {
-```
-```
   // error handling
-```
-```
 }
 ```
 
@@ -82,8 +60,6 @@ if (!scene.saveViewToCam(view_id, "__current")) {
 
 ```
 var StrMgr = cuemol.getService("StreamManager");
-```
-```
 var writer = StrMgr.createHandler("qsc_xml", 4);
 ```
  
@@ -93,14 +69,8 @@ writer.setDefaultOpts(scene);
  
 ```
 writer.attach(scene);
-```
-```
 writer.setPath(path);
-```
-```
 writer.write();
-```
-```
 writer.detach();
 ```
 
@@ -116,8 +86,6 @@ StrMgr.createHandler("qsc_xml", 4)という文の4という数字はI/O handler�
 scene_nameで指定されるSceneを取得する．
 ```
 var SceMgr = cuemol.getService("SceneManager");
-```
-```
 var scene = getSceneByName(scene_name);
 ```
 
@@ -135,56 +103,22 @@ var scene = scene.getSceneByName(sc_name);
 
 ```
 let json_str = scene.getSceneDataJSON();
-```
-```
 let data = JSON.parse(json_str);
-```
-```
 let i, nlen = data.length;
-```
-```
 for (i=1; i<nlen; ++i) {
-```
-```
   let obj = data[i];
-```
-```
   
-```
-```
   // operations for obj
-```
-```
   
-```
-```
   if (obj.rends && obj.rends.length>0) {
-```
-```
     var j, njlen = obj.rends.length;
-```
-```
     for (j=0; j<njlen; ++j) {
-```
-```
       let rend = obj.rends[j];
-```
-```
       
-```
-```
       // operations for rend
-```
-```
       
-```
-```
     }
-```
-```
   }
-```
-```
 }
 ```
 

@@ -30,14 +30,14 @@ http://en.wikipedia.org/wiki/VESA_Stereo
 ### コネクターの入手
 このように，ビデオカード側も3D vision側もあまり見かけない形状のコネクターですが，
 今回は以下の店で購入しました．
+
 3-pin mini DIN
 :   マルツパーツ館秋葉原店
-
 http://www.marutsu.co.jp/akihabara/
 178円
+
 2.5mm ステレオマイクロジャック(ケーブルつき)
 :   千石電商2号店
-
 http://www.sengoku.co.jp/
 250円
 

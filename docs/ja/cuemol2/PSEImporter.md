@@ -11,7 +11,7 @@ CueMolでは，PyMOLからの移行ユーザーのためにPyMOL session file (p
 
 現在(2.2.1.349)の実装では，以下のfeaturesが正しく読み込まれるように実装されています．
 
-*  分子座標と色<br />
+*  分子座標と色<br/>
 ただし，色に関しては読み込んだpseをいったんqscとして保存した場合情報が失われる
 
 *  Sticks representation

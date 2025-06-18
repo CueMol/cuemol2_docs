@@ -18,10 +18,11 @@ FFmpegを利用したquicktimeやAVI等の動画ファイル作成の方法を�
 
 ### RenderingのMain option
 文字通りメインの設定オプションです．
+
 Output dir
 :   PNG画像ファイルが出力されるディレクトリーを指定する．
-
 基本的に膨大な数のPNGファイルができるため，何らかの新しいディレクトリを作成しておいて，そこにoutput dirを設定することをお勧めします．
+
 Width, Height
 :   出力される画像のサイズ(dimension)を指定．デフォルトでは1000x1000pixelsになっているが，これは大きすぎるので変更するのを忘れないように．右にあるPreset sizeからVGAなどを選ぶと，対応する大きさがwidth/heightの項目に入ります．
 
@@ -30,17 +31,17 @@ Preset size
 
 Projection
 :   画面の投影法法を指定．
-
 (静止画のPOV-Ray rendering dialogの設定と同じ.
 [POV-Rayによるシーンのレンダリング](../../Documents/GUIのチュートリアル(CueMol2)/Step10)参照）
+
 Frame rate
 :   １秒間に何フレーム分の画像をレンダリングするか指定する．大きい方が滑らかな動画になるが，ファイルサイズもその分膨大になる．通常は30か24で十分．特にファイルサイズをケチりたい場合は5等にするとよいが，あまり小さくし過ぎるとカクカクになる．
 
 NCPU
 :   レンダリングに使用するCPU (thread)数を指定する．
-
 同時実行可能なthread数-1を指定する．
 たとえば4 coreあるCPUでhyper threading等をoffにしている場合は，3を指定するとよい．
+
 Loop
 :   これをonにすると，最後の1 frameとして最初の1 frameが余計にレンダリングされる．ループしている動画の場合，これをONにすると最初と最後のつながりがスムースになり，カクカクしなくなる場合がある．（ただし，逆にこれをoffにしたほうがカクカクしない場合もあります）
 
@@ -49,7 +50,6 @@ Progress
 
 Log
 :   レンダリングの進行に応じて情報が表示される．
-
 
 例では以下のように指定します．
 
@@ -62,6 +62,7 @@ Log
 
 ![anim-render-2](../../assets/images/cuemol2/Anim_RenderMovie/anim-render-2.png){ style="zoom: 0.5" .on-glb }
 
+
 Povray exe file
 :   POV-Rayの実行ファイルを指定する．既に静止画のPOV-Ray rendering dialogを使用してレンダリングを行っている場合は同じ設定が入るので，特にそのままでよい．POV-Ray付属版を使用している場合も，はじめから適切な値が入っているためそのままで問題ない．
 
@@ -73,12 +74,11 @@ Clipping plane
 
 Post-render alpha blending
 :   半透明があるシーンではONにする．
-
 半透明が無いことがわかっている場合はOFFにしたほうがrenderingが速くなる．
 （詳しくは[半透明オブジェクトのレンダリング](../../cuemol2/PostAlphaBlend)参照）
+
 Shadow
 :   影がrenderingされるようになります．普通影はできな方が良いのでOFFにする．
-
 
 例では以下のように指定します．
 
@@ -91,6 +91,7 @@ Shadow
 
 ![anim-render-3](../../assets/images/cuemol2/Anim_RenderMovie/anim-render-3.png){ style="zoom: 0.5" .on-glb }
 
+
 Make movie
 :   OFFになっているとPNGファイルへのレンダリングのみ行われ，動画は作成されない．他のソフトウェアで動画を作成する場合や，FFmpegのオプションを細かく変更して何度もエンコードを試みる予定の場合はOFFでよい．
 
@@ -102,7 +103,6 @@ Output format
 
 Bitrate
 :   文字通りビットレートを指定する．デフォルトでは10240 kbit/sになっているが，これは動画１秒間あたり10240 k bit（すなわち1.25M bytes/sec）使用するファイルができることを意味する．作成する動画の長さと，どれくらいのファイルサイズになってほしいかを考えて指定する．
-
 
 例では以下のように指定しています．
 
@@ -128,7 +128,14 @@ Start, Closeボタンが有効になると，レンダリングの終了です�
 PNGファイルを入力として用いることができる動画ソフトを用いたエンコードも可能です．）
 
 以上のオプションでエンコードした動画が以下になります．
-#youtube(pHL52i3kzxE)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/pHL52i3kzxE?mute=1&controls=1&rel=0&playlist=pHL52i3kzxE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                
 
 ただし，youtubeで画質が低下するため，もとの動画はもっと高画質です．
 

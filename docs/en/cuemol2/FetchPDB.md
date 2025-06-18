@@ -29,7 +29,7 @@ After pressing the OK button (the download time is depends on the size of the mo
 ### Fetch density map files from net
 If you also want to see the density map(s) of the PDB file,
 please select the "Fetch map file (2Fo-Fc)" or "Fetch map file (Fo-Fc)" items
-in the Download-PDB dialog.<br />
+in the Download-PDB dialog.<br/>
 (Of course, you can download both PDB and all map files at once, or only the map files if you already have the PDB coordinates file.)
 
 After pressing the OK button, the electron density maps will appear in the molecule view.

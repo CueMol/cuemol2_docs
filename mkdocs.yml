@@ -4,9 +4,9 @@ repo_url: https://github.com/CueMol/cuemol2
 theme:
   name: material
   # language: ja
-  features:
-    - toc.integrate
-    - navigation.tabs
+  # features:
+  #   - toc.integrate
+  #   - navigation.tabs
   logo: assets/images/cuemol2-small-80px.png
   favicon: assets/favicon.ico
 

@@ -16,8 +16,6 @@ GUIでリストから選んでRendererを作成する場合等に，
 
 ```
 var rend_types = obj.searchCompatibleRendererNames();
-```
-```
 var rend_list = rend_types.split(",");
 ```
 
@@ -28,8 +26,6 @@ searchCompatibleRendererNames()は，
 ## Rendererの削除
 ```
 var rend_id = rend.uid;
-```
-```
 obj.destroyRenderer(rend_id);
 ```
 
@@ -43,8 +39,6 @@ var rend = obj.getRenderer(rend_id);
 (Renderer IDはCueMol内部で一意なのでSceneを指定しなくても意図するRendererが取得できる)
 ```
 var SceMgr = cuemol.getService("SceneManager");
-```
-```
 var rend = SceMgr.getRenderer(rend_id);
 ```
 
@@ -53,4 +47,3 @@ Renderer name (rend_name)を指定してRendererを得る
 IDが最も小さいものが返される．（それ以外のRendererを直接取得する方法は無い）
 ```
 var rend = scene.getRendererByName(rend_name);
-```

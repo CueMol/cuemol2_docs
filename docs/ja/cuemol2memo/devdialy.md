@@ -4,15 +4,15 @@
 
 ### 2007/5/20
 
-* jsbr/ObjWrapper<br />
+* jsbr/ObjWrapper<br/>
 エラー処理をするようにした．(throwErrorを呼び出す)
 
-* JS bridgeのthrowErrorの実装<br />
+* JS bridgeのthrowErrorの実装<br/>
 単にJS_ReportError()を呼び出せばよいようだ．
 
-* qlib/TestClass.hpp JSから呼び出すテスト / qlib/testclass.js <br />
-objectが関係ないmethod: OK<br />
-objectを渡すmethod: OK<br />
+* qlib/TestClass.hpp JSから呼び出すテスト / qlib/testclass.js <br/>
+objectが関係ないmethod: OK<br/>
+objectを渡すmethod: OK<br/>
 objectを返すmethod: OK
 ### 2008/3/8
 
@@ -47,47 +47,47 @@ XMLNodeObjとObjectの対応付け
 
 アップデート型実装では、
 
-*  XML→Obj では、XMLから対応するobjectを知る必要がある。<br />
+*  XML→Obj では、XMLから対応するobjectを知る必要がある。<br/>
 対応するObjectがある（可能性のある）XMLNodeObjはUIDを持っている。
-UIDから、objectを検索できる（getXMLPeer() method）。既に削除されているかどうかもUIDから判断可能。<br />
-今の実装では、ObjToXML更新をgetXMLPeer()を使っておこなている。すべてのXMLNodeに対して、UIDを得てから対応するObjがあるか検査し、ある場合はUpdate、ない場合はCreationを行っている。<br />
-上述の分析から、この実装は不要ではないのか？<br />
+UIDから、objectを検索できる（getXMLPeer() method）。既に削除されているかどうかもUIDから判断可能。<br/>
+今の実装では、ObjToXML更新をgetXMLPeer()を使っておこなている。すべてのXMLNodeに対して、UIDを得てから対応するObjがあるか検査し、ある場合はUpdate、ない場合はCreationを行っている。<br/>
+上述の分析から、この実装は不要ではないのか？<br/>
 
-*  Obj→XML では、Objectから対応するNodeObjを知る必要がある。<br />
+*  Obj→XML では、Objectから対応するNodeObjを知る必要がある。<br/>
 Serializableなobjectは、XMLObjNodeへのSmartPtrを保持している。
-対応するXMLNodeがない場合は、このポインタはヌルになっている。<br />
+対応するXMLNodeがない場合は、このポインタはヌルになっている。<br/>
 上述のような理由により、現実装では使用されていない。
 
 ### 2008/3/8
 
 Object階層の構成
 
-ObjTable
-:   uid→ObjectのHashテーブル．uidはobjectが出来た順にグローバルに付けられるので，実質的にはリストになる．<br />
 
-基本的にSceneを構成するcollection objectはこれを用いる．Sceneなどでは，object nameはユーザに見えるヒントでしかないので，同一名前が存在することを許す．<br />
-派生クラスの実装で，名前でソートしたり，同一名を排除したり，別の基準でobjectの順序・存在を制御出来るようにする．<br />
+ObjTable
+:   uid→ObjectのHashテーブル．uidはobjectが出来た順にグローバルに付けられるので，実質的にはリストになる．~
+基本的にSceneを構成するcollection objectはこれを用いる．Sceneなどでは，object nameはユーザに見えるヒントでしかないので，同一名前が存在することを許す．<br/>
+派生クラスの実装で，名前でソートしたり，同一名を排除したり，別の基準でobjectの順序・存在を制御出来るようにする．<br/>
 ObjTableはinterfaceで，insert(データの追加)，get(uidからobjectの取得), getAllUIDs(全UIDの集合を取得)の３つからなる．
+
 それ以外
 :   全てPropertyは保持出来るようにする．ObjTableもPropertyをもてたほうが良い．
 
-
 XMLによるPropertyの表現
-Attributeによる表現
-:   XMLのattrによってあらわすため，文字列になる．<br />
 
-数値・文字列の場合は自明．<br />
-色，shadingなど，さらに構造を持つ記述は独自のMarkupが必要になる．（色以外は対応する必要が無いだろう）<br />
-HTMLのように，JSで記述することも必要．（ただ，HTMLのonXXXプロパティでは，JSの評価値がattrとして設定されるのではなく，文字列をJSとしてcompileしたcodeletが設定される仕様である．この違いをどうするか？）<br />
+Attributeによる表現
+:   XMLのattrによってあらわすため，文字列になる．~
+数値・文字列の場合は自明．<br/>
+色，shadingなど，さらに構造を持つ記述は独自のMarkupが必要になる．（色以外は対応する必要が無いだろう）<br/>
+HTMLのように，JSで記述することも必要．（ただ，HTMLのonXXXプロパティでは，JSの評価値がattrとして設定されるのではなく，文字列をJSとしてcompileしたcodeletが設定される仕様である．この違いをどうするか？）<br/>
 文字列への変換はLScrConvCapインタフェイス，void fromString(string value)と，
-string toString() constでサポートする．個別実装はこの下に隠蔽．<br />
+string toString() constでサポートする．個別実装はこの下に隠蔽．<br/>
 ただし，同じ値に対して複数表記がある場合(0.0と0.00等)，文字列としての表現がfrom/toを減ることで変化してしまうと言う問題が起り，Update型実装では何らかの対処が必要．
 
-Children tagによる表現
-:   そのelementの子element(tag)に記述する．<br />
 
-数値・文字列の場合は冗長になる．<br />
-色，shadingなどの構造もXMLによりMarkupできる．<br />
+Children tagによる表現
+:   そのelementの子element(tag)に記述する．~
+数値・文字列の場合は冗長になる．<br/>
+色，shadingなどの構造もXMLによりMarkupできる．<br/>
 
 Children tagによる記述の方が（冗長になる面もあるが）汎用性が高い．
 

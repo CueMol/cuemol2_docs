@@ -126,8 +126,8 @@
 *  BUGFIX: PDB file reader cannot read SSBOND record without trailing spaces
 *  BUGFIX: Pov file rendering fails with spheres with nearly-zero radius
 *  BUGFIX: Animation rendering dialogbox does not remember the output prefix
-*  XULRunner is updated to version 39.0<br />
-Build environment for Win32 is updated to VS2013<br />
+*  XULRunner is updated to version 39.0<br/>
+Build environment for Win32 is updated to VS2013<br/>
 Build environment for MacOS X is updated to clang-6.1 (Xcode 6.4)
 
 *  Implementation of density map loader by PDB ID from EDS server (see: [cuemol2/FetchPDB](../../en/cuemol2/FetchPDB))

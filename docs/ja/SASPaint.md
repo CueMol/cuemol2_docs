@@ -20,12 +20,12 @@
 
 例としては，
 [Documents/QScriptのチュートリアル/StepA4](../Documents/QScriptのチュートリアル/StepA4)のサンプルを変更したものを使用して説明します．
-実行には，このページにあるQScriptファイル以外に，**PDBやMSMSのファイルが必要**です．<br />
+実行には，このページにあるQScriptファイル以外に，**PDBやMSMSのファイルが必要**です．<br/>
 **PDBやMSMSのファイルは上記ページからリンクされているサンプルファイル中の物を使用してください．**
+
 
 注意
 :   このページの機能を使用するにはversion 1.0.0.58以降のCueMolが必要です．
-
 ### 表面(Surface) objectを分子objectに接続する
 具体的にやらせたいことは，
 
@@ -40,9 +40,9 @@
 そこで，表面オブジェクトに（元になっている）分子オブジェクトを
 **接続（attach）する**ことで，CueMolに**どの分子の情報から着色するかを教えてやる**わけです．
 
-<pre>
+```
 $r_sf.setProp("scalarobj", "blm_ab");
-</pre>
+```
 
 プロパティー名からは何か意味がわかりにくいですが大目に見てください((適当に拡張しているのがばればれですねぇ〜（汗）))．
 これで，レンダラー$r_sfは分子オブジェクト"blm_ab"から情報を得てpaintingする準備が出来ました．
@@ -58,21 +58,21 @@ $r_sf.setProp("scalarobj", "blm_ab");
 に応じて色を設定できます（[CPKやballstickレンダラー](../Documents/QScriptのチュートリアル/Step1)と同様）．
 
 まず，表面オブジェクト自体の着色モードを変更します．
-<pre>
+```
 $r_sf.setProp("colormode", 2);
-</pre>
+```
 これで，**原子プロパティーによって着色モード**(simple coloring mode)
 になりました．
 
 さらに，どういう原子プロパティーで着色するか（すなわち上記の1,2,3のどれか）を設定します．
-<pre>
+```
 $r_sf.setProp("simple.colormode", 0);
-</pre>
+```
 これで，元素タイプに応じて着色するモードになります．
 
 #### 実際のスクリプトの例は．．．
 今までの設定をまとめると以下のようになるはずです．
-<pre>
+```
 $pwd = sys.getScriptPath();
 
 $surf = readMSMS($pwd+"blm.face", "surf");
@@ -92,7 +92,7 @@ $r_sf.setProp("simple.colormode", 0);
 $mol.deselect();
 gfx.setCenter($r_blm.getCenter());
 gfx.updateView();
-</pre>
+```
 
 ![surf_cpk1](../assets/images/SASPaint/surf_cpk1.png){ .on-glb }
 
@@ -114,7 +114,7 @@ CPKレンダラー等と同じですので
 "colormode"プロパティーを2にするところまでは前回と同じです．
 "simple.colormode"を1にすることで温度因子モードになります．（2で占有率モード）
 "simple.lowcol", "simple.highcol"で低い側・高い側の色を設定します．
-<pre>
+```
 $r_sf.setProp("scalarobj", "blm_ab");
 $r_sf.setProp("colormode", 2);
 $r_sf.setProp("simple.colormode", 1);
@@ -122,7 +122,7 @@ $r_sf.setProp("simple.lowcol", color(0,0,1));
 $r_sf.setProp("simple.lowpar", 20.0);
 $r_sf.setProp("simple.highcol", color(1,1,0));
 $r_sf.setProp("simple.highpar", 80.0);
-</pre>
+```
 
 ![surf_bfac](../assets/images/SASPaint/surf_bfac.png){ .on-glb }
 
@@ -137,9 +137,9 @@ ballstickレンダラーの"coloring.*"と，"simple.*"が対応しています�
 さらにややこしい塗り方をしたい場合には
 **分子の選択範囲に応じて着色モード(fancy coloring mode)**
 を使用します．
-<pre>
+```
 $r_sf.setProp("colormode", 3);
-</pre>
+```
 "colormode"を3にすることで，fancy coloringになります．
 
 このモードでは，select()で分子((当然attachしている分子でないと意味がない))の
@@ -150,7 +150,7 @@ $r_sf.setProp("colormode", 3);
 
 例えば，アルギニン・リジンを青に，
 グルタミン酸・アスパラギン酸を赤に，その他を白に塗る場合は，以下のようになります．
-<pre>
+```
 $r_sf.setProp("scalarobj", "blm_ab");
 $r_sf.setProp("colormode", 3);
 $mol.select(se/resn ARG,LYS/);
@@ -158,7 +158,7 @@ molvis.paint($r_sf, color(0,0,1));
 $mol.select(se/resn GLU,ASP/);
 molvis.paint($r_sf, color(1,0,0));
 $r_sf.setProp("fancy.default", color(1,1,1));
-</pre>
+```
 
 ![surf_resn](../assets/images/SASPaint/surf_resn.png){ .on-glb }
 
@@ -185,18 +185,18 @@ CueMolが塗る色を決定する必要が出た場合にいちいちスクリ�
 よって，この機能を使う場合は使う側も「まったり」と使う心がけが必要です．
 
 まず，他の例と同様に分子オブジェクトにattachし，"colormode"を3 (fancy coloring mode)にします．
-<pre>
+```
 $r_sf.setProp("scalarobj", "blm_ab");
 $r_sf.setProp("colormode", 3);
-</pre>
+```
 さらに，着色のためのスクリプト（関数オブジェクト）を設定します．
-<pre>
+```
 molvis.setScriptColoring($r_sf) ($atom, $res, $mol) {
 ```
 ...
 ```
 }
-</pre>
+```
 この**...**の部分で色を決定してcolorオブジェクトをreturn文で返すようにします．
 
 色の決定に必要な情報は，引数$atom, $res, $molに渡されます．
@@ -215,7 +215,7 @@ $atomはatomオブジェクト，$resはresidオブジェクト，$molは分子�
 これだとある色から色までの１段階のグラジエントにしかできません．
 ここでは，５段階に分けた色のグラジエントで着色してみます．
 
-<pre>
+```
 $r_sf.setProp("scalarobj", "blm_ab");
 $r_sf.setProp("colormode", 3);
 
@@ -228,45 +228,21 @@ local $col5 = color.hsb(0, 0.8, 1.0);
 molvis.setScriptColoring($r_sf) ($atom, $res, $mol) {
 ```
  local $bfac = $atom.bfac();
-```
-```
  if ($bfac<10.0)
-```
-```
    return $col1;
-```
-```
  else if ($bfac<20.0)
-```
-```
    return color.gradient($col2, $col1, ($bfac-10.0)/10.0);
-```
-```
  else if ($bfac<30.0)
-```
-```
    return color.gradient($col3, $col2, ($bfac-20.0)/10.0);
-```
-```
  else if ($bfac<40.0)
-```
-```
    return color.gradient($col4, $col3, ($bfac-30.0)/10.0);
-```
-```
  else if ($bfac<60.0)
-```
-```
    return color.gradient($col5, $col4, ($bfac-40.0)/20.0);
-```
-```
  else
-```
-```
    return $col5;
 ```
 };
-</pre>
+```
 
 > 上記スクリプトファイル：![blmsurf_5](../assets/images/SASPaint/blmsurf_5.qs){ .on-glb }
 

@@ -210,4 +210,3 @@ real distMin(vector)
 ; show simple atom labels for selected atoms
 ```
 void showAtomLabel(select, string)
-```

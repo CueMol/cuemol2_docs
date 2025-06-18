@@ -40,7 +40,7 @@ Mol surface generation toolで分子表面を作成した場合は，
 作成元となった（i.e. Target moleculeで設定した）分子が，
 自動的にターゲット・オブジェクトとして設定されます．
 
-**例)**<br />
+**例)**<br/>
 ページ冒頭にあるsample scene fileをダウンロードして開きます．
 （[シーンの保存と読み込み](../../Documents/GUIのチュートリアル(CueMol2)/Step6)参照）
 

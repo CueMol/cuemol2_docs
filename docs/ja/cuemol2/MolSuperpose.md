@@ -24,23 +24,23 @@ CueMol1で実装されていた重ね合わせ機能とほぼ同じなので[Doc
 ダイアログの各項目の意味は，
 
 * Reference
-    *  Molecule<br />
+    *  Molecule<br/>
 Reference (動かない方)の分子オブジェクトを指定する．
 
-    *  Selection<br />
+    *  Selection<br/>
 Reference分子のどの部分を重ね合わせ対象にするかを指定する．
 
 * Moving
-    *  Molecule<br />
+    *  Molecule<br/>
 Moving (動く方)の分子オブジェクトを指定する．
 
-    *  Selection<br />
+    *  Selection<br/>
 Moving分子のどの部分を重ね合わせ対象にするかを指定する．
 
-*  Auto recenter<br />
+*  Auto recenter<br/>
 ONにすると，重ね合わせ実行後，重ね合わせた分子に視点が移動．
 
-*  Write RMSD info file<br />
+*  Write RMSD info file<br/>
 (未実装)
 
 となります．
@@ -56,14 +56,8 @@ CueMol1.1の場合と同様に，
 重ね合わせに成功すると，Moving分子が移動し，Log windowに以下のようなメッセージが表示されます．
 ```
 === LSQ superpose result ===
-```
-```
  RMSD: 0.105598 angstrom
-```
-```
  Nfit: 46 atoms
-```
-```
 ======
 ```
 
@@ -102,17 +96,9 @@ Selectionについては，基本的に*（全原子を選択）でOKですが�
 OKを押して重ね合わせが成功すると，Moving分子が移動し，Log windowに以下のようなメッセージが表示されます．
 ```
 === SSM superpose result ===
-```
-```
  RMSD: 0.105633 angstrom
-```
-```
  Nalgn: 46
-```
-```
  Ngaps: 0
-```
-```
 ======
 ```
 RMSDは，重ね合わせ後のCα原子のRMSDを示しています．

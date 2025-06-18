@@ -20,6 +20,7 @@ Radiosity法によるレンダリングをおこなうことができます．
 
 ### Radiosity renderingのモード
 上記のdialogのRadiosityの項目にある設定のように，Radiosity renderingには以下のようなモードがあります．
+
 Disable
 :   Radiosity法を使用せず，レイトレーシング法を使用する(default)
 
@@ -34,7 +35,6 @@ OutdoorHQ
 
 他
 :   いろいろ設定があるが，これ以外はあまり使用する必要はない．
-
 
 
 OutdoorHQ（やFinal, IndoorHQ）は計算に非常に時間がかかります．

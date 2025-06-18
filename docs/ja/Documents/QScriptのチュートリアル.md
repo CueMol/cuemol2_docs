@@ -7,9 +7,9 @@
 QScript関連の仕様はWindows版とUNIX版でほぼ同じですが，GUIが関わる部分（スクリプトの実行方法など）で，異なる部分がありますのでご注意ください．
 
 ### スクリプトファイルの実行方法
-Windows版
-:   メニュー"File"->"Execute QScript..."を選択する．→実行するスクリプトファイル（拡張子はqsが標準）を選ぶ．→実行される<br />
 
+Windows版
+:   メニュー"File"->"Execute QScript..."を選択する．→実行するスクリプトファイル（拡張子はqsが標準）を選ぶ．→実行される~
 あるいは，ツールバーの![execscr](../../assets/images/Documents/QScriptのチュートリアル/execscr.png)ボタンをクリックする．
 
 

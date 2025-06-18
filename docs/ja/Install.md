@@ -12,7 +12,7 @@ CueMol1については，[Install-1.1](../Install-1.1)を参照してくださ�
 ただし，古いcuemol1(1.1系統)とは別アプリになっており，上書きされずに残るので併用が可能です．
 Uninstallは，コンパネ→プログラムと機能 (Win7)から行えます．
 
-注意：<br />
+注意：<br/>
 トポロジーファイルをカスタマイズしている場合は，再インストールによりデフォルトのファイルに置き換わってしまうので，手動でバックアップを取り，インストール後にカスタマイズしたものに置き換えるなどしてください．
 
 #### Installerの実行
@@ -20,6 +20,7 @@ Uninstallは，コンパネ→プログラムと機能 (Win7)から行えます�
 
 #### ユーザ設定など
 Applicationの設定の多く（windowやpanelの位置など）は，applicationとは別のprofile directoryに保存されています．そのため，uninstallしてもprofileは残ったままとなります．Profile directoryはOSのversionによって異なる場所に保存されています．（OSの起動ディスクをCドライブとする．）
+
 Windows7
 :   C:\Users\<User name>\AppData\Roaming\BKR-LAB\CueMol2_GUI
 
@@ -28,7 +29,6 @@ Windows Vista
 
 WindowsXP
 :   C:\Documents and Settings\<User name>\Application Data\BKR-LAB\CueMol2_GUI
-
 
 **CueMol2がクラッシュする等，正常動作しない場合**は，CueMol2が起動していないことを確認した上でこのCueMol2_GUI directoryを削除した後，再度起動してみてください．
 

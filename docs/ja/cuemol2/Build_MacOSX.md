@@ -65,58 +65,20 @@ buildはそのままで行うと64bitになってしまうので適切なオプ�
 
 ```
 #!/bin/sh
-```
-```
 instpath=$HOME/proj/boost
-```
-```
 ./bjam \
-```
-```
 
     * prefix=$instpath \
-```
-```
-
     * exec-prefix=$instpath \
-```
-```
-
     * libdir=$instpath \
-```
-```
-
     * includedir=$instpath \
-```
-```
-
     * with-date_time \
-```
-```
-
     * with-filesystem \
-```
-```
-
     * with-iostreams \
-```
-```
-
     * with-program_options \
-```
-```
-
     * with-regex \
-```
-```
-
     * with-system \
-```
-```
-
     * with-thread \
-```
-```
 architecture=x86 address-model=32 link=shared,static threading=multi install
 ```
 
@@ -128,14 +90,8 @@ architecture=x86 address-model=32 link=shared,static threading=multi install
 *  include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動
 ```
 > cd $HOME/proj/boost
-```
-```
 > mkdir include lib
-```
-```
 > mv boost include
-```
-```
 > mv libboost_* lib
 ```
 
@@ -161,16 +117,12 @@ env CFLAGS="-m32 -fast" ./configure --enable-float --prefix=$HOME/proj --disable
 *  32bitでコンパイルする必要があるがコマンドラインからはそういう指定はどうやるか分からなかったのでconfig/Makefile.darwinのCC, LDを変更した．
 ```
 CC=cc -m32
-```
-```
 LD=cc -m32
 ```
 
 *  Sourceを展開して単にmake．configureとかはない．GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
 ```
 env GLEW_DEST=$HOME/proj/glew make
-```
-```
 env GLEW_DEST=$HOME/proj/glew make install
 ```
 
@@ -182,7 +134,7 @@ env GLEW_DEST=$HOME/proj/glew make install
 cmake-gui .
 ```
 
-*  Macroとして、BOOST_ROOTを指定する(listboxに追加すればよい)<br />
+*  Macroとして、BOOST_ROOTを指定する(listboxに追加すればよい)<br/>
 指定dir以下に、lib/*.dylib, include/boost があればよい。
 例えば$HOME/proj/boostなど。
 
@@ -196,8 +148,6 @@ cmake-gui .
 *  terminalからmake, make installを実行
 ```
 make
-```
-```
 make install
 ```
 
@@ -213,8 +163,6 @@ include/CGAL/compiler_config.h
 を書き換えて
 ```
 #define CGAL_CFG_NO_CPP0X_VARIADIC_TEMPLATES 1
-```
-```
 #define CGAL_CFG_NO_CPP0X_RVALUE_REFERENCE 1
 ```
 
@@ -228,7 +176,7 @@ include/CGAL/compiler_config.h
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
 
-*  特定ユーザー (ssh)<br />
+*  特定ユーザー (ssh)<br/>
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2
 ```
@@ -293,18 +241,18 @@ http://megapov.inetart.net/povrayunofficial_mac/
 
 githubからmasterを持ってくる
 
-BOOSTをbuildする．（上記のCueMol用に作ったのと同じで良い）<br />
+BOOSTをbuildする．（上記のCueMol用に作ったのと同じで良い）<br/>
 lib*.aだけを持ってきた，boost_staticというdirectoryを作っておく．
 
-付属libpngをbuildする<br />
-libraries/pngで，make -f scripts/makefile.gccを実行<br />
-warningがでるが，build完了<br />
+付属libpngをbuildする<br/>
+libraries/pngで，make -f scripts/makefile.gccを実行<br/>
+warningがでるが，build完了<br/>
 このままだとconfigureから使えるdirectory構成になっていないので，
 lib, include directoryを作り，lib*.aをlibに，*.hをincludeにコピーする
 
-付属zlibをbuildする<br />
-libraries/zlibで，./configureを実行，makeを実行<br />
-warningがでるが，build完了<br />
+付属zlibをbuildする<br/>
+libraries/zlibで，./configureを実行，makeを実行<br/>
+warningがでるが，build完了<br/>
 このままだとconfigureから使えるdirectory構成になっていないので，
 lib, include directoryを作り，lib*.aをlibに，*.hをincludeにコピーする
 
@@ -313,7 +261,7 @@ unixでprebuild.shを実行
 
 
 以下のscriptでconfigureを実行する．ただし，topdirとboost_dirは適宜変更する．
-<pre>
+```
 boost_dir=$HOME/proj64/boost_static/
 topdir=$HOME/src/povray-3.7-stable
 env NON_REDISTRIBUTABLE_BUILD=yes \
@@ -321,32 +269,16 @@ CXXFLAGS=-Wno-parentheses-equality \
 ./configure \
 ```
  COMPILED_BY="your name <email@address>" \
-```
-```
  --disable-debug \
-```
-```
  --disable-shared \
-```
-```
  --disable-io-restrictions \
-```
-```
  --with-boost=$boost_dir \
-```
-```
  --with-libpng=$topdir/libraries/png/lib \
-```
-```
  --with-zlib=$topdir/libraries/zlib/lib \
-```
-```
  --without-libjpeg \
-```
-```
  --without-libtiff \
 ```
-</pre>
+```
 
 makeを実行．
 

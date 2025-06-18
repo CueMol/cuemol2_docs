@@ -1,6 +1,6 @@
 バグの情報とかです．
 
-今のところ判明しているバグや不具合などは，<br />
+今のところ判明しているバグや不具合などは，<br/>
 https://github.com/CueMol/cuemol2/issues
 
 で管理されています．以上にないようなバグを発見された方は，[メーリングリスト](../MailingList)や [Twitter@cuemolnohito](http://twitter.com/cuemolnohito) にお寄せください．
@@ -10,6 +10,7 @@ https://github.com/CueMol/cuemol2/issues
 あと，現段階でわかってはいるものの解決が難しい不具合と，その応急的な対処法については以下をご覧ください．
 
 ### Version 2.2.0.315で解決していない不具合など
+
 Qscファイルを（フォルダ間で）移動すると，読み込んでいたPDBファイルが開けないためqscファイル自体も開けなくなってしまう
 :   qscファイルに埋め込んでいない分子や電子密度などがあると，このような事態が起こる場合があります．qscファイルとリンクしている外部PDBやMTZファイルの相対パスが変化しないように一緒に移動すると問題がないように作られている筈ですが，それでもおかしくなる場合はご連絡ください．
 
@@ -24,7 +25,6 @@ POV-Ray renderingで，半透明のRendererを2種類以上作成し，それら
 
 起動直後に，動作がカクカクしフリーズしたようになる場合がある
 :   起動直後には，javascriptのgarbage collectionが作動する傾向があります．1分くらい放置すると直ります．
-
 :グラフィクスがIntel GMAの環境で正常に動作しない|
 ノート型PCでよく使われている，チップセット統合型のIntel GMAグラフィクス環境ではVersion 2.1.0.243が正常に動作しない場合があります．[cuemol2/UseGLShader](../cuemol2/UseGLShader)を参照してshaderをoffにしてみてください．
 :Mol surface generation toolでおかしな分子表面が生成される場合がある|

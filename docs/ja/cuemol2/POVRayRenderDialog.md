@@ -17,6 +17,7 @@ POV-Ray rendering dialogが表示されます．
 
 ![povrender-dlg2](../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg2.png){ style="zoom: 0.5" .on-glb }
 
+
 W(idth), H(eight)
 :   出来上がる画像のサイズをピクセル単位で指定する．Defaultでは，現在の画面サイズと同じになっている．
 
@@ -42,11 +43,11 @@ Transp background
 :   背景色を透明にするかどうかを指定する．（ただし透明にするとFog効果がなくなる．またradiosity法使用時には透明には出来ない）
 
 Clipping plane
-:   現在分子ビューに表示されているslabによるclippingをpovray renderingにおいても再現するかどうかを指定する．<br />
-
-**Left**：Clipping plane off，**Right**：Clipping plane on<br />
+:   現在分子ビューに表示されているslabによるclippingをpovray renderingにおいても再現するかどうかを指定する．~
+**Left**：Clipping plane off，**Right**：Clipping plane on<br/>
 ![povrender-clip0](../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip0.png){ style="zoom: 0.5" .on-glb }
 ![povrender-clip1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip1.png){ style="zoom: 0.5" .on-glb }
+
 Post-render alpha blending
 :   POV-Ray rendering後にalpha blendingを行うかどうかを指定する．詳しくは，[cuemol2/PostAlphaBlend](../../cuemol2/PostAlphaBlend)を参照．
 
@@ -56,10 +57,10 @@ Edge lines
 Pix labels
 :   文字ラベルなどのrenderingを有効にする．
 
-
 #### POV-Ray options
 
 ![povrender-dlg3](../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg3.png){ style="zoom: 0.5" .on-glb }
+
 
 Povray-exe-path
 :   Renderingに使用するPOV-Rayの実行ファイルを指定する．Windows版の場合は，consoleで動くpovrayでなければならない．（下記POV-Rayのpath等の設定を参照）
@@ -74,9 +75,8 @@ Lighting
 :   光源の設定を行う．詳しくは，[cuemol2/POVRayRenderLighting](../../cuemol2/POVRayRenderLighting)を参照．
 
 Shadow
-:   影が出るようにrenderingするかどうかを指定する．Defaultではoffになっている．<br />
-
-**Left**：Shadow off，**Right**：Shadow on<br />
+:   影が出るようにrenderingするかどうかを指定する．Defaultではoffになっている．~
+**Left**：Shadow off，**Right**：Shadow on<br/>
 ![povrender-shadow0](../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow0.png){ style="zoom: 0.5" .on-glb }
 ![povrender-shadow1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow1.png){ style="zoom: 0.5" .on-glb }
 
@@ -86,7 +86,7 @@ Shadow
 #### Windows
 〜-povray-setup.exeというファイルからインストールすると，console用povrayが同梱されており，これらの値は同梱版を指すように設定されているため，特に何も準備する必要はありません．
 
-**非同梱版の場合**<br />
+**非同梱版の場合**<br/>
 一方で，POV-Ray非同梱版(povrayという文字列が入っていないインストーラー)にはPOV-Rayは含まれていません．
 CueMol2と連携させるにはconsole版POV-Rayが必要なのですが，
 Windows版のPOV-Rayにはconsole版が同梱されていません．

@@ -23,24 +23,24 @@ RNA, DNA等の核酸専用のレンダラーです．Tube rendererと同様の�
 
 
 #### Base type
+
 basepair
 :   上図のような残基をstick状に表示するモード．(default)
 
 simple1
-:   basepair同様にstick状に表示されるが，baseとsugarのN-glycosyl bondのところで折れ曲がった形状になるモード．下図左がConnect base pair=on, 右がoffの状態での表示．<br />
-
+:   basepair同様にstick状に表示されるが，baseとsugarのN-glycosyl bondのところで折れ曲がった形状になるモード．下図左がConnect base pair=on, 右がoffの状態での表示．~
 
 >![nucl-basetype-simple1-1](../../assets/images/cuemol2/NARenderer/nucl-basetype-simple1-1.png){ style="zoom: 0.75" .on-glb } ![nucl-basetype-simple1-2](../../assets/images/cuemol2/NARenderer/nucl-basetype-simple1-2.png){ style="zoom: 0.75" .on-glb }
 
-detail1
-:   Baseの部分が板状に表示されるモード．（Base pair形成による表示変化はない）<br />
 
+detail1
+:   Baseの部分が板状に表示されるモード．（Base pair形成による表示変化はない）~
 
 >![nucl-basetype-detail1](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail1.png){ style="zoom: 0.75" .on-glb } ![nucl-basetype-detail1-2](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail1-2.png){ style="zoom: 0.85" .on-glb }
 
-detail2
-:   detail1に加えて，riboseの部分も板状に表示されるモード．（Base pair形成による表示変化はない）<br />
 
+detail2
+:   detail1に加えて，riboseの部分も板状に表示されるモード．（Base pair形成による表示変化はない）~
 
 >![nucl-basetype-detail2](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail2.png){ style="zoom: 0.75" .on-glb } ![nucl-basetype-detail2-2](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail2-2.png){ style="zoom: 0.85" .on-glb }
 
@@ -62,9 +62,9 @@ Nucl rendererの主鎖表示はtube rendererと同じであるため，
 ここではnuclで変更する必要がありそうな項目についてのみ説明します．
 詳しくはTube rendererの設定を参照してください．
 
+
 Pivot atom name
 :   チューブが通るべき原子の名前を指定する．DefaultはP（主鎖リン酸のリン原子）になっているが，これだとチューブが実際の残基よりも大回りをしすぎる傾向がある．
-
 場合によっては，pivot atom nameをC5'（リボース基の5'位炭素）などに変更した方がみばえが良くなることもある（特に上述のBase typeに依存する）．
 
 > ![nucl-tube-pivot-1](../../assets/images/cuemol2/NARenderer/nucl-tube-pivot-1.png){ style="zoom: 0.85" .on-glb }

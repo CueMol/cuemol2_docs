@@ -24,6 +24,7 @@ cuemol.resetProp(targetObj, propName);
 
 ## プロパティーの型
 プロパティーの型には以下のものがある．
+
 boolean
 :   真偽値型
 
@@ -41,7 +42,6 @@ enum
 
 複合型
 :   他のobjectへの参照．さらにこのobject内のプロパティーは
-
 foo.bar.bazのようにアクセス可能．(ただしscript言語側の実装にもよるが．)
 
 ## プロパティーの一覧を得る
@@ -49,13 +49,12 @@ foo.bar.bazのようにアクセス可能．(ただしscript言語側の実装�
 
 ```
 var json_str = cuemol.getPropsJSON(targetObj);
-```
-```
 var data = JSON.parse(json_str);
 ```
 
 dataには，プロパティー情報の一覧が配列として格納される．
 すなわち，i番目のプロパティー情報には以下のようなデータが格納されている．
+
 data[i].name
 :   プロパティー名(string)
 
@@ -74,11 +73,10 @@ data[i].type
 data[i].value
 :   プロパティーの値(型や内容はプロパティーの型に依存して異なる)
 
-
 さらに，enum型のプロパティーに関しては以下の項目がある
+
 data[i].enumdef
 :   プロパティーが取りうる値がカンマ区切り文字列ではいる．
-
 
 また，複合型の場合は，valueは値が入るのではなく，
 その複合型の有するプロパティーに関する情報が格納される．

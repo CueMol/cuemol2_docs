@@ -31,12 +31,12 @@ GDP結合型（[4Q21](http://pdb.protein.osaka-u.ac.jp/pdb/cgi/explore.cgi?job=s
 *  重ね合わせる残基の番号
 
 をチェックしておきます．今回の場合は
+
 1QRA
 :   chain A, residue Met1-His166
 
 4Q21
 :   chain 4, residue Met1-His166
-
 
 です．
 
@@ -55,12 +55,12 @@ GDP結合型（[4Q21](http://pdb.protein.osaka-u.ac.jp/pdb/cgi/explore.cgi?job=s
 そして，各エディットボックスに重ね合わせる部分を指定する**選択文**を入力します（選択文の文法に関しては[分子選択文のリファレンス](../../../Documents/MolSelSyntax)参照）．
 
 ここでは，上記で示したように
+
 Reference
 :   A.1:166.CA (chain A and residue 1:166 and name CA と同義）
 
 Moving
 :   4.1:166.CA (chain 4 and residue 1:166 and name CA と同義）
-
 
 と入力しています．
 そしてOKボタンを押すと最小二乗重ね合わせが実行されます．

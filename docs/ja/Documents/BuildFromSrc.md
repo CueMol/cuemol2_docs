@@ -10,7 +10,7 @@
 *  InnoSetup (ver5.1.6) [ページ](http://www.jrsoftware.org/isdl.php)
 ### ライブラリ類のインストール
 
-* c:\proj\bin<br />
+* c:\proj\bin<br/>
 再配布可能DLL：
 
     * libpng13.dll, libpng13d.dll(PNGライブラリ)
@@ -18,14 +18,14 @@
     * msvcp71.dll, msvcr71.dll (VCランタイム)
     * zlib1.dll (libz for PNG)
     * libfftw3f-3.dll (FFTW ver3.1.3)
-* c:\proj\include<br />
+* c:\proj\include<br/>
 インクルードファイ類:
 
     * db.h (BerkeleyDB)
     * png.h, pngconf.h, zconf.h, zlib.h (PNGライブラリ)
     * fftw3.h
     * freetype (FreeType ver.2.2.1)
-* c:\proj\lib<br />
+* c:\proj\lib<br/>
 インポートライブラリ+staticライブラリ:
 
     * libdb40s.lib, libdb40sd.lib (BerkeleyDB ver 4.0, static library)
@@ -34,7 +34,7 @@
     * libfftw3f-3.lib (FFTW ver3.1.3)
     * freetype221.lib (FreeType ver2.2.1, static library)
 
-これらをまとめたものを、以下からダウンロード出来ます：<br />
+これらをまとめたものを、以下からダウンロード出来ます：<br/>
 http://prdownloads.sourceforge.net/cuemol/cuemol-buildsetwin-1.1.0.187.zip?download
 
 #### 必要なライブラリ類もソースからビルドする場合
@@ -49,8 +49,8 @@ FreeTypeはhttp://www.freetype.org/からダウンロードできる。
 
 ### 環境変数の設定
 
-*  コントロールパネルのシステムから、PATH環境変数に<br />
-**c:\proj\bin**<br />
+*  コントロールパネルのシステムから、PATH環境変数に<br/>
+**c:\proj\bin**<br/>
 を加える。（再起動かログオフが必要？）
 
 ### VS.NETの設定
@@ -69,19 +69,13 @@ FreeTypeはhttp://www.freetype.org/からダウンロードできる。
 * Anonymous (pserver)
 ```
 cvs -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol login 
-```
-```
 cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol co cuemol 
 ```
 
 * 特定ユーザー (ssh)
 ```
 setenv CVSROOT XXXXX@cvs.sourceforge.jp:/cvsroot/cuemol
-```
-```
 setenv CVS_RSH ssh
-```
-```
 cvs -z3 co cuemol 
 ```
 
@@ -165,8 +159,6 @@ bison (version 1.35以降)とflex (version 2.5.4)が必要．
 CVSの使用
 ```
 cvs -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol login 
-```
-```
 cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol co modulename 
 ```
 
@@ -174,39 +166,39 @@ CVSからチェックアウトしたソースでビルドする場合は、
 configureスクリプト等がないので生成する必要がある。
 正しいバージョンのlibtool, autoconf, automakeをインストールし、
 cuemol/src以下で以下のコマンドを実行する必要がある。
-<pre>
+```
 $ aclocal
 $ libtoolize
 $ aclocal
 $ automake -a
 $ autoconf
-</pre>
+```
 
 ### configureの実行
 cuemol/src以下で以下のコマンドを実行する。
-<pre>
+```
 ./configure --with-icc[=options] --disable-debug --prefix=<install先指定> --with-modules=<moduleを列挙> [--with-db=no]
-</pre>
+```
 
-    * with-icc
+--with-icc
 :   Intel C Compilerを使用する場合. optionsでicc/icpcへわたすoptionを指定できる。
 
-    * disable-debug
+--disable-debug
 :   デバッグ表示をしない（通常デバッグしない場合は指定する）
 
-    * prefix
+--prefix
 :   インストール先を指定する。指定しないと/usr/localになる。
 
-    * with-modules
-:   ビルドするモジュールをカンマで区切って指定する。以下が指定可能。指定しないと、molstrのみ指定したことになる。<br />
+--with-modules
+:   ビルドするモジュールをカンマで区切って指定する。以下が指定可能。指定しないと、molstrのみ指定したことになる。~
 
     *  molstr
     *  molvis
     *  denmap
     *  symm
-    * with-db=no
-:   BerkeleyDBを使用しない場合に指定する．
 
+--with-db=no
+:   BerkeleyDBを使用しない場合に指定する．
 
 #### Intel compilerを使用する場合
 例えば**--with-icc**に以下のオプションを指定する
@@ -215,39 +207,38 @@ cuemol/src以下で以下のコマンドを実行する。
     * with-icc="-ip -O3 -Ob2 -xW -tpp7 -static -cxxlib-icc"
 ```
 
-* ip
+-ip
 :   Procedure間最適化
 
-* O3
+-O3
 :   最大限の最適化
 
-* xW
+-xW
 :   Pen4ファミリーでしか実行できないコード生成(他のプロセサで実行する場合は変更する必要あり)
 
-* tpp7
+-tpp7
 :   Pen4ファミリーの命令セットを使用した最適化
 
-* static
+-static
 :   スタティックリンク
 
-* cxxlib-icc
+-cxxlib-icc
 :   icc/icpc付属のC++ standard libraryを使用する
 
 
-
 ### ビルドとインストール
-<pre>
+```
 $ make
 $ make install
-</pre>
+```
 
 ### 実行
-<pre>
+```
 $ cuetty
-</pre>
+```
 引数に何も指定しないと、インタラクティブにスクリプトを実行するモードになる。
 
-<pre>
+```
 $ cuetty [script]
-</pre>
+```
 引数にQScriptファイル名を指定すると、そのスクリプトが実行される。

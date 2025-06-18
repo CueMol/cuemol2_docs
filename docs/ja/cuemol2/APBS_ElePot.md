@@ -78,7 +78,7 @@ Defaultでは，"pot_"+計算対象分子名
 （使用前に[cuemol2/APBS_Install](../../cuemol2/APBS_Install)を参考にPDB2PQRをインストールしてください）
 
 1.  **Charge calculation method**のところの，**Use PDB2PQR**をonにして，
-1.  **pdb2pqr.py path:**にインストールしたpdb2pqr.pyファイル（あるいはpdb2pqr_wrap.batファイル）を指定します．<br />
+1.  **pdb2pqr.py path:**にインストールしたpdb2pqr.pyファイル（あるいはpdb2pqr_wrap.batファイル）を指定します．<br/>
 "Change..."ボタンを押すとファイルを開くダイアログが現れるので，そこからファイルを選択し，指定してください．
 
 1.  あとさらに，"Force field:"では電荷の割り当て等に用いる力場セットを指定できますが，
@@ -90,12 +90,12 @@ CueMol2.1.0以降(Windows版)あるいは[cuemol2/APBS_Install](../../cuemol2/AP
 pdb2pqr簡易版を使用する場合は，
 "pdb2pqr.py path:"には**pdb2pqr_wrap.bat**というバッチファイルを指定してください．
 
+
 注意
 :   CueMol2.1.0以降(Windows版)に含まれるpdb2pqr簡易版は，CueMol2を
-
-C:\Program Files (x86)\CueMol 2.0<br />
-にインストールした場合は，<br />
-C:\Program Files (x86)\CueMol 2.0\apbs\pdb2pqr_wrap.bat<br />
+C:\Program Files (x86)\CueMol 2.0<br/>
+にインストールした場合は，<br/>
+C:\Program Files (x86)\CueMol 2.0\apbs\pdb2pqr_wrap.bat<br/>
 にインストールされます．
 デフォルトでは上記のファイルが指定されているはずですが， 
 そうなっていないようなら，上記のファイルを指定してください．
@@ -110,7 +110,7 @@ C:\Program Files (x86)\CueMol 2.0\apbs\pdb2pqr_wrap.bat<br />
 
 #### その他
 
-PDB2PQRのサイトからダウンロードして最新版をインストールした場合は，上記の**pdb2pqr.py path:**には文字通りpdb2pqr.pyを指定します．<br />
+PDB2PQRのサイトからダウンロードして最新版をインストールした場合は，上記の**pdb2pqr.py path:**には文字通りpdb2pqr.pyを指定します．<br/>
 
 
 ### Internal method

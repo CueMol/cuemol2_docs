@@ -17,11 +17,12 @@ Powered by [Mozilla XULRunner](http://www.mozilla.org/projects/mozilla-based.htm
 
 >> ![snapshot2_2m](./assets/images/index/snapshot2_2m.jpg){ style="zoom: 0.28" .on-glb } ![snapshot2_1m](./assets/images/index/snapshot2_1m.jpg){ style="zoom: 0.28" .on-glb } 
 
-Please send any comments, questions, or requests about CueMol to<br />
-![mm1](./assets/images/index/mm1.png)![mm2](./assets/images/index/mm2.png) or <br />
+Please send any comments, questions, or requests about CueMol to<br/>
+![mm1](./assets/images/index/mm1.png)![mm2](./assets/images/index/mm2.png) or <br/>
 [Follow @cuemolnohito on Twitter](http://twitter.com/cuemolnohito)
 
 ### What's new?
+
 2015/10/2
 :   Released version 2.2.2.366 for Windows and MacOS X. Version 2.2.2.365 contains bug in the installation process, so please update to the new version! Changes are listed in [Updates](./en/Updates) page.
 
@@ -51,7 +52,6 @@ Please send any comments, questions, or requests about CueMol to<br />
 
 2014/6/8
 :   Released version 2.2.0.309 for Windows and MacOS X.
-
 
 
 

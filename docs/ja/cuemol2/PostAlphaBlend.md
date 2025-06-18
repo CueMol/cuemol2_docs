@@ -6,7 +6,7 @@ CueMol1のころから着色の透明度を1以下にすることで，半透明
 特にPOV-Rayによるレンダリング時に以下のような問題点がありました．
 
 *  半透明の（おおきな）オブジェクトがあるとレンダリングが極端に遅くなる．
-*  物体の裏面まで正しく計算される．また半透明の物体が重なると不透明度が増す．<br />
+*  物体の裏面まで正しく計算される．また半透明の物体が重なると不透明度が増す．<br/>
 これは物理的な現象としては正しいのですが，見栄えとしてはごちゃごちゃして非常に見難くなります．
 
 
@@ -43,15 +43,15 @@ CueMol2.0.1.X以降では，POV-Rayレンダリング時に半透明として計
 デフォルトではsf_1CRNのレンダラーmolsurf1はCPKColoringになっていますが，
 これを以下のようにして表示変更します．
 
-1.  Colorサイドパネルを表示させる(以下では1CRN/ribbon1が選ばれている)<br />
+1.  Colorサイドパネルを表示させる(以下では1CRN/ribbon1が選ばれている)<br/>
 
 ![alpha_scene_colorpanel2](../../assets/images/cuemol2/PostAlphaBlend/alpha_scene_colorpanel2.png)
 
-1.  Drop-down listboxから，sf_1CRN/molsurf1 (sf_1CRNのレンダラーmolsurf1)を選ぶ(以下のようなCPKColoringのパネルが表示される)<br />
+1.  Drop-down listboxから，sf_1CRN/molsurf1 (sf_1CRNのレンダラーmolsurf1)を選ぶ(以下のようなCPKColoringのパネルが表示される)<br/>
 
 ![alpha_scene_colorpanel3](../../assets/images/cuemol2/PostAlphaBlend/alpha_scene_colorpanel3.png)
 
-1.  Drop-down listbox横の▼ボタンを押し，PaintColoring→Defaultを選ぶ<br />
+1.  Drop-down listbox横の▼ボタンを押し，PaintColoring→Defaultを選ぶ<br/>
 
 ![alpha_scene_colorpanel4](../../assets/images/cuemol2/PostAlphaBlend/alpha_scene_colorpanel4.png)
 

@@ -71,11 +71,7 @@ shadowはすべての陰影付けをoffにして，色だけ塗るような設�
 例で示すと，色を黄色，materialをshadowにする場合は，
 ```
 yellow{material:shadow}
-```
-```
 rgb(1,1,0){material:shadow}
-```
-```
 #FF0{material:shadow}
 ```
 などと指定します（色に関しては上記３つとも同じ純色の黄色の表記法を変えただけ）．
@@ -85,6 +81,7 @@ rgb(1,1,0){material:shadow}
 > ![default-ribbon2](../../assets/images/cuemol2/Material/default-ribbon2.png){ .on-glb } → ![mixed-ribbon2](../../assets/images/cuemol2/Material/mixed-ribbon2.png)
 
 デフォルトの二次構造による着色をColorパネルから以下のように変更した後レンダリングしたものです．
+
 シート(sheet)
 :   SteelBlue → SteelBlue{material:stone35}
 
@@ -93,7 +90,6 @@ rgb(1,1,0){material:shadow}
 
 その他(*)
 :   FloralWhite → FloralWhite{material:metallic_chrome}
-
 
 ただし，背景は白に，ribbon rendererのプロパティーsmooth colorをoffにしています．
 

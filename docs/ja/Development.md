@@ -5,6 +5,7 @@ CueMolはopen sourceのmolecular visualization frameworkです．
 皆様の協力により，より良いソフトウェアとして改善されていく可能性があります．
 
 現在，主に以下のような点で人手が必要とされています．
+
 バグの報告など
 :   CueMolは依然不完全なソフトウェアです．ちょっとした不具合でも報告していただければ，さらなる改善につながります．
 
@@ -24,11 +25,10 @@ CueMolはopen sourceのmolecular visualization frameworkです．
 Scripting/plugin interfaceの開発
 :   基本的にGUIはXUL/Javascriptで記述されており，既にスクリプトにより操作することは可能には可能ですが，ドキュメントがない点や，ユーザが簡単に拡張できるようになっているとは言い難い状態で，さらなる改善が必要です．また，javascript以外にpython等他の言語から操作できるようにする必要もあるかもしれません．
 
-
 CueMolの開発について興味のお持ちの方は，
 
 *  ![mm1](../assets/images/Development/mm1.png)![mm2](../assets/images/Development/mm2.png)
-*  ![icn-twitter](../assets/images/Development/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br />
+*  ![icn-twitter](../assets/images/Development/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br/>
 （CueMol関連情報は#cuemolハッシュタグつきで）
 
 *  あるいは[メーリングリスト](../MailingList)

@@ -214,4 +214,3 @@ static void writeScene(string, string, dict)
 ; write the current view settings to file (filename)
 ```
 static void saveView (string)
-```

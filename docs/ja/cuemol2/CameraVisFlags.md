@@ -41,18 +41,18 @@ Cameraに保存されている表示・非表示状態(vis flags)を復元した
 ![camvis-editdlg1](../../assets/images/cuemol2/CameraVisFlags/camvis-editdlg1.png){ .on-glb }
 
 
+
 中央のObj/Rendカラム
 :   現在のSceneにあるobjects/renderersがscene panel同様に表示されています．
 
 左のIncカラム
 :   チェックマークが表示されていたりされていなかったりしますが，
-
-表示されているものに関しては，（現在編集中の）cameraに表示・非表示状態の情報(vis flag)が保存されていることを示しています．<br />
-すなわち，context menuの「Load to scene (with vis flags)」を実行すると，このobject(あるいはrenderer)の表示・非表示状態は表示か非表示いずれかに変化します．<br />
+表示されているものに関しては，（現在編集中の）cameraに表示・非表示状態の情報(vis flag)が保存されていることを示しています．<br/>
+すなわち，context menuの「Load to scene (with vis flags)」を実行すると，このobject(あるいはrenderer)の表示・非表示状態は表示か非表示いずれかに変化します．<br/>
 逆に，何も表示されていない項目に関しては，対応するobject(あるいはrenderer)はグレー表示されており，vis flagは保存されていません．ですので，「Load to scene (with vis flags)」を実行しても，scene中の該当object(あるいはrenderer)の表示・非表示状態は変化しません．
-右のVisカラム
-:   目のアイコンが表示されていたりされていなかったりしますが，表示されているものに関しては，（現在編集中の）cameraには表示状態でvis flagが保存されています．なので，このcameraをdouble clickする(あるいはcontext menuの「Load to scene (with vis flags)」を実行する）と，この項目に対応するobject(あるいはrenderer)は表示状態になります．<br />
 
+右のVisカラム
+:   目のアイコンが表示されていたりされていなかったりしますが，表示されているものに関しては，（現在編集中の）cameraには表示状態でvis flagが保存されています．なので，このcameraをdouble clickする(あるいはcontext menuの「Load to scene (with vis flags)」を実行する）と，この項目に対応するobject(あるいはrenderer)は表示状態になります．~
 逆に，何も表示されていない項目に関しては，非表示状態でvis flagが保存されています．したがって「Load to scene (with vis flags)」を実行すると，対応するobject(あるいはrenderer)は非表示状態になります．
 
 ### 表示・非表示状態をすべて削除する

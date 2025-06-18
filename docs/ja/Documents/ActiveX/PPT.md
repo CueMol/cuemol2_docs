@@ -132,7 +132,7 @@ CueMolコントロールにキー入力が取られてしまい，
 スクリプトのほうで指定しておくことで，
 はじめからラベルが表示された状態にしておくことができます．
 
-<pre>
+```
 ... (省略) ...
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
@@ -141,7 +141,7 @@ $r_blm.setProp("bondw", 0.2);
 $mol.showAtomLabel(se/_.1001.S53/, "mylabel1");
 
 gfx.setCenter($r_p.getCenter());
-</pre>
+```
 
 $molオブジェクトの，showAtomLabel()メソッドを呼び出すことで，
 原子ラベルを表示させることができます．
@@ -166,7 +166,7 @@ showAtomLabel()メソッドの引数・使用方法は以下のとおりです�
 
 ラベルの制限以上にたくさんラベルを出したい場合は，上に書いたとおりにやれば
 できるのですが，具体例があったほうがわかりやすいので，以下に示します．
-<pre>
+```
 ... (省略) ...
 $r_blm.setProp("bondw", 0.2);
 
@@ -175,7 +175,7 @@ $rlabel.setProp("maxlabel", 100);
 $mol.showAtomLabel(se/_.1001.*/, "mylabel1");
 
 gfx.setCenter($r_p.getCenter());
-</pre>
+```
 この例のように変更して実行すれば，残基番号1001の残基の原子
 全てにラベルが表示されるようになります．
 maxlabelプロパティーを変更していないと，最後の５原子しかラベルが出ないわけですが，

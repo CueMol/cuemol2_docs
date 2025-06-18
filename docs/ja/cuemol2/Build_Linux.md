@@ -46,55 +46,25 @@ Version 2.1.0では1.44.0を使用している．ちなみに1.52.0を使用し�
 具体的には：まずソースを展開後、bjamをbuildする。
 ```
 cd boost_1_44_0
-```
-```
 ./bootstrap.sh --prefix=~/app/boost
 ```
 
 次に、bjamでビルドする。以下のようなshell scriptを作成して必要なものだけbuildするようにした。
 ```
 #!/bin/sh
-```
-```
 instpath=~/app/boost
-```
-```
 ./bjam \
-```
-```
   --prefix=$instpath \
-```
-```
   --exec-prefix=$instpath \
-```
-```
   --libdir=$instpath \
-```
-```
   --includedir=$instpath \
-```
-```
   --with-date_time \
-```
-```
   --with-filesystem \
-```
-```
   --with-iostreams \
-```
-```
   --with-program_options \
-```
-```
   --with-regex \
-```
-```
   --with-system \
-```
-```
   --with-thread \
-```
-```
   link=shared,static threading=multi install
 ```
 
@@ -114,20 +84,10 @@ http://www.fftw.org/download.htmlから取得可能。
 
 ```
 env CFLAGS="-fPIC -DPIC" \
-```
-```
     ./configure \
-```
-```
     --enable-float \
-```
-```
     --prefix=$HOME/proj/fftw \
-```
-```
     --disable-fortran \
-```
-```
     --disable-shared
 ```
 
@@ -138,17 +98,9 @@ env CFLAGS="-fPIC -DPIC" \
 *  cmakeの実行
 ```
 cd CGAL-3.8
-```
-```
 cmake -DBOOST_ROOT=$HOME/proj/boost/ \
-```
-```
       -DCMAKE_INSTALL_PREFIX=$HOME/proj/CGAL-3.8/ \
-```
-```
       -DBUILD_SHARED_LIBS=FALSE \
-```
-```
       -DCMAKE_CXX_FLAGS="-fPIC -DPIC" .
 ```
 
@@ -163,14 +115,12 @@ cmake -DBOOST_ROOT=$HOME/proj/boost/ \
 *  Sourceを展開して単にmake．configureとかはない．以下のように環境変数GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．
 ```
 env GLEW_DEST=$HOME/proj/glew CFLAGS.EXTRA="-fPIC -DPIC" make
-```
-```
 env GLEW_DEST=$HOME/proj/glew make install
 ```
 
 *  $GLEW_DEST/lib64以下にlibraryがinstallされるが、shared objectは使わないので消しておく。消さないとsoの方が優先的にリンクされてしまう。
 
-※当たり前だがX11やOpenGLの開発パッケージがインストールされている必要がある。<br />
+※当たり前だがX11やOpenGLの開発パッケージがインストールされている必要がある。<br/>
 CFLAGS.EXTRAでPICオプションを指定しないと、後々shared libraryとしてリンクできなくなる。
 
 ### Repositoryからチェックアウト
@@ -181,7 +131,7 @@ CFLAGS.EXTRAでPICオプションを指定しないと、後々shared libraryと
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
 
-*  特定ユーザー (ssh)<br />
+*  特定ユーザー (ssh)<br/>
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2
 ```
@@ -196,20 +146,20 @@ configureを走らせるためのスクリプトrun_config.shが，~/proj/cuemol
 library等のインストール位置を上述から変更していない場合は，
 CVS repositoryにあるrun_config.shは，ライブラリーのインストール位置が
 上述と合致しないため，変更が必要．
-<pre>
+```
 gecko_sdk_dir=$HOME/src/xulrunner/xulrunner-sdk/
 gecko_rt_dir=$HOME/src/xulrunner/xulrunner/
 boost_dir=$HOME/app/boost
-</pre>
+```
 
 エラー無くconfigureスクリプトが生成され，さらにMakefileが生成されたら，makeコマンドを実行．buildが行われる．
 
 *  基本的に出来上がりはすべてso (shared object)になるので環境によっては-PIC -fPIC引数が必要(ubuntu amd64の場合)．
 ### 試し実行
 make installを行うと，~/proj/cuemol2/xul_gui以下に必要なファイル類が配置される．xulrunnerの引数に，~/proj/cuemol2/xul_gui/application.iniを与えて起動すれば動くはず．
-<pre>
+```
 ~/src/xulrunner/xulrunner-sdk/bin/xulrunner ~/proj/cuemol2/xul_gui/application.ini
-</pre>
+```
 
 うまくはしらない場合は，MacOSXの場合と同様
 ```
@@ -230,8 +180,6 @@ setenv LD_DEBUG libs
 ~/proj/cuemol2/uxbuild/uxdistに移動し、make distを実行するとインストールパッケージ（tar.bz2形式）が作られる。
 ```
 cd uxdist
-```
-```
 make dist
 ```
 

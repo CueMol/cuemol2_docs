@@ -17,26 +17,12 @@ GLSLのバージョン番号により以下の機能が使用できたり，で�
 ```
 
         *  OpenGL Info ---
-```
-```
 Vendor:   ATI Technologies Inc.
-```
-```
 Renderer: AMD Radeon HD 7800 Series
-```
-```
 Version:
-```
-```
   OpenGL 4.2.11554 Compatibility Profile Context
-```
-```
   GLEW 1.7.0
-```
-```
   GLSL 4.20
-```
-```
 -------------------
 ```
 
@@ -73,13 +59,6 @@ OglView> shaders disabled
 一方で，有効化されていると以下のようにdefaultのshaderがロードされたというログが表示されます．
 ```
 PO> Loading shader: ~~CONFDIR~~/data/shaders/default_vert.glsl
-```
-```
 PO> Loading shader OK
-```
-```
 PO> Loading shader: ~~CONFDIR~~/data/shaders/default_frag.glsl
-```
-```
 PO> Loading shader OK
-```

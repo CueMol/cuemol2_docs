@@ -38,7 +38,7 @@ Sceneパネルを見ると，3UG9_AB.pdbが表示され，それを表示するr
 
 **補足**
 
-> Scene, Objectの概念については[Documents/GUIのチュートリアル(CueMol2)/Step2-1](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)にも詳しい解説がありますので参照してください．<br />
+> Scene, Objectの概念については[Documents/GUIのチュートリアル(CueMol2)/Step2-1](../../../Documents/GUIのチュートリアル(CueMol2)/Step2-1)にも詳しい解説がありますので参照してください．<br/>
 
 > GUIの基本構成については[Documents/GUIのチュートリアル(CueMol2)/Step1-2](../../../Documents/GUIのチュートリアル(CueMol2)/Step1-2)にも詳しい解説がありますので参照してください．
 

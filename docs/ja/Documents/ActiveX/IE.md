@@ -74,40 +74,28 @@ startup.qsファイル（インストール先ディレクトリーの，scripts
 コントロールが分子を読み込んだ際に，$molnameにその分子名が引数として渡され，
 この関数が呼び出されます．
 
-<pre>
+```
 # setup renderers for embedded control
 def setupMolForCtrl($molname) {
 ```
    local $r, $r2;
-```
-```
    $mol = qobj.getObj($molname);
-```
-```
    $sel = se/resn ala,arg,asn,asp,cys,gln,glu,gly,his,hie,hid,hip,ile,leu,lys,met,mse,phe,pro,ser,thr,trp,tyr,val,gua,ade,uri,cyt,thy/;
-```
-```
    $mol.select($sel);
-```
-```
    $r = $mol.createRend("0", "trace");
 ```
 
 ```
    $mol.select(!$sel);
-```
-```
    $r2 = $mol.createRend("1", "simple");
 ```
 
 ```
    gfx.setCenter($r.getCenter());
-```
-```
    gfx.updateView();
 ```
 }
-</pre>
+```
 
 上記のデフォルトの実装では，蛋白・核酸残基を選択してtrace rendererを作成し，
 それ以外の原子を選択してsimple rendererを作成し，
@@ -134,9 +122,9 @@ startup.qsはコントロールの起動時にのみ読み込まれるので，
 そこでPDBファイルを表示させたい場合があるかもしれません．
 
 一番簡単なのは，単にaタグでPDBファイルにリンクを張ることです．
-<pre>
+```
 <a href="foo.pdb">foo.pdb</a>
-</pre>
+```
 サーバー側がpdbという拡張子を認識して，
 ちゃんとMIME Typeをchemical/x-rasで送ってくれれば，
 ブラウザ中に分子が表示されるでしょう．
@@ -146,34 +134,32 @@ IEの方で拡張子で認識してプラグインで表示してくれる場合
 CGIを使って，MIME Typeをchemical/x-rasにし，
 catでPDBファイルを表示するという手もあります．
 最も簡単に，shで書くと以下のようになるでしょう．
-<pre>
+```
 #!/bin/sh
 cat <<EOF
 Content-Type: chemical/x-ras
 EOF
 echo; # 空行が必要！！
 cat /home/ishitani/public_html/cgi-bin/test.pdb
-</pre>
+```
 
 以上のやり方だと，必ず全画面（ブラウザの中での）になってしまいますが，
 ページの一部分に分子を表示したいことがあるかもしれません．
 そういうばあいは，embedタグやobjectタグを使います．
-<pre>
+```
 <embed type="chemical/x-ras" src="sheet.pdb" width="100" height="100" />
-</pre>
+```
 typeは要らないかもしれません．srcでPDBファイルを指定します．
 width, heightでHTML上でのピクセル単位の大きさを指定します．
 一方，objectタグを使う場合は，以下のようにします．
-<pre>
+```
 <object id="MolView" width=300 height=300
 ```
  classid="CLSID:32FF27E1-3414-42E4-A351-36C4499DAA65">
-```
-```
  <param name="src" value="http://www.rcsb.org/pdb/cgi/export.cgi?format=PDB&pdbId=1PDB&compression=None">
 ```
 </object>
-</pre>
+```
 idはコントロールの名前で，ページ中のjavascript等からこのコントロールを
 操作する場合には必須ですが，そういった使い方をしない場合は適当でOKです．
 width, heightは文字通りで，classidには，インストールの項目で説明した

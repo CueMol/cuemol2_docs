@@ -6,9 +6,9 @@ ActiveX controlによるプレゼンテーションや，mobile deviceによる�
 拡張子は，通常のシーンファイル(qsc)と異なり，**qsl**となっています．
 
 Sample scene fileが以下からダウンロードできます．
-[lyso_denmap1.qsl](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.188/lyso_denmap1.qsl)
-:   　Light-weight sceneファイルのサンプル
 
+[lyso_denmap1.qsl](http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.188/lyso_denmap1.qsl)
+:   Light-weight sceneファイルのサンプル
 
 ### これは何？
 Light-weight sceneファイルは，文字通り，軽い（サイズが小さい・読み込みが速い）シーンを格納するためのファイル形式です．
@@ -23,7 +23,7 @@ Light-weight sceneに変換後は，以下の操作を行うことが可能で�
 ただし，軽い分のトレードオフとして，通常のシーンファイル(qsc)と比べて以下のような操作は出来なくなっています．
 
 *  新たな表示(renderer)作成・rendererの編集(色の変更・表示範囲変更)
-*  分子の場合，分子としての完全な情報は持っていない（→分子重ね合せ，分子表面作成などができない）<br />
+*  分子の場合，分子としての完全な情報は持っていない（→分子重ね合せ，分子表面作成などができない）<br/>
 *  電子密度の場合，Light-weight sceneに変換した時点で表示していた表示範囲変更
 *  などなど
 
@@ -93,25 +93,25 @@ Version 2.0.1.192以降では，頂点数が多く複雑なメッシュは自動
 
 各renderer等の設定を以下を参考に変更して，頂点数が少ないqslファイルを作成できます．
 
-*  ballstick, cpk<br />
+*  ballstick, cpk<br/>
 Detail値（ただしデフォルトは3で小さ目の設定のため変更しなくてもOKの場合が多い）
 
-*  ribbon<br />
+*  ribbon<br/>
 Renderer設定ダイアログCommonタブのところにある，Section detail, Axial detail値．デフォルト値が大きめのため２〜３に減らした方が良い．
 
-*  cartoon<br />
+*  cartoon<br/>
 Renderer設定ダイアログGenericタブのところにある，axialdetail, coil.detail, helix.detail, sheet.detail値．これもデフォルト値が大きめのため２〜３に減らした方が良い．
 
-*  tube<br />
+*  tube<br/>
 Renderer設定ダイアログTubeタブのところにある，Detail値と，Axial detail値．これもデフォルト値が大きめのため２〜３に減らした方が良い．
 
-*  atomintr<br />
+*  atomintr<br/>
 Renderer設定ダイアログInteractionタブのところにある，Detail値．ただしこれはModeが3D tubeになっているときのみ．（単なる線描の場合は問題なし）
 
-*  molsurf<br />
+*  molsurf<br/>
 分子表面のポリゴン数は，分子から分子表面を生成したときに決まってしまうため後から簡単に変更することは少々困難です．再度Mol surface generationをやり直し，その時のDensity(/Å)値を１など小さい値に設定して再生成してやる必要があります．
 
-*  density map (contour)<br />
+*  density map (contour)<br/>
 表示範囲を狭くするか，mtzファイルから開くときのFFTの設定でgrid spacingをcoarseにする
 
 #### 自動設定
@@ -126,11 +126,7 @@ Renderer設定ダイアログInteractionタブのところにある，Detail値�
 ポリゴン数がmobile deviceで表示するのには多すぎる(2^16に収まっていない)場合には，output windowに以下のような警告が表示されます．
 ```
 QSLWriter> Mesh(1OX1.pdb:dsurface1) nverts=103884, nfaces=207766
-```
-```
 QSLWriter> Warning: Mesh(1OX1.pdb:dsurface1) vertex size 103884 exceeds limit(65535)
-```
-```
 QSLWriter> Mesh divided into 2 vbos
 ```
 

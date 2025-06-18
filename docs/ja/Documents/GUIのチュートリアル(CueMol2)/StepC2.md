@@ -18,7 +18,7 @@
 ![c2_mtz_option1](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_mtz_option1.png)
 
 
-まず，Rendererタブで共通オプションを設定します．<br />
+まず，Rendererタブで共通オプションを設定します．<br/>
 「Name」で読み込む電子密度のオブジェクトを指定します．ここではデフォルト(1qio_001_map_coeffs.mtz)のままにしておきます．
 CueMolでは，電子密度も分子モデルなどと同様にオブジェクトとしてメモリー上に格納されます．Rendererは**contour**のままでOKです．
 
@@ -29,7 +29,7 @@ CueMolでは，電子密度も分子モデルなどと同様にオブジェク�
 ![c2_mtz_option2](../../../assets/images/Documents/GUIのチュートリアル(CueMol2)/StepC2/c2_mtz_option2.png)
 
 
-次に，MTZ optionsタブで，MTZファイル読み込みに関したオプションを設定します．<br />
+次に，MTZ optionsタブで，MTZファイル読み込みに関したオプションを設定します．<br/>
 基本的にデフォルトのままでOKですが，場合によっては変更が必要です．
 
 分解能のデフォルト値（図では1.2）は，MTZファイルにある最大の分解能になっています．基本的にはデフォルトのままでＯＫですが，必要に応じて下げることも可能です．

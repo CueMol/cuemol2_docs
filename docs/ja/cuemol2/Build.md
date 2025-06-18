@@ -12,27 +12,27 @@ CueMol2のバージョンに合ったバージョンを用いる必要がある�
 *  VisualStudio2008
 *  ActivePerl [ページ](http://www.activestate.com/Products/ActivePerl/)
 *  ActivePython （GeckoSDKのIDL compilerで必要．Python2.7が動けば他のdistributionでも良い．）
-*  Inno Setup [ページ](http://www.jrsoftware.org/isdl.php)<br />
+*  Inno Setup [ページ](http://www.jrsoftware.org/isdl.php)<br/>
 Inno Setupだけではなく、preprocessorというのも入れる必要がある。全てがセットになったQuickStart Pack（ispack-5.X.XX.exe等）をinstallする。
 
 ### 必要なライブラリ類のインストール
 
-*  xulrunner SDK ftp://ftp.mozilla.org/pub/xulrunner/ <br />
-CueMol2のバージョンに合ったバージョンを用いる必要がある。<br />
+*  xulrunner SDK ftp://ftp.mozilla.org/pub/xulrunner/ <br/>
+CueMol2のバージョンに合ったバージョンを用いる必要がある。<br/>
 c:\proj\xulrunner\xulrunner2-sdk
 以下に展開する
 
-*  BOOST C++ Library (http://www.boost.org/)<br />
+*  BOOST C++ Library (http://www.boost.org/)<br/>
 以下では、コンパイル済みの配布(boostpro; http://www.boostpro.com/download/)を使用するが、ソースからコンパイルしてもよい。
 
-*  FFTW<br />
+*  FFTW<br/>
 cuemol1.1のbuildsetにlibfftwが付属しているのでそれを流用する。
 
 *  glew
     *  展開する→glew32.dllをc:\proj\binにコピー
 *  CGAL
 
-cuemol1.1のbuildsetは、以下からダウンロード出来ます：<br />
+cuemol1.1のbuildsetは、以下からダウンロード出来ます：<br/>
 http://prdownloads.sourceforge.net/cuemol/cuemol-buildsetwin-1.1.0.187.zip?download
 
 xulrunnerは、異なるバージョンを切り替えて使用する場合は、
@@ -51,24 +51,24 @@ mklink /d xulrunner2-sdk xulrunner-sdk-2.X.X
     *  VS2008 (VC9)用のLibraryのみinstallすればよい。
     *  Single thread versionはinstallしなくてよい。
     *  Libraryは、以下のMacOSXの項目に記述があるもののみinstallすればよいが、downloadするだけなので、全部入れてもさほど時間はかからない。
-1.  BoostのDLLがpathの通ったところに在る必要がある。<br />
-以下では、PATH環境変数にC:\proj\binを追加するとして、<br />
+1.  BoostのDLLがpathの通ったところに在る必要がある。<br/>
+以下では、PATH環境変数にC:\proj\binを追加するとして、<br/>
 C:\proj\boost\boost_X_XX\lib以下にあるDLLをすべてC:\proj\binにコピーする。
 
 #### CGAL
 
 *  CMakeをインストールする．
 *  CGALのソースをインストールする(2.2.0では3.8を使用中)
-*  cmake-guiでslnを生成<br />
+*  cmake-guiでslnを生成<br/>
     *  大概はBOOST_ROOTを指定する必要がある．C:\boost\boost_1.44など．
     *  [boost binaries](http://sourceforge.net/projects/boost/files/boost-binaries/)からとってきた場合はlibがcompiler toolkitごとの名前のdirに入っているので(lib32-msvc-9.0等)，それをBOOST_LIBRARYDIRに指定する．
-*  VC9でslnを開いてbuild<br />
+*  VC9でslnを開いてbuild<br/>
 デフォルトでは，boostのstatic libraryをlinkしようとするが，これではclient側がboostを使っている場合に使えないlibraryになってしまう（シンボルの二重定義になる）．強制的にboostのDLL版とリンクさせるには， BOOST_ALL_DYN_LINKを定義しておく必要がある．
 
 
 ### VisualStudio 2008の設定
 
-1. 環境変数PROJ_DIRを設定（以上の例に合わせるならc:\projに）<br />
+1. 環境変数PROJ_DIRを設定（以上の例に合わせるならc:\projに）<br/>
 やり方は、windows 環境変数などでググればよい。
 
 1. 環境変数PATHにc:\proj\binを追加する．
@@ -100,7 +100,7 @@ C:\proj\boost\boost_X_XX\lib以下にあるDLLをすべてC:\proj\binにコピ�
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
 
-*  特定ユーザー (ssh)<br />
+*  特定ユーザー (ssh)<br/>
 ```
 git clone git@github.com:CueMol/cuemol2.git cuemol2
 ```

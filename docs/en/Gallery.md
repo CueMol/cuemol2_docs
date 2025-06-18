@@ -7,15 +7,15 @@
 
 >(Left) Salt bridge between Arg and C term carboxylate in crambin [1CRN](http://www.rcsb.org/pdb/explore.do?structureId=1CRN), (Right) Oligopeptide transporter POT complexed with peptide analog, alafosfalin [4IKZ](http://www.rcsb.org/pdb/explore.do?structureId=4IKZ).
 
-QSC file of these scenes
-:   Left: [EdgeLine2-1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/EdgeLine2-1.qsc),<br />
 
+QSC file of these scenes
+:   Left: [EdgeLine2-1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/EdgeLine2-1.qsc),~
 Right: [POT_alafos1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/POT_alafos1.qsc) and
 [POT_alafos1_styles.xml](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/POT_alafos1_styles.xml)
 (Save the qsc and xml files in the same folder!)
+
 See also
 :   [Edge rendering](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FEdgeLines)
-
 
 
 ### Cartoon model
@@ -25,14 +25,14 @@ See also
 
 > Transmembrane helices of POT ([4IKV](http://www.rcsb.org/pdb/explore.do?structureId=4IKV)) shown with cartoon-cylinder model of different smoothness (2.0, 3.0, and 5.0 for left, center, right panels, respectively).
 
+
 QSC file of this scene
 :   [POT_overall1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/POT_overall1.qsc) and
-
 [POT_overall1_styles.xml](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/POT_overall1_styles.xml)
 (Save the qsc and xml files in the same folder!)
+
 See also
 :   [Cartoon display](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FCartoonRenderer)
-
 
 ### Nucleic acid model
 
@@ -42,12 +42,12 @@ See also
 
 > RNA-DNA component of S. pyogenes Cas9 ([4OO8](http://www.rcsb.org/pdb/explore.do?structureId=4OO8)), shown by basepair, simple1, and detail2 modes of nucl renderer (left, middle, and right panels, respectively).
 
+
 QSC file of this scene
 :   [Cas9_nucltype_detail2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/Cas9_nucltype_detail2)
 
 See also
 :   [Nucleic acid display](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FNARenderer)
-
 
 
 
@@ -59,12 +59,12 @@ See also
 
 > Surface model representations of B. halodurans YidC ([3WO6](http://www.rcsb.org/pdb/explore.do?structureId=3WO6)) coloured according to its electrostatic potential
 
+
 QSC file of this scene
 :   [YidC_Surface4.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/YidC_Surface4.qsc)
 
 See also
 :   [Cross-section of Mol surface](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FMolSurfCut)
-
 
 #### Radiosity
 
@@ -76,11 +76,18 @@ See also
 
 ### Animation
 #### Spin, camera motion, show and hide of renderers
-#youtube(pHL52i3kzxE,loop)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/pHL52i3kzxE?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=pHL52i3kzxE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                
+
 
 QSC file of this scene
 :   [lyso_showhide1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_showhide1.qsc)
-
 :See also|
 [Basic of animation](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_Basic),
 [Camera motion](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_CameraMotion),
@@ -88,13 +95,20 @@ and [Show and hide of renderers](http://translate.google.co.jp/translate?sl=ja&t
 
 
 #### Structural change animation by linear morphing
-#youtube(4RKA3VUVcPo,loop)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/4RKA3VUVcPo?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=4RKA3VUVcPo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                
+
 QSC file of this scene
 :   [mol_morph1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/mol_morph1.qsc)
 
 See also
 :   [Morphing animation](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_MolMorph)
-
 
 
 ------

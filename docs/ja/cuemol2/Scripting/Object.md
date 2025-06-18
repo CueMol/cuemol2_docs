@@ -6,31 +6,19 @@ reader_nameで指定されるreaderを使用して，pathからファイルを�
 
 ```
 var StrMgr = cuemol.getService("StreamManager");
-```
-```
 let reader = StrMgr.createHandler(reader_name, 0);
-```
-```
 reader.setPath(path);
 ```
  
 ```
 let newobj = reader.createDefaultObj();
-```
-```
 reader.attach(newobj);
-```
-```
 reader.read();
-```
-```
 reader.detach();
 ```
  
 ```
 newobj.name = obj_name;
-```
-```
 scene.addObject(newobj);
 ```
 
@@ -48,53 +36,28 @@ var StrMgr = cuemol.getService("StreamManager");
  
 ```
 var nCatID = 0;
-```
-```
 var info = JSON.parse(StrMgr.getInfoJSON2());
-```
-```
 var names = [];
 ```
  
 ```
 for (var i=0; i<info.length; ++i) {
-```
-```
    let elem = info[i];
-```
-```
    if (elem.category!==nCatID)
-```
-```
      continue;
-```
-```
    
-```
-```
    // skip QDF format in the obj-reader mode (cat==0)
-```
-```
    if (nCatID==0 && elem.name.indexOf("qdf")==0) {
-```
-```
      continue;
-```
-```
    }
-```
-```
    
-```
-```
    names.push(elem);
-```
-```
 }
 ```
 
 以上のコードにより，namesにはObject reader infoのリストが格納される．
 Reader infoの各要素には，以下の情報が入っている．
+
 
 descr
 :   Readerがsupportするファイル形式の簡単な説明
@@ -109,7 +72,6 @@ category
 :   Readerのカテゴリー
 
 
-
 ## Objectのファイルへの保存
 targetObjをwriter_nameで指定されるwriterを使用して，pathで指定されるファイルに書き出す．
 
@@ -119,20 +81,10 @@ var StrMgr = cuemol.getService("StreamManager");
  
 ```
 let writer = StrMgr.createHandler(writer_name, 1);
-```
-```
 writer.setPath(path);
-```
-```
 writer.convToLink = true;
-```
-```
 writer.attach(targetObj);
-```
-```
 writer.write();
-```
-```
 writer.detach();
 ```
 
@@ -155,8 +107,6 @@ var obj = scene.getObject(obj_id);
 あるいは，以下でも可(Object IDはCueMol内部で一意なのでSceneを指定しなくても意図するObjectが取得できる)
 ```
 var SceMgr = cuemol.getService("SceneManager");
-```
-```
 var obj = SceMgr.getObject(obj_id);
 ```
 
@@ -165,4 +115,3 @@ Object name (obj_name)を指定してObjectを得る
 IDが最も小さいものが返される．（それ以外のObjectを直接取得する方法は無い）
 ```
 var obj = scene.getObjectByName(obj_name);
-```

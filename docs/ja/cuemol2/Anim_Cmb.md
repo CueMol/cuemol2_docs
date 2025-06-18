@@ -17,6 +17,7 @@ Sample scene fileが以下からダウンロードできます．
 
 ### 設定
 設定ダイアログでは，以下のように設定します．
+
 Name
 :   デフォルトでSimpleSpin2になる筈．そのままでOK
 
@@ -31,7 +32,6 @@ Duration
 
 Spin axis
 :   Cartesianにし，(0, -1, 0)に設定する．（回転角は360どのままだが，軸が反転しているため逆方向に回転することになる）
-
 
 以上のように設定してOKを押すと，アニメーションパネルには
 以下のように２つのアニメーション項目が現れます．
@@ -76,7 +76,8 @@ SimpleSpin2の開始時間と終了時間も１秒分繰り下がっているこ
 *  相対指定は複数連鎖させることができる．そうすることで，途中の時間を変更しても後続のanimationを変更しなくてもすむ．
 *  ただし，連鎖に循環があると時間が決定できなくなりanimationを実行できなくなるので注意．
 
-## Quadric値による滑らかなアニメーション&aname(quadric);
+<a id="quadric"></a>
+## Quadric値による滑らかなアニメーション
 Quadric値は，アニメーションの滑らかさを制御する値です．
 アニメーションの時間経過（時間の長さにかかわらず開始0, 終了1とする）と，アニメーション量（この例では0〜360度の回転）の間は，Quadric=0なら１対１対応です．(下図)
 
@@ -107,7 +108,14 @@ Quadric値は，アニメーションの滑らかさを制御する値です．
 
 そしてAnimation ribbonの再生ボタンを押すとアニメーションが再生されます．
 以下のyoutube動画のようになるはずです．
-#youtube(pgGzhlDSZeE)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/pgGzhlDSZeE?mute=1&controls=1&rel=0&playlist=pgGzhlDSZeE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                
 
 先ほどは回転の終わりと始め（１つ目のスピンと２つ目のスピンの間の動き）がカクカクしていましたが，
 Quadricを0.25にすることで滑らかにつながるようになったと思います．

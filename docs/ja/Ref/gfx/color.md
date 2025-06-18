@@ -84,4 +84,3 @@ object addsat(real);
 ; incr/decr brightness of color
 ```
 object addbri(real);
-```

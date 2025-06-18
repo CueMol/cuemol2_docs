@@ -13,10 +13,11 @@ PNG形式の画像ファイルに（POV-Ray等でレンダリングせずに）�
 ![png_export_opt](../../assets/images/cuemol2/ImageExport/png_export_opt.png)
 
 各設定の説明は以下の通りになります．
+
 Resolution
 :   画像の解像度をDPI(dot per inch)で指定．
-
 ただし，ややわかりにくいですが，この値は，実際に書き出されるファイルの（ピクセルサイズでの）大きさには直接影響しない．PNGファイルをPowerPointやIllustratorなど他のソフトウェアに張り付けて印刷した場合の，紙上での実寸に影響．
+
 Width
 :   画像の幅を指定．右横のリストから単位を指定できる．pixel以外の単位は，上記Resolutionと連動している．最終的に紙などに印刷する場合はcmやmmの単位＋上記DPIも考慮して設定すると便利．
 
@@ -28,7 +29,6 @@ Retain aspect ratio
 
 Transparent PNG
 :   ONになっていると，透明（アルファ）チャネルを含むPNGが生成される．背景は色に関わらず透明になるようにレンダリングされる．一方でOFFになっていると，1 pixelあたりRGB (24bit)のPNGファイルが生成される．
-
 
 ### 透明PNGの使用例
 例えば，背景を白にしたうえでTransparent PNGをONにして書き出し，PowerPointに張り付けると，以下のように，背後にある文字などが透けて見えるようになります．

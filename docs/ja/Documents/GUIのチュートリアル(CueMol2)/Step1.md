@@ -45,6 +45,7 @@ CueMol2のアイコン![gui_step1_ico](../../../assets/images/Documents/GUIの�
 
 「Renderer type」ボックスでは，分子モデルの表示方法を指定します．
 現在の実装では以下のタイプがあります．
+
 simple
 :   線画のstick model．パフォーマンス的にはtraceに次いで高速．細かく見るだけの場合に適している．
 
@@ -65,7 +66,6 @@ tube
 
 nucl
 :   tubeのDNA, RNA向け発展版．塩基が棒状に表示される．
-
 :その他|
 
 ここでは，**simple** を選びます．

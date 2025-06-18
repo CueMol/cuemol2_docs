@@ -42,6 +42,7 @@ CueMol2.1以降では，以下のようなアニメーション・パレット�
 アニメーションの設定には，共通設定と，個々のアニメーションに特有の設定があります．
 DialogのCommon settingsの項目は，他のタイプのアニメーションにも共通な設定項目です．
 ここでは，共通設定について説明します．
+
 Name
 :   アニメーションの名前です．デフォルトで他のアニメーションと被らない名前が付けられますが，独自の名前を付けたい場合は変更してください．
 
@@ -50,19 +51,18 @@ Disabled
 
 Start time
 :   アニメーションの開始時間です．
-
 デフォルトでは，現在あるアニメーションの最後の時刻が開始時間になります（すなわち最後尾に新規追加したアニメーションが追加される）．
 時間の指定様式については，下記を参照してください．
+
 Relative to
 :   Start timeの時間指定が，アニメーション開始時点からの絶対時間(absolute)か，他のAnimation objectに対する相対指定かを選択する．ここではAnimation objectが1つしかないので，absoluteを選びstart timeは0に．（相対指定については後述[cuemol2/Anim_Cmb](../../cuemol2/Anim_Cmb)で具体例を挙げて説明しています）
 
 Duration
 :   アニメーションの継続する時間を指定します．
-
 デフォルトでは１秒継続するアニメーションになっています．
+
 Quadric
 :   アニメーションの時間経過に対する反応座標変化の様式を指定します．（といっても意味が分かりにくいと思いますので，後述[cuemol2/Anim_Cmb#quadric](../../cuemol2/Anim_Cmb#quadric)で具体例を挙げて説明しています）
-
 
 #### 時間の指定
 時間の指定は，すべて下図のようなウィジェットで行いますが，
@@ -79,12 +79,12 @@ Quadric
 
 ### Simple spin特有の設定
 DialogのSimpleSpin settingsの項目は，Simple spin特有の設定項目です．
+
 Rotation angle
 :   スピンの回転角を指定します．デフォルトでは360度で１回転するようになっています．GUIの都合上360度以上は指定できません．(何回も回転させたい場合は，後述のGenericタブからangleプロパティーを直接指定してください）
 
 Spin axis
 :   スピンの軸を指定します．左のドロップダウン・リストボックスでX, Y, Z axisを指定すると，それぞれの軸でスピンするようになります．Y軸が画面に垂直，X軸が水平な軸となっています．
-
 Cartesianにすると，右のエディットボックスに数値を指定できるようになるので，軸のX,Y,Z座標値を手入力してください．デフォルトではY軸周りに回転するようになっています．
 
 設定の意味は以上のようになっていますが，
@@ -105,6 +105,7 @@ Animation ribbon (アニメーション再生UI)が表示されます．
 ![anim-ribbon1](../../assets/images/cuemol2/Anim_Basic/anim-ribbon1.png)
 
 各ボタン等の役割を以下で説明します．
+
 Play
 :   Animationの再生を開始します．開始すると，Pauseに変化します．
 
@@ -120,10 +121,16 @@ Loop
 スライダー
 :   アニメーションの時間のうち，現在どの時間に居るかを示しています．ドラッグすることで指定した時間にジャンプすることができます．
 
-
 以上のAnimationバーを使用して再生を行うと，
 以下のyoutube動画のようになるはずです．
-#youtube(ufYOyzHft9E,loop)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/ufYOyzHft9E?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=ufYOyzHft9E"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                
 
 ### アニメーション項目の設定再変更
 以上でY軸周りに1周回転するアニメーションができましたが，

@@ -18,7 +18,7 @@
 
 ## コンパイル時の文法エラー
 例えば，以下のスクリプトを実行した場合，
-<pre>
+```
 01: 
 02: $pwd = sys.getScriptPath();
 03: 
@@ -28,15 +28,15 @@
 07: $r_blm = $mol.createRend("blm", "ballstick");
 08: $r_blm.setProp("sphr", 0.2);
 09: $r_blm.setProp("bondw", 0.2);
-</pre>
+```
 
 以下のようなエラーが出ます．
 
-<pre>
+```
 line 7: parse error at "$r_blm"
 Layer2 compile error.
 QsysModule> compile error
-</pre>
+```
 
 これは，6行目の最後にセミコロンが無いのが原因なのですが，
 エラーは7行目の$r_blmのところにあるといっています．
@@ -58,63 +58,37 @@ Compile errorが出た場合は，スクリプトの内容はまったく実行�
 
 例えば，以下のスクリプトを実行した場合は，
 
-<pre>
+```
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
 $mol.select(%{resi 1001%})
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphere", 0.2);
 $r_blm.setProp("bondw", 0.2);
-</pre>
+```
 
 以下のようなエラーメッセージが出ます．
 
 ```
 ******************************
-```
-```
-#### ERROR         ***
-```
-```
+***          ERROR         ***
 ******************************
-```
-```
 Exception name:
-```
-```
   "runtime error"
-```
-```
 Reason:
-```
-```
   "unknown property sphere @ unknown in c:\proj\cuemol\src\qlib\PropContainer.hpp:299"
-```
-```
 At the context:
-```
-```
   1: proc () @ file "C:\proj\cuemol-tutorial\bleomycin\blm-xxx.qs" line 5
 ```
  
  
 ```
 ******************************
-```
-```
-#### Interpreter status   ***
-```
-```
+***   Interpreter status   ***
 ******************************
-```
-```
 
         *  interpreter status ---
-```
-```
 ... (省略) ...
-```
-```
 --------------------------
 ```
 
@@ -138,8 +112,9 @@ try-catch文で当該部分を囲っておくと，エラーを拿捕して
 エラー処理をする・エラーの原因を解決して再実行する，などの処理を行うことができます．（[画像ファイルへの書出し](../../../Documents/QScriptのチュートリアル/Step5)の現在の視点を保存するを参照）
 
 あと，実行時エラーが出た場合は，エラーが出たところまではスクリプトは実行されていることになります．そのため，スクリプトを直して再実行する場合は，initializeを実行してから行ってください．Initializeは，以下のいずれかで行うことができます．
+
 GUI
 :   Menu "File"→"Initialize session"を実行する．
 
 Script
-:    qsys.cleanUpAll() を実行する．
+:   qsys.cleanUpAll() を実行する．

@@ -35,7 +35,7 @@ Control panelからシステムのプロパティを開き，詳細設定の環�
 
 *  ActivePerl [ページ](http://www.activestate.com/Products/ActivePerl/)
 *  ActivePython （GeckoSDKのIDL compilerで必要．Python2.7が動けば他のdistributionでも良い．）
-*  Inno Setup [ページ](http://www.jrsoftware.org/isdl.php)<br />
+*  Inno Setup [ページ](http://www.jrsoftware.org/isdl.php)<br/>
 Inno Setupだけではなく、preprocessorというのも入れる必要がある。全てがセットになったQuickStart Pack（ispack-5.X.XX.exe等）をinstallする。下記の環境変数変更の方法と同様にしてPATHをInnoSetupをインストールしたdirectoryに通しておく必要がある．
 
 *  Windows SDK v7.0というのもinstallしておく必要がある．
@@ -93,7 +93,7 @@ GUIのdialogが現れる。以下のmacroを定義する。
 
 *  BOOST_ROOT D:\boost\boost_1_57_0
 *  BOOST_LIBRARYDIR D:\boost\boost_1_57_0\lib32-msvc-12.0
-*  CGAL_DISABLE_GMP true<br />
+*  CGAL_DISABLE_GMP true<br/>
 (GMP/MPRFを使用しないように指定)
 
 *  (CMAKE_INSTALL_PREFIXは指定しなくてもOK)

@@ -65,6 +65,7 @@ editが終了したら，再度右上のボタンを押してedit modeを終了�
 
 
 以下の操作が可能になっています．
+
 Single finger scroll
 :   画面が回転します（PC版のマウス左ボタンドラッグと同様）
 
@@ -86,15 +87,14 @@ Double tap
 Long press
 :   画面上方にメニューが表示される
 
-
 #### Double tapメニュー
 分子中の原子がある位置をダブルタップ（二回一本指で軽くタップする）すると，以下のようなメニューが表示されます
+
 原子名
 :   原子名が表示されます．選択しても何も起こりません
 
 Center here
 :   文字通り，画面の中心がこの原子の位置に移動します
-
 
 
 ![mol-viewer-menu-1](../../assets/images/cuemol2/iOSCueMolViewer/mol-viewer-menu-1.png){ style="zoom: 0.5" .on-glb }

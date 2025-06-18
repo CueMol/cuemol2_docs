@@ -60,4 +60,3 @@ void hide ()
 #### isShown 
 ```
 boolean isShown ()
-```

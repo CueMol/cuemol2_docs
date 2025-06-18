@@ -101,12 +101,12 @@ MorphMol objectに保持されている座標データの編集をさらに行�
 Target MorphMolの項目で，上記で変換・作成した1TNDを選択します．
 
 MolAnim settingsにある他の設定項目の意味は以下の通りになります．
+
 Start value
 :   Morphing開始点の構造を指定する．0はMorphMolが有する構造リスト中の最初の構造になる．逆に，1は最後の構造になる．
 
 End value
 :   Morphing終了点の構造を指定する．1はMorphMolが有する構造リスト中の最後の構造になる．逆に，0は最初の構造になる．
-
 
 すなわち，Start value=1, End value=0にすると，逆方向の構造変化が起こることになります．
 
@@ -123,7 +123,14 @@ OKボタンを押すとanimation itemが追加され，Animation panelは下図�
 Chain Aについてリボン表示にし，さらに戻る構造変化（startValue=1→endValue=0）も追加すると，
 以下のようなアニメーションになります．
 
-#youtube(4RKA3VUVcPo,loop)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/4RKA3VUVcPo?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=4RKA3VUVcPo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                
 ### 注意点など
 #### 始点，終点等の分子構造の不一致
 変化の始点や終点，あるいは中間点の分子座標について，それぞれすべて対応する残基・原子が存在していない場合は，それらの原子はmorhping計算から除外されます．

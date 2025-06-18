@@ -46,16 +46,16 @@ Rendere作成後，アニメーションパネルの追加「＋」ボタンを�
 Common settingsの部分は，SimpleSpin等他のアニメーションと共通の設定項目です．
 
 Show/Hide settingsの部分は，Show/Hideアニメーションに特有の設定です．
-Target renderers
-:   表示非表示を制御する対象のrendererを選択します．複数選択が可能．<br />
 
+Target renderers
+:   表示非表示を制御する対象のrendererを選択します．複数選択が可能．~
 右の「＋」ボタンで追加できる．また，項目を選んで右の「−」ボタンを押すと削除できる．
+
 Show/Hide
 :   表示するか，非表示にするかの選択が可能．（Hideするつもりが，誤ってShowを選んでしまったとしても，ここでHideに切り替えることができる）
 
 Fade
 :   チェックを外すと，半透明にならず突然表示・非表示が切り替わる．
-
 
 この例では，以下のように設定を変更しています．
 
@@ -103,6 +103,7 @@ Rendere作成後，アニメーションパネルの追加「＋」ボタンを�
 Common settingsの部分は，SimpleSpin等他のアニメーションと共通の設定項目です．
 
 Slide in/out settingsの部分は，Slide in/outアニメーションに特有の設定です．
+
 Target renderers
 :   表示非表示を制御する対象のrendererを選択します．(Show/Hideの場合と同様)
 
@@ -114,7 +115,6 @@ Distance
 
 Show/Hide
 :   表示(slide in)するか，非表示(slide out)にするかの選択が可能．
-
 
 この例では，以下のように設定を変更しています．
 
@@ -149,4 +149,11 @@ Show/Hide
 ## アニメーションの再生
 Animation ribbonの再生ボタンを押すと，上記で作成したアニメーションが再生されます．
 以下のyoutube動画のようになるはずです．
-#youtube(pHL52i3kzxE)
+
+<iframe width="425" height="350" src="https://www.youtube.com/embed/pHL52i3kzxE?mute=1&controls=1&rel=0&playlist=pHL52i3kzxE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+                

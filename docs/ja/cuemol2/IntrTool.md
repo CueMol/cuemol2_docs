@@ -11,6 +11,7 @@
 ![intrtool_dlg2](../../assets/images/cuemol2/IntrTool/intrtool_dlg2.png){ style="zoom: 0.5" .on-glb }
 
 ダイアログの設定値の説明は，以下の通りです．
+
 Molecule
 :   相互作用を抽出する対象の分子を指定します．
 
@@ -19,8 +20,8 @@ Selection 1
 
 Selection 2
 :   上記moleculeのうち，Selection 1で指定した選択部分と，ここで指定した選択部分(Selection 2)にまたがった相互作用を抽出する．
-
 Defaultではcheck boxがoffになっていますが，onにすると，Selection2が有効になります．
+
 Min, Max distance
 :   相互作用を形成していると見做す最大・最小距離を指定する．
 
@@ -32,7 +33,6 @@ Hydrogen bond only
 
 Renderer
 :   相互作用を追加するatomintr rendererを指定する．デフォルトではmeasureになっている．(measureが無い場合は勝手に作られる)
-
 
 100個までの水素結合を抽出したいなら，デフォルトの設定でだいたいOKです．
 ただし，水素結合といっても相互作用の向きなどはまったく考慮されていないので注意．
@@ -59,17 +59,9 @@ Renderer
 さらに，Log windowに相互作用している可能性のある原子と距離の一覧が出力されます．
 ```
 Mol[1OX1.pdb] Atom contacts in 1.50 -- 3.50 Angstroms:
-```
-```
 B HOH 423 O <==> A TYR 39 OH : 3.35
-```
-```
 B ILE 6 N <==> A PHE 41 O : 3.24
-```
-```
 B GLN 9 NE2 <==> A HIS 57 O : 3.05
-```
-```
 ...
 ```
 

@@ -45,17 +45,17 @@ Sceneパネルで，measure2 (atomintr)の項目をダブルクリックする�
 
 これらの値を以下のように変更してください．
 
-*  Mode: 3D tube<br />
+*  Mode: 3D tube<br/>
 表示が線ではなく立体的なチューブ状になる
 
-*  Show label: off<br />
+*  Show label: off<br/>
 距離などの値が表示されなくなる
 
-*  Width: 0.1 Å<br />
+*  Width: 0.1 Å<br/>
 Simpleモードでは線幅はピクセル単位で指定されているが，3D tubeモードではチューブの半径をÅ単位で指定する．（このように小さな値にしなければ異様に太くなってしまう．）
 
 *  Color: cyan (直接cyanと入力してもよいし，Named colorで出てくる一覧から選んでもよい）
-*  Dashed line: dash 0.5, gap 0.7<br />
+*  Dashed line: dash 0.5, gap 0.7<br/>
 点線の，線分(dash)と間隙(gap)の長さをÅ単位で指定する．（この設定は3D tube modeのみ有効で，Simpleモードでは無視される）
 
 ダイアログ表示としては以下のようになります．

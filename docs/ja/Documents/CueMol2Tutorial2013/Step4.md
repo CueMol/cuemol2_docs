@@ -67,7 +67,7 @@ Molecular superposition dialogが現れます．
 
 *  AlgorithmをSecondary Structure Matchingに．
 *  Referenceの方のMoleculeを3UG9-AB.pdb (ChR)に
-*  Referenceの方のSelectionをc; A (A鎖のみ)にする．<br />
+*  Referenceの方のSelectionをc; A (A鎖のみ)にする．<br/>
 ChRにはchain A, Bの２分子含まれていますが，こうすることでchain Aのみが重ね合わせの対象になります．
 
 *  Movingの方のMoleculeを1IW6 (bR)に．
@@ -82,29 +82,13 @@ ChRにはchain A, Bの２分子含まれていますが，こうすることでc
 log windowに結果(rmsd, alignment等)が表示されます：
 ```
 ===== SSM superpose result =====
-```
-```
  Ref: 3UG9-AB, Mov: 1IW6
-```
-```
  RMSD: 2.139394 angstrom
-```
-```
  Nalgn: 200
-```
-```
  Ngaps: 6
-```
-```
  Rotation: 154.039064 degree
-```
-```
  Alignment:
-```
-```
  (以下alignment表示が続く)
-```
-```
  ...
 ```
 
@@ -173,15 +157,15 @@ ChRのCartoon表示の着色については，全体構造図のribbonと同じ�
 
 あるいは，Step3 (fig1_overall_3.qsc)からコピー・ペーストしてやると非常に簡単に同じ着色に設定することができます．
 
-*  **fig1の着色設定をコピーする**<br />
-まず，fig1_overall_3.qscのタブをクリックし（開いていないようならFile→Open sceneで開いておく），Colorパネルで3UG9-ABの着色設定を表示させます．<br />
-下のlistboxで全ての項目を選択し（一番上の項目をクリック→一番下の項目をshiftを押しながらclick），listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br />
+*  **fig1の着色設定をコピーする**<br/>
+まず，fig1_overall_3.qscのタブをクリックし（開いていないようならFile→Open sceneで開いておく），Colorパネルで3UG9-ABの着色設定を表示させます．<br/>
+下のlistboxで全ての項目を選択し（一番上の項目をクリック→一番下の項目をshiftを押しながらclick），listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br/>
 メニュー中からCopyを選ぶと設定がコピーされます．
 
-*  **fig2へ設定をペーストする**<br />
-fig2_superpose_1.qscのタブをクリックし，Colorパネルで3UG9-ABの着色設定を表示させます．<br />
-この状態ではlistboxは空になっているはずです．<br />
-listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br />
+*  **fig2へ設定をペーストする**<br/>
+fig2_superpose_1.qscのタブをクリックし，Colorパネルで3UG9-ABの着色設定を表示させます．<br/>
+この状態ではlistboxは空になっているはずです．<br/>
+listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br/>
 メニュー中からPasteを選ぶと設定がペーストされます．
 
 最終的には，Colorパネルは以下のようになります．
@@ -200,9 +184,9 @@ BRはほぼTMしかないので，色分けせずに単色で塗ることにし�
 
 選択はBR分子全体(*)なので，定義するほどでもないですが，一応定義します．
 
-SceneパネルでStylesを展開しcommon_styleの項目をdouble clickすると，Style editor dialogが表示されます．<br />
-Colorタブで新規項目を追加し，上記のBRの色定義を追加します．<br />
-さらに，Selectionタブで新規項目を追加し，上記のBRの選択定義を追加します．<br />
+SceneパネルでStylesを展開しcommon_styleの項目をdouble clickすると，Style editor dialogが表示されます．<br/>
+Colorタブで新規項目を追加し，上記のBRの色定義を追加します．<br/>
+さらに，Selectionタブで新規項目を追加し，上記のBRの選択定義を追加します．<br/>
 （詳しい方法は，[Step2 色と選択の定義](../../../Documents/CueMol2Tutorial2013/Step2)を参照してください）
 
 次に，定義された色と選択を使用して，paint coloringを設定します．
@@ -244,11 +228,11 @@ ChRの方は操作はStep3とほぼ同じなので，Step3を参照してくだ�
 
 あるいは，fig1_overall_3.qscのシーンの方からコピー・ペーストしてくると簡単にできます．
 
-*  **fig1からコピー**<br />
+*  **fig1からコピー**<br/>
 fig1_overall_3.qscのタブをクリックし，fig1のシーンを表示させます．Sceneパネルで分子3UG9-ABを展開して
 A鎖retinal（A Retinal(cpk)という項目）を右クリックし，context menuからcopyを選ぶ．
 
-*  **fig2へペースト**<br />
+*  **fig2へペースト**<br/>
 fig2_superpose_1.qscのタブをクリックし，fig2のシーンを表示させます．
 Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを選ぶと，A RetinalのCPK rendererがペーストされる．
 分子ビューにもretinalがピンク色で表示される．

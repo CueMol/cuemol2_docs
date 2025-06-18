@@ -91,7 +91,7 @@ methodを使用します．
 
 チュートリアルの[静電ポテンシャル表示](../../Documents/QScriptのチュートリアル/StepA5)と組み合わせて使用すると，以下のようになります．
 
-<pre>
+```
 $pwd = sys.getScriptPath();
 # 静電ポテンシャル読込み
 qobj.readObj("PhiMapReader",$pwd+"blm.pot","blmpot");
@@ -120,13 +120,14 @@ $mol.deselect();
 # 視点の設定等
 gfx.setCenter($r_blm.getCenter());
 gfx.updateView();
-</pre>
+```
 
 少々分かりにくいですが，上記スクリプト中の以下の部分で切断を行っています．
 ```
 molvis.cutSurfByPlane($surf, 5, vector(0,1,0), vector(35.31, 0.07, 31.33));
 ```
 以下でcutSurfByPlane()の引数を説明します．
+
 第1引数 $surf
 :   MolSurfオブジェクトを指定します．ここでは前行で$surfに読み込んだオブジェクトを代入していますので，それを指定しています．
 
@@ -139,7 +140,6 @@ molvis.cutSurfByPlane($surf, 5, vector(0,1,0), vector(35.31, 0.07, 31.33));
 第4引数 vector(35.31, 0.07, 31.33)
 :   切断面中の任意の一点を指定．この点を通り，第3引数を法線として持つような平面で切断される．
 
-
 上記のスクリプトを実行すると，以下のような図が生成されます．
 
 
@@ -151,7 +151,7 @@ molvis.cutSurfByPlane($surf, 5, vector(0,1,0), vector(35.31, 0.07, 31.33));
 例えば原子の位置を利用して指定するようにプログラムすることも出来ます
 （少々面倒ですが）．
 
-<pre>
+```
 $pwd = sys.getScriptPath();
 
 # リガンドのスティックモデル
@@ -188,13 +188,14 @@ $r_sf = $surf.createRend("r_sf", "molsurf");
 # 視点の設定等
 gfx.setCenter($r_blm.getCenter());
 gfx.updateView();
-</pre>
+```
 
 
 ![cbp_qs2](../../assets/images/Documents/SASCut/cbp_qs2.png){ .on-glb }
 
 
 このスクリプトでは，
+
 $atom1_pos
 :   残基1002の原子C47の位置(_.1002.C47)
 
@@ -203,7 +204,6 @@ $atom2_pos
 
 $atom3_pos
 :   残基1002の原子C46の位置(_.1002.C46)
-
 
 となっています．
 そして，二つのベクトル

@@ -255,15 +255,15 @@ POV-Ray Renderingダイアログが表示されます．
 このダイアログでは，以下の設定を変更（あるいは正しく設定されているか確認）します．
 
 *  Width, Heightを1200に設定
-*  DPIを600に設定<br />
+*  DPIを600に設定<br/>
 →図の印刷後サイズは2x2 inch (約5cm x 5cm)になる
 
 *  Stereoをnoneに設定
 *  Projectionをperspectiveに設定
-*  Clipping planeのcheckを外す<br />
+*  Clipping planeのcheckを外す<br/>
 （現在のシーンではslabでカットされている部分がないので）
 
-*  Post-render...のcheckを外す<br />
+*  Post-render...のcheckを外す<br/>
 （現在のシーンでは半透明の部分がないので）
 
 
