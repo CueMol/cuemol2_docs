@@ -43,7 +43,7 @@ Transp background
 :   背景色を透明にするかどうかを指定する．（ただし透明にするとFog効果がなくなる．またradiosity法使用時には透明には出来ない）
 
 Clipping plane
-:   現在分子ビューに表示されているslabによるclippingをpovray renderingにおいても再現するかどうかを指定する．~
+:   現在分子ビューに表示されているslabによるclippingをpovray renderingにおいても再現するかどうかを指定する．<br/>
 **Left**：Clipping plane off，**Right**：Clipping plane on<br/>
 ![povrender-clip0](../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip0.png){ style="zoom: 0.5" .on-glb }
 ![povrender-clip1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip1.png){ style="zoom: 0.5" .on-glb }
@@ -75,7 +75,7 @@ Lighting
 :   光源の設定を行う．詳しくは，[cuemol2/POVRayRenderLighting](../../cuemol2/POVRayRenderLighting)を参照．
 
 Shadow
-:   影が出るようにrenderingするかどうかを指定する．Defaultではoffになっている．~
+:   影が出るようにrenderingするかどうかを指定する．Defaultではoffになっている．<br/>
 **Left**：Shadow off，**Right**：Shadow on<br/>
 ![povrender-shadow0](../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow0.png){ style="zoom: 0.5" .on-glb }
 ![povrender-shadow1](../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow1.png){ style="zoom: 0.5" .on-glb }

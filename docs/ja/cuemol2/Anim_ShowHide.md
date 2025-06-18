@@ -48,7 +48,7 @@ Common settingsの部分は，SimpleSpin等他のアニメーションと共通�
 Show/Hide settingsの部分は，Show/Hideアニメーションに特有の設定です．
 
 Target renderers
-:   表示非表示を制御する対象のrendererを選択します．複数選択が可能．~
+:   表示非表示を制御する対象のrendererを選択します．複数選択が可能．<br/>
 右の「＋」ボタンで追加できる．また，項目を選んで右の「−」ボタンを押すと削除できる．
 
 Show/Hide

@@ -82,16 +82,16 @@ POV-Rayのドキュメントなどを参照してください．
 #include "metals.inc"
 #include "woods.inc"
 #include "stones.inc"
-
+```
+<!!!!!!>
+```
 #declare tex_of_hsc = texture {P_WoodGrain1B}
 #declare tex_of_ligand = texture {
 finish { ambient 0.10 diffuse 0.70 specular 0.60 roughness 0.01}
 }
 #declare tex_of_resid = texture {finish{F_MetalA}}
 #declare tex_of_map = texture {
-```
- finish {ambient 0.10 diffuse 0.78 specular 0.02 roughness 0.05 brilliance 1.50}}
-```
+  finish {ambient 0.10 diffuse 0.78 specular 0.02 roughness 0.05 brilliance 1.50}}
 ```
 これを"materials.inc"という名前で
 保存しておき，個々のpovファイルから参照するようにします．
@@ -128,19 +128,19 @@ tex_of_map
 指定されています．
 ```
 #declare _blm_ab_p_tex = texture {
-```
- normal {granite 0.0 scale 1.0}
- finish {
-  ambient 0.10
-  diffuse 0.70  brilliance 1.00
-  specular 0.30  roughness 0.0050
+  normal {granite 0.0 scale 1.0}
+  finish {
+   ambient 0.10
+   diffuse 0.70  brilliance 1.00
+   specular 0.30  roughness 0.0050
+  }
  }
-}
-```
 #declare _blm_ab_p_col0 = <0.501961,1.000000,1.000000,0.000000>;
 ...
 #declare _blm_ab_p_col5 = <1.000000,0.749020,0.501961,0.000000>;
-
+```
+<!!!!!!>
+```
 #declare _blm_ab_blm_tex = texture {
 ...
 ```
@@ -255,9 +255,7 @@ CueMolの出力したincファイルはどこからどこまでがどのレン�
 ```
 #declare _scene2 = #include "<スティックモデルのincファイル>"
 object{
-```
- _scene2
-```
+  _scene2
 }
 ```
 これでレンダリングすれば以下のように全部きちんと半透明になります．
@@ -291,9 +289,7 @@ gfx.writeScene("<出力したいファイル名>", "pov", {texblend=>true});
 ```
 #declare _blm_ab_p_tex = texture {
 ...
-```
-}
-```
+ }
 #declare _blm_ab_p_tex0 = texture{ _blm_ab_p_tex pigment{color rgb <0.501961,1.000000,1.000000>}};
 ...
 #declare _blm_ab_p_tex5 = texture{ _blm_ab_p_tex pigment{color rgb <1.000000,0.749020,0.501961>}};

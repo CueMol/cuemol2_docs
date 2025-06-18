@@ -15,8 +15,7 @@ GLSLのバージョン番号により以下の機能が使用できたり，で�
 
 例えば以下のようにOpenGLが4.2以上のバージョンであればすべての機能が使用できます．
 ```
-
-        *  OpenGL Info ---
+--- OpenGL Info ---
 Vendor:   ATI Technologies Inc.
 Renderer: AMD Radeon HD 7800 Series
 Version:

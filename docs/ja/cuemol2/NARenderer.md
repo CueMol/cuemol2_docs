@@ -28,19 +28,19 @@ basepair
 :   上図のような残基をstick状に表示するモード．(default)
 
 simple1
-:   basepair同様にstick状に表示されるが，baseとsugarのN-glycosyl bondのところで折れ曲がった形状になるモード．下図左がConnect base pair=on, 右がoffの状態での表示．~
+:   basepair同様にstick状に表示されるが，baseとsugarのN-glycosyl bondのところで折れ曲がった形状になるモード．下図左がConnect base pair=on, 右がoffの状態での表示．<br/>
 
 >![nucl-basetype-simple1-1](../../assets/images/cuemol2/NARenderer/nucl-basetype-simple1-1.png){ style="zoom: 0.75" .on-glb } ![nucl-basetype-simple1-2](../../assets/images/cuemol2/NARenderer/nucl-basetype-simple1-2.png){ style="zoom: 0.75" .on-glb }
 
 
 detail1
-:   Baseの部分が板状に表示されるモード．（Base pair形成による表示変化はない）~
+:   Baseの部分が板状に表示されるモード．（Base pair形成による表示変化はない）<br/>
 
 >![nucl-basetype-detail1](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail1.png){ style="zoom: 0.75" .on-glb } ![nucl-basetype-detail1-2](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail1-2.png){ style="zoom: 0.85" .on-glb }
 
 
 detail2
-:   detail1に加えて，riboseの部分も板状に表示されるモード．（Base pair形成による表示変化はない）~
+:   detail1に加えて，riboseの部分も板状に表示されるモード．（Base pair形成による表示変化はない）<br/>
 
 >![nucl-basetype-detail2](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail2.png){ style="zoom: 0.75" .on-glb } ![nucl-basetype-detail2-2](../../assets/images/cuemol2/NARenderer/nucl-basetype-detail2-2.png){ style="zoom: 0.85" .on-glb }
 

@@ -35,29 +35,29 @@ dataディレクトリにある，**queptl.top**に記述されています．
 例えばアラニンの場合は，
 ```
 RESIdue ALA
+ GROUp
+  ATOM N    TYPE=NH1   CHARge=-0.35   END
+  ATOM H    TYPE=H     CHARge= 0.25   END
+  ATOM CA   TYPE=CH1E  CHARge= 0.10   END
+  ATOM CB   TYPE=CH3E  CHARge= 0.00   END
+  ATOM C    TYPE=C     CHARge= 0.55   END  
+  ATOM O    TYPE=O     CHARge=-0.55   END  
 ```
-GROUp
- ATOM N    TYPE=NH1   CHARge=-0.35   END
- ATOM H    TYPE=H     CHARge= 0.25   END
- ATOM CA   TYPE=CH1E  CHARge= 0.10   END
- ATOM CB   TYPE=CH3E  CHARge= 0.00   END
- ATOM C    TYPE=C     CHARge= 0.55   END  
- ATOM O    TYPE=O     CHARge=-0.55   END  
+<!!!!!!>
 ```
-
+ BOND N    CA
+ BOND CA   C
+ BOND C    O
+ BOND N    H
+ BOND CA   CB
 ```
-BOND N    CA
-BOND CA   C
-BOND C    O
-BOND N    H
-BOND CA   CB
+<!!!!!!>
 ```
-
+ IMPRoper  CA     N    C  CB  !tetrahedral CA
 ```
-IMPRoper  CA     N    C  CB  !tetrahedral CA
+<!!!!!!>
+<!!!!!!>
 ```
-
-
 END {ALA}
 ```
 となっていますが，実際に重要なのは
@@ -69,11 +69,11 @@ END {ALA}
 ```
 !------------------------------------------------------------------
 ! Que's extension commands
-
+```
+<!!!!!!>
+```
 PropResid ALA
-```
- Pivot CA
-```
+  Pivot CA
 END
 ...
 ```
@@ -95,10 +95,8 @@ queptl.top内の**PropResid TYR**の部分をコピーして，
 残基名を**PTR**に変えるだけでＯＫです．
 ```
 PropResid PTR
-```
- Pivot CA
- Ring CG CD1 CE1 CZ CE2 CD2 END
-```
+  Pivot CA
+  Ring CG CD1 CE1 CZ CE2 CD2 END
 END
 ```
 Ringの部分は環状構造の原子を指定していますが，
@@ -128,42 +126,40 @@ queptl.top内の**RESIdue TYR**の部分をコピーして，ATOM, BOND定義の
 
 ```
 RESIdue PTR
-```
- ATOM N    TYPE=NH1   CHARge=-0.35   END
- ATOM H    TYPE=H     CHARge= 0.25   END
- ATOM CA   TYPE=CH1E  CHARge= 0.10   END
- ATOM CB   TYPE=CH2E  CHARge= 0.00   END
- ATOM CG   TYPE=CY    CHARge= 0.00   END
- ATOM CD1  TYPE=CR1E  CHARge= 0.00   END
- ATOM CE1  TYPE=CR1E  CHARge= 0.00   END
- ATOM CD2  TYPE=CR1E  CHARge= 0.00   END
- ATOM CE2  TYPE=CR1E  CHARge= 0.00   END
- ATOM CZ   TYPE=CY2   CHARge= 0.25   END
- ATOM OH   TYPE=OH1   CHARge=-0.65   END
- ATOM P    TYPE=H     CHARge= 0.40   END
- ATOM O1P    TYPE=H     CHARge= 0.40   END
- ATOM O2P    TYPE=H     CHARge= 0.40   END
- ATOM O3P    TYPE=H     CHARge= 0.40   END
- ATOM C    TYPE=C     CHARge= 0.55   END
- ATOM O    TYPE=O     CHARge=-0.55   END
-BOND N    CA
-BOND CA   C
-BOND C    O
-BOND N    H
-BOND CA   CB
-BOND CB   CG
-BOND CG   CD1
-BOND CG   CD2
-BOND CD1  CE1
-BOND CD2  CE2
-BOND CE1  CZ 
-BOND CE2  CZ
-BOND CZ   OH
-BOND OH   P
-BOND P    O1P
-BOND P    O2P
-BOND P    O3P
-```
+  ATOM N    TYPE=NH1   CHARge=-0.35   END
+  ATOM H    TYPE=H     CHARge= 0.25   END
+  ATOM CA   TYPE=CH1E  CHARge= 0.10   END
+  ATOM CB   TYPE=CH2E  CHARge= 0.00   END
+  ATOM CG   TYPE=CY    CHARge= 0.00   END
+  ATOM CD1  TYPE=CR1E  CHARge= 0.00   END
+  ATOM CE1  TYPE=CR1E  CHARge= 0.00   END
+  ATOM CD2  TYPE=CR1E  CHARge= 0.00   END
+  ATOM CE2  TYPE=CR1E  CHARge= 0.00   END
+  ATOM CZ   TYPE=CY2   CHARge= 0.25   END
+  ATOM OH   TYPE=OH1   CHARge=-0.65   END
+  ATOM P    TYPE=H     CHARge= 0.40   END
+  ATOM O1P    TYPE=H     CHARge= 0.40   END
+  ATOM O2P    TYPE=H     CHARge= 0.40   END
+  ATOM O3P    TYPE=H     CHARge= 0.40   END
+  ATOM C    TYPE=C     CHARge= 0.55   END
+  ATOM O    TYPE=O     CHARge=-0.55   END
+ BOND N    CA
+ BOND CA   C
+ BOND C    O
+ BOND N    H
+ BOND CA   CB
+ BOND CB   CG
+ BOND CG   CD1
+ BOND CG   CD2
+ BOND CD1  CE1
+ BOND CD2  CE2
+ BOND CE1  CZ 
+ BOND CE2  CZ
+ BOND CZ   OH
+ BOND OH   P
+ BOND P    O1P
+ BOND P    O2P
+ BOND P    O3P
 END
 ```
 追加する位置はどこでも良いですが，アミノ酸の最後(バリン)のあとにしておきます．

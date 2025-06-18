@@ -83,7 +83,7 @@ Start/End type
 
 
 Type
-:   断面の形状の種類を指定する．~
+:   断面の形状の種類を指定する．<br/>
 下図左から**Elliptical**（楕円形），**Rectangle**（四角），**Round rectangle**（角なし四角），**Fancy**（ダンベル型）<br/>
 ![10-prop-hsectype-oval-2](../../assets/images/cuemol2/RibbonRenderer/10-prop-hsectype-oval-2.png){ .on-glb }
 ![09-prop-hsectype-rect-2](../../assets/images/cuemol2/RibbonRenderer/09-prop-hsectype-rect-2.png){ .on-glb }
@@ -91,7 +91,7 @@ Type
 ![12-prop-hsectype-fancy-2](../../assets/images/cuemol2/RibbonRenderer/12-prop-hsectype-fancy-2.png){ .on-glb }
 
 Back color
-:   下図のようにヘリックスの内側の色を指定し変更できる．Offだと指定なしで内側も外側も同じ色になる．Defaultはoff．~
+:   下図のようにヘリックスの内側の色を指定し変更できる．Offだと指定なしで内側も外側も同じ色になる．Defaultはoff．<br/>
 ![13-prop-hsecbackcol](../../assets/images/cuemol2/RibbonRenderer/13-prop-hsecbackcol.png){ .on-glb }
 
 Width
@@ -101,7 +101,7 @@ Tuber
 :   ヘリックスの幅を指定．Widthの何倍にするかで指定する．
 
 Sharpness
-:   Typeにより意味が違ってくる．~
+:   Typeにより意味が違ってくる．<br/>
 **Type=Round rectangle**の場合は，長方形の角の取れ具合を指定する．1にするとほぼ角張った形状になるが，0に近いとより丸みを帯びた形状に．<br/>
 **Type=Fancy**の場合は，ダンベル型の両端の円の大きさを指定する．0に近い値にすると厚さが薄くなりより縁が際立った形状になるが（下図左;値=0），0.5に近づくとRound rectに近い形状になる（下図中央;値=0.5）．0.5以上にすると（説明は難しいが）下図右(値=0.75)のような形状になる．<br/>
 ![14-prop-hsecsha1](../../assets/images/cuemol2/RibbonRenderer/14-prop-hsecsha1.png){ .on-glb }
@@ -116,7 +116,7 @@ Smoothness
 
 
 Type
-:   形状の種類．~
+:   形状の種類．<br/>
 Round(滑らかに接続;下図左)，Flat(不連続;下図中央)，Arrow(矢型の形状;下図右)を指定する<br/>
 ![17-prop-hhead-type1](../../assets/images/cuemol2/RibbonRenderer/17-prop-hhead-type1.png){ .on-glb }
 ![18-prop-hhead-type2](../../assets/images/cuemol2/RibbonRenderer/18-prop-hhead-type2.png){ .on-glb }
@@ -125,7 +125,7 @@ Round(滑らかに接続;下図左)，Flat(不連続;下図中央)，Arrow(矢�
 Arrow関係の設定については，後述の「シートに関する設定 (Sheetタブ)」参照．
 
 Power
-:   接続の滑らかさを指定する．~
+:   接続の滑らかさを指定する．<br/>
 下図はTypeがroundの場合に，値を1, 1.5, 3と変化させた場合(roundの場合は1以下の値を指定しても意味がない)．<br/>
 ![20-prop-hhead-pow1](../../assets/images/cuemol2/RibbonRenderer/20-prop-hhead-pow1.png){ .on-glb }
 ![21-prop-hhead-pow2](../../assets/images/cuemol2/RibbonRenderer/21-prop-hhead-pow2.png){ .on-glb }
@@ -152,17 +152,17 @@ Arrow width
 
 
 Back color
-:   シートの場合は，裏面の色ではなく，側面の色が指定色に変化します．~
+:   シートの場合は，裏面の色ではなく，側面の色が指定色に変化します．<br/>
 ![29-prop-sheet-bkcol](../../assets/images/cuemol2/RibbonRenderer/29-prop-sheet-bkcol.png){ .on-glb }
 
 Smoothness
-:   シートの場合は，0にするとうねりすぎるのでdefaultは0.5になっています（伸びたβシートになる）．ただし，側鎖を表示する場合等は，0.5だと側鎖が浮いたようになってしまうので0に変更したほうが良い．~
+:   シートの場合は，0にするとうねりすぎるのでdefaultは0.5になっています（伸びたβシートになる）．ただし，側鎖を表示する場合等は，0.5だと側鎖が浮いたようになってしまうので0に変更したほうが良い．<br/>
 ![23-prop-shead-smo1](../../assets/images/cuemol2/RibbonRenderer/23-prop-shead-smo1.png){ .on-glb }
 ![24-prop-shead-smo2](../../assets/images/cuemol2/RibbonRenderer/24-prop-shead-smo2.png){ .on-glb }
 ![25-prop-shead-smo3](../../assets/images/cuemol2/RibbonRenderer/25-prop-shead-smo3.png){ .on-glb }
 
 Arrowの設定
-:   SheetHead設定にあるTypeをArrowにすると，βシートの先端が矢状になります（SheetTail(末端)を矢状にすることはほぼ無いでしょう）．~
+:   SheetHead設定にあるTypeをArrowにすると，βシートの先端が矢状になります（SheetTail(末端)を矢状にすることはほぼ無いでしょう）．<br/>
 この場合，SheetHead設定のPower値は矢の先端のとがり具合に影響します．下図右は0.5，中央は1，左は2の場合です．<br/>
 ![26-prop-shead-pow1](../../assets/images/cuemol2/RibbonRenderer/26-prop-shead-pow1.png){ .on-glb }
 ![27-prop-shead-pow2](../../assets/images/cuemol2/RibbonRenderer/27-prop-shead-pow2.png){ .on-glb }
@@ -172,7 +172,7 @@ Arrow width
 :   矢の先端部分の幅を指定します（下図参照）．100%にすると矢の幅はシート本体の幅の３倍になり，0%にすると幅はシート本体の幅と同じ（＝矢の先端部分なし）になります．
 
 Arrow height
-:   矢の先端部分の高さを指定します（下図参照）．値を減少させると矢の先端部の高さが減少します．~
+:   矢の先端部分の高さを指定します（下図参照）．値を減少させると矢の先端部の高さが減少します．<br/>
 ![30-prop-shead-arrow](../../assets/images/cuemol2/RibbonRenderer/30-prop-shead-arrow.png){ style="zoom: 0.5" .on-glb }
 
 ### コイルに関する設定 (Coilタブ)

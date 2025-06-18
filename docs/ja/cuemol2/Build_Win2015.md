@@ -120,14 +120,12 @@ D:\PROJ\CGAL-4.6.1\binに，DLLファイルが出来るので，これをD:\PROJ
 *  stubプロジェクトを、スタートアッププロジェクトに設定する。
 *  stubプロジェクトのプロパティーの、デバッグ項目で、コマンド引数に以下を追加する。
 ```
-
-* greapp <xulrunnerのbinディレクトリ> $(XULDeployDir)
+-greapp <xulrunnerのbinディレクトリ> $(XULDeployDir)
 ```
 
 以上で、xulrunnerのbinディレクトリは、xulrunner SDKのものを用いるなら、
 ```
-
-* greapp $(XULRunnerDir)\bin $(XULDeployDir)
+-greapp $(XULRunnerDir)\bin $(XULDeployDir)
 ```
 
 を指定すればよい。xulrunnerやmozilla内部もdebugしたい場合は、debug buildのxulrunnerがあるbin directoryを指定する。

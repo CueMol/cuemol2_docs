@@ -16,21 +16,29 @@
 ```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
-
+```
+<!!!!!!>
+```
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 $mol.select(se/chain A,B/);
 $r_p = $mol.createRend("protein", "tube");
 $mol.select(se/chain A/);
 molvis.paint($r_p, color.hsb(60, 0.3, 1.0));
 $mol.select(se/chain B/);
 molvis.paint($r_p, color.hsb(240, 0.3, 1.0));
-
+```
+<!!!!!!>
+```
 $mol.select(se/chain _/);
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
 $r_blm.setProp("bondw", 0.2);
-
+```
+<!!!!!!>
+```
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
@@ -88,9 +96,13 @@ gfx.updateView();
 ```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
-
+```
+<!!!!!!>
+```
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 $mol.select(%{chain A,B%});
 $r_p = $mol.createRend("protein", "tube");
 $r_p.setProp("coloring.default", color.hsb(60, 0.2, 1.0));
@@ -100,24 +112,27 @@ $mol.select(%{resn ASP, GLU%});
 molvis.paint($r_p, color.hsb(0, 0.4, 1.0));
 $mol.select(%{resn ASN, GLN, SER, THR, TYR%});
 molvis.paint($r_p, color.hsb(120, 0.4, 1.0));
-
+```
+<!!!!!!>
+```
 $mol.select(%{chain _%});
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
 $r_blm.setProp("bondw", 0.2);
-
+```
+<!!!!!!>
+```
 $mol.deselect();
 gfx.setCenter($r_p.getCenter());
 gfx.updateView();
 ```
 ### 説明
-```   
+<pre>   
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
 $mol.select(%{chain A,B%});
 $r_p = $mol.createRend("protein", "tube");
-```
 ↑前回と同じ．蛋白側の主鎖のtube表示を作成．
 
 ```

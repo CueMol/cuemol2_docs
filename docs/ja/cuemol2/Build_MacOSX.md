@@ -33,8 +33,7 @@ Universal binaryになるようにMacPortsを設定する必要がある．
 /opt/local/etc/macports/variants.conf
 ファイルに，
 ```
-
-1. universal
++universal
 ```
 という行を追加すれば，自動的に追加したようになるらしい．
 
@@ -67,18 +66,17 @@ buildはそのままで行うと64bitになってしまうので適切なオプ�
 #!/bin/sh
 instpath=$HOME/proj/boost
 ./bjam \
-
-    * prefix=$instpath \
-    * exec-prefix=$instpath \
-    * libdir=$instpath \
-    * includedir=$instpath \
-    * with-date_time \
-    * with-filesystem \
-    * with-iostreams \
-    * with-program_options \
-    * with-regex \
-    * with-system \
-    * with-thread \
+--prefix=$instpath \
+--exec-prefix=$instpath \
+--libdir=$instpath \
+--includedir=$instpath \
+--with-date_time \
+--with-filesystem \
+--with-iostreams \
+--with-program_options \
+--with-regex \
+--with-system \
+--with-thread \
 architecture=x86 address-model=32 link=shared,static threading=multi install
 ```
 
@@ -267,17 +265,15 @@ topdir=$HOME/src/povray-3.7-stable
 env NON_REDISTRIBUTABLE_BUILD=yes \
 CXXFLAGS=-Wno-parentheses-equality \
 ./configure \
-```
- COMPILED_BY="your name <email@address>" \
- --disable-debug \
- --disable-shared \
- --disable-io-restrictions \
- --with-boost=$boost_dir \
- --with-libpng=$topdir/libraries/png/lib \
- --with-zlib=$topdir/libraries/zlib/lib \
- --without-libjpeg \
- --without-libtiff \
-```
+  COMPILED_BY="your name <email@address>" \
+  --disable-debug \
+  --disable-shared \
+  --disable-io-restrictions \
+  --with-boost=$boost_dir \
+  --with-libpng=$topdir/libraries/png/lib \
+  --with-zlib=$topdir/libraries/zlib/lib \
+  --without-libjpeg \
+  --without-libtiff \
 ```
 
 makeを実行．

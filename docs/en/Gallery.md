@@ -9,7 +9,7 @@
 
 
 QSC file of these scenes
-:   Left: [EdgeLine2-1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/EdgeLine2-1.qsc),~
+:   Left: [EdgeLine2-1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/EdgeLine2-1.qsc),<br/>
 Right: [POT_alafos1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/POT_alafos1.qsc) and
 [POT_alafos1_styles.xml](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/POT_alafos1_styles.xml)
 (Save the qsc and xml files in the same folder!)

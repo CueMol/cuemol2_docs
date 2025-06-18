@@ -77,23 +77,21 @@ startup.qsファイル（インストール先ディレクトリーの，scripts
 ```
 # setup renderers for embedded control
 def setupMolForCtrl($molname) {
+    local $r, $r2;
+    $mol = qobj.getObj($molname);
+    $sel = se/resn ala,arg,asn,asp,cys,gln,glu,gly,his,hie,hid,hip,ile,leu,lys,met,mse,phe,pro,ser,thr,trp,tyr,val,gua,ade,uri,cyt,thy/;
+    $mol.select($sel);
+    $r = $mol.createRend("0", "trace");
 ```
-   local $r, $r2;
-   $mol = qobj.getObj($molname);
-   $sel = se/resn ala,arg,asn,asp,cys,gln,glu,gly,his,hie,hid,hip,ile,leu,lys,met,mse,phe,pro,ser,thr,trp,tyr,val,gua,ade,uri,cyt,thy/;
-   $mol.select($sel);
-   $r = $mol.createRend("0", "trace");
+<!!!!!!>
 ```
-
+    $mol.select(!$sel);
+    $r2 = $mol.createRend("1", "simple");
 ```
-   $mol.select(!$sel);
-   $r2 = $mol.createRend("1", "simple");
+<!!!!!!>
 ```
-
-```
-   gfx.setCenter($r.getCenter());
-   gfx.updateView();
-```
+    gfx.setCenter($r.getCenter());
+    gfx.updateView();
 }
 ```
 
@@ -154,10 +152,8 @@ width, heightでHTML上でのピクセル単位の大きさを指定します．
 一方，objectタグを使う場合は，以下のようにします．
 ```
 <object id="MolView" width=300 height=300
-```
- classid="CLSID:32FF27E1-3414-42E4-A351-36C4499DAA65">
- <param name="src" value="http://www.rcsb.org/pdb/cgi/export.cgi?format=PDB&pdbId=1PDB&compression=None">
-```
+  classid="CLSID:32FF27E1-3414-42E4-A351-36C4499DAA65">
+  <param name="src" value="http://www.rcsb.org/pdb/cgi/export.cgi?format=PDB&pdbId=1PDB&compression=None">
 </object>
 ```
 idはコントロールの名前で，ページ中のjavascript等からこのコントロールを

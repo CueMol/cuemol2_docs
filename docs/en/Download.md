@@ -70,7 +70,7 @@ cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol co cuemol
 ### Other softwares
 
 Modified X11 driver for SGI dialbox
-:   [download](http://cuemol.sourceforge.jp/misc/sg_dialbox/dialbox-fix-4.0.1.tar.gz)~
+:   [download](http://cuemol.sourceforge.jp/misc/sg_dialbox/dialbox-fix-4.0.1.tar.gz)<br/>
 (I tested this driver with X11 version 4.0.1.)
 
 CCD2IP (conversion tool for X-ray diffraction images)

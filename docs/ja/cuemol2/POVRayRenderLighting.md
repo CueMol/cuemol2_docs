@@ -27,21 +27,21 @@ Ambient light
 ### Raytracing法の場合
 
 Shadow
-:   Onにすると，視線の右斜め後ろからスポットライトで照らしたような影が出るようになる．（左off, 右on）~
+:   Onにすると，視線の右斜め後ろからスポットライトで照らしたような影が出るようになる．（左off, 右on）<br/>
 ![raytr-light1](../../assets/images/cuemol2/POVRayRenderLighting/raytr-light1.png){ .on-glb }　![raytr-light2](../../assets/images/cuemol2/POVRayRenderLighting/raytr-light2.png){ .on-glb }
 
 Use default settings
 :   光源の設定をdefaultでrenderingします．通常はこれで十分ですが，明るくしたいあるいは暗くしたい場合はcheckを外して，後述の設定値を変更します．
 
 Spread
-:   Shadowを作るspot lightの広がりを指定する．1では完全な点光源となりはっきりとした影が出るようになるが，増やすと光源が広がり，影がソフトになる．最大値10ではほとんど影の輪郭が分からなくなる．Spreadを2以上に設定すると，陰影の計算が複雑になるためrenderingに時間がかかるようになる．まずは1で試して必要に応じて最終画像を作成する際に増加させたほうが良い．下図はspread=3の場合．~
+:   Shadowを作るspot lightの広がりを指定する．1では完全な点光源となりはっきりとした影が出るようになるが，増やすと光源が広がり，影がソフトになる．最大値10ではほとんど影の輪郭が分からなくなる．Spreadを2以上に設定すると，陰影の計算が複雑になるためrenderingに時間がかかるようになる．まずは1で試して必要に応じて最終画像を作成する際に増加させたほうが良い．下図はspread=3の場合．<br/>
 ![raytr-light3](../../assets/images/cuemol2/POVRayRenderLighting/raytr-light3.png){ .on-glb }
 
 Intensity
 :   全体としての光量を指定する．大きいほうが明るくなる．
 
 Flash fraction
-:   上記のIntensityのうち，Flash lightが占める割合を指定する．この値を大きくすると暗闇でフラッシュをたいて撮影した写真のような感じになる．（左：Flash fraction=1.0，右：Flash fraction=0.0）~
+:   上記のIntensityのうち，Flash lightが占める割合を指定する．この値を大きくすると暗闇でフラッシュをたいて撮影した写真のような感じになる．（左：Flash fraction=1.0，右：Flash fraction=0.0）<br/>
 ![raytr-light4-flash1](../../assets/images/cuemol2/POVRayRenderLighting/raytr-light4-flash1.png){ .on-glb }　![raytr-light4-flash0](../../assets/images/cuemol2/POVRayRenderLighting/raytr-light4-flash0.png){ .on-glb }
 
 ちなみに，Raytracing法の場合は，shadowをon/offにする，あるいはspreadを１以上にする，以外はあまり設定をdefaultから変更しなくても適当な明るさの画像が出来るようです．<br/>
@@ -50,26 +50,26 @@ Flash fraction
 ### Radiosity法の場合
 
 Shadow
-:   Onにすると，視線の右斜め後ろからスポットライトで照らしたような影が出るようになる．影をつけたほうが立体感が出るが，下図のような構図では暗くなりすぎる傾向がある（左off, 右on）~
+:   Onにすると，視線の右斜め後ろからスポットライトで照らしたような影が出るようになる．影をつけたほうが立体感が出るが，下図のような構図では暗くなりすぎる傾向がある（左off, 右on）<br/>
 ![radio-light1-default](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-default.png){ .on-glb }　![radio-light1-shadow1](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-shadow1.png){ .on-glb }
 
 Use default settings
 :   光源の設定をdefaultでrenderingします．通常はこれで十分ですが，明るくしたいあるいは暗くしたい場合はcheckを外して，後述の設定値を変更します．
 
 Spread
-:   Shadowを作るspot lightの広がりを指定する．1では完全な点光源となりはっきりとした影が出るようになるが，増やすと光源が広がり，影がソフトになる．最大値10ではほとんど影の輪郭が分からなくなる．Spreadを2以上に設定すると，陰影の計算が複雑になるためrenderingに時間がかかるようになる．まずは1で試して必要に応じて最終画像を作成する際に増加させたほうが良い．下図はspread=3の場合．~
+:   Shadowを作るspot lightの広がりを指定する．1では完全な点光源となりはっきりとした影が出るようになるが，増やすと光源が広がり，影がソフトになる．最大値10ではほとんど影の輪郭が分からなくなる．Spreadを2以上に設定すると，陰影の計算が複雑になるためrenderingに時間がかかるようになる．まずは1で試して必要に応じて最終画像を作成する際に増加させたほうが良い．下図はspread=3の場合．<br/>
 ![radio-light1-shadow3](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-shadow3.png){ .on-glb }
 
 Intensity
 :   全体としての光量を指定する．大きいほうが明るくなる．
 
 Flash fraction
-:   上記のIntensityのうち，Flash lightが占める割合を指定する．この値を大きくすると暗闇でフラッシュをたいて撮影した写真のような感じになる．（左：Flash fraction=1.0，右：Flash fraction=0.5）~
+:   上記のIntensityのうち，Flash lightが占める割合を指定する．この値を大きくすると暗闇でフラッシュをたいて撮影した写真のような感じになる．（左：Flash fraction=1.0，右：Flash fraction=0.5）<br/>
 ![radio-light1-flash1](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-flash1.png){ .on-glb }　![radio-light1-flash0.5](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-flash0.5.png){ .on-glb }<br/>
 上図からわかるように，Flash fractionを増やすとambient lightの効果が分かりにくくなってしまい，結局raytracing法で作成した画像と大して変わらない奥行き感がない画像になってしまうので注意．
 
 Ambient fraction
-:   Ambient lightの光量の割合を指定する．具体的には，上記Flash light以外の光量(=Intensity*(1-Flash fraction))のうち，何割をambient lightにするかを指定する（具体的にはAmbient光量=Intensity*(1-Flash fraction)*Ambient fraction）．Ambient fractionを減らすとradiosity法を使っている意味がなくなってしまうので減らしすぎ内容が良いだろう．~
+:   Ambient lightの光量の割合を指定する．具体的には，上記Flash light以外の光量(=Intensity*(1-Flash fraction))のうち，何割をambient lightにするかを指定する（具体的にはAmbient光量=Intensity*(1-Flash fraction)*Ambient fraction）．Ambient fractionを減らすとradiosity法を使っている意味がなくなってしまうので減らしすぎ内容が良いだろう．<br/>
 （左：Ambient fraction=1.0，右：Ambient fraction=0）<br/>
 ![radio-light1-ambient1](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-ambient1.png){ .on-glb }　![radio-light1-ambient0](../../assets/images/cuemol2/POVRayRenderLighting/radio-light1-ambient0.png){ .on-glb }
 

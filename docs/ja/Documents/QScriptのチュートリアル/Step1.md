@@ -25,14 +25,20 @@ perl:PHP:java=7:2:1
 ```
 01: qsys.cleanUpAll();
 02: $pwd = sys.getScriptPath();
-
+```
+<!!!!!!>
+```
 03: $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 05: $mol.select(se/resi 1001/);
 06: $r_blm = $mol.createRend("blm", "ballstick");
 07: $r_blm.setProp("sphr", 0.2);
 08: $r_blm.setProp("bondw", 0.2);
-
+```
+<!!!!!!>
+```
 09: $mol.deselect();
 10: gfx.setCenter($r_blm.getCenter());
 11: gfx.updateView();
@@ -124,7 +130,9 @@ qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
  
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 $mol.select(se/resi 1001/);
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
@@ -196,9 +204,13 @@ HSBモデルの表現(Hue, Saturation, Brightness)では，Hueは0度(=360度; �
 ```
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
-
+```
+<!!!!!!>
+```
 $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 $mol.select(se/resi 1001/);
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
@@ -214,15 +226,13 @@ gfx.updateView();
 
 ### 説明
 ```
-```
-qsys.cleanUpAll();
-$pwd = sys.getScriptPath();
-$mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
-$mol.select(se/resi 1001/);
-$r_blm = $mol.createRend("blm", "ballstick");
-$r_blm.setProp("sphr", 0.2);
-$r_blm.setProp("bondw", 0.2);
-```
+ qsys.cleanUpAll();
+ $pwd = sys.getScriptPath();
+ $mol = readPDB($pwd+"blm_ab.pdb","blm_ab");
+ $mol.select(se/resi 1001/);
+ $r_blm = $mol.createRend("blm", "ballstick");
+ $r_blm.setProp("sphr", 0.2);
+ $r_blm.setProp("bondw", 0.2);
 ```
 ↑前回と同じ．
 

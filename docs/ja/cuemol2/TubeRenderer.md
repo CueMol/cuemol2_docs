@@ -23,7 +23,7 @@ Detail
 :   断面のポリゴン分割数を指定する．大きい値を指定するほど細かく分割されて表示がきれいになるが，描画スピードは低下する．Rendering後の画像で角ばったように見える場合は，後述Axial detailとともに増加させると解消される．
 
 Width1, Width2
-:   Tubeの太さをÅ単位で指定する．Width1で横方向，Width2で縦方向の長さ(半径)を指定する．~
+:   Tubeの太さをÅ単位で指定する．Width1で横方向，Width2で縦方向の長さ(半径)を指定する．<br/>
 左はWidth1 (0.5 Å)>Width2 (0.1 Å)，右はWidth1 (0.1 Å)<Width2 (0.5 Å)の場合．(Typeはelliptical)<br/>
 ![tube-width-sample1](../../assets/images/cuemol2/TubeRenderer/tube-width-sample1.png){ style="zoom: 0.5" .on-glb }　![tube-width-sample2](../../assets/images/cuemol2/TubeRenderer/tube-width-sample2.png){ style="zoom: 0.5" .on-glb }
 

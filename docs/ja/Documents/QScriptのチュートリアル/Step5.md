@@ -36,14 +36,10 @@ viewファイル以外を他の場所に移してしまった場合にいちい�
 
 ```
 try {
-```
- sys.exec($pwd+"blm_intr.view");
-```
+  sys.exec($pwd+"blm_intr.view");
 }
 catch {
-```
- gfx.setCenter($r_g1.getCenter());
-```
+  gfx.setCenter($r_g1.getCenter());
 }
 ```
 

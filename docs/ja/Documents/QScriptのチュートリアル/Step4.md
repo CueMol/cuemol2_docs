@@ -15,20 +15,28 @@
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab_nosec.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 sys.exec($pwd+"2ndry.qs");
 $mol.select($helix & se/chain A,B/);
 $mol.setProp("secondary", "helix");
 $mol.select($sheet & se/chain A,B/);
 $mol.setProp("secondary", "sheet");
-
+```
+<!!!!!!>
+```
 $a_col = color.hsb(0, 0.3, 1.0);
 $b_col = color.hsb(180, 0.3, 1.0);
-
+```
+<!!!!!!>
+```
 $mol.select(se/chain A/);
 $r_p = $mol.createRend("p", "ribbon");
 molvis.paint($r_p, $a_col);
-
+```
+<!!!!!!>
+```
 $r_p.setProp("helix.width", 0.3);
 $r_p.setProp("helix.tuber", 5.0);
 $r_p.setProp("sheet.type", 1);
@@ -40,30 +48,40 @@ $r_p.setProp("sheet_tail.type", 0);
 $r_p.setProp("sheet_tail.gamma", 4.0);
 $r_p.setProp("sheet_head.type", 1);
 $r_p.setProp("sheet_head.gamma", 1.5);
-
+```
+<!!!!!!>
+```
 $mol.select(se/_.1001.*/);
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.35);
 $r_blm.setProp("bondw", 0.3);
-
+```
+<!!!!!!>
+```
 $mol.select(se/A.59,61,111,115.*/);
 $r_inta = $mol.createRend("inta", "ballstick");
 $r_inta.setProp("sphr", 0.2);
 $r_inta.setProp("bondw", 0.2);
 $r_inta.setProp("coloring.col_C", $a_col);
-
+```
+<!!!!!!>
+```
 $g1 = qobj.createObj("GeomObj", "g1");
 $r_g1 = $g1.createRend("line", "geomline");
 drawBondSel($g1, $mol, se/_.1001.O4/, $mol, se/A.115.NH2/);
 drawBondSel($g1, $mol, se/_.1001.ND/, $mol, se/A.61.OG/);
 drawBondSel($g1, $mol, se/_.1001.ND/, $mol, se/A.59.O/);
 drawBondSel($g1, $mol, se/_.1001.NF/, $mol, se/A.111.O/);
-
+```
+<!!!!!!>
+```
 $r_g1.setProp("linew", 0.1);
 $r_g1.setProp("stipple_0", 0.2);
 $r_g1.setProp("stipple_1", 0.4);
 $r_g1.setProp("color", color(1,0.75,0.5));
-
+```
+<!!!!!!>
+```
 $mol.deselect();
 gfx.setCenter($r_g1.getCenter());
 gfx.updateView();
@@ -74,20 +92,28 @@ gfx.updateView();
 qsys.cleanUpAll();
 $pwd = sys.getScriptPath();
 $mol = readPDB($pwd+"blm_ab_nosec.pdb","blm_ab");
-
+```
+<!!!!!!>
+```
 sys.exec($pwd+"2ndry.qs");
 $mol.select($helix & se/chain A,B/);
 $mol.setProp("secondary", "helix");
 $mol.select($sheet & se/chain A,B/);
 $mol.setProp("secondary", "sheet");
-
+```
+<!!!!!!>
+```
 $a_col = color.hsb(0, 0.3, 1.0);
 $b_col = color.hsb(180, 0.3, 1.0);
-
+```
+<!!!!!!>
+```
 $mol.select(se/chain A/);
 $r_p = $mol.createRend("p", "ribbon");
 molvis.paint($r_p, $a_col);
-
+```
+<!!!!!!>
+```
 $r_p.setProp("helix.width", 0.3);
 $r_p.setProp("helix.tuber", 5.0);
 $r_p.setProp("sheet.type", 1);

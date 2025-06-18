@@ -64,7 +64,7 @@ Object階層の構成
 
 
 ObjTable
-:   uid→ObjectのHashテーブル．uidはobjectが出来た順にグローバルに付けられるので，実質的にはリストになる．~
+:   uid→ObjectのHashテーブル．uidはobjectが出来た順にグローバルに付けられるので，実質的にはリストになる．<br/>
 基本的にSceneを構成するcollection objectはこれを用いる．Sceneなどでは，object nameはユーザに見えるヒントでしかないので，同一名前が存在することを許す．<br/>
 派生クラスの実装で，名前でソートしたり，同一名を排除したり，別の基準でobjectの順序・存在を制御出来るようにする．<br/>
 ObjTableはinterfaceで，insert(データの追加)，get(uidからobjectの取得), getAllUIDs(全UIDの集合を取得)の３つからなる．
@@ -75,7 +75,7 @@ ObjTableはinterfaceで，insert(データの追加)，get(uidからobjectの取
 XMLによるPropertyの表現
 
 Attributeによる表現
-:   XMLのattrによってあらわすため，文字列になる．~
+:   XMLのattrによってあらわすため，文字列になる．<br/>
 数値・文字列の場合は自明．<br/>
 色，shadingなど，さらに構造を持つ記述は独自のMarkupが必要になる．（色以外は対応する必要が無いだろう）<br/>
 HTMLのように，JSで記述することも必要．（ただ，HTMLのonXXXプロパティでは，JSの評価値がattrとして設定されるのではなく，文字列をJSとしてcompileしたcodeletが設定される仕様である．この違いをどうするか？）<br/>
@@ -85,7 +85,7 @@ string toString() constでサポートする．個別実装はこの下に隠蔽
 
 
 Children tagによる表現
-:   そのelementの子element(tag)に記述する．~
+:   そのelementの子element(tag)に記述する．<br/>
 数値・文字列の場合は冗長になる．<br/>
 色，shadingなどの構造もXMLによりMarkupできる．<br/>
 

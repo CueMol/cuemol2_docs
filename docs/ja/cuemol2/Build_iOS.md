@@ -63,13 +63,11 @@ date_time thread system filesystem
 
 あと、default visibilityがhiddenになっていると他とlinkしたときに警告が出まくるので、defaultにする。
 ```
-
-* fvisibility=hidden -fvisibility-inlines-hidden
+-fvisibility=hidden -fvisibility-inlines-hidden
 ```
 を
 ```
-
-* fvisibility=default
+-fvisibility=default
 ```
 に書き換えたり戻したりいろいろいじくっているうちに警告は出なくなった。（なんで１回で行かなかったかは謎）
 

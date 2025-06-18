@@ -137,9 +137,13 @@ CueMolコントロールにキー入力が取られてしまい，
 $r_blm = $mol.createRend("blm", "ballstick");
 $r_blm.setProp("sphr", 0.2);
 $r_blm.setProp("bondw", 0.2);
-
+```
+<!!!!!!>
+```
 $mol.showAtomLabel(se/_.1001.S53/, "mylabel1");
-
+```
+<!!!!!!>
+```
 gfx.setCenter($r_p.getCenter());
 ```
 
@@ -169,11 +173,15 @@ showAtomLabel()メソッドの引数・使用方法は以下のとおりです�
 ```
 ... (省略) ...
 $r_blm.setProp("bondw", 0.2);
-
+```
+<!!!!!!>
+```
 $rlabel = $mol.createRend("mylabel1", "*namelabel");
 $rlabel.setProp("maxlabel", 100);
 $mol.showAtomLabel(se/_.1001.*/, "mylabel1");
-
+```
+<!!!!!!>
+```
 gfx.setCenter($r_p.getCenter());
 ```
 この例のように変更して実行すれば，残基番号1001の残基の原子

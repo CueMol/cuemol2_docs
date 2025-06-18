@@ -72,7 +72,7 @@ git clone https://github.com/CueMol/cuemol2.git cuemol2
 ### Other softwares
 
 Modified X11 driver for SGI dialbox
-:   [download](http://cuemol.sourceforge.jp/misc/sg_dialbox/dialbox-fix-4.0.1.tar.gz)~
+:   [download](http://cuemol.sourceforge.jp/misc/sg_dialbox/dialbox-fix-4.0.1.tar.gz)<br/>
 (X11の4.0.1でしか試していません)
 
 CCD2IP (conversion tool for X-ray diffraction images)

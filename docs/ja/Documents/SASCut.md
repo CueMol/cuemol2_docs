@@ -153,7 +153,9 @@ molvis.cutSurfByPlane($surf, 5, vector(0,1,0), vector(35.31, 0.07, 31.33));
 
 ```
 $pwd = sys.getScriptPath();
-
+```
+<!!!!!!>
+```
 # リガンドのスティックモデル
 $mol = readPDB("$pwd/blm_ab_nosec.pdb","blm_ab");
 $mol.select(se/resn blm/);
@@ -161,30 +163,42 @@ $r_blm = $mol.createRend("r_blm", "ballstick");
 $r_blm.setProp("sphr", 0.1);
 $r_blm.setProp("bondw", 0.1);
 $mol.deselect();
-
+```
+<!!!!!!>
+```
 # MSMSファイル読込み
 $surf = readMSMS($pwd+"blm.face", "surf");
-
+```
+<!!!!!!>
+```
 # 3点を指定
 $atom1_sel = se/_.1002.C47/;
 $atom2_sel = se/_.1002.S46/;
 $atom3_sel = se/_.1002.C46/;
-
+```
+<!!!!!!>
+```
 $mol.select($atom1_sel);
 $atom1_pos = $mol.getCenter();
 $mol.select($atom2_sel);
 $atom2_pos = $mol.getCenter();
 $mol.select($atom3_sel);
 $atom3_pos = $mol.getCenter();
-
+```
+<!!!!!!>
+```
 # 法線を計算
 $normal = ($atom1_pos-$atom2_pos)**($atom3_pos-$atom2_pos);
 # カット実行
 molvis.cutSurfByPlane($surf, 5, $normal, $atom2_pos);
-
+```
+<!!!!!!>
+```
 # molsurfレンダラーを作成
 $r_sf = $surf.createRend("r_sf", "molsurf");
-
+```
+<!!!!!!>
+```
 # 視点の設定等
 gfx.setCenter($r_blm.getCenter());
 gfx.updateView();

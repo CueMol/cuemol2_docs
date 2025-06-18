@@ -121,14 +121,12 @@ git clone git@github.com:CueMol/cuemol2.git cuemol2
 *  stubプロジェクトを、スタートアッププロジェクトに設定する。
 *  stubプロジェクトのプロパティーの、デバッグ項目で、コマンド引数に以下を追加する。
 ```
-
-* greapp <xulrunnerのbinディレクトリ> $(XULDeployDir)
+-greapp <xulrunnerのbinディレクトリ> $(XULDeployDir)
 ```
 
 以上で、xulrunnerのbinディレクトリは、xulrunner SDKのものを用いるなら、
 ```
-
-* greapp $(XULRunnerDir)\bin $(XULDeployDir)
+-greapp $(XULRunnerDir)\bin $(XULDeployDir)
 ```
 
 を指定すればよい。xulrunnerやmozilla内部もdebugしたい場合は、debug buildのxulrunnerがあるbin directoryを指定する。

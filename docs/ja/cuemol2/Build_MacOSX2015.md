@@ -54,18 +54,17 @@ bootstrap.shを実行→bjamができる。
 #!/bin/sh
 instpath=$HOME/proj64/boost_1_57
 ./bjam \
-
-    * prefix=$instpath \
-    * exec-prefix=$instpath \
-    * libdir=$instpath \
-    * includedir=$instpath \
-    * with-date_time \
-    * with-filesystem \
-    * with-iostreams \
-    * with-program_options \
-    * with-regex \
-    * with-system \
-    * with-thread \
+--prefix=$instpath \
+--exec-prefix=$instpath \
+--libdir=$instpath \
+--includedir=$instpath \
+--with-date_time \
+--with-filesystem \
+--with-iostreams \
+--with-program_options \
+--with-regex \
+--with-system \
+--with-thread \
 architecture=x86 address-model=64 link=shared,static threading=multi install
 ```
 

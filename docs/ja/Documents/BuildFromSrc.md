@@ -180,49 +180,48 @@ cuemol/src以下で以下のコマンドを実行する。
 ./configure --with-icc[=options] --disable-debug --prefix=<install先指定> --with-modules=<moduleを列挙> [--with-db=no]
 ```
 
---with-icc
+    * with-icc
 :   Intel C Compilerを使用する場合. optionsでicc/icpcへわたすoptionを指定できる。
 
---disable-debug
+    * disable-debug
 :   デバッグ表示をしない（通常デバッグしない場合は指定する）
 
---prefix
+    * prefix
 :   インストール先を指定する。指定しないと/usr/localになる。
 
---with-modules
-:   ビルドするモジュールをカンマで区切って指定する。以下が指定可能。指定しないと、molstrのみ指定したことになる。~
+    * with-modules
+:   ビルドするモジュールをカンマで区切って指定する。以下が指定可能。指定しないと、molstrのみ指定したことになる。<br/>
 
     *  molstr
     *  molvis
     *  denmap
     *  symm
 
---with-db=no
+    * with-db=no
 :   BerkeleyDBを使用しない場合に指定する．
 
 #### Intel compilerを使用する場合
 例えば**--with-icc**に以下のオプションを指定する
 ```
-
-    * with-icc="-ip -O3 -Ob2 -xW -tpp7 -static -cxxlib-icc"
+--with-icc="-ip -O3 -Ob2 -xW -tpp7 -static -cxxlib-icc"
 ```
 
--ip
+* ip
 :   Procedure間最適化
 
--O3
+* O3
 :   最大限の最適化
 
--xW
+* xW
 :   Pen4ファミリーでしか実行できないコード生成(他のプロセサで実行する場合は変更する必要あり)
 
--tpp7
+* tpp7
 :   Pen4ファミリーの命令セットを使用した最適化
 
--static
+* static
 :   スタティックリンク
 
--cxxlib-icc
+* cxxlib-icc
 :   icc/icpc付属のC++ standard libraryを使用する
 
 

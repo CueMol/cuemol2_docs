@@ -71,7 +71,7 @@ XxxClass_wrap.hpp
 :   ラッパークラスXxxClass_wrapのクラス定義ファイル。
 
 XxxClass_wrap.cpp
-:   ラッパークラスXxxClass_wrapのクラス実装ファイル。~
+:   ラッパークラスXxxClass_wrapのクラス実装ファイル。<br/>
 主に、dispatch intefaceとnative呼び出しの変換機構。<br/>
 XxxClass自体のメタクラスや、(cloneableの場合は)clone()の実装なども含まれる。
 
@@ -100,13 +100,13 @@ variant型は，以下の6種類の値を持ちうる．
 Objectに関しては、コピー時の振る舞いにより3+1種類存在
 
 SimpleCopy (LSimpleCopyScrObject)
-:   コピー時には必ずコピーが起こる。ポインターの共有は絶対に起こらない。LCloneableObjectから派生~
+:   コピー時には必ずコピーが起こる。ポインターの共有は絶対に起こらない。LCloneableObjectから派生<br/>
 ただし、内部REPでポインター共有・Ref countingは可能。<br/>
 String, Vector系, Color系など汎用型は内部REP共有型で実装すべき。<br/>
 Scriptableスマートポインタqlib::LScrSp<_Type>も見かけ上はSimpleCopyになる。ただし、わかりにくくなるが、copy()やclone()で実体のdeepコピーは行われない。
 
 RefCount (LRefCountScrObject)
-:   **これは現時点では使用しない予定。**~
+:   **これは現時点では使用しない予定。**<br/>
 SimpleCopyインターフェイスを実装した、SmartPtrを作成したので不要となったため。
 コピー時にはポインターのみコピーされ、参照カウントされる。LRcObjectから派生。<br/>
 LRcObjectは生成時参照数0だが、LRefCountScrObjectでは１である。これは、copy()メソッドの他ポリシー型との整合性のため。生成時にはnew呼び出し側により自動的に参照されると考える。
@@ -121,13 +121,13 @@ Sinleton (LSingletonScrObject)
 typelibから呼び出す形式と，automationの形式がある．以下，プロパティー名をXXXとすると，
 
 dispatch形式
-:   bool getPropImpl(const LString &propname, LVariant &res) const~
+:   bool getPropImpl(const LString &propname, LVariant &res) const<br/>
 bool setPropImpl(const LString &propname, const LVariant &res)<br/>
 というシグネチャを持つ．全プロパティーで共通のインターフェイス．(XPConnectなしの)JSやNPRuntime, 他のinterpreter言語から呼び出すのに適している．パフォーマンスが悪い．<br/>
 デフォルトでは，superclassのプロパティも検索する．一致するプロパティが見つからない場合はfalseを返す．型が一致しない場合（setter）も，falseを返す．例外は，エラー時以外は私用しない．
 
 typelib形式
-:   void getXXXPropImpl(LVariant &) const~
+:   void getXXXPropImpl(LVariant &) const<br/>
 bool setXXXPropImpl(const LVariant &)<br/>
 というシグネチャを持つ．各プロパティーごとにメソッドがある．XPCOMやCOMなどから呼び出すのに適している．パフォーマンスは前者より良い筈．<br/>
 getterについては，型にかかわらずLVariantに格納されるので，（例外発生以外の）失敗は無いと考える（だから返却値がvoid）．<br/>
@@ -156,7 +156,7 @@ X.Y.Z = 1;<br/>
 非ポインターで実装
 
 aggrigate
-:   プロパティ親と寿命が異なってもＯＫ。コピーポリシーは何でもよい。ただし、singletonは他オブジェクトのプロパティーとして不適だろう~
+:   プロパティ親と寿命が異なってもＯＫ。コピーポリシーは何でもよい。ただし、singletonは他オブジェクトのプロパティーとして不適だろう<br/>
 ポインターで実装
 
 
@@ -166,11 +166,11 @@ aggrigate
 typelibから呼び出す形式と，automationの形式がある．以下，メソッド名をXXXとすると，
 
 automation形式
-:   invokeMethod(const LString &name, LVarArgs &res)~
+:   invokeMethod(const LString &name, LVarArgs &res)<br/>
 というシグネチャを持つ．全methodで共通のインターフェイス．(XPConnectなしの)JSやNPRuntime, 他のinterpreter言語から呼び出すのに適している．パフォーマンスが悪い．
 
 typelib形式
-:   invokeXXXImpl(LVarArgs &)~
+:   invokeXXXImpl(LVarArgs &)<br/>
 というシグネチャを持つ．各methodごとにメソッドがある．XPCOMやCOMなどから呼び出すのに適している．パフォーマンスは前者より良い筈．<br/>
 現在，まだ実装されていない．
 
@@ -182,12 +182,12 @@ invokeXXXImpl()では引数のLVariantからnativeへの変換を行い，対応
 
 
 引数
-:   setPropertyと同様と考えられる。~
+:   setPropertyと同様と考えられる。<br/>
 mcwrapgenのMCINFO:表記は、primitive型の場合は普通に型を記述する。
 Object型の場合は、LScriptableからの**型キャスト式を記述**する。
 
 返却値
-:   getPropertyと同様と考えられる。~
+:   getPropertyと同様と考えられる。<br/>
 ポインタタイプの場合は、コピーポリシーに関わらず、常にcopy()した値を返すようにする。<br/>
 非ポインタタイプの場合も、コピーしたものを返す？？
 

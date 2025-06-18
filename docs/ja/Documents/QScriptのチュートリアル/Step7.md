@@ -86,8 +86,7 @@ At the context:
 ******************************
 ***   Interpreter status   ***
 ******************************
-
-        *  interpreter status ---
+--- interpreter status ---
 ... (省略) ...
 --------------------------
 ```

@@ -105,16 +105,14 @@ centerでマップが描画される中心を指定している．この例で�
 
 ```
 #declare _2fo_fc_r_map_tex = texture {
-```
- pigment {color rgbft <0,0,0,1,1>}
- normal {granite 0.0 scale 1.0}
- finish {
-  ambient 0.3
-  diffuse 1.0
-  specular 0.0
+  pigment {color rgbft <0,0,0,1,1>}
+  normal {granite 0.0 scale 1.0}
+  finish {
+   ambient 0.3
+   diffuse 1.0
+   specular 0.0
+  }
  }
-}
-```
 ```
 上記のマテリアルの設定はデフォルトでもそれほど悪くは無いが，ambientを1近くに，diffuseを逆に0近くに（specularは0）にすればさらにベタ塗りの線ぽくなる．
 

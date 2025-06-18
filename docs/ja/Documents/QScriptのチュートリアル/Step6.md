@@ -63,11 +63,11 @@ POV-Rayの入力ファイルの詳しい説明は他に譲りますが，
 ヘッダ部分です．テクスチャ定義などの他のファイルをインクルードする場合はバージョン指定より下に追加します．
 ```
 /*
+  POV-Ray output from CueMol (Version 1.0.0  Build 38)
+ */
 ```
- POV-Ray output from CueMol (Version 1.0.0  Build 38)
-*/
+<!!!!!!>
 ```
-
 #version 3.5;
 ```
 
@@ -88,26 +88,26 @@ background {color rgb <0.000000,0.000000,0.000000>}
 #declare _stereo = 0;
 #declare _perspective = 1;
 #declare _iod = 0.03;
-
+```
+<!!!!!!>
+```
 camera {
-```
-#if (_perspective)
-perspective
-direction <0,0,-1>
-up <0,1,0>
-right <1,0,0>
-angle 8.481158
-location <_stereo*_distance*_iod,0,_distance>
-look_at <0,0,0>
-#else
-orthographic
-direction <0,0,-1>
-up <0,_distance/2.2,0>
-right <_distance/2.2,0,0>
-location <_stereo*_distance*_iod,0,_distance>
-look_at <0,0,0>
-#end
-```
+ #if (_perspective)
+ perspective
+ direction <0,0,-1>
+ up <0,1,0>
+ right <1,0,0>
+ angle 8.481158
+ location <_stereo*_distance*_iod,0,_distance>
+ look_at <0,0,0>
+ #else
+ orthographic
+ direction <0,0,-1>
+ up <0,_distance/2.2,0>
+ right <_distance/2.2,0,0>
+ location <_stereo*_distance*_iod,0,_distance>
+ look_at <0,0,0>
+ #end
 }
 ```
 
@@ -130,14 +130,12 @@ distanceで霧の濃さを指定します．大きい値にするほど霧が薄
 値はÅになるようになっているので，それを基準にいくらくらいにするかを判断します．
 ```
 fog {
-```
- distance 5
- color rgbf <1,1,1,1>
- fog_type 2
- fog_offset -5
- fog_alt .001
- up <0,0,1>
-```
+  distance 5
+  color rgbf <1,1,1,1>
+  fog_type 2
+  fog_offset -5
+  fog_alt .001
+  up <0,0,1>
 }
 ```
 
@@ -149,15 +147,13 @@ fog {
 &lt;...&gt;_col0は色の指定です．複数の色で着色されている場合はcol1, col2などができます．この部分を変更することで，あとから（QScriptの段階まで戻らずに）色を変えることができるので便利です．色の第4要素を変えることで，半透明にしたりもできます． 
 ```
 #declare _blm_ab_p_tex = texture {
-```
- normal {granite 0.0 scale 1.0}
- finish {
-  ambient 0.10
-  diffuse 0.70  brilliance 1.00
-  specular 0.30  roughness 0.0050
+  normal {granite 0.0 scale 1.0}
+  finish {
+   ambient 0.10
+   diffuse 0.70  brilliance 1.00
+   specular 0.30  roughness 0.0050
+  }
  }
-}
-```
 #declare _blm_ab_p_col0 = <1.000000,0.698039,0.698039,0.000000>;
 ```
 
@@ -178,8 +174,5 @@ fog {
 ...
 #declare _scene = #include "C:\Documents and Settings\Administrator\デスクトップ\tmp.inc"
 object{
-```
- _scene
-```
+  _scene
 }
-```
