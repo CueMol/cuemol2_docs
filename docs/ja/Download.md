@@ -1,45 +1,41 @@
 ## Download
-現在Windows版・MacOS X版のみ配布しています．リリースごとの変更点などは，[Updates](../Updates)を参照してください．
+現在Windows版・MacOS X版のみ配布しています．リリースごとの変更点などは，[Releases](https://github.com/CueMol/cuemol2/releases/)を参照してください．
 
 Download後のinstallationについては，[Install](../Install)のページを参照してください．
 
-### 最新リリース
+### Version 2.3.0.460 (最新リリース)
+- Windows (64bit)
+    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2-2.3.0.454.win64.installer.exe)
+- MacOS X (ARM 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_ARM64.tar.bz2)
+- MacOS X (Intel 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_X64.tar.bz2)
 
-#### Windows (64bit)
+### Version 2.3.0.454
+- Windows (64bit)
+    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2-2.3.0.454.win64.installer.exe)
+- MacOS X (ARM 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_ARM64.tar.bz2)
+- MacOS X (Intel 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_X64.tar.bz2)
 
-Version 2.2.3.443
-:   [Windows installer](../https://sourceforge.net/projects/cuemol/files/cuemol2/win32/cuemol2-2.2.3.443-x64-setup.exe/download)
-
-#### Windows (32bit)
-
-Version 2.2.3.443
-:   [Windows installer](../https://sourceforge.net/projects/cuemol/files/cuemol2/win32/cuemol2-2.2.3.443-win32-setup.exe/download)
-
-#### MacOS X (64bit)
-
-Version 2.2.3.443
-:   [MacOS X dmg](http://sourceforge.net/projects/cuemol/files/cuemol2/macosx/CueMol2-2.2.3.443-MacOSX-Intel64%2Bpovray.dmg/download)
-
-
-
-
-
-
-
-
-以前のバージョンを含め，SourceForgeの「[Download page](http://sourceforge.net/project/showfiles.php?group_id=103302)」
+以前のバージョンを含め，GitHubの[Releases](https://github.com/CueMol/cuemol2/releases) page
 からもダウンロードできます．
 
-#### Viewer for iOS (iPhone, iPad)
+### Viewer for iOS (iPhone, iPad)
 Apple storeから無料でダウンロードできます．
 
 http://itunes.apple.com/us/app/cuemol/id496236710
 
-### 以前のリリース
+### Source code (GitHub)
+Source codeは，[GitHub](https://github.com/CueMol/cuemol2/)からdownloadできます．
+```
+git clone https://github.com/CueMol/cuemol2.git cuemol2
+```
 
+### CueMol1
 CueMol1とQueは配布とドキュメントの公開は続けておりますが，
 現在開発を終了しており，バグフィクス等のサポートができない状態ですのでご了承ください．
-
 
 Version 1.1.0 build 197
 :   [Windows binary](http://prdownloads.sourceforge.net/cuemol/cuemol-1.1.0.197-setup.exe?download)
@@ -61,13 +57,6 @@ Version 1.0.0 build 61
 
 Note:<br/>
 古いバージョン(Que)のダウンロードは[Download_Que](../Download_Que)からできます．
-
-
-### Source code (GitHub)
-Source codeは，[GitHub](../https://github.com/CueMol/cuemol2/)からdownloadできます．
-```
-git clone https://github.com/CueMol/cuemol2.git cuemol2
-```
 
 ### Other softwares
 

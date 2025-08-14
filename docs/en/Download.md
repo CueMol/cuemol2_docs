@@ -3,7 +3,7 @@
 Now we are distributing binary version for Windows (Intel64), macOS (Intel64, ARM64), and source code as well.
 Changes in each release are in [Releases](https://github.com/CueMol/cuemol2/releases/).
 
-Please see [Install](../../en/Install) page, for installation after downloading.
+Please see [Install](../Install) page, for installation after downloading.
 ### Version 2.3.0.460 (Latest)
 - Windows (64bit)
     - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2-2.3.0.454.win64.installer.exe)
@@ -23,7 +23,7 @@ Please see [Install](../../en/Install) page, for installation after downloading.
 You can download older versions from [Releases](https://github.com/CueMol/cuemol2/releases) page in GitHub.
 
 ### Source code (GitHub)
-You can obtain source code from [GitHub](../../en/https://github.com/CueMol/cuemol2/).
+You can obtain source code from [GitHub](https://github.com/CueMol/cuemol2/).
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
@@ -56,7 +56,7 @@ Version 1.0.0 build 61
 > [Download page](http://sourceforge.net/project/showfiles.php?group_id=103302) in SourceForge
 
 Note:<br/>
-You can download old versions 'Que' from [Download_Que](../../en/Download_Que).
+You can download old versions 'Que' from [Download_Que](../Download_Que).
 
 ### CVS Repository
 You can access CVS repository of cuemol1.1 by anonymous user, as follows.
