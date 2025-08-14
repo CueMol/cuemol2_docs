@@ -22,12 +22,18 @@
 CueMolについてのコメント，質問，要望は
 
 *  ![mm1](./assets/images/index/mm1.png)![mm2](./assets/images/index/mm2.png)
-*  ![icn-twitter](./assets/images/index/icn-twitter.gif) [Twitter@cuemolnohito](http://twitter.com/cuemolnohito)<br/>
+*  ![icn-twitter](./assets/images/index/icn-twitter.gif) [Twitter@cuemolnohito](https://x.com/cuemolnohito)<br/>
 （CueMol関連情報は#cuemolハッシュタグつきで）
 
 *  あるいは[メーリングリスト](./MailingList)にお願いします．
 
 ### What's new?
+
+2025/8/14
+:   バージョン2.3.0.460 Windows・MacOS X版を公開しました．変更点は[Releases](https://github.com/CueMol/cuemol2/releases/tag/v2.3.0.460)に掲載しました．
+
+2025/1/16
+:   バージョン2.3.0.454 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](./en/Updates)に掲載しました．
 
 2019/1/14
 :   バージョン2.2.3.443 Windows・MacOS X版を公開しました． 変更点は[Updates(en)](./en/Updates)に掲載しました．

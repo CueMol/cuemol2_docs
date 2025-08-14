@@ -1,41 +1,39 @@
 ## Download
 
-Now we are distributing binary version for Windows (after XP), MacOS X (after snowleopard), and source code as well.
-Changes in each release are in [Updates](../../en/Updates).
+Now we are distributing binary version for Windows (Intel64), macOS (Intel64, ARM64), and source code as well.
+Changes in each release are in [Releases](https://github.com/CueMol/cuemol2/releases/).
 
 Please see [Install](../../en/Install) page, for installation after downloading.
-### Newest Release
-#### Windows (64bit)
+### Version 2.3.0.460 (Latest)
+- Windows (64bit)
+    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2-2.3.0.454.win64.installer.exe)
+- MacOS X (ARM 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_ARM64.tar.bz2)
+- MacOS X (Intel 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_X64.tar.bz2)
 
-Version 2.2.3.443
-:   [Windows installer](../../en/https://sourceforge.net/projects/cuemol/files/cuemol2/win32/cuemol2-2.2.3.443-x64-setup.exe/download)
+### Version 2.3.0.454
+- Windows (64bit)
+    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2-2.3.0.454.win64.installer.exe)
+- MacOS X (ARM 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_ARM64.tar.bz2)
+- MacOS X (Intel 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_X64.tar.bz2)
 
-#### Windows
-
-Version 2.2.3.443
-:   [Windows installer](../../en/https://sourceforge.net/projects/cuemol/files/cuemol2/win32/cuemol2-2.2.3.443-win32-setup.exe/download)
-
-
-#### MacOS X (64bit)
-
-Version 2.2.3.443
-:   [MacOS X dmg](http://sourceforge.net/projects/cuemol/files/cuemol2/macosx/CueMol2-2.2.3.443-MacOSX-Intel64%2Bpovray.dmg/download)
-
-You can download all versions from [Download page](http://sourceforge.net/project/showfiles.php?group_id=103302) in SourceForge
-
-#### Viewer for iOS
-
-> You can download CueMol viewer for iOS from the Apple Store
-
-
-> http://itunes.apple.com/us/app/cuemol/id496236710
-
+You can download older versions from [Releases](https://github.com/CueMol/cuemol2/releases) page in GitHub.
 
 ### Source code (GitHub)
 You can obtain source code from [GitHub](../../en/https://github.com/CueMol/cuemol2/).
 ```
 git clone https://github.com/CueMol/cuemol2.git cuemol2
 ```
+
+### Viewer for iOS
+You can download CueMol viewer for iOS from the Apple Store
+
+http://itunes.apple.com/us/app/cuemol/id496236710
+
+## Download (ver 1)
 
 ### Previous Releases
 

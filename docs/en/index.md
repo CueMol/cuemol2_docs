@@ -19,40 +19,14 @@ Powered by [Mozilla XULRunner](http://www.mozilla.org/projects/mozilla-based.htm
 
 Please send any comments, questions, or requests about CueMol to<br/>
 ![mm1](./assets/images/index/mm1.png)![mm2](./assets/images/index/mm2.png) or <br/>
-[Follow @cuemolnohito on Twitter](http://twitter.com/cuemolnohito)
+[Follow @cuemolnohito on Twitter](https://x.com/cuemolnohito)
 
 ### What's new?
+2025/8/14
+:   Released v2.3.0.454. See [Releases](https://github.com/CueMol/cuemol2/releases/tag/v2.3.0.460) page for detail.
 
-2015/10/2
-:   Released version 2.2.2.366 for Windows and MacOS X. Version 2.2.2.365 contains bug in the installation process, so please update to the new version! Changes are listed in [Updates](./en/Updates) page.
-
-2015/9/26
-:   Released version 2.2.2.356 for Windows and MacOS X. Changes are listed in [Updates](./en/Updates) page.
-
-2015/6/26
-:   Released version 2.2.1.354 for Windows and MacOS X.
-
-2015/3/23
-:   Released version 2.2.1.349 for Windows and MacOS X.
-
-2014/12/21
-:   Released version 2.2.1.330 for Windows and MacOS X.
-
-2014/7/30
-:   Released version 2.2.0.320 for Windows and MacOS X.
-
-2014/7/6
-:   Released version 2.2.0.315 for Windows and MacOS X.
-
-2014/6/20
-:   Released version 2.2.0.313 for Windows and MacOS X.
-
-2014/6/11
-:   Released version 2.2.0.310 for Windows and MacOS X. Bug fix version (including the bug related to the electron density map display).
-
-2014/6/8
-:   Released version 2.2.0.309 for Windows and MacOS X.
-
+2025/1/16
+:   Released v2.3.0.454. See [Updates](./en/Updates) page for detail.
 
 
 ### Main functions
