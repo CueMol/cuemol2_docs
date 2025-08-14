@@ -36,13 +36,23 @@ WindowsXP
 
 *  [cuemol2/Build](../cuemol2/Build)を参照してください．
 
-## MacOS X版
+## macOS版
 ### バイナリー配布からのinstall
 まず，[Download](../Download)のページからdmg fileをdownloadしてください．
 
 特にインストーラーはありません．ダウンロードしたdmgファイルをダブルクリックすると，CueMol2のアプリケーションが入ったフォルダが開きますので，システムのアプリフォルダなど適当な場所にドラッグしてコピーしてください．
 
-#### ユーザ設定など
+### アプリの署名問題
+新しいmacOSでは、署名されていないアプリの実行が制限されています。
+上記の方法でインストールしたCueMol2を起動した際に、
+「壊れているため開けません。ゴミ箱に入れる必要があります」というメッセージが出る場合は、xattrコマンドでファイルのcom.apple.quarantine拡張属性を削除する必要があります。
+例えば以下のコマンドで、全ての拡張属性を削除できます
+```
+% xattr -cr /Applications/CueMol2.app/
+```
+詳しくは、xattrや拡張属性、com.apple.quarantineなどで検索してみてください。
+
+### ユーザ設定など
 Applicationの設定の多く（windowやpanelの位置など）は，applicationとは別のprofile folderに保存されています．そのため，uninstallしてもprofileは残ったままとなります．Profile folderは，
 ```
 /Users/<User name>/Library/Application Support/CueMol2_GUI
