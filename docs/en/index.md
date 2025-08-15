@@ -23,7 +23,7 @@ Please send any comments, questions, or requests about CueMol to<br/>
 
 ### What's new?
 2025/8/14
-:   Released v2.3.0.454. See [Releases](https://github.com/CueMol/cuemol2/releases/tag/v2.3.0.460) page for detail.
+:   Released v2.3.0.460. See [Releases](https://github.com/CueMol/cuemol2/releases/tag/v2.3.0.460) page for detail.
 
 2025/1/16
 :   Released v2.3.0.454. See [Updates](./en/Updates) page for detail.

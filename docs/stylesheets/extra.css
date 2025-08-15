@@ -1,0 +1,5 @@
+.md-typeset blockquote {
+    border-left: none !important;
+    padding-left: 1rem !important;
+    margin-left: 0;
+}

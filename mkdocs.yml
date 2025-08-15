@@ -66,3 +66,5 @@ nav:
 #   - 寄付: Licence.md
   - リンク: リンク.md
 
+extra_css:
+  - stylesheets/extra.css
