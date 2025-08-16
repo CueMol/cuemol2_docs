@@ -38,6 +38,7 @@ plugins:
             - Link: Link.md
             
 markdown_extensions:
+  - pymdownx.tilde
   - attr_list
   - def_list
   - tables
