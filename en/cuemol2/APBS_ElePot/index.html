@@ -1,0 +1,822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/cuemol2/APBS_ElePot/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>APBS ElePot - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#calculating-and-displaying-electrostatic-potential-maps-using-apbs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              APBS ElePot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cuemol2/APBS_ElePot/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-and-displaying-electrostatic-potential-maps-using-apbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating and Displaying Electrostatic Potential Maps Using APBS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculating and Displaying Electrostatic Potential Maps Using APBS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-required-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Required Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-molecules-and-generating-molecular-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading Molecules and Generating Molecular Surfaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apbs-tool-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      APBS Tool Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APBS Tool Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apbs-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      APBS Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APBS Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      For macOS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-the-calculation-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying the Calculation Target
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specifying the Calculation Target">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifying-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-the-generated-potential-object-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying the Generated Potential Object Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-charge-calculation-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying Charge Calculation Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specifying Charge Calculation Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdb2pqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDB2PQR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PDB2PQR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-macos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      For macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-the-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Calculation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coloring-the-molecular-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coloring the Molecular Surface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-calculated-potential-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      About the Calculated Potential Object
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>APBS ElePot</h1>
+
+<h2 id="calculating-and-displaying-electrostatic-potential-maps-using-apbs">Calculating and Displaying Electrostatic Potential Maps Using APBS<a class="headerlink" href="#calculating-and-displaying-electrostatic-potential-maps-using-apbs" title="Permanent link">&para;</a></h2>
+<p>Using CueMol2 with APBS (http://www.poissonboltzmann.org/apbs), you can calculate electrostatic potential maps with reasonable ease.</p>
+<h3 id="installing-required-software">Installing Required Software<a class="headerlink" href="#installing-required-software" title="Permanent link">&para;</a></h3>
+<p>First, please refer to <a href="../APBS_Install">cuemol2/APBS_Install</a> to install the necessary software.</p>
+<h3 id="loading-molecules-and-generating-molecular-surfaces">Loading Molecules and Generating Molecular Surfaces<a class="headerlink" href="#loading-molecules-and-generating-molecular-surfaces" title="Permanent link">&para;</a></h3>
+<p>Next, load the molecule for which you want to calculate the electrostatic potential.</p>
+<p>Additionally, create a molecular surface for display. (See <a href="../MsmsMolSurface">Creating Molecular Surfaces Using MSMS</a>)</p>
+<h2 id="apbs-tool-settings">APBS Tool Settings<a class="headerlink" href="#apbs-tool-settings" title="Permanent link">&para;</a></h2>
+<p>Next, execute the menu "Tools" → "APBS elepot calculation..." to display the APBS tool dialog.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_dlg1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="apbs_tool_dlg1" class="on-glb" src="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_dlg1.png" style="zoom: 0.75" /></a></p>
+<h3 id="apbs-configuration">APBS Configuration<a class="headerlink" href="#apbs-configuration" title="Permanent link">&para;</a></h3>
+<p>First, specify the installed APBS executable file in "APBS exe path:".</p>
+<p>Press the "Change..." button to bring up a file open dialog, and specify the APBS.exe (or apbs on macOS) file installed according to <a href="../APBS_Install">cuemol2/APBS_Install</a>.</p>
+<h4 id="for-windows">For Windows<a class="headerlink" href="#for-windows" title="Permanent link">&para;</a></h4>
+<p>CueMol2 2.1.0 and later (Windows version only) includes APBS. If you installed CueMol2 in:</p>
+<blockquote>
+<p>C:\Program Files (x86)\CueMol 2.0</p>
+</blockquote>
+<p>then APBS.exe is installed at:</p>
+<blockquote>
+<p>C:\Program Files (x86)\CueMol 2.0\apbs\APBS.exe</p>
+</blockquote>
+<p>This file should be specified by default, but if not, please specify the above file.</p>
+<h4 id="for-macos">For macOS<a class="headerlink" href="#for-macos" title="Permanent link">&para;</a></h4>
+<p>If you installed in /Applications as described in <a href="../APBS_Install">cuemol2/APBS_Install</a>, specify the following for "APBS exe path:":</p>
+<blockquote>
+<p>/Applications/APBS.app/Contents/MacOS/apbs</p>
+</blockquote>
+<p>(If installed in a different location, change the /Applications part accordingly)</p>
+<h3 id="specifying-the-calculation-target">Specifying the Calculation Target<a class="headerlink" href="#specifying-the-calculation-target" title="Permanent link">&para;</a></h3>
+<p>Next, specify the target molecule for calculation in "Target molecule:".
+Select the molecule from the dropdown listbox on the right.</p>
+<h4 id="specifying-selection">Specifying Selection<a class="headerlink" href="#specifying-selection" title="Permanent link">&para;</a></h4>
+<p>Below Target molecule, there is a "Selection:" checkbox.
+If you want to perform calculations on a part of the molecule rather than the entire molecule, turn this ON and specify the calculation target.</p>
+<p>As with <a href="../MsmsMolSurface">molecular surface generation</a>, it is typical to exclude water molecules and ions from calculations, so specify a selection like "protein".
+The 1CRN (crambin) used as an example originally contains only protein molecules in the PDB file, so the default is OK.</p>
+<h3 id="specifying-the-generated-potential-object-name">Specifying the Generated Potential Object Name<a class="headerlink" href="#specifying-the-generated-potential-object-name" title="Permanent link">&para;</a></h3>
+<p>In "Elepot name:", specify the name of the potential object to be generated.
+By default, it is "pot_" + target molecule name, but you can change it to something else.</p>
+<p>If the name overlaps with other objects, it will become troublesome when using it for surface coloring later, so always assign a unique name.</p>
+<h2 id="specifying-charge-calculation-method">Specifying Charge Calculation Method<a class="headerlink" href="#specifying-charge-calculation-method" title="Permanent link">&para;</a></h2>
+<p>In "Charge calculation method", specify the charge assignment method for calculating the electrostatic potential.</p>
+<h3 id="pdb2pqr">PDB2PQR<a class="headerlink" href="#pdb2pqr" title="Permanent link">&para;</a></h3>
+<p>Clicking "Use PDB2PQR" will use PDB2PQR for charge/atomic radius assignment and hydrogen atom addition.
+(Please install PDB2PQR referring to <a href="../APBS_Install">cuemol2/APBS_Install</a> before use)</p>
+<ol>
+<li>Turn <strong>Use PDB2PQR</strong> ON in <strong>Charge calculation method</strong></li>
+<li>
+<p>Specify the installed pdb2pqr.py file (or pdb2pqr_wrap.bat file) in <strong>pdb2pqr.py path:</strong><br/>
+Press the "Change..." button to bring up a file open dialog, select and specify the file from there.</p>
+</li>
+<li>
+<p>Additionally, in "Force field:", you can specify the force field set used for charge assignment, but CHARMM should be fine as is.</p>
+</li>
+</ol>
+<h4 id="for-windows_1">For Windows<a class="headerlink" href="#for-windows_1" title="Permanent link">&para;</a></h4>
+<p>When using the simplified pdb2pqr version included in CueMol2.1.0 or later (Windows version) or in the zip file mentioned in <a href="../APBS_Install">cuemol2/APBS_Install</a>, specify the batch file <strong>pdb2pqr_wrap.bat</strong> for "pdb2pqr.py path:".</p>
+<dl>
+<dt>Note</dt>
+<dd>The simplified pdb2pqr version included in CueMol2.1.0 or later (Windows version) is installed at:<br/>
+C:\Program Files (x86)\CueMol 2.0\apbs\pdb2pqr_wrap.bat<br/>
+when CueMol2 is installed in:<br/>
+C:\Program Files (x86)\CueMol 2.0<br/>
+This file should be specified by default, but if not, please specify the above file.</dd>
+</dl>
+<h4 id="for-macos_1">For macOS<a class="headerlink" href="#for-macos_1" title="Permanent link">&para;</a></h4>
+<p>If you installed in /Applications as described in <a href="../APBS_Install">cuemol2/APBS_Install</a>, specify the following for "pdb2pqr.py path:":</p>
+<blockquote>
+<p>/Applications/pdb2pqr-osx-bin-X.X/pdb2pqr</p>
+</blockquote>
+<p>(Note there is no .py, X.X is the version number.
+If installed in a different location, change the /Applications part accordingly)</p>
+<h4 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h4>
+<p>If you downloaded and installed the latest version from the PDB2PQR site, literally specify pdb2pqr.py for <strong>pdb2pqr.py path:</strong><br/></p>
+<h3 id="internal-method">Internal Method<a class="headerlink" href="#internal-method" title="Permanent link">&para;</a></h3>
+<p>Selecting "Use internal method" will use CueMol2's charge assignment feature.</p>
+<p>This is simpler as you don't need to install pdb2pqr, but it doesn't handle protein N-terminals or C-terminals correctly, and when there are no hydrogen atoms in the PDB file, it doesn't add them but rather adds charges to atoms that should have hydrogens attached using a rather crude method, so its use is not recommended.</p>
+<p>If hydrogen atoms are already present in the PDB file, turning on "Use hydrogen atoms" will avoid the above problem of adding charges together, making it somewhat better.</p>
+<h3 id="other-options">Other Options<a class="headerlink" href="#other-options" title="Permanent link">&para;</a></h3>
+<p>Several APBS options can be specified in the Options section below, but usually there's no need to change them.
+For details, refer to the APBS documentation.</p>
+<h2 id="executing-the-calculation">Executing the Calculation<a class="headerlink" href="#executing-the-calculation" title="Permanent link">&para;</a></h2>
+<p>After completing the above settings and pressing the OK button, the calculation begins.
+Especially for large molecules, not only APBS but also PDB2PQR execution takes considerable time.
+Please wait patiently.</p>
+<p>In CueMol2 2.1.0 and later, calculation result logs are displayed in the log window.</p>
+<p>When the calculation is complete, an electrostatic potential object is added to the Scene panel.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_calculated1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="apbs_tool_calculated1" class="on-glb" src="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_calculated1.png" /></a></p>
+<p>In the figure above, a potential object called pot_1CRN has been added.
+By default, a unitcell renderer is created for the potential object, which shows the range where the electrostatic potential map was calculated with lines as shown in the figure below.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_calculated2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="apbs_tool_calculated2" class="on-glb" src="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_calculated2.png" /></a></p>
+<p>Once you've confirmed the range is sufficient, it's usually not needed anymore, so hide or delete it.</p>
+<h2 id="coloring-the-molecular-surface">Coloring the Molecular Surface<a class="headerlink" href="#coloring-the-molecular-surface" title="Permanent link">&para;</a></h2>
+<p>Next, I'll explain how to display coloring on the molecular surface.
+First, display the Color panel and select the molsurf renderer to be colored from the dropdown listbox at the top of the panel (in this case sf_1CRN/molsurf1).</p>
+<p>Since it defaults to CPKColoring, click the triangle mark to the right of the dropdown listbox and select "Electrostatic potential" from the menu that appears.
+The following panel will then be displayed.
+(For general usage of the Color panel, see <a href="../../Documents/GUIのチュートリアル(CueMol2)/Step7">Documents/GUIのチュートリアル(CueMol2)/Step7</a>)</p>
+<p><img alt="apbs_tool_coloring1" src="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_coloring1.png" /></p>
+<p>By default, coloring is done according to the potential at the Solvent Excluded Surface (SES), i.e., the boundary between the solvent molecule sphere and protein atom spheres (i.e., the surface portion in the figure).
+However, since this is too close to the charged atomic nuclei, the potential tends to be similar to surface charges, resulting in a mottled coloring that makes the distribution difficult to understand at a glance.</p>
+<p><img alt="apbs_tool_elepot1" src="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_elepot1.png" /></p>
+<p>There is a checkbox called "Color by SAS". When turned on, the molecular surface is colored according to the potential at the Solvent Accessible Surface (SAS), i.e., the portion corresponding to the center of the solvent molecule sphere (i.e., points 1.4Å away from the surface portion in the figure).</p>
+<p><img alt="apbs_tool_elepot2" src="../../../assets/images/cuemol2/APBS_ElePot/apbs_tool_elepot2.png" /></p>
+<p>In the figure above, "Color by SAS" is turned on, and the High and Low values (default 10, -10) have been changed to 2 and -2.
+Incidentally, the units for the High and Low values are kT/e.</p>
+<h2 id="about-the-calculated-potential-object">About the Calculated Potential Object<a class="headerlink" href="#about-the-calculated-potential-object" title="Permanent link">&para;</a></h2>
+<p>When you save the scene to a qsc file, the calculated potential object is embedded in binary format within the qsc file and saved together.
+Therefore, when you restart CueMol and load it next time, it should display the same as when it was saved.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

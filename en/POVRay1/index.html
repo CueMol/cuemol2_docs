@@ -1,0 +1,838 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/POVRay1/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>POVRay1 - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-sophisticated-figures-by-editing-pov-ray-files-output-from-cuemol" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              POVRay1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../POVRay1/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-sophisticated-figures-by-editing-pov-ray-files-output-from-cuemol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Sophisticated Figures by Editing POV-Ray Files Output from CueMol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Sophisticated Figures by Editing POV-Ray Files Output from CueMol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-creation-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure Creation Procedure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-specification-in-cuemol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Specification in CueMol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-include-to-import-texture-etc-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using include to Import texture etc. Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-own-inc-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your Own inc Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-pov-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing pov Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering-with-pov-ray" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering with POV-Ray
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-things-transparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making Things Transparent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semi-transparent-ball-stick-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semi-transparent Ball &amp; Stick Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texture-blending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texture Blending
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>POVRay1</h1>
+
+<h2 id="creating-sophisticated-figures-by-editing-pov-ray-files-output-from-cuemol">Creating Sophisticated Figures by Editing POV-Ray Files Output from CueMol<a class="headerlink" href="#creating-sophisticated-figures-by-editing-pov-ray-files-output-from-cuemol" title="Permanent link">&para;</a></h2>
+<p>While the tutorial
+<a href="../Documents/QScriptのチュートリアル/Step6">Step6 Using POV-Ray</a>
+explained the minimum functions necessary to create figures,
+here we will explain more advanced techniques from the perspectives of:</p>
+<ul>
+<li>Creating figures with a unified feel</li>
+<li>Changing material qualities</li>
+<li>Making objects semi-transparent</li>
+</ul>
+<p>including some esoteric functions that you normally wouldn't think to use.</p>
+<h3 id="figure-creation-procedure">Figure Creation Procedure<a class="headerlink" href="#figure-creation-procedure" title="Permanent link">&para;</a></h3>
+<p>When creating figures for papers or presentations with CueMol &amp; QScript,
+you generally work in cycles following these steps:</p>
+<ol>
+<li>Prepare source structure files etc.</li>
+<li>Describe scenes using QScript</li>
+<li>Edit POV-Ray (.pov) files</li>
+<li>Render with POV-Ray</li>
+<li>Process with image software</li>
+</ol>
+<p>Here we'll explain steps 2-4 in detail, particularly step 3.</p>
+<h3 id="color-specification-in-cuemol">Color Specification in CueMol<a class="headerlink" href="#color-specification-in-cuemol" title="Permanent link">&para;</a></h3>
+<p>When you plan to edit pov files later,
+you don't need to specify concrete colors at the CueMol &amp; QScript stage.
+This is because you can change colors when setting materials in the pov file.
+However, parts of the same renderer with the same color specified
+cannot be assigned different colors at the pov file stage.
+You should assign some <strong>distinguishable colors</strong> anyway,
+and specify materials for each color later.</p>
+<p>Furthermore, for papers and presentations, you often need to create
+multiple figures of the same molecule with different displayed parts.
+In such cases, you want to use consistent coloring across all figures.
+<strong>Create a separate script file that defines colors</strong>,
+and use the sys.exec() method
+(<a href="http://cuemol.sourceforge.jp/manual-ja/">see QScript reference</a>)
+at the beginning of individual script files to import the definitions.
+When you want to change the color of a certain part, you only need to edit one place.</p>
+<h3 id="using-include-to-import-texture-etc-definitions">Using include to Import texture etc. Definitions<a class="headerlink" href="#using-include-to-import-texture-etc-definitions" title="Permanent link">&para;</a></h3>
+<p>In the tutorial
+<a href="../Documents/QScriptのチュートリアル/Step6#content_1_2">Editing pov files output from CueMol</a>,
+we explained the structure of pov files output from CueMol.</p>
+<p>In that example, we defined our own materials and used plastic-like and metallic examples,
+but POV-Ray comes with abundant material libraries,
+so there's no reason not to use them.</p>
+<p>To use these, use include statements at the beginning of the pov file (but must be after the version statement):</p>
+<pre><code>#include &quot;colors.inc&quot;
+#include &quot;metals.inc&quot;
+#include &quot;woods.inc&quot;
+#include &quot;stones.inc&quot;
+</code></pre>
+<p>colors.inc defines commonly used colors,
+and metals.inc, woods.inc, stones.inc define
+materials/textures for metal, wood, and stone.</p>
+<p>There are various other inc files,
+but please refer to POV-Ray documentation etc.</p>
+<h3 id="creating-your-own-inc-files">Creating Your Own inc Files<a class="headerlink" href="#creating-your-own-inc-files" title="Permanent link">&para;</a></h3>
+<p>As already mentioned, when creating multiple figures, using
+consistent colors, materials, and textures throughout makes them easier to understand.
+For example, it's convenient to define materials for protein ribbon models,
+materials for displaying residue side chains in ball &amp; stick, etc.
+in your own inc files.</p>
+<pre><code>#include &quot;colors.inc&quot;
+#include &quot;metals.inc&quot;
+#include &quot;woods.inc&quot;
+#include &quot;stones.inc&quot;
+</code></pre>
+<pre><code>#declare tex_of_hsc = texture {P_WoodGrain1B}
+#declare tex_of_ligand = texture {
+finish { ambient 0.10 diffuse 0.70 specular 0.60 roughness 0.01}
+}
+#declare tex_of_resid = texture {finish{F_MetalA}}
+#declare tex_of_map = texture {
+  finish {ambient 0.10 diffuse 0.78 specular 0.02 roughness 0.05 brilliance 1.50}}
+</code></pre>
+<p>Save this as "materials.inc"
+and reference it from individual pov files.
+Here are explanations for each:</p>
+<dl>
+<dt>tex_of_hsc</dt>
+<dd>Texture and material for ribbon models.
+While it should look wood-like, when used together with pov/inc files output by CueMol,
+the color gets changed and doesn't look very wood-like.</dd>
+<dt>tex_of_ligand</dt>
+<dd>Texture and material for ligands.
+Results in plastic gloss similar to the default material output by CueMol.</dd>
+<dt>tex_of_resid</dt>
+<dd>Texture and material for use when displaying residue side chains in ball &amp; stick etc.
+Matte metallic gloss.</dd>
+<dt>tex_of_map</dt>
+<dd>Texture and material for electron density.</dd>
+</dl>
+<h3 id="editing-pov-files">Editing pov Files<a class="headerlink" href="#editing-pov-files" title="Permanent link">&para;</a></h3>
+<p>Here we'll use the pov file created from <strong>blm_ribbon5.qs</strong>
+in the sample files from
+<a href="../Documents/QScriptのチュートリアル/Step3">Step4 Displaying Interactions</a>
+as an example (unedited pov file output by CueMol: <a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon.pov" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon.pov" /></a>).
+In this example, proteins are displayed in ribbon model and ligands in stick model.</p>
+<p>The protein ribbon model has 6 different colors set for
+sheet, helix, and coil of a/b molecules respectively. Also, the default plastic gloss
+is specified as texture.</p>
+<pre><code>#declare _blm_ab_p_tex = texture {
+  normal {granite 0.0 scale 1.0}
+  finish {
+   ambient 0.10
+   diffuse 0.70  brilliance 1.00
+   specular 0.30  roughness 0.0050
+  }
+ }
+#declare _blm_ab_p_col0 = &lt;0.501961,1.000000,1.000000,0.000000&gt;;
+...
+#declare _blm_ab_p_col5 = &lt;1.000000,0.749020,0.501961,0.000000&gt;;
+</code></pre>
+<pre><code>#declare _blm_ab_blm_tex = texture {
+...
+</code></pre>
+<p>For example, by changing the definition of this _blm_ab_p_tex,
+we change the ribbon's material. Here we change it to the previously defined tex_of_hsc.</p>
+<pre><code>#declare _blm_ab_p_tex = tex_of_hsc
+</code></pre>
+<p>Colors can also be changed at this point by modifying _blm_ab_p_col0~5.
+We also change the ligand texture:</p>
+<pre><code>#declare _blm_ab_blm_tex = tex_of_resid
+</code></pre>
+<h3 id="rendering-with-pov-ray">Rendering with POV-Ray<a class="headerlink" href="#rendering-with-pov-ray" title="Permanent link">&para;</a></h3>
+<p>Next, we'll explain the procedure for rendering the modified file
+with POV-Ray Windows version (ver3.6).</p>
+<p>First, since the default ini file has incorrect image aspect ratios,
+you need to create an ini file.
+Start POV-Ray and execute menu "Render"→"Edit Settings/Render" to display a dialog.</p>
+<p><a class="glightbox" href="../../assets/images/POVRay1/povray-inisettings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povray-inisettings" class="on-glb" src="../../assets/images/POVRay1/povray-inisettings.png" /></a></p>
+<p>Use the "Browse" button in the middle of the dialog
+to select the "quickres.ini" file from the displayed file dialog,
+then press the "Edit" button to display its contents in an editor.
+Since the default entries don't have square aspect ratio definitions,
+use the editor to add the following new entry:</p>
+<pre><code>[500x500, AA 0.3]
+Width=500
+Height=500
+Antialias=On
+Antialias_Threshold=0.3
+</code></pre>
+<p>Execute menu "Render"→"Edit Settings/Render" again to
+display the ini file settings dialog,
+confirm that "quickres.ini" is selected in the Name field,
+select the entry you just created (500x500 something) from Section:,
+and press the Render button to start rendering.</p>
+<p><a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon_c.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon_c" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon_c.png" /></a></p>
+<p>Edited pov file that rendered this image: <a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon_c.pov" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon_c" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon_c.pov" /></a></p>
+<p>It looks a bit dark. In such cases,
+you could adjust brightness and contrast in Photoshop etc.,
+but it's better to change the light source settings in the pov file.</p>
+<pre><code>light_source {&lt;_stereo*_distance*0.05,0,_distance&gt; color rgb &lt;1,1,1&gt;}
+light_source {&lt;-1,1,1&gt;*_distance color rgb 0.7 shadowless}
+</code></pre>
+<p>In CueMol's default output, the brightness of the above shadowless light source is 0.5,
+but this is quite dark. You can set it to 1 or higher,
+so try changing it and rendering various settings.</p>
+<h3 id="making-things-transparent">Making Things Transparent<a class="headerlink" href="#making-things-transparent" title="Permanent link">&para;</a></h3>
+<p>Next, let's make some parts semi-transparent.</p>
+<pre><code>#declare _blm_ab_p_col0 = &lt;0.501961,1.000000,1.000000,0.85&gt;;
+</code></pre>
+<p>In the ribbon model color definition, change the transparency from 0 to 0.85.</p>
+<p><a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon_tp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon_tp" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon_tp.png" /></a></p>
+<p>You can see that all the coil parts of one subunit became semi-transparent.</p>
+<p>Since all parts with the same color change together,
+for cases where "you want to change transparency later even for parts with the same color,"
+use the technique of <strong>deliberately using different colors</strong>
+and then <strong>changing them to the same color with different transparency</strong>
+when editing the pov file.</p>
+<h3 id="semi-transparent-ball-stick-models">Semi-transparent Ball &amp; Stick Models<a class="headerlink" href="#semi-transparent-ball-stick-models" title="Permanent link">&para;</a></h3>
+<p>On the other hand, trying to make stick models semi-transparent using the same method
+doesn't work very well.</p>
+<p><a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon_tp2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon_tp2" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon_tp2.png" /></a></p>
+<p>Since stick models are made of combinations of cylinders and spheres,
+when made semi-transparent, spheres inside become visible through bends and tips,
+making them look quite ugly.
+This is because in the inc files output by CueMol, spheres and cylinders are
+combined with union statements (actually all objects in the inc file are combined with union).</p>
+<p>If you combine them with merge statements instead, POV-Ray will strictly determine
+object intersections and not render internal surfaces.
+Edit the inc file to enclose the parts with cylinder and sphere statements
+with new merge{...}.</p>
+<pre><code>merge { // &lt;-- added
+cylinder{&lt;-7.880457, 0.385846, 0.826740&gt;, &lt;-8.656734,
+...
+} // &lt;-- added
+} // union
+</code></pre>
+<p>Since it's very difficult to tell which parts of CueMol's output inc files
+correspond to which renderers, this method might be easier:</p>
+<ol>
+<li>Display only the stick model you want to make semi-transparent</li>
+<li>Output pov/inc files</li>
+<li>Replace union with merge in those files</li>
+</ol>
+<p>In this case, you need to write the pov file to
+import the stick model inc file.</p>
+<pre><code>#declare _scene2 = #include &quot;&lt;stick model inc file&gt;&quot;
+object{
+  _scene2
+}
+</code></pre>
+<p>Rendering this way makes everything properly semi-transparent as shown below:</p>
+<p><a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon_tp3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon_tp3" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon_tp3.png" /></a></p>
+<p>However, note that using merge statements slows down rendering
+due to intersection calculations.</p>
+<h3 id="texture-blending">Texture Blending<a class="headerlink" href="#texture-blending" title="Permanent link">&para;</a></h3>
+<p>From the methods described above, you can see that
+<strong>color and semi-transparent gradients/blends</strong> can be done freely.
+Color blending is used in parts where colors change smoothly,
+such as at secondary structure boundaries in ribbon models.</p>
+<p>Here we'll explain how to perform <strong>texture blending</strong>.
+For example, you can create rendering where ribbon parts have wood texture
+and coil parts have metallic gloss.</p>
+<p>To perform texture blending, you first need to specify
+the "texblend" option when exporting the scene to pov/inc files.
+Since this option setting cannot be done from the GUI, execute the following script</p>
+<pre><code>gfx.writeScene(&quot;&lt;desired output filename&gt;&quot;, &quot;pov&quot;, {texblend=&gt;true});
+</code></pre>
+<p>from the QScript prompt (edit box at the bottom of the Output window),
+or create a separate qs file and execute it.</p>
+<p>Here's part of a pov file created with the above method:</p>
+<pre><code>#declare _blm_ab_p_tex = texture {
+...
+ }
+#declare _blm_ab_p_tex0 = texture{ _blm_ab_p_tex pigment{color rgb &lt;0.501961,1.000000,1.000000&gt;}};
+...
+#declare _blm_ab_p_tex5 = texture{ _blm_ab_p_tex pigment{color rgb &lt;1.000000,0.749020,0.501961&gt;}};
+</code></pre>
+<p>While normal output had color definitions separated into 0~5,
+here they are separated as texture definitions.
+That is, by changing _blm_ab_p_tex0~5, you can independently set
+textures for sheet, helix, and coil parts.
+Also, since pigment overwriting is not performed in the inc file,
+textures like wood and marble are correctly reflected.</p>
+<p>Here we rewrite _blm_ab_p_tex3~5 as follows and render:</p>
+<pre><code>#declare _blm_ab_p_tex3 = texture{ T_Chrome_4D };
+#declare _blm_ab_p_tex4 = texture {T_Stone35};
+#declare _blm_ab_p_tex5 = texture {T_Wood31};
+</code></pre>
+<p>tex3, 4, 5 correspond to coil, helix, and sheet parts respectively,
+becoming chrome metal, stone, and wood textures respectively.</p>
+<p><a class="glightbox" href="../../assets/images/POVRay1/blm_ribbon_txb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="blm_ribbon_txb" class="on-glb" src="../../assets/images/POVRay1/blm_ribbon_txb.png" /></a></p>
+<p>Hmm, this looks pretty garish.
+If you submitted a paper with something like this, you'd probably get rejected immediately <img alt="😄" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png" title=":smile:" />.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

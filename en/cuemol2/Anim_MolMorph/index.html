@@ -1,0 +1,728 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/cuemol2/Anim_MolMorph/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Anim MolMorph - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#molecular-structure-change-morphing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Anim MolMorph
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cuemol2/Anim_MolMorph/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#molecular-structure-change-morphing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molecular Structure Change (Morphing)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading-files-and-superposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading Files and Superposition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-morphmol-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a MorphMol Object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a MorphMol Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading-the-starting-structure-for-the-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading the Starting Structure for the Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-from-molcoord-to-molmorph-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting from MolCoord to MolMorph Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-structure-coordinates-to-the-molmorph-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Structure Coordinates to the MolMorph Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-molmorph-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing the MolMorph Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Animation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the Animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding the Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mismatch-of-molecular-structures-at-starting-point-endpoint-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mismatch of Molecular Structures at Starting Point, Endpoint, etc.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-structural-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large Structural Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Anim MolMorph</h1>
+
+<h2 id="molecular-structure-change-morphing">Molecular Structure Change (Morphing)<a class="headerlink" href="#molecular-structure-change-morphing" title="Permanent link">&para;</a></h2>
+<p>This is used to display changes (transformation = morphing) between two identical molecules with different structures as an animation.</p>
+<p>In CueMol2.2, morphing by linear interpolation can be used.
+With linear interpolation morphing, it is possible to animate local conformational changes.</p>
+<p>Sample scene files explained in this section can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/mol_morph1.qsc">mol_morph1.qsc</a>: Transducin-alpha structure change morphing</li>
+</ul>
+<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
+<p>Here, we will explain using the structural change between the GTP bound form (<a href="http://www.rcsb.org/pdb/explore.do?structureId=1tnd">1TND</a>) and GDP bound form (<a href="http://www.rcsb.org/pdb/explore.do?structureId=1tag">1TAG</a>) of transducin-alpha as an example.</p>
+<p>These two structures are almost identical as molecules, but the positions of the molecules contained in each PDB file are different, so you first need to create a PDB file with both structures superimposed.</p>
+<p>In this example, we will superimpose 1TAG onto 1TND.</p>
+<h3 id="loading-files-and-superposition">Loading Files and Superposition<a class="headerlink" href="#loading-files-and-superposition" title="Permanent link">&para;</a></h3>
+<p>First, load both 1TAG and 1TND files. You can download them from the PDB site and load them using "Open File...", or you can load them directly from the PDB site using "Get PDB using accession code..." (See <a href="../../Documents/GUIのチュートリアル(CueMol2)/Step1">Documents/GUIのチュートリアル(CueMol2)/Step1</a>).</p>
+<p>1TAG contains only one chain (A), while 1TND contains three chains (A, B, C). Display 1TAG for the entire molecule and 1TND for only chain A using the trace renderer.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-1" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-1.png" style="zoom: 0.5" /></a></p>
+<p>Next, superimpose the two molecules following "Secondary Structure Matching" in <a href="../../cuemol2/MolSuperpose">cuemol2/MolSuperpose</a>.
+Set 1TAG as moving and 1TND as reference, specify "c;A" for the 1TND selection, and execute the superposition to get the result shown in the figure below.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-2" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-2.png" style="zoom: 0.5" /></a></p>
+<p>Once this is complete, save the moved 1TAG as a PDB file. Execute the menu "File" → "Save File As...", select 1TAG and press OK, then save it as 1TAG-fit.pdb in the file selection dialog that appears.</p>
+<h2 id="creating-a-morphmol-object">Creating a MorphMol Object<a class="headerlink" href="#creating-a-morphmol-object" title="Permanent link">&para;</a></h2>
+<h3 id="loading-the-starting-structure-for-the-change">Loading the Starting Structure for the Change<a class="headerlink" href="#loading-the-starting-structure-for-the-change" title="Permanent link">&para;</a></h3>
+<p>First, load the structure that will be the starting point of the change.
+Here, since we will use the already loaded 1TND as the starting point of the change, no special operation is needed, but if you want to use a PDB file on disk as the starting point, load it first.</p>
+<h3 id="converting-from-molcoord-to-molmorph-object">Converting from MolCoord to MolMorph Object<a class="headerlink" href="#converting-from-molcoord-to-molmorph-object" title="Permanent link">&para;</a></h3>
+<p>To perform morphing, you first need to convert the MolCoord object created by loading a PDB file into a MolMorph object that supports linear interpolation morphing.</p>
+<p>When you execute the menu "Tools" → "Mol morphing animation...", the following dialog will be displayed, so select the MolCoord object you want to convert to MolMorph.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-3" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-3.png" /></a></p>
+<p>In this example, 1TAG and 1TND are displayed in the list, but select 1TND as the starting structure and press the OK button.</p>
+<p>After executing as above, the following dialog will be displayed.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-4" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-4.png" style="zoom: 0.75" /></a></p>
+<h3 id="adding-structure-coordinates-to-the-molmorph-object">Adding Structure Coordinates to the MolMorph Object<a class="headerlink" href="#adding-structure-coordinates-to-the-molmorph-object" title="Permanent link">&para;</a></h3>
+<p>With the above operation, 1TND has been converted to a MolMorph object.
+The above dialog displays a list of coordinate data held by the MolMorph object.
+Since it was just created by converting from one coordinate data, there is only one item (this).</p>
+<p>Next, add the coordinate 1TAG-fit corresponding to the endpoint of the structural change.
+Press the "+" button in the above dialog, and a file selection dialog will appear. Specify and load the 1TAG-fit.pdb file that was saved after superposition.
+Then, an item for the coordinates corresponding to the endpoint will be added as shown below.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-5" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-5.png" style="zoom: 0.75" /></a></p>
+<p>Once the endpoint has been added, press the OK button to close the dialog.</p>
+<h3 id="editing-the-molmorph-object">Editing the MolMorph Object<a class="headerlink" href="#editing-the-molmorph-object" title="Permanent link">&para;</a></h3>
+<p>To further edit the coordinate data held in the MolMorph object, execute the menu "Tools" → "Mol morphing animation..." again to display the same dialog as above.</p>
+<p>To add more coordinates, press "+", and to delete unnecessary coordinates, select the item and press the "−" button to delete it.</p>
+<h2 id="creating-the-animation">Creating the Animation<a class="headerlink" href="#creating-the-animation" title="Permanent link">&para;</a></h2>
+<h3 id="adding-the-animation">Adding the Animation<a class="headerlink" href="#adding-the-animation" title="Permanent link">&para;</a></h3>
+<p>Now you are ready to perform morphing.
+Next, specify when and how long to perform the morphing from the Animation panel.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-6" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-6.png" /></a></p>
+<p>Press the "+" button in the Animation panel shown above and select "Mol Morphing" to display the following settings dialog.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-7" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-7.png" style="zoom: 0.5" /></a></p>
+<p>In this example, we will create an animation that transforms from the starting point to the endpoint over 1 second starting from 0 seconds.</p>
+<p>First, confirm that Start time is 0:0:0.0 and Duration is 0:0:1.0, then select the 1TND converted and created above in the Target MorphMol item.</p>
+<p>The meanings of the other setting items in MolAnim settings are as follows:</p>
+<dl>
+<dt>Start value</dt>
+<dd>Specifies the structure at the morphing starting point. 0 is the first structure in the structure list held by MorphMol. Conversely, 1 is the last structure.</dd>
+<dt>End value</dt>
+<dd>Specifies the structure at the morphing endpoint. 1 is the last structure in the structure list held by MorphMol. Conversely, 0 is the first structure.</dd>
+</dl>
+<p>That is, if Start value=1 and End value=0, the structural change will occur in the reverse direction.</p>
+<p>Press the OK button to add an animation item, and the Animation panel will look like the figure below.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-8" class="on-glb" src="../../../assets/images/cuemol2/Anim_MolMorph/morphmol-8.png" /></a></p>
+<h3 id="executing-the-animation">Executing the Animation<a class="headerlink" href="#executing-the-animation" title="Permanent link">&para;</a></h3>
+<p>The creation of the morphing animation is now complete.
+When you play the animation according to the method in "Executing Animation" in <a href="../../cuemol2/Anim_Basic">cuemol2/Anim_Basic</a>, the structural transformation will be displayed as an animation.</p>
+<p>If you display Chain A as a ribbon and add a reverse structural change (startValue=1→endValue=0), the animation will look like this:</p>
+<iframe width="425" height="350" src="https://www.youtube.com/embed/4RKA3VUVcPo?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=4RKA3VUVcPo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<h4 id="mismatch-of-molecular-structures-at-starting-point-endpoint-etc">Mismatch of Molecular Structures at Starting Point, Endpoint, etc.<a class="headerlink" href="#mismatch-of-molecular-structures-at-starting-point-endpoint-etc" title="Permanent link">&para;</a></h4>
+<p>If not all corresponding residues and atoms exist in the molecular coordinates of the starting point, endpoint, or intermediate points of the change, those atoms are excluded from the morphing calculation.</p>
+<p>That is, if atoms corresponding to the main coordinates represented by (this) do not exist in other sub-coordinates, those atoms will remain stationary during the morphing animation.
+On the other hand, if atoms that are not in the main coordinates are present in sub-coordinates, they are ignored when loading.</p>
+<p>Due to this implementation, morphing between structures determined in different states for exactly the same molecule can be done easily, but transformations between similar but different homologs will not work well as is.
+By creating model structures for each molecule through homology modeling etc. and aligning residue numbers, it becomes possible to morph correctly.</p>
+<h4 id="large-structural-changes">Large Structural Changes<a class="headerlink" href="#large-structural-changes" title="Permanent link">&para;</a></h4>
+<p>While it is difficult to express very large domain-level changes with linear interpolation morphing, you can create animations by generating several intermediate structures of structural changes using other software and connecting them with linear interpolation morphing.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

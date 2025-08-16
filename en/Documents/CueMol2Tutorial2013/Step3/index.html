@@ -1,0 +1,827 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/Documents/CueMol2Tutorial2013/Step3/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Step3 - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../Documents/CueMol2Tutorial2013/Step3/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step3: リガンドの表示と全体構造図の完成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step3: リガンドの表示と全体構造図の完成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      リガンドの選択表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="リガンドの選択表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      構造モデルをクリックして選択する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molstruct" class="md-nav__link">
+    <span class="md-ellipsis">
+      MolStructパネルを使用して選択する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectionパネルから選択文を入力して選択する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styleへの登録
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styleへの登録">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retinal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retinalの色を定義
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retinal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retinalの選択を定義
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpk" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPKモデルの表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      色の変更
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bretinalcpk" class="md-nav__link">
+    <span class="md-ellipsis">
+      B鎖のretinalのCPKモデルを表示する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix" class="md-nav__link">
+    <span class="md-ellipsis">
+      リガンドが見やすいように，helixを細くする
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      保存とRendering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Step3</h1>
+
+<p><a href="../../../Documents/CueMol2Tutorial2013">一覧へ戻る</a></p>
+<h2 id="step3">Step3: リガンドの表示と全体構造図の完成<a class="headerlink" href="#step3" title="Permanent link">&para;</a></h2>
+<p>ChRには，リガンドとしてAll-trans retinalが結合していますが，本節ではこれを表示させ，図の完成とします．
+（厳密には共有結合でタンパクに結合しているのでリガンドとは違うかもしれませんが，
+便宜上このように説明しています）</p>
+<p>全体図ではリガンドは小さすぎて見えにくいため，CPK (空間充填) modelで表示することにします．</p>
+<h3 id="_1">リガンドの選択表示<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>まず，retinalを選択する必要がありますが，それには何通りか方法があります．
+以下それぞれ説明します．</p>
+<h4 id="_2">構造モデルをクリックして選択する<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>「構造モデルをクリックすることによる選択」は，
+分子の構造中に目的とする分子や残基がどこにあるか，
+ある程度分かっている場合に便利です．</p>
+<p>まず，リボンモデルは分子中の主鎖しか表示されていないため，分子をクリックして選択するには不向きです．クリック用にsimple rendererを作成しましょう．</p>
+<p>まず，Sceneパネルで3UG9_AB.pdbをクリックして選択し，パネル下方の＋ボタンを押すと，3UG9_AB.pdbへのrendererを追加するdialogが表示されます．</p>
+<blockquote>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-1createrend1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png" style="zoom: 0.75" /></a> → <a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-1createrend2" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend2.png" style="zoom: 0.5" /></a></p>
+</blockquote>
+<p>そして，Rendererからsimpleを選び，Selectionはチェックを外しておき，OKを押します．
+すると，分子全体に対してsimple rendererの表示が追加されます．</p>
+<p>現時点でsimple1の炭素原子の色はdefaultである$molcol（3UG9-AB object側の着色を参照）になっています．
+このままではsimple1 rendererの炭素原子の色が白っぽいため，背景の白色に溶け込んで非常に見づらくなってしまいます．
+そこで，Coloring panelでsimple1の炭素原子の色を黒っぽい灰色（#404040）に変更します（見易ければ何でもよいのでblackとかでもOK）．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-2simplerend1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-2simplerend1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-2simplerend1.png" style="zoom: 0.75" /></a></p>
+<p>色の変更後は以下のような表示になります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-3createrend3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-3createrend3" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-3createrend3.png" style="zoom: 0.25" /></a></p>
+<p><strong>補足</strong></p>
+<blockquote>
+<p>selectionを指定せずにrendererを作成すると分子全体を表示するrendererが作成されます（*やallを指定したのと同じ効果）</p>
+</blockquote>
+<p><strong>補足</strong></p>
+<blockquote>
+<p>このようにSimple rendererは何かと使う場面が多いので，最終的な図には不要な場合でも作成しておいたほうが何かと便利です．</p>
+</blockquote>
+<p>次に，viewを操作してTMの中心付近を見ると，retinalがあることが分かります．</p>
+<p>A分子のretinalの原子のいずれかをdouble clickすると，retinal残基が選択されます．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-4retinal1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-4retinal1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-4retinal1.png" style="zoom: 0.5" /></a></p>
+<p><strong>補足</strong></p>
+<blockquote>
+<p>誤ってretinal以外をdouble clickしてしまって選択された場合は，
+その残基を再度double clickすることで選択を解除できます．
+また，ともかくも何も選択されていない状態にするには，
+分子中の任意の原子を右クリックし，
+表示されるcontext menuから「Unselect」を実行すればOK．
+Double clickによる残基選択は現在の選択に追加されるように働く．
+意図せず前の選択が残っている心配がある場合は，これを実行しておけば安心．</p>
+</blockquote>
+<h4 id="molstruct">MolStructパネルを使用して選択する<a class="headerlink" href="#molstruct" title="Permanent link">&para;</a></h4>
+<p>MolStructパネルを使用した選択は，
+目的分子等の残基名が分かっている場合に便利です．
+分子中でretinalはRETという残基名になっており，
+残基番号はタンパク質残基より後になっています．</p>
+<p>MolStructパネル
+（詳しい使用方法等は <a href="../../../Documents/GUIのチュートリアル(CueMol2)/Step3">GUI tutorial</a>を参照）
+には，以下のようにchain A, Bがあります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-5molstrpanel1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-5molstrpanel1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-5molstrpanel1.png" /></a></p>
+<p>ここでは，chain Aのretinal分子を選択したいので，
+Aを開いて，スクロールしてその中からRETという残基名の項目を探します．
+はじめの方はタンパク質残基なので，下の方までスクロールして探すとすぐに見つかります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-6molstrpanel2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-6molstrpanel2" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-6molstrpanel2.png" /></a></p>
+<p>見つかったら，「401 RET」という項目をクリックして，
+パネル下方の矢印ボタン<img alt="step3-25arrowbtn1" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-25arrowbtn1.png" />を押すと，retinalが選択されます．
+さらに，<a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-7centerat1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-7centerat1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-7centerat1.png" /></a>ボタンを押すと，retinalが分子view中心に移動します．
+また，<a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-8zoomat1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-8zoomat1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-8zoomat1.png" /></a>ボタンを押すと中心が移動するだけでなく，zoom(拡大率)やslabも選択対象にフィットするように自動調節されます．</p>
+<p>また，MolStructパネルでは，単一残基だけでなく，複数残基を選択することも可能です．</p>
+<h4 id="selection">Selectionパネルから選択文を入力して選択する<a class="headerlink" href="#selection" title="Permanent link">&para;</a></h4>
+<p>選択しようとする目的の残基やリガンドの，
+残基名，残基番号などがあらかじめ分かっている場合は，
+Selectionパネルから選択文を入力して選択するのが便利です．
+（選択文自体は既にSTEP1,2で着色の指定などに使用しました）</p>
+<p>Selectionパネルを開き，タブ「<a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-10selpanelicon1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-10selpanelicon1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-10selpanelicon1.png" /></a>」が選択されていると，
+下図のような状態になっているはずです．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-9selpanel1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-9selpanel1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-9selpanel1.png" /></a></p>
+<p>この状態で，"Input selection command"の部分に選択文を入力し，
+下方の矢印ボタンを押すと，入力した選択文に対応する部分が選択されます．</p>
+<p>ChRのretinalはA鎖, B差ともに401番目の残基になっているので，選択文に</p>
+<pre><code>A.401.*
+</code></pre>
+<p>と入力し，矢印ボタンを押すとA鎖のretinalが選択されます．</p>
+<p>選択文を使用すると，様々に複雑な方法で選択することが可能です．
+選択文の詳細は<a href="../../../cuemol2/SelSyntax">cuemol2/SelSyntax</a>を参照してください．</p>
+<h3 id="style">Styleへの登録<a class="headerlink" href="#style" title="Permanent link">&para;</a></h3>
+<p>Retinalに関する操作は今後よく行う可能性があるので，retinalの色と選択をstyleへ登録しておきます．</p>
+<p>|Name|color|selection|h
+|ARetinal|hsb(300,0.5,1)|A.401.<em>|
+|BRetinal| #808080|B.401.</em>|</p>
+<h4 id="retinal">Retinalの色を定義<a class="headerlink" href="#retinal" title="Permanent link">&para;</a></h4>
+<p><a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2</a>の操作と同様にして，上記の表の色(ARetinal, BRetinal)を定義します．
+操作方法の詳細は<a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2</a>を参照してください．</p>
+<p>定義後は，dialogは以下のようになります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-11colstyle1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-11colstyle1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-11colstyle1.png" style="zoom: 0.75" /></a></p>
+<h4 id="retinal_1">Retinalの選択を定義<a class="headerlink" href="#retinal_1" title="Permanent link">&para;</a></h4>
+<p><a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2</a>の操作と同様にして，上記の表の選択(ARetinal, BRetinal)を定義します．
+操作方法の詳細は<a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2</a>を参照してください．</p>
+<p>定義後は，dialogは以下のようになります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-12selstyle1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-12selstyle1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-12selstyle1.png" style="zoom: 0.75" /></a></p>
+<p>（本来なら，B分子のretinalの選択もクリックしたりして調べておいてから定義するものだが詳細は省略）</p>
+<p>定義が完了したら，OKボタンを押してstyleを登録します．</p>
+<h3 id="cpk">CPKモデルの表示<a class="headerlink" href="#cpk" title="Permanent link">&para;</a></h3>
+<p>次に，上記で選択したretinalに対応するCPK rendererを作成します．</p>
+<p>Sceneパネルで3UG9_ABをクリックして選択し，パネル下方の＋ボタンを押すと，3UG9_ABへのrendererを追加するdialogが表示されます．</p>
+<blockquote>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-1createrend1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-1createrend1.png" style="zoom: 0.75" /></a> → <a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-14createretinalrend1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-14createretinalrend1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-14createretinalrend1.png" style="zoom: 0.5" /></a></p>
+</blockquote>
+<p>そして，</p>
+<ul>
+<li>RendererからCPKを選び，</li>
+<li>NameをA Retinalに変更し，</li>
+<li>Selectionをチェック</li>
+<li>Selectionの選択文ボックスの▼ボタンを押すと，
+styleで定義したARetinalがDropdown listbox中にあるので，それを指定します．（直接ARetinalとtext boxに入力しても構いません）</li>
+</ul>
+<p>すると，下図のように，retinalがCPK modelで表示されます．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-15createretinalrend2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-15createretinalrend2" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-15createretinalrend2.png" style="zoom: 0.25" /></a></p>
+<h3 id="_3">色の変更<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>上記の操作でretinalをCPK表示することが出来ましたが，
+retinalの（炭素原子の）色が白色になってしまっています．
+これは，前Step2では蛋白質に相当する部分の着色は指定しましたが，
+A401番残基（retinalに相当）の色がまだ指定されていないためです．</p>
+<p>そこで次に，A401番残基retinalの色を指定します．</p>
+<p>Coloring panelで「3UG9-AB」を選択し，「＋」ボタンを押して塗りを追加します．
+するとDialogが出てきますので，色をARetinalに，選択もARetinalにし，OKを押します．</p>
+<blockquote>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-16retinalpaint1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-16retinalpaint1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-16retinalpaint1.png" style="zoom: 0.5" /></a> → <a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-17retinalpaint2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-17retinalpaint2" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-17retinalpaint2.png" style="zoom: 0.75" /></a></p>
+</blockquote>
+<p>以上の設定変更を行うと，下図のような表示になります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-18retinalpaint_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-18retinalpaint_fin1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-18retinalpaint_fin1.png" style="zoom: 0.25" /></a></p>
+<h3 id="bretinalcpk">B鎖のretinalのCPKモデルを表示する<a class="headerlink" href="#bretinalcpk" title="Permanent link">&para;</a></h3>
+<p>前項のA鎖retinalの場合と同様にして，B鎖のretinalのCPK rendererを作成します．
+Sceneパネルで3UG9-ABを選択した状態で下方の「＋」ボタンを押してrendererを追加します．
+Renderer option dialogでは，</p>
+<ul>
+<li>NameをB Retinalに</li>
+<li>SelectionをBRetinal (or B.401.*)</li>
+</ul>
+<p>に変更しOKボタンをおします．</p>
+<p>この状態では，B Retinalの色がChainB (うすい灰色)になっています．
+この色を，前項で定義したBRetinal色(濃い灰色)に変更します．</p>
+<p>前項同様に，まずColoring panelで「3UG9-AB」を選択し，「＋」ボタンを押して塗りを追加します．
+するとDialogが出てきますので，色をBRetinalに，選択もBRetinalにし，OKを押します．</p>
+<p>以上の操作を行うと，B鎖のretinalが下図のような表示にまります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-19retinalpaint_fin2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-19retinalpaint_fin2" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-19retinalpaint_fin2.png" style="zoom: 0.5" /></a></p>
+<h3 id="helix">リガンドが見やすいように，helixを細くする<a class="headerlink" href="#helix" title="Permanent link">&para;</a></h3>
+<p>次に，ヘリックスのリボン表示にretinalが隠れてしまって見づらいので，リボンを細くします．
+まず，Sceneパネルのribbon1 (ribbon)という項目（蛋白質主鎖全体のリボン表示renderer）をダブルクリックします．
+すると設定ダイアログが表示されます．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-20ribbonprop1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-20ribbonprop1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-20ribbonprop1.png" style="zoom: 0.25" /></a></p>
+<p>次に，ダイアログ中にあるHelixタブをクリックし，Helixに関する設定を表示させます（上図は既にhelixタブが選択された状態）．</p>
+<p>そして，Tuberの値を6→4に減少させます．</p>
+<p><img alt="step3-21ribbonprop2" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-21ribbonprop2.png" /></p>
+<p>OKボタンを押してdialogを閉じると，ヘリックスの表示が細くなります．
+さらに，Sceneパネルを操作しsimple1 rendererを非表示にし，
+さらにViewをタンパクの正面から見るように調整すると，
+以下のような表示になります．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-22ribbonprop_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-22ribbonprop_fin1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-22ribbonprop_fin1.png" style="zoom: 0.4" /></a></p>
+<p><strong>※Tuber値の意味</strong></p>
+<blockquote>
+<p>RibbonやTubeには全てWidthとTuberという値があります．
+Widthはチューブやリボンの厚さ方向の寸法であり，Å単位で指定します．
+一方Tuberはチューブやリボンの幅で，Widthの何倍にするかを指定します．
+このケースでは，HelixのTuberは6だったので，厚さの6倍の幅を持つリボン状の表示でしたが，
+これを4に減少させたことで，幅が細いリボン状の表示になったわけです．</p>
+</blockquote>
+<h3 id="rendering">保存とRendering<a class="headerlink" href="#rendering" title="Permanent link">&para;</a></h3>
+<p>以上でシーンが完成したので，シーンをfig1_overall_3.qscという名前で保存します．
+（実際の作業では，操作ミスやクラッシュも有り得るのでもっと頻繁に保存しておいた方が良い．）</p>
+<p>次に，画像ファイルへの最終的なrenderingを行います．
+メニュー「Render」→「POV-Ray Rendering」を実行すると，
+POV-Ray Renderingダイアログが表示されます．</p>
+<p>このダイアログでは，以下の設定を変更（あるいは正しく設定されているか確認）します．</p>
+<ul>
+<li>Width, Heightを1200に設定</li>
+<li>
+<p>DPIを600に設定<br/>
+→図の印刷後サイズは2x2 inch (約5cm x 5cm)になる</p>
+</li>
+<li>
+<p>Stereoをnoneに設定</p>
+</li>
+<li>Projectionをperspectiveに設定</li>
+<li>
+<p>Clipping planeのcheckを外す<br/>
+（現在のシーンではslabでカットされている部分がないので）</p>
+</li>
+<li>
+<p>Post-render...のcheckを外す<br/>
+（現在のシーンでは半透明の部分がないので）</p>
+</li>
+</ul>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-23renderdlg1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-23renderdlg1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-23renderdlg1.png" style="zoom: 0.5" /></a></p>
+<p>Renderボタンを押すとrenderingが始まります．</p>
+<p>完了すると，Save image...ボタンが押せるようになるので，
+押して完成した画像を保存します．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-24render_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step3-24render_fin1" class="on-glb" src="../../../../assets/images/Documents/CueMol2Tutorial2013/Step3/step3-24render_fin1.png" style="zoom: 0.5" /></a></p>
+<p>※完成した画像は，ほかのソフトウェア（イラレやパワポなど）に取り込んで使用する．</p>
+<p><a href="../../../Documents/CueMol2Tutorial2013">Documents/CueMol2Tutorial2013</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

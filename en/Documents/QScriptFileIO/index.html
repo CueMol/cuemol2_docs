@@ -1,0 +1,825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/Documents/QScriptFileIO/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>QScriptFileIO - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qscript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QScriptFileIO
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Documents/QScriptFileIO/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qscript" class="md-nav__link">
+    <span class="md-ellipsis">
+      QScriptでファイル入出力を行なう
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QScriptでファイル入出力を行なう">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dssp" class="md-nav__link">
+    <span class="md-ellipsis">
+      DSSPで計算した二次構造を読み込む
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DSSPで計算した二次構造を読み込む">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dssp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      DSSPファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      スクリプトの解説
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify3Dのスコアで着色
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify3Dのスコアで着色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ファイル
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      スクリプトの解説
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tube-ribbon-renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tube, ribbon rendererの場合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>QScriptFileIO</h1>
+
+<p><a href="../../Documents">Documents</a></p>
+<h2 id="qscript">QScriptでファイル入出力を行なう<a class="headerlink" href="#qscript" title="Permanent link">&para;</a></h2>
+<p>QScriptを使用するとPerlライクな
+簡単なテキストファイルの入出力が行なえます．
+このページではこの機能を分子構造の表示に応用したケースを紹介します．</p>
+<h3 id="dssp">DSSPで計算した二次構造を読み込む<a class="headerlink" href="#dssp" title="Permanent link">&para;</a></h3>
+<p>現時点でCueMol自体には二次構造を計算する機能がありません．
+ですので，
+二次構造情報が入っていないPDBファイルで
+リボンモデルを表示する場合，
+<a href="http://swift.cmbi.ru.nl/gv/dssp/">DSSP</a>等で計算した二次構造情報を読込んでやる必要があります．</p>
+<p><a href="../../Documents/QScriptのチュートリアル/Step3">Documents/QScriptのチュートリアル/Step3</a>ではprocheckの出力から
+手動で設定する例を紹介しましたが，
+ここではDSSPの出力ファイルを自動的に解析して割り当てる例を紹介します．</p>
+<h4 id="_1">ファイル<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>以下のファイルをダウンロードし，同じディレクトリに置いてください．
+そして，CueMolを起動してメニュー「File」→「Execute QScript...」から
+fileio1.qsを開いてください．</p>
+<ul>
+<li>PDBファイル: <a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ECR_MODEL" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb" /></a></li>
+<li>DSSP出力ファイル: <a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/dssp.txt" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dssp" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/dssp.txt" /></a></li>
+<li>QScriptファイル: <a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/fileio1.qs" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fileio1" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/fileio1.qs" /></a></li>
+</ul>
+<p><img alt="fileio1" src="../../../assets/images/Documents/QScriptFileIO/fileio1.png" /></p>
+<h4 id="dssp_1">DSSPファイル<a class="headerlink" href="#dssp_1" title="Permanent link">&para;</a></h4>
+<p>DSSPの出力ファイルは，はじめの24行はヘッダーで，25行目から残基ごとの情報になります．</p>
+<pre><code>  #  RESIDUE AA STRUCTURE BP1 BP2  ACC     N-H--&gt;O    O--&gt;H-N    N-H--&gt;O    O--&gt;H-N    TCO  KAPPA ALPHA  PHI   PSI    X-CA   Y-CA   Z-CA 
+    1    1   L              0   0  105      0, 0.0     2,-0.2     0, 0.0   178,-0.0   0.000 360.0 360.0 360.0 148.0    1.9   27.4   55.8
+    2    2   T     &gt;  -     0   0   75      1,-0.1     4,-2.4   177,-0.0     5,-0.3  -0.500 360.0-113.9 -86.9 164.2    0.6   27.5   52.2
+    3    3   A  H  &gt; S+     0   0   69      1,-0.2     4,-2.2     2,-0.2     5,-0.2   0.923 118.8  49.9 -62.4 -41.6   -2.4   25.5   51.3
+    4    4   N  H  &gt; S+     0   0   89      1,-0.2     4,-2.7     2,-0.2    -1,-0.2   0.934 109.7  50.4 -63.2 -45.3   -0.2   23.3   49.1
+    5    5   Q  H  &gt; S+     0   0   23      1,-0.2     4,-2.2     2,-0.2    -1,-0.2   0.892 111.2  45.7 -67.0 -39.8    2.3   22.7   51.8
+</code></pre>
+<p>以上は24行目から抜粋したものです．
+RESIDUEの部分（６〜１０文字目）に残基番号，STRUCTUREの部分（２５文字目）に二次構造の情報が入っています．
+これらを取り出して処理すればよいわけです．</p>
+<h4 id="_2">スクリプトの解説<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<pre><code># スクリプトがあるディレクトリーのパス名を取得
+$pwd = sys.getScriptPath();
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code># PDBファイルを開き，
+#  &quot;ecr&quot;という名前の分子オブジェクトを作成
+#  分子オブジェクトを$molに代入する．
+$mol = readPDB(&quot;$pwd/ECR_MODEL.pdb&quot;,&quot;ecr&quot;);
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code># ローカル変数は以下の{}(スコープ)内のみで有効
+{
+    # ローカル変数の宣言．
+    local $line;
+    # テキストファイルdssp.txtを開いて入力ストリームを作成．
+    # そして$finに代入している．
+    local $fin = fistream(&quot;$pwd/dssp.txt&quot;);
+    # 最初の24行はスキップ．（ログとして表示）
+    foreach $i (1..24) {
+        $line = $fin.readline();
+        $line.chomp();
+        sys.println($line);
+    }
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>    # 25行目から行末までは，残基ごとの情報が入っている．
+    # 各行を読み込み処理．
+    while ($fin.ready()) {
+        # 入力ストリーム$finから一行読込む
+        $line = $fin.readline();
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>        # 行の6文字目から5文字は残基番号
+        # 　substrは0始まりで文字の位置を数える（Perlと同じ）
+        # 　integer()で文字列から整数に変換している
+        $resid = integer($line.substr(5, 5));
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>        # 行の17文字目から1文字は二次構造→$codeに格納
+        $code = $line.substr(16, 1);
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>        # $codeがHの場合はhelix, Eの場合はsheet, 
+        # それ以外はcoilに変換
+        if ($code == &quot;H&quot;) {
+            $code = &quot;helix&quot;;
+        }
+        else if ($code == &quot;E&quot;) {
+            $code = &quot;sheet&quot;;
+        }
+        else {
+            $code = &quot;coil&quot;;
+        }
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>        # 現在の残基（$resid）を選択
+        $mol.selectResid(&quot;_&quot;, $resid, $resid);
+        # 現在の残基のsecondaryプロパティーを設定
+        $mol.setProp(&quot;secondary&quot;, $code);
+    }
+}
+# 以上のスコープから出るとローカル変数$finは破棄される
+# →ファイルはクローズされる．
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>$mol.select(se/resn BLK/);
+... (省略) ...
+$r_p.setProp(&quot;sheet_tail.gamma&quot;, 4.0);
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code># 残基プロパティーsecondaryがhelixの部分を選択
+$mol.select(se/rprop secondary=helix/);
+# 赤色に着色
+molvis.paint($r_p, color(1,0,0));
+# 残基プロパティーsecondaryがsheetの部分を選択
+$mol.select(se/rprop secondary=sheet/);
+# 青色に着色
+molvis.paint($r_p, color(0,0,1));
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>... (以下省略) ...
+</code></pre>
+<h3 id="verify3d">Verify3Dのスコアで着色<a class="headerlink" href="#verify3d" title="Permanent link">&para;</a></h3>
+<p>実は，上記で使用しているECR_MODEL.pdbは，
+ヒトのグルココルチコイドレセプターから
+昆虫のエクジソンレセプターを比較モデリングした
+モデル構造です．
+例えばモデル構造の評価に<a href="http://nihserver.mbi.ucla.edu/Verify_3D/">Verify3D</a>を使用した場合，
+そのスコアによって残基を着色すれば
+モデルの良し悪しが分かりやすくなります．</p>
+<h4 id="_3">ファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>以下のファイルをダウンロードし，同じディレクトリに置いてください．
+そして，CueMolを起動してメニュー「File」→「Execute QScript...」から</p>
+<ul>
+<li>PDBファイル: <a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ECR_MODEL" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/ECR_MODEL.pdb" /></a></li>
+<li>
+<p>Verify3Dのスコア：<a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/verify3d.txt" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="verify3d" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/verify3d.txt" /></a><br/>
+これは，Verify3DのウェブサイトにECR_MODEL.pdbをサブミットすると出てくる結果ページの，「Display the raw average data」ボタンをクリックすると出てくるページからコピペしたものです．</p>
+</li>
+<li>
+<p>QScriptファイル: <a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/fileio2.qs" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fileio2" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/fileio2.qs" /></a></p>
+</li>
+</ul>
+<p><img alt="fileio2" src="../../../assets/images/Documents/QScriptFileIO/fileio2.png" /></p>
+<h4 id="_4">スクリプトの解説<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p><strong>主なポイント</strong></p>
+<ul>
+<li>複雑なフォーマットのテキストファイルを解析するには，正規表現を使えば簡単に実現できます．（このケースではsubstrでも出来ますが，例として正規表現を使っています．）QScriptではPerlとほぼ同じ正規表現が使用できます．</li>
+<li>テキストから読み込んだ数値を原子に割り当てるには，温度因子あるいはoccupancyに代入しておく．</li>
+<li>simple, traceレンダラーの場合はこの例のように簡単に温度因子(or occupancy)でグラジエント着色できる．</li>
+<li>tubeやribbonレンダラーの場合は次のセクションで説明．</li>
+</ul>
+<pre><code>$pwd = sys.getScriptPath();
+$mol = readPDB(&quot;$pwd/ECR_MODEL.pdb&quot;,&quot;ecr&quot;);
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code># スコアの最大値と最小値
+$smin=1.0e10;
+$smax=-1.0e10;
+{
+    local $line;
+    # 正規表現オブジェクトを作成 →$reに代入
+    #  何回も使用する場合は，このようにループ等の外で
+    #  予め正規表現オブジェクトを作っておいた方が高速．
+    local $re = re/avg\s+\w\s+(\d+)\s+([\d\.]+)/;
+    # 入力ストリームを開く →$finに代入
+    local $fin = fistream(&quot;$pwd/verify3d.txt&quot;);
+    # read verify3d score
+    while ($fin.ready()) {
+        $line = $fin.readline();
+        # 正規表現に入力行$lineがマッチしなかった場合は
+        # エラーを出して継続
+        if (!$re.match($line)) {
+            sys.println(&quot;Invalid line: $line&quot;);
+            continue;
+        }
+        # グルーピングを使用してマッチした部分を取り出す
+        #   at(1)で，1番目の括弧中にマッチした部分
+        #   (Perlで言うところの$1)を取り出せる
+        $resid = integer($re.at(1));
+        #   at(2)で，2番目の括弧中にマッチした部分
+        #   (Perlで言うところの$2)を取り出せる
+        $score = real($re.at(2));
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>        # 最大値と最小値の更新
+        if ($score&lt;=$smin) $smin = $score;
+        if ($score&gt;=$smax) $smax = $score;
+</code></pre>
+<p>&lt;!!!!!!&gt;</p>
+<pre><code>        # 現在の残基を選択
+        $mol.selectResid(&quot;_&quot;, $resid, $resid);
+        # 選択された残基の温度因子を$scoreに書き換える
+        $mol.forEachAtom() ($atom) {
+            $atom.setBfac($score);
+        };
+    }
+    # sys.printfで最大最小スコアを表示．
+    #   printfはC言語のものと大体同じ仕様だが，
+    #   QScriptでは関数に可変引数を渡せないので，
+    #   このようにリストにして渡してやる必要がある．
+    sys.printf(&quot;max score: %f, min score: %f\n&quot;, [$smax, $smin]);
+}
+... (途中省略) ...
+$mol.select(se/resi 1:239/);
+$r_p = $mol.createRend(&quot;p&quot;, &quot;trace&quot;);
+$r_p.setProp(&quot;linew&quot;, 5.0);
+# 温度因子による着色モード
+$r_p.setProp(&quot;coloring.colormode&quot;, 1);
+# 低いほうは$sminが赤色, 高いほうは$smaxが白色になるように着色
+#  Verify3Dのスコアは高いほうが良いので，
+#  良い構造の部分が白に，悪い構造の部分が赤になる．
+$r_p.setProp(&quot;coloring.lowpar&quot;, $smin);
+$r_p.setProp(&quot;coloring.highpar&quot;, $smax);
+$r_p.setProp(&quot;coloring.lowcol&quot;, color(1.0, 0.0, 0.0));
+$r_p.setProp(&quot;coloring.highcol&quot;,  color(1.0, 1.0, 1.0));
+... (以下省略) ...
+</code></pre>
+<h4 id="tube-ribbon-renderer">Tube, ribbon rendererの場合<a class="headerlink" href="#tube-ribbon-renderer" title="Permanent link">&para;</a></h4>
+<p>tubeやribbonレンダラーの場合は「スクリプトによる着色」を使用して着色する必要があります．
+この場合は別に温度因子やoccupancyに値を代入しなくてもよく，
+独自の配列（実際には連想配列；QScriptではdict型）を作ってそれを参照して着色するスクリプトを設定します．</p>
+<p>なぜ配列に単純なリストlist型を使わずに連想配列dict型を使うかというと，
+list型はリンクトリストで実装されているためで，
+インデックスでアクセスするとO(N)の時間がかかり遅いからです．
+連想配列は木構造で実装されているため，
+インデックスでアクセスしてもO(logN)の時間でアクセスできます．
+ただし，そのためには数値を文字列に変換する必要があります．</p>
+<p>以下がスクリプトファイルになります．PDBやverify3d.txtは上記と同じものを使用してください．</p>
+<ul>
+<li><a class="glightbox" href="../../../assets/images/Documents/QScriptFileIO/fileio3.qs" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fileio3" class="on-glb" src="../../../assets/images/Documents/QScriptFileIO/fileio3.qs" /></a></li>
+</ul>
+<p><img alt="fileio3" src="../../../assets/images/Documents/QScriptFileIO/fileio3.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,700 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/cuemol2/MolColor/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>MolColor - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MolColor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/cuemol2/MolColor/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      分子に対する着色
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分子に対する着色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      着色という概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      どういう場合に必要なのか
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体例で解説
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="具体例で解説">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colorパレットで分子を選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ribbon-renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      分子の色をribbon rendererから参照
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ballstick-renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      分子の色をballstick rendererから参照
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      分子の着色を変更する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      論文の図とか
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      その他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      修飾子の指定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>MolColor</h1>
+
+<p><a href="../../Documents">Documents</a></p>
+<h2 id="_1">分子に対する着色<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">着色という概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>着色という概念は，チュートリアル<a href="../../Documents/GUIのチュートリアル(CueMol2)/Step7">Documents/GUIのチュートリアル(CueMol2)/Step7</a>でも説明されている通り，Rendererに対して適応することで，それに応じてRendererがObjectを着色して表示するというものでした．</p>
+<h3 id="_3">どういう場合に必要なのか<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>しかし，Rendererではなく分子オブジェクト(MolCoord)ごとに色が決まっている場合が多く，
+１つの分子に対して複数のrendererがある場合，
+それぞれが統一性が取れた色遣いになるようにするには，
+各々のRendererに対して同色を一つ一つ設定してやる必要がありました．
+これでは面倒です．</p>
+<p>そこで，バージョン2.0.1.207では，新しく分子に対する着色，という機能を実装しました．
+分子に対して大元となる着色を指定しておき，
+随時Renderer側で「$molcol」という特殊キーワードを指定することで，
+分子側の設定を参照できます．
+これで，必要に応じて分子で決まっている統一した着色を行うことができるわけです．</p>
+<p>以下で実例を挙げて具体的な使い方を説明します．</p>
+<h2 id="_4">具体例で解説<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>以下では，crambin 1CRN.pdbを使用して具体的に説明します．
+サンプルファイルは，</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample1.qsc">molcol_sample1.qsc</a></li>
+<li><a href="http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample2.qsc">molcol_sample2.qsc</a></li>
+</ul>
+<p>になります．</p>
+<h3 id="color">Colorパレットで分子を選択<a class="headerlink" href="#color" title="Permanent link">&para;</a></h3>
+<p>従来，Colorパレットでは<a href="../../Documents/GUIのチュートリアル(CueMol2)/Step7">Documents/GUIのチュートリアル(CueMol2)/Step7</a>にあるように
+rendererしか選択できませんでしたが，バージョン2.0.1.207以降では以下のように
+object (但し分子に限る)もリストに現れ，選択できるようになりました．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/MolColor/molcol_colorpal1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="molcol_colorpal1" class="on-glb" src="../../assets/images/cuemol2/MolColor/molcol_colorpal1.png" /></a></p>
+<p>例えば，1CRN.pdbという分子を読み込んでribbon表示にした場合，
+以上のように，「1CRN.pdb/ribbon1」以外に「1CRN.pdb」という項目も表示されるわけです．</p>
+<p>ここで，「1CRN.pdb」（分子object）を選択すると，分子に対する着色を編集できます．
+（デフォルトでは，Paint coloringで二次構造で色分けする状態になっています）</p>
+<p>以下では，まずこのデフォルトの着色はデフォルトのまま置いておいて，
+分子の色をどのようにしてrendererから参照するかを説明します．</p>
+<h3 id="ribbon-renderer">分子の色をribbon rendererから参照<a class="headerlink" href="#ribbon-renderer" title="Permanent link">&para;</a></h3>
+<p>まず，既にあるribbon rendererから分子色を参照するように変更します．</p>
+<p>下図のように，Colorパレットで1CRN.pdb/ribbon1を選択し，右のプルダウンメニューからSolid coloringというのを選択します．すると，分子グラフィクスの方は白一色のribbon表示になります．</p>
+<p><img alt="molcol_ribbon1" src="../../assets/images/cuemol2/MolColor/molcol_ribbon1.png" /></p>
+<p>そして次に，Default color項目の設定で，下図のように「Use mol color」という項目を選択します．</p>
+<p><img alt="molcol_ribbon2" src="../../assets/images/cuemol2/MolColor/molcol_ribbon2.png" /></p>
+<p>$molcolという文字が入り，色は灰色になります（メニューを使わずに$molcolという文字を直接入れても同じ）．</p>
+<p>GUIの部分の色は灰色になりますが，実際のribbon rendererの方の色は，
+分子の着色が反映されて，二次構造ごとの着色になります．
+（ただ，元から二次構造ごとの着色になっていたため一見色に変化はないように見えますが．．．）</p>
+<h3 id="ballstick-renderer">分子の色をballstick rendererから参照<a class="headerlink" href="#ballstick-renderer" title="Permanent link">&para;</a></h3>
+<p>さらに，1CRN.pdbに対してさらにballstick rendererを作成します．
+デフォルトではCPK coloringになっているため，図のような表示になるでしょう．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/MolColor/molcol_ballstick1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="molcol_ballstick1" class="on-glb" src="../../assets/images/cuemol2/MolColor/molcol_ballstick1.png" style="zoom: 0.5" /></a></p>
+<p>ここで，例えば炭素原子の色のみ，主鎖のリボン表示に合わせたいとします．
+従来では，CPK coloringでは元素ごとにしか着色できなかった為，
+炭素の色を変更すると，全部の炭素原子の色を変えることしかできませんでした．</p>
+<p>以下のように，炭素の色の設定で「Use mol color」という項目を選択します．</p>
+<p><img alt="molcol_ballstick2" src="../../assets/images/cuemol2/MolColor/molcol_ballstick2.png" /></p>
+<p>GUIの部分の色は灰色になりますが，グラフィクスのballstick rendererの炭素原子の色は，
+下図のように主鎖のリボンと同じ色になります．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/MolColor/molcol_ballstick3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="molcol_ballstick3" class="on-glb" src="../../assets/images/cuemol2/MolColor/molcol_ballstick3.png" style="zoom: 0.5" /></a></p>
+<h3 id="_5">分子の着色を変更する<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>次に，分子の着色を変更し，$molcolを使用しているrendererでの変化を見てみましょう．
+Colorパレットで，再び1CRN.pdbを選びます．そして，1〜10番の残基をピンク色に設定します．（具体的な方法は<a href="../../Documents/GUIのチュートリアル(CueMol2)/Step8">Documents/GUIのチュートリアル(CueMol2)/Step8</a>を参照）</p>
+<p><img alt="molcol_moledit1" src="../../assets/images/cuemol2/MolColor/molcol_moledit1.png" /></p>
+<p>すると，分子グラフィクスの方は下図のように変化します．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/MolColor/molcol_moledit2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="molcol_moledit2" class="on-glb" src="../../assets/images/cuemol2/MolColor/molcol_moledit2.png" style="zoom: 0.5" /></a></p>
+<p>残基番号１〜１０番のribbon表示だけでなく，ballstick表示の炭素原子の色のみ変化していることが分かります．
+（ここまで操作した状態のqscファイルが，サンプルファイル<a href="http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample1.qsc">molcol_sample1.qsc</a>です）</p>
+<p>さらに例えば，分子の着色をrainbow coloringに変更すると，下図のようにribbonだけでなくballstickも
+色が変化します．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/MolColor/molcol_moledit3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="molcol_moledit3" class="on-glb" src="../../assets/images/cuemol2/MolColor/molcol_moledit3.png" style="zoom: 0.5" /></a></p>
+<h2 id="_6">論文の図とか<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>以上の例からわかると思いますが，例えばよくある論文の図等だと，</p>
+<ul>
+<li>分子にドメインや機能部位ごとに，paint coloringを使用して色を設定しておく</li>
+<li>主鎖をリボン表示にし，リボン表示の方はsolid coloringで$molcolを指定しておく（上述のribbon rendererの設定と同じ）</li>
+<li>重要な部分についてballstick表示を作成する．CPK coloringで炭素原子の色を$molcolにする</li>
+</ul>
+<p>で全体的に統一した着色の図が作成できます．</p>
+<h2 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">修飾子の指定<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>分子色（$molcol）も，他の色表記と同様に修飾子をつけて色を変化させることができます．
+例えば，炭素の色を主鎖の色より薄く（あるいは濃く）したい場合は，CPK coloringの炭素色のところに</p>
+<pre><code>$molcol{mod_s:-0.5}
+</code></pre>
+<p>と指定します．
+すると，下図のような着色になります．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/MolColor/molcol_modif1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="molcol_modif1" class="on-glb" src="../../assets/images/cuemol2/MolColor/molcol_modif1.png" style="zoom: 0.5" /></a></p>
+<p>この例では，分子着色で指定した色のsaturation (色の明るさ，１が純色，０が白）値から0.5を引いた値をCPK rendererの炭素の色として指定していることになります．（上図の状態がサンプルファイル<a href="http://downloads.sourceforge.net/project/cuemol/sample-files/2.0.1.207/molcol_sample2.qsc">molcol_sample2.qsc</a>になります）</p>
+<p>色の修飾子については，詳しくは<a href="../../cuemol2/ColorSyntax">cuemol2/ColorSyntax</a>を参照してください．</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

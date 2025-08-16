@@ -1,0 +1,732 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/cuemol2/CartoonRenderer/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>CartoonRenderer - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cartoon" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CartoonRenderer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/cuemol2/CartoonRenderer/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cartoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartoon表示について
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cartoon表示について">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      なぜ今さら？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helixcylinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helixのcylinder表示のオプション
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helixのcylinder表示のオプション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helix_smooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      helix_smooth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix_waverhelix_wsmooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      helix_waverとhelix_wsmooth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix_wplus" class="md-nav__link">
+    <span class="md-ellipsis">
+      helix_wplus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sheetの表示オプション
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sheetの表示オプション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sheet_smooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      sheet_smooth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coilの表示オプション
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coilの表示オプション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coil_smooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      coil_smooth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anchorの設定
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anchorの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anchor_sel" class="md-nav__link">
+    <span class="md-ellipsis">
+      anchor_selプロパティー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      制限やバグ等
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>CartoonRenderer</h1>
+
+<h2 id="cartoon">Cartoon表示について<a class="headerlink" href="#cartoon" title="Permanent link">&para;</a></h2>
+<p>この項ではversion 2.0.1.171以降で導入されたcartoon rendererについて説明します．
+Cartoon Rendererはタンパク質専用のレンダラーで，</p>
+<ul>
+<li>ヘリックスを筒状</li>
+<li>シートを板状</li>
+<li>コイルをチューブ状</li>
+</ul>
+<p>に表示する機能を持ちます．</p>
+<p>表示としてはRibbonレンダラーと類似していますが，
+デフォルトでベータシート以外は基本的にCα原子を通るように表示されるribbonとは異なり，
+分子のフォールドのみを強調するようにスムージングされた表示となります．
+（ただし後述のsmooth値やanchorを設定することで強制的に通るようにすることも可能です）</p>
+<p>以下にcartoon (左)とribbon (右)を同じ分子についてデフォルトのパラメータ値で表示させた例を示します．</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_cartoon1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_cartoon1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_cartoon1.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_ribbon1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_ribbon1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_ribbon1.png" /></a></p>
+</blockquote>
+<h4 id="_1">なぜ今さら？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>pymolやmolscriptでおなじみの表示で，なぜ今さらという感じもしますが，
+<strong>CueMol2のcartoon表示の特徴は，より詳細なoptionが指定できる点</strong>かもしれません．</p>
+<p>以下では，主なプロパティーについて説明します．</p>
+<h2 id="helixcylinder">Helixのcylinder表示のオプション<a class="headerlink" href="#helixcylinder" title="Permanent link">&para;</a></h2>
+<h3 id="helix_smooth">helix_smooth<a class="headerlink" href="#helix_smooth" title="Permanent link">&para;</a></h3>
+<p>Helixのcylinder表示にてシリンダーの滑らかさを実数値で指定します．
+デフォルトは3.0で，かなり直線的になっていますが，</p>
+<ul>
+<li>減少させるとCαにそったらせん状に近づく</li>
+<li>増加させるとほぼ直線になる</li>
+</ul>
+<p>という性質をもちます．
+下図は，左からhelix_smooth値が1.0,2.0,4.0の場合です．</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_smooth_1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_1.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_smooth_2" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_2.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_smooth_4" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_smooth_4.png" /></a></p>
+</blockquote>
+<p>4以上になるとほぼ直線であまり違いは出ないです．
+1以下にすると，おひねりのようになってしまいます．
+負の値や小数値も指定できますが，妥当な使用範囲は2〜4といったところでしょうか．</p>
+<h3 id="helix_waverhelix_wsmooth">helix_waverとhelix_wsmooth<a class="headerlink" href="#helix_waverhelix_wsmooth" title="Permanent link">&para;</a></h3>
+<p>helix_waver (=helix width averagingの意味)は，デフォルトでtrueになっていますが，この状態だとシリンダーの太さ(width)は平均値で一定になります．</p>
+<p>一方で，falseにするとシリンダーの中心線からCα原子のはずれ具合に合わせてシリンダーの太さが変わるようになります．</p>
+<p>helix_wsmoothは，helix_waver=falseの場合のみ有効な値で，シリンダーの太さの滑らさを指定する値です．
+大きい値ほど滑らかになります．デフォルトは5.0ですが，これだとhelix_waver=trueの場合とほとんど変わりませんが，小さくすることで太さの変化が現れます．</p>
+<p>下図は，helix_wsmooth=0.0, 1.0, 2.0に変化させた場合の形状です．(ほかのパラメータはhelix_waver=false, helix_smooth=3.0で固定)</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_wsmooth_0" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_0.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_wsmooth_1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_1.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_wsmooth_2" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wsmooth_2.png" /></a></p>
+</blockquote>
+<p>上記はhelix_smooth値は3.0で固定ですが，この値によっても見え方が大きく変わってきます．</p>
+<h3 id="helix_wplus">helix_wplus<a class="headerlink" href="#helix_wplus" title="Permanent link">&para;</a></h3>
+<p>構造によっては，helixのcylinderとcoilのつなぎ目で図のようにcoil部分がはみ出してしまう場合があります．
+そういう場合は，helix_wplusを増やすとその分だけcylinderの半径が増やせるので，うまく隠れるように設定しましょう．</p>
+<p>下図は，helix_wplus=0.0, 0.5の場合です．</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_wplus_0" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_0.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_helix_wplus_1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_helix_wplus_1.png" /></a></p>
+</blockquote>
+<p>デフォルト値はcoilの太さ0.2と同じになっており，大体の場合で隠れるようになっているので特にいじらなくても良いでしょう．あと，意図的に負の値を指定して細いシリンダー表示にすることも可能です．</p>
+<h2 id="sheet">Sheetの表示オプション<a class="headerlink" href="#sheet" title="Permanent link">&para;</a></h2>
+<h3 id="sheet_smooth">sheet_smooth<a class="headerlink" href="#sheet_smooth" title="Permanent link">&para;</a></h3>
+<p>helixの場合同様に，シート表示の滑らかさを実数値で指定します．
+デフォルト値は3.0で，シートの曲がり具合の特徴を捉えながらも，ある程度まっすぐになるような設定になっています．</p>
+<p>下図は，sheet_smooth=-5.0, 0.0, 3.0の場合です．-2以下にすると大体Cαを通るようになります．3以上にするとほぼ直線状になります．</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_sheet_smooth_-5" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_-5.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_sheet_smooth_0" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_0.png" style="zoom: 0.97" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_sheet_smooth_3" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_sheet_smooth_3.png" style="zoom: 0.9" /></a></p>
+</blockquote>
+<h2 id="coil">Coilの表示オプション<a class="headerlink" href="#coil" title="Permanent link">&para;</a></h2>
+<h3 id="coil_smooth">coil_smooth<a class="headerlink" href="#coil_smooth" title="Permanent link">&para;</a></h3>
+<p>helixの場合同様に，coil表示の滑らかさを実数値で指定します．
+デフォルト値は-1.0で，coilの曲がり具合の特徴を捉えながらも，すっきりとした見栄えになるような設定になっています．</p>
+<p>下図は，coil_smooth=-5.0, -2.0, -1.0, 0.0の場合です．-2以下にすると大体Cαを通るようになります．0以上にすると実際のCα位置から乖離しすぎかもしれません．</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_coil_smooth_-5" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-5.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_coil_smooth_-2" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-2.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_coil_smooth_-1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_-1.png" /></a> <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_coil_smooth_0" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_coil_smooth_0.png" /></a></p>
+</blockquote>
+<h2 id="anchor">Anchorの設定<a class="headerlink" href="#anchor" title="Permanent link">&para;</a></h2>
+<p>Cartoon表示に側鎖をはやした場合，
+主鎖表示がCαの位置を通らないため，側鎖が宙に浮いたような状態になり，見栄えがよくありません．</p>
+<h3 id="anchor_sel">anchor_selプロパティー<a class="headerlink" href="#anchor_sel" title="Permanent link">&para;</a></h3>
+<p>CueMol2のcartoon表示では，anchor_selプロパティーに残基を指定して，
+できるだけCαを通らせるようにすることが可能です．</p>
+<p>以下に，coil_smooth=-1の場合（デフォルト）に，anchor_selにA.76.*（図のループの先端部分の残基）
+を指定した場合の図を示します．</p>
+<blockquote>
+<p><a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_anchor_sel0" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel0.png" /></a> ⇒ <a class="glightbox" href="../../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cartoon_anchor_sel1" class="on-glb" src="../../assets/images/cuemol2/CartoonRenderer/cartoon_anchor_sel1.png" /></a></p>
+</blockquote>
+<p>このように，ループやシート中に1残基程度なら効果的にanchorが設定されますが，
+多くなってくると結局smooth値を小さくした場合と同じようになってしまうので，
+多くのCα原子を通らせたい場合はsmooth値をいじったほうが良いでしょう．</p>
+<h2 id="_2">制限やバグ等<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>selectionで二次構造の途中から表示させたりすると，意図したように表示されない場合があります．部分表示させるときはcoilの部分で切れるように調節したほうがよいでしょう（今後修正予定）</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
