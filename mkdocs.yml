@@ -39,6 +39,7 @@ plugins:
             
 markdown_extensions:
   - pymdownx.tilde
+  - pymdownx.emoji
   - attr_list
   - def_list
   - tables

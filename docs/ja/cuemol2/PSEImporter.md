@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## PyMOL session file の読み込み
 
 CueMolでは，PyMOLからの移行ユーザーのためにPyMOL session file (pse file)を読み込むことが可能です．

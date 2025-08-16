@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## POV-Ray rendering dialogについて
 このセクションでは，
 POV-Ray rendering dialogについて説明しています．
@@ -84,17 +82,18 @@ Shadow
 上記の設定のうち，Povray-exe-pathとPovray-inc-pathについて説明します．
 
 #### Windows
-〜-povray-setup.exeというファイルからインストールすると，console用povrayが同梱されており，これらの値は同梱版を指すように設定されているため，特に何も準備する必要はありません．
+[Releases](https://github.com/CueMol/cuemol2/releases/)からダウンロードしたインストーラーからインストールすると，console用povrayが同梱されており，これらの値は同梱版を指すように設定されているため，特に何も準備する必要はありません．
 
-**非同梱版の場合**<br/>
-一方で，POV-Ray非同梱版(povrayという文字列が入っていないインストーラー)にはPOV-Rayは含まれていません．
-CueMol2と連携させるにはconsole版POV-Rayが必要なのですが，
-Windows版のPOV-Rayにはconsole版が同梱されていません．
-[MinGW](http://www.mingw.org/)をインストールしてunix用のソースからコンパイルすればよいのですが，
-少々面倒なので，コンパイルしたものを用意しました．
+#### macOS
+[Releases](https://github.com/CueMol/cuemol2/releases/)からダウンロードしたdmgファイルからインストールすると，console用povrayが同梱されており，これらの値は同梱版を指すように設定されているため，特に何も準備する必要はありません．
+
+#### 同梱されていない場合
+自分でビルドするなどPOV-Rayが同梱されていない場合、
+自分でconsole版POV-Rayをunix用のソースからコンパイルしてください。
+Windowsでは少々面倒なので，コンパイルしたものを用意しました．
 [ここ(povray3.6-mingw32.zip)](http://sourceforge.net/projects/cuemol/files/cuemol2/win32/povray3.6-mingw32.zip/download)からダウンロードできます．
 
-ダウンロードしたものを，まず適当なところ（デスクトップなど）に展開します．
+用意したものを，まず適当なところ（デスクトップなど）に展開します．
 
 今，CueMol2が**C:\Program Files (x86)\CueMol 2.0にインストールされているとする**と，
 その中に，上記のzipファイル中のpovrayフォルダごとコピーしてください．
@@ -108,9 +107,6 @@ C:\Program Files (x86)\CueMol 2.0\povray\include
 ```
 というフォルダ中にいろいろincなどのファイルがあるようになっていればOKです．
 ダウンロード後展開した実行ファイルは，実行すると警告ダイアログが出る場合があります(Windows7など)．一度実行して，警告ダイアログが出ないようにしておいてください．
-
-#### MacOS X
-〜+povray.dmgというファイルからインストールすると，console用povrayが同梱されており，これらの値は同梱版を指すように設定されているため，特に何も準備する必要はありません．
 
 
 ### Renderingの開始と画像の保存

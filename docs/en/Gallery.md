@@ -15,8 +15,7 @@ Right: [POT_alafos1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-
 (Save the qsc and xml files in the same folder!)
 
 See also
-:   [Edge rendering](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FEdgeLines)
-
+:   [Edge rendering](cuemol2/EdgeLines.md)
 
 ### Cartoon model
 #### Helices with different smoothness
@@ -32,7 +31,7 @@ QSC file of this scene
 (Save the qsc and xml files in the same folder!)
 
 See also
-:   [Cartoon display](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FCartoonRenderer)
+:   [Cartoon renderer](cuemol2/CartoonRenderer.md)
 
 ### Nucleic acid model
 
@@ -42,74 +41,61 @@ See also
 
 > RNA-DNA component of S. pyogenes Cas9 ([4OO8](http://www.rcsb.org/pdb/explore.do?structureId=4OO8)), shown by basepair, simple1, and detail2 modes of nucl renderer (left, middle, and right panels, respectively).
 
-
 QSC file of this scene
 :   [Cas9_nucltype_detail2.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/Cas9_nucltype_detail2)
 
 See also
-:   [Nucleic acid display](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FNARenderer)
-
-
+:   [Nucleic acid renderer](cuemol2/NARenderer.md)
 
 ### Molecular surface
 #### Cross-sections of solvent-excluded surface
-
-
 >> ![YidC_Surface4-L](../../assets/images/Gallery/YidC_Surface4-L.png){ style="zoom: 0.33" .on-glb }![YidC_Surface4-R](../../assets/images/Gallery/YidC_Surface4-R.png){ style="zoom: 0.33" .on-glb }
 
 > Surface model representations of B. halodurans YidC ([3WO6](http://www.rcsb.org/pdb/explore.do?structureId=3WO6)) coloured according to its electrostatic potential
-
 
 QSC file of this scene
 :   [YidC_Surface4.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/YidC_Surface4.qsc)
 
 See also
-:   [Cross-section of Mol surface](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FMolSurfCut)
+:   [Cross-section of Mol surface](cuemol2/MolSurfCut.md)
 
 #### Radiosity
-
 >> ![YidC_surf_norad](../../assets/images/Gallery/YidC_surf_norad.jpg){ style="zoom: 0.5" .on-glb }![YidC_surf_radio1](../../assets/images/Gallery/YidC_surf_radio1.jpg){ style="zoom: 0.5" .on-glb }
 
 > Right image was rendered using radiosity.
-
 > **Note**: Radiosity rendering using POV-Ray3.7 is available in release 3.3.1.
+
+See also
+:   [Radiosity rendering](cuemol2/Radiosity.md)
 
 ### Animation
 #### Spin, camera motion, show and hide of renderers
-
 <iframe width="425" height="350" src="https://www.youtube.com/embed/pHL52i3kzxE?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=pHL52i3kzxE"
         title="YouTube video player"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen>
 </iframe>
-                
-
 
 QSC file of this scene
 :   [lyso_showhide1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_showhide1.qsc)
-:See also|
-[Basic of animation](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_Basic),
-[Camera motion](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_CameraMotion),
-and [Show and hide of renderers](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_ShowHide)
+
+See also
+:   [Basic of animation](cuemol2/Anim_Basic.md),
+[Camera motion](cuemol2/Anim_CameraMotion.md),
+and [Show and hide of renderers](cuemol2/Anim_ShowHide.md)
 
 
 #### Structural change animation by linear morphing
-
 <iframe width="425" height="350" src="https://www.youtube.com/embed/4RKA3VUVcPo?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=4RKA3VUVcPo"
         title="YouTube video player"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen>
 </iframe>
-                
 
 QSC file of this scene
 :   [mol_morph1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/mol_morph1.qsc)
 
 See also
-:   [Morphing animation](http://translate.google.co.jp/translate?sl=ja&tl=en&u=http%3A%2F%2Fcuemol.sourceforge.jp%2Fja%2Findex%3Fcuemol2%2FAnim_MolMorph)
-
-
-------
-[FrontPage](../../en/FrontPage)
+:   [Morphing animation](cuemol2/Anim_MolMorph.md)

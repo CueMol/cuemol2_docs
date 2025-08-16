@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## 光源の設定について
 POV-Ray rendering dialogを利用してrenderingをおこなうにあたって，
 シーンによっては光源の設定を変えたほうが見やすくなる場合があります．

@@ -1,4 +1,3 @@
-[Documents](../../Documents)
 ## Rendering with Edge Lines
 From CueMol 2.2 onwards, you can perform rendering with edge lines (contour lines) using POV-Ray.
 

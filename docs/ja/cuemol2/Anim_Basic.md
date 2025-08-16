@@ -1,11 +1,10 @@
-[Documents](../../Documents)
 ## アニメーション
 このセクションではversion 2.1.0.241以降で導入された
 アニメーション作成機能について説明します．
 
 Sample scene fileが以下からダウンロードできます．
 
-*  [lyso_simplespin1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin1.qsc)：　Lysozymeの単純スピンアニメーション（その１）
+* [lyso_simplespin1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin1.qsc)：　Lysozymeの単純スピンアニメーション（その１）
 
 ### アニメーション・パレット
 CueMol2.1以降では，以下のようなアニメーション・パレットがサイドパネルに追加されています．
@@ -27,16 +26,12 @@ CueMol2.1以降では，以下のようなアニメーション・パレット�
 下図のようにドロップダウン・メニューが表示されます．
 そこから，Simple spinを選びます．
 
-
 ![anim-palette2](../../assets/images/cuemol2/Anim_Basic/anim-palette2.png)
-
 
 ### アニメーションの設定
 アニメーション(Simple spin)の追加を行うと，以下のようなSimple spinの設定ダイアログが表示されます．
 
-
 ![anim-simplespin-2](../../assets/images/cuemol2/Anim_Basic/anim-simplespin-2.png){ style="zoom: 0.5" .on-glb }
-
 
 #### 共通設定
 アニメーションの設定には，共通設定と，個々のアニメーションに特有の設定があります．
@@ -93,7 +88,6 @@ Cartesianにすると，右のエディットボックスに数値を指定で�
 
 ![anim-palette3](../../assets/images/cuemol2/Anim_Basic/anim-palette3.png){ style="zoom: 0.5" .on-glb }
 
-
 以上で作成したシーンは，
 [lyso_simplespin1.qsc](http://downloads.sourceforge.net/project/cuemol/sample-files/2.1.0.241/lyso_simplespin1.qsc)からダウンロードできます．
 
@@ -130,7 +124,6 @@ Loop
         allow="autoplay; encrypted-media"
         allowfullscreen>
 </iframe>
-                
 
 ### アニメーション項目の設定再変更
 以上でY軸周りに1周回転するアニメーションができましたが，
@@ -138,11 +131,9 @@ Loop
 
 ![anim-palette3](../../assets/images/cuemol2/Anim_Basic/anim-palette3.png){ style="zoom: 0.5" .on-glb }
 
-
 すると，上記で説明した設定ダイアログが現れ，回転角度などの設定を変更できます．
 
 ![anim-simplespin-2](../../assets/images/cuemol2/Anim_Basic/anim-simplespin-2.png){ style="zoom: 0.5" .on-glb }
-
 
 例えば，１回転が１秒は速すぎるというなら，設定ダイアログでDurationを例えば５秒(0:0:5.0)に変更して，
 再度再生してみてください．５秒かけて１周するように変わるはずです．

@@ -1,10 +1,6 @@
-[Documents](../../Documents)
-
 ## Cartoon表示について
 この項ではversion 2.0.1.171以降で導入されたcartoon rendererについて説明します．
-
-## これは何？
-タンパク質専用のレンダラーで，
+Cartoon Rendererはタンパク質専用のレンダラーで，
 
 *  ヘリックスを筒状
 *  シートを板状
@@ -18,7 +14,6 @@
 （ただし後述のsmooth値やanchorを設定することで強制的に通るようにすることも可能です）
 
 以下にcartoon (左)とribbon (右)を同じ分子についてデフォルトのパラメータ値で表示させた例を示します．
-
 
 > ![cartoon_cartoon1](../../assets/images/cuemol2/CartoonRenderer/cartoon_cartoon1.png){ .on-glb } ![cartoon_ribbon1](../../assets/images/cuemol2/CartoonRenderer/cartoon_ribbon1.png){ .on-glb }
 

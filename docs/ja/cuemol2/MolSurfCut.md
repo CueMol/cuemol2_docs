@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## 分子表面オブジェクトの平面による切断
 CueMol2ではCueMol1と同様に分子表面の断面を生成することができます．
 
@@ -14,11 +12,9 @@ CueMol2ではCueMol1と同様に分子表面の断面を生成することがで
 次に，メニュー「Tools」→「Mol surface generation...」を実行し，分子表面を作成します．
 1CRNは小さい分子なので，densityは3にしています．
 
-詳しくは，[cuemol2/MsmsMolSurface](../../cuemol2/MsmsMolSurface)を参照してください．
-
+詳しくは，[cuemol2/MsmsMolSurface](../MsmsMolSurface)を参照してください．
 
 ![cbp_surf1](../../assets/images/cuemol2/MolSurfCut/cbp_surf1.jpg){ style="zoom: 0.5" .on-glb }
-
 
 ### 切断面の指定
 まず，
@@ -34,17 +30,13 @@ CueMol2ではCueMol1と同様に分子表面の断面を生成することがで
 ### 切断の実行
 次に，メニュー「Tools」→「Mol surface cutter...」を実行します．
 
-
 ![cbp_surf_dlg2](../../assets/images/cuemol2/MolSurfCut/cbp_surf_dlg2.png)
 
-
 各設定の意味は以下のとおりです．
-
 
 Target surface
 :   切断される対象の分子表面オブジェクトを指定します．
 ここでは上記で作成した1CRNの分子表面オブジェクトであるsf_1CRNを選びます．
-
 
 Cross section type
 :   切断面を生成するかどうか，あるいは切断面だけ生成するかどうか等のオプションを指定します．
@@ -54,7 +46,6 @@ Cross section type
     * **Separately** 切断されたsurface objectと断面を別個のMolSurfObjとして生成（断面とそれ以外で着色を変えたい場合はこれを指定すればよい）
     * **Section only** 断面のみを生成
     * **No section** 切断されたsurface objectのみを生成（断面がない穴が開いた表面ができる）
-
 
 Section mesh density
 :   断面に生成する三角メッシュの密度を指定します．

@@ -1,7 +1,3 @@
-[Documents](../Documents)
-
-
-
 ## CueMolの出力したPOV-Rayファイルを編集して手の込んだ図を作る
 
 チュートリアルの

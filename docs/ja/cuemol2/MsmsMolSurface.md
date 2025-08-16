@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## 分子表面の作成
 
 手軽にGUIから分子表面を作成することができます．
@@ -7,9 +5,7 @@
 
 メニュー「Tools」→「Mol surface generation ...」を実行すると，以下のようなダイアログが現れます．
 
-
 ![molsurf_tool](../../assets/images/cuemol2/MsmsMolSurface/molsurf_tool.png)
-
 
 ### Target moleculeの指定
 次に，Target moleculeを指定します．
@@ -74,9 +70,7 @@ Version 2.2.1.330以降のCueMolでは，いったん作成したMolSurfObj obje
 Scene panelで再生成したいMolSurfObjを右クリックし，表示されるcontext menuの「Regenerate surface...」をクリックすると，上記のMol surface tool dialogが表示されます．
 Densityを変更してOK buttonを押すと指定したdensityでsurfaceが再生成されます．
 
-
 ![molsurf_regen1](../../assets/images/cuemol2/MsmsMolSurface/molsurf_regen1.png){ .on-glb }
-
 
 ただし，古いCueMolで作成したscene fileを読み込んだ場合は，MolSurfObj objectの元となるMolCoord objectの情報が保存されていないため，この機能は利用できません．
 

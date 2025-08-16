@@ -1,4 +1,3 @@
-[Documents](../../Documents)
 ## カメラの移動アニメーション
 このセクションでは，カメラ（視点の位置・向き・拡大率等）を変化させるアニメーションについて，
 例を挙げながら説明します．
@@ -14,7 +13,7 @@
 アニメーションパネル中に，下図のように，**Start cam**という設定がありますが，
 これにより，アニメーション開始時の画面をどのカメラ視点から見たものにするかが決まります．
 
-> ![anim-panel-cmb1](../../assets/images/cuemol2/Anim_CameraMotion/anim-panel-cmb1.png) ⇒ ![anim-startcam-1](../../assets/images/cuemol2/Anim_CameraMotion/anim-startcam-1.png)
+> ![anim-panel-cmb1](../../assets/images/cuemol2/Anim_Cmb/anim-panel-cmb1.png) ⇒ ![anim-startcam-1](../../assets/images/cuemol2/Anim_CameraMotion/anim-startcam-1.png)
 
 図のように(none)になっている場合は，開始時にカメラの変更が行われません（すなわち再生ボタンを押した状態から開始する）
 
@@ -32,14 +31,10 @@
 
 ![anim-cammot-1](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-1.png)
 
-
-
 ### CamMotionの設定
 すると，以下のような設定ダイアログが現れます．
 
-
 ![anim-cammot-2](../../assets/images/cuemol2/Anim_CameraMotion/anim-cammot-2.png){ style="zoom: 0.5" .on-glb }
-
 
 Common settingsの部分は，SimpleSpin等他のアニメーションと共通の設定項目です．
 
@@ -87,4 +82,3 @@ Animation ribbonの再生ボタンを押すとアニメーションが再生さ�
         allow="autoplay; encrypted-media"
         allowfullscreen>
 </iframe>
-                

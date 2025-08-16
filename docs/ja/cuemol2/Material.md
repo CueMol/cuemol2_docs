@@ -1,4 +1,3 @@
-[Documents](../../Documents)
 ## Materialについて
 CueMol2では，レンダラーで描画される3D物体について，
 色以外にmaterial(質感)を指定することができます．

@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## Cameraにrenderer等の表示・非表示状態を保存する
 Cameraには，現在の視点等の情報以外に，objects/renderersの表示・非表示状態を保存することが可能です．
 
