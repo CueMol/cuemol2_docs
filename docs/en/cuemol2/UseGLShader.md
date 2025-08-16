@@ -1,4 +1,3 @@
-[Documents](../../Documents)
 ## About OpenGL Shader Functionality
 In Version 2.1, rendering using OpenGL shader functionality has become available.
 

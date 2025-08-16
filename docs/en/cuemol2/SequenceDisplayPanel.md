@@ -1,4 +1,3 @@
-[Documents](../../../en/Documents)
 ## Sequence display panel
 In the sequence display panel, which is located at the bottom of the CueMol2 window, you can browse the amino- and nucleic acid-sequences of the molecules loaded in the active scene.
 

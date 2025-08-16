@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## Efficient Rendering of Semi-transparent Objects
 
 Since the days of CueMol1, semi-transparent display has been possible by setting the color transparency to less than 1, but particularly during POV-Ray rendering, there were the following problems:

@@ -1,4 +1,3 @@
-[Documents](../../../en/Documents)
 ## Fetch PDB and other files from net
 You can download and display PDB files and electron density map files from the internet.
 

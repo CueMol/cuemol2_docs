@@ -1,4 +1,3 @@
-[Documents](../../Documents)
 ## Exporting Scenes to Image Files
 Direct export of scenes to image files (PNG) can be performed through menu "Rendering" → "Export Scene...".
 
