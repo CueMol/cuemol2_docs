@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## Cameraについて
 Scene panelに表示されているCameraに，視点の情報やrenderers/objectsの表示・非表示の情報を保存し，必要に応じて呼び出すことが可能です．
 

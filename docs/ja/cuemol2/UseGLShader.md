@@ -57,7 +57,8 @@ OglView> shaders disabled
 
 一方で，有効化されていると以下のようにdefaultのshaderがロードされたというログが表示されます．
 ```
-PO> Loading shader: ~~CONFDIR~~/data/shaders/default_vert.glsl
+PO> Loading shader: %%CONFDIR%%/data/shaders/default_vert.glsl
 PO> Loading shader OK
-PO> Loading shader: ~~CONFDIR~~/data/shaders/default_frag.glsl
+PO> Loading shader: %%CONFDIR%%/data/shaders/default_frag.glsl
 PO> Loading shader OK
+```
