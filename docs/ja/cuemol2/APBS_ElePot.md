@@ -1,5 +1,3 @@
-[Documents](../../Documents)
-
 ## APBSを使った静電ポテンシャルマップの計算と表示
 
 CueMol2からAPBS(http://www.poissonboltzmann.org/apbs)を使って，まあまあある程度は手軽に静電ポテンシャルマップを計算することができます．

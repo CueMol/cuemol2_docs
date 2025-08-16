@@ -1,4 +1,3 @@
-[Documents](../../Documents)
 ## 複数アニメーションの組み合わせ
 
 前セクション[cuemol2/Anim_Basic](../../cuemol2/Anim_Basic)では１つのSimple spinアニメーションを作成する例を紹介しましたが，
