@@ -3,12 +3,12 @@
 CueMol2からAPBS(http://www.poissonboltzmann.org/apbs)を使って，まあまあある程度は手軽に静電ポテンシャルマップを計算することができます．
 
 ### 必要なソフトウェアのインストール
-まず，[cuemol2/APBS_Install](../../cuemol2/APBS_Install)を参照し必要なソフトウェアをインストールしてください
+まず，[cuemol2/APBS_Install](../APBS_Install)を参照し必要なソフトウェアをインストールしてください
 
 ### 分子の読み込みと分子表面の生成
 次に，静電ポテンシャルを計算する分子を読み込みます．
 
-さらに，表示のための分子表面を作成しておきます．([msmsを使用した分子表面の作成](../../cuemol2/MsmsMolSurface)参照)
+さらに，表示のための分子表面を作成しておきます．([msmsを使用した分子表面の作成](../MsmsMolSurface)参照)
 
 
 ## APBS toolの設定
@@ -23,23 +23,23 @@ CueMol2からAPBS(http://www.poissonboltzmann.org/apbs)を使って，まあま�
 まず，"APBS exe path:"にinstallしたAPBSの実行ファイルを指定します．
 
 "Change..."ボタンを押すとファイルを開くダイアログが現れるので，
-そこから[cuemol2/APBS_Install](../../cuemol2/APBS_Install)でインストールしたAPBS.exe(あるいはMacOSXではapbs)ファイルを指定してください．
+そこから[cuemol2/APBS_Install](../APBS_Install)でインストールしたAPBS.exe(あるいはMacOSXではapbs)ファイルを指定してください．
 
 #### Windowsの場合
 CueMol2 2.1.0 (Windows版のみ)以降では，APBSが付属しています．CueMol2を
 
->C:\Program Files (x86)\CueMol 2.0
+> C:\Program Files (x86)\CueMol 2.0
 
 にインストールした場合は，APBS.exeは
 
->C:\Program Files (x86)\CueMol 2.0\apbs\APBS.exe
+> C:\Program Files (x86)\CueMol 2.0\apbs\APBS.exe
 
 にインストールされています．
 デフォルトでは上記のファイルが指定されているはずですが，
 そうなっていないようなら，上記のファイルを指定してください．
 
 #### MacOS Xの場合
-[cuemol2/APBS_Install](../../cuemol2/APBS_Install)に書かれている通りに/Applicationにインストールした場合は，"APBS exe path:"に，
+[cuemol2/APBS_Install](../APBS_Install)に書かれている通りに/Applicationにインストールした場合は，"APBS exe path:"に，
 
 > /Application/APBS.app/Contents/MacOS/apbs
 
@@ -54,7 +54,7 @@ Target moleculeの下に，"Selection:"というチェックボックスがあ�
 分子の全体ではなく，一部分に対して計算を行う場合は，
 これをONにして計算対象を指定します．
 
-[分子表面の生成](../../cuemol2/MsmsMolSurface)同様に，水分子やイオンなどは除いて計算するのが普通だと思うので，proteinなど，そういう選択を指定してください．
+[分子表面の生成](../MsmsMolSurface)同様に，水分子やイオンなどは除いて計算するのが普通だと思うので，proteinなど，そういう選択を指定してください．
 例として用いている1CRN (crambin)はもともとPDBファイル中に
 タンパク分子しか含まれていないので，
 defaultのままでOKです．
@@ -73,7 +73,7 @@ Defaultでは，"pot_"+計算対象分子名
 
 ### PDB2PQR
 "Use PDB2PQR"の方をクリックすると，PDB2PQRを使用して電荷・原子半径割り当て，水素原子付加が行われます．
-（使用前に[cuemol2/APBS_Install](../../cuemol2/APBS_Install)を参考にPDB2PQRをインストールしてください）
+（使用前に[cuemol2/APBS_Install](../APBS_Install)を参考にPDB2PQRをインストールしてください）
 
 1.  **Charge calculation method**のところの，**Use PDB2PQR**をonにして，
 1.  **pdb2pqr.py path:**にインストールしたpdb2pqr.pyファイル（あるいはpdb2pqr_wrap.batファイル）を指定します．<br/>
@@ -84,7 +84,7 @@ charmmのままで問題ないと思います．
 
 #### Windowsの場合
 
-CueMol2.1.0以降(Windows版)あるいは[cuemol2/APBS_Install](../../cuemol2/APBS_Install)にあるzipファイルに含まれる
+CueMol2.1.0以降(Windows版)あるいは[cuemol2/APBS_Install](../APBS_Install)にあるzipファイルに含まれる
 pdb2pqr簡易版を使用する場合は，
 "pdb2pqr.py path:"には**pdb2pqr_wrap.bat**というバッチファイルを指定してください．
 
@@ -99,7 +99,7 @@ C:\Program Files (x86)\CueMol 2.0\apbs\pdb2pqr_wrap.bat<br/>
 そうなっていないようなら，上記のファイルを指定してください．
 
 #### MacOS Xの場合
-[cuemol2/APBS_Install](../../cuemol2/APBS_Install)に書かれている通りに/Applicationにインストールした場合は，"pdb2pqr.py path:"に，
+[cuemol2/APBS_Install](../APBS_Install)に書かれている通りに/Applicationにインストールした場合は，"pdb2pqr.py path:"に，
 
 > /Application/pdb2pqr-osx-bin-X.X/pdb2pqr
 
