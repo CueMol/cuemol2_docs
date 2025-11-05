@@ -1,0 +1,876 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/Documents/CueMol2Tutorial2013/Step4/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Step4 - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step4" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/Documents/CueMol2Tutorial2013/Step4/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step4: 類似蛋白質との重ね合わせの図を作成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step4: 類似蛋白質との重ね合わせの図を作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      新規シーンの作成など
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdb-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDB IDを指定してネットサイトから分子を読み込む
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssm-superpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSM superposeによる重ね合わせ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      図の作成への準備
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartoon表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartoon_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartoonの着色
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cartoonの着色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChRの設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#br" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRの設定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retinalcpk-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      RetinalのCPK modelを作成する
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RetinalのCPK modelを作成する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chr_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#br_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      BR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      cameraとして視点を保存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pov-rayrendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      POV-Rayによるrendering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Step4</h1>
+
+<p><a href="../../../Documents/CueMol2Tutorial2013">一覧へ戻る</a></p>
+<h2 id="step4">Step4: 類似蛋白質との重ね合わせの図を作成<a class="headerlink" href="#step4" title="Permanent link">&para;</a></h2>
+<p>論文などで類似構造を持つタンパク質と構造比較を行い，議論することがよくありますが，
+このstepでは，ChRとバクテリオロドプシン(bR, PDB ID=1IW6)との重ね合わせ図を作成します．
+(Fig. 2, fig2_superpose.qscとします)</p>
+<h3 id="_1">新規シーンの作成など<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>まず，前ステップとは別の図を作るので，新しいシーンを作成します．</p>
+<p>メニュー「File」→「New Tab」を実行すると，New Tab/Window dialogが表示されますが，「New Scene」を選択してOKを押すと新規シーンが作成されます．（GUIのチュートリアル<a href="../../../Documents/GUIのチュートリアル(CueMol2)/Step6">Step6</a>参照）</p>
+<p>そして，先に「名前を付けて保存」を実行し，fig2_superpose.qscという名前でシーンを保存します．
+（あと，特に指定はしていませんが，適宜シーンを保存するのを忘れないようにしてください．）</p>
+<p>複数の図を1つのsceneで作ってしまうことも可能ですが，
+図として違う場合は別のsceneにするのがお勧めです．</p>
+<h3 id="pdb-id">PDB IDを指定してネットサイトから分子を読み込む<a class="headerlink" href="#pdb-id" title="Permanent link">&para;</a></h3>
+<p>次に，bacteriorhodopsin (BR)のファイルをPDBから取得します．
+PDB IDは1IW6です．（GUIのチュートリアル<a href="../../../Documents/GUIのチュートリアル(CueMol2)/Step1">Step1</a>も参照）</p>
+<p>メニューから，「File」→「Get PDB using accession code ...」を実行すると，
+Enter PDB IDとかかれたdialogが現れるので，1IW6と入力します．</p>
+<p>ファイルがダウンロードされた後，Renderer option dialogが表示されます．</p>
+<p>ここでは，まず重ね合わせがちゃんとできているか確認しやすいように，trace rendererを指定してください．
+さらに，Recenter viewもチェックされていることを確認してください（自動的に読み込まれたBRに視点が移動する）</p>
+<p>以上の操作を行うと，以下の図のようにBRの主鎖構造が表示されます．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-1loadbr-trace1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step4-1loadbr-trace1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-1loadbr-trace1.png" style="zoom: 0.25" /></a></p>
+<p>さらに，ChRのPDBファイル(3UG9_AB.pdb)を開きます．(<a href="../../../Documents/CueMol2Tutorial2013/Step1">Step1</a>参照)</p>
+<p>Renderer option dialogでは，BRと同様に，重ね合わせがちゃんとできているか確認しやすいように，
+trace rendererを指定してください．
+また，Object名は，前stepと同様に3UG9-ABに変更します（defaultでは3UG9-AB.pdbと拡張子がついている）</p>
+<p>以上の操作を行うと，以下の図のようにChRの主鎖構造が表示されます．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-2loadchr-trace1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step4-2loadchr-trace1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-2loadchr-trace1.png" style="zoom: 0.25" /></a></p>
+<h3 id="ssm-superpose">SSM superposeによる重ね合わせ<a class="headerlink" href="#ssm-superpose" title="Permanent link">&para;</a></h3>
+<p>このままではBRとChRがそれぞれ別の位置・向きにあるため比較が困難です．
+そのため，ChRとBRの重ね合わせを行います．</p>
+<p>重ね合わせには，対応する原子を手動で指定して重ね合わせる方法と，
+タンパク質の二次構造の立体配置に基づいて自動的に重ね合わせるSSM superposeの２つの方法があります．</p>
+<p>ここではSSM superposeを用いた自動的な重ね合わせの方法を説明します．</p>
+<p>まず，メニュー「Tools」→「Molecular superposition...」を実行すると，
+Molecular superposition dialogが現れます．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-3ssmsuper1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step4-3ssmsuper1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-3ssmsuper1.png" style="zoom: 0.5" /></a></p>
+<p>次に，dialogの設定を以下の通り変更（あるいはそうなっているか確認）します．</p>
+<ul>
+<li>AlgorithmをSecondary Structure Matchingに．</li>
+<li>Referenceの方のMoleculeを3UG9-AB.pdb (ChR)に</li>
+<li>
+<p>Referenceの方のSelectionをc; A (A鎖のみ)にする．<br/>
+ChRにはchain A, Bの２分子含まれていますが，こうすることでchain Aのみが重ね合わせの対象になります．</p>
+</li>
+<li>
+<p>Movingの方のMoleculeを1IW6 (bR)に．</p>
+</li>
+<li>Movingの方のSelectionは"*"のまま</li>
+</ul>
+<p>以上を指定後，OKボタンを押すと重ね合わせが実行されます．</p>
+<p>何らかのエラーがおき重ね合わせができなかった場合はエラーが表示されますので，
+エラーを修正後再度OKを押してください．</p>
+<p>問題なく重ね合わせができた場合はdialogが閉じ，分子ビューの表示が更新され，
+log windowに結果(rmsd, alignment等)が表示されます：</p>
+<pre><code>===== SSM superpose result =====
+ Ref: 3UG9-AB, Mov: 1IW6
+ RMSD: 2.139394 angstrom
+ Nalgn: 200
+ Ngaps: 6
+ Rotation: 154.039064 degree
+ Alignment:
+ (以下alignment表示が続く)
+ ...
+</code></pre>
+<p>Molecular superpositionが行われると，分子ビューの方は以下の図のように変化し，ChRのA鎖にBRが重ね合わさったことが分かります．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-4ssmsuper_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step4-4ssmsuper_fin1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-4ssmsuper_fin1.png" style="zoom: 0.25" /></a></p>
+<h3 id="_2">図の作成への準備<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>重ね合わせができたことが確認できたので，以降は表示を作図用に作っていきます．</p>
+<p>まず，背景を白にします（<a href="../../../Documents/CueMol2Tutorial2013/Step1">Step1</a>背景を白色にする参照）．</p>
+<p>次に，styleをimportします．Sceneパネルで，Stylesを選択し，右クリックでcontext menuを表示させ，
+「Style file」→「Load ...」を実行します．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-6importstyle1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-6importstyle1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-6importstyle1.png" style="zoom: 0.75" /></a></p>
+<p>すると，Open style file dialogが表示されるので，そこから前節(<a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2</a>)で書き出したcommon_style.xmlを選択します．
+OKを押してdialogを閉じるとcommon_style.xmlがimportされます．</p>
+<p><img alt="step5-7importstyle2" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-7importstyle2.png" /></p>
+<p>あと，BR, ChRそれぞれにsimple rendererを作成しておきます．
+前節のシーンファイル（もし開いていないなら別タブに開く）から，
+simple rendererをコピー・ペーストすれば簡単です（<a href="../../../cuemol2/ObjRendCopyPaste">cuemol2/ObjRendCopyPaste</a>を参照）．</p>
+<p>Simple rendererをコピーしてきたのち，表示をONにすると以下のような表示になります．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-5simplerend1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step4-5simplerend1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step4-5simplerend1.png" style="zoom: 0.25" /></a></p>
+<h3 id="cartoon">Cartoon表示<a class="headerlink" href="#cartoon" title="Permanent link">&para;</a></h3>
+<p>重ね合わせ図はごちゃごちゃしやすいので，
+ribbonではなくcartoon表示（helixがcylinder状に表示される）が適しています．</p>
+<p>まず，BRの方のcartoon表示を作成します．
+Sceneパネルで1IW6を選択し，「＋」ボタンを押してrendererを作成します．
+Setup renderer dialogでは，</p>
+<ul>
+<li>Renderer typeはcartoonを選び，</li>
+<li>Selectionをcheckし</li>
+<li>Selectionのtext boxに*（あるいはproteinでもOK）を入力します．</li>
+</ul>
+<p>次に，ChRの方のcartoon表示も作成します．
+Sceneパネルで3UG9-ABを選択し「＋」ボタンを押してrendererを作成します．
+Setup renderer dialogでは，</p>
+<ul>
+<li>Renderer typeはcartoonを選び，</li>
+<li>Selectionをcheckし</li>
+<li>Selectionのtext boxにc; Aと入力し，A鎖に対するcartoon rendererのみ作成されるようにします．</li>
+</ul>
+<p>（<a href="../../../Documents/CueMol2Tutorial2013/Step3">Step1</a>・RetinalのCPK renderer作成の項目を参照）</p>
+<p>以上の操作を行うと，分子ビューは下図のようになります．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-5cartoonrend1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-5cartoonrend1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-5cartoonrend1.png" style="zoom: 0.25" /></a></p>
+<h3 id="cartoon_1">Cartoonの着色<a class="headerlink" href="#cartoon_1" title="Permanent link">&para;</a></h3>
+<h4 id="chr">ChRの設定<a class="headerlink" href="#chr" title="Permanent link">&para;</a></h4>
+<p>ChRのCartoon表示の着色については，全体構造図のribbonと同じにします（<a href="../../../Documents/CueMol2Tutorial2013/Step3">Step3</a>参照）．
+まず，Colorパネルで3UG9-ABを選ぶと，defaultの着色が入っているので，それらをすべて削除します（<img alt="step5-8clearpaint1" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-8clearpaint1.png" />ボタンで一括削除できます）．
+その後，Step3のribbonと同じ着色を一つ一つ追加してやると同じ着色になります．</p>
+<p>あるいは，Step3 (fig1_overall_3.qsc)からコピー・ペーストしてやると非常に簡単に同じ着色に設定することができます．</p>
+<ul>
+<li>
+<p><strong>fig1の着色設定をコピーする</strong><br/>
+まず，fig1_overall_3.qscのタブをクリックし（開いていないようならFile→Open sceneで開いておく），Colorパネルで3UG9-ABの着色設定を表示させます．<br/>
+下のlistboxで全ての項目を選択し（一番上の項目をクリック→一番下の項目をshiftを押しながらclick），listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br/>
+メニュー中からCopyを選ぶと設定がコピーされます．</p>
+</li>
+<li>
+<p><strong>fig2へ設定をペーストする</strong><br/>
+fig2_superpose_1.qscのタブをクリックし，Colorパネルで3UG9-ABの着色設定を表示させます．<br/>
+この状態ではlistboxは空になっているはずです．<br/>
+listboxの中で右ボタンをクリックするとcontext menuが表示されます．<br/>
+メニュー中からPasteを選ぶと設定がペーストされます．</p>
+</li>
+</ul>
+<p>最終的には，Colorパネルは以下のようになります．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-9chrpaint1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-9chrpaint1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-9chrpaint1.png" style="zoom: 0.5" /></a></p>
+<h4 id="br">BRの設定<a class="headerlink" href="#br" title="Permanent link">&para;</a></h4>
+<p>次に，BRのcartoon rendererの着色を指定します．</p>
+<p>まず，styleにBRの選択文と色を定義します．
+BRはほぼTMしかないので，色分けせずに単色で塗ることにします．</p>
+<p>|Name|color|selection|h
+|BR|hsb(40,0.5,1)|*|</p>
+<p>選択はBR分子全体(*)なので，定義するほどでもないですが，一応定義します．</p>
+<p>SceneパネルでStylesを展開しcommon_styleの項目をdouble clickすると，Style editor dialogが表示されます．<br/>
+Colorタブで新規項目を追加し，上記のBRの色定義を追加します．<br/>
+さらに，Selectionタブで新規項目を追加し，上記のBRの選択定義を追加します．<br/>
+（詳しい方法は，<a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2 色と選択の定義</a>を参照してください）</p>
+<p>次に，定義された色と選択を使用して，paint coloringを設定します．
+（詳しい方法は，<a href="../../../Documents/CueMol2Tutorial2013/Step2">Step2 色と分子選択定義を使用するように変更する</a>を参照してください）
+Color panelで1IW6を選び，
+まず，<img alt="step5-8clearpaint1" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-8clearpaint1.png" />ボタンでdefaultの塗り設定をすべて削除します．
+次に，「＋」ボタンで塗り項目を追加して，
+分子選択をBR（リストボックスの中にあるはず）に
+色もbr（Named color中にあるはず）に変更し，
+OKを押すと着色項目が追加されます．</p>
+<blockquote>
+<p><img alt="step5-10brpaint1" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-10brpaint1.png" /> → <a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-11brpaint_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-11brpaint_fin1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-11brpaint_fin1.png" style="zoom: 0.25" /></a></p>
+</blockquote>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>外部ファイル中にあるスタイルは変更後保存しておいた方がよい．
+シーン全体を保存すると，外部ファイルにリンクされているスタイルについても書き出される．
+保存をすると，common_styles.xmlにスタイルの変更が書き出される．</p>
+<p>※あるいは，明示的に保存することでcommon_styles.xmlを更新することも可能．
+シーンパネルで，保存するスタイル項目を左クリックするとcontext menuが表示されます．
+そして，このメニューで，「File」→「Save」をクリックします．
+すると，外部ファイル（common_style.xml）に変更後のスタイルの内容が書き出されます．</p>
+</blockquote>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>スタイルを編集したシーンとは異なる別シーンも同時に開いている場合，
+上記の書き出しを行うと，それらの別シーンでのスタイル定義とファイル中の定義が異なったものとなり不整合が生じる．
+別シーンではReloadを行うことでファイル中のスタイル定義が読み込まれ，不整合が解消される．
+（この場合は，fig2_superpose.qscからstyleを変更したので，
+もしfig1_overall.qscを別タブで開いているようなら，そちら側でstyle再読み込みを行っておく）</p>
+</blockquote>
+<h3 id="retinalcpk-model">RetinalのCPK modelを作成する<a class="headerlink" href="#retinalcpk-model" title="Permanent link">&para;</a></h3>
+<h4 id="chr_1">ChR<a class="headerlink" href="#chr_1" title="Permanent link">&para;</a></h4>
+<p><a href="../../../Documents/CueMol2Tutorial2013/Step3">Step3</a>と同様にしてretinalのCPK modelを作成します．
+ChRの方は操作はStep3とほぼ同じなので，Step3を参照してください．</p>
+<p>あるいは，fig1_overall_3.qscのシーンの方からコピー・ペーストしてくると簡単にできます．</p>
+<ul>
+<li>
+<p><strong>fig1からコピー</strong><br/>
+fig1_overall_3.qscのタブをクリックし，fig1のシーンを表示させます．Sceneパネルで分子3UG9-ABを展開して
+A鎖retinal（A Retinal(cpk)という項目）を右クリックし，context menuからcopyを選ぶ．</p>
+</li>
+<li>
+<p><strong>fig2へペースト</strong><br/>
+fig2_superpose_1.qscのタブをクリックし，fig2のシーンを表示させます．
+Sceneパネルで分子3UG9-ABを右クリックし，context menuからpasteを選ぶと，A RetinalのCPK rendererがペーストされる．
+分子ビューにもretinalがピンク色で表示される．</p>
+</li>
+</ul>
+<p>（詳しくは<a href="../../../cuemol2/ObjRendCopyPaste">cuemol2/ObjRendCopyPaste</a>を参照．）</p>
+<h4 id="br_1">BR<a class="headerlink" href="#br_1" title="Permanent link">&para;</a></h4>
+<p>次に，BRの方もretinalをCPK表示させます．</p>
+<p>まず，BRのretinalを選択します．MolStructパネルで1IW6を選択し，A鎖を展開してスクロールさせていくと「250 RET」という項目があることが分かります．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-12brretinalsel1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-12brretinalsel1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-12brretinalsel1.png" /></a></p>
+<p>この項目をクリックし，下のツールボタンの矢印ボタン<img alt="step3-25arrowbtn1" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step3-25arrowbtn1.png" />をクリックすると，BRのretinalが選択されます．
+この状態でrendererを作成し，Setup renderer dialogでは，</p>
+<ul>
+<li>Renderer typeはcpkに，</li>
+<li>Renderer nameをBR Retinalに，</li>
+<li>SelectionはA.250.* (上記で選択したものが自動的に入っている筈)</li>
+</ul>
+<p>以上のように入力し，OKを押します．</p>
+<p><strong>補足</strong></p>
+<blockquote>
+<p>BRのretinalに対する選択と色については，本チュートリアルではこの図以降出てくることがないので定義していない．本来ならば再度出てくることも考えられるので（BRRetinal等として）定義しておいた方が良いかもしれない．</p>
+</blockquote>
+<p>最終的に作業用に作成したsimpleとtraceを非表示にすると，以下のような表示になります．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-13cpkretinal_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-13cpkretinal_fin1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-13cpkretinal_fin1.png" style="zoom: 0.25" /></a></p>
+<h3 id="rendering">Rendering<a class="headerlink" href="#rendering" title="Permanent link">&para;</a></h3>
+<h4 id="camera">cameraとして視点を保存<a class="headerlink" href="#camera" title="Permanent link">&para;</a></h4>
+<p>以上の操作で表示は完成したので，上図のようにviewの向きを調整し，cameraとして念のため保存しておきます．</p>
+<p>SceneパネルのCameraを選択し，「＋」ボタンを押すと新規camera名を入力するdialogが出てきます．
+名前はdefaultのcamera_0のままでもよいので，OKを押すと（もちろん適当な名前に変更しても可）
+現在のViewの状態がcamera_0として保存されます．</p>
+<p>このように適宜重要なviewの状態をcameraとして保存しておくと，誤ってviewを動かしてしまったりしたときに，
+camera_0をダブルクリックすることでその状態に戻る事ができるので便利です．</p>
+<p>（詳しくは<a href="../../../Documents/GUIのチュートリアル(CueMol2)/Step9">Documents/GUIのチュートリアル(CueMol2)/Step9</a>や<a href="../../../cuemol2/Camera">cuemol2/Camera</a>を参照）</p>
+<h4 id="pov-rayrendering">POV-Rayによるrendering<a class="headerlink" href="#pov-rayrendering" title="Permanent link">&para;</a></h4>
+<p>以上でシーンが完成しました．</p>
+<p>画像にrenderingするには，
+Viewを調整し図のような向きにして，
+メニュー「Render」→「POV-Ray Rendering」を実行してください．
+<a href="../../../Documents/CueMol2Tutorial2013/Step3">Step3 保存とRendering</a>と同様に設定を行い，
+Renderボタンを押すと画像が生成されます．
+Save image...ボタンを押せば，完成した画像をpng形式で保存できます．</p>
+<p><a class="glightbox" href="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-14povrender_fin1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="step5-14povrender_fin1" class="on-glb" src="../../../assets/images/Documents/CueMol2Tutorial2013/Step4/step5-14povrender_fin1.png" style="zoom: 0.5" /></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

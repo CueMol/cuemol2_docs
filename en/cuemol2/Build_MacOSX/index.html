@@ -1,0 +1,883 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/cuemol2/Build_MacOSX/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Build MacOSX - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cuemol2xulrunnergecko" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build MacOSX
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cuemol2/Build_MacOSX/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cuemol2xulrunnergecko" class="md-nav__link">
+    <span class="md-ellipsis">
+      CueMol2のバージョンとxulrunner/geckoのバージョン
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos-xbuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      MacOS Xでのbuild
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MacOS Xでのbuild">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      必要なソフトウェア・ライブラリ類のインストール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="必要なソフトウェア・ライブラリ類のインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macports" class="md-nav__link">
+    <span class="md-ellipsis">
+      MacPortsのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xulrunner-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      xulrunner SDKのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOOSTのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fftw" class="md-nav__link">
+    <span class="md-ellipsis">
+      FFTWのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glew" class="md-nav__link">
+    <span class="md-ellipsis">
+      glewのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgal" class="md-nav__link">
+    <span class="md-ellipsis">
+      CGALのインストール方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-codecheckout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source codeのcheckout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurebuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      configureスクリプトの実行とbuild
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      お試し実行など
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="お試し実行など">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配布パッケージの生成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      その他注意点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      メモ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pov-ray-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      POV-Ray 3.7のビルド
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Build MacOSX</h1>
+
+<p><a href="../../cuemol2/">../</a></p>
+<h2 id="cuemol2xulrunnergecko">CueMol2のバージョンとxulrunner/geckoのバージョン<a class="headerlink" href="#cuemol2xulrunnergecko" title="Permanent link">&para;</a></h2>
+<p>CueMol2のバージョンに合ったバージョンを用いる必要がある。</p>
+<ul>
+<li>2.1系列では9.0.1を使用。(2.1.0.270)</li>
+<li>2.2系列では23.0.1を使用。(2.2.0.321)</li>
+</ul>
+<h2 id="macos-xbuild">MacOS Xでのbuild<a class="headerlink" href="#macos-xbuild" title="Permanent link">&para;</a></h2>
+<p>Mac OSX 10.6 (Snow Leopard)あるいは10.7(Lion)での場合．(Leopardではなぜか動かない)</p>
+<h3 id="_1">必要なソフトウェア・ライブラリ類のインストール<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Xcode (OS付属，version 3)</li>
+<li>MacPorts (下記参照)</li>
+<li>xulrunner SDK </li>
+<li>BOOST C++ Libraries</li>
+<li>FFTW</li>
+<li>libpng (2.0.1では不要)</li>
+<li>CGAL</li>
+<li>glew</li>
+</ul>
+<h4 id="macports">MacPortsのインストール<a class="headerlink" href="#macports" title="Permanent link">&para;</a></h4>
+<p>CueMol2自体のbuildには直接必要ではないが，xulrunner SDKについているxpidlなどのコマンドが，
+MacPortsのライブラリーに対してlinkされているので，インストールしないと動かない．
+基本的には，
+<a href="../../https://developer.mozilla.org/en/Mac_OS_X_Build_Prerequisites">Mac OS X Build Prerequisites</a>
+の通りにMacPortsをインストールすればよいが，
+そのままでやると64bit版のbinaryしかinstallされないので（SDK付属のbinaryは32bitらしい）
+Universal binaryになるようにMacPortsを設定する必要がある．</p>
+<p>すべてのコマンドの引数に，+universalというのを追加して実行すればよいが，
+/opt/local/etc/macports/variants.conf
+ファイルに，</p>
+<pre><code>+universal
+</code></pre>
+<p>という行を追加すれば，自動的に追加したようになるらしい．</p>
+<p>★Homebrewでも可能（むしろ現時点では推奨？）</p>
+<h4 id="xulrunner-sdk">xulrunner SDKのインストール<a class="headerlink" href="#xulrunner-sdk" title="Permanent link">&para;</a></h4>
+<p>ftp://ftp.mozilla.org/pub/xulrunner/releases/ からdownloadできる．
+CueMol2のバージョンに合ったバージョンのSDKを用いる必要がある。~/proj以下に展開すると，xulrunner-sdkというdirectoryができてその下に展開される．（複数バージョンを切り替えて使用する必要があるときはxulrunner-sdkを適宜renameする）</p>
+<p><strong>Frameworkのインストール問題</strong></p>
+<p>MacOS版のsdkにはbuildに必要なFrameworkがなぜかはいっていない。runtimeの方のみに入っているのでそちらもinstallする必要がある。SDKを使用する場合は，xulrunner-sdk直下に/Library/Frameworks/XUL.Frameworkへのsymlinkを張ればよい．</p>
+<p>一方、sourceからbuildすると、objdirのdistディレクトリー内にXUL.Frameworkがちゃんとできるので、
+これをdebug versionとして使用できる。</p>
+<h4 id="boost">BOOSTのインストール<a class="headerlink" href="#boost" title="Permanent link">&para;</a></h4>
+<p><a href="../..///www.boost.org/">http</a>から取得できる．</p>
+<p>まずソースを展開後、bjamをbuildする。</p>
+<pre><code>./bootstrap.sh
+</code></pre>
+<p>buildはそのままで行うと64bitになってしまうので適切なオプション設定が必要．
+また，すべてのlibraryのbuildを行う必要はない．以下のscriptで，~/proj/boost以下にインストールされるべくbuildされるはず．</p>
+<pre><code>#!/bin/sh
+instpath=$HOME/proj/boost
+./bjam \
+--prefix=$instpath \
+--exec-prefix=$instpath \
+--libdir=$instpath \
+--includedir=$instpath \
+--with-date_time \
+--with-filesystem \
+--with-iostreams \
+--with-program_options \
+--with-regex \
+--with-system \
+--with-thread \
+architecture=x86 address-model=32 link=shared,static threading=multi install
+</code></pre>
+<p>(最後の引数がstageだとlibraryのbuildのみを行い、installだとheader fileのcopyまで行う．64bitをbuildするには，address-model=64にすればよい)</p>
+<p>ただ，実際にはinstallしても，うまくいかない。autoconfのscriptが期待するdirectory構成と違うようにinstallされてしまうため。</p>
+<ul>
+<li>1.44では、$instpathに直にインストールされていたので、$instpath/libを作って、そこに移動。</li>
+<li>include filesも、$instpathに直にインストールされてしまうので、$instpath/includeを作って、boostをそこに移動</li>
+</ul>
+<pre><code>&gt; cd $HOME/proj/boost
+&gt; mkdir include lib
+&gt; mv boost include
+&gt; mv libboost_* lib
+</code></pre>
+<h4 id="fftw">FFTWのインストール<a class="headerlink" href="#fftw" title="Permanent link">&para;</a></h4>
+<p>http://www.fftw.org/download.htmlから取得可能。</p>
+<p>基本的に、configure/makeでいけるが、configure時に以下のように、32bit, float版をbuildするように注意。あと、defaultでstatic libraryがbuildされるが、それでOK.</p>
+<pre><code>env CFLAGS=-m32 ./configure --enable-float --prefix=$HOME/proj --disable-fortran
+</code></pre>
+<p>以下のように最適化した方が、若干速い気がする。</p>
+<pre><code>env CFLAGS=&quot;-m32 -fast&quot; ./configure --enable-float --prefix=$HOME/proj --disable-fortran --enable-sse
+</code></pre>
+<h4 id="glew">glewのインストール<a class="headerlink" href="#glew" title="Permanent link">&para;</a></h4>
+<ul>
+<li>version 1.7.0を使用</li>
+<li>32bitでコンパイルする必要があるがコマンドラインからはそういう指定はどうやるか分からなかったのでconfig/Makefile.darwinのCC, LDを変更した．</li>
+</ul>
+<pre><code>CC=cc -m32
+LD=cc -m32
+</code></pre>
+<ul>
+<li>Sourceを展開して単にmake．configureとかはない．GLEW_DESTを指定してinstall先を変更($HOME/proj/glew)．</li>
+</ul>
+<pre><code>env GLEW_DEST=$HOME/proj/glew make
+env GLEW_DEST=$HOME/proj/glew make install
+</code></pre>
+<h4 id="cgal">CGALのインストール方法<a class="headerlink" href="#cgal" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CMakeを普通にインストールする(公式サイトにdmgファイルがある)</li>
+<li>CGALのdocumentation通りにcmake-guiを実行</li>
+</ul>
+<pre><code>cmake-gui .
+</code></pre>
+<ul>
+<li>
+<p>Macroとして、BOOST_ROOTを指定する(listboxに追加すればよい)<br/>
+指定dir以下に、lib/*.dylib, include/boost があればよい。
+例えば$HOME/proj/boostなど。</p>
+</li>
+<li>
+<p>一旦Configureボタンを押す。Dialogが出てくるので、Makefileを生成するoptionを選択する。
+（→他のMacroも現れてくる）</p>
+</li>
+<li>
+<p>CMAKE_INSTALL_PREFIXをインストール先($HOME/proj/CGAL等)に変更する。</p>
+</li>
+<li>32bit: CGAL_CXX_FLAGSというのも出てくるので、そこに-m32というのを追加→32bitでcompileされる</li>
+<li>再度Configureボタンを押す</li>
+<li>Generateを押すと、Makefileができる</li>
+<li>terminalからmake, make installを実行</li>
+</ul>
+<pre><code>make
+make install
+</code></pre>
+<p><strong>CGALとclangでの問題点</strong></p>
+<p>XCode4.5では、clangの対応していないstd::forwardやstd::moveを使ってしまいcompileが通らなくなる場合があった。
+CMakeのconfigが正しく行われないのが問題らしい（原因は不明）
+ともかくも、手動で</p>
+<pre><code>include/CGAL/compiler_config.h
+</code></pre>
+<p>を書き換えて</p>
+<pre><code>#define CGAL_CFG_NO_CPP0X_VARIADIC_TEMPLATES 1
+#define CGAL_CFG_NO_CPP0X_RVALUE_REFERENCE 1
+</code></pre>
+<p>を定義されるようにして、makeするとうまくいった。（本来は自動で定義されて然るべきの筈）</p>
+<h3 id="source-codecheckout">Source codeのcheckout<a class="headerlink" href="#source-codecheckout" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Anonymous (http)</li>
+</ul>
+<pre><code>git clone https://github.com/CueMol/cuemol2.git cuemol2
+</code></pre>
+<ul>
+<li>特定ユーザー (ssh)<br/></li>
+</ul>
+<pre><code>git clone git@github.com:CueMol/cuemol2.git cuemol2
+</code></pre>
+<p>以下では~/proj/cuemol2以下にcheckoutしたとする．</p>
+<h3 id="configurebuild">configureスクリプトの実行とbuild<a class="headerlink" href="#configurebuild" title="Permanent link">&para;</a></h3>
+<p>以下buildは，~/proj/cuemol2/uxbuildにて行うのでcdで移動．</p>
+<p>configureを走らせるためのスクリプトrun_config_osx.shが，~/proj/cuemol2/uxbuildにあるので，必要に応じて編集．（これを使わなくても出来なくもないが，いちいちキーボードから入力するのは面倒なので）</p>
+<p>library等のインストール位置を上述から変更していない場合は，
+CVS repositoryにあるrun_config_osx.shそのままで動くはず．
+インストール位置を変えている場合は，gecko_sdk_dirやboost_dirを変更する．</p>
+<p>エラー無くconfigureスクリプトが生成され，さらにMakefileが生成されたら，makeコマンドを実行．buildが行われる．</p>
+<h3 id="_2">お試し実行など<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>MacOS Xでは，適切な位置にxulやxpcom関連のファイルが配置されていないとアプリとしてちゃんと動かない．</p>
+<p>make installを実行すると，~/proj/cuemol2/uxbuild/osxbuild以下にCueMol2.appが作成される．
+jsやxul関連のファイルはjarファイルにまとめられる．
+他の必要なXULのファイルなどはsymbolic linkが作成される．
+~/proj/cuemol2以下にsourceを展開している場合は，</p>
+<pre><code>arch -i386 ~/proj/cuemol2/uxbuild/osxbuild/CueMol2.app/Content/MacOS/xulrunner
+</code></pre>
+<p>でterminalから起動可．（arch commandは，runtime版を使用している場合は必須．そうしないと64bitのxulrunnerが起動して32bitのcuemol componentをdynlink使用としたところでこける）</p>
+<p>debugと開発に使用可能．</p>
+<p>"component not loaded"というmessage boxが出て起動しない場合は、dyldがこけている可能性大。</p>
+<pre><code>setenv NSPR_LOG_MODULES linker:5
+</code></pre>
+<p>と環境変数を設定して起動するとLoadMachDyldModuleでのエラーがterminalに出るようになるので、
+何が原因で起動しないか検証することが可能になる（linkerをallにするとすべてのモジュールでのログが表示されるようになる）</p>
+<h4 id="_3">配布パッケージの生成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>src/osxbuild下でmake builddmgを実行すると，CueMol2-<version番号>-MacOSX-Intelというフォルダが作成され，その中にもCueMol2.appというのが出来ているが，これはsymbolic linkではなくすべてコピーになっているので，コピーすることで他のMacでも実行できるはず．あとさらに，同じ内容が入ったdmgファイルも作成される．</p>
+<p>Finderなどから起動する場合は，Dynamic link library (dylib)のパスを適切に書き換えとかないと，見つからなくて正常に起動できなくなる．dylibファイルに書き込まれているパスをあとで書き換えるためには，ファイル中にある程度スペースが確保されていないと書き換えに失敗する(make builddmgが中断する)．
+これを防ぐには，configure時にLDFLAGS=-Wl,-headerpad_max_install_namesを指定して十分なスペースを確保しておけばよい．</p>
+<h3 id="_4">その他注意点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>run_config_osx.shは，src/configureが存在する場合はautoconf/automake系のconfigure生成コマンドを実行しないので，強制的に再実行したい場合はsrc/configureを削除する．</p>
+<p>`%'-style pattern rules are a GNU make extension
+という警告が出るが，gnu makeを使用しているので，気にする必要はない（これはlinuxも同様）</p>
+<p>Mozilla build用にMacPortsでautoconfをinstallした場合，Mozillaのサイトにversion 2.13を入れるように指示があるが，それだとautomake系のコマンドがちゃんと動かなくなってしまうので，最新版を入れておく必要がある．（単にsudo port install autoconfとしておけばOK）</p>
+<p>現在の所，configure.acがMacOSXでのbuildを検出すると，勝手にgccに-m32オプションをつけるようになっている．（将来的には64bit buildに対応すべきだが）</p>
+<h2 id="_5">メモ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="pov-ray-37">POV-Ray 3.7のビルド<a class="headerlink" href="#pov-ray-37" title="Permanent link">&para;</a></h3>
+<p>★以下の方法でbuildは出来るが、renderingしても正常に画像が出力されない。
+なので、
+http://megapov.inetart.net/povrayunofficial_mac/
+で配布されているバイナリーを使用している。（ただしこのbinaryではWxHが2600pxを超えると画像が出力されないという不具合がある）</p>
+<p>githubからmasterを持ってくる</p>
+<p>BOOSTをbuildする．（上記のCueMol用に作ったのと同じで良い）<br/>
+lib*.aだけを持ってきた，boost_staticというdirectoryを作っておく．</p>
+<p>付属libpngをbuildする<br/>
+libraries/pngで，make -f scripts/makefile.gccを実行<br/>
+warningがでるが，build完了<br/>
+このままだとconfigureから使えるdirectory構成になっていないので，
+lib, include directoryを作り，lib<em>.aをlibに，</em>.hをincludeにコピーする</p>
+<p>付属zlibをbuildする<br/>
+libraries/zlibで，./configureを実行，makeを実行<br/>
+warningがでるが，build完了<br/>
+このままだとconfigureから使えるdirectory構成になっていないので，
+lib, include directoryを作り，lib<em>.aをlibに，</em>.hをincludeにコピーする</p>
+<p>unixでprebuild.shを実行</p>
+<p>以下のscriptでconfigureを実行する．ただし，topdirとboost_dirは適宜変更する．</p>
+<pre><code>boost_dir=$HOME/proj64/boost_static/
+topdir=$HOME/src/povray-3.7-stable
+env NON_REDISTRIBUTABLE_BUILD=yes \
+CXXFLAGS=-Wno-parentheses-equality \
+./configure \
+  COMPILED_BY=&quot;your name &lt;email@address&gt;&quot; \
+  --disable-debug \
+  --disable-shared \
+  --disable-io-restrictions \
+  --with-boost=$boost_dir \
+  --with-libpng=$topdir/libraries/png/lib \
+  --with-zlib=$topdir/libraries/zlib/lib \
+  --without-libjpeg \
+  --without-libtiff \
+</code></pre>
+<p>makeを実行．</p>
+<p>できるbinaryは，pwdからincを読み込まないようなので，Library_Pathに追加指定する必要がある．</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

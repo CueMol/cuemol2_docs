@@ -1,0 +1,740 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/cuemol2/Anim_MolMorph/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Anim MolMorph - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#morphing" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Anim MolMorph
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/cuemol2/Anim_MolMorph/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#morphing" class="md-nav__link">
+    <span class="md-ellipsis">
+      分子の構造変化(morphing)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前準備
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前準備">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ファイルの読み込みと重ね合わせ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphmol-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      MorphMol objectの作成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MorphMol objectの作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      変化の始点となる構造の読み込み
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molcoordmolmorph-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      MolCoordからMolMorph objectへの変換
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molmorph-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      MolMorph objectへの構造座標の追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morphmol-object_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      MorphMol objectの編集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      アニメーションの作成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="アニメーションの作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      アニメーションの追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      アニメーションの実行
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意点など
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注意点など">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      始点，終点等の分子構造の不一致
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      大きな構造変化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Anim MolMorph</h1>
+
+<h2 id="morphing">分子の構造変化(morphing)<a class="headerlink" href="#morphing" title="Permanent link">&para;</a></h2>
+<p>異なる構造をもつ２つの同一分子間の変化（変形=morphing）をアニメーションとして表示する場合に使用します．</p>
+<p>CueMol2.2では，線形補間によるmorphingが使用できます．
+線形補間によるmorphingでは，localなconformation changeをアニメーションすることが可能です．</p>
+<p>本項目で説明するSample scene fileが以下からダウンロードできます．</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/project/cuemol/sample-files/2.2/mol_morph1.qsc">mol_morph1.qsc</a>：　transducin-alphaの構造変化morphing</li>
+</ul>
+<h2 id="_1">前準備<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ここでは，transducin-alphaのGTP bound form (<a href="http://www.rcsb.org/pdb/explore.do?structureId=1tnd">1TND</a>) とGDP bound form (<a href="http://www.rcsb.org/pdb/explore.do?structureId=1tag">1TAG</a>) 間の構造変化を例に説明します．</p>
+<p>この2つの構造は分子としてはほとんど同じですが，各々PDBファイルに含まれる分子の位置が違ってしまっているため，
+まず両者を重ね合わせたPDBファイルを作成する必要があります．</p>
+<p>この例では，1TAGを1TNDに重ね合わせることとします．</p>
+<h3 id="_2">ファイルの読み込みと重ね合わせ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>まず，1TAG, 1TND両者のファイルを読み込みます．PDBのサイトからダウンロード後「Open File...」から読み込んでも良いですし，「Get PDB using accession code...」を使用して直接PDBのサイトから読み込んでも構いません．（<a href="../../Documents/GUIのチュートリアル(CueMol2)/Step1">Documents/GUIのチュートリアル(CueMol2)/Step1</a>参照）</p>
+<p>1TAGは１つのchain(A)のみですが，1TNDは３つのchain (A,B,C)を含んでいます．1TAGは分子全体を，1TNDはchain Aに対してのみtrace rendererで表示させます．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-1" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-1.png" style="zoom: 0.5" /></a></p>
+<p>次に，<a href="../../cuemol2/MolSuperpose">cuemol2/MolSuperpose</a>の「Secondary Structure Matching」に従って，2つの分子を重ね合わせます．
+1TAGをmovingに，1TNDをreferenceに設定し，1TNDのselectionに「c;A」を指定して，
+重ね合わせを実行すると以下の図のようになります．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-2" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-2.png" style="zoom: 0.5" /></a></p>
+<p>以上が完了したら，動かした方の1TAGをPDBファイルとして保存しておきます．メニュー「File」→「Save File As...」を実行し，1TAGを選択してOKを押し，その後表示されるファイル選択dialogでfile nameを1TAG-fit.pdbとして保存します．</p>
+<h2 id="morphmol-object">MorphMol objectの作成<a class="headerlink" href="#morphmol-object" title="Permanent link">&para;</a></h2>
+<h3 id="_3">変化の始点となる構造の読み込み<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>まず，変化の始点となる構造を読み込みます．
+ここでは，すでに読み込まれている1TNDを変化の始点としますので特に操作は必要ありませんが，
+ディスク上にあるPDBファイルなどを始点とする場合は，先に読み込んでおきます．</p>
+<h3 id="molcoordmolmorph-object">MolCoordからMolMorph objectへの変換<a class="headerlink" href="#molcoordmolmorph-object" title="Permanent link">&para;</a></h3>
+<p>Morphingを行うには，まず，PDBファイルを読み込んで作成されるMolCoord objectを，
+線形補間morphingに対応したMolMorph objectに変換する必要があります．</p>
+<p>メニュー「Tools」→「Mol morhping animation...」を実行すると，以下のようなdialogが表示されますので，MolMorphに変換したいMolCoord objectを選択します．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-3" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-3.png" /></a></p>
+<p>この例では，1TAGと1TNDがリストに表示されていますが，始点の構造の1TNDを選択し，OKボタンを押します．</p>
+<p>以上の通り実行すると，以下のようなdialogが表示されます．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-4" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-4.png" style="zoom: 0.75" /></a></p>
+<h3 id="molmorph-object">MolMorph objectへの構造座標の追加<a class="headerlink" href="#molmorph-object" title="Permanent link">&para;</a></h3>
+<p>以上の操作で，1TNDがMolMorph objectへ変換されました．
+上記のdialogでは，MolMorph objectが保持している座標データの一覧が表示されています．
+現在1つの座標データから変換して作成した直後なので，項目は１つ(this)しかありません．</p>
+<p>次に，構造変化の終点に対応する座標1TAG-fitを追加します．
+上記のdialogの「+」ボタンを押すと，ファイル選択dialogが表示されますので，
+上記で重ね合わせ後保存しておいた，1TAG-fit.pdbを指定し読み込ませます．
+すると，以下のように終点に対応する座標の項目が追加されます．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-5" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-5.png" style="zoom: 0.75" /></a></p>
+<p>終点の追加が完了したら，OKボタンを押してdialogを閉じます．</p>
+<h3 id="morphmol-object_1">MorphMol objectの編集<a class="headerlink" href="#morphmol-object_1" title="Permanent link">&para;</a></h3>
+<p>MorphMol objectに保持されている座標データの編集をさらに行う場合は，
+メニュー「Tools」→「Mol morhping animation...」を実行すると，再び上記と同様のdialogが表示されます．</p>
+<p>さらに座標を追加する場合は「+」を，不要な座標を削除する場合は項目を選択して「−」ボタンを押せば削除することが出来ます．</p>
+<h2 id="_4">アニメーションの作成<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">アニメーションの追加<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>以上でmorphingを行う準備ができました．
+次は実際にどのタイミングでどの程度の時間をかけてmorphingを行うかを，Animation panelから指定します．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-6" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-6.png" /></a></p>
+<p>上図のAnimation panelの「＋」ボタンを押し，「Mol Morphing」を選択すると，
+以下のような設定dialogが表示されます．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-7" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-7.png" style="zoom: 0.5" /></a></p>
+<p>この例では，0秒から1秒かけて始点から終点へと変形させるアニメーションを作成します．</p>
+<p>まずStart timeが0:0:0.0に，Durationが0:0:1.0になっていることを確認し，
+Target MorphMolの項目で，上記で変換・作成した1TNDを選択します．</p>
+<p>MolAnim settingsにある他の設定項目の意味は以下の通りになります．</p>
+<dl>
+<dt>Start value</dt>
+<dd>Morphing開始点の構造を指定する．0はMorphMolが有する構造リスト中の最初の構造になる．逆に，1は最後の構造になる．</dd>
+<dt>End value</dt>
+<dd>Morphing終了点の構造を指定する．1はMorphMolが有する構造リスト中の最後の構造になる．逆に，0は最初の構造になる．</dd>
+</dl>
+<p>すなわち，Start value=1, End value=0にすると，逆方向の構造変化が起こることになります．</p>
+<p>OKボタンを押すとanimation itemが追加され，Animation panelは下図のようになります．</p>
+<p><a class="glightbox" href="../../assets/images/cuemol2/Anim_MolMorph/morphmol-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="morphmol-8" class="on-glb" src="../../assets/images/cuemol2/Anim_MolMorph/morphmol-8.png" /></a></p>
+<h3 id="_6">アニメーションの実行<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>以上でmorphing animationの作成は完了しました．
+<a href="../../cuemol2/Anim_Basic">cuemol2/Anim_Basic</a>の「アニメーションの実行」にある方法に従ってアニメーションを再生すると，構造の変形がアニメーションとして表示されます．</p>
+<p>Chain Aについてリボン表示にし，さらに戻る構造変化（startValue=1→endValue=0）も追加すると，
+以下のようなアニメーションになります．</p>
+<iframe width="425" height="350" src="https://www.youtube.com/embed/4RKA3VUVcPo?mute=1&autoplay=1&loop=1&controls=1&rel=0&playlist=4RKA3VUVcPo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+</iframe>
+
+<h3 id="_7">注意点など<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="_8">始点，終点等の分子構造の不一致<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>変化の始点や終点，あるいは中間点の分子座標について，それぞれすべて対応する残基・原子が存在していない場合は，それらの原子はmorhping計算から除外されます．</p>
+<p>すなわち，(this)で表されるメイン座標に対応する原子が，他のサブ座標に存在しない場合はmorphing animation中その原子は静止したままとなります．
+一方，メイン座標に無い原子がサブ座標にあった場合，それらは読み込み時に無視されます．</p>
+<p>以上のような実装になっているため，全く同じ分子について異なる状態で決定された構造間のmorphingは簡単にできますが，似ているが異なるホモログ間の変形等は，そのままではうまく行きません．
+各分子についてホモロジ―モデリング等でモデル構造を作成し，残基番号などをそろえることで，
+正しくmorphingさせることが可能となります．</p>
+<h4 id="_9">大きな構造変化<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>線形補間のmorphingでは，非常に大きなドメインレベルでの変化を表現するのは困難ですが，
+他のソフトウェアで構造変化の中間構造を何個か作成し，
+それらを線形補間morphingでつなぎ合わせることでアニメーションを作成することができます．</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

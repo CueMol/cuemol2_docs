@@ -1,0 +1,968 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/Documents/BuildFromSrc/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>BuildFromSrc - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sourcebuild-windows" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BuildFromSrc
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Documents/BuildFromSrc/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sourcebuild-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sourceからのbuild (Windows)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sourceからのbuild (Windows)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      必要なソフトウェアのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ライブラリ類のインストール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ライブラリ類のインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      必要なライブラリ類もソースからビルドする場合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境変数の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS.NETの設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVSからチェックアウト
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVSからチェックアウト">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cygwincvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cygwin等のコマンドライン版CVSを使用する場合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wincvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      WinCVSを使用する場合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロジェクトの設定とビルド
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsnetide" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS.NETのIDEからの実行
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version番号を自動増加させつつインストーラーも生成する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcebuild-unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sourceからのbuild (UNIX)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sourceからのbuild (UNIX)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      必要なソフトウェアのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cvs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVSからのチェックアウト
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      configureの実行
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="configureの実行">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intel-compiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intel compilerを使用する場合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビルドとインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      実行
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>BuildFromSrc</h1>
+
+<p><a href="../../Documents">Documents</a></p>
+<h2 id="sourcebuild-windows">Sourceからのbuild (Windows)<a class="headerlink" href="#sourcebuild-windows" title="Permanent link">&para;</a></h2>
+<h3 id="_1">必要なソフトウェアのインストール<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>VisualStudio.Net2003</li>
+<li>ActivePerl <a href="http://www.activestate.com/Products/ActivePerl/">ページ</a></li>
+<li>InnoSetup (ver5.1.6) <a href="http://www.jrsoftware.org/isdl.php">ページ</a></li>
+</ul>
+<h3 id="_2">ライブラリ類のインストール<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>c:\proj\bin<br/>
+再配布可能DLL：</p>
+<ul>
+<li>libpng13.dll, libpng13d.dll(PNGライブラリ)</li>
+<li>MFC71.dll, MFC71u.dll (MFC)</li>
+<li>msvcp71.dll, msvcr71.dll (VCランタイム)</li>
+<li>zlib1.dll (libz for PNG)</li>
+<li>libfftw3f-3.dll (FFTW ver3.1.3)</li>
+<li>
+<p>c:\proj\include<br/>
+インクルードファイ類:</p>
+</li>
+<li>
+<p>db.h (BerkeleyDB)</p>
+</li>
+<li>png.h, pngconf.h, zconf.h, zlib.h (PNGライブラリ)</li>
+<li>fftw3.h</li>
+<li>freetype (FreeType ver.2.2.1)</li>
+<li>
+<p>c:\proj\lib<br/>
+インポートライブラリ+staticライブラリ:</p>
+</li>
+<li>
+<p>libdb40s.lib, libdb40sd.lib (BerkeleyDB ver 4.0, static library)</p>
+</li>
+<li>libpng13.lib, libpng13d.lib (PNGライブラリ version 1.3)</li>
+<li>zdll.lib (libz for PNG)</li>
+<li>libfftw3f-3.lib (FFTW ver3.1.3)</li>
+<li>freetype221.lib (FreeType ver2.2.1, static library)</li>
+</ul>
+</li>
+</ul>
+<p>これらをまとめたものを、以下からダウンロード出来ます：<br/>
+http://prdownloads.sourceforge.net/cuemol/cuemol-buildsetwin-1.1.0.187.zip?download</p>
+<h4 id="_3">必要なライブラリ類もソースからビルドする場合<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>BerkeleyDBはversion 4.0系でないとコンパイルが通らない（最新版も×）．
+<a href="http://dev.sleepycat.com/downloads/releasehistorybdb.html">このページ</a>の真ん中辺から，4.0.14を落としてドキュメントにしたがってビルド．</p>
+<p>libpngは1.3以外ではうまくいかなかった．（libzととのバージョン不整合？）</p>
+<p>FFTWはhttp://www.fftw.org/からダウンロードできる。</p>
+<p>FreeTypeはhttp://www.freetype.org/からダウンロードできる。</p>
+<h3 id="_4">環境変数の設定<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>コントロールパネルのシステムから、PATH環境変数に<br/>
+<strong>c:\proj\bin</strong><br/>
+を加える。（再起動かログオフが必要？）</li>
+</ul>
+<h3 id="vsnet">VS.NETの設定<a class="headerlink" href="#vsnet" title="Permanent link">&para;</a></h3>
+<ol>
+<li>ツール→オプション、ダイアログ左で「VC++ディレクトリ」を選ぶ</li>
+<li>右上の「ディレクトリを表示するプロジェクト」で「実行可能ファイル」を選び、<ul>
+<li>「c:\proj\bin」と,</li>
+<li>InnoSetupのisccのあるディレクトリ</li>
+<li>ActivePerlのperl.exeのディレクトリ「c:\Perl\bin」を追加する</li>
+</ul>
+</li>
+<li>「インクルードファイル」を選び、「c:\proj\include」を追加する</li>
+<li>「ライブラリファイル」を選び、「c:\proj\lib」を追加する</li>
+</ol>
+<h3 id="cvs">CVSからチェックアウト<a class="headerlink" href="#cvs" title="Permanent link">&para;</a></h3>
+<h4 id="cygwincvs">Cygwin等のコマンドライン版CVSを使用する場合<a class="headerlink" href="#cygwincvs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Anonymous (pserver)</li>
+</ul>
+<pre><code>cvs -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol login 
+cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol co cuemol 
+</code></pre>
+<ul>
+<li>特定ユーザー (ssh)</li>
+</ul>
+<pre><code>setenv CVSROOT XXXXX@cvs.sourceforge.jp:/cvsroot/cuemol
+setenv CVS_RSH ssh
+cvs -z3 co cuemol 
+</code></pre>
+<p>setenvは.cshrcなどに書いておけばよい。</p>
+<h4 id="wincvs">WinCVSを使用する場合<a class="headerlink" href="#wincvs" title="Permanent link">&para;</a></h4>
+<p>WinCVSを使う場合は、「WinCVS preferences」の、<strong>「Checkout text files with the Unix LF」を「ON」にする</strong></p>
+<ul>
+<li>
+<p>Anonymous (pserver)</p>
+<ol>
+<li>メニューRemote→Checkout module</li>
+<li>CVSROOTを設定。</li>
+</ol>
+</li>
+<li>
+<p>特定ユーザー (ssh)</p>
+<ol>
+<li>メニューRemote→Checkout module</li>
+<li>CVSROOTを設定。以下のようにすればよい。</li>
+</ol>
+</li>
+</ul>
+<pre><code>:ssh;username=XXXXX;hostname=cvs.sourceforge.jp;privatekey='秘密鍵へのパス';version=1:/cvsroot/cuemol
+</code></pre>
+<p>以下、c:\proj\cuemolにチェックアウトしたとして説明する。</p>
+<h3 id="_5">プロジェクトの設定とビルド<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>c:\proj\cuemol\winbuild\cuemol.slnを開く</li>
+<li>ソリューションエクスプローラーのツリーから、cuemolプロジェクトを選択</li>
+<li>ToolBarのソリューション構成からDebugかReleaseを選ぶ</li>
+<li>「ビルド」→「ソリューションのビルド」でビルド</li>
+</ol>
+<h3 id="vsnetide">VS.NETのIDEからの実行<a class="headerlink" href="#vsnetide" title="Permanent link">&para;</a></h3>
+<ol>
+<li>コンテキストメニューで、cuemolプロジェクトのプロパティーを開く</li>
+<li>左上の「構成」コンボボックスで「Debug」を選ぶ</li>
+<li>デバッグ項目を選び、「コマンド引数」の項目に<strong>「/cf $(ProjectDir)\sysconfig_debug.xml」</strong>を設定</li>
+<li>左上の「構成」コンボボックスで「Release」を選ぶ</li>
+<li>デバッグ項目を選び、「コマンド引数」の項目に<strong>「/cf $(ProjectDir)\sysconfig.xml」</strong>を設定</li>
+<li>Menu 「デバッグ」→「開始」などから実行する．</li>
+</ol>
+<h3 id="version">Version番号を自動増加させつつインストーラーも生成する<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<ol>
+<li>マクロエクスプローラーを開く</li>
+<li>MyMacrosを開き，デフォルトで在るModule1をダブルクリックするとVBのIDEが起動</li>
+<li>VBのIDEのプロジェクトエクスプローラで，MyMacroのコンテキストメニューを出す</li>
+<li>コンテキストメニューの追加を選び，c:\proj\cuemol\winbuild\ReleaseBuild.vbを追加する</li>
+<li>VBのIDEを閉じて，VS.NETのマクロエクスプローラーから，先ほど追加したReleaseBuild下のReleaseBuildを選択．コンテキストメニューから実行を選ぶ（ダブルクリックでもOK?）．</li>
+<li>ビルドが開始され，完了後version番号が増加され，さらにビルドが行われる．最終的にcuemol\winbuild\output下にsetup.exeが生成される．</li>
+</ol>
+<h2 id="sourcebuild-unix">Sourceからのbuild (UNIX)<a class="headerlink" href="#sourcebuild-unix" title="Permanent link">&para;</a></h2>
+<p>今のところ、UNIX版ではGUI等が使用できない。</p>
+<h3 id="_6">必要なソフトウェアのインストール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>以下のライブラリーが必要ですが、なくてもビルドできます。
+FedoraCoreやDebianなどLinuxでは、既にインストールされている場合もあります。</p>
+<ul>
+<li>BerkeleyDB (version3以降)</li>
+<li>readline</li>
+<li>FreeType (http://www.freetype.org/)</li>
+<li>FFTW (http://www.fftw.org/)</li>
+</ul>
+<p>BerkeleyDBに関しては，バージョンが色々あり，バージョンによってコンパイルが
+通らないことが多々ある．兎も角もビルドしたい場合は，いかにも示すように
+<strong>--with-db=no</strong>オプションでconfigureスクリプトを実行しDBを
+使わないようにすればよい．</p>
+<p>あと、CVSからチェックアウトしたソースでビルドする場合や、
+開発のためにautomake/autoconf関連ファイルを編集・ビルドする場合は</p>
+<ul>
+<li>autoconf (version 2.59 以降)</li>
+<li>automake (version 1.9.6 以降)</li>
+<li>libtool (version1.5.22 以降で動作確認済み)</li>
+</ul>
+<p>も必要となる（通常は不要）。</p>
+<p>あと，QScriptの文法(yaccsrc.yxx, lexsrc.lxxで定義)を変更する場合は
+bison (version 1.35以降)とflex (version 2.5.4)が必要．
+特に，最近のlinuxのdistributionについてくるflexは2.5.3x等になっているが，
+それだと生成したC++ファイルがWindowsでコンパイルが通らなくなるので注意．</p>
+<h3 id="cvs_1">CVSからのチェックアウト<a class="headerlink" href="#cvs_1" title="Permanent link">&para;</a></h3>
+<p>CVSの使用</p>
+<pre><code>cvs -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol login 
+cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/cuemol co modulename 
+</code></pre>
+<p>CVSからチェックアウトしたソースでビルドする場合は、
+configureスクリプト等がないので生成する必要がある。
+正しいバージョンのlibtool, autoconf, automakeをインストールし、
+cuemol/src以下で以下のコマンドを実行する必要がある。</p>
+<pre><code>$ aclocal
+$ libtoolize
+$ aclocal
+$ automake -a
+$ autoconf
+</code></pre>
+<h3 id="configure">configureの実行<a class="headerlink" href="#configure" title="Permanent link">&para;</a></h3>
+<p>cuemol/src以下で以下のコマンドを実行する。</p>
+<pre><code>./configure --with-icc[=options] --disable-debug --prefix=&lt;install先指定&gt; --with-modules=&lt;moduleを列挙&gt; [--with-db=no]
+</code></pre>
+<pre><code>* with-icc
+</code></pre>
+<dl>
+<dd>
+<p>Intel C Compilerを使用する場合. optionsでicc/icpcへわたすoptionを指定できる。</p>
+<ul>
+<li>
+<dl>
+<dt>disable-debug</dt>
+<dd>デバッグ表示をしない（通常デバッグしない場合は指定する）</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>prefix</dt>
+<dd>インストール先を指定する。指定しないと/usr/localになる。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>with-modules</dt>
+<dd>ビルドするモジュールをカンマで区切って指定する。以下が指定可能。指定しないと、molstrのみ指定したことになる。<br/></dd>
+</dl>
+</li>
+<li>
+<p>molstr</p>
+</li>
+<li>molvis</li>
+<li>denmap</li>
+<li>
+<p>symm</p>
+</li>
+<li>
+<dl>
+<dt>with-db=no</dt>
+<dd>BerkeleyDBを使用しない場合に指定する．</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<h4 id="intel-compiler">Intel compilerを使用する場合<a class="headerlink" href="#intel-compiler" title="Permanent link">&para;</a></h4>
+<p>例えば<strong>--with-icc</strong>に以下のオプションを指定する</p>
+<pre><code>--with-icc=&quot;-ip -O3 -Ob2 -xW -tpp7 -static -cxxlib-icc&quot;
+</code></pre>
+<ul>
+<li>
+<dl>
+<dt>ip</dt>
+<dd>Procedure間最適化</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>O3</dt>
+<dd>最大限の最適化</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>xW</dt>
+<dd>Pen4ファミリーでしか実行できないコード生成(他のプロセサで実行する場合は変更する必要あり)</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>tpp7</dt>
+<dd>Pen4ファミリーの命令セットを使用した最適化</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>static</dt>
+<dd>スタティックリンク</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>cxxlib-icc</dt>
+<dd>icc/icpc付属のC++ standard libraryを使用する</dd>
+</dl>
+</li>
+</ul>
+<h3 id="_7">ビルドとインストール<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<pre><code>$ make
+$ make install
+</code></pre>
+<h3 id="_8">実行<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<pre><code>$ cuetty
+</code></pre>
+<p>引数に何も指定しないと、インタラクティブにスクリプトを実行するモードになる。</p>
+<pre><code>$ cuetty [script]
+</code></pre>
+<p>引数にQScriptファイル名を指定すると、そのスクリプトが実行される。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

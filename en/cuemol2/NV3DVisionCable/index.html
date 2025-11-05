@@ -1,0 +1,643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/cuemol2/NV3DVisionCable/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>NV3DVisionCable - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nvidia-3d-vision" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NV3DVisionCable
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cuemol2/NV3DVisionCable/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-3d-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVIDIA 3D vision用ケーブルの自作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NVIDIA 3D vision用ケーブルの自作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3d-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D vision側の接続部
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビデオカード側の接続部
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      コネクターの入手
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      コネクター間の接続
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      完成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      接続
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      免責事項
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>NV3DVisionCable</h1>
+
+<p><a href="../../Documents">Documents</a></p>
+<h2 id="nvidia-3d-vision">NVIDIA 3D vision用ケーブルの自作<a class="headerlink" href="#nvidia-3d-vision" title="Permanent link">&para;</a></h2>
+<p>NVIDIA 3D visionを用いてOpenGL quadbuffer modeで立体視するには
+Quadro FXシリーズのビデオカードが必要ですが，実はそれだけではだめで，
+ビデオカードと3D visionのemitterをつなぐ特殊なケーブルが必要になってきます．
+同期信号をこのケーブル経由で送っているようです．
+（ただし，WindowsだとUSBからも信号が送れる様でもある．要確認）</p>
+<p>このケーブルは，US版ではグラフィクスカードに同梱されているらしいですが，ヨーロッパとアジアで売られているものにはなぜか同梱されていないらしい．
+http://www.nvidia.co.jp/object/quadro_pro_graphics_boards_linux_jp.html</p>
+<p>そこで，ビデオカードと3D visionのemitterをつなぐケーブルを自作してみました．</p>
+<h3 id="3d-vision">3D vision側の接続部<a class="headerlink" href="#3d-vision" title="Permanent link">&para;</a></h3>
+<p>下写真左は正面から，右は裏から見たもの．
+写真のように，オーディオのステレオジャックになっていますが，
+これが若干曲者で，良く使われている3.5mmではなく，それより一回り小さい，2.5mmのものになります．
+あと，隣にUSB端子がありますが，Linuxではこれは給電にしか使われてないようです（Windowsでは同期信号受信にも使われているっぽい？）．</p>
+<blockquote>
+<p><img alt="3dvision_forw" src="../../../assets/images/cuemol2/NV3DVisionCable/3dvision_forw.jpg" style="zoom: 0.8" /> <img alt="3dvision_back" src="../../../assets/images/cuemol2/NV3DVisionCable/3dvision_back.jpg" /></p>
+</blockquote>
+<h3 id="_1">ビデオカード側の接続部<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>ビデオカード側も，あまり見かけない3-pin mini DINという形状のコネクターになっています．
+こちらは3Dメガネ用のコネクターのVESAの規格になっているのか，昔のSGIのころからのものと形状は同じです．
+http://en.wikipedia.org/wiki/VESA_Stereo</p>
+<h3 id="_2">コネクターの入手<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>このように，ビデオカード側も3D vision側もあまり見かけない形状のコネクターですが，
+今回は以下の店で購入しました．</p>
+<dl>
+<dt>3-pin mini DIN</dt>
+<dd>マルツパーツ館秋葉原店
+http://www.marutsu.co.jp/akihabara/
+178円</dd>
+<dt>2.5mm ステレオマイクロジャック(ケーブルつき)</dt>
+<dd>千石電商2号店
+http://www.sengoku.co.jp/
+250円</dd>
+</dl>
+<blockquote>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/NV3DVisionCable/3pin_minidin.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3pin_minidin" class="on-glb" src="../../../assets/images/cuemol2/NV3DVisionCable/3pin_minidin.jpg" /></a> <a class="glightbox" href="../../../assets/images/cuemol2/NV3DVisionCable/stereo_micro.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="stereo_micro" class="on-glb" src="../../../assets/images/cuemol2/NV3DVisionCable/stereo_micro.jpg" /></a></p>
+</blockquote>
+<h3 id="_3">コネクター間の接続<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>コネクター間の接続は，以下のようにつなげばOKのようです．</p>
+<p><img alt="455px-MiniDIN-3_Diagram.svg" src="../../../assets/images/cuemol2/NV3DVisionCable/455px-MiniDIN-3_Diagram.svg.png" style="zoom: 0.25" /></p>
+<p>ピン側から見て左から，A, B, Cとする．</p>
+<ul>
+<li>A ⇔ 真ん中 (Ring; 赤)</li>
+<li>B ⇔ 先端 (Tip; 白)</li>
+<li>C ⇔ 根元 (Sleeve; シールド線)</li>
+</ul>
+<p>ケーブルの色は買ったものがたまたまそうなっていただけなので，
+モノによって違っている可能性があります．</p>
+<h3 id="_4">完成<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>一応こんな感じになりました．</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/NV3DVisionCable/final_1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="final_1" class="on-glb" src="../../../assets/images/cuemol2/NV3DVisionCable/final_1.jpg" /></a></p>
+<h3 id="_5">接続<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>今回は，Quadro FX3700に接続しました．</p>
+<p>X serverの方の設定などを終えた後で接続し，
+電源を取るためにUSBの方もケーブル（これは付属）で接続します．
+接続後，X serverを再起動します．
+ちゃんと認識されると，以下のように暗い緑色に光ります．
+（Windowsの場合は再起動は必要ない）</p>
+<p><img alt="connect_1" src="../../../assets/images/cuemol2/NV3DVisionCable/connect_1.jpg" /></p>
+<p>次に3Dを使うアプリ(cuemol2やcootとか)を起動し，stereoを有効にすると
+以下のように明るい緑に光ればOKです．</p>
+<p><img alt="connect_2" src="../../../assets/images/cuemol2/NV3DVisionCable/connect_2.jpg" /></p>
+<p>肉眼では見えないですが，デジカメなどから見ると，上のように赤外線LEDが光っているのが見えます．</p>
+<h3 id="_6">免責事項<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>このページの情報に基づいて作成したものを用いて，故障など損害を被った場合，
+<strong>著者はなんら責任を負いません</strong>．
+また，動作を保証するものでもありません．
+各自の責任において参考にしてください．</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,2760 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/Updates/">
+      
+      
+        <link rel="prev" href="../Documents/">
+      
+      
+        <link rel="next" href="../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>アップデート - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#23" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              アップデート
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/Updates/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3系統
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2系統
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.1系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221354" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1.354
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221349" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1.349
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221330" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1.330
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#220321" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.321
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220320" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.320
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220315" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.315
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220313" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.313
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220310" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.310
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220309" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.309
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220298" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.298
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#210279" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.279
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210276" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.276
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210270" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.270
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210262" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.262
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210261" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.261
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210250" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.250
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210249" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.249
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210245-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.245 (iOS版)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210243" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.243
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210241" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.241
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0.1系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.212
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paint-coloringundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      * paint coloringの設定変更がundoできなかった不具合を修正
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="* paint coloringの設定変更がundoできなかった不具合を修正">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.211
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201208" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.208
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201207" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.207
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201202-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.202 (iOS版)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201192" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.192
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201188" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.188
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201183" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.183
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201172" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.172
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201161" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.161
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201153" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.153
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201149" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.149
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201148" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.148
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201145" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.145
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201138" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.138
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200125" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.0.125
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#110196-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.196 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110189-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.189 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110187-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.187 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110175-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.175 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110162-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.162 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110161-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.161 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110158-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.158 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110149-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.149 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110144-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.144 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110138-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.138 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110136-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.136 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110131-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.131 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110127-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.127 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110115-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.115 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110114-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.114 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110112-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.112 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110111-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.111 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110108-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.108 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11097-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.97 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11092-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.92 alpha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10063" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.63
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10062" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.62
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10061" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.61
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10060-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.60 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10058-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.58 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10054-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.54 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10052-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.52 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10050-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.50 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10045-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.45 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10042-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.42 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10041-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.41 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10039-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.39 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10038-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.38 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10036-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.36 alpha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3系統
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2系統
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.1系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221354" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1.354
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221349" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1.349
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221330" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1.330
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#220321" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.321
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220320" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.320
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220315" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.315
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220313" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.313
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220310" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.310
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220309" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.309
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220298" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0.298
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#210279" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.279
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210276" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.276
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210270" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.270
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210262" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.262
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210261" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.261
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210250" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.250
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210249" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.249
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210245-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.245 (iOS版)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210243" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.243
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210241" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0.241
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0.1系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.212
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paint-coloringundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      * paint coloringの設定変更がundoできなかった不具合を修正
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="* paint coloringの設定変更がundoできなかった不具合を修正">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.211
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201208" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.208
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201207" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.207
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201202-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.202 (iOS版)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201192" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.192
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201188" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.188
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201183" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.183
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201172" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.172
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201161" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.161
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201153" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.153
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201149" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.149
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201148" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.148
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201145" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.145
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#201138" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1.138
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200125" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.0.125
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#110196-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.196 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110189-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.189 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110187-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.187 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110175-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.175 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110162-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.162 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110161-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.161 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110158-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.158 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110149-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.149 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110144-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.144 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110138-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.138 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110136-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.136 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110131-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.131 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110127-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.127 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110115-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.115 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110114-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.114 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110112-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.112 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110111-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.111 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110108-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.108 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11097-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.97 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11092-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0.92 alpha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0系統
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0系統">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10063" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.63
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10062" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.62
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10061" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.61
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10060-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.60 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10058-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.58 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10054-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.54 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10052-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.52 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10050-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.50 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10045-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.45 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10042-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.42 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10041-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.41 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10039-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.39 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10038-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.38 alpha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10036-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0.36 alpha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>アップデート</h1>
+
+<p>以下では，それぞれのリリースでの変更点をリストアップしてあります．
+各OSの各バージョンの<a href="https://github.com/CueMol/cuemol2/releases/">Downloadはこちら</a>からできます．</p>
+<h3 id="23">2.3系統<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>Githubの<a href="https://github.com/CueMol/cuemol2/releases/">releases</a>に記載しています。</p>
+<h3 id="222">2.2.2系統<a class="headerlink" href="#222" title="Permanent link">&para;</a></h3>
+<p><a href="../en/Updates">英語版</a></p>
+<h3 id="221">2.2.1系統<a class="headerlink" href="#221" title="Permanent link">&para;</a></h3>
+<h4 id="221354">2.2.1.354<a class="headerlink" href="#221354" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cartoon rendererのsheetが状況によってねじれる現象を修正</li>
+<li>Ribbon rendererのsheet, helixが場合によって変にねじれる現象を修正</li>
+<li>Edge renderingでedge線等に対してのみslab設定が無視され不具合を修正</li>
+<li>Windows版でNAMD coor fileが読めなくなっていたのを修正</li>
+<li>Selectionにより分子の一部に対してのみ作成されたMol surfaceをregenerateするとき，selectionが無視される不具合を修正</li>
+<li>Rendererのpropertyでselectionを指定する場合，ユーザが作成したmacro (definition)を使用できなかった不具合を修正</li>
+<li>Scene panelで，複数のobject/rendererを選択した場合，それらに対して一挙にshow/hideをcontext menuから行えるようにした</li>
+<li>Namelabelなど文字が出る系のrendererで文字のpixmapが有効に再利用されていなかったバグを修正</li>
+<li>Pixmap labelのrenderingをoffにしていても実際では内部で作成・破棄され非効率であった点を修正</li>
+<li>Cameraにvisibility settingsが含まれていることを表すeye iconを（内容に同期して）正しく表示されるように修正</li>
+<li>選択文法で，aroundの距離指定など数値を指定する部分に不動小数点数を指定できるようにした</li>
+<li>Isosurf rendererの設定GUIを実装</li>
+</ul>
+<h4 id="221349">2.2.1.349<a class="headerlink" href="#221349" title="Permanent link">&para;</a></h4>
+<ul>
+<li>小文字のチェイン名などを含むPDBファイルも読み込めるようにした．</li>
+<li>重複する原子名を含むようなPDB format的にはillegalなファイルも読み込めるようにした．</li>
+<li>MacOSでscene panelにおいてMolSurfObjをコピーしたときにクラッシュする不具合を修正</li>
+<li>MolSurfRendererを$molcolを使用して着色した場合，親となるMolCoordの着色を変更してもMolSurfRendererの着色に即座に反映されない問題点を修正</li>
+<li>Qscファイル読み込みに失敗した場合，その時点で開いていたシーンが初期化されてしまう不具合を修正</li>
+<li>Save file as操作が正しく動作しない不具合を修正</li>
+<li>分子選択の式で，mol name指定つきaround演算子が正しく動作しないバグを修正</li>
+<li>CPK, ballstick rendererのポリゴン数が大きくなりすぎた場合にdetailを自動で制限するようにした．</li>
+<li>Camera設定に，各object/rendererのshow/hide状態を保存できるようにした(<a href="../cuemol2/CameraVisFlags">cuemol2/CameraVisFlags</a>)</li>
+<li>Mol surface cutterで，切断面と切断殻の両方を同時に生成できるようにした(<a href="../cuemol2/MolSurfCut">cuemol2/MolSurfCut</a>)</li>
+<li>Tube rendererのputty(B factor等に応じて太さが変化する)を実装・GUI設定を追加(<a href="../cuemol2/TubeRenderer">cuemol2/TubeRenderer</a>)</li>
+<li>文字ラベルなどをPOV-Ray renderingでも表示できるようにした</li>
+<li>POV-Ray rendering dialogでlightingとradiosityの設定を出来るようにした(<a href="../cuemol2/POVRayRenderLighting">cuemol2/POVRayRenderLighting</a>，<a href="../cuemol2/Radiosity">cuemol2/Radiosity</a>)</li>
+<li>アニメーション設定のanimation objectの時間指定を他のanimation objectに対する相対時間設定で指定できるようにした(<a href="../cuemol2/Anim_Cmb">cuemol2/Anim_Cmb</a>)．</li>
+<li>PyMOL session (PSE) fileの読み込み（ただし不完全）(<a href="../cuemol2/PSEImporter">cuemol2/PSEImporter</a>)</li>
+</ul>
+<h4 id="221330">2.2.1.330<a class="headerlink" href="#221330" title="Permanent link">&para;</a></h4>
+<ul>
+<li>POV-Ray 3.7を同梱するように</li>
+<li>POV-Ray renderingでmulti-cpu renderingを使用可能に(<a href="../cuemol2/POVRayRenderDialog">cuemol2/POVRayRenderDialog</a>)</li>
+<li>POV-Rayを使用したradiosityによるrenderingが使用可能に(<a href="../cuemol2/Radiosity">cuemol2/Radiosity</a>)</li>
+<li>POV-Ray renderingでBackground colorを透明にするオプションを追加(<a href="../cuemol2/POVRayRenderDialog">cuemol2/POVRayRenderDialog</a>)</li>
+<li>MapSurfRenderer (isosurf; contourの表面表示バージョン) を実装</li>
+<li>MapSurfRenderer (isosurf) の線表示を実装(countourに比べてcootの電子密度表示に近い表示になる)</li>
+<li>MTZなどdensity map類を読み込んだときにrecenterをonにすると，視点が移動するのではなく，現在の視点はそのままでdensity mapの表示中心を視点に移動するようにした</li>
+<li>MapMeshRenderer (contour)の表示範囲を分子で制限する機能を用いた場合，設定プロパティーページが正常に動かなかったバグを修正</li>
+<li>Scene panelで複数選択と複数項目のcopy&amp;paste, drag&amp;dropを可能にした</li>
+<li>Scene panelでrenderer groupをcopy&amp;paste可能にした</li>
+<li>Scene panelの＋（追加）ボタンなどで表示されるcreate-renderer dialogでrenderer-groupの作成を可能にした</li>
+<li>Scene panelのrendererのcontext menuで表示されるcartoon rendererのstyle設定がribbon rendererのものになってしまっていたので修正</li>
+<li>シーン別名保存時に指定できるEmbed-all optionでstyleとcameraファイルも埋め込まれるように修正</li>
+<li>MolSurfObjをMolCoordから簡単に(point density等を変更して)再生成できるようにした．</li>
+<li>Animation rendering tool dialogでrendering結果のpreviewができるようにした．</li>
+</ul>
+<h3 id="220">2.2.0系統<a class="headerlink" href="#220" title="Permanent link">&para;</a></h3>
+<h4 id="220321">2.2.0.321<a class="headerlink" href="#220321" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ccp4 mapのgz圧縮版を読めるようにした</li>
+</ul>
+<h4 id="220320">2.2.0.320<a class="headerlink" href="#220320" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Objectをcopy&amp;paste出来ないバグを修正</li>
+<li>MorphMolでatom数が一致しない場合でもむりやりmorphing出来るようにした</li>
+<li>anim_panelにMorphMol/MolAnimの追加UIを実装</li>
+<li>morphanim-toolを実装（追加のみ）MolCoordからMorphMolへの変換を実装・メニュー起動時にMolCoordからMorphMolへの変換を選べるようにした</li>
+<li>MorphMol編集ツールにinsertAt, deleteを実装・MorphMolのframeにnameを設定できるようにした</li>
+<li>Animation関連のtime widgetにバグがあり，1秒以下の時間が無視されるバグを修正</li>
+<li>MolAnimのproperty設定を実装</li>
+<li>Animation rendering時の問題点を洗い出しやすいように，ログ（全povrayとffmpeg）を保存できるようにした．</li>
+<li>Animationのtime spanを0にするとおかしくなるバグを修正</li>
+<li>Nucl rendererのdefault coloringをsolid($molcol)に変更し，molの方の着色にnucl=&gt;yellowを入れるようにした</li>
+<li>NAMDCoorReaderでinputがbyte swappedかどうか自動判別するようにした．</li>
+<li>Interaction toolやMol superpositionにおいて，選択の指定でユーザ定義選択を指定しても認識されないバグを修正</li>
+<li>Styleのreadonlyをon/off出来るようにした．読み込んだstyleはdefaultでread-onlyになるようにした．</li>
+</ul>
+<h4 id="220315">2.2.0.315<a class="headerlink" href="#220315" title="Permanent link">&para;</a></h4>
+<ul>
+<li>シーン(qsc)ファイルを移動すると，分子等をファイルに埋め込んでいない場合，外部ファイルへのリンクが切れる問題点を一部修正．</li>
+<li>Simple, Traceのスタイル（太線化）を追加</li>
+<li>CPKColoringの簡易設定としてdarkgray, lightgrayを追加</li>
+<li>Edge線が付けられないrendererにはedgeに関するstyle menuをださないように</li>
+</ul>
+<h4 id="220313">2.2.0.313<a class="headerlink" href="#220313" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Edge線の接続点を滑らかにつながるようにした．detailが小さい値でもedge線がギザギザにならなくなった</li>
+<li>Save scene asを実行した後に，ファイル名をMRUリストに入れるようにした</li>
+<li>
+<p>Movie renderingで，ffmpegのoptionが適切でなかったためframe rateが適切に設定できていなかったバグを修正．
+loopさせるmovieは最後のframeと最初のframeをだぶらせた方が良い場合があるので，Loop optionを作った</p>
+</li>
+<li>
+<p>Macでgroupにrendererをdropできないバグを修正</p>
+</li>
+</ul>
+<h4 id="220310">2.2.0.310<a class="headerlink" href="#220310" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PDB Cryst1 record読み込み時にP1, a=b=c=1, ...はNMRのデータと判断し無視するようにした．</li>
+<li>mtzファイル読み込みによるdensity map表示にバグがあったのを修正．（CCP4のFFTによる結果と一致することを確認）</li>
+</ul>
+<h4 id="220309">2.2.0.309<a class="headerlink" href="#220309" title="Permanent link">&para;</a></h4>
+<ul>
+<li>File open dialogでファイル形式の選択肢からQDF形式を出さないようにした</li>
+<li>UndoRedo情報の消去を出来るようにした(menuから実行可)</li>
+<li>RenderPov dialogで，画像サイズをcmやmm等で指定可能に</li>
+<li>File open option dialog等で，（recenter等の）checkboxの初期値を，前回の状態と同じになるようにした．</li>
+<li>相互作用抽出GUIの改善．指定部分（対象1と対象2を指定→その間の相互作用のみ抽出）から指定距離にある原子のリストを生成→atomintrに登録＆logに出力</li>
+<li>UIによるmol selectionのbysidechをUIで実行できるように</li>
+<li>Post-render alpha blendingで複数alphaがある時の挙動を改善．近いalpha値のobjectsはまとめて処理（→alpha値は0.1飛びしかありえないように）</li>
+<li>pov render dialogでimageのcopyができるようになった</li>
+<li>Disorder rendererのprop設定UIを実装</li>
+<li>Molviewのtabのdrag&amp;dropを可能に</li>
+<li>Scene panelでのobject/rendererのdrag&amp;dropを可能に（⇒上下ボタンの廃止）</li>
+<li>Renderer Groupの実装 object内にfolder(1階層のみ可)を作れるようにして，その中にrendererを入れたりできるようになった．</li>
+<li>Reassign secondary str dialogで前操作の状態が残るようになった</li>
+<li>AtomIntrRendererのserializationのコードのバグを修正</li>
+<li>Pov renderer dialogでStereo eye separation値の指定変更を出来るようにした．</li>
+<li>Scene panelでobjectを削除後のselection(item)の移動がおかしい (rendererはOK)のを修正した</li>
+<li>Scene panelでLock columnは廃止</li>
+<li>Property edit dialogで前操作の状態（タブ選択）が残るようにする</li>
+<li>WindowsでDisplay設定でDPIを変更（拡大）していたらMolviewの表示位置がおかしくなってしまうバグを修正</li>
+</ul>
+<h4 id="220298">2.2.0.298<a class="headerlink" href="#220298" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Pov renderingでedge線を描画できるようにした</li>
+<li>Pov renderingでのシルエット描画を出来るようにした</li>
+<li>nucl rendererの設定UI</li>
+<li>nucl rendererの新しいタイプ (ballstickとの組み合わせ)を実装．</li>
+<li>nucl rendererでbase pair connectionの描画をon/offに出来るようにした</li>
+<li>Basepairの自動判別機能を実装．PDBFileReaderが自動で読み込み時に呼び出すようにした．</li>
+<li>Disorderの点線を表示するためのrendererを作った</li>
+<li>TubeRendererにpymolのputty相当を実装</li>
+<li>tube, ribbon rendererの断面にmolscript風(pymolのfancy相当)を実装</li>
+<li>ribbon rendererでHelixの裏側と，Sheetの側面の色を別に指定できるようにした</li>
+<li>ribbon rendererでmolscript風になるFancy1というスタイルを追加．</li>
+<li>ribbon rendererの側面色，ballstick rendererのring色などで，$molcolを指定した場合に修飾子が機能するようにした</li>
+<li>ballstick rendererのデフォルトring色を$molcolにした．（default_styles.xmlで指定）</li>
+<li>Renderer common pageのMaterial設定を，リストから選ぶようにした．</li>
+<li>Rendererのchange typeを実装（workspace panelのcontext menuから）</li>
+<li>Tube rendererのGUIで，tuberではなくwidth1/width2でチューブ形状を指定するように変更</li>
+<li>Scene panel/molviewの右クリックメニューにaroundとaround byresを入れてみた（試験的）</li>
+<li>FileのDrag&amp;Dropにおいて，PDB読み込み時に起こるバグを修正</li>
+<li>MSMSFileを読み込んだ古いバージョンのsceneが読み込めないバグを修正</li>
+<li>xulrunner 23への移行</li>
+<li>MacOSXでGUIもRetina(hidpi)対応</li>
+<li>MacOSX用全画面モードのボタン</li>
+</ul>
+<h3 id="210">2.1.0系統<a class="headerlink" href="#210" title="Permanent link">&para;</a></h3>
+<h4 id="210279">2.1.0.279<a class="headerlink" href="#210279" title="Permanent link">&para;</a></h4>
+<ul>
+<li>mouseのsingle clickで何度もclickされるようになるバグを修正．</li>
+</ul>
+<h4 id="210276">2.1.0.276<a class="headerlink" href="#210276" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mouseのdouble clickで残基レベルでの選択と解除が出来るようにした．</li>
+<li>原子を１回クリックするとラベルが表示されるが，再度クリックするとラベルを消すようにした．</li>
+<li>PDB2PQR/APBS dialogで実行が失敗した時のエラー処理を強化</li>
+<li>Mol superposition dialogで，重ね合わせに失敗してもdialogが閉じられないようにした</li>
+<li>Style fileが外部リンクになっている場合に，qscを書き出した時にstyleが外部ファイルも書き出すようにした．</li>
+<li>Style fileの外部リンク化あるいは埋め込み化がundo/redo出来るようにした</li>
+<li>Camera関連操作（create, destroy, modify）のUndo/Redoを実装した．Cameraのfile-linked化のUndo/Redoを実装した．</li>
+<li>MacのRetina display用に，分子ビューのHiDPI display対応を行った（GUIはlow resのまま）．</li>
+<li>MacOS Xで，dockから出したときに分子ビューが隠れてしまって表示されない問題を解消．</li>
+</ul>
+<h4 id="210270">2.1.0.270<a class="headerlink" href="#210270" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create symm objectでsecondary strを再計算するのではなく，originalからコピーしてくるようにした．さらに，mol coloringはdefaultになるようにした．</li>
+<li>Material設定を使用するとPOVRayレンダリングが正しくできないことがある不具合を修正</li>
+<li>Cartoon rendererで，helix width modeというpropを設ける→太さを指定値で一定を可能にした</li>
+<li>AtomIntrRenderer (距離表示)でshow labelを変更しても則時に反映されないというバグを修正した</li>
+<li>すでにlabelが出ているatomをクリックするとラベルが消えるようにした</li>
+<li>Animation modeでも，atom click/ctxt menuを使えるようにした</li>
+<li>DoubleClick時に，residue selectionをtoggleするようにした</li>
+<li>POV renderingで，line width scaleの計算方法がおかしかったので修正</li>
+</ul>
+<h4 id="210262">2.1.0.262<a class="headerlink" href="#210262" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Animationのfade in/outでdestinationのalpha値を1以外に設定可能にした</li>
+<li>Animation rendering dialogで，ffmpegのencodingにrawvideo encodingを追加した．また，command line optionのtextboxを編集可能にし任意のoptionを指定できるようにした．</li>
+<li>サイクル再生用の動画作成を考慮し，最後のフレーム（＝最初のフレームと同じになる）をrenderingしないようにした．</li>
+</ul>
+<h4 id="210261">2.1.0.261<a class="headerlink" href="#210261" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mol surface generationでaltconfがあり，かつ原子の位置が微妙な場合にcrashするbugを修正．（altconfはAに対してのみsurfaceを作るように変更）</li>
+<li>シーンパネルのpaintメニューが正常に動かなかったのを修正</li>
+<li>shell open (WinでPDBファイルダブルクリック⇒CueMolでopen等)でqscファイルしか対応していなかったのを改善．drag&amp;drapと同じコードを用いるようにし，pdb等も開けるようにした（基本，拡張子で判断）．同様に，command lineから起動する場合に，pdb等も開けるようにした．</li>
+<li>Cartoon rendererのproperty dialogを実装した．</li>
+<li>シーンパネルで，up/down buttonsによりobjectの表示順序変更を可能にした．</li>
+<li>Renderer作成時あるいは他の場面でも，coloringになるべく$molcolを使用するようにして，積極的に分子オブジェクト側のcoloringが使われるようにした．</li>
+<li>スタイル定義のUIを一部実装．（色の定義，分子選択の定義，スタイルのimport/export等）</li>
+</ul>
+<h4 id="210250">2.1.0.250<a class="headerlink" href="#210250" title="Permanent link">&para;</a></h4>
+<ul>
+<li>電子密度マップの境界の設定でクラッシュするバグを修正</li>
+<li>MacOS X版のbuildを64bitにした</li>
+</ul>
+<h4 id="210249">2.1.0.249<a class="headerlink" href="#210249" title="Permanent link">&para;</a></h4>
+<ul>
+<li>OpenGL shaderを強制的に使用しないようにするオプションを実装した．</li>
+<li>Material設定のたびにLOGが大量に出るのを修正</li>
+<li>MolSurfCutter (CutByPlane2)でcross-sectionのみを生成するoptionを実装した</li>
+<li>Object等の表示・非表示を切り替えるとクラッシュする場合があるバグを修正</li>
+</ul>
+<h4 id="210245-ios">2.1.0.245 (iOS版)<a class="headerlink" href="#210245-ios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>iPadでDisplay popoverが出っぱなしになるバグを修正</li>
+<li>Desktop版同様，Labelの表示にalpha testを使用するようにした．</li>
+<li>AnimationのためのUIを追加 (それに伴い操作法もやや変更)</li>
+<li>File displayで，inbox (他アプリから開いたqsl/pdbファイルが入るフォルダ)をスキャンし表示するようにした→webなどから開いたqslファイルがアプリ再起動後も正しく表示されるようになった．</li>
+<li>File displayでEdit buttonから項目を削除したとき，ファイル自体も削除されるようにした．</li>
+</ul>
+<h4 id="210243">2.1.0.243<a class="headerlink" href="#210243" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Slide in/out animationで移動後のrendererが元に戻らないというバグがあったので修正</li>
+<li>Shaderを利用したalpha blendingにバグがあったため修正</li>
+<li>Secondary str toolのGUI(radio buttonによるwidgetのenable/disable)を修正</li>
+<li>create symm objectを実行するときに，二次構造の再計算も行うように</li>
+<li>Unit cell rendererを表示すると落ちるバグを修正</li>
+</ul>
+<h4 id="210241">2.1.0.241<a class="headerlink" href="#210241" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Animation関連の機能・UIを実装した</li>
+<li>ActiveX版にもanimationのstart/stop/pauseのUIを追加した<ul>
+<li>ad-hoc animation（１０秒で１周スピン）を実装した</li>
+</ul>
+</li>
+<li>POV-Ray+FFmpegを使用してanimation movieを作成するUIを実装した</li>
+<li>WindowsでPOV-Ray renderingなどsubprocessが動作する場合にDOS窓が出ないようにした．</li>
+<li>POR-Ray renderingでOrthographic投影の時に影ができないようにした</li>
+<li>POR-Ray renderingでOrthographic/Perspective投影どちらの場合でも影を表示するoptionを付けた</li>
+<li>POR-Ray renderingで正方形以外の画像にもrenderingできるようにした<ul>
+<li>rendering dialogのdefault値が現在のviewのサイズと同じになるようにした．</li>
+</ul>
+</li>
+<li>POR-Ray renderingで出力PNGのDPIを指定できるようにした</li>
+<li>
+<p>POV-Ray rendering後のalpha blendingの改善<br/>
+複数半透明物体があり，それらが重なっている状況でのblend方法の改善</p>
+</li>
+<li>
+<p>Interaction toolのUNDO/REDOができるようになった</p>
+</li>
+<li>GPU geometry shaderを利用したMap mesh rendererを実装した</li>
+<li>GPU shaderを利用したMap volume rendererを実装した</li>
+<li>OpenGLでのalpha blendingを，fragment shaderを使って行うように変更</li>
+<li>PDB読み込み時に，自動secondary strucutre assignmentを行わない場合はPDBのHELIX/SHEET recordを読み込むようにした．</li>
+<li>自動secondary structure assignmentの再計算を行うUIを作成した．</li>
+<li>手動でsecondary structure assignmentを行うUIを作成した．</li>
+<li>文字ラベルの透明・半透明処理を改善（alpha testを用いるようにした）</li>
+<li>renderer property dialogにapplyボタンをつけた．OKしてdialogを閉じなくてもproperty変更の表示への影響を確認できるようになった．</li>
+</ul>
+<h3 id="201">2.0.1系統<a class="headerlink" href="#201" title="Permanent link">&para;</a></h3>
+<h4 id="201212">2.0.1.212<a class="headerlink" href="#201212" title="Permanent link">&para;</a></h4>
+<h2 id="paint-coloringundo">*  paint coloringの設定変更がundoできなかった不具合を修正<a class="headerlink" href="#paint-coloringundo" title="Permanent link">&para;</a></h2>
+<h4 id="201211">2.0.1.211<a class="headerlink" href="#201211" title="Permanent link">&para;</a></h4>
+<ul>
+<li>property dialogで，vector値を編集できるようにした</li>
+<li>cameraのpropertyを変更しても変更が反映されないバグを修正</li>
+<li>SSM superposeで，重ね合わせ後の配列アラインメント生成でクラッシュするバグを修正</li>
+<li>POV-Ray renderingでorthographic投影にすると影が出来てしまうバグを修正</li>
+<li>Ribbon rendererでHelix-end/Helix-startが隣接している部分で選択によりribbonを切断するとクラッシュするバグを修正</li>
+</ul>
+<h4 id="201208">2.0.1.208<a class="headerlink" href="#201208" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MacOS X版でInteraction toolがクラッシュするのを修正</li>
+<li>Interaction toolで出来る相互作用表示作成をundo/redo出来るように修正</li>
+</ul>
+<h4 id="201207">2.0.1.207<a class="headerlink" href="#201207" title="Permanent link">&para;</a></h4>
+<p>修正点</p>
+<ul>
+<li>APBS/PDB2PQR toolで選択で指定した部分だけ静電ポテンシャルマップが作られるようになっていなかったので修正．</li>
+<li>qscからMapMeshRendererを読み込んだ場合，かつ，読み込みに失敗した場合，直後にクラッシュするバグを修正</li>
+<li>cartoon rendererで無効なmeshが生成されpovray renderingなどで失敗する場合があったのを修正</li>
+<li>Windows版でpovray.exeがfドライブをアクセスしてdialogが出てしまう問題を修正（ただし逆にC:ドライブはアクセスしてしまう）</li>
+<li>半透明合成(blendpng)を３枚以上の画像を合成する場合も正常に動作するように修正</li>
+<li>分子選択UIで，テキストを選択すると，編集中の文字が消えてしまうバグを修正</li>
+<li>qscファイル読み込み時に（リンク先が読み込めない等で）失敗した場合に，異常でもあきらめずに最後まで読み込むようにした．</li>
+<li>Map rendererのpropertyで，buffer sizeを大きく指定するとメモリ不足でクラッシュすることがあったので，200以上は設定できないようにした．</li>
+<li>OpenGL quadbuffer(hardware stereo)に切り替わる時に分子viewの位置がおかしくなるバグを修正</li>
+</ul>
+<p>新しい実装</p>
+<ul>
+<li>電子密度マップをqscファイル中に埋め込めるようにした</li>
+<li>Rendererではなく分子(MolCoord)に対する着色を実装．(今後要documentation)</li>
+<li>相互作用の自動抽出UIを作成．(今後要documentation)</li>
+<li>cameraを埋め込みだけでなく外部ファイルとして保存し，複数のシーンで共有可能にした．(今後要documentation)</li>
+<li>NAMD psf/coor読み込みの初期実装</li>
+<li>Viewにstereo eyeをswapするフラグを追加(for hardware stereo)</li>
+<li>MacOS Xでdmgをmountしたときに出てくるアイコンをcuemolアイコン付にした．dmgファイル中のフォルダにApplicationへのshortcutを入れてinstallを容易にした．</li>
+</ul>
+<h4 id="201202-ios">2.0.1.202 (iOS版)<a class="headerlink" href="#201202-ios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ラベル表示を実装（textureとして表示）</li>
+<li>Displayパネルの表示がおかしくなる不具合を修正</li>
+</ul>
+<h4 id="201192">2.0.1.192<a class="headerlink" href="#201192" title="Permanent link">&para;</a></h4>
+<ul>
+<li>QSL形式のファイルタイプが登録されるようになった(win/osx)．アイコンが設定されるようになった．</li>
+<li>QSL書き出し時にoption dialogが表示されるようになった．detailの一括設定，圧縮設定，書き出したqslファイルを則開く等，のオプションが設定可能．</li>
+<li>Ribbonでsheetの末端がN末端の場合，かつaxialdetailが奇数の時に，端のtube部分が正しく表示されないバグがあったので修正．</li>
+<li>MolCoordに対してattachするRendererタイプの分子表面表示を追加(dsurface renderer)．</li>
+<li>二次構造割り当てで，N末端がいきなりhelixで始まるような構造だとそのhelixの開始終了が正しく認識されないバグがあったので修正．</li>
+<li>qscファイル中から参照しているファイルのパス名に非アスキー文字が入ると正常に読み込めないバグを修正</li>
+<li>cpk rendererのproperty dialogを実装（半径の変更UI）</li>
+<li>QSL書き出しでVBOの分割(unsigned shortに収まるように)を実装した．ポリゴン数が多くても表示されるようになった．</li>
+<li>QSLに文字ラベルを書き出せるようにした（ただしiOS版は未対応）</li>
+</ul>
+<h4 id="201188">2.0.1.188<a class="headerlink" href="#201188" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mobile device等向けViewer用のLight weight sceneファイル形式(qsl)に書き出す機能，読み込む機能を実装した．</li>
+<li>qscファイルの書き込みの際，次回上書き保存したときに，前回使用したのと同じoption(圧縮等)で保存されるようにした．</li>
+<li>MacOS X版で，workspace panelにて分子のコピー＆ペーストができないことがある不具合を修正した</li>
+</ul>
+<h4 id="201183">2.0.1.183<a class="headerlink" href="#201183" title="Permanent link">&para;</a></h4>
+<ul>
+<li>分子重ね合わせで，選択がemptyになるとクラッシュするバグを修正</li>
+<li>分子重ね合わせで配列アラインメントをログに表示するようにした</li>
+<li>電子密度のメッシュ表示の領域を，分子選択により制限して表示する方法を改善した</li>
+<li>分子表面rendererの簡易プロパティー設定GUIを実装した</li>
+<li>分子表面生成時に使用するvan der Waals半径をCCP4標準のcifファイルの定義値を用いるようにした．</li>
+<li>電子密度rendererの簡易プロパティー設定GUIを実装した</li>
+<li>慣性スクロールを実装した（デフォルトではoffになっている）</li>
+<li>XULRunnerを9.0.1にバージョンアップ(Mac版も含めて)<ul>
+<li>テキスト表示の方法を変更</li>
+</ul>
+</li>
+<li>選択文，around文の距離引数に小数を指定できるように修正した</li>
+<li>workspace panelで分子のコピー＆ペーストができないバグを修正した</li>
+</ul>
+<h4 id="201172">2.0.1.172<a class="headerlink" href="#201172" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cartoonレンダラーを実装</li>
+<li>ActiveX controlを実装</li>
+<li>povray出力にdistanceが反映されていなかったのを修正</li>
+<li>Density map rendererの中心がqscファイルに保存されない不具合を修正</li>
+<li>Viewメニューから投影方法と，センターマークの変更を可能にした</li>
+</ul>
+<h4 id="201161">2.0.1.161<a class="headerlink" href="#201161" title="Permanent link">&para;</a></h4>
+<ul>
+<li>crystallographic symmetryの情報を編集するdialogを実装した．（symmetryパネルから表示できる）</li>
+<li>crystallographic symmetryの情報を編集のundo/redo</li>
+<li>Protein secondary structure assignmentの改善．特にribbon表示で，２つのhelixが連続している場合でも１つのhelixとして表示されリボンが捻じれたようになってしまっていたが，別々に表示されるようになり改善された．</li>
+<li>ribbon表示で，selectionによりhelix/sheetの途中で表示を切ってしまうと，表示がおかしくなるバグがあったが，これを断面が表示されるようにした．</li>
+<li>qscファイルを名前を付けて保存時に，別フォルダに保存し直すと，qscから参照していたPDBファイルなどが読めなくなるバグを修正した．</li>
+<li>ミニウェブブラウザーのようなものを利用可能にした．</li>
+</ul>
+<h4 id="201153">2.0.1.153<a class="headerlink" href="#201153" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PHENIX 1.7以降で生成されたmtzファイルを正常に読み込めないバグを修正した．</li>
+<li>Bond edit dialogを実装した．（SS結合やN糖鎖等，非標準のボンドの追加削除がGUIから可能になった）</li>
+<li>Mol struct panelで行った選択がhistoryに追加されない不具合を修正</li>
+<li>Selection panelでcommand panelを優先的に表示されるように．</li>
+<li>Selection panelから，今までに使った選択のhistoryを容易に参照できるようにした</li>
+</ul>
+<h4 id="201149">2.0.1.149<a class="headerlink" href="#201149" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Win版、MacOSX版ともに，原子ラベルや距離表示を表示しようとするとクラッシュする，というバグを修正した．</li>
+</ul>
+<h4 id="201148">2.0.1.148<a class="headerlink" href="#201148" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PaintColoringのエントリーをコピペ/上下移動できるようにした<ul>
+<li>ただし，undo/redoの動作がおかしい部分がある</li>
+</ul>
+</li>
+<li>PNGファイルでのシーン書き出しがちゃんと動かなかったので修正</li>
+<li>Zoom値が負になる不具合を修正</li>
+<li>電子密度(Density)パネルの表示範囲(extent)の指定が正しく動作していなかったのを修正</li>
+<li>電子密度rendererのbufsize property指定が動作するように修正</li>
+<li>XULRunnerを6.0にバージョンアップ(Mac版も含めて)<ul>
+<li>MacOSX版では，ファイルを開くダイアログに，形式を選択するドロップダウン・リストボックスが表示されるようになった．ただし，ここでファイル形式を選んでもファイル一覧に表示される内容はフィルタリングされないという問題がある（原因調査中）．</li>
+</ul>
+</li>
+<li><del>Win版、MacOSX版ともに，原子ラベルや距離表示を表示しようとすると，クラッシュする場合がある．<a href="../Install">Install</a>の「ユーザ設定など」にあるとおりに<strong>Application設定を削除してから起動すると正常動作する</strong>ので，クラッシュした場合は試してみてください．</del> 149以降で修正済みです．</li>
+</ul>
+<h4 id="201145">2.0.1.145<a class="headerlink" href="#201145" title="Permanent link">&para;</a></h4>
+<ul>
+<li>XULRunnerを5.0にバージョンアップ(Mac版は2.0)</li>
+<li>Sceneファイル(qscファイル)の保存時にオプション(テキスト形式・圧縮)を指定できるようにした．</li>
+<li>コピー・ペースト機能の改善（主にObject）</li>
+<li>Cameraのコピー・ペースト機能</li>
+<li>ラベル表示時にフォントサイズによっては文字の上下が切れるのを修正</li>
+<li>メニューの最近使ったファイル項目を実装</li>
+<li>qscファイルをダブルクリックしたときに，新規ウィンドウではなく新規タブに読み込まれるようにした．</li>
+<li>trackpadの設定を環境設定→Mouseに移した，現在すでに開いているViewに対しても適用されるようにした(MacOS X)</li>
+<li>MacOS XでもSceneファイル(qscファイル)をFinderでダブルクリックして開けるようにした．QSCアイコンが表示されるように．</li>
+<li>静電ポテンシャルマップ関連のバグフィクス</li>
+</ul>
+<h4 id="201138">2.0.1.138<a class="headerlink" href="#201138" title="Permanent link">&para;</a></h4>
+<ul>
+<li>XULRunnerを2.0にバージョンアップ</li>
+<li>分子表面(solvent excluded surface)を生成する機能を追加 (MSMS不要)</li>
+<li>分子表面の切断機能を改良（以前のようにおかしなポリゴンが生じたりしなくなった）</li>
+<li>gzip圧縮されたpdbファイル(*.pdb.gz)を直接読み込めるようにした．</li>
+<li>rcsbからのPDBダウンロード時も圧縮版を落とすようにしたので，高速化しているはず．</li>
+<li>Dial buttonがあるViewパネルを実装</li>
+<li>Pymolふうの重ね合わせによる半透明のレンダリング機能を追加</li>
+<li>分子Viewでのmouse bindingを変更可能にした</li>
+<li>Rendererのコピペ機能</li>
+<li>Objectのコピペ機能(一部不完全・バグあり)</li>
+</ul>
+<h3 id="200">2.0.0系統<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
+<h4 id="200125">2.0.0.125<a class="headerlink" href="#200125" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CPKColoringの変更が正しくqscファイルに保存できなかったのを修正．</li>
+<li>選択文でbysidechなどを使用したときに不正終了するバグを修正．</li>
+<li>POV-Ray rendering windowsを閉じたときの挙動がおかしかったのを修正．</li>
+<li>POV-Ray renderingで，clippingを設定すると正常にレンダリングできなくなるバグを修正．</li>
+</ul>
+<h3 id="110">1.1.0系統<a class="headerlink" href="#110" title="Permanent link">&para;</a></h3>
+<h4 id="110196-alpha">1.1.0.196 alpha<a class="headerlink" href="#110196-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>核酸塩基の残基名によっては残基が正しく認識できない場合があったので，aliasに追加した．</li>
+<li>GeomLineRendererの点線実装がおかしかったので修正．</li>
+</ul>
+<h4 id="110189-alpha">1.1.0.189 alpha<a class="headerlink" href="#110189-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MTZファイルを二度読み込むとおかしくなるのを修正した．</li>
+<li>Sharpで作成したMTZファイル（一部破損している）を読み込めなかったので，読み込めるように修正．</li>
+</ul>
+<h4 id="110187-alpha">1.1.0.187 alpha<a class="headerlink" href="#110187-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MTZファイルを直接読み込めるようにした。MTZファイル中の指定のColumnを使ってフーリエ変換し、マップが計算されます。</li>
+<li>MTZから作成したあるいはUnit cellをすべてカバーするマップについては、ユニットセル外についてもマップを表示できるようにした。（周期境界）</li>
+<li>画面の視点を変更したときに、マップのレンダリングの中心点も自動的に移動されるようにした。（これはmapのレンダラーのオプションでauto updateをoffにするとoffになる）</li>
+<li>Ribbonやチューブのレンダリングにメッシュを一部使用。</li>
+<li>Mol structパレットで残基の並びがおかしくなることがあったので修正。</li>
+<li>その他一部のbugfix</li>
+</ul>
+<h4 id="110175-alpha">1.1.0.175 alpha<a class="headerlink" href="#110175-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MQO形式書き出し</li>
+<li>メッシュという概念を導入．</li>
+<li>MolSurf分子表面のレンダリングをメッシュで行うようにし高速化．</li>
+</ul>
+<h4 id="110162-alpha">1.1.0.162 alpha<a class="headerlink" href="#110162-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SetScriptColoringが正しく動かなかったのを修正</li>
+<li>PNG形式で書き出しでアンチエイリアシング時に正常に書き出されなかったのを修正。</li>
+</ul>
+<h4 id="110161-alpha">1.1.0.161 alpha<a class="headerlink" href="#110161-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Renderer invalidation時にDisplayListが正しく開放されず、メモリリークが起こっていたのを修正。</li>
+<li>TextRendererのfore/background色を指定するようにした。</li>
+<li>PictRendererの位置指定に、halign, valignを指定できるようにした。</li>
+<li>Viewのマウス操作で、ドラッグしていないのに勝手に画面が回ることがあったので修正（特にスクリプトの実行ダイアログでOKを押したときになぜかWM_MOUSEMOVEが送られてきて、勝手に画面が回っていた。原因不明）。</li>
+</ul>
+<h4 id="110158-alpha">1.1.0.158 alpha<a class="headerlink" href="#110158-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Renderer毎の剛体としての回転・併進アニメーションを可能にした。</li>
+<li>SeqTimerObj（順序タイマー）の実装。</li>
+<li>TimerObjにViewのスピンを実装</li>
+<li>TimerObj: 時間変化のモードを線形・二乗・４乗から選べるように。</li>
+<li>AVS Scalar Field形式を読み込めるようにした（for MEAD）。</li>
+<li>ElePotMapをMapMeshRenderer/MapSurfRendererと互換性があるようにした→等電位面表示が可能に。</li>
+<li>MolCoord以外がcurrent objectのときに、move-selection, torsion-residueモードに入ると落ちるのを修正した。</li>
+<li>MolCoordの指定部分からある範囲以内のDensityのみを表示できるようにした。（範囲以外はdensity=0にしているだけだが）</li>
+<li>TimerObjを作成、タイマーの実装</li>
+<li>PictObjにスクリプトのクリックハンドラーを設定できるようにした。</li>
+<li>FreeTypeを使ってアンチエイリアスした国際化文字列を出すテストコードを入れた（@PictObj）</li>
+<li>内部では文字列を全てUTF-8を保持するようにした。国際化と効率を考慮すると、これがベストの方策か。</li>
+</ul>
+<h4 id="110149-alpha">1.1.0.149 alpha<a class="headerlink" href="#110149-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MoveSelToolがactiveな状態でUndo/Redoや部分削除をやるとおかしくなることがあったので修正</li>
+<li>Torsionの定義をxmlファイル(torsion_defs.xml)から読み込むようにし、データをResiTopparのプロパティーとして保持するようにした</li>
+<li>TorsionToolを実装した</li>
+<li>geomモジュールに任意のPNGファイルをテキスチャとして表示するためのPictObjとそれにまつわるクラス等を作成した</li>
+</ul>
+<h4 id="110144-alpha">1.1.0.144 alpha<a class="headerlink" href="#110144-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>molmdl moduleを作る。</li>
+<li>MoveSelToolをQueから修正・移植。</li>
+<li>SymOpDBをQueの古い形式に戻す＋symop.datはon-demandで読込むよう実装。</li>
+</ul>
+<h4 id="110138-alpha">1.1.0.138 alpha<a class="headerlink" href="#110138-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>DistLabelクラスに分子間距離測定ができないバグがあったので修正</li>
+<li>暫定的に、角度・二面角を測定するUIをつける</li>
+</ul>
+<h4 id="110136-alpha">1.1.0.136 alpha<a class="headerlink" href="#110136-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ActiveXコントロールで、Evalメソッドにより文字列で指定したスクリプトを実行できるようにした。</li>
+<li>SecurityManagerを導入し、実行状態により一部の操作（外部プログラム実行、ファイル入出力関連等）を使用禁止するようにした。</li>
+<li>ActiveXコントロールで、リモートのスクリプトも実行できるようにした。リモートスクリプトの実行時にはローカルファイルのアクセスやプロセス起動は禁止するようにした。</li>
+<li>ファイル読み込みをバックグラウンドで行い、ダイアログでキャンセルできるようにした。</li>
+<li>QScript:<ul>
+<li>mark-sweep法でガベージコレクトするようにした。</li>
+<li>loop中のfunctionで例外が発生した場合，LoopInsts.hpp:22でassertion failedが起こっていたのを修正した。</li>
+<li>文法を変更し、クラスを定義できるようにした。（但し、コンストラクタの定義などはTODO）</li>
+<li>yield文を廃止し、&lt;式&gt;(arg1, ..., argn)形式で任意の関数オブジェクトを呼び出せるようにした。</li>
+</ul>
+</li>
+<li>PovRay書き出しの改善:<ul>
+<li>OpenGL画面のPerspective表示と、PovRayレンダリング時の表示が、厳密に同一になるようにした。</li>
+<li>OpenGL画面表示のFogが、ある程度PovRayレンダリング時にも反映されるようにした。（Fogの表現式が違うので完全一致は無理）</li>
+<li>PovRayファイルレベルでレンダラーごとに表示非表示を変更できるようにした。_show_XXXXを1に定義しているが、これを0にすることで非表示にできる。</li>
+</ul>
+</li>
+</ul>
+<h4 id="110131-alpha">1.1.0.131 alpha<a class="headerlink" href="#110131-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>HistoryListの振る舞いを修正。ヒストリー中にあるものがappendされた場合（かつbIgnrDup==TRUEの場合）、それを除いた上でappendするようにした。</li>
+<li>
+<p>Mol以外がカレントの状態でGUIからsyntax selを実行すると落ちるのを直した。
+Windowsのsetup scriptを生成するperlスクリプトperl/iss-version.plで改行エスケープを処理するようにした。（InnoSetupをversion upしたら改行がエスケープできなくなっていたため）</p>
+</li>
+<li>
+<p>実際にDelPhi(linux)で書き出した，グリッドサイズが65以外のphimapで着色できるようにした</p>
+</li>
+<li>
+<p>phimapの拡張子をpotからphiにした（DelPhiのdocumentationにそうあったから）</p>
+</li>
+<li>
+<p>MolSelectionのキャッシュをグローバルではなく，MolCoordが所有するように変更（プロセス内に複数ワークスペースを置くための処置），名前をSelCacheMgrに変更</p>
+</li>
+<li>CnstrSelでAROUNDが使用するキャッシュをSelCacheMgrに統合</li>
+<li>CnstrSelでBYRESがキャッシュを使用するようにして高速化</li>
+</ul>
+<h4 id="110127-alpha">1.1.0.127 alpha<a class="headerlink" href="#110127-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MolSurfオブジェクトを平面で切り断面を生成するCutByPlaneを実装</li>
+<li>CutByPlaneのGUI（Tools-&gt;Cut surface object）を追加</li>
+<li>molsurfレンダラーで，デフォルトで面の裏側も描画されるようにした．</li>
+<li>MolSurfオブジェクトのCutByPlane操作をUndoできるようにした．</li>
+</ul>
+<h4 id="110115-alpha">1.1.0.115 alpha<a class="headerlink" href="#110115-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PDBのCRYST1レコードが正しく読めないようだったので，PDBFileReaderに外部ハンドラーをread()を呼び出すたびに登録しなおすようにした．</li>
+</ul>
+<h4 id="110114-alpha">1.1.0.114 alpha<a class="headerlink" href="#110114-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Kabsch&amp;Sanderのアルゴリズムに基づいて，二次構造を計算するルーチンを実装．</li>
+<li>ファイル読込み時にオプションを設定できるようにした．（二次構造計算の有無・Alternate conformation, Anisotropic B factor, MODEL recordの読込み等）</li>
+<li>Ribbonモデル表示時に，デフォルトでへリックス・シートが色分けされる</li>
+<li>マウスのホイールでzoom/unzoomが可能に</li>
+</ul>
+<h4 id="110112-alpha">1.1.0.112 alpha<a class="headerlink" href="#110112-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Bugfix: MSMSで作成した分子表面ファイルを読み込めるように修正した．</li>
+</ul>
+<h4 id="110111-alpha">1.1.0.111 alpha<a class="headerlink" href="#110111-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>xyz形式をよみこめるようにした．</li>
+<li>SplineRendererとそのサブクラスで，残基番号が不連続になっていると落ちるバグを修正．</li>
+<li>MainChainRendererとそのサブクラスで,pivot間距離がプロパティーautobreak以上の場合にsegmentを切るようにする．残基番号はsegmentの連続・不連続とは関係ないようにする．</li>
+<li>SplineRendererとそのサブクラスで，末端のキャップの色が黒になるのを修正．</li>
+<li>MRUファイルのリストが逆になっていたのを直す</li>
+</ul>
+<h4 id="110108-alpha">1.1.0.108 alpha<a class="headerlink" href="#110108-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ActiveX control versionのCueMolを公開した．</li>
+<li>Fileメニューに，最近使ったファイル(Recently Used Files)の項目を設けた．</li>
+<li>sysconfig.xmlファイルのエンコーディングをUTF-8にした（日本語ファイル名があっても大丈夫になったはず）</li>
+<li>分子の選択文法で，残基プロパティーで選択するrprop文を設けた</li>
+<li>OutputWindow editboxで上キーを押すと落ちるのを直した</li>
+</ul>
+<h4 id="11097-alpha">1.1.0.97 alpha<a class="headerlink" href="#11097-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PDBFileReaderで，バリンなどのgamma protonが水銀になってしまうのを改善</li>
+<li>チェインでごまかして，複数モデル（ＮＭＲ等）に一応対応した</li>
+<li>一部のOpenGLドライバーで，原子をクリックすると落ちる・画面が腐る等の問題点が改善された．</li>
+<li>権限が低いユーザー（ゲストなど）でのインストール時にエラーメッセージを出さないようにした</li>
+<li>QScript: break/continueで{} scopeを抜けるときに，正しくスコープ（dictionary）を破棄するようにする</li>
+<li>atom IDで文法select出来るようにする(aid 10,20 aid 1:100など)</li>
+</ul>
+<h4 id="11092-alpha">1.1.0.92 alpha<a class="headerlink" href="#11092-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Threadを使用するための初期実装</li>
+<li>分子構造ツリーのパレット初期実装</li>
+<li>LsqFit1Dlgで，selection editにhistory機能をつける</li>
+<li>分子構造ツリーパレット・状態を保存するように</li>
+<li>文法選択パレット・ヒストリーをつける</li>
+<li>OpenGLを使うと、他のWindowのツールチップまでがおかしくなる←原因不明, WinXP SP2で解決，MFC側のバグ？</li>
+<li>コピペの初期実装・他のアプリとの通信：他へのテキストでのペーストのみ対応</li>
+<li>PDBFileWriterのPDB準拠改善</li>
+<li>PDBFileReader MODELがある場合は，モデル１以外は無視</li>
+<li>コピペと削除の実装</li>
+<li>ツールバーを新しくする</li>
+<li>Undo/Redoをツールバーに入れる・ドロップダウンボタンにする</li>
+<li>権限が低いユーザー（ゲストなど）でのインストールを改善</li>
+</ul>
+<h3 id="100">1.0.0系統<a class="headerlink" href="#100" title="Permanent link">&para;</a></h3>
+<h4 id="10063">1.0.0.63<a class="headerlink" href="#10063" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一部のOpenGLドライバーで，原子をクリックすると落ちる・画面が腐る等の問題点が改善された．</li>
+</ul>
+<h4 id="10062">1.0.0.62<a class="headerlink" href="#10062" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一部のグラフィクスチップのOpenGL driverで，距離表示ラベルを表示させると落ちる問題点を回避．</li>
+<li>分子重ねあわせdialogで，reference/movingで，"use current selection"/"直接選択文"を入力を混在出来なかったのを修正．</li>
+</ul>
+<h4 id="10061">1.0.0.61<a class="headerlink" href="#10061" title="Permanent link">&para;</a></h4>
+<ul>
+<li>大体のobject,rendererに関してsession file (*.que)へのdump/restoreを正しく行えるようにした．</li>
+</ul>
+<h4 id="10060-alpha">1.0.0.60 alpha<a class="headerlink" href="#10060-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Queからmap surface renderer (電子密度の表面をsolid surfaceで描画)を復活</li>
+<li>Unit cell/map mesh/map surface rendererの
+property dialog (workspace paletteでrendererの項目を
+ダブルクリックするとでるやつ)を追加．</li>
+</ul>
+<h4 id="10058-alpha">1.0.0.58 alpha<a class="headerlink" href="#10058-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>分子表面レンダラーの着色関連を強化．</li>
+</ul>
+<h4 id="10054-alpha">1.0.0.54 alpha<a class="headerlink" href="#10054-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>静電ポテンシャル表示周りのバグを修正</li>
+<li>Preference dialogでUndoの制限を0にすることで，Undo/Redoを無効化できるようにした</li>
+</ul>
+<h4 id="10052-alpha">1.0.0.52 alpha<a class="headerlink" href="#10052-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>QScript (.qs)，Session dump file (.que)ファイルの関連付け，DnD読込みを出来るようにした．</li>
+<li>Output window, Standard bar, Tool barの表示・非表示を制御できるようにした．</li>
+<li>残基に原子がC alphaしかないような分子ファイルを正しく読込めないというバグを修正</li>
+</ul>
+<h4 id="10050-alpha">1.0.0.50 alpha<a class="headerlink" href="#10050-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PNG書出し周りのバグ取り</li>
+<li>
+<p>Windowsでのファイル関連付け周りを実装．
+関連付けはEdit-&gt;Preference dialogのFile associationの項目で
+選ばれているものがCueMolに関連付けられます．
+関連付けを外すと，一応元の関連付け（あれば）に戻るようになっているはず．</p>
+</li>
+<li>
+<p>Drag and dropでファイルを読めるように．</p>
+</li>
+<li>PDBのANISOU recordを読むようにし，anisou rendererを作る(ORTEP風の異方性温度因子表示，デフォルトでは確率20%相当の楕円体で表示されます)</li>
+</ul>
+<h4 id="10045-alpha">1.0.0.45 alpha<a class="headerlink" href="#10045-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(DONE) 同名のオブジェクトを作るだけで落ちるという重大なバグが．．．</li>
+<li>(DONE) 分子の最小二乗重ね合わせ(LSQ fitting) GUIの改良</li>
+<li>(DONE) Ribbon rendererのpropertyを設定するGUI追加</li>
+<li>(DONE) Output windowのprompt edit boxでUP/DOWN keyでhistoryを使えるように</li>
+</ul>
+<h4 id="10042-alpha">1.0.0.42 alpha<a class="headerlink" href="#10042-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(DONE) MapRendererのデバッグ</li>
+<li>(DONE) NARendererのデバッグ</li>
+</ul>
+<h4 id="10041-alpha">1.0.0.41 alpha<a class="headerlink" href="#10041-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(DONE) deserializeするとメモリリークが起こる（LColor）</li>
+<li>(DONE) geom moduleのlineをstipple(点線)に対応させるコードを復活させた</li>
+<li>(DONE) GeomObjの直列化</li>
+<li>(DONE) 分子の最小二乗重ね合わせ(LSQ fitting)の簡易GUI</li>
+</ul>
+<h4 id="10039-alpha">1.0.0.39 alpha<a class="headerlink" href="#10039-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(DONE) Initialize sessionで落ちる&lt;-Objectを破棄する前にattachしているrenderersを明示的に破棄することで対処</li>
+<li>(DONE) Perspectiveがおかしい</li>
+<li>(DONE) QScript try節でexceptionが起こった場合にstack underflowが起こることがある</li>
+<li>(DONE) QScript 正規表現を使えるようにする</li>
+<li>(DONE) QScriptからファイル入出力が使えるようにする</li>
+<li>(DONE) メニューのsave asが実装されていない</li>
+</ul>
+<h4 id="10038-alpha">1.0.0.38 alpha<a class="headerlink" href="#10038-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(DONE) WheelCtrlを実装</li>
+<li>(DONE) WheelによるView prop変更のPageを追加</li>
+<li>(DONE) Module unload時に依存関係を見るようにした</li>
+<li>(DONE) Object--&gt;RendererへのMbObjEventをDisplayMgr経由で処理するのではなく直接Rendererに行くようにした．</li>
+<li>(DONE) MbEventのListenerをstd::setに保持するようにした</li>
+<li>(DONE) QScript 選択文法で，%{,%}で囲むよりも，se★,★ (★は任意の記号)に変更（元の書式も一応残す）</li>
+<li>(DONE) hardware stereoを有効にする</li>
+<li>(DONE) QScript 引用文字列で，中に変数への参照を埋め込めるように(文字列以外はtostr()が呼び出されるようにする)</li>
+<li>(DONE) QScriptで書式化出力をできるようにする(printf)</li>
+<li>(DONE) palibをuifw/winguiに移す</li>
+</ul>
+<h4 id="10036-alpha">1.0.0.36 alpha<a class="headerlink" href="#10036-alpha" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(DONE) QScript colorのHSB (特にhue周り) のメソッドがおかしい</li>
+<li>(DONE) Symmで同じ名前のSymm分子をオブジェクト化しようとすると，同名エラーとならずに落ちてしまう</li>
+<li>(DONE) RibbonRendererで，*_smoothが効いていない</li>
+<li>(DONE) RibbonRendererで，*_smoothのdeserializationハンドリング</li>
+<li>(DONE) アイコン化して終了すると，パレットがどっかに行ってしまうのを直す．</li>
+<li>(DONE) QScriptレンダラなどのプロパティをハッシュでも渡せるようにする</li>
+<li>(DONE) QScriptからscene書き出しができるようにする（オプション込みで）．</li>
+<li>(DONE) QScript 例外処理の実装</li>
+<li>(NOTE) 最適化オプションSSE命令を無効化（Pen3以前やathlonで動かなかったので）</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

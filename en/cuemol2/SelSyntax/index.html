@@ -1,0 +1,1032 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/cuemol2/SelSyntax/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>SelSyntax - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cuemol2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SelSyntax
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cuemol2/SelSyntax/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cuemol2" class="md-nav__link">
+    <span class="md-ellipsis">
+      分子選択文のリファレンス (CueMol2版)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分子選択文のリファレンス (CueMol2版)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      選択リテラル
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="選択リテラル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      全選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      空選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      元素による選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      原子名による選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      残基名による選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      残基番号による選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      チェイン名による選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchcal-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      階層表記(hierarchcal notation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      残基プロパティーによる選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      温度因子による選択
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-conformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate conformationによる選択
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      選択演算子
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="選択演算子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around" class="md-nav__link">
+    <span class="md-ellipsis">
+      AROUND演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPAND演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#byres" class="md-nav__link">
+    <span class="md-ellipsis">
+      BYRES演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bysidech" class="md-nav__link">
+    <span class="md-ellipsis">
+      BYSIDECH演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bymainch" class="md-nav__link">
+    <span class="md-ellipsis">
+      BYMAINCH演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neighbor" class="md-nav__link">
+    <span class="md-ellipsis">
+      NEIGHBOR演算子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extend" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXTEND演算子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      名前リスト
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="名前リスト">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      正規表現
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      数値リスト
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数値リスト">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertion-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      残基番号の場合の特例 (insertion code)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>SelSyntax</h1>
+
+<p><a href="../../Documents">Documents</a></p>
+<h2 id="cuemol2">分子選択文のリファレンス (CueMol2版)<a class="headerlink" href="#cuemol2" title="Permanent link">&para;</a></h2>
+<p>CueMol2での選択文法は，CueMol1.1のものと大体同じですが，一部拡張されている部分もあります．
+ここではCueMol1.1と同じ部分も含めて，すべての機能を紹介しています．</p>
+<p>選択文は<strong>選択式</strong>からなっており，
+<strong>選択式</strong>は<strong>選択リテラル</strong>と<strong>選択演算子</strong>から構成されています．</p>
+<p>一方，選択リテラルの一部は後述の
+<strong><a href="#name_list">名前リスト</a></strong>と<strong><a href="#num_list">数値リスト</a></strong>等を引数としてとるものがあります．
+ここでは，これら個々の要素について説明します．</p>
+<h3 id="_1">選択リテラル<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>選択リテラルは，それ単独で選択命令として機能します．
+後述の演算子で組み合わせたり，修飾したりすることができます．</p>
+<h4 id="_2">全選択<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<pre><code>all
+ *
+</code></pre>
+<p>文字通り分子中の原子すべてを選択する．</p>
+<h4 id="_3">空選択<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<pre><code>none
+</code></pre>
+<p>何も選択しないことを表す．（あまり使い道はない）</p>
+<h4 id="_4">元素による選択<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<pre><code>elem [名前リスト]
+e; [名前リスト]
+</code></pre>
+<p>後述の[名前リスト]で示される<strong>元素名</strong>を持つ原子が選択される．e;はelemの省略形．省略形の場合は;の後の空白文字は省略できる．（以下の他の省略形でも同様）</p>
+<p><strong>例:</strong></p>
+<pre><code>e; C,N,O
+</code></pre>
+<p>分子中の炭素，窒素，酸素原子が選択される．</p>
+<h4 id="_5">原子名による選択<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<pre><code>name [名前リスト]
+n; [名前リスト]
+</code></pre>
+<p>後述の[名前リスト]で示される<strong>原子名</strong>を持つ原子すべてが選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>n; CA,N,O
+</code></pre>
+<p>分子中の，CA, N, Oという原子名を持つ原子すべてが選択される．
+通常は，蛋白の主鎖α位炭素，アミド窒素，カルボニル酸素原子である．</p>
+<h4 id="_6">残基名による選択<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<pre><code>resn [名前リスト]
+r; [名前リスト]
+</code></pre>
+<p>後述の[名前リスト]で示される残基名を持つ残基中の原子すべてが選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>r; ARG,LYS
+</code></pre>
+<p>分子中のARG（アルギニン）とLYS（リジン）残基が選択される．</p>
+<p>ちなみに，名前リストには正規表現も使用可能である（後述の<strong>名前リスト</strong>の項目参照）</p>
+<pre><code>r; /^A/
+</code></pre>
+<p>残基名がAから始まるARG, ALA, ASNなどが選択されることになる．</p>
+<h4 id="_7">残基番号による選択<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<pre><code>resi [数値リスト]
+resid [数値リスト]
+i; [数値リスト]
+</code></pre>
+<p>[数値リスト]で示される残基番号を持つ残基中の原子すべてが選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>i; 3,5,10:20
+</code></pre>
+<p>残基番号3,5,10〜20をもつ残基がすべて選択される．</p>
+<h4 id="_8">チェイン名による選択<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<pre><code>chain [名前リスト]
+c; [名前リスト]
+</code></pre>
+<p>[名前リスト]で示される名前を持つチェイン中の全原子が選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>c; A,B
+</code></pre>
+<p>チェインAとBが選択される．</p>
+<h4 id="hierarchcal-notation">階層表記(hierarchcal notation)<a class="headerlink" href="#hierarchcal-notation" title="Permanent link">&para;</a></h4>
+<p>以下のようなドットで区切られた表記からなる．</p>
+<pre><code>チェイン名.残基番号.原子名
+</code></pre>
+<p><strong>チェイン名</strong>(名前リスト形式で複数指定可)で示される名前を持つチェイン中の，
+<strong>残基番号</strong>(数値リスト形式で複数指定可)の範囲の残基の，
+<strong>原子名</strong>(名前リスト形式で複数指定可)の原子名を持つ原子が選択される．
+"*"を指定した場合は，すべてのチェイン／残基／原子が選択対象になる．</p>
+<p>この表記法は</p>
+<pre><code>chain &quot;チェイン名&quot; and resid &quot;残基番号&quot; and name &quot;原子名&quot;
+</code></pre>
+<p>と全く同じ意味になる．</p>
+<p><strong>例:</strong></p>
+<pre><code>A.1:100.CA,CB
+</code></pre>
+<p>チェインAの残基番号1〜100の，α・β位炭素が選択される．</p>
+<pre><code>*.5,6,7.*
+</code></pre>
+<p>全チェインの残基番号5,6,7の残基中の全原子が選択される．
+すなわち，</p>
+<blockquote>
+<p>resid 5,6,7</p>
+</blockquote>
+<p>と等価である．</p>
+<h4 id="_9">残基プロパティーによる選択<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<pre><code>rprop [名前１]=[名前２]
+</code></pre>
+<p>[名前１]で示される残基プロパティーが，
+[名前２]で示される値である残基中の原子すべてが選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>rprop secondary=helix
+</code></pre>
+<p>残基プロパティー「secondary」が「helix」である残基中の
+全原子が選択される．</p>
+<h4 id="_10">温度因子による選択<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<pre><code>bfac &quot;comp_op&quot; &quot;number&quot;
+&quot;comp_op&quot; := &quot;&lt;&quot;|&quot;&gt;&quot;|&quot;=&quot;
+</code></pre>
+<p>"comp_op"と"number"で指定した値の温度因子を持つ原子が選択される．
+"number"は整数値である．
+（小数点がある数値を指定するとエラーになります）</p>
+<p><strong>例:</strong></p>
+<pre><code>bfac&gt;50
+</code></pre>
+<p>温度因子が50より大きい原子が選択される．</p>
+<h4 id="alternate-conformation">Alternate conformationによる選択<a class="headerlink" href="#alternate-conformation" title="Permanent link">&para;</a></h4>
+<pre><code>alt [名前リスト]
+</code></pre>
+<p>[名前リスト]で示されるalternate conformation IDを持つ原子が選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>alt A,null
+</code></pre>
+<p>alternate conformationがAの原子と，alternate conformationを持たない（PDBファイル中では空白文字になっている）
+原子が選択される．（残基の側鎖のみalternate conformationがある場合等はこのようにしないと側鎖しか選択されなかったりするので注意）</p>
+<pre><code>A.7.* &amp; alt B, null
+</code></pre>
+<p>チェインAの残基番号7の残基中で，alternate conformationがBの原子と，alternate conformationを持たない原子が選択される．</p>
+<hr />
+<h3 id="_11">選択演算子<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>選択演算子には，AND演算子，OR演算子，NOT演算子，AROUND演算子，BYRES演算子などがあります．</p>
+<h4 id="and">AND演算子<a class="headerlink" href="#and" title="Permanent link">&para;</a></h4>
+<pre><code>[式1] and [式2]
+[式1] &amp; [式2]
+</code></pre>
+<p>式1と式2であらわされる選択集合の積集合からなる選択集合を作成する．&amp;で表記した場合は前後の空白はなくてもよい．</p>
+<p><strong>例:</strong></p>
+<pre><code>chain A and resn ALA
+c;A&amp;r;ALA
+</code></pre>
+<p>分子中の，チェインAに属するALA残基のみが選択される．</p>
+<h4 id="or">OR演算子<a class="headerlink" href="#or" title="Permanent link">&para;</a></h4>
+<pre><code>[式1] or [式2]
+[式1] | [式2]
+</code></pre>
+<p>式1と式2であらわされる選択集合の和集合からなる選択集合を作成する．</p>
+<p><strong>例:</strong></p>
+<pre><code>chain A or resn ALA
+</code></pre>
+<p>分子中のチェインA全体と，すべてのALA残基が選択される．</p>
+<h4 id="not">NOT演算子<a class="headerlink" href="#not" title="Permanent link">&para;</a></h4>
+<pre><code>not [式1]
+! [式1]
+</code></pre>
+<p>式1であらわされる選択集合の補集合からなる選択集合を作成する．</p>
+<p><strong>例:</strong></p>
+<pre><code>not resn ALA
+</code></pre>
+<p>分子中のALA残基以外すべてが選択される．</p>
+<h4 id="around">AROUND演算子<a class="headerlink" href="#around" title="Permanent link">&para;</a></h4>
+<pre><code>&lt;式1&gt; around &lt;実数値&gt;
+&lt;式1&gt; around [&quot;&lt;分子名&gt;&quot;] &lt;実数値&gt;
+</code></pre>
+<p>&lt;式1&gt;であらわされる選択集合から&lt;実数値&gt;Å以内にある原子が選択される．
+&lt;式1&gt;自体の選択集合は含まれない点に注意．</p>
+<p>第2の書式では，&lt;分子名&gt;で示される他の分子中で&lt;式1&gt;であらわされる選択集合から
+&lt;実数値&gt;Å以内にある原子が選択される．</p>
+<p><strong>例:</strong></p>
+<pre><code>chain A around 3
+</code></pre>
+<p>チェインAから3Å以内にある原子の集合が選択される．
+チェインA自体は選択されない．</p>
+<pre><code>chain A around [&quot;1CRN.pdb&quot;] 3
+</code></pre>
+<p>分子名が1CRN.pdbで示される分子中のchain Aから3Å以内にある原子の集合が選択される．
+（同じシーン中に1CRN.pdbという名前の分子オブジェクトがないと選択は空になるので注意）</p>
+<h4 id="expand">EXPAND演算子<a class="headerlink" href="#expand" title="Permanent link">&para;</a></h4>
+<pre><code>[式1] expand [実数値]
+</code></pre>
+<p>[式1]であらわされる選択集合から[実数値]Å以内にある原子のが選択される．
+AROUNDと異なり，[式1]自体の選択集合も含まれる点に注意．</p>
+<p><strong>例:</strong></p>
+<pre><code>chain A expand 3.5
+</code></pre>
+<p>チェインA自身と，それから3.5Å以内にある原子の集合が選択される．
+チェインA自体も選択されるところがAROUNDと異なる．</p>
+<h4 id="byres">BYRES演算子<a class="headerlink" href="#byres" title="Permanent link">&para;</a></h4>
+<pre><code>byres [式1]
+</code></pre>
+<p>[式1]の選択集合が残基単位に拡張される．</p>
+<p><strong>例:</strong></p>
+<pre><code>byres name SD
+</code></pre>
+<p>原子名SDを持つ原子の集合が，残基単位の選択に拡張される．
+蛋白の場合，結果として，メチオニン(Met)残基がすべて選択されることになる．</p>
+<h4 id="bysidech">BYSIDECH演算子<a class="headerlink" href="#bysidech" title="Permanent link">&para;</a></h4>
+<pre><code>bysidech [式1]
+</code></pre>
+<p>[式1]の選択集合が側鎖のみに限定される．
+タンパク質の場合，表示が見やすいようにbysidechで選択される領域にはCαも含まれるようになっている．</p>
+<p><strong>例:</strong></p>
+<pre><code>bysidech A.10:100.*
+</code></pre>
+<p>チェインAの残基番号10〜100の側鎖(とCα)のみが選択される．</p>
+<h4 id="bymainch">BYMAINCH演算子<a class="headerlink" href="#bymainch" title="Permanent link">&para;</a></h4>
+<pre><code>bymainch [式1]
+</code></pre>
+<p>[式1]の選択集合が主鎖のみに限定される．
+(あまり使い道はない)</p>
+<h4 id="neighbor">NEIGHBOR演算子<a class="headerlink" href="#neighbor" title="Permanent link">&para;</a></h4>
+<p>未実装</p>
+<h4 id="extend">EXTEND演算子<a class="headerlink" href="#extend" title="Permanent link">&para;</a></h4>
+<p>未実装</p>
+<hr />
+<p><a id="name_list"></a></p>
+<h3 id="_12">名前リスト<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<pre><code>name [, name, ...]
+</code></pre>
+<p>名前リストはnameあるいはnameをカンマで区切ったリストからなる．
+カンマの前後の空白は複数あっても，なくてもよい．</p>
+<p>nameは，アルファベット，数字，アンダースコア(_)からなる文字列である．
+アルファベットに関しては，大文字・小文字は区別されない．</p>
+<p>nameにこれら以外の文字（ドットなど）を含む場合は，<strong>"</strong>(ダブルクォーテーション文字）で囲む必要が有る．
+また，ダブルクォーテーション文字で囲んだ場合は，アルファベットの大文字小文字は区別される点に注意．</p>
+<h4 id="_13">正規表現<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>名前リストとして正規表現を使用することができる．</p>
+<pre><code>/^A[0-9][0-9]$/
+</code></pre>
+<p>以上だと，はじめの1文字がA, 残りの2文字が数字の3文字，A01などが選択される．
+全体にマッチさせるには，この例のように初めに行頭にマッチする^, 最後に行末にマッチする$をつける必要がある．</p>
+<p>上記の普通の名前リストのカンマ区切り表記と正規表現を混ぜることも可能．</p>
+<pre><code>ABC,/^A[0-9][0-9]$/ ←ABCと，A(2桁数値)が選択される
+</code></pre>
+<p>正規表現中のアルファベット文字に関しては，大文字・小文字が区別されるので注意．</p>
+<p><a id="num_list"></a></p>
+<h3 id="_14">数値リスト<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<pre><code>&quot;range&quot; [, &quot;range&quot;, ...]
+&quot;range&quot; := &quot;number&quot; | &quot;number1&quot;:&quot;number2&quot;
+</code></pre>
+<p>数値リストは"range"あるいは"range"をカンマで区切ったリストからなる．
+さらに，"range"は単独の整数値("number")あるいは
+二つの整数値"number1":"number2"からなる．
+後者は，"number1"以上"number2"以下の整数の範囲を表している．</p>
+<pre><code>1, 3:10, 51
+</code></pre>
+<p>上記は1,3,4,...,9,10,51の整数値の集合をあらわす．</p>
+<h4 id="insertion-code">残基番号の場合の特例 (insertion code)<a class="headerlink" href="#insertion-code" title="Permanent link">&para;</a></h4>
+<p>残基番号を指定する場合には，insertion codeを含むことが可能です．
+例えば，残基番号20Aと20Bを選択したい場合は，</p>
+<pre><code>i; 20A, 20B
+</code></pre>
+<p>と表記可能です．上記のような範囲表記(20A:20Zなど)も可能です．
+ただし，insertion codeを含む残基番号の大小関係が微妙なので思いがけない部分が選択されてしまう場合があります．</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

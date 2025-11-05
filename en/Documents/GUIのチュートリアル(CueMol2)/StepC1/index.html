@@ -1,0 +1,698 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>StepC1 - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              StepC1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      結晶学的情報
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="結晶学的情報">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      単位胞(unit cell)の表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="単位胞(unit cell)の表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-cell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit cellとレンダラー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      結晶学的対称分子の表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="結晶学的対称分子の表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      単位胞内に表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ある距離内にある分子を表示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symm-renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symm renderer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symm renderer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      結晶学的対称分子のコンテキスト・メニュー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      結晶学的対称分子のコンテキスト・メニュー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      対称分子の作成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>StepC1</h1>
+
+<p><a href="../../../Documents/GUIのチュートリアル(CueMol2)/">GUIのチュートリアル indexへ戻る</a> | <a href="../../../Documents/GUIのチュートリアル(CueMol2)/StepC2">次へ</a></p>
+<p>まず，<a href="../../../Documents/GUIのチュートリアル(CueMol2)/Step1">基本編</a>を参考に，PDBサイトからダウンロードしてきたLysozymeのPDBファイルを読み込んで，traceレンダラーで表示してください．
+あるいは直接(Get PDB by accession code...)で読み込んでも構いません．</p>
+<h2 id="_1">結晶学的情報<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>読み込んだ分子が結晶構造解析により構造決定されている場合，
+Symmetryパネルに結晶に関する情報が表示されます．（Symmetryパネルが表示されていない場合は，メニュー「Window」→「Panels」から表示させてください）</p>
+<p><img alt="c1-symm-panel1" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symm-panel1.png" /></p>
+<p>読込んだPDBファイルによっては，
+ここの値が意図したものと違っていることがあります
+（PDBのフォーマットに準拠してないのが原因でしょう）．
+~~今のバージョン(2.0.0.94)ではまだ実装されていませんが，将来的には，"Change ..."ボタンを押して正しい値に変更できるようになる予定です．~<br/></p>
+<p>その場合は，"Change ..."ボタンを押して正しい値に変更できます．</p>
+<h3 id="unit-cell">単位胞(unit cell)の表示<a class="headerlink" href="#unit-cell" title="Permanent link">&para;</a></h3>
+<p>まず，unit cellを表示させてみましょう．
+Symmetryパネルから"Unit cell"ボタンを押します．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-unitcell1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="c1-unitcell1" class="on-glb" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-unitcell1.png" style="zoom: 0.5" /></a></p>
+<p>図のように，unit cellと座標軸が表示されます．</p>
+<h4 id="unit-cell_1">Unit cellとレンダラー<a class="headerlink" href="#unit-cell_1" title="Permanent link">&para;</a></h4>
+<p>シーンパネルの方を見ると，unitcellというレンダラーが追加されていると思いますが，
+Unit cellは，このunitcellレンダラーで表示されています．
+なので，これを非表示にすると一時的にunitcellを隠すことができます．
+また，これを削除すると表示が削除されます．
+削除後，再度SymmetryパネルのUnit cellボタンを押すと
+unitcellレンダラーが再び作られ，表示されるようになります．</p>
+<h3 id="_2">結晶学的対称分子の表示<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>次に，結晶学的対称分子を表示させてみましょう．</p>
+<h4 id="_3">単位胞内に表示<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>Symmetryパネルの，"Symm mol"ボタンを押すと，以下のようなメニューが表示されます．</p>
+<p><img alt="c1-symmol-bycell1" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symmol-bycell1.png" /></p>
+<p>ここで，一番下のUnit cellを押すと，単位胞内の対称分子のみが表示されます．</p>
+<p><a class="glightbox" href="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symmol-bycell-shown1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="c1-symmol-bycell-shown1" class="on-glb" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symmol-bycell-shown1.png" style="zoom: 0.5" /></a></p>
+<p>リゾチームでは，P4(3)2(1)2なので，対称操作は８つあり，
+すなわち８つの対称分子が表示されるわけです．</p>
+<h4 id="_4">ある距離内にある分子を表示<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>上記のメニューで，距離の値が表示されている項目を選択すると，
+視点の中心から指定した距離内にある対称分子が表示されるようになります．
+表示は，視点を移動させるごとに自動更新されます．</p>
+<p>ただ，おはずかしいことに，現在のバージョン(2.0.0.94)では
+対称分子を探すアルゴリズムが若干おかしいため本来距離内にあるはずの対称分子がちゃんと出てこなかったりします（距離を十分に大きくとると出てくるようになるのですが）．
+ご注意ください．</p>
+<h3 id="symm-renderer">Symm renderer<a class="headerlink" href="#symm-renderer" title="Permanent link">&para;</a></h3>
+<p>この対称分子表示の正体は，symm rendererです．
+Sceneパネルを見るとsymmという名前のsymm rendererが出来ているのが分かると思います．
+上述のunitcell rendererのケースと同様に，
+一時的に対称分子を消したい場合は，Sceneパネルの該当項目の目玉アイコンをクリックすると表示・非表示を切り替えることができます．また，削除してしまうこともできます．</p>
+<p>このsymm rendererはそれ自身は特に何を表示するわけでもなく，
+他のレンダラーのコピーを対称操作し，表示しています．
+要するに，symmレンダラーの表示は鏡に映った鏡像のようなもの((蛋白質の結晶の場合は対称操作に鏡像反転は出てこないのでちょっと違いますが．．．))で，
+実体がありません．
+対称分子を表示しても，分子オブジェクトの方は何ら変化していないわけです．</p>
+<h4 id="_5">結晶学的対称分子のコンテキスト・メニュー<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>対称分子表示は実体は無いものの，
+マウスでクリックして情報を表示することは可能です．
+クリックで作成される原子名ラベルは，
+クリックした原子以外に，すべての対称分子について表示されます．</p>
+<p>さらに，ステータスバーのところに，対称操作を含めた情報が表示されます．</p>
+<p><img alt="c1-symmol-statusbar1" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symmol-statusbar1.png" /></p>
+<h4 id="_6">結晶学的対称分子のコンテキスト・メニュー<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>同様に，マウスで右クリックするとコンテキストメニューが表示されます．</p>
+<p><img alt="c1-symmol-ctxtmenu1" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symmol-ctxtmenu1.png" /></p>
+<p>通常の場合と違うのは，メニューのうち以下にあげる３点になります．</p>
+<dl>
+<dt>(symop: 1/2+Y,1/2-X,1/4+Z)</dt>
+<dd>クリックした原子が，実際の原子をどういう対称操作をしてこの位置に来ているかを示している．ただし，並進操作は表示されていない．</dd>
+<dt>Center at SYMM atom</dt>
+<dd>クリックしている対称分子表示の方に現在の視点の中心を移動する．（上にある"Center at this atom"を選ぶと，視点が実体（対称操作する前の原子）の位置に飛んでいってしまう．）</dd>
+<dt>Create this SYMM object...</dt>
+<dd>クリックしている対称分子表示を実体化する．
+この場合，元のリゾチーム分子に対称操作 <strong>1/2+Y,1/2-X,1/4+Z</strong>(+並進)を施して
+新しい分子オブジェクトを作成する．</dd>
+</dl>
+<h3 id="_7">対称分子の作成<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>それでは，上記のコンテキストメニューから，対称分子を作成してみましょう．
+Symm rendererで表示されている対称分子を右クリックし（ぱっとみわからない場合は，シーンパネルでsymm rendererを非表示にしたら消える部分が対称分子です），
+コンテキストメニューを表示させ，上記の<strong>Create this SYMM object...</strong>メニューをクリックしてみてください．</p>
+<p>すると，以下のようなダイアログが出てきます．</p>
+<p><img alt="c1-symmol-create1" src="../../../../assets/images/Documents/GUI%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%28CueMol2%29/StepC1/c1-symmol-create1.png" /></p>
+<p>Object名は変えることができますが，このままでもOKです．
+OKボタンを押すと新たに分子が作られます．</p>
+<p>作られた分子は，ファイルへの保存等，通常の分子オブジェクトと同様に操作できます．</p>
+<p><sub>~ただし，現バージョン(2.0.0.94)では二次構造の情報などが計算されないため，</sub><br/></p>
+<p>CueMol2.1からは，Create symm objectで作成したsymm分子に対しては
+自動的に二次構造が割り当てられるようになっています．
+（大体はこれで問題ないと思いますが，
+もし作成元の分子の二次構造を手動編集していた場合や，PDBのHELIX/SHEETレコードから読み込んでいた場合は，
+それらが反映されずDSSPによる割り当てが行われるため，
+意図した二次構造と違ったものになってしまいます）</p>
+<p><a href="../../../Documents/GUIのチュートリアル(CueMol2)/">GUIのチュートリアル indexへ戻る</a> | <a href="../../../Documents/GUIのチュートリアル(CueMol2)/StepC2">次へ</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

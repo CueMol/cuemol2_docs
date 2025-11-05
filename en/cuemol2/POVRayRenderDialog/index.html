@@ -1,0 +1,704 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/en/cuemol2/POVRayRenderDialog/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>POVRayRenderDialog - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-pov-ray-rendering-dialog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              POVRayRenderDialog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cuemol2/POVRayRenderDialog/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-pov-ray-rendering-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      About POV-Ray Rendering Dialog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About POV-Ray Rendering Dialog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-execute-the-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Execute the Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation-of-each-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation of Each Setting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explanation of Each Setting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pov-ray-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      POV-Ray options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pov-ray-path-etc-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      POV-Ray Path etc. Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="POV-Ray Path etc. Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-bundled" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Not Bundled
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-rendering-and-saving-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Rendering and Saving Images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering Log
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>POVRayRenderDialog</h1>
+
+<h2 id="about-pov-ray-rendering-dialog">About POV-Ray Rendering Dialog<a class="headerlink" href="#about-pov-ray-rendering-dialog" title="Permanent link">&para;</a></h2>
+<p>This section explains the POV-Ray rendering dialog.</p>
+<h3 id="how-to-execute-the-tool">How to Execute the Tool<a class="headerlink" href="#how-to-execute-the-tool" title="Permanent link">&para;</a></h3>
+<p>Execute menu "Render" → "POV-Ray rendering ..." to display the POV-Ray rendering dialog.</p>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-dlg1" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg1.png" style="zoom: 0.33" /></a></p>
+<h3 id="explanation-of-each-setting">Explanation of Each Setting<a class="headerlink" href="#explanation-of-each-setting" title="Permanent link">&para;</a></h3>
+<p>Below, we explain the meaning of each setting.</p>
+<h4 id="main-options">Main options<a class="headerlink" href="#main-options" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-dlg2" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg2.png" style="zoom: 0.5" /></a></p>
+<dl>
+<dt>W(idth), H(eight)</dt>
+<dd>Specify the size of the resulting image in pixel units. By default, it's the same as the current screen size.</dd>
+<dt>DPI</dt>
+<dd>Specify the DPI (dots/inch) of the resulting image.</dd>
+<dt>Preset size</dt>
+<dd>Several typical sizes can be selected from the dropdown menu on the right. When selected, values are entered into the width/height/dpi fields on the left.</dd>
+<dt>Projection</dt>
+<dd>You can select Perspective (perspective projection) or Orthographic (orthographic projection).</dd>
+<dt>Stereo</dt>
+<dd>When set to None, no stereo; when set to Right or Left, images for stereoscopic viewing (parallel method) for right and left eyes can be rendered.</dd>
+<dt>Stereo depth</dt>
+<dd>When Stereo is enabled, specify the separation between left and right eyes (= the degree of 3D pop-out). Larger values create more protruding images.</dd>
+<dt>CPU</dt>
+<dd>Specify the number of CPUs that POV-Ray uses for rendering. Since CueMol actually uses 1 CPU, it's good to specify the number of installed CPUs minus 1.</dd>
+<dt>Transp background</dt>
+<dd>Specify whether to make the background color transparent. (However, making it transparent eliminates fog effects. Also, it cannot be made transparent when using radiosity method)</dd>
+<dt>Clipping plane</dt>
+<dd>Specify whether to reproduce clipping by slab currently displayed in the molecular view in POV-ray rendering as well.<br/>
+<strong>Left</strong>: Clipping plane off, <strong>Right</strong>: Clipping plane on<br/>
+<a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-clip0" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip0.png" style="zoom: 0.5" /></a>
+<a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-clip1" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-clip1.png" style="zoom: 0.5" /></a></dd>
+<dt>Post-render alpha blending</dt>
+<dd>Specify whether to perform alpha blending after POV-Ray rendering. For details, refer to <a href="../../cuemol2/PostAlphaBlend">cuemol2/PostAlphaBlend</a>.</dd>
+<dt>Edge lines</dt>
+<dd>Enable edge rendering. For details, refer to <a href="../../cuemol2/EdgeLines">cuemol2/EdgeLines</a>.</dd>
+<dt>Pix labels</dt>
+<dd>Enable rendering of text labels etc.</dd>
+</dl>
+<h4 id="pov-ray-options">POV-Ray options<a class="headerlink" href="#pov-ray-options" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-dlg3" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-dlg3.png" style="zoom: 0.5" /></a></p>
+<dl>
+<dt>Povray-exe-path</dt>
+<dd>Specify the POV-Ray executable file to use for rendering. For Windows versions, it must be a console-running povray. (See POV-Ray path etc. settings below)</dd>
+<dt>Povray-inc-path</dt>
+<dd>Specify the directory containing inc files that POV-Ray references. (See POV-Ray path etc. settings below)</dd>
+<dt>Radiosity</dt>
+<dd>Specify whether to perform radiosity rendering and its mode. For details, refer to <a href="../../cuemol2/Radiosity">cuemol2/Radiosity</a>.</dd>
+<dt>Lighting</dt>
+<dd>Configure light sources. For details, refer to <a href="../../cuemol2/POVRayRenderLighting">cuemol2/POVRayRenderLighting</a>.</dd>
+<dt>Shadow</dt>
+<dd>Specify whether to render with shadows. It's off by default.<br/>
+<strong>Left</strong>: Shadow off, <strong>Right</strong>: Shadow on<br/>
+<a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-shadow0" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow0.png" style="zoom: 0.5" /></a>
+<a class="glightbox" href="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="povrender-shadow1" class="on-glb" src="../../../assets/images/cuemol2/POVRayRenderDialog/povrender-shadow1.png" style="zoom: 0.5" /></a></dd>
+</dl>
+<h3 id="pov-ray-path-etc-settings">POV-Ray Path etc. Settings<a class="headerlink" href="#pov-ray-path-etc-settings" title="Permanent link">&para;</a></h3>
+<p>Among the above settings, we'll explain Povray-exe-path and Povray-inc-path.</p>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p>When installing from an installer downloaded from <a href="https://github.com/CueMol/cuemol2/releases/">Releases</a>, console povray is included, and these values are set to point to the bundled version, so no special preparation is needed.</p>
+<h4 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h4>
+<p>When installing from a dmg file downloaded from <a href="https://github.com/CueMol/cuemol2/releases/">Releases</a>, console povray is included, and these values are set to point to the bundled version, so no special preparation is needed.</p>
+<h4 id="when-not-bundled">When Not Bundled<a class="headerlink" href="#when-not-bundled" title="Permanent link">&para;</a></h4>
+<p>When POV-Ray is not bundled, such as when building yourself, please compile console version POV-Ray yourself from Unix sources.
+For Windows, since this is somewhat troublesome, we've prepared a compiled version.
+You can download it <a href="http://sourceforge.net/projects/cuemol/files/cuemol2/win32/povray3.6-mingw32.zip/download">here (povray3.6-mingw32.zip)</a>.</p>
+<p>First, extract the prepared file to an appropriate location (such as the desktop).</p>
+<p>Now, <strong>assuming CueMol2 is installed in C:\Program Files (x86)\CueMol 2.0</strong>, copy the entire povray folder from the above zip file into it.
+(You may get a dialog saying you need administrator privileges to copy, but click OK and copy anyway.)</p>
+<pre><code>C:\Program Files (x86)\CueMol 2.0\povray\povray.exe
+</code></pre>
+<p>should exist, and</p>
+<pre><code>C:\Program Files (x86)\CueMol 2.0\povray\include
+</code></pre>
+<p>should be a folder containing various inc and other files.
+The executable file extracted after download may show a warning dialog when run (Windows 7 etc.). Run it once to make sure the warning dialog doesn't appear.</p>
+<h3 id="starting-rendering-and-saving-images">Starting Rendering and Saving Images<a class="headerlink" href="#starting-rendering-and-saving-images" title="Permanent link">&para;</a></h3>
+<p>Press the Start button at the bottom to begin rendering.</p>
+<p>During rendering, Start changes to a Stop button, so press Stop if you want to interrupt.
+As rendering progresses, the rendering image is displayed in the preview area.</p>
+<p>When rendering is complete:</p>
+<ul>
+<li>Press the Save image... button to save as a PNG image.</li>
+<li>Press the Copy to clipboard button to copy the image to the clipboard for pasting in other software.</li>
+</ul>
+<p>Press Close to close the POV-Ray rendering tool.</p>
+<p>While the POV-Ray rendering dialog is displayed, you can still operate the main window.
+If you edit the scene and return to the displayed POV-Ray rendering dialog to render again, the scene reflecting your editing work will be rendered.</p>
+<p>(However, if you switch tabs to move to a different scene, you need to close the dialog once and reopen it, or the previous scene will be rendered.)</p>
+<h3 id="rendering-log">Rendering Log<a class="headerlink" href="#rendering-log" title="Permanent link">&para;</a></h3>
+<p>From CueMol2.1 onwards, information that POV-Ray writes to stdout (or stderr) during rendering is displayed in the log window (see <a href="../../Documents/GUIのチュートリアル(CueMol2)/Step1-2">tutorial</a>).
+If rendering doesn't work properly, please refer to the log window and provide error reports.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

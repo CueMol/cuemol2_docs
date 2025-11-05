@@ -1,0 +1,827 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cuemol.github.io/cuemol2_docs/cuemol2/Memo/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Memo - CueMol &mdash; Molecular Visualization Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cuemol2" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-header__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CueMol &mdash; Molecular Visualization Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Memo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/cuemol2/Memo/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CueMol &amp;mdash; Molecular Visualization Framework" class="md-nav__button md-logo" aria-label="CueMol &mdash; Molecular Visualization Framework" data-md-component="logo">
+      
+  <img src="../../assets/images/cuemol2-small-80px.png" alt="logo">
+
+    </a>
+    CueMol &mdash; Molecular Visualization Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CueMol/cuemol2" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    トップページ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ドキュメント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Gallery" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ギャラリー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アップデート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作環境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    インストール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Licence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%AA%E3%83%B3%E3%82%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    リンク
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cuemol2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CueMol2に関するメモ書き
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CueMol2に関するメモ書き">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripting-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scripting interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripting interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jsbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      jsbrサブシステム
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpcom" class="md-nav__link">
+    <span class="md-ellipsis">
+      xpcomサブシステム
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#np" class="md-nav__link">
+    <span class="md-ellipsis">
+      npサブシステム
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scene description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metaclass-wrapper-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      新しいMetaClass wrapper generator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="新しいMetaClass wrapper generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qlibvariant" class="md-nav__link">
+    <span class="md-ellipsis">
+      qlibのvariant型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property" class="md-nav__link">
+    <span class="md-ellipsis">
+      property
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idlwrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDL生成とwrapperの実装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      persistence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Memo</h1>
+
+<p><a href="../../cuemol2/">../</a></p>
+<h2 id="cuemol2">CueMol2に関するメモ書き<a class="headerlink" href="#cuemol2" title="Permanent link">&para;</a></h2>
+<h3 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>アプリ形式</p>
+<ul>
+<li>
+<p>standalone型のCLIアプリ<br/>
+デフォルトでビルドされる。<br/>
+scriptingはinternal JS（と，可能なら互換性のためのQS等）</p>
+</li>
+<li>
+<p>libXULを使用したGUIアプリ<br/>
+GeckoSDKが在る場合にビルドされる<br/>
+XPConnect経由でexternal JSから呼び出す<br/>
+OpenGLのviewはダミーのプラグインを作成してHWNDを得る．</p>
+</li>
+</ul>
+</li>
+<li>
+<p>スクリプティング</p>
+<ul>
+<li>
+<p>Internal JS<br/>
+内部にSpiderMonkeyを持つ→JSAPIを使用してcuemol objectをjsから使用できる</p>
+</li>
+<li>
+<p>External JS<br/>
+Mozillaの場合XPConnect経由でブラウザのスクリプト言語から呼び出す
+JSAPIは使用できないので、独自のwrapper objectによりcuemol objectをjsから使用
+→最終的には全てのobjectに対してjsで記述されたwrapper classを作成し、シームレスに使用できるようにする（internal/externalの一致を目指す）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>npruntimeインタフェイス経由でブラウザのスクリプト言語から呼び出すことも視野に入れる．（Firefox, Opera等からの制御）同じinterfaceでActiveXを実装すれば、IEからも使用可能に出来るが．．．</p>
+<h3 id="scripting-interface">Scripting interface<a class="headerlink" href="#scripting-interface" title="Permanent link">&para;</a></h3>
+<h4 id="jsbr">jsbrサブシステム<a class="headerlink" href="#jsbr" title="Permanent link">&para;</a></h4>
+<p>内部スクリプティング用インターフェイス，
+内部に独自のSpiderMonkeyのコピーを持つ。($(srcdir)/js)</p>
+<p>JSAPIを使用してwrapper objectを記述</p>
+<h4 id="xpcom">xpcomサブシステム<a class="headerlink" href="#xpcom" title="Permanent link">&para;</a></h4>
+<p>外部スクリプティング用(XPConnect側)インターフェイス</p>
+<p>主に、</p>
+<ul>
+<li>setProp</li>
+<li>getProp</li>
+<li>invoke</li>
+</ul>
+<p>のインタフェイスを持つqIObjWrapper interfaceからなり、
+全ての呼び出しを上記経由で行わなければならない。</p>
+<h4 id="np">npサブシステム<a class="headerlink" href="#np" title="Permanent link">&para;</a></h4>
+<p>外部(npruntime側)インターフェイス</p>
+<p>configure引数</p>
+<pre><code>* with-gecko-sdk=&lt;Gecko-SDKのあるディレクトリ&gt;
+</code></pre>
+<h3 id="scene-description">Scene description<a class="headerlink" href="#scene-description" title="Permanent link">&para;</a></h3>
+<p>XML+(内部)JSで記述。</p>
+<p>内部JS: 自前で持つSpiderMonkyで実行するjavascript</p>
+<h2 id="metaclass-wrapper-generator">新しいMetaClass wrapper generator<a class="headerlink" href="#metaclass-wrapper-generator" title="Permanent link">&para;</a></h2>
+<p>mcwrapgen3.pl</p>
+<p>C++のテンプレートを用いたプロパティーは、複雑になりすぎるので廃止。
+インターフェイス定義ファイルXxxClass.qifから、以下のものが生成される。</p>
+<dl>
+<dt>XxxClass_wrap.hpp</dt>
+<dd>ラッパークラスXxxClass_wrapのクラス定義ファイル。</dd>
+<dt>XxxClass_wrap.cpp</dt>
+<dd>ラッパークラスXxxClass_wrapのクラス実装ファイル。<br/>
+主に、dispatch intefaceとnative呼び出しの変換機構。<br/>
+XxxClass自体のメタクラスや、(cloneableの場合は)clone()の実装なども含まれる。</dd>
+</dl>
+<p>モジュール定義ファイルから、モジュールローダー・ファクトリを生成する。</p>
+<p><strong>XPCOM用のtypelib形式呼び出しの実装は複雑になるため中止</strong></p>
+<p>外部JS記述簡素化のため、QIFファイルからjavascriptのwrapper codeを自動生成するようにした方が良い。</p>
+<p>内部JSに関しても、外部同様の簡素な記述を可能にするライブラリを必要ならば自動生成を含めて整備する必要がある。</p>
+<h3 id="qlibvariant">qlibのvariant型<a class="headerlink" href="#qlibvariant" title="Permanent link">&para;</a></h3>
+<p>qlib専用のvariant型がある(qlib::LVariant)。<br/>
+variant型は，以下の6種類の値を持ちうる．</p>
+<ul>
+<li>void</li>
+<li>boolean</li>
+<li>integer (32bit signed)</li>
+<li>real (64bit)</li>
+<li>string (LString with utf8 format)</li>
+<li>object</li>
+</ul>
+<p>Objectに関しては、コピー時の振る舞いにより3+1種類存在</p>
+<dl>
+<dt>SimpleCopy (LSimpleCopyScrObject)</dt>
+<dd>コピー時には必ずコピーが起こる。ポインターの共有は絶対に起こらない。LCloneableObjectから派生<br/>
+ただし、内部REPでポインター共有・Ref countingは可能。<br/>
+String, Vector系, Color系など汎用型は内部REP共有型で実装すべき。<br/>
+Scriptableスマートポインタqlib::LScrSp&lt;_Type&gt;も見かけ上はSimpleCopyになる。ただし、わかりにくくなるが、copy()やclone()で実体のdeepコピーは行われない。</dd>
+<dt>RefCount (LRefCountScrObject)</dt>
+<dd><strong>これは現時点では使用しない予定。</strong><br/>
+SimpleCopyインターフェイスを実装した、SmartPtrを作成したので不要となったため。
+コピー時にはポインターのみコピーされ、参照カウントされる。LRcObjectから派生。<br/>
+LRcObjectは生成時参照数0だが、LRefCountScrObjectでは１である。これは、copy()メソッドの他ポリシー型との整合性のため。生成時にはnew呼び出し側により自動的に参照されると考える。</dd>
+<dt>Sinleton (LSingletonScrObject)</dt>
+<dd>システム起動時に生成され、コピー時にはポインターのみコピーされる。システム終了時に明示的に削除されるまで存在。インスタンスはシステム中１つのみ存在するようにする。</dd>
+<dt>???</dt>
+<dd>オブジェクトの生成自体は他のインターフェイスにより行い、明示的にnew等で作成することは出来ない。他はSimpleCopyと同じ。</dd>
+</dl>
+<h3 id="property">property<a class="headerlink" href="#property" title="Permanent link">&para;</a></h3>
+<p>typelibから呼び出す形式と，automationの形式がある．以下，プロパティー名をXXXとすると，</p>
+<dl>
+<dt>dispatch形式</dt>
+<dd>bool getPropImpl(const LString &amp;propname, LVariant &amp;res) const<br/>
+bool setPropImpl(const LString &amp;propname, const LVariant &amp;res)<br/>
+というシグネチャを持つ．全プロパティーで共通のインターフェイス．(XPConnectなしの)JSやNPRuntime, 他のinterpreter言語から呼び出すのに適している．パフォーマンスが悪い．<br/>
+デフォルトでは，superclassのプロパティも検索する．一致するプロパティが見つからない場合はfalseを返す．型が一致しない場合（setter）も，falseを返す．例外は，エラー時以外は私用しない．</dd>
+<dt>typelib形式</dt>
+<dd>void getXXXPropImpl(LVariant &amp;) const<br/>
+bool setXXXPropImpl(const LVariant &amp;)<br/>
+というシグネチャを持つ．各プロパティーごとにメソッドがある．XPCOMやCOMなどから呼び出すのに適している．パフォーマンスは前者より良い筈．<br/>
+getterについては，型にかかわらずLVariantに格納されるので，（例外発生以外の）失敗は無いと考える（だから返却値がvoid）．<br/>
+一方，setterについては，LVariant側の型とプロパティの型が一致しない場合は，(例外ではなく)，何もせずにfalseを返す．</dd>
+</dl>
+<p>get/setPropImpl()では，if文の羅列でget/setXXXImpl()のうちいずれを呼び出すか決め，呼び出す．
+get/setXXXImpl()では引数のLVariantからnativeへの変換を行い，プロパティーのアクセスを行う．</p>
+<p>以上のほかに，getPropNames(), getPropTypeName(), hasProperty()がある(dispatch形式用)． </p>
+<p>primitive typeについては単純にコピー。
+文字列だけ特別扱い、基本的にはSimpleCopy(with REP).</p>
+<p>Object型には、compositeとaggrigateタイプがある。</p>
+<dl>
+<dt>composite</dt>
+<dd>外側オブジェクトと寿命が絶対同じになる。
+よって、getアクセスすると必ずコピーを返す。(そうしないと外側オブジェクトが破棄された後も，内部への参照を他のオブジェクトが保持することになってしまう．)
+よってSimpleCopyポリシーでないと×。<br/>
+普通のSimpleCopyだと、内部プロパティーを変更できなくなる。たとえば，<br/>
+X.Y.Z = 1;<br/>
+というコードの場合，X.Yが先に評価されて，XのGetY()が呼ばれる．GetY()がYのこぴーを返して，コピーYのSetZ(1)が呼ばれる．コピーYのプロパティーのみ書き換わり，元のYのプロパティーは変化しない．
+コピーYは文が実行された後は破棄されるので，結局，X.Y.Zは1に書き換わらず，プロパティーの変更が不可能になってしまう．<br/>
+よって、内部プロパティをもつオブジェクトの場合はREPの寿命がwrapper/親プロパティより長く出来るSimpleCopy(with REP)が<strong>必須</strong>。<br/>
+非ポインターで実装</dd>
+<dt>aggrigate</dt>
+<dd>プロパティ親と寿命が異なってもＯＫ。コピーポリシーは何でもよい。ただし、singletonは他オブジェクトのプロパティーとして不適だろう<br/>
+ポインターで実装</dd>
+</dl>
+<h3 id="method">method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h3>
+<p>基本的にpropertyに準ずる。</p>
+<p>typelibから呼び出す形式と，automationの形式がある．以下，メソッド名をXXXとすると，</p>
+<dl>
+<dt>automation形式</dt>
+<dd>invokeMethod(const LString &amp;name, LVarArgs &amp;res)<br/>
+というシグネチャを持つ．全methodで共通のインターフェイス．(XPConnectなしの)JSやNPRuntime, 他のinterpreter言語から呼び出すのに適している．パフォーマンスが悪い．</dd>
+<dt>typelib形式</dt>
+<dd>invokeXXXImpl(LVarArgs &amp;)<br/>
+というシグネチャを持つ．各methodごとにメソッドがある．XPCOMやCOMなどから呼び出すのに適している．パフォーマンスは前者より良い筈．<br/>
+現在，まだ実装されていない．</dd>
+</dl>
+<p>invokeMethod()では，if文の羅列でinvokeXXXImpl()のうちいずれを呼び出すか決め，invokeXXXImpl()を呼び出す．
+invokeXXXImpl()では引数のLVariantからnativeへの変換を行い，対応するnative methodを呼び出す．</p>
+<p>以上のほかに，hasMethod()がある(automation形式用)． </p>
+<dl>
+<dt>引数</dt>
+<dd>setPropertyと同様と考えられる。<br/>
+mcwrapgenのMCINFO:表記は、primitive型の場合は普通に型を記述する。
+Object型の場合は、LScriptableからの<strong>型キャスト式を記述</strong>する。</dd>
+<dt>返却値</dt>
+<dd>getPropertyと同様と考えられる。<br/>
+ポインタタイプの場合は、コピーポリシーに関わらず、常にcopy()した値を返すようにする。<br/>
+非ポインタタイプの場合も、コピーしたものを返す？？</dd>
+</dl>
+<h3 id="idlwrapper">IDL生成とwrapperの実装<a class="headerlink" href="#idlwrapper" title="Permanent link">&para;</a></h3>
+<p>Propertyはattributeに変換される．<br/>
+IDLの生成については，</p>
+<dl>
+<dt>primitive</dt>
+<dd>IDLのprimitive typeに変換される．e.g. LReal &lt;-&gt; doubleなど．</dd>
+<dt>object (composite,aggrigateとも)</dt>
+<dd>XPCOM interfaceに変換される．</dd>
+</dl>
+<p>そのほかに，</p>
+<ul>
+<li>Wrapper interface (qI_XXX)</li>
+<li>Wrapper impl class (qW_XXX)</li>
+</ul>
+<p>が生成される．特に，qI_XXXの方は，xpidlが生成するものである．</p>
+<p>qW_XXXは，qI_XXXの純粋仮想関数を全て実装する．</p>
+<p>qI_XXXは全てqIObjWrapperインターフェイスをもつ．
+それを簡易に実装するために，qW_XXXはqWObjWrapperを継承する．
+qIObjWrapperはNative型ptrを返すmethod getObject()を持つが，scriptableでなくてもよい．このinterfaceはscriptから呼ばれることはないから．</p>
+<p>qW_XXXの引数には，primitive or object typeが渡される．</p>
+<dl>
+<dt>引数 - primitiveの場合</dt>
+<dd>単純にLVariantに変換可能．LVariantに変換後，get_XXX_Impl()等に渡される．</dd>
+<dt>引数 - objectの場合</dt>
+<dd>XPCOM interface qI_XXX*（あるいはそれへの参照ポインタ）が渡される．まずqIObjWrapperにQIする．qIObjWrapperは，getObject()というメソッドがあり，LScriptableのptrを取得できる．LScriptableからLVariantに変換する．LVariantに変換後，get_XXX_Impl()等に渡す．</dd>
+<dt>thisの変換</dt>
+<dd>thisをqWObjWrapperにup castし，getObject()を呼ぶ．LScriptableを，C++型にdynamic_castする．得られたptrに対して，get_XXX_Impl(), set_XXX_Impl(), invoke_XXX_Impl()を呼び出すことが出来る．</dd>
+</dl>
+<p>Methodについても，get(), set()と同様と考えられる．</p>
+<h3 id="persistence">persistence<a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h3>
+<p>検討中</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
