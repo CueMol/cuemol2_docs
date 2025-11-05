@@ -1,4 +1,6 @@
-[FrontPage](../../en/FrontPage)
+### Series 2.3
+Changes from version 2.3 onward are documented in the GitHub [releases](https://github.com/CueMol/cuemol2/releases/) page.
+
 ### Series 2.2.3
 #### Version 2.2.3.443
 

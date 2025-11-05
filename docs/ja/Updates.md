@@ -1,8 +1,10 @@
 以下では，それぞれのリリースでの変更点をリストアップしてあります．
-各OSの各バージョンの[Downloadはこちら](http://sourceforge.net/projects/cuemol/files/cuemol2/)
-からできます．
-### 2.2.2系統
+各OSの各バージョンの[Downloadはこちら](https://github.com/CueMol/cuemol2/releases/)からできます．
 
+### 2.3系統
+Githubの[releases](https://github.com/CueMol/cuemol2/releases/)に記載しています。
+
+### 2.2.2系統
 [英語版](../en/Updates)
 
 ### 2.2.1系統

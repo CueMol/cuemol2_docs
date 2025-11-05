@@ -29,6 +29,9 @@ CueMolについてのコメント，質問，要望は
 
 ### What's new?
 
+2025/11/4
+:   バージョン2.3.0.461 Windows・MacOS X版を公開しました．変更点は[Releases](https://github.com/CueMol/cuemol2/releases/tag/v2.3.0.461)に掲載しました．
+
 2025/8/14
 :   バージョン2.3.0.460 Windows・MacOS X版を公開しました．変更点は[Releases](https://github.com/CueMol/cuemol2/releases/tag/v2.3.0.460)に掲載しました．
 

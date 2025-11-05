@@ -3,13 +3,21 @@
 
 Download後のinstallationについては，[Install](../Install)のページを参照してください．
 
-### Version 2.3.0.460 (最新リリース)
+### Version 2.3.0.461 (最新リリース)
 - Windows (64bit)
-    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2-2.3.0.454.win64.installer.exe)
+    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.461/cuemol2-2.3.0.461.win64.installer.exe)
 - MacOS X (ARM 64bit)
-    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_ARM64.tar.bz2)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.461/cuemol2_macOS_ARM64.tar.bz2)
 - MacOS X (Intel 64bit)
-    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.454/cuemol2_macOS_X64.tar.bz2)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.461/cuemol2_macOS_X64.tar.bz2)
+
+### Version 2.3.0.460
+- Windows (64bit)
+    - [Windows installer](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.460/cuemol2-2.3.0.460.win64.installer.exe)
+- MacOS X (ARM 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.460/cuemol2_macOS_ARM64.tar.bz2)
+- MacOS X (Intel 64bit)
+    - [MacOS X dmg](https://github.com/CueMol/cuemol2/releases/download/v2.3.0.460/cuemol2_macOS_X64.tar.bz2)
 
 ### Version 2.3.0.454
 - Windows (64bit)
