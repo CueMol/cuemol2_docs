@@ -1,6 +1,9 @@
 ## CueMol
 
-> This site documents CueMol2. Documentation for its successor **CueMol3** (under development) lives at the [CueMol3 documentation site](https://cuemol.github.io/cuemol3_docs/en/).
+!!! info "Looking for CueMol3?"
+    This site documents **CueMol2**, the current stable release.
+    Documentation for its successor **CueMol3** (codename *tritium*, under development) is available at the
+    [**CueMol3 documentation site**](https://cuemol.github.io/cuemol3_docs/en/).
 
 **CueMol** is a computer program for the macromolecular structure visualization (CueMol was formerly called "Que").
 CueMol's aims are to visualize and create the publication-quality images of the macromolecular structures with user-friendly interfaces. You can find sample images created by CueMol in [Gallery](./en/Gallery) page. 

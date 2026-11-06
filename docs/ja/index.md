@@ -1,6 +1,9 @@
 ## CueMol
 
-> このサイトは CueMol2 のドキュメントです．後継版 **CueMol3** (開発中) のドキュメントは [CueMol3のドキュメントサイト](https://cuemol.github.io/cuemol3_docs/) にあります．
+!!! info "CueMol3 のドキュメントはこちら"
+    このサイトは **CueMol2** (現行の安定版) のドキュメントです．
+    後継版 **CueMol3** (開発コードネーム *tritium*，開発中) のドキュメントは
+    [**CueMol3 ドキュメントサイト**](https://cuemol.github.io/cuemol3_docs/) をご覧ください．
 
 **CueMol** (きゅうもる) は[Mozilla xulrunner](http://www.mozilla.org/projects/mozilla-based.html)ベースの生体高分子の構造を見るためのソフトウェアです．
 

@@ -39,6 +39,7 @@ plugins:
             - CueMol3 docs: https://cuemol.github.io/cuemol3_docs/en/
             
 markdown_extensions:
+  - admonition
   - pymdownx.tilde
   - pymdownx.emoji
   - attr_list
